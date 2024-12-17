@@ -1,10 +1,10 @@
 {
 	"projectFormatVersion": 1,
-	"savedWithRelease": 41602,
+	"savedWithRelease": 41900,
 	"name": "DOOM The Gallery Experience",
 	"runtime": "c3",
 	"useWorker": "dom",
-	"bundleAddons": false,
+	"bundleAddons": true,
 	"usedAddons": [
 		{
 			"type": "plugin",
@@ -67,7 +67,7 @@
 			"id": "Rex_NGIO_Authentication",
 			"name": "Authentication",
 			"author": "Rex.Rainbow/Port by Pixel Perfect Studio",
-			"bundled": false,
+			"bundled": true,
 			"version": "0.1.0.4"
 		},
 		{
@@ -75,7 +75,7 @@
 			"id": "Rex_NGIO_Medal",
 			"name": "Medal",
 			"author": "Rex.Rainbow/Port by Pixel Perfect Studio",
-			"bundled": false,
+			"bundled": true,
 			"version": "0.1.0.1"
 		},
 		{
@@ -745,11 +745,12 @@
 		"subfolders": []
 	},
 	"properties": {
-		"description": "",
-		"version": "1.0.1",
+		"description": "DOOM: The Gallery Experience was created as an art piece designed to parody the wonderfully pretentious world of gallery openings.",
+		"version": "1.0.2",
+		"autoIncrementVersion": false,
 		"author": "",
 		"authorEmail": "",
-		"authorWebsite": "",
+		"authorWebsite": "https://bobatealee.com",
 		"appId": "",
 		"pixelRounding": true,
 		"zAxisScale": "regular",

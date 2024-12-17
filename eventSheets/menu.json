@@ -6108,6 +6108,11 @@
 					}
 				},
 				{
+					"id": "window-has-focus",
+					"objectClass": "Browser",
+					"sid": 793206654120886
+				},
+				{
 					"id": "trigger-once-while-true",
 					"objectClass": "System",
 					"sid": 651160134423149
