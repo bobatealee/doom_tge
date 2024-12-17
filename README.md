@@ -1,6 +1,6 @@
 # ABOUT
-DOOM: The Gallery Experience was created as an art piece designed to parody the wonderfully pretentious world of gallery openings.\
-In this experience, you will be able to walk around and appreciate some fine art while sipping some wine and enjoying the complimentary hors d’oeuvres in the beautifully renovated and re-imagined E1M1 of id Software's DOOM (1993).\
+DOOM: The Gallery Experience was created as an art piece designed to parody the wonderfully pretentious world of gallery openings.
+
 Play it on [Newgrounds](https://www.newgrounds.com/portal/view/960452) or [my website](https://bobatealee.com/games/doom_tge/)!
 
 # CREDITS
