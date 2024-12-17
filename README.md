@@ -10,5 +10,7 @@ Liam Stone - Programming, Misc. Art\
 [The Spriter's Resource](https://www.spriters-resource.com/ms_dos/doomdoomii/)\
 [PM Music](https://pmmusic.pro/downloads/)
 
+DOOM is copyright © 1993 id Software.
+
 # BUG REPORTS
 Find a bug? Please report it with as much information as possible by by [creating a new issue](https://github.com/bobatealee/doom_tge/issues). Include OS, browser, and browser version.
