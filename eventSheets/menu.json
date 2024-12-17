@@ -4451,14 +4451,6 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "on-key-pressed",
-					"objectClass": "Keyboard",
-					"sid": 832868160999556,
-					"parameters": {
-						"key": 27
-					}
-				},
-				{
 					"id": "on-click",
 					"objectClass": "Mouse",
 					"sid": 172571018433580,
@@ -4907,8 +4899,7 @@
 						}
 					]
 				}
-			],
-			"isOrBlock": true
+			]
 		},
 		{
 			"eventType": "block",

@@ -720,7 +720,8 @@
 							"objectClass": "System",
 							"sid": 189122313429787,
 							"parameters": {
-								"seconds": "1"
+								"seconds": "1",
+								"use-timescale": true
 							}
 						}
 					],
@@ -979,7 +980,8 @@
 							"objectClass": "System",
 							"sid": 812415952801071,
 							"parameters": {
-								"seconds": "2"
+								"seconds": "2",
+								"use-timescale": true
 							}
 						},
 						{
@@ -6054,14 +6056,6 @@
 				{
 					"id": "on-key-pressed",
 					"objectClass": "Keyboard",
-					"sid": 215762123056582,
-					"parameters": {
-						"key": 27
-					}
-				},
-				{
-					"id": "on-key-pressed",
-					"objectClass": "Keyboard",
 					"sid": 735193902252824,
 					"parameters": {
 						"key": 80
@@ -6607,36 +6601,18 @@
 					"isInverted": true
 				}
 			],
-			"actions": [],
-			"sid": 139946566111925,
-			"children": [
+			"actions": [
 				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "key-is-down",
-							"objectClass": "Keyboard",
-							"sid": 897829272705009,
-							"parameters": {
-								"key": 27
-							},
-							"isInverted": true
-						}
-					],
-					"actions": [
-						{
-							"id": "set-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 272516123561598,
-							"parameters": {
-								"variable": "MENU_paused",
-								"value": "false"
-							}
-						}
-					],
-					"sid": 229364077065733
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 120865568119044,
+					"parameters": {
+						"variable": "MENU_paused",
+						"value": "false"
+					}
 				}
-			]
+			],
+			"sid": 139946566111925
 		}
 	],
 	"sid": 353286919087837
