@@ -593,6 +593,15 @@
 										"variable": "MEDAL_observations",
 										"value": "true"
 									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 894634829941900,
+									"parameters": {
+										"variable": "UNLOCK_doomMusic",
+										"value": "true"
+									}
 								}
 							],
 							"sid": 218047858347578
@@ -627,6 +636,15 @@
 									"sid": 327601863882548,
 									"parameters": {
 										"variable": "MEDAL_items",
+										"value": "true"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 470615136993804,
+									"parameters": {
+										"variable": "UNLOCK_doomMusic",
 										"value": "true"
 									}
 								}
@@ -665,6 +683,15 @@
 										"variable": "MEDAL_spending",
 										"value": "true"
 									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 656261023969365,
+									"parameters": {
+										"variable": "UNLOCK_doomMusic",
+										"value": "true"
+									}
 								}
 							],
 							"sid": 679333908943933
@@ -699,6 +726,15 @@
 									"sid": 187380470646931,
 									"parameters": {
 										"variable": "MEDAL_secrets",
+										"value": "true"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 939728987212479,
+									"parameters": {
+										"variable": "UNLOCK_doomMusic",
 										"value": "true"
 									}
 								}
@@ -737,6 +773,15 @@
 										"variable": "MEDAL_time",
 										"value": "true"
 									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 930647802728238,
+									"parameters": {
+										"variable": "UNLOCK_doomMusic",
+										"value": "true"
+									}
 								}
 							],
 							"sid": 804216350740589
@@ -773,6 +818,15 @@
 										"variable": "MEDAL_drinks",
 										"value": "true"
 									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 659982687613667,
+									"parameters": {
+										"variable": "UNLOCK_doomMusic",
+										"value": "true"
+									}
 								}
 							],
 							"sid": 325492711598292
@@ -807,6 +861,15 @@
 									"sid": 994707177850448,
 									"parameters": {
 										"variable": "MEDAL_thoughtful",
+										"value": "true"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 390521578013882,
+									"parameters": {
+										"variable": "UNLOCK_doomMusic",
 										"value": "true"
 									}
 								}

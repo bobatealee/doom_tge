@@ -450,7 +450,16 @@
 	},
 	"rootFileFolders": {
 		"script": {
-			"items": [],
+			"items": [
+				{
+					"name": "main.js",
+					"type": "application/javascript",
+					"sid": 175009561476765,
+					"script-info": {
+						"purpose": "main"
+					}
+				}
+			],
 			"subfolders": []
 		},
 		"sound": {
@@ -737,7 +746,7 @@
 	},
 	"properties": {
 		"description": "",
-		"version": "1.0.0",
+		"version": "1.0.1",
 		"author": "",
 		"authorEmail": "",
 		"authorWebsite": "",
