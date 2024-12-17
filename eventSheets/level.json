@@ -1,0 +1,6643 @@
+{
+	"name": "level",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "GAME_beer",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 301668333827626
+		},
+		{
+			"eventType": "variable",
+			"name": "GAME_popupLifetime",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 361853768337565
+		},
+		{
+			"eventType": "variable",
+			"name": "GAME_flashLifetime",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 524426846766086
+		},
+		{
+			"eventType": "variable",
+			"name": "GAME_gruntCooldown",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 171512334075958
+		},
+		{
+			"eventType": "variable",
+			"name": "GAME_guyOverride",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 765279586470823
+		},
+		{
+			"eventType": "variable",
+			"name": "STAT_wealth",
+			"type": "number",
+			"initialValue": "100",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 749500186018623
+		},
+		{
+			"eventType": "variable",
+			"name": "STAT_cheese",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 686467117008027
+		},
+		{
+			"eventType": "variable",
+			"name": "STAT_ammoWine",
+			"type": "number",
+			"initialValue": "50",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 845230746668167
+		},
+		{
+			"eventType": "variable",
+			"name": "STAT_ammoBeer",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 144823712236502
+		},
+		{
+			"eventType": "variable",
+			"name": "STAT_observations",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 364907329059579
+		},
+		{
+			"eventType": "variable",
+			"name": "STAT_items",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 419210949386970
+		},
+		{
+			"eventType": "variable",
+			"name": "STAT_secrets",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 316729205831241
+		},
+		{
+			"eventType": "variable",
+			"name": "STAT_moneySpent",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 161365884561925
+		},
+		{
+			"eventType": "variable",
+			"name": "STAT_drinks",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 424764047220969
+		},
+		{
+			"eventType": "variable",
+			"name": "GAME_time",
+			"type": "number",
+			"initialValue": "300",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 433195514949672
+		},
+		{
+			"eventType": "variable",
+			"name": "GAME_targetTime",
+			"type": "number",
+			"initialValue": "20",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 358354327267218
+		},
+		{
+			"eventType": "variable",
+			"name": "GAME_badTime",
+			"type": "number",
+			"initialValue": "900",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 949129274557408
+		},
+		{
+			"eventType": "variable",
+			"name": "GAME_maxObservations",
+			"type": "number",
+			"initialValue": "1",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 460567801264392
+		},
+		{
+			"eventType": "variable",
+			"name": "GAME_maxItems",
+			"type": "number",
+			"initialValue": "1",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 519497277225697
+		},
+		{
+			"eventType": "variable",
+			"name": "GAME_modalArt",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 576087483677373
+		},
+		{
+			"eventType": "variable",
+			"name": "GAME_modalPrice",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 810384997528816
+		},
+		{
+			"eventType": "variable",
+			"name": "GAME_modalUID",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 874751493206115
+		},
+		{
+			"eventType": "variable",
+			"name": "PLAYER_cameraHeight",
+			"type": "number",
+			"initialValue": "24",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 394788926745905
+		},
+		{
+			"eventType": "variable",
+			"name": "PLAYER_acceleration",
+			"type": "number",
+			"initialValue": "16",
+			"comment": "Player acceleration",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 448348646308523
+		},
+		{
+			"eventType": "variable",
+			"name": "PLAYER_deceleration",
+			"type": "number",
+			"initialValue": "8",
+			"comment": "Player deceleration",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 201778299671530
+		},
+		{
+			"eventType": "variable",
+			"name": "PLAYER_onGround",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "Is player on ground",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 394447909886248
+		},
+		{
+			"eventType": "variable",
+			"name": "PLAYER_jumpStrength",
+			"type": "number",
+			"initialValue": "3",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 840121012847824
+		},
+		{
+			"eventType": "variable",
+			"name": "PLAYER_coyoteTime",
+			"type": "number",
+			"initialValue": "10",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 625686365563330
+		},
+		{
+			"eventType": "variable",
+			"name": "PLAYER_weapon",
+			"type": "number",
+			"initialValue": "1",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 100156883167543
+		},
+		{
+			"eventType": "variable",
+			"name": "PHYS_gravity",
+			"type": "number",
+			"initialValue": "8",
+			"comment": "World gravity",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 301306858482083
+		},
+		{
+			"eventType": "variable",
+			"name": "PHYS_deltaZ",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "Speed on Z axis",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 236733243363586
+		},
+		{
+			"eventType": "variable",
+			"name": "GAME_inactivityMax",
+			"type": "number",
+			"initialValue": "180",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 848515793754242
+		},
+		{
+			"eventType": "variable",
+			"name": "GAME_inactivityTimer",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 852554929910455
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "bleed"
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "menu"
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "General",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "comment",
+					"text": "initialization"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 970413567245203
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 743769624519119,
+							"parameters": {
+								"variable": "GAME_mobile"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 792806566717436,
+							"parameters": {
+								"layer": "\"Mobile\"",
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 468163507501100
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 584944201502871
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 505624377097745,
+							"parameters": {
+								"variable": "STAT_wealth",
+								"value": "100"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 134548305194425,
+							"parameters": {
+								"variable": "STAT_cheese",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 505716938826998,
+							"parameters": {
+								"variable": "STAT_ammoWine",
+								"value": "50"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 556114683703378,
+							"parameters": {
+								"variable": "STAT_ammoBeer",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 540990048663751,
+							"parameters": {
+								"variable": "STAT_observations",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 140461192242845,
+							"parameters": {
+								"variable": "STAT_moneySpent",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 809405326660255,
+							"parameters": {
+								"variable": "STAT_items",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 925665194493676,
+							"parameters": {
+								"variable": "STAT_secrets",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 435793116668943,
+							"parameters": {
+								"variable": "STAT_drinks",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 651695167934305,
+							"parameters": {
+								"variable": "GAME_beer",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 697842974200864,
+							"parameters": {
+								"variable": "GAME_time",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 284789013956398,
+							"parameters": {
+								"variable": "GAME_popupLifetime",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 174224849558006,
+							"parameters": {
+								"variable": "GAME_flashLifetime",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 345853671495830,
+							"parameters": {
+								"variable": "GAME_gruntCooldown",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 393234315434114,
+							"parameters": {
+								"variable": "GAME_maxObservations",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 884081588884488,
+							"parameters": {
+								"variable": "GAME_maxItems",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 165060343395732,
+							"parameters": {
+								"variable": "GAME_inactivityTimer",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 566274938654567,
+							"parameters": {
+								"variable": "GAME_modalArt",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-z-elevation",
+							"objectClass": "Sight",
+							"sid": 657439558256323,
+							"parameters": {
+								"z": "Player.ZElevation + PLAYER_cameraHeight"
+							}
+						},
+						{
+							"id": "set-z-elevation",
+							"objectClass": "SmallSight",
+							"sid": 337264257683242,
+							"parameters": {
+								"z": "Player.ZElevation + PLAYER_cameraHeight"
+							}
+						},
+						{
+							"id": "set-position-to-another-object",
+							"objectClass": "PlayerCam",
+							"sid": 749107039466577,
+							"parameters": {
+								"object": "Player",
+								"image-point-optional": "0"
+							}
+						},
+						{
+							"id": "add-child",
+							"objectClass": "Player",
+							"sid": 756377718441792,
+							"parameters": {
+								"child": "PlayerCam",
+								"transform-x": true,
+								"transform-y": true,
+								"transform-w": false,
+								"transform-h": false,
+								"transform-a": false,
+								"transform-o": false,
+								"transform-z-elevation": false,
+								"transform-visibility": false,
+								"destroy-with-parent": false
+							}
+						},
+						{
+							"id": "add-child",
+							"objectClass": "Player",
+							"sid": 443465673126046,
+							"parameters": {
+								"child": "PlayerPickup",
+								"transform-x": true,
+								"transform-y": true,
+								"transform-w": false,
+								"transform-h": false,
+								"transform-a": false,
+								"transform-o": false,
+								"transform-z-elevation": true,
+								"transform-visibility": false,
+								"destroy-with-parent": false
+							}
+						},
+						{
+							"id": "add-child",
+							"objectClass": "Player",
+							"sid": 335210019450555,
+							"parameters": {
+								"child": "Sight",
+								"transform-x": true,
+								"transform-y": true,
+								"transform-w": false,
+								"transform-h": false,
+								"transform-a": false,
+								"transform-o": false,
+								"transform-z-elevation": true,
+								"transform-visibility": false,
+								"destroy-with-parent": false
+							}
+						},
+						{
+							"id": "add-child",
+							"objectClass": "Player",
+							"sid": 592454113397759,
+							"parameters": {
+								"child": "SmallSight",
+								"transform-x": true,
+								"transform-y": true,
+								"transform-w": false,
+								"transform-h": false,
+								"transform-a": false,
+								"transform-o": false,
+								"transform-z-elevation": true,
+								"transform-visibility": false,
+								"destroy-with-parent": false
+							}
+						},
+						{
+							"id": "look-parallel-to-layout",
+							"objectClass": "3DCamera",
+							"sid": 689365901671088,
+							"parameters": {
+								"cam-x": "PlayerCam.X",
+								"cam-y": "PlayerCam.Y",
+								"cam-z": "PlayerCam.ZElevation+PLAYER_cameraHeight",
+								"look-angle": "PlayerCam.Angle"
+							}
+						},
+						{
+							"id": "rotate-camera",
+							"objectClass": "3DCamera",
+							"sid": 882222775091649,
+							"parameters": {
+								"rotate-x": "-90",
+								"rotate-y": "85",
+								"min-polar-angle": "85",
+								"max-polar-angle": "85"
+							}
+						},
+						{
+							"id": "stop-animation",
+							"objectClass": "Doomguy",
+							"sid": 158324766986037
+						},
+						{
+							"id": "stop-animation",
+							"objectClass": "Arm",
+							"sid": 217512652230143
+						},
+						{
+							"id": "stop-animation",
+							"objectClass": "HUD",
+							"sid": 548696884170945
+						},
+						{
+							"id": "stop-animation",
+							"objectClass": "MobileButtons",
+							"sid": 894799054357304
+						},
+						{
+							"id": "stop-animation",
+							"objectClass": "MobileArms",
+							"sid": 557314703696627
+						},
+						{
+							"id": "stop-animation",
+							"objectClass": "ModalArt",
+							"sid": 679205967558816
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 461661312748939,
+							"parameters": {
+								"layer": "\"Menu\"",
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 126117139494153,
+							"parameters": {
+								"layer": "\"Main\"",
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 189122313429787,
+							"parameters": {
+								"seconds": "1"
+							}
+						}
+					],
+					"sid": 288548256887656,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 483491278922533,
+									"parameters": {
+										"variable": "SETTING_doomMusic"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 990116883912068,
+									"parameters": {
+										"audio-file": "bach",
+										"loop": "looping",
+										"volume": "(log10(SETTING_volumeMusic)*20)",
+										"stereo-pan": "0",
+										"tag-optional": "\"music\""
+									}
+								}
+							],
+							"sid": 649412744256339
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 199216649252158
+								}
+							],
+							"actions": [
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 416803101838258,
+									"parameters": {
+										"audio-file": "e1m1",
+										"loop": "looping",
+										"volume": "(log10(SETTING_volumeMusic)*20)",
+										"stereo-pan": "0",
+										"tag-optional": "\"music\""
+									}
+								}
+							],
+							"sid": 690507824622458
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "for-each",
+									"objectClass": "System",
+									"sid": 805921617995878,
+									"parameters": {
+										"object": "Trigger"
+									}
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Trigger",
+									"sid": 599734129995549,
+									"parameters": {
+										"instance-variable": "id",
+										"comparison": 4,
+										"value": "\"-1\""
+									}
+								},
+								{
+									"id": "has-tags",
+									"objectClass": "Trigger",
+									"sid": 837441619963904,
+									"parameters": {
+										"tags": "\"shop\""
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 209314325045513,
+									"parameters": {
+										"variable": "GAME_maxObservations",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 753517267073481
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "for-each",
+									"objectClass": "System",
+									"sid": 713928543896019,
+									"parameters": {
+										"object": "Billboard"
+									}
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Billboard",
+									"sid": 190300300023592,
+									"parameters": {
+										"instance-variable": "type",
+										"comparison": 1,
+										"value": "\"\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 520994505389055,
+									"parameters": {
+										"variable": "GAME_maxItems",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 463670474074381
+						}
+					]
+				},
+				{
+					"eventType": "comment",
+					"text": "gravity"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 324846506000006
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 197585768781371,
+							"parameters": {
+								"first-value": "dt",
+								"comparison": 1,
+								"second-value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 148839466794942,
+							"parameters": {
+								"variable": "PHYS_deltaZ",
+								"value": "PHYS_gravity * dt"
+							}
+						},
+						{
+							"id": "set-z-elevation",
+							"objectClass": "Player",
+							"sid": 137867741891860,
+							"parameters": {
+								"z": "Self.ZElevation + PHYS_deltaZ"
+							}
+						}
+					],
+					"sid": 966148891672061
+				},
+				{
+					"eventType": "comment",
+					"text": "our little friend likes to look around"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 399287567966821,
+							"parameters": {
+								"variable": "GAME_guyOverride"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "every-x-seconds",
+							"objectClass": "System",
+							"sid": 672602951764380,
+							"parameters": {
+								"interval-seconds": "random(0.25, 2)"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Doomguy",
+							"sid": 803159078249656,
+							"parameters": {
+								"animation": "\"default\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "stop-animation",
+							"objectClass": "Doomguy",
+							"sid": 289356638529132
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Doomguy",
+							"sid": 668331472606251,
+							"parameters": {
+								"frame-number": "round(random(0, 2))"
+							}
+						}
+					],
+					"sid": 608436851001747
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 646825927220792,
+							"parameters": {
+								"variable": "GAME_guyOverride"
+							}
+						},
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 458728050886719
+						}
+					],
+					"actions": [
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 812415952801071,
+							"parameters": {
+								"seconds": "2"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 698815619590183,
+							"parameters": {
+								"variable": "GAME_guyOverride",
+								"value": "false"
+							}
+						}
+					],
+					"sid": 103684052941020
+				},
+				{
+					"eventType": "comment",
+					"text": "tick calculations for various things in the world"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 633407580655542
+						}
+					],
+					"actions": [
+						{
+							"id": "set-image-offset-x",
+							"objectClass": "Sky",
+							"sid": 370741052581252,
+							"parameters": {
+								"offset-x": "Self.ImageOffsetX + dt*3"
+							}
+						},
+						{
+							"id": "set-image-offset-y",
+							"objectClass": "Sky",
+							"sid": 301444039405038,
+							"parameters": {
+								"offset-y": "Self.ImageOffsetY + dt*3"
+							}
+						},
+						{
+							"id": "set-image-offset-x",
+							"objectClass": "Water",
+							"sid": 963735990874905,
+							"parameters": {
+								"offset-x": "Self.ImageOffsetX + dt*2"
+							}
+						},
+						{
+							"id": "set-image-offset-y",
+							"objectClass": "Water",
+							"sid": 729243345875002,
+							"parameters": {
+								"offset-y": "Self.ImageOffsetY + dt*2"
+							}
+						},
+						{
+							"id": "set-image-offset-x",
+							"objectClass": "Space",
+							"sid": 943502583758796,
+							"parameters": {
+								"offset-x": "Self.ImageOffsetX + dt*2"
+							}
+						},
+						{
+							"id": "set-image-offset-y",
+							"objectClass": "Space",
+							"sid": 983238000486922,
+							"parameters": {
+								"offset-y": "Self.ImageOffsetY + dt*2"
+							}
+						},
+						{
+							"id": "set-angle-toward-position",
+							"objectClass": "Billboard",
+							"sid": 865001344074934,
+							"parameters": {
+								"x": "Player.X",
+								"y": "Player.Y"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "PlayerPickup",
+							"sid": 748107733040885,
+							"parameters": {
+								"x": "Player.X",
+								"y": "Player.Y"
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 413215184196964,
+							"parameters": {
+								"variable": "GAME_inactivityTimer",
+								"value": "dt"
+							}
+						}
+					],
+					"sid": 265914271314546,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 713522059186109,
+									"parameters": {
+										"variable": "MENU_menu",
+										"comparison": 0,
+										"value": "\"\""
+									}
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 991209025586273,
+									"parameters": {
+										"variable": "BLEED_ready"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 264915996801511,
+									"parameters": {
+										"variable": "GAME_time",
+										"value": "dt"
+									}
+								}
+							],
+							"sid": 888556290200875
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 700177950217714,
+									"parameters": {
+										"variable": "GAME_inactivityTimer",
+										"comparison": 5,
+										"value": "GAME_inactivityMax"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 470757447538288,
+									"parameters": {
+										"variable": "MENU_menu",
+										"value": "\"Main\""
+									}
+								},
+								{
+									"callFunction": "transition",
+									"sid": 486670365135240,
+									"parameters": [
+										"\"menu\""
+									]
+								},
+								{
+									"id": "stop",
+									"objectClass": "Audio",
+									"sid": 739641099287205,
+									"parameters": {
+										"tag": "\"music\""
+									}
+								},
+								{
+									"id": "stop-all",
+									"objectClass": "Audio",
+									"sid": 665336681705358
+								},
+								{
+									"id": "release-pointer-lock",
+									"objectClass": "Mouse",
+									"sid": 896347454749318
+								}
+							],
+							"sid": 924551755758758
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-any-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 170907912526792
+						},
+						{
+							"id": "on-any-key-released",
+							"objectClass": "Keyboard",
+							"sid": 629110732699068
+						},
+						{
+							"id": "on-any-click",
+							"objectClass": "Mouse",
+							"sid": 662894811984822
+						},
+						{
+							"id": "on-movement",
+							"objectClass": "Mouse",
+							"sid": 694556903773717
+						},
+						{
+							"id": "on-mouse-wheel",
+							"objectClass": "Mouse",
+							"sid": 582755765737375,
+							"parameters": {
+								"direction": "any"
+							}
+						},
+						{
+							"id": "is-in-touch",
+							"objectClass": "Touch",
+							"sid": 243717239435569
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 901115457082451,
+							"parameters": {
+								"variable": "GAME_inactivityTimer",
+								"value": "0"
+							}
+						}
+					],
+					"sid": 863884342741470,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-click",
+							"objectClass": "Mouse",
+							"sid": 860146882463506,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked"
+							}
+						},
+						{
+							"id": "has-pointer-lock",
+							"objectClass": "Mouse",
+							"sid": 757024355613434,
+							"isInverted": true
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 885586051399863,
+							"parameters": {
+								"variable": "MENU_menu",
+								"comparison": 0,
+								"value": "\"\""
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 179443366625894,
+							"parameters": {
+								"variable": "BLEED_ready"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "request-pointer-lock",
+							"objectClass": "Mouse",
+							"sid": 540051134256205,
+							"parameters": {
+								"unadjusted-movement": false
+							}
+						}
+					],
+					"sid": 595924174154259
+				}
+			],
+			"sid": 213568456480131
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Controls",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "comment",
+					"text": "calculate movement in a 2D plane"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 338412388358180
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Player",
+							"sid": 856980702970051,
+							"parameters": {
+								"instance-variable": "playerHorizontal",
+								"value": "Player.playerRight-Player.playerLeft"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Player",
+							"sid": 249191444574566,
+							"parameters": {
+								"instance-variable": "playerVertical",
+								"value": "Player.playerDown-Player.playerUp"
+							}
+						},
+						{
+							"id": "set-opacity",
+							"objectClass": "MobileButtons",
+							"sid": 352606929707994,
+							"parameters": {
+								"opacity": "50"
+							}
+						},
+						{
+							"id": "set-effect-parameter",
+							"objectClass": "MobileArms",
+							"sid": 102670131606145,
+							"parameters": {
+								"effect": "\"Brightness\"",
+								"parameter-index": "0",
+								"value": "100"
+							}
+						}
+					],
+					"sid": 565449334558103
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "evaluate-expression",
+							"objectClass": "System",
+							"sid": 572999886989671,
+							"parameters": {
+								"value": "Player.playerHorizontal <> 0 | Player.playerVertical <> 0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Player",
+							"sid": 995569188162508,
+							"parameters": {
+								"instance-variable": "playerAngle",
+								"value": "((angle(0,0,Player.playerHorizontal,Player.playerVertical)+90)%360)"
+							}
+						}
+					],
+					"sid": 395212475553353
+				},
+				{
+					"eventType": "comment",
+					"text": "deceleration"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Player",
+							"sid": 691009643883028,
+							"parameters": {
+								"instance-variable": "playerHorizontal",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 424491125511606,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-between-values",
+									"objectClass": "System",
+									"sid": 455132876213857,
+									"parameters": {
+										"value": "Player.playerSpeedHorizontal",
+										"lower-bound": "-PLAYER_deceleration",
+										"upper-bound": "PLAYER_deceleration"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "subtract-from-instvar",
+									"objectClass": "Player",
+									"sid": 580345705283943,
+									"parameters": {
+										"instance-variable": "playerSpeedHorizontal",
+										"value": "Player.playerSpeedHorizontal"
+									}
+								}
+							],
+							"sid": 221072588574479,
+							"isOrBlock": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Player",
+									"sid": 589363713979519,
+									"parameters": {
+										"instance-variable": "playerSpeedHorizontal",
+										"comparison": 4,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "subtract-from-instvar",
+									"objectClass": "Player",
+									"sid": 592561530560174,
+									"parameters": {
+										"instance-variable": "playerSpeedHorizontal",
+										"value": "PLAYER_deceleration"
+									}
+								}
+							],
+							"sid": 550779138103776
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Player",
+									"sid": 473477973920847,
+									"parameters": {
+										"instance-variable": "playerSpeedHorizontal",
+										"comparison": 2,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "add-to-instvar",
+									"objectClass": "Player",
+									"sid": 561870023619190,
+									"parameters": {
+										"instance-variable": "playerSpeedHorizontal",
+										"value": "PLAYER_deceleration"
+									}
+								}
+							],
+							"sid": 144127707913308
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Player",
+							"sid": 369807102154069,
+							"parameters": {
+								"instance-variable": "playerVertical",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 678836484879241,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-between-values",
+									"objectClass": "System",
+									"sid": 738240292542700,
+									"parameters": {
+										"value": "Player.playerSpeedVertical",
+										"lower-bound": "-PLAYER_deceleration",
+										"upper-bound": "PLAYER_deceleration"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "subtract-from-instvar",
+									"objectClass": "Player",
+									"sid": 773497184496080,
+									"parameters": {
+										"instance-variable": "playerSpeedVertical",
+										"value": "Player.playerSpeedVertical"
+									}
+								}
+							],
+							"sid": 858277512565984,
+							"isOrBlock": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Player",
+									"sid": 838964743236952,
+									"parameters": {
+										"instance-variable": "playerSpeedVertical",
+										"comparison": 4,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "subtract-from-instvar",
+									"objectClass": "Player",
+									"sid": 291827898672090,
+									"parameters": {
+										"instance-variable": "playerSpeedVertical",
+										"value": "PLAYER_deceleration"
+									}
+								}
+							],
+							"sid": 307011174362849
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Player",
+									"sid": 867575058610577,
+									"parameters": {
+										"instance-variable": "playerSpeedVertical",
+										"comparison": 2,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "add-to-instvar",
+									"objectClass": "Player",
+									"sid": 578052587865834,
+									"parameters": {
+										"instance-variable": "playerSpeedVertical",
+										"value": "PLAYER_deceleration"
+									}
+								}
+							],
+							"sid": 954396106335880
+						}
+					]
+				},
+				{
+					"eventType": "comment",
+					"text": "move!"
+				},
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Player",
+							"sid": 866002129764815,
+							"parameters": {
+								"instance-variable": "playerOldX",
+								"value": "Self.X"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Player",
+							"sid": 355933484515853,
+							"parameters": {
+								"instance-variable": "playerOldY",
+								"value": "Self.Y"
+							}
+						},
+						{
+							"id": "set-vector-x",
+							"objectClass": "Player",
+							"sid": 255442193951386,
+							"behaviorType": "8Direction",
+							"parameters": {
+								"vector-x": "(cos(3DCamera.CameraXRotation) * Self.playerSpeedVertical) + (cos(3DCamera.CameraXRotation + 90) * Self.playerSpeedHorizontal)"
+							}
+						},
+						{
+							"id": "set-vector-y",
+							"objectClass": "Player",
+							"sid": 324692270709725,
+							"behaviorType": "8Direction",
+							"parameters": {
+								"vector-y": "(sin(3DCamera.CameraXRotation) * Self.playerSpeedVertical) + (sin(3DCamera.CameraXRotation + 90) * Self.playerSpeedHorizontal)"
+							}
+						}
+					],
+					"sid": 104093624257439
+				},
+				{
+					"eventType": "comment",
+					"text": "move up ledges"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Player",
+							"sid": 780113942813360,
+							"parameters": {
+								"object": "Ground"
+							}
+						},
+						{
+							"id": "is-between-values",
+							"objectClass": "System",
+							"sid": 163687914283880,
+							"parameters": {
+								"value": "round((Ground.ZElevation + Ground.ZHeight) - Player.ZElevation)",
+								"lower-bound": "0",
+								"upper-bound": "10"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-z-elevation",
+							"objectClass": "Player",
+							"sid": 357410104298440,
+							"parameters": {
+								"z": "Ground.ZElevation+Ground.ZHeight"
+							}
+						}
+					],
+					"sid": 400734806165948,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 504537193388630,
+									"parameters": {
+										"variable": "PLAYER_onGround"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "stop-all-tweens",
+									"objectClass": "PlayerCam",
+									"sid": 135329119497124,
+									"behaviorType": "Tween"
+								},
+								{
+									"id": "tween-one-property",
+									"objectClass": "PlayerCam",
+									"sid": 994496903110054,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"\"",
+										"property": "offsetZElevation",
+										"end-value": "Player.ZElevation",
+										"time": "0.1",
+										"ease": "easeoutsine",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no",
+										"repeat-count": "1"
+									}
+								}
+							],
+							"sid": 734175271628466
+						}
+					]
+				},
+				{
+					"eventType": "comment",
+					"text": "controls"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 457181140556278,
+							"parameters": {
+								"variable": "BLEED_ready"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 891645780776000,
+							"parameters": {
+								"variable": "MENU_menu",
+								"comparison": 0,
+								"value": "\"\""
+							}
+						}
+					],
+					"actions": [],
+					"sid": 437407360025985,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "key-is-down",
+									"objectClass": "Keyboard",
+									"sid": 505256492596301,
+									"parameters": {
+										"key": 38
+									}
+								},
+								{
+									"id": "key-is-down",
+									"objectClass": "Keyboard",
+									"sid": 323153538222618,
+									"parameters": {
+										"key": 87
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Player",
+									"sid": 898955099361568,
+									"parameters": {
+										"instance-variable": "playerUp",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 633982728354204,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Player",
+											"sid": 499891453441918,
+											"parameters": {
+												"instance-variable": "playerSpeedVertical",
+												"comparison": 2,
+												"value": "Self.8Direction.MaxSpeed"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "add-to-instvar",
+											"objectClass": "Player",
+											"sid": 491557999633350,
+											"parameters": {
+												"instance-variable": "playerSpeedVertical",
+												"value": "PLAYER_acceleration"
+											}
+										}
+									],
+									"sid": 350357106377738
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 311523470309089
+										}
+									],
+									"actions": [
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Player",
+											"sid": 567531429888664,
+											"parameters": {
+												"instance-variable": "playerSpeedVertical",
+												"value": "Self.8Direction.MaxSpeed"
+											}
+										}
+									],
+									"sid": 107689122253553
+								}
+							],
+							"isOrBlock": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 667795804734316
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Player",
+									"sid": 315593347966029,
+									"parameters": {
+										"instance-variable": "playerUp",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 345669643706923
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "key-is-down",
+									"objectClass": "Keyboard",
+									"sid": 341645582606222,
+									"parameters": {
+										"key": 40
+									}
+								},
+								{
+									"id": "key-is-down",
+									"objectClass": "Keyboard",
+									"sid": 748898333991951,
+									"parameters": {
+										"key": 83
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Player",
+									"sid": 839730012031131,
+									"parameters": {
+										"instance-variable": "playerDown",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 851450610038713,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Player",
+											"sid": 618584422612868,
+											"parameters": {
+												"instance-variable": "playerSpeedVertical",
+												"comparison": 4,
+												"value": "-Self.8Direction.MaxSpeed"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "subtract-from-instvar",
+											"objectClass": "Player",
+											"sid": 355808879212930,
+											"parameters": {
+												"instance-variable": "playerSpeedVertical",
+												"value": "PLAYER_acceleration"
+											}
+										}
+									],
+									"sid": 633211518861006
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 945037959600617
+										}
+									],
+									"actions": [
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Player",
+											"sid": 435136892603052,
+											"parameters": {
+												"instance-variable": "playerSpeedVertical",
+												"value": "-Self.8Direction.MaxSpeed"
+											}
+										}
+									],
+									"sid": 349900051189747
+								}
+							],
+							"isOrBlock": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 394146132428666
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Player",
+									"sid": 507921142626642,
+									"parameters": {
+										"instance-variable": "playerDown",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 386279235129115
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "key-is-down",
+									"objectClass": "Keyboard",
+									"sid": 420898809380360,
+									"parameters": {
+										"key": 65
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Player",
+									"sid": 503762569171429,
+									"parameters": {
+										"instance-variable": "playerLeft",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 916758640623898,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Player",
+											"sid": 806581835418784,
+											"parameters": {
+												"instance-variable": "playerSpeedHorizontal",
+												"comparison": 4,
+												"value": "-Self.8Direction.MaxSpeed*0.75"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "subtract-from-instvar",
+											"objectClass": "Player",
+											"sid": 302675527241119,
+											"parameters": {
+												"instance-variable": "playerSpeedHorizontal",
+												"value": "PLAYER_acceleration"
+											}
+										}
+									],
+									"sid": 582446225260108
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 163837869460590
+										}
+									],
+									"actions": [
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Player",
+											"sid": 763845101368580,
+											"parameters": {
+												"instance-variable": "playerSpeedHorizontal",
+												"value": "-Self.8Direction.MaxSpeed*0.75"
+											}
+										}
+									],
+									"sid": 608477639757219
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 642123371173716
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Player",
+									"sid": 478846971308735,
+									"parameters": {
+										"instance-variable": "playerLeft",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 496562255934833
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "key-is-down",
+									"objectClass": "Keyboard",
+									"sid": 894462479954046,
+									"parameters": {
+										"key": 68
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Player",
+									"sid": 517743408281585,
+									"parameters": {
+										"instance-variable": "playerRight",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 847414156452189,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Player",
+											"sid": 450410566675373,
+											"parameters": {
+												"instance-variable": "playerSpeedHorizontal",
+												"comparison": 2,
+												"value": "Self.8Direction.MaxSpeed*0.75"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "add-to-instvar",
+											"objectClass": "Player",
+											"sid": 432266894736425,
+											"parameters": {
+												"instance-variable": "playerSpeedHorizontal",
+												"value": "PLAYER_acceleration"
+											}
+										}
+									],
+									"sid": 635973711096585
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 226877317720789
+										}
+									],
+									"actions": [
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Player",
+											"sid": 675560659822644,
+											"parameters": {
+												"instance-variable": "playerSpeedHorizontal",
+												"value": "Self.8Direction.MaxSpeed*0.75"
+											}
+										}
+									],
+									"sid": 176579791590425
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 249231922321827
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Player",
+									"sid": 536758399359137,
+									"parameters": {
+										"instance-variable": "playerRight",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 782707024523862
+						},
+						{
+							"eventType": "comment",
+							"text": "bonus: tank controls"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "key-is-down",
+									"objectClass": "Keyboard",
+									"sid": 155730455773241,
+									"parameters": {
+										"key": 37
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "rotate-camera",
+									"objectClass": "3DCamera",
+									"sid": 457252645166028,
+									"parameters": {
+										"rotate-x": "dt*-120",
+										"rotate-y": "0",
+										"min-polar-angle": "85",
+										"max-polar-angle": "85"
+									}
+								}
+							],
+							"sid": 829457450508154
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "key-is-down",
+									"objectClass": "Keyboard",
+									"sid": 918506756446912,
+									"parameters": {
+										"key": 39
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "rotate-camera",
+									"objectClass": "3DCamera",
+									"sid": 474957258523075,
+									"parameters": {
+										"rotate-x": "dt*120",
+										"rotate-y": "0",
+										"min-polar-angle": "85",
+										"max-polar-angle": "85"
+									}
+								}
+							],
+							"sid": 685540342901476
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 637943957453357,
+									"parameters": {
+										"variable": "MENU_menu",
+										"comparison": 0,
+										"value": "\"\""
+									}
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 156062811349271,
+									"parameters": {
+										"variable": "BLEED_ready"
+									}
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 663527370538365,
+									"parameters": {
+										"variable": "GAME_mobile"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 286371103473884,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-touching-object",
+											"objectClass": "Touch",
+											"sid": 607806507627820,
+											"parameters": {
+												"object": "MobileButtons"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-opacity",
+											"objectClass": "MobileButtons",
+											"sid": 951733276341442,
+											"parameters": {
+												"opacity": "100"
+											}
+										}
+									],
+									"sid": 539115790057902,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-animation-frame",
+													"objectClass": "MobileButtons",
+													"sid": 540059568343832,
+													"parameters": {
+														"comparison": 0,
+														"number": "0"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-boolean-instvar",
+													"objectClass": "Player",
+													"sid": 469649303164277,
+													"parameters": {
+														"instance-variable": "playerUp",
+														"value": "true"
+													}
+												}
+											],
+											"sid": 845286954581041,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-instance-variable",
+															"objectClass": "Player",
+															"sid": 863915594335511,
+															"parameters": {
+																"instance-variable": "playerSpeedVertical",
+																"comparison": 2,
+																"value": "Self.8Direction.MaxSpeed"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "add-to-instvar",
+															"objectClass": "Player",
+															"sid": 405357116868024,
+															"parameters": {
+																"instance-variable": "playerSpeedVertical",
+																"value": "PLAYER_acceleration"
+															}
+														}
+													],
+													"sid": 195538352270764
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "else",
+															"objectClass": "System",
+															"sid": 990322680893301
+														}
+													],
+													"actions": [
+														{
+															"id": "set-instvar-value",
+															"objectClass": "Player",
+															"sid": 816134121566694,
+															"parameters": {
+																"instance-variable": "playerSpeedVertical",
+																"value": "Self.8Direction.MaxSpeed"
+															}
+														}
+													],
+													"sid": 219603831549813
+												}
+											]
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "else",
+													"objectClass": "System",
+													"sid": 674991517620162
+												}
+											],
+											"actions": [
+												{
+													"id": "set-boolean-instvar",
+													"objectClass": "Player",
+													"sid": 425325047205535,
+													"parameters": {
+														"instance-variable": "playerUp",
+														"value": "false"
+													}
+												}
+											],
+											"sid": 151530770211067
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-animation-frame",
+													"objectClass": "MobileButtons",
+													"sid": 441775130021224,
+													"parameters": {
+														"comparison": 0,
+														"number": "1"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-boolean-instvar",
+													"objectClass": "Player",
+													"sid": 482374468246285,
+													"parameters": {
+														"instance-variable": "playerDown",
+														"value": "true"
+													}
+												}
+											],
+											"sid": 759498703576500,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-instance-variable",
+															"objectClass": "Player",
+															"sid": 309327255750852,
+															"parameters": {
+																"instance-variable": "playerSpeedVertical",
+																"comparison": 4,
+																"value": "-Self.8Direction.MaxSpeed"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "subtract-from-instvar",
+															"objectClass": "Player",
+															"sid": 443899062170882,
+															"parameters": {
+																"instance-variable": "playerSpeedVertical",
+																"value": "PLAYER_acceleration"
+															}
+														}
+													],
+													"sid": 600083924557817
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "else",
+															"objectClass": "System",
+															"sid": 784966077540925
+														}
+													],
+													"actions": [
+														{
+															"id": "set-instvar-value",
+															"objectClass": "Player",
+															"sid": 773444171714818,
+															"parameters": {
+																"instance-variable": "playerSpeedVertical",
+																"value": "-Self.8Direction.MaxSpeed"
+															}
+														}
+													],
+													"sid": 705099012971294
+												}
+											]
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "else",
+													"objectClass": "System",
+													"sid": 513959200854749
+												}
+											],
+											"actions": [
+												{
+													"id": "set-boolean-instvar",
+													"objectClass": "Player",
+													"sid": 892529317123492,
+													"parameters": {
+														"instance-variable": "playerDown",
+														"value": "false"
+													}
+												}
+											],
+											"sid": 523280281491157
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-animation-frame",
+													"objectClass": "MobileButtons",
+													"sid": 220423650233412,
+													"parameters": {
+														"comparison": 0,
+														"number": "2"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "rotate-camera",
+													"objectClass": "3DCamera",
+													"sid": 214946733819847,
+													"parameters": {
+														"rotate-x": "dt*-60",
+														"rotate-y": "0",
+														"min-polar-angle": "85",
+														"max-polar-angle": "85"
+													}
+												}
+											],
+											"sid": 681017994579943
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-animation-frame",
+													"objectClass": "MobileButtons",
+													"sid": 162297356324212,
+													"parameters": {
+														"comparison": 0,
+														"number": "3"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "rotate-camera",
+													"objectClass": "3DCamera",
+													"sid": 649968690019462,
+													"parameters": {
+														"rotate-x": "dt*60",
+														"rotate-y": "0",
+														"min-polar-angle": "85",
+														"max-polar-angle": "85"
+													}
+												}
+											],
+											"sid": 246074419408718
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-touching-object",
+											"objectClass": "Touch",
+											"sid": 914676787374584,
+											"parameters": {
+												"object": "MobileArms"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-effect-parameter",
+											"objectClass": "MobileArms",
+											"sid": 778518743991581,
+											"parameters": {
+												"effect": "\"Brightness\"",
+												"parameter-index": "0",
+												"value": "110"
+											}
+										}
+									],
+									"sid": 977369921577360
+								}
+							]
+						}
+					]
+				}
+			],
+			"sid": 926331699835181
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Arm",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 448684656495643,
+							"parameters": {
+								"variable": "BLEED_ready"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 267388314214041,
+							"parameters": {
+								"variable": "MENU_menu",
+								"comparison": 0,
+								"value": "\"\""
+							}
+						},
+						{
+							"id": "is-playing-by-tags",
+							"objectClass": "TimelineController",
+							"sid": 736184650392655,
+							"parameters": {
+								"tags": "\"swap\""
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-playing-by-tags",
+							"objectClass": "TimelineController",
+							"sid": 350876021546103,
+							"parameters": {
+								"tags": "\"drink\""
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [],
+					"sid": 597632638644266,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-key-pressed",
+									"objectClass": "Keyboard",
+									"sid": 768810633278925,
+									"parameters": {
+										"key": 49
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 929558886521749,
+									"parameters": {
+										"variable": "PLAYER_weapon",
+										"comparison": 1,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "play-timeline",
+									"objectClass": "TimelineController",
+									"sid": 633489532596580,
+									"parameters": {
+										"timeline": "Swap",
+										"tags": "\"swap\""
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 270493798166809,
+									"parameters": {
+										"variable": "PLAYER_weapon",
+										"value": "0"
+									}
+								}
+							],
+							"sid": 391033423448784
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-key-pressed",
+									"objectClass": "Keyboard",
+									"sid": 230528456445839,
+									"parameters": {
+										"key": 50
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 573154883763001,
+									"parameters": {
+										"variable": "PLAYER_weapon",
+										"comparison": 1,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "play-timeline",
+									"objectClass": "TimelineController",
+									"sid": 411630427814386,
+									"parameters": {
+										"timeline": "Swap",
+										"tags": "\"swap\""
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 172891046401033,
+									"parameters": {
+										"variable": "PLAYER_weapon",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 969698152626334
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-key-pressed",
+									"objectClass": "Keyboard",
+									"sid": 247673373650915,
+									"parameters": {
+										"key": 51
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 202472185187315,
+									"parameters": {
+										"variable": "PLAYER_weapon",
+										"comparison": 1,
+										"value": "2"
+									}
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 906617323831546,
+									"parameters": {
+										"variable": "GAME_beer"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "play-timeline",
+									"objectClass": "TimelineController",
+									"sid": 375148289514605,
+									"parameters": {
+										"timeline": "Swap",
+										"tags": "\"swap\""
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 280411966225648,
+									"parameters": {
+										"variable": "PLAYER_weapon",
+										"value": "2"
+									}
+								}
+							],
+							"sid": 669460432336832
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-tap-object",
+									"objectClass": "Touch",
+									"sid": 493216879877516,
+									"parameters": {
+										"object": "MobileArms"
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 804109953132044,
+									"parameters": {
+										"variable": "MENU_menu",
+										"comparison": 0,
+										"value": "\"\""
+									}
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 541962671168363,
+									"parameters": {
+										"variable": "BLEED_ready"
+									}
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 280334740438013,
+									"parameters": {
+										"variable": "GAME_mobile"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "play-timeline",
+									"objectClass": "TimelineController",
+									"sid": 635999227450297,
+									"parameters": {
+										"timeline": "Swap",
+										"tags": "\"swap\""
+									}
+								},
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 811436712434870,
+									"parameters": {
+										"variable": "PLAYER_weapon",
+										"value": "1"
+									}
+								},
+								{
+									"id": "set-animation-frame",
+									"objectClass": "MobileArms",
+									"sid": 655597098666881,
+									"parameters": {
+										"frame-number": "PLAYER_weapon"
+									}
+								}
+							],
+							"sid": 844141227099658,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 384336164252860,
+											"parameters": {
+												"variable": "GAME_beer"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 689374716236618,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 407290155358278,
+													"parameters": {
+														"variable": "PLAYER_weapon",
+														"comparison": 4,
+														"value": "2"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 259322972158348,
+													"parameters": {
+														"variable": "PLAYER_weapon",
+														"value": "0"
+													}
+												},
+												{
+													"id": "set-animation-frame",
+													"objectClass": "MobileArms",
+													"sid": 885251707722362,
+													"parameters": {
+														"frame-number": "PLAYER_weapon"
+													}
+												}
+											],
+											"sid": 210662223482241
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 971414689966762
+										}
+									],
+									"actions": [],
+									"sid": 677114642503116,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 123443518598449,
+													"parameters": {
+														"variable": "PLAYER_weapon",
+														"comparison": 4,
+														"value": "1"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 971241556849670,
+													"parameters": {
+														"variable": "PLAYER_weapon",
+														"value": "0"
+													}
+												},
+												{
+													"id": "set-animation-frame",
+													"objectClass": "MobileArms",
+													"sid": 249090309046478,
+													"parameters": {
+														"frame-number": "PLAYER_weapon"
+													}
+												}
+											],
+											"sid": 721281768196913
+										}
+									]
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-click",
+									"objectClass": "Mouse",
+									"sid": 898418880834446,
+									"parameters": {
+										"mouse-button": "left",
+										"click-type": "clicked"
+									}
+								},
+								{
+									"id": "has-pointer-lock",
+									"objectClass": "Mouse",
+									"sid": 450905969893825
+								}
+							],
+							"actions": [
+								{
+									"callFunction": "drink",
+									"sid": 715817346220473
+								}
+							],
+							"sid": 792228946488086
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-key-pressed",
+									"objectClass": "Keyboard",
+									"sid": 873810748650152,
+									"parameters": {
+										"key": 17
+									}
+								}
+							],
+							"actions": [
+								{
+									"callFunction": "drink",
+									"sid": 824169795723456
+								}
+							],
+							"sid": 364004330106437
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-any-touch-start",
+									"objectClass": "Touch",
+									"sid": 853193867069569
+								},
+								{
+									"id": "is-touching-object",
+									"objectClass": "Touch",
+									"sid": 892898677115578,
+									"parameters": {
+										"object": "MobileButtons"
+									},
+									"isInverted": true
+								},
+								{
+									"id": "is-touching-object",
+									"objectClass": "Touch",
+									"sid": 407488050823428,
+									"parameters": {
+										"object": "MobileButtons"
+									},
+									"isInverted": true
+								},
+								{
+									"id": "is-touching-object",
+									"objectClass": "Touch",
+									"sid": 666031197295451,
+									"parameters": {
+										"object": "HUD"
+									},
+									"isInverted": true
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 333841977498399,
+									"parameters": {
+										"variable": "MENU_menu",
+										"comparison": 0,
+										"value": "\"\""
+									}
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 322352002373729,
+									"parameters": {
+										"variable": "BLEED_ready"
+									}
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 939994957621201,
+									"parameters": {
+										"variable": "GAME_mobile"
+									}
+								}
+							],
+							"actions": [
+								{
+									"callFunction": "drink",
+									"sid": 667316841126863
+								}
+							],
+							"sid": 626414661123196
+						}
+					]
+				},
+				{
+					"functionName": "drink",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [],
+					"sid": 238065133115947,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-animation-frame",
+									"objectClass": "Arm",
+									"sid": 370164080918892,
+									"parameters": {
+										"comparison": 0,
+										"number": "0"
+									}
+								},
+								{
+									"id": "is-playing-by-tags",
+									"objectClass": "TimelineController",
+									"sid": 847998787913490,
+									"parameters": {
+										"tags": "\"swap\""
+									},
+									"isInverted": true
+								},
+								{
+									"id": "is-playing-by-tags",
+									"objectClass": "TimelineController",
+									"sid": 356942427438987,
+									"parameters": {
+										"tags": "\"drink\""
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "play-timeline",
+									"objectClass": "TimelineController",
+									"sid": 997114778737236,
+									"parameters": {
+										"timeline": "Reach",
+										"tags": "\"drink\""
+									}
+								}
+							],
+							"sid": 422786534404283
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-animation-frame",
+									"objectClass": "Arm",
+									"sid": 797256248897168,
+									"parameters": {
+										"comparison": 0,
+										"number": "1"
+									}
+								},
+								{
+									"id": "is-playing-by-tags",
+									"objectClass": "TimelineController",
+									"sid": 347785798667997,
+									"parameters": {
+										"tags": "\"swap\""
+									},
+									"isInverted": true
+								},
+								{
+									"id": "is-tag-playing",
+									"objectClass": "Audio",
+									"sid": 374279136006671,
+									"parameters": {
+										"tag": "\"sip\""
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [],
+							"sid": 439267650698876,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 833209360543108,
+											"parameters": {
+												"variable": "STAT_ammoWine",
+												"comparison": 4,
+												"value": "0"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "play-timeline",
+											"objectClass": "TimelineController",
+											"sid": 623698040268574,
+											"parameters": {
+												"timeline": "Drink",
+												"tags": "\"drink\""
+											}
+										},
+										{
+											"id": "subtract-from-eventvar",
+											"objectClass": "System",
+											"sid": 413233146845399,
+											"parameters": {
+												"variable": "STAT_ammoWine",
+												"value": "1"
+											}
+										},
+										{
+											"id": "play",
+											"objectClass": "Audio",
+											"sid": 241750553727200,
+											"parameters": {
+												"audio-file": "wine",
+												"loop": "not-looping",
+												"volume": "log10(SETTING_volumeSound)*20",
+												"stereo-pan": "0",
+												"tag-optional": "\"sip\""
+											}
+										},
+										{
+											"id": "add-to-eventvar",
+											"objectClass": "System",
+											"sid": 111208631572709,
+											"parameters": {
+												"variable": "STAT_drinks",
+												"value": "1"
+											}
+										}
+									],
+									"sid": 454249339331436
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 943287176992489
+										}
+									],
+									"actions": [
+										{
+											"id": "play-timeline",
+											"objectClass": "TimelineController",
+											"sid": 520254357525589,
+											"parameters": {
+												"timeline": "Swap",
+												"tags": "\"swap\""
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 792679029159904,
+											"parameters": {
+												"variable": "PLAYER_weapon",
+												"value": "0"
+											}
+										}
+									],
+									"sid": 973563626692171
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-animation-frame",
+									"objectClass": "Arm",
+									"sid": 248662020944374,
+									"parameters": {
+										"comparison": 0,
+										"number": "2"
+									}
+								},
+								{
+									"id": "is-playing-by-tags",
+									"objectClass": "TimelineController",
+									"sid": 796061424989281,
+									"parameters": {
+										"tags": "\"swap\""
+									},
+									"isInverted": true
+								},
+								{
+									"id": "is-tag-playing",
+									"objectClass": "Audio",
+									"sid": 493443167360150,
+									"parameters": {
+										"tag": "\"sip\""
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [],
+							"sid": 162284019061447,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 551261924865423,
+											"parameters": {
+												"variable": "STAT_ammoBeer",
+												"comparison": 4,
+												"value": "0"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "play-timeline",
+											"objectClass": "TimelineController",
+											"sid": 908347397437317,
+											"parameters": {
+												"timeline": "Drink",
+												"tags": "\"drink\""
+											}
+										},
+										{
+											"id": "subtract-from-eventvar",
+											"objectClass": "System",
+											"sid": 266008978557508,
+											"parameters": {
+												"variable": "STAT_ammoBeer",
+												"value": "1"
+											}
+										},
+										{
+											"id": "play",
+											"objectClass": "Audio",
+											"sid": 362048964880967,
+											"parameters": {
+												"audio-file": "beer",
+												"loop": "not-looping",
+												"volume": "log10(SETTING_volumeSound)*20",
+												"stereo-pan": "0",
+												"tag-optional": "\"sip\""
+											}
+										}
+									],
+									"sid": 456126316874449
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 890482935172738
+										},
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 936941212173553,
+											"parameters": {
+												"variable": "STAT_ammoWine",
+												"comparison": 4,
+												"value": "0"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "play-timeline",
+											"objectClass": "TimelineController",
+											"sid": 161694589696178,
+											"parameters": {
+												"timeline": "Swap",
+												"tags": "\"swap\""
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 826394663604719,
+											"parameters": {
+												"variable": "PLAYER_weapon",
+												"value": "1"
+											}
+										}
+									],
+									"sid": 908661538172812
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 641284091405513
+										}
+									],
+									"actions": [
+										{
+											"id": "play-timeline",
+											"objectClass": "TimelineController",
+											"sid": 964464887656777,
+											"parameters": {
+												"timeline": "Swap",
+												"tags": "\"swap\""
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 957497536082136,
+											"parameters": {
+												"variable": "PLAYER_weapon",
+												"value": "0"
+											}
+										}
+									],
+									"sid": 850847663005477
+								}
+							]
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-keyframe-reached",
+							"objectClass": "TimelineController",
+							"sid": 816294374026500,
+							"parameters": {
+								"tags": "\"swap\"",
+								"match": "any-tags"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Arm",
+							"sid": 908722979585130,
+							"parameters": {
+								"frame-number": "PLAYER_weapon"
+							}
+						}
+					],
+					"sid": 577713270000198
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 948532891109356
+						}
+					],
+					"actions": [
+						{
+							"id": "set-magnitude",
+							"objectClass": "Arm",
+							"sid": 269092260703926,
+							"behaviorType": "Sine",
+							"parameters": {
+								"magnitude": "4*(Player.8Direction.Speed/Player.8Direction.MaxSpeed)"
+							}
+						},
+						{
+							"id": "set-magnitude",
+							"objectClass": "Arm",
+							"sid": 176512171233078,
+							"behaviorType": "Sine2",
+							"parameters": {
+								"magnitude": "8*(Player.8Direction.Speed/Player.8Direction.MaxSpeed)"
+							}
+						},
+						{
+							"id": "set-magnitude",
+							"objectClass": "Arm",
+							"sid": 259250242705381,
+							"behaviorType": "Sine3",
+							"parameters": {
+								"magnitude": "2*(Player.8Direction.Speed/Player.8Direction.MaxSpeed)"
+							}
+						}
+					],
+					"sid": 217374439682025
+				}
+			],
+			"sid": 890356797290954
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Z Collision",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 224566325189886,
+							"parameters": {
+								"variable": "PHYS_deltaZ",
+								"comparison": 2,
+								"value": "0"
+							}
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "Player",
+							"sid": 260092479033318,
+							"parameters": {
+								"object": "Ground"
+							}
+						},
+						{
+							"id": "compare-z-elevation",
+							"objectClass": "Ground",
+							"sid": 392980694974426,
+							"parameters": {
+								"which": "z-elevation",
+								"comparison": 5,
+								"z-elevation": "Player.ZElevation - Self.ZHeight"
+							}
+						},
+						{
+							"id": "compare-z-elevation",
+							"objectClass": "Ground",
+							"sid": 844991741895015,
+							"parameters": {
+								"which": "z-elevation",
+								"comparison": 3,
+								"z-elevation": "Player.ZElevation - Self.ZHeight + 10"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 385508023340894,
+							"parameters": {
+								"variable": "PHYS_deltaZ",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-z-elevation",
+							"objectClass": "Player",
+							"sid": 717755848303834,
+							"parameters": {
+								"z": "Ground.ZElevation + Ground.ZHeight"
+							}
+						}
+					],
+					"sid": 202049535542400,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 595070351595810,
+									"parameters": {
+										"variable": "PLAYER_onGround",
+										"value": "true"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 811544451396356,
+									"parameters": {
+										"variable": "PLAYER_coyoteTime",
+										"value": "10"
+									}
+								}
+							],
+							"sid": 397095036805296
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 155476044151108
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 614167393859890,
+							"parameters": {
+								"variable": "PLAYER_onGround",
+								"value": "false"
+							}
+						}
+					],
+					"sid": 995175006494167,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 281390756414554,
+									"parameters": {
+										"variable": "PLAYER_coyoteTime",
+										"comparison": 4,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "subtract-from-eventvar",
+									"objectClass": "System",
+									"sid": 189537357345849,
+									"parameters": {
+										"variable": "PLAYER_coyoteTime",
+										"value": "60*dt"
+									}
+								}
+							],
+							"sid": 332267426769708
+						}
+					]
+				},
+				{
+					"eventType": "comment",
+					"text": "collision types"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 923582614416645
+						}
+					],
+					"actions": [
+						{
+							"id": "set-enabled",
+							"objectClass": "Ground",
+							"sid": 610526314287258,
+							"behaviorType": "Solid",
+							"parameters": {
+								"state": "disabled"
+							}
+						}
+					],
+					"sid": 165511936566158
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-z-elevation",
+							"objectClass": "Ground",
+							"sid": 939251866147103,
+							"parameters": {
+								"which": "z-elevation",
+								"comparison": 4,
+								"z-elevation": "Player.ZElevation - Self.ZHeight + 10"
+							}
+						},
+						{
+							"id": "compare-z-elevation",
+							"objectClass": "Ground",
+							"sid": 763672575742880,
+							"parameters": {
+								"which": "z-elevation",
+								"comparison": 2,
+								"z-elevation": "Player.ZElevation + PLAYER_cameraHeight"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-enabled",
+							"objectClass": "Ground",
+							"sid": 888121865927325,
+							"behaviorType": "Solid",
+							"parameters": {
+								"state": "enabled"
+							}
+						}
+					],
+					"sid": 959993861189672
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "Ground",
+							"sid": 348411518780481,
+							"parameters": {
+								"object": "Ground"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 489600378992104,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "for-each",
+									"objectClass": "System",
+									"sid": 253978375927499,
+									"parameters": {
+										"object": "Ground"
+									}
+								},
+								{
+									"id": "compare-z-elevation",
+									"objectClass": "Ground",
+									"sid": 900250998583519,
+									"parameters": {
+										"which": "z-elevation",
+										"comparison": 2,
+										"z-elevation": "Ground.ZElevation"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-enabled",
+									"objectClass": "Ground",
+									"sid": 128247759892446,
+									"behaviorType": "Solid",
+									"parameters": {
+										"state": "enabled"
+									}
+								}
+							],
+							"sid": 172582496674240
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-z-elevation",
+							"objectClass": "Ground",
+							"sid": 384174958441198,
+							"parameters": {
+								"which": "z-elevation",
+								"comparison": 4,
+								"z-elevation": "Player.ZElevation + PLAYER_cameraHeight - 8"
+							}
+						},
+						{
+							"id": "compare-z-elevation",
+							"objectClass": "Ground",
+							"sid": 631987812825261,
+							"parameters": {
+								"which": "z-elevation",
+								"comparison": 2,
+								"z-elevation": "Player.ZElevation + PLAYER_cameraHeight + 2"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 172661752749851,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "Ground",
+									"sid": 781843708656332,
+									"parameters": {
+										"object": "Player"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-enabled",
+									"objectClass": "Ground",
+									"sid": 842362460481349,
+									"behaviorType": "Solid",
+									"parameters": {
+										"state": "disabled"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 435368536593949,
+									"parameters": {
+										"variable": "PHYS_deltaZ",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-z-elevation",
+									"objectClass": "Player",
+									"sid": 681794286422775,
+									"parameters": {
+										"z": "Ground.ZElevation - PLAYER_cameraHeight - 2"
+									}
+								}
+							],
+							"sid": 535206525649225
+						}
+					]
+				}
+			],
+			"sid": 356630430583445
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Doodads",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 617466287465648
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position",
+							"objectClass": "Sight",
+							"sid": 316570317122348,
+							"parameters": {
+								"x": "Player.X",
+								"y": "Player.Y"
+							}
+						},
+						{
+							"id": "set-angle",
+							"objectClass": "Sight",
+							"sid": 529254925745384,
+							"parameters": {
+								"angle": "3DCamera.CameraXRotation"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "SmallSight",
+							"sid": 327383260002479,
+							"parameters": {
+								"x": "Player.X",
+								"y": "Player.Y"
+							}
+						},
+						{
+							"id": "set-angle",
+							"objectClass": "SmallSight",
+							"sid": 770702191725825,
+							"parameters": {
+								"angle": "3DCamera.CameraXRotation"
+							}
+						}
+					],
+					"sid": 884971870320384,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 160255458977308,
+									"parameters": {
+										"variable": "GAME_popupLifetime",
+										"comparison": 4,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "PopupFont",
+									"sid": 688109294564251,
+									"parameters": {
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "subtract-from-eventvar",
+									"objectClass": "System",
+									"sid": 215016046650903,
+									"parameters": {
+										"variable": "GAME_popupLifetime",
+										"value": "60*dt"
+									}
+								}
+							],
+							"sid": 256782180310226
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 229373418857001
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "PopupFont",
+									"sid": 966391200726894,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								}
+							],
+							"sid": 980631195076553
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 961673841534840,
+									"parameters": {
+										"variable": "GAME_flashLifetime",
+										"comparison": 4,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "subtract-from-eventvar",
+									"objectClass": "System",
+									"sid": 527745832249521,
+									"parameters": {
+										"variable": "GAME_flashLifetime",
+										"value": "60*dt"
+									}
+								}
+							],
+							"sid": 621448762913204,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 195882726262076,
+											"parameters": {
+												"variable": "SETTING_flashing"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-visible",
+											"objectClass": "Flash",
+											"sid": 291856925175936,
+											"parameters": {
+												"visibility": "visible"
+											}
+										}
+									],
+									"sid": 344100476000281
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 462907847710349
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "Flash",
+									"sid": 684567063785474,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								}
+							],
+							"sid": 179052764809569
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 915106033578552,
+									"parameters": {
+										"variable": "GAME_gruntCooldown",
+										"comparison": 4,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "subtract-from-eventvar",
+									"objectClass": "System",
+									"sid": 328214473898142,
+									"parameters": {
+										"variable": "GAME_gruntCooldown",
+										"value": "60*dt"
+									}
+								}
+							],
+							"sid": 941951814771607
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-click",
+							"objectClass": "Mouse",
+							"sid": 569275572660548,
+							"parameters": {
+								"mouse-button": "right",
+								"click-type": "clicked"
+							}
+						},
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 865245478291609,
+							"parameters": {
+								"key": 32
+							}
+						}
+					],
+					"actions": [],
+					"sid": 558742465187574,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 767632615345168,
+									"parameters": {
+										"variable": "BLEED_ready"
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 492354357320992,
+									"parameters": {
+										"variable": "MENU_menu",
+										"comparison": 0,
+										"value": "\"\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"callFunction": "interact",
+									"sid": 528039577841482
+								}
+							],
+							"sid": 592902176111458
+						}
+					],
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 900086702982580,
+							"parameters": {
+								"variable": "MENU_menu",
+								"comparison": 0,
+								"value": "\"\""
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 853931099818806,
+							"parameters": {
+								"variable": "BLEED_ready"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 260012823327268,
+							"parameters": {
+								"variable": "GAME_mobile"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 876576537664981,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-tap-object",
+									"objectClass": "Touch",
+									"sid": 585067011243575,
+									"parameters": {
+										"object": "MobileButtons"
+									}
+								},
+								{
+									"id": "compare-animation-frame",
+									"objectClass": "MobileButtons",
+									"sid": 874757975882525,
+									"parameters": {
+										"comparison": 0,
+										"number": "4"
+									}
+								}
+							],
+							"actions": [
+								{
+									"callFunction": "interact",
+									"sid": 457551285385346
+								}
+							],
+							"sid": 999519083709304
+						}
+					]
+				},
+				{
+					"functionName": "interact",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [],
+					"sid": 858230222939489,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "Sight",
+									"sid": 812376992251388,
+									"parameters": {
+										"object": "Ground"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 524735162208757,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-on-layer",
+											"objectClass": "Ground",
+											"sid": 597751226130737,
+											"parameters": {
+												"layer": "\"Doors\""
+											}
+										},
+										{
+											"id": "has-tags",
+											"objectClass": "Ground",
+											"sid": 509636634515269,
+											"parameters": {
+												"tags": "\"open\""
+											},
+											"isInverted": true
+										}
+									],
+									"actions": [
+										{
+											"id": "play",
+											"objectClass": "Audio",
+											"sid": 601387758121728,
+											"parameters": {
+												"audio-file": "door",
+												"loop": "not-looping",
+												"volume": "log10(SETTING_volumeSound)*20",
+												"stereo-pan": "0",
+												"tag-optional": "\"\""
+											}
+										},
+										{
+											"id": "set-instance",
+											"objectClass": "TimelineController",
+											"sid": 932841887910095,
+											"parameters": {
+												"object-class": "Ground",
+												"track-id": "\"door\""
+											}
+										},
+										{
+											"id": "play-timeline",
+											"objectClass": "TimelineController",
+											"sid": 770419202114270,
+											"parameters": {
+												"timeline": "Door",
+												"tags": "\"door\""
+											}
+										},
+										{
+											"id": "change-tags",
+											"objectClass": "Ground",
+											"sid": 606375281874774,
+											"parameters": {
+												"action": "add",
+												"tags": "\"open\""
+											}
+										}
+									],
+									"sid": 752426001321043
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 848939006394722
+										},
+										{
+											"id": "is-overlapping-another-object",
+											"objectClass": "Sight",
+											"sid": 320643049558108,
+											"parameters": {
+												"object": "Overlay"
+											}
+										},
+										{
+											"id": "has-tags",
+											"objectClass": "Overlay",
+											"sid": 504249268403887,
+											"parameters": {
+												"tags": "\"exit\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "stop",
+											"objectClass": "Audio",
+											"sid": 677414910772951,
+											"parameters": {
+												"tag": "\"music\""
+											}
+										},
+										{
+											"id": "stop-all",
+											"objectClass": "Audio",
+											"sid": 421611972156476
+										},
+										{
+											"id": "release-pointer-lock",
+											"objectClass": "Mouse",
+											"sid": 121188367441453
+										},
+										{
+											"callFunction": "transition",
+											"sid": 727188059546811,
+											"parameters": [
+												"\"results\""
+											]
+										}
+									],
+									"sid": 471940565375344
+								},
+								{
+									"eventType": "comment",
+									"text": "second check for grunting"
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 604312993404120
+										},
+										{
+											"id": "is-overlapping-another-object",
+											"objectClass": "Sight",
+											"sid": 807115103946201,
+											"parameters": {
+												"object": "Trigger"
+											}
+										},
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Trigger",
+											"sid": 237930220306984,
+											"parameters": {
+												"instance-variable": "id",
+												"comparison": 4,
+												"value": "-1"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 800171786941745
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 813086816517677
+										},
+										{
+											"id": "is-overlapping-another-object",
+											"objectClass": "SmallSight",
+											"sid": 152721926183431,
+											"parameters": {
+												"object": "Ground"
+											}
+										},
+										{
+											"id": "is-enabled",
+											"objectClass": "Ground",
+											"sid": 836062133981434,
+											"behaviorType": "Solid"
+										},
+										{
+											"id": "compare-z-elevation",
+											"objectClass": "Ground",
+											"sid": 469099473372836,
+											"parameters": {
+												"which": "z-elevation",
+												"comparison": 4,
+												"z-elevation": "SmallSight.ZElevation - Self.ZHeight + 1"
+											}
+										},
+										{
+											"id": "compare-z-elevation",
+											"objectClass": "Ground",
+											"sid": 335527913317418,
+											"parameters": {
+												"which": "z-elevation",
+												"comparison": 2,
+												"z-elevation": "SmallSight.ZElevation"
+											}
+										},
+										{
+											"id": "has-tags",
+											"objectClass": "Ground",
+											"sid": 658773189056621,
+											"parameters": {
+												"tags": "\"collision\""
+											},
+											"isInverted": true
+										},
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 328616930947645,
+											"parameters": {
+												"variable": "GAME_gruntCooldown",
+												"comparison": 3,
+												"value": "0"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 537858418666238,
+											"parameters": {
+												"variable": "GAME_gruntCooldown",
+												"value": "10"
+											}
+										},
+										{
+											"id": "play",
+											"objectClass": "Audio",
+											"sid": 594066816549706,
+											"parameters": {
+												"audio-file": "grunt",
+												"loop": "not-looping",
+												"volume": "log10(SETTING_volumeSound)*20",
+												"stereo-pan": "0",
+												"tag-optional": "\"grunt\""
+											}
+										},
+										{
+											"id": "set-playback-rate",
+											"objectClass": "Audio",
+											"sid": 946255087568705,
+											"parameters": {
+												"tag": "\"grunt\"",
+												"playback-rate": "random(0.95, 1.05)"
+											}
+										}
+									],
+									"sid": 720394465913742
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "Sight",
+									"sid": 929384316708156,
+									"parameters": {
+										"object": "Trigger"
+									}
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 839556741443025,
+									"parameters": {
+										"variable": "MENU_paused"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [],
+							"sid": 290291914449174,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Trigger",
+											"sid": 675492754114998,
+											"parameters": {
+												"instance-variable": "id",
+												"comparison": 4,
+												"value": "-1"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation-frame",
+											"objectClass": "ModalArt",
+											"sid": 968022839041999,
+											"parameters": {
+												"frame-number": "Trigger.id"
+											}
+										},
+										{
+											"id": "set-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 399476677413737,
+											"parameters": {
+												"variable": "MENU_keyControl",
+												"value": "false"
+											}
+										},
+										{
+											"id": "release-pointer-lock",
+											"objectClass": "Mouse",
+											"sid": 242062083102361
+										},
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "Player",
+											"sid": 832313506343169,
+											"parameters": {
+												"instance-variable": "playerUp",
+												"value": "false"
+											}
+										},
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "Player",
+											"sid": 773532407191421,
+											"parameters": {
+												"instance-variable": "playerDown",
+												"value": "false"
+											}
+										},
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "Player",
+											"sid": 126803856367503,
+											"parameters": {
+												"instance-variable": "playerLeft",
+												"value": "false"
+											}
+										},
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "Player",
+											"sid": 748092397816940,
+											"parameters": {
+												"instance-variable": "playerRight",
+												"value": "false"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 875801363727290,
+											"parameters": {
+												"variable": "MENU_soundCountdown",
+												"value": "5"
+											}
+										},
+										{
+											"id": "play",
+											"objectClass": "Audio",
+											"sid": 999356330418316,
+											"parameters": {
+												"audio-file": "menuselect",
+												"loop": "not-looping",
+												"volume": "log10(SETTING_volumeSound)*20",
+												"stereo-pan": "0",
+												"tag-optional": "\"\""
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 840296550302772,
+											"parameters": {
+												"variable": "MENU_selected",
+												"value": "0"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 507491119981760,
+											"parameters": {
+												"variable": "MENU_menu",
+												"value": "\"Modal\""
+											}
+										},
+										{
+											"id": "set-layer-visible",
+											"objectClass": "System",
+											"sid": 648033884711705,
+											"parameters": {
+												"layer": "\"Modal\"",
+												"visibility": "visible"
+											}
+										},
+										{
+											"id": "set-layer-visible",
+											"objectClass": "System",
+											"sid": 104502350473206,
+											"parameters": {
+												"layer": "\"Fade\"",
+												"visibility": "visible"
+											}
+										},
+										{
+											"id": "set-layer-visible",
+											"objectClass": "System",
+											"sid": 782255840886241,
+											"parameters": {
+												"layer": "\"Menu\"",
+												"visibility": "visible"
+											}
+										},
+										{
+											"id": "set-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 513464944001774,
+											"parameters": {
+												"variable": "MENU_paused",
+												"value": "true"
+											}
+										},
+										{
+											"id": "set-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 132550385172537,
+											"parameters": {
+												"variable": "GAME_modalArt",
+												"value": "false"
+											}
+										}
+									],
+									"sid": 158871361958802,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "has-tags",
+													"objectClass": "Trigger",
+													"sid": 427109205594871,
+													"parameters": {
+														"tags": "\"cat\""
+													}
+												},
+												{
+													"id": "compare-boolean-eventvar",
+													"objectClass": "System",
+													"sid": 367485625062638,
+													"parameters": {
+														"variable": "SETTING_doomMusic"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "play-by-name",
+													"objectClass": "Audio",
+													"sid": 690557221545729,
+													"parameters": {
+														"folder": "sounds",
+														"audio-file-name": "\"Menu/cat\"&round(random(1, 2))",
+														"loop": "not-looping",
+														"volume": "log10(SETTING_volumeSound)*20",
+														"stereo-pan": "0",
+														"tag-optional": "\"\""
+													}
+												}
+											],
+											"sid": 782228404977987
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "has-tags",
+													"objectClass": "Trigger",
+													"sid": 239556591559032,
+													"parameters": {
+														"tags": "\"shop\""
+													},
+													"isInverted": true
+												}
+											],
+											"actions": [
+												{
+													"id": "set-boolean-eventvar",
+													"objectClass": "System",
+													"sid": 765421700859744,
+													"parameters": {
+														"variable": "GAME_modalArt",
+														"value": "true"
+													}
+												}
+											],
+											"sid": 949617538054140
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "is-on-layer",
+													"objectClass": "MenuFont",
+													"sid": 632121037561243,
+													"parameters": {
+														"layer": "MENU_menu"
+													}
+												},
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "MenuFont",
+													"sid": 713054527627128,
+													"parameters": {
+														"instance-variable": "id",
+														"comparison": 0,
+														"value": "1"
+													}
+												}
+											],
+											"actions": [],
+											"sid": 868582709333113,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-boolean-eventvar",
+															"objectClass": "System",
+															"sid": 816357505016564,
+															"parameters": {
+																"variable": "GAME_modalArt"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-visible",
+															"objectClass": "MenuFont",
+															"sid": 611932043313218,
+															"parameters": {
+																"visibility": "invisible"
+															}
+														}
+													],
+													"sid": 173249121867194
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "else",
+															"objectClass": "System",
+															"sid": 178396582259136
+														}
+													],
+													"actions": [
+														{
+															"id": "set-visible",
+															"objectClass": "MenuFont",
+															"sid": 612588832599719,
+															"parameters": {
+																"visibility": "visible"
+															}
+														}
+													],
+													"sid": 742229726203395
+												}
+											]
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "has-tags",
+													"objectClass": "MenuFont",
+													"sid": 857100025285806,
+													"parameters": {
+														"tags": "\"title\""
+													}
+												}
+											],
+											"actions": [],
+											"sid": 681440082576353,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-boolean-eventvar",
+															"objectClass": "System",
+															"sid": 830709888895416,
+															"parameters": {
+																"variable": "GAME_modalArt"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-text",
+															"objectClass": "MenuFont",
+															"sid": 780082188308900,
+															"parameters": {
+																"text": "Trigger.title&\" #\""
+															}
+														}
+													],
+													"sid": 687861750973269
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "else",
+															"objectClass": "System",
+															"sid": 358899643914128
+														}
+													],
+													"actions": [
+														{
+															"id": "set-text",
+															"objectClass": "MenuFont",
+															"sid": 782888001587654,
+															"parameters": {
+																"text": "Trigger.title&\" - $\"&Trigger.description\n"
+															}
+														},
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 497895730978770,
+															"parameters": {
+																"variable": "GAME_modalPrice",
+																"value": "int(Trigger.description)"
+															}
+														},
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 985546440415555,
+															"parameters": {
+																"variable": "GAME_modalUID",
+																"value": "Trigger.UID"
+															}
+														}
+													],
+													"sid": 735443223215575
+												}
+											]
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "has-tags",
+													"objectClass": "MenuFontSmall",
+													"sid": 192702705929615,
+													"parameters": {
+														"tags": "\"description\""
+													}
+												}
+											],
+											"actions": [],
+											"sid": 680702754674898,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-boolean-eventvar",
+															"objectClass": "System",
+															"sid": 958607429334696,
+															"parameters": {
+																"variable": "GAME_modalArt"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-text",
+															"objectClass": "MenuFontSmall",
+															"sid": 703016974641772,
+															"parameters": {
+																"text": "Trigger.description"
+															}
+														}
+													],
+													"sid": 189152155939377
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "else",
+															"objectClass": "System",
+															"sid": 457581456110432
+														}
+													],
+													"actions": [
+														{
+															"id": "set-text",
+															"objectClass": "MenuFontSmall",
+															"sid": 511895724638932,
+															"parameters": {
+																"text": "\"\""
+															}
+														}
+													],
+													"sid": 287520860114821
+												}
+											]
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "has-tags",
+													"objectClass": "Link",
+													"sid": 846595800765995,
+													"parameters": {
+														"tags": "\"modal\""
+													}
+												},
+												{
+													"id": "has-tags",
+													"objectClass": "MenuFont",
+													"sid": 625334026772190,
+													"parameters": {
+														"tags": "\"title\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-width",
+													"objectClass": "Link",
+													"sid": 186796099747505,
+													"parameters": {
+														"width": "MenuFont.TextWidth"
+													}
+												},
+												{
+													"id": "set-instvar-value",
+													"objectClass": "Link",
+													"sid": 950181937274983,
+													"parameters": {
+														"instance-variable": "link",
+														"value": "Trigger.link"
+													}
+												}
+											],
+											"sid": 930961945690720
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "is-boolean-instance-variable-set",
+													"objectClass": "Trigger",
+													"sid": 547148096650241,
+													"parameters": {
+														"instance-variable": "observed"
+													},
+													"isInverted": true
+												},
+												{
+													"id": "has-tags",
+													"objectClass": "Trigger",
+													"sid": 283868119128624,
+													"parameters": {
+														"tags": "\"shop\""
+													},
+													"isInverted": true
+												}
+											],
+											"actions": [
+												{
+													"id": "set-boolean-instvar",
+													"objectClass": "Trigger",
+													"sid": 483041222938051,
+													"parameters": {
+														"instance-variable": "observed",
+														"value": "true"
+													}
+												},
+												{
+													"id": "add-to-eventvar",
+													"objectClass": "System",
+													"sid": 902749095486099,
+													"parameters": {
+														"variable": "STAT_observations",
+														"value": "1"
+													}
+												}
+											],
+											"sid": 207783337953093
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Trigger",
+											"sid": 395438557289370,
+											"parameters": {
+												"instance-variable": "id",
+												"comparison": 0,
+												"value": "-2"
+											}
+										}
+									],
+									"actions": [
+										{
+											"callFunction": "popup",
+											"sid": 492029787260033,
+											"parameters": [
+												"\"...I DON'T WANT TO LOOK AT THIS ONE.\"",
+												"\"me\""
+											]
+										}
+									],
+									"sid": 131029691767851
+								}
+							]
+						}
+					]
+				},
+				{
+					"eventType": "comment",
+					"text": "pickups"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "PlayerPickup",
+							"sid": 696321077632204,
+							"parameters": {
+								"object": "Billboard"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 168899221631065,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Billboard",
+									"sid": 564076858822704,
+									"parameters": {
+										"instance-variable": "type",
+										"comparison": 0,
+										"value": "\"cash\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"callFunction": "popup",
+									"sid": 949060780840642,
+									"parameters": [
+										"\"PICKED UP SOME CASH.\"",
+										"\"item\""
+									]
+								},
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 323216779027625,
+									"parameters": {
+										"variable": "STAT_items",
+										"value": "1"
+									}
+								},
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 420673358597388,
+									"parameters": {
+										"variable": "STAT_wealth",
+										"value": "25"
+									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "Billboard",
+									"sid": 771193589747867
+								}
+							],
+							"sid": 862297023813506
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Billboard",
+									"sid": 190013614976437,
+									"parameters": {
+										"instance-variable": "type",
+										"comparison": 0,
+										"value": "\"bigcash\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"callFunction": "popup",
+									"sid": 682335606540007,
+									"parameters": [
+										"\"PICKED UP GALAKTOR'S STASH.\"",
+										"\"item\""
+									]
+								},
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 384395092758979,
+									"parameters": {
+										"variable": "STAT_items",
+										"value": "1"
+									}
+								},
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 810798668837259,
+									"parameters": {
+										"variable": "STAT_wealth",
+										"value": "499"
+									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "Billboard",
+									"sid": 798900869635735
+								}
+							],
+							"sid": 390263583014772
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Billboard",
+									"sid": 689931909156703,
+									"parameters": {
+										"instance-variable": "type",
+										"comparison": 0,
+										"value": "\"wine\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"callFunction": "popup",
+									"sid": 846080217998595,
+									"parameters": [
+										"\"PICKED UP A WINE BOTTLE.\"",
+										"\"item\""
+									]
+								},
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 871216717755957,
+									"parameters": {
+										"variable": "STAT_items",
+										"value": "1"
+									}
+								},
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 316206350468820,
+									"parameters": {
+										"variable": "STAT_ammoWine",
+										"value": "2"
+									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "Billboard",
+									"sid": 362608774785821
+								}
+							],
+							"sid": 885545195456719
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Billboard",
+									"sid": 914529760970091,
+									"parameters": {
+										"instance-variable": "type",
+										"comparison": 0,
+										"value": "\"beer\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"callFunction": "popup",
+									"sid": 169117393860217,
+									"parameters": [
+										"\"PICKED UP A SIX PACK.\"",
+										"\"item\""
+									]
+								},
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 678637490768274,
+									"parameters": {
+										"variable": "STAT_items",
+										"value": "1"
+									}
+								},
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 290745684386118,
+									"parameters": {
+										"variable": "STAT_ammoBeer",
+										"value": "6"
+									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "Billboard",
+									"sid": 402478739356245
+								}
+							],
+							"sid": 971287180874801
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Billboard",
+									"sid": 826305468575471,
+									"parameters": {
+										"instance-variable": "type",
+										"comparison": 0,
+										"value": "\"cheese\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"callFunction": "popup",
+									"sid": 495554367429585,
+									"parameters": [
+										"\"PICKED UP AN HORS D'OEUVRE.\"",
+										"\"item\""
+									]
+								},
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 324676479864160,
+									"parameters": {
+										"variable": "STAT_items",
+										"value": "1"
+									}
+								},
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 510797050324447,
+									"parameters": {
+										"variable": "STAT_cheese",
+										"value": "10"
+									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "Billboard",
+									"sid": 761485516736982
+								}
+							],
+							"sid": 836545454550832
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Billboard",
+									"sid": 749969485008761,
+									"parameters": {
+										"instance-variable": "type",
+										"comparison": 0,
+										"value": "\"bigcheese\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"callFunction": "popup",
+									"sid": 118778290413484,
+									"parameters": [
+										"\"PICKED UP THE CHEESE WHEEL.\"",
+										"\"item\""
+									]
+								},
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 373361957038642,
+									"parameters": {
+										"variable": "STAT_items",
+										"value": "1"
+									}
+								},
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 400277456613294,
+									"parameters": {
+										"variable": "STAT_cheese",
+										"value": "30"
+									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "Billboard",
+									"sid": 961076109255585
+								}
+							],
+							"sid": 788301207905713
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Billboard",
+									"sid": 711507365826538,
+									"parameters": {
+										"instance-variable": "type",
+										"comparison": 0,
+										"value": "\"can\""
+									}
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 669419106925146,
+									"parameters": {
+										"variable": "GAME_beer"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"callFunction": "popup",
+									"sid": 718013896592102,
+									"parameters": [
+										"\"YOU GOT THE BEER!\"",
+										"\"weapon\""
+									]
+								},
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 665316127357719,
+									"parameters": {
+										"variable": "STAT_items",
+										"value": "1"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 224881736895087,
+									"parameters": {
+										"variable": "GAME_beer",
+										"value": "true"
+									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "Billboard",
+									"sid": 940356043750265
+								},
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 672365569609554,
+									"parameters": {
+										"variable": "STAT_ammoBeer",
+										"value": "6"
+									}
+								},
+								{
+									"id": "play-timeline",
+									"objectClass": "TimelineController",
+									"sid": 541403508746125,
+									"parameters": {
+										"timeline": "Swap",
+										"tags": "\"swap\""
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 676470443156305,
+									"parameters": {
+										"variable": "PLAYER_weapon",
+										"value": "2"
+									}
+								},
+								{
+									"id": "set-animation-frame",
+									"objectClass": "MobileArms",
+									"sid": 200765952795491,
+									"parameters": {
+										"frame-number": "2"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 529619655589717,
+									"parameters": {
+										"variable": "GAME_guyOverride",
+										"value": "true"
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "Doomguy",
+									"sid": 522602145963397,
+									"parameters": {
+										"animation": "\"beer\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 660103172061170
+						}
+					]
+				},
+				{
+					"functionName": "popup",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [
+						{
+							"name": "text",
+							"type": "string",
+							"initialValue": "",
+							"comment": "",
+							"sid": 531453355758594
+						},
+						{
+							"name": "type",
+							"type": "string",
+							"initialValue": "item",
+							"comment": "",
+							"sid": 620420423992441
+						}
+					],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 519222074161209,
+							"parameters": {
+								"variable": "GAME_popupLifetime",
+								"value": "180"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "PopupFont",
+							"sid": 909371949963781,
+							"parameters": {
+								"text": "text"
+							}
+						}
+					],
+					"sid": 868276981786449,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 620970704930843,
+									"parameters": {
+										"variable": "type",
+										"comparison": 0,
+										"value": "\"item\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 896375181754601,
+									"parameters": {
+										"variable": "GAME_flashLifetime",
+										"value": "15"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 401415522137580,
+									"parameters": {
+										"audio-file": "item",
+										"loop": "not-looping",
+										"volume": "log10(SETTING_volumeSound)*20",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
+								}
+							],
+							"sid": 194760053492064
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 919869309639794,
+									"parameters": {
+										"variable": "type",
+										"comparison": 0,
+										"value": "\"weapon\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 943010037352542,
+									"parameters": {
+										"variable": "GAME_flashLifetime",
+										"value": "15"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 969236230518711,
+									"parameters": {
+										"audio-file": "weapon",
+										"loop": "not-looping",
+										"volume": "log10(SETTING_volumeSound)*20",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
+								}
+							],
+							"sid": 852468527337424
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 287501244607802,
+									"parameters": {
+										"variable": "type",
+										"comparison": 0,
+										"value": "\"secret\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 230324244695652,
+									"parameters": {
+										"audio-file": "secret",
+										"loop": "not-looping",
+										"volume": "log10(SETTING_volumeSound)*20",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
+								}
+							],
+							"sid": 756074456970168
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 730273188023531,
+									"parameters": {
+										"variable": "type",
+										"comparison": 0,
+										"value": "\"me\""
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 636566436023485,
+									"parameters": {
+										"variable": "GAME_gruntCooldown",
+										"comparison": 3,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 935848482053188,
+									"parameters": {
+										"variable": "GAME_gruntCooldown",
+										"value": "10"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 659544964339600,
+									"parameters": {
+										"audio-file": "grunt",
+										"loop": "not-looping",
+										"volume": "log10(SETTING_volumeSound)*20",
+										"stereo-pan": "0",
+										"tag-optional": "\"grunt\""
+									}
+								},
+								{
+									"id": "set-playback-rate",
+									"objectClass": "Audio",
+									"sid": 896645540030760,
+									"parameters": {
+										"tag": "\"grunt\"",
+										"playback-rate": "random(0.95, 1.05)"
+									}
+								}
+							],
+							"sid": 677756726519981
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Player",
+							"sid": 255011435324954,
+							"parameters": {
+								"object": "Trigger"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 150709941538571,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "has-tags",
+									"objectClass": "Trigger",
+									"sid": 783386591543539,
+									"parameters": {
+										"tags": "\"unlock\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "destroy",
+									"objectClass": "Trigger",
+									"sid": 284097183418228
+								}
+							],
+							"sid": 661487267408238,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-on-layer",
+											"objectClass": "Ground",
+											"sid": 425518601013091,
+											"parameters": {
+												"layer": "\"Secret\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "destroy",
+											"objectClass": "Ground",
+											"sid": 993308271843157
+										}
+									],
+									"sid": 931444158763906
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "has-tags",
+									"objectClass": "Trigger",
+									"sid": 438276525146446,
+									"parameters": {
+										"tags": "\"courtyard\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "destroy",
+									"objectClass": "Trigger",
+									"sid": 942926555292328
+								},
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 555176873791531,
+									"parameters": {
+										"variable": "STAT_secrets",
+										"value": "1"
+									}
+								},
+								{
+									"callFunction": "popup",
+									"sid": 431292887503972,
+									"parameters": [
+										"\"YOU FOUND A SECRET AREA!\"",
+										"\"secret\""
+									]
+								}
+							],
+							"sid": 851938348383929
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "has-tags",
+									"objectClass": "Trigger",
+									"sid": 176968214745305,
+									"parameters": {
+										"tags": "\"galaktor\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "destroy",
+									"objectClass": "Trigger",
+									"sid": 440511139909465
+								},
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 817124247420274,
+									"parameters": {
+										"variable": "STAT_secrets",
+										"value": "1"
+									}
+								},
+								{
+									"callFunction": "popup",
+									"sid": 818982176917699,
+									"parameters": [
+										"\"YOU FOUND GALAKTOR'S HIDEOUT!\"",
+										"\"secret\""
+									]
+								}
+							],
+							"sid": 534617832391531
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "has-tags",
+									"objectClass": "Trigger",
+									"sid": 140882593527501,
+									"parameters": {
+										"tags": "\"me\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "destroy",
+									"objectClass": "Trigger",
+									"sid": 629885389757222
+								},
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 905402252032274,
+									"parameters": {
+										"variable": "STAT_secrets",
+										"value": "1"
+									}
+								},
+								{
+									"callFunction": "popup",
+									"sid": 474092626213246,
+									"parameters": [
+										"\"YOU FOUND A LONE PAINTING!\"",
+										"\"secret\""
+									]
+								}
+							],
+							"sid": 837677357045048
+						}
+					]
+				}
+			],
+			"sid": 297058879116922
+		},
+		{
+			"eventType": "comment",
+			"text": "camera oddities"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-any-playing",
+					"objectClass": "PlayerCam",
+					"sid": 938256573050862,
+					"behaviorType": "Tween",
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-z-elevation",
+					"objectClass": "PlayerCam",
+					"sid": 317508988146244,
+					"parameters": {
+						"z": "Player.ZElevation"
+					}
+				}
+			],
+			"sid": 633405416089446
+		},
+		{
+			"eventType": "comment",
+			"text": "HUD shenanigans"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 781845947077301
+				}
+			],
+			"actions": [
+				{
+					"id": "set-position",
+					"objectClass": "3DCamera",
+					"sid": 648109932109856,
+					"parameters": {
+						"x": "PlayerCam.X",
+						"y": "PlayerCam.Y",
+						"z": "PlayerCam.ZElevation+PLAYER_cameraHeight+Arm.Sine3.Value",
+						"which": "camera"
+					}
+				}
+			],
+			"sid": 356399568105864,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "HUDFont",
+							"sid": 497099216907765,
+							"parameters": {
+								"instance-variable": "type",
+								"comparison": 0,
+								"value": "\"health\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "HUDFont",
+							"sid": 415772008223763,
+							"parameters": {
+								"text": "\"$\"&STAT_wealth"
+							}
+						}
+					],
+					"sid": 754086459591795
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "HUDFont",
+							"sid": 972217069590194,
+							"parameters": {
+								"instance-variable": "type",
+								"comparison": 0,
+								"value": "\"armor\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "HUDFont",
+							"sid": 658248704924482,
+							"parameters": {
+								"text": "STAT_cheese&\"%\""
+							}
+						}
+					],
+					"sid": 320175652847222
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "HUDFont",
+							"sid": 591028679019391,
+							"parameters": {
+								"instance-variable": "type",
+								"comparison": 0,
+								"value": "\"ammo\""
+							}
+						}
+					],
+					"actions": [],
+					"sid": 130640298139017,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-animation-frame",
+									"objectClass": "Arm",
+									"sid": 369071970900054,
+									"parameters": {
+										"comparison": 0,
+										"number": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "HUDFont",
+									"sid": 471132478865719,
+									"parameters": {
+										"text": "\"\""
+									}
+								}
+							],
+							"sid": 106186828750056
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-animation-frame",
+									"objectClass": "Arm",
+									"sid": 874351478690768,
+									"parameters": {
+										"comparison": 0,
+										"number": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "HUDFont",
+									"sid": 980134640213199,
+									"parameters": {
+										"text": "STAT_ammoWine"
+									}
+								}
+							],
+							"sid": 176716862603482
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-animation-frame",
+									"objectClass": "Arm",
+									"sid": 293355222428928,
+									"parameters": {
+										"comparison": 0,
+										"number": "2"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "HUDFont",
+									"sid": 319945849551877,
+									"parameters": {
+										"text": "STAT_ammoBeer"
+									}
+								}
+							],
+							"sid": 931634847367750
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "HUDAmmo",
+							"sid": 237058967964623,
+							"parameters": {
+								"instance-variable": "type",
+								"comparison": 0,
+								"value": "\"wine\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "HUDAmmo",
+							"sid": 138227533892218,
+							"parameters": {
+								"text": "STAT_ammoWine"
+							}
+						}
+					],
+					"sid": 847636518889520
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "HUDAmmo",
+							"sid": 106538741372379,
+							"parameters": {
+								"instance-variable": "type",
+								"comparison": 0,
+								"value": "\"beer\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "HUDAmmo",
+							"sid": 106182234572680,
+							"parameters": {
+								"text": "STAT_ammoBeer"
+							}
+						}
+					],
+					"sid": 524406635975845
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 524853950704204,
+							"parameters": {
+								"variable": "GAME_beer"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "HUD",
+							"sid": 409894095435735,
+							"parameters": {
+								"frame-number": "1"
+							}
+						}
+					],
+					"sid": 347162405507298
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 215762123056582,
+					"parameters": {
+						"key": 27
+					}
+				},
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 735193902252824,
+					"parameters": {
+						"key": 80
+					}
+				},
+				{
+					"id": "on-pointer-unlocked",
+					"objectClass": "Mouse",
+					"sid": 528851509661955
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 683659520424149,
+					"parameters": {
+						"variable": "MENU_keyControl",
+						"value": "false"
+					}
+				},
+				{
+					"id": "release-pointer-lock",
+					"objectClass": "Mouse",
+					"sid": 162380197506594
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Player",
+					"sid": 696064398735712,
+					"parameters": {
+						"instance-variable": "playerUp",
+						"value": "false"
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Player",
+					"sid": 820264754572196,
+					"parameters": {
+						"instance-variable": "playerDown",
+						"value": "false"
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Player",
+					"sid": 665221471455256,
+					"parameters": {
+						"instance-variable": "playerLeft",
+						"value": "false"
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Player",
+					"sid": 904655793087275,
+					"parameters": {
+						"instance-variable": "playerRight",
+						"value": "false"
+					}
+				}
+			],
+			"sid": 399615904934950,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 443001687254520,
+							"parameters": {
+								"variable": "BLEED_ready"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 601216936315829,
+							"parameters": {
+								"variable": "MENU_paused"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [],
+					"sid": 837982659923443,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 382867445727001,
+									"parameters": {
+										"variable": "MENU_menu",
+										"comparison": 0,
+										"value": "\"\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 127008929718429,
+									"parameters": {
+										"variable": "MENU_soundCountdown",
+										"value": "5"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 706585044204935,
+									"parameters": {
+										"audio-file": "menuopen",
+										"loop": "not-looping",
+										"volume": "log10(SETTING_volumeSound)*20",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 544870536472036,
+									"parameters": {
+										"variable": "MENU_selected",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 103676546107889,
+									"parameters": {
+										"variable": "MENU_menu",
+										"value": "\"Main\""
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 815185993165894,
+									"parameters": {
+										"layer": "\"Menu\"",
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 856709761254058,
+									"parameters": {
+										"layer": "\"Main\"",
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 513069530088310,
+									"parameters": {
+										"layer": "\"Fade\"",
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 164022657700267,
+									"parameters": {
+										"layer": "\"Menu\"",
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 797463682509057,
+									"parameters": {
+										"variable": "MENU_paused",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 861834870391864
+						}
+					]
+				}
+			],
+			"isOrBlock": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 761702886629245,
+					"parameters": {
+						"variable": "MENU_menu",
+						"comparison": 0,
+						"value": "\"\""
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 148534359461680,
+					"parameters": {
+						"variable": "BLEED_ready"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 600910986690457,
+					"parameters": {
+						"variable": "MENU_paused"
+					},
+					"isInverted": true
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 459056372013304,
+					"parameters": {
+						"variable": "GAME_mobile"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 921943406767359,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 569937625835221,
+							"parameters": {
+								"object": "MobileButtons"
+							}
+						},
+						{
+							"id": "compare-animation-frame",
+							"objectClass": "MobileButtons",
+							"sid": 600693209055770,
+							"parameters": {
+								"comparison": 0,
+								"number": "5"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Player",
+							"sid": 150222702907285,
+							"parameters": {
+								"instance-variable": "playerUp",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Player",
+							"sid": 435231739775859,
+							"parameters": {
+								"instance-variable": "playerDown",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Player",
+							"sid": 345921586017918,
+							"parameters": {
+								"instance-variable": "playerLeft",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Player",
+							"sid": 748614569741349,
+							"parameters": {
+								"instance-variable": "playerRight",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 965736746418382,
+							"parameters": {
+								"variable": "MENU_soundCountdown",
+								"value": "5"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 680581840702871,
+							"parameters": {
+								"audio-file": "menuopen",
+								"loop": "not-looping",
+								"volume": "log10(SETTING_volumeSound)*20",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 946830727633056,
+							"parameters": {
+								"variable": "MENU_selected",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 396175402555945,
+							"parameters": {
+								"variable": "MENU_menu",
+								"value": "\"Main\""
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 108044481503470,
+							"parameters": {
+								"layer": "\"Menu\"",
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 834445045283813,
+							"parameters": {
+								"layer": "\"Main\"",
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 327831109961828,
+							"parameters": {
+								"layer": "\"Fade\"",
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 217087237237711,
+							"parameters": {
+								"layer": "\"Menu\"",
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 216211800268888,
+							"parameters": {
+								"variable": "MENU_paused",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 862821520368257
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-z-elevation",
+					"objectClass": "Player",
+					"sid": 993803716844385,
+					"parameters": {
+						"which": "z-elevation",
+						"comparison": 2,
+						"z-elevation": "-256"
+					}
+				},
+				{
+					"id": "trigger-once-while-true",
+					"objectClass": "System",
+					"sid": 505263477255350
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 909385480660905,
+					"parameters": {
+						"variable": "GAME_guyOverride",
+						"value": "true"
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "Doomguy",
+					"sid": 727308211390142,
+					"parameters": {
+						"animation": "\"death\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 353970668460484,
+					"parameters": {
+						"variable": "PHYS_deltaZ",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 175785475345005,
+					"parameters": {
+						"variable": "MENU_menu",
+						"value": "\"Main\""
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 484486507824477,
+					"parameters": {
+						"audio-file": "death",
+						"loop": "not-looping",
+						"volume": "log10(SETTING_volumeSound)*20",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				},
+				{
+					"callFunction": "transition",
+					"sid": 951082657843625,
+					"parameters": [
+						"\"menu\""
+					]
+				},
+				{
+					"id": "release-pointer-lock",
+					"objectClass": "Mouse",
+					"sid": 752620160721156
+				},
+				{
+					"id": "stop",
+					"objectClass": "Audio",
+					"sid": 295974231884750,
+					"parameters": {
+						"tag": "\"music\""
+					}
+				}
+			],
+			"sid": 836112138465216
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-movement",
+					"objectClass": "Mouse",
+					"sid": 515045635078898
+				},
+				{
+					"id": "has-pointer-lock",
+					"objectClass": "Mouse",
+					"sid": 918660682356812
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 404680810526254,
+					"parameters": {
+						"variable": "MENU_menu",
+						"comparison": 0,
+						"value": "\"\""
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 346881167645682,
+					"parameters": {
+						"variable": "BLEED_ready"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 989464060268182,
+					"parameters": {
+						"variable": "MENU_paused"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "rotate-camera",
+					"objectClass": "3DCamera",
+					"sid": 191648575897195,
+					"parameters": {
+						"rotate-x": "Mouse.MovementX / 10",
+						"rotate-y": "Mouse.MovementY / 10",
+						"min-polar-angle": "85",
+						"max-polar-angle": "85"
+					}
+				}
+			],
+			"sid": 410074131779764
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "layer-is-visible",
+					"objectClass": "System",
+					"sid": 484243723805396,
+					"parameters": {
+						"layer": "\"Fade\""
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [],
+			"sid": 139946566111925,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 897829272705009,
+							"parameters": {
+								"key": 27
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 272516123561598,
+							"parameters": {
+								"variable": "MENU_paused",
+								"value": "false"
+							}
+						}
+					],
+					"sid": 229364077065733
+				}
+			]
+		}
+	],
+	"sid": 353286919087837
+}

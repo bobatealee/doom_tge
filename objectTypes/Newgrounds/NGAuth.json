@@ -1,0 +1,16 @@
+{
+	"name": "NGAuth",
+	"plugin-id": "Rex_NGIO_Authentication",
+	"sid": 295689998563719,
+	"singleglobal-inst": {
+		"type": "NGAuth",
+		"properties": {
+			"app-id": "59419:haSIuWt4",
+			"aes-key": "fH74UHhmdDFwSOyMeL5XYA==",
+			"debug": false
+		},
+		"uid": 713,
+		"sid": 712927935251648,
+		"tags": ""
+	}
+}

@@ -1,0 +1,793 @@
+{
+	"projectFormatVersion": 1,
+	"savedWithRelease": 41602,
+	"name": "DOOM The Gallery Experience",
+	"runtime": "c3",
+	"useWorker": "dom",
+	"bundleAddons": false,
+	"usedAddons": [
+		{
+			"type": "plugin",
+			"id": "Arr",
+			"name": "Array",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Audio",
+			"name": "Audio",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Browser",
+			"name": "Browser",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Camera3D",
+			"name": "3D camera",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Keyboard",
+			"name": "Keyboard",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Mouse",
+			"name": "Mouse",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "NinePatch",
+			"name": "9-patch",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "PlatformInfo",
+			"name": "Platform info",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Rex_NGIO_Authentication",
+			"name": "Authentication",
+			"author": "Rex.Rainbow/Port by Pixel Perfect Studio",
+			"bundled": false,
+			"version": "0.1.0.4"
+		},
+		{
+			"type": "plugin",
+			"id": "Rex_NGIO_Medal",
+			"name": "Medal",
+			"author": "Rex.Rainbow/Port by Pixel Perfect Studio",
+			"bundled": false,
+			"version": "0.1.0.1"
+		},
+		{
+			"type": "plugin",
+			"id": "Shape3D",
+			"name": "3D shape",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Sprite",
+			"name": "Sprite",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Spritefont2",
+			"name": "Sprite font",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "TiledBg",
+			"name": "Tiled Background",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Timeline",
+			"name": "Timeline controller",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Touch",
+			"name": "Touch",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "DragnDrop",
+			"name": "Drag & Drop",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "EightDir",
+			"name": "8 Direction",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "MoveTo",
+			"name": "Move To",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Sin",
+			"name": "Sine",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Timer",
+			"name": "Timer",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Tween",
+			"name": "Tween",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "solid",
+			"name": "Solid",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "brightness",
+			"name": "Brightness",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "fogexponential",
+			"name": "Fog (exponential)",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "posterize",
+			"name": "Posterize",
+			"author": "Scirra",
+			"bundled": false
+		}
+	],
+	"uniqueId": "h63jh1yt028",
+	"objectTypes": {
+		"items": [],
+		"subfolders": [
+			{
+				"items": [
+					"test1",
+					"test2",
+					"Wallpaper",
+					"Wood",
+					"WoodDark",
+					"Concrete",
+					"Grass",
+					"Water",
+					"Sky",
+					"Brick",
+					"Paneling",
+					"Tile",
+					"Glass",
+					"Door",
+					"Slit",
+					"DoorSmall",
+					"Space",
+					"WallpaperSecret",
+					"Panel",
+					"DoorExit",
+					"Exit",
+					"ElevatorFloor",
+					"ElevatorWall",
+					"ElevatorCeiling",
+					"EgyptCeiling",
+					"Sign1",
+					"Sign2",
+					"Sign3",
+					"Sign4",
+					"Sign5"
+				],
+				"subfolders": [],
+				"name": "Textures"
+			},
+			{
+				"items": [
+					"Billboard",
+					"Ground",
+					"Skybox",
+					"Overlay"
+				],
+				"subfolders": [],
+				"name": "3D"
+			},
+			{
+				"items": [
+					"Player",
+					"PlayerCam",
+					"Barrel",
+					"Lightpost",
+					"Cash",
+					"Cheese",
+					"Wine",
+					"Can",
+					"Beer",
+					"GALAKTOR",
+					"BigCheese",
+					"BigCash",
+					"Trigger",
+					"Sight",
+					"SmallSight",
+					"PlayerPickup"
+				],
+				"subfolders": [],
+				"name": "Objects"
+			},
+			{
+				"items": [
+					"Arm",
+					"Doomguy",
+					"HUD",
+					"HUDAmmo",
+					"HUDFont",
+					"Flash",
+					"PopupFont",
+					"Results",
+					"MobileArms",
+					"MobileButtons"
+				],
+				"subfolders": [],
+				"name": "HUD"
+			},
+			{
+				"items": [
+					"3DCamera",
+					"Audio",
+					"Keyboard",
+					"Mouse",
+					"TimelineController",
+					"Browser",
+					"PlatformInfo",
+					"Touch"
+				],
+				"subfolders": [],
+				"name": "Plugins"
+			},
+			{
+				"items": [
+					"Logo",
+					"MenuFont",
+					"Selector",
+					"Link",
+					"BleedLine",
+					"MenuFontSmall",
+					"Fade",
+					"Slider",
+					"SliderBar",
+					"Medal"
+				],
+				"subfolders": [],
+				"name": "Menu"
+			},
+			{
+				"items": [
+					"Me",
+					"ModalArt"
+				],
+				"subfolders": [
+					{
+						"items": [
+							"Grave1",
+							"Grave2",
+							"Pot1",
+							"Pot2",
+							"Statue1",
+							"Tapestry1",
+							"Tapestry2"
+						],
+						"subfolders": [],
+						"name": "Greek"
+					},
+					{
+						"items": [
+							"Painting1",
+							"Statue2",
+							"Painting2",
+							"Painting3",
+							"Painting4",
+							"Painting5",
+							"Painting6",
+							"Painting7",
+							"Painting8"
+						],
+						"subfolders": [],
+						"name": "Renaissance"
+					},
+					{
+						"items": [
+							"Shelf1",
+							"Shelf2",
+							"Shelf3",
+							"Shelf4",
+							"Shelf5",
+							"Shelf6",
+							"Shelf7",
+							"Shelf8",
+							"Shelf9",
+							"Shelf10",
+							"Shelf11",
+							"Shelf12",
+							"Shelf13",
+							"Shelf14",
+							"Shelf15",
+							"Shelf16",
+							"Shelf17",
+							"Shelf18",
+							"Statue3",
+							"Statue4",
+							"Painting9",
+							"Painting10",
+							"Painting11"
+						],
+						"subfolders": [],
+						"name": "Egyptian"
+					},
+					{
+						"items": [
+							"Merch1",
+							"Merch2",
+							"Merch3",
+							"Merch4",
+							"Merch5",
+							"Merch6",
+							"Merch7"
+						],
+						"subfolders": [],
+						"name": "Shop"
+					},
+					{
+						"items": [
+							"Japan1",
+							"Japan2",
+							"Japan3",
+							"Japan4",
+							"Japan5",
+							"Japan6",
+							"Japan7",
+							"Japan8",
+							"Japan9",
+							"Japan10"
+						],
+						"subfolders": [],
+						"name": "Japanese"
+					},
+					{
+						"items": [
+							"Statue5",
+							"Statue6",
+							"Statue7",
+							"Statue8"
+						],
+						"subfolders": [],
+						"name": "Courtyard"
+					}
+				],
+				"name": "Art"
+			},
+			{
+				"items": [
+					"NGAuth",
+					"NGMedals",
+					"Medals"
+				],
+				"subfolders": [],
+				"name": "Newgrounds"
+			}
+		]
+	},
+	"autosaveData": null,
+	"containers": [],
+	"families": {
+		"items": [],
+		"subfolders": []
+	},
+	"layouts": {
+		"items": [
+			"level",
+			"menu",
+			"results"
+		],
+		"subfolders": []
+	},
+	"eventSheets": {
+		"items": [
+			"menu",
+			"level",
+			"bleed",
+			"results"
+		],
+		"subfolders": []
+	},
+	"rootFileFolders": {
+		"script": {
+			"items": [],
+			"subfolders": []
+		},
+		"sound": {
+			"items": [],
+			"subfolders": [
+				{
+					"items": [
+						{
+							"name": "badtime.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 792716153583695,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "menuclose.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 317225835434484,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "menuopen.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 788258526076956,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "menuselect.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 371039216675165,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "cat2.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 162206813864580,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "cat1.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 975271719493235,
+							"file-info": {
+								"purpose": "none"
+							}
+						}
+					],
+					"subfolders": [],
+					"name": "Menu"
+				},
+				{
+					"items": [
+						{
+							"name": "beer.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 794024785931801,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "death.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 349247501883914,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "door.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 544844035362112,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "grunt.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 533472205697221,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "item.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 173928847968162,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "secret.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 326865689950060,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "weapon.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 363019151138802,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "wine.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 603951439700712,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "buy.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 861702515813164,
+							"file-info": {
+								"purpose": "none"
+							}
+						}
+					],
+					"subfolders": [],
+					"name": "Gameplay"
+				}
+			]
+		},
+		"music": {
+			"items": [
+				{
+					"name": "bach.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 677351128859557,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "vivaldi.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 152474268629808,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "e1m5.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 553327494387864,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "e1m1.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 338482145863080,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "delibes.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 833179971619099,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "results.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 979024838707547,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
+			"subfolders": []
+		},
+		"video": {
+			"items": [],
+			"subfolders": []
+		},
+		"font": {
+			"items": [],
+			"subfolders": []
+		},
+		"icon": {
+			"items": [
+				{
+					"name": "icon-16.png",
+					"type": "image/png",
+					"sid": 956955801833580,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-32.png",
+					"type": "image/png",
+					"sid": 415819058683463,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-64.png",
+					"type": "image/png",
+					"sid": 731743882834050,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-128.png",
+					"type": "image/png",
+					"sid": 127078181192831,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-256.png",
+					"type": "image/png",
+					"sid": 389106296507958,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-512.png",
+					"type": "image/png",
+					"sid": 798933567594087,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "loading-logo.png",
+					"type": "image/png",
+					"sid": 977091533946575,
+					"icon-info": {
+						"purpose": "loading-logo"
+					}
+				}
+			],
+			"subfolders": []
+		},
+		"general": {
+			"items": [],
+			"subfolders": []
+		}
+	},
+	"timelines": {
+		"items": [
+			"Door",
+			"Drink",
+			"Reach",
+			"Swap"
+		],
+		"subfolders": [
+			{
+				"items": [],
+				"subfolders": []
+			}
+		]
+	},
+	"flowcharts": {
+		"items": [],
+		"subfolders": []
+	},
+	"properties": {
+		"description": "",
+		"version": "1.0.0",
+		"author": "",
+		"authorEmail": "",
+		"authorWebsite": "",
+		"appId": "",
+		"pixelRounding": true,
+		"zAxisScale": "regular",
+		"fov": 0.7853981633974483,
+		"useLoaderLayout": false,
+		"fullscreenMode": "letterbox-integer-scale",
+		"fullscreenQuality": "low",
+		"viewportFit": "auto",
+		"backgroundColor": [
+			0,
+			0,
+			0,
+			0
+		],
+		"splashColor": [
+			1,
+			1,
+			1,
+			0
+		],
+		"useThemeColor": false,
+		"themeColor": [
+			1,
+			1,
+			1,
+			0
+		],
+		"orientations": "landscape",
+		"webgpu": "auto",
+		"gpuPreference": "high-performance",
+		"scriptsType": "module",
+		"framerateMode": "vsync",
+		"sampling": "nearest",
+		"downscaling": "low",
+		"renderingMode": "auto",
+		"anisotropicFiltering": "auto",
+		"zNear": 1,
+		"zFar": 10000,
+		"maxSpriteSheetSize": 2048,
+		"loaderStyle": "none",
+		"preloadSounds": true,
+		"cordovaiOSScheme": "app",
+		"cordovaAndroidScheme": "https",
+		"exportFileStructure": "folders",
+		"uidAllocationMode": "increment"
+	},
+	"viewportWidth": 320,
+	"viewportHeight": 180,
+	"firstLayout": "menu"
+}

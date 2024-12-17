@@ -1,0 +1,6128 @@
+{
+	"name": "menu",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "GAME_mobile",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 926606942175125
+		},
+		{
+			"eventType": "variable",
+			"name": "MENU_selected",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 817898418403793
+		},
+		{
+			"eventType": "variable",
+			"name": "MENU_menu",
+			"type": "string",
+			"initialValue": "",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 264054507667632
+		},
+		{
+			"eventType": "variable",
+			"name": "MENU_soundCountdown",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 408184336278265
+		},
+		{
+			"eventType": "variable",
+			"name": "MENU_keyControl",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 595212502550371
+		},
+		{
+			"eventType": "variable",
+			"name": "MENU_paused",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 979749722228959
+		},
+		{
+			"eventType": "variable",
+			"name": "SETTING_volumeSound",
+			"type": "number",
+			"initialValue": "1",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 346331949138932
+		},
+		{
+			"eventType": "variable",
+			"name": "SETTING_volumeMusic",
+			"type": "number",
+			"initialValue": "0.5",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 922009415360264
+		},
+		{
+			"eventType": "variable",
+			"name": "SETTING_fullscreen",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 438377146974802
+		},
+		{
+			"eventType": "variable",
+			"name": "SETTING_flashing",
+			"type": "boolean",
+			"initialValue": "true",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 785043950917107
+		},
+		{
+			"eventType": "variable",
+			"name": "SETTING_doomMusic",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 430816967729520
+		},
+		{
+			"eventType": "variable",
+			"name": "UNLOCK_doomMusic",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 138938950424425
+		},
+		{
+			"eventType": "variable",
+			"name": "MEDAL_observations",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 545232033469727
+		},
+		{
+			"eventType": "variable",
+			"name": "MEDAL_items",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 546624000293627
+		},
+		{
+			"eventType": "variable",
+			"name": "MEDAL_spending",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 665102996214784
+		},
+		{
+			"eventType": "variable",
+			"name": "MEDAL_secrets",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 425540024170467
+		},
+		{
+			"eventType": "variable",
+			"name": "MEDAL_time",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 117337349414111
+		},
+		{
+			"eventType": "variable",
+			"name": "MEDAL_drinks",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 161343260086914
+		},
+		{
+			"eventType": "variable",
+			"name": "MEDAL_thoughtful",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 823318646187029
+		},
+		{
+			"eventType": "variable",
+			"name": "MEDAL_doom",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 435434048229181
+		},
+		{
+			"eventType": "variable",
+			"name": "NGIO_init",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 945552097564158
+		},
+		{
+			"eventType": "variable",
+			"name": "NGIO_medals",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 803942779672599
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "bleed"
+		},
+		{
+			"eventType": "comment",
+			"text": "main menu only"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 557092813326917,
+					"parameters": {
+						"first-value": "LayoutName",
+						"comparison": 0,
+						"second-value": "\"menu\""
+					}
+				}
+			],
+			"actions": [],
+			"sid": 279576580918985,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 269286137295562
+						}
+					],
+					"actions": [
+						{
+							"id": "look-parallel-to-layout",
+							"objectClass": "3DCamera",
+							"sid": 533892688946287,
+							"parameters": {
+								"cam-x": "160",
+								"cam-y": "160",
+								"cam-z": "16",
+								"look-angle": "0"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 859086788598643,
+							"parameters": {
+								"variable": "MENU_menu",
+								"value": "\"Main\""
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 924222131708475,
+							"parameters": {
+								"variable": "MENU_selected",
+								"value": "0"
+							}
+						},
+						{
+							"id": "stop-animation",
+							"objectClass": "Medal",
+							"sid": 531998111877284
+						}
+					],
+					"sid": 153878180751575,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 391321664231655,
+									"parameters": {
+										"first-value": "find(RegexMatchAt(Browser.URL, \"^.+?[^\\/:](?=[?\\/]|$)\", \"gi\", 0), \"newgrounds.com\")",
+										"comparison": 5,
+										"second-value": "0"
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 179618797667670,
+									"parameters": {
+										"first-value": "find(RegexMatchAt(Browser.URL, \"^.+?[^\\/:](?=[?\\/]|$)\", \"gi\", 0), \"ungrounded.net\")",
+										"comparison": 5,
+										"second-value": "0"
+									}
+								},
+								{
+									"id": "is-in-preview",
+									"objectClass": "System",
+									"sid": 843025813271379
+								}
+							],
+							"actions": [],
+							"sid": 490998073936947,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 746815996091537,
+											"parameters": {
+												"variable": "NGIO_init"
+											},
+											"isInverted": true
+										}
+									],
+									"actions": [
+										{
+											"id": "login",
+											"objectClass": "NGAuth",
+											"sid": 821727434408898
+										},
+										{
+											"id": "set-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 112042367708096,
+											"parameters": {
+												"variable": "NGIO_init",
+												"value": "true"
+											}
+										}
+									],
+									"sid": 614697880996564
+								}
+							],
+							"isOrBlock": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-on-mobile",
+									"objectClass": "PlatformInfo",
+									"sid": 593494154698060
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 711825814262039,
+									"parameters": {
+										"variable": "GAME_mobile",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 448092164759569
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 824201744434630,
+									"parameters": {
+										"variable": "SETTING_doomMusic"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 238426367330835,
+									"parameters": {
+										"audio-file": "vivaldi",
+										"loop": "not-looping",
+										"volume": "(log10(SETTING_volumeMusic)*20)",
+										"stereo-pan": "0",
+										"tag-optional": "\"music\""
+									}
+								}
+							],
+							"sid": 229817647177295
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 538935163156587
+								}
+							],
+							"actions": [
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 389225290283492,
+									"parameters": {
+										"audio-file": "e1m5",
+										"loop": "not-looping",
+										"volume": "(log10(SETTING_volumeMusic)*20)",
+										"stereo-pan": "0",
+										"tag-optional": "\"music\""
+									}
+								}
+							],
+							"sid": 605747053526521
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 163976656611256
+						}
+					],
+					"actions": [
+						{
+							"id": "rotate-camera",
+							"objectClass": "3DCamera",
+							"sid": 303484401841633,
+							"parameters": {
+								"rotate-x": "dt*4",
+								"rotate-y": "Logo.Sine.Value",
+								"min-polar-angle": "0",
+								"max-polar-angle": "180"
+							}
+						},
+						{
+							"id": "set-image-offset-x",
+							"objectClass": "Sky",
+							"sid": 356055337454625,
+							"parameters": {
+								"offset-x": "Self.ImageOffsetX + dt*3"
+							}
+						},
+						{
+							"id": "set-image-offset-y",
+							"objectClass": "Sky",
+							"sid": 658826618012417,
+							"parameters": {
+								"offset-y": "Self.ImageOffsetY + dt*3"
+							}
+						},
+						{
+							"id": "set-angle-toward-position",
+							"objectClass": "Billboard",
+							"sid": 420255359805221,
+							"parameters": {
+								"x": "160",
+								"y": "160"
+							}
+						}
+					],
+					"sid": 656183370511778
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-login-success",
+					"objectClass": "NGAuth",
+					"sid": 579742740981710
+				}
+			],
+			"actions": [
+				{
+					"id": "get-list",
+					"objectClass": "NGMedals",
+					"sid": 382014050670772
+				}
+			],
+			"sid": 797187183417041
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-get-medals-list-success",
+					"objectClass": "NGMedals",
+					"sid": 251971272126770
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 431818320894157,
+					"parameters": {
+						"variable": "NGIO_medals",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 723744618119199,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "for-each-medal",
+							"objectClass": "NGMedals",
+							"sid": 841365634067502
+						}
+					],
+					"actions": [
+						{
+							"id": "set-at-xy",
+							"objectClass": "Medals",
+							"sid": 373902512810563,
+							"parameters": {
+								"x": "NGMedals.LoopIndex",
+								"y": "0",
+								"value": "NGMedals.CurMedalID"
+							}
+						},
+						{
+							"id": "set-at-xy",
+							"objectClass": "Medals",
+							"sid": 552032948963254,
+							"parameters": {
+								"x": "NGMedals.LoopIndex",
+								"y": "1",
+								"value": "NGMedals.CurMedalIsUnlocked"
+							}
+						}
+					],
+					"sid": 914020443210717,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 129033719181348,
+									"parameters": {
+										"variable": "NGIO_medals"
+									}
+								},
+								{
+									"id": "compare-at-xy",
+									"objectClass": "Medals",
+									"sid": 494162881402711,
+									"parameters": {
+										"x": "Medals.IndexOf(82079)",
+										"y": "1",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 892215882568922,
+									"parameters": {
+										"variable": "MEDAL_observations",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 218047858347578
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 102507390261916,
+									"parameters": {
+										"variable": "NGIO_medals"
+									}
+								},
+								{
+									"id": "compare-at-xy",
+									"objectClass": "Medals",
+									"sid": 693287952943700,
+									"parameters": {
+										"x": "Medals.IndexOf(82080)",
+										"y": "1",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 327601863882548,
+									"parameters": {
+										"variable": "MEDAL_items",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 236868625446234
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 783631407770805,
+									"parameters": {
+										"variable": "NGIO_medals"
+									}
+								},
+								{
+									"id": "compare-at-xy",
+									"objectClass": "Medals",
+									"sid": 618075625790710,
+									"parameters": {
+										"x": "Medals.IndexOf(82081)",
+										"y": "1",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 905214825413311,
+									"parameters": {
+										"variable": "MEDAL_spending",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 679333908943933
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 624739293868335,
+									"parameters": {
+										"variable": "NGIO_medals"
+									}
+								},
+								{
+									"id": "compare-at-xy",
+									"objectClass": "Medals",
+									"sid": 114651807494636,
+									"parameters": {
+										"x": "Medals.IndexOf(82082)",
+										"y": "1",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 187380470646931,
+									"parameters": {
+										"variable": "MEDAL_secrets",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 734738693384959
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 140220247411894,
+									"parameters": {
+										"variable": "NGIO_medals"
+									}
+								},
+								{
+									"id": "compare-at-xy",
+									"objectClass": "Medals",
+									"sid": 198077187048980,
+									"parameters": {
+										"x": "Medals.IndexOf(82083)",
+										"y": "1",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 127879376326022,
+									"parameters": {
+										"variable": "MEDAL_time",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 804216350740589
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 714380980454522,
+									"parameters": {
+										"variable": "NGIO_medals"
+									}
+								},
+								{
+									"id": "compare-at-xy",
+									"objectClass": "Medals",
+									"sid": 771950215685908,
+									"parameters": {
+										"x": "Medals.IndexOf(82084)",
+										"y": "1",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 871531415698280,
+									"parameters": {
+										"variable": "MEDAL_drinks",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 325492711598292
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 780317145087148,
+									"parameters": {
+										"variable": "NGIO_medals"
+									}
+								},
+								{
+									"id": "compare-at-xy",
+									"objectClass": "Medals",
+									"sid": 631153382156128,
+									"parameters": {
+										"x": "Medals.IndexOf(82085)",
+										"y": "1",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 994707177850448,
+									"parameters": {
+										"variable": "MEDAL_thoughtful",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 715922328378557
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 415616344596228,
+									"parameters": {
+										"variable": "NGIO_medals"
+									}
+								},
+								{
+									"id": "compare-at-xy",
+									"objectClass": "Medals",
+									"sid": 384704390326144,
+									"parameters": {
+										"x": "Medals.IndexOf(82086)",
+										"y": "1",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 763487068707275,
+									"parameters": {
+										"variable": "MEDAL_doom",
+										"value": "true"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 509360863152680,
+									"parameters": {
+										"variable": "UNLOCK_doomMusic",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 819227749463250
+						}
+					]
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 696638736804239
+				}
+			],
+			"actions": [],
+			"sid": 198737473614796,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-on-layer",
+							"objectClass": "MenuFont",
+							"sid": 511631444689066,
+							"parameters": {
+								"layer": "MENU_menu"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "MenuFont",
+							"sid": 188099205155616,
+							"parameters": {
+								"instance-variable": "id",
+								"comparison": 0,
+								"value": "MENU_selected"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Selector",
+							"sid": 570562331239630,
+							"parameters": {
+								"instance-variable": "oldY",
+								"value": "Self.Y"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "Selector",
+							"sid": 769328846639595,
+							"parameters": {
+								"x": "MenuFont.X-round(Self.Width/2)-4",
+								"y": "MenuFont.Y"
+							}
+						}
+					],
+					"sid": 123717463984501,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 425560802407532,
+									"parameters": {
+										"variable": "MENU_menu",
+										"comparison": 0,
+										"value": "\"Options\""
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 929939387408886,
+									"parameters": {
+										"variable": "MENU_menu",
+										"comparison": 0,
+										"value": "\"OptionsAlt\""
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 667140164588858,
+									"parameters": {
+										"variable": "MENU_menu",
+										"comparison": 0,
+										"value": "\"Credits\""
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 406022593430037,
+									"parameters": {
+										"variable": "MENU_menu",
+										"comparison": 0,
+										"value": "\"Medals\""
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 255102108502305,
+									"parameters": {
+										"variable": "MENU_menu",
+										"comparison": 0,
+										"value": "\"Modal\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "Logo",
+									"sid": 552500457697160,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								}
+							],
+							"sid": 877498422169414,
+							"isOrBlock": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 597940305203414
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "Logo",
+									"sid": 987831029772108,
+									"parameters": {
+										"visibility": "visible"
+									}
+								}
+							],
+							"sid": 697296552388850
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 923215098896640,
+							"parameters": {
+								"variable": "MENU_menu",
+								"comparison": 0,
+								"value": "\"Options\""
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 381106292154666,
+							"parameters": {
+								"variable": "MENU_menu",
+								"comparison": 0,
+								"value": "\"OptionsAlt\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-enabled",
+							"objectClass": "Slider",
+							"sid": 183067324811309,
+							"behaviorType": "DragDrop",
+							"parameters": {
+								"state": "enabled"
+							}
+						}
+					],
+					"sid": 630381398064021,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-on-layer",
+									"objectClass": "MenuFont",
+									"sid": 337847552800175,
+									"parameters": {
+										"layer": "\"Options\""
+									}
+								},
+								{
+									"id": "is-on-layer",
+									"objectClass": "MenuFont",
+									"sid": 729132313170775,
+									"parameters": {
+										"layer": "\"OptionsAlt\""
+									}
+								}
+							],
+							"actions": [],
+							"sid": 669862238834950,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "MenuFont",
+											"sid": 957061612772523,
+											"parameters": {
+												"instance-variable": "id",
+												"comparison": 0,
+												"value": "2"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 383525261055385,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-boolean-eventvar",
+													"objectClass": "System",
+													"sid": 654305223480318,
+													"parameters": {
+														"variable": "SETTING_flashing"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-text",
+													"objectClass": "MenuFont",
+													"sid": 281320335650124,
+													"parameters": {
+														"text": "\"pickup flash: on\""
+													}
+												}
+											],
+											"sid": 439010971096338
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "else",
+													"objectClass": "System",
+													"sid": 272523433124016
+												}
+											],
+											"actions": [
+												{
+													"id": "set-text",
+													"objectClass": "MenuFont",
+													"sid": 924277100581920,
+													"parameters": {
+														"text": "\"pickup flash: off\""
+													}
+												}
+											],
+											"sid": 616123117046631
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "MenuFont",
+											"sid": 672321127065318,
+											"parameters": {
+												"instance-variable": "id",
+												"comparison": 0,
+												"value": "3"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 487524815338692,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-boolean-eventvar",
+													"objectClass": "System",
+													"sid": 330297405035237,
+													"parameters": {
+														"variable": "SETTING_fullscreen"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-text",
+													"objectClass": "MenuFont",
+													"sid": 448941088240738,
+													"parameters": {
+														"text": "\"fullscreen: on\""
+													}
+												}
+											],
+											"sid": 470271366286169
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "else",
+													"objectClass": "System",
+													"sid": 910071619417998
+												}
+											],
+											"actions": [
+												{
+													"id": "set-text",
+													"objectClass": "MenuFont",
+													"sid": 782027046459100,
+													"parameters": {
+														"text": "\"fullscreen: off\""
+													}
+												}
+											],
+											"sid": 762198061328942
+										}
+									]
+								}
+							],
+							"isOrBlock": true
+						}
+					],
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 265079079310264
+						}
+					],
+					"actions": [
+						{
+							"id": "set-enabled",
+							"objectClass": "Slider",
+							"sid": 729464658084434,
+							"behaviorType": "DragDrop",
+							"parameters": {
+								"state": "disabled"
+							}
+						}
+					],
+					"sid": 376046247525476
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 460423706126350,
+							"parameters": {
+								"variable": "MENU_menu",
+								"comparison": 0,
+								"value": "\"OptionsAlt\""
+							}
+						}
+					],
+					"actions": [],
+					"sid": 508815119523205,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "MenuFont",
+									"sid": 234700266336984,
+									"parameters": {
+										"instance-variable": "id",
+										"comparison": 0,
+										"value": "4"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 298356660486364,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 871769669894951,
+											"parameters": {
+												"variable": "SETTING_doomMusic"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-text",
+											"objectClass": "MenuFont",
+											"sid": 975949908339429,
+											"parameters": {
+												"text": "\"doom music: on\""
+											}
+										}
+									],
+									"sid": 428504276127608
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 914321562456241
+										}
+									],
+									"actions": [
+										{
+											"id": "set-text",
+											"objectClass": "MenuFont",
+											"sid": 222108772672096,
+											"parameters": {
+												"text": "\"doom music: off\""
+											}
+										}
+									],
+									"sid": 520860017496648
+								}
+							]
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 754725981273630,
+							"parameters": {
+								"variable": "MENU_soundCountdown",
+								"comparison": 4,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 735391830382800,
+							"parameters": {
+								"variable": "MENU_soundCountdown",
+								"value": "60*dt"
+							}
+						}
+					],
+					"sid": 835734229567164
+				}
+			]
+		},
+		{
+			"eventType": "comment",
+			"text": "cursor business"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-movement",
+					"objectClass": "Mouse",
+					"sid": 674926288509612
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 235246097001061,
+					"parameters": {
+						"variable": "MENU_keyControl",
+						"value": "false"
+					}
+				}
+			],
+			"sid": 461459751815520
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "cursor-is-over-object",
+					"objectClass": "Mouse",
+					"sid": 496543335782425,
+					"parameters": {
+						"object": "MenuFont"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 566690635490263,
+					"parameters": {
+						"variable": "BLEED_ready"
+					}
+				},
+				{
+					"id": "is-on-layer",
+					"objectClass": "MenuFont",
+					"sid": 405736529904338,
+					"parameters": {
+						"layer": "MENU_menu"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "MenuFont",
+					"sid": 298602543100364,
+					"parameters": {
+						"instance-variable": "id",
+						"comparison": 1,
+						"value": "-1"
+					}
+				},
+				{
+					"id": "is-visible",
+					"objectClass": "MenuFont",
+					"sid": 626379743765264
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 227190018255903,
+					"parameters": {
+						"variable": "MENU_keyControl"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-cursor-style",
+					"objectClass": "Mouse",
+					"sid": 269583136698457,
+					"parameters": {
+						"cursor-style": "hand"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 771969249496604,
+					"parameters": {
+						"variable": "MENU_selected",
+						"value": "MenuFont.id"
+					}
+				}
+			],
+			"sid": 309672033984814
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "else",
+					"objectClass": "System",
+					"sid": 984421580082027
+				},
+				{
+					"id": "cursor-is-over-object",
+					"objectClass": "Mouse",
+					"sid": 612426298827772,
+					"parameters": {
+						"object": "Slider"
+					}
+				},
+				{
+					"id": "is-on-layer",
+					"objectClass": "Slider",
+					"sid": 408282466561461,
+					"parameters": {
+						"layer": "MENU_menu"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 761609694423484,
+					"parameters": {
+						"variable": "MENU_keyControl"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-cursor-style",
+					"objectClass": "Mouse",
+					"sid": 495400774515152,
+					"parameters": {
+						"cursor-style": "hand"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 656770819979176,
+					"parameters": {
+						"variable": "MENU_selected",
+						"value": "Slider.id"
+					}
+				}
+			],
+			"sid": 462079731100155
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "else",
+					"objectClass": "System",
+					"sid": 222899041749384
+				},
+				{
+					"id": "cursor-is-over-object",
+					"objectClass": "Mouse",
+					"sid": 535915944502404,
+					"parameters": {
+						"object": "Link"
+					}
+				},
+				{
+					"id": "has-tags",
+					"objectClass": "MenuFontSmall",
+					"sid": 758103180071222,
+					"parameters": {
+						"tags": "Link.TagAt(0)"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "Link",
+					"sid": 572907219574996,
+					"parameters": {
+						"instance-variable": "link",
+						"comparison": 1,
+						"value": "\"nope\""
+					}
+				},
+				{
+					"id": "is-on-layer",
+					"objectClass": "Link",
+					"sid": 436504686399492,
+					"parameters": {
+						"layer": "MENU_menu"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-cursor-style",
+					"objectClass": "Mouse",
+					"sid": 804506237661938,
+					"parameters": {
+						"cursor-style": "hand"
+					}
+				},
+				{
+					"id": "set-default-color",
+					"objectClass": "MenuFontSmall",
+					"sid": 400248334874934,
+					"parameters": {
+						"color": "rgbEx255(192, 192, 255)"
+					}
+				}
+			],
+			"sid": 783747256625431
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "else",
+					"objectClass": "System",
+					"sid": 291143664927218
+				},
+				{
+					"id": "cursor-is-over-object",
+					"objectClass": "Mouse",
+					"sid": 495227428767873,
+					"parameters": {
+						"object": "Link"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 301120649626750,
+					"parameters": {
+						"variable": "MENU_menu",
+						"comparison": 0,
+						"value": "\"Modal\""
+					}
+				},
+				{
+					"id": "is-on-layer",
+					"objectClass": "Link",
+					"sid": 224117937032973,
+					"parameters": {
+						"layer": "\"Modal\""
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "Link",
+					"sid": 386365576974843,
+					"parameters": {
+						"instance-variable": "link",
+						"comparison": 1,
+						"value": "\"nope\""
+					}
+				},
+				{
+					"id": "has-tags",
+					"objectClass": "MenuFont",
+					"sid": 378394585326742,
+					"parameters": {
+						"tags": "\"title\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-cursor-style",
+					"objectClass": "Mouse",
+					"sid": 920609396787012,
+					"parameters": {
+						"cursor-style": "hand"
+					}
+				},
+				{
+					"id": "set-default-color",
+					"objectClass": "MenuFont",
+					"sid": 186152184215432,
+					"parameters": {
+						"color": "rgbEx255(192, 192, 255)"
+					}
+				}
+			],
+			"sid": 917160275587263
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "else",
+					"objectClass": "System",
+					"sid": 566193829405096
+				},
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 902183861003158,
+					"parameters": {
+						"first-value": "LayoutName",
+						"comparison": 1,
+						"second-value": "\"results\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-default-color",
+					"objectClass": "MenuFontSmall",
+					"sid": 947075897162886,
+					"parameters": {
+						"color": "rgbEx255(255, 255, 255)"
+					}
+				},
+				{
+					"id": "set-default-color",
+					"objectClass": "MenuFont",
+					"sid": 772660233059063,
+					"parameters": {
+						"color": "rgbEx255(255, 255, 255)"
+					}
+				},
+				{
+					"id": "set-cursor-style",
+					"objectClass": "Mouse",
+					"sid": 266713163962787,
+					"parameters": {
+						"cursor-style": "normal"
+					}
+				}
+			],
+			"sid": 672879603553015
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 135533109099365,
+					"parameters": {
+						"variable": "GAME_mobile"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 426358896876000,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 791270366577175,
+							"parameters": {
+								"variable": "MENU_menu",
+								"comparison": 0,
+								"value": "\"Options\""
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 967943661891592,
+							"parameters": {
+								"variable": "MENU_menu",
+								"comparison": 0,
+								"value": "\"OptionsAlt\""
+							}
+						}
+					],
+					"actions": [],
+					"sid": 612381401167246,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "MenuFont",
+									"sid": 140511196263742,
+									"parameters": {
+										"instance-variable": "id",
+										"comparison": 0,
+										"value": "3"
+									}
+								},
+								{
+									"id": "is-on-layer",
+									"objectClass": "MenuFont",
+									"sid": 681158700651237,
+									"parameters": {
+										"layer": "MENU_menu"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-opacity",
+									"objectClass": "MenuFont",
+									"sid": 734820168110368,
+									"parameters": {
+										"opacity": "50"
+									}
+								}
+							],
+							"sid": 423247633385218
+						}
+					],
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-dragging",
+							"objectClass": "Slider",
+							"sid": 140496987322509,
+							"behaviorType": "DragDrop"
+						}
+					],
+					"actions": [],
+					"sid": 708251144561678,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-on-layer",
+									"objectClass": "Slider",
+									"sid": 735454104867004,
+									"parameters": {
+										"layer": "MENU_menu"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 627441146793684,
+									"parameters": {
+										"variable": "MENU_selected",
+										"value": "Slider.id"
+									}
+								}
+							],
+							"sid": 907457120945713
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 870219116553130
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "Touch",
+							"sid": 955592876686473,
+							"parameters": {
+								"object": "MenuFont"
+							}
+						},
+						{
+							"id": "is-on-layer",
+							"objectClass": "MenuFont",
+							"sid": 465764487562991,
+							"parameters": {
+								"layer": "MENU_menu"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "MenuFont",
+							"sid": 556089636546512,
+							"parameters": {
+								"instance-variable": "id",
+								"comparison": 1,
+								"value": "-1"
+							}
+						},
+						{
+							"id": "is-visible",
+							"objectClass": "MenuFont",
+							"sid": 702242800274955
+						}
+					],
+					"actions": [],
+					"sid": 703122158539785,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 238494360500264,
+									"parameters": {
+										"variable": "MENU_menu",
+										"comparison": 0,
+										"value": "\"Options\""
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 479971835632868,
+									"parameters": {
+										"variable": "MENU_menu",
+										"comparison": 0,
+										"value": "\"OptionsAlt\""
+									}
+								}
+							],
+							"actions": [],
+							"sid": 331450775389920,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 251516099231373,
+											"parameters": {
+												"first-value": "MenuFont.LayerName",
+												"comparison": 0,
+												"second-value": "MENU_menu"
+											}
+										},
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "MenuFont",
+											"sid": 917591657072225,
+											"parameters": {
+												"instance-variable": "id",
+												"comparison": 1,
+												"value": "3"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 302805996190069,
+											"parameters": {
+												"variable": "MENU_selected",
+												"value": "MenuFont.id"
+											}
+										}
+									],
+									"sid": 159013076582443
+								}
+							],
+							"isOrBlock": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 198376964590699
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 841377306092838,
+									"parameters": {
+										"variable": "MENU_selected",
+										"value": "MenuFont.id"
+									}
+								}
+							],
+							"sid": 194967676376088
+						}
+					]
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 807727701681733,
+					"parameters": {
+						"variable": "MENU_menu",
+						"comparison": 0,
+						"value": "\"Modal\""
+					}
+				},
+				{
+					"id": "is-on-layer",
+					"objectClass": "MenuFont",
+					"sid": 170721312255835,
+					"parameters": {
+						"layer": "MENU_menu"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "MenuFont",
+					"sid": 210004924717826,
+					"parameters": {
+						"instance-variable": "id",
+						"comparison": 0,
+						"value": "1"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 292386638492311,
+					"parameters": {
+						"variable": "GAME_modalArt"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [],
+			"sid": 852699291715330,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 729535325415580,
+							"parameters": {
+								"variable": "STAT_wealth",
+								"comparison": 5,
+								"value": "GAME_modalPrice"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-opacity",
+							"objectClass": "MenuFont",
+							"sid": 999107227264211,
+							"parameters": {
+								"opacity": "100"
+							}
+						}
+					],
+					"sid": 210521514828244
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 272530557905857
+						}
+					],
+					"actions": [
+						{
+							"id": "set-opacity",
+							"objectClass": "MenuFont",
+							"sid": 419920092843217,
+							"parameters": {
+								"opacity": "50"
+							}
+						}
+					],
+					"sid": 262508671390362
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-button-released",
+					"objectClass": "Mouse",
+					"sid": 725854720742961,
+					"parameters": {
+						"mouse-button": "left"
+					}
+				},
+				{
+					"id": "cursor-is-over-object",
+					"objectClass": "Mouse",
+					"sid": 309735250106399,
+					"parameters": {
+						"object": "Link"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "Link",
+					"sid": 324053589674348,
+					"parameters": {
+						"instance-variable": "link",
+						"comparison": 1,
+						"value": "\"nope\""
+					}
+				},
+				{
+					"id": "is-on-layer",
+					"objectClass": "Link",
+					"sid": 890325530279372,
+					"parameters": {
+						"layer": "MENU_menu"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "open-url-in-new-window",
+					"objectClass": "Browser",
+					"sid": 879614830596580,
+					"parameters": {
+						"url": "Link.link",
+						"tag": "\"\""
+					}
+				}
+			],
+			"sid": 558743534409563
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-any-touch-end",
+					"objectClass": "Touch",
+					"sid": 665844598679727
+				},
+				{
+					"id": "is-touching-object",
+					"objectClass": "Touch",
+					"sid": 364779226539920,
+					"parameters": {
+						"object": "Link"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "Link",
+					"sid": 913988139639527,
+					"parameters": {
+						"instance-variable": "link",
+						"comparison": 1,
+						"value": "\"nope\""
+					}
+				},
+				{
+					"id": "is-on-layer",
+					"objectClass": "Link",
+					"sid": 140022149052039,
+					"parameters": {
+						"layer": "MENU_menu"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 470643149672630,
+					"parameters": {
+						"variable": "GAME_mobile"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "open-url-in-new-window",
+					"objectClass": "Browser",
+					"sid": 275080876421176,
+					"parameters": {
+						"url": "Link.link",
+						"tag": "\"\""
+					}
+				}
+			],
+			"sid": 126212083591151
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 752181634013145,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "MenuFont"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 991213526884834,
+					"parameters": {
+						"variable": "MENU_keyControl",
+						"value": "false"
+					}
+				}
+			],
+			"sid": 584756354259891,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 994016877987159,
+							"parameters": {
+								"variable": "BLEED_ready"
+							}
+						},
+						{
+							"id": "is-on-layer",
+							"objectClass": "MenuFont",
+							"sid": 669372453201995,
+							"parameters": {
+								"layer": "MENU_menu"
+							}
+						},
+						{
+							"id": "is-visible",
+							"objectClass": "MenuFont",
+							"sid": 388962603822340
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "selectMenuItem",
+							"sid": 447538145623637,
+							"parameters": [
+								"MENU_menu",
+								"MenuFont.id"
+							]
+						}
+					],
+					"sid": 701397875554913
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-any-touch-end",
+					"objectClass": "Touch",
+					"sid": 198374165519555
+				},
+				{
+					"id": "is-touching-object",
+					"objectClass": "Touch",
+					"sid": 504659397056964,
+					"parameters": {
+						"object": "MenuFont"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 277426351224443,
+					"parameters": {
+						"variable": "GAME_mobile"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 362911277941381,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 213381751533735,
+							"parameters": {
+								"variable": "BLEED_ready"
+							}
+						},
+						{
+							"id": "is-on-layer",
+							"objectClass": "MenuFont",
+							"sid": 609039551757716,
+							"parameters": {
+								"layer": "MENU_menu"
+							}
+						},
+						{
+							"id": "is-visible",
+							"objectClass": "MenuFont",
+							"sid": 256663111831807
+						}
+					],
+					"actions": [],
+					"sid": 614864957165759,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 832193719421180,
+									"parameters": {
+										"variable": "MENU_menu",
+										"comparison": 0,
+										"value": "\"Options\""
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 994703419726591,
+									"parameters": {
+										"variable": "MENU_menu",
+										"comparison": 0,
+										"value": "\"OptionsAlt\""
+									}
+								}
+							],
+							"actions": [],
+							"sid": 748473039247292,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "MenuFont",
+											"sid": 367879527616615,
+											"parameters": {
+												"instance-variable": "id",
+												"comparison": 1,
+												"value": "3"
+											}
+										}
+									],
+									"actions": [
+										{
+											"callFunction": "selectMenuItem",
+											"sid": 179897698344002,
+											"parameters": [
+												"MENU_menu",
+												"MenuFont.id"
+											]
+										}
+									],
+									"sid": 644572438662715
+								}
+							],
+							"isOrBlock": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 647445691096379
+								}
+							],
+							"actions": [
+								{
+									"callFunction": "selectMenuItem",
+									"sid": 136130198320074,
+									"parameters": [
+										"MENU_menu",
+										"MenuFont.id"
+									]
+								}
+							],
+							"sid": 798303462479023
+						}
+					]
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 122143890906962,
+					"parameters": {
+						"key": 32
+					}
+				},
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 558379243177749,
+					"parameters": {
+						"key": 13
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 352716123614155,
+					"parameters": {
+						"variable": "MENU_keyControl",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 893528384586568,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 799863188163441,
+							"parameters": {
+								"variable": "BLEED_ready"
+							}
+						},
+						{
+							"id": "is-on-layer",
+							"objectClass": "MenuFont",
+							"sid": 961071488977660,
+							"parameters": {
+								"layer": "MENU_menu"
+							}
+						},
+						{
+							"id": "is-visible",
+							"objectClass": "MenuFont",
+							"sid": 148133806982808
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "selectMenuItem",
+							"sid": 273106091077763,
+							"parameters": [
+								"MENU_menu",
+								"MENU_selected"
+							]
+						}
+					],
+					"sid": 661692170890832
+				}
+			],
+			"isOrBlock": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-fullscreen",
+					"objectClass": "Browser",
+					"sid": 950193341313751
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 321885048564884,
+					"parameters": {
+						"variable": "SETTING_fullscreen",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 161775332739944
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "else",
+					"objectClass": "System",
+					"sid": 730720775751684
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 832124289663194,
+					"parameters": {
+						"variable": "SETTING_fullscreen",
+						"value": "false"
+					}
+				}
+			],
+			"sid": 936272311761449
+		},
+		{
+			"functionName": "selectMenuItem",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [
+				{
+					"name": "menu",
+					"type": "string",
+					"initialValue": "Main",
+					"comment": "",
+					"sid": 325410975986826
+				},
+				{
+					"name": "id",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 453054408608034
+				}
+			],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [],
+			"sid": 626791982097267,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 533287716409235,
+							"parameters": {
+								"variable": "menu",
+								"comparison": 0,
+								"value": "\"Main\""
+							}
+						}
+					],
+					"actions": [],
+					"sid": 629710966363665,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 539751611376517,
+									"parameters": {
+										"variable": "id",
+										"comparison": 0,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 864270751340582,
+							"children": [
+								{
+									"eventType": "comment",
+									"text": "new game"
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 760433540758018,
+											"parameters": {
+												"first-value": "LayoutName",
+												"comparison": 0,
+												"second-value": "\"menu\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 776101056198644,
+											"parameters": {
+												"variable": "MENU_menu",
+												"value": "\"\""
+											}
+										},
+										{
+											"id": "request-pointer-lock",
+											"objectClass": "Mouse",
+											"sid": 884498747079547,
+											"parameters": {
+												"unadjusted-movement": false
+											}
+										},
+										{
+											"callFunction": "transition",
+											"sid": 378390926261303,
+											"parameters": [
+												"\"level\""
+											]
+										},
+										{
+											"id": "stop",
+											"objectClass": "Audio",
+											"sid": 484233961746143,
+											"parameters": {
+												"tag": "\"music\""
+											}
+										}
+									],
+									"sid": 885914315286136
+								},
+								{
+									"eventType": "comment",
+									"text": "resume"
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 137872633534716,
+											"parameters": {
+												"first-value": "LayoutName",
+												"comparison": 0,
+												"second-value": "\"level\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 619394284164989,
+											"parameters": {
+												"variable": "MENU_soundCountdown",
+												"value": "5"
+											}
+										},
+										{
+											"id": "play",
+											"objectClass": "Audio",
+											"sid": 762535659832742,
+											"parameters": {
+												"audio-file": "menuclose",
+												"loop": "not-looping",
+												"volume": "log10(SETTING_volumeSound)*20",
+												"stereo-pan": "0",
+												"tag-optional": "\"\""
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 917565775768579,
+											"parameters": {
+												"variable": "MENU_menu",
+												"value": "\"\""
+											}
+										},
+										{
+											"id": "request-pointer-lock",
+											"objectClass": "Mouse",
+											"sid": 319787511630333,
+											"parameters": {
+												"unadjusted-movement": false
+											}
+										},
+										{
+											"id": "set-layer-visible",
+											"objectClass": "System",
+											"sid": 333955835465600,
+											"parameters": {
+												"layer": "\"Menu\"",
+												"visibility": "invisible"
+											}
+										},
+										{
+											"id": "set-layer-visible",
+											"objectClass": "System",
+											"sid": 695537415627257,
+											"parameters": {
+												"layer": "\"Main\"",
+												"visibility": "invisible"
+											}
+										},
+										{
+											"id": "set-layer-visible",
+											"objectClass": "System",
+											"sid": 923899020592266,
+											"parameters": {
+												"layer": "\"Fade\"",
+												"visibility": "invisible"
+											}
+										}
+									],
+									"sid": 658082611423273
+								}
+							]
+						},
+						{
+							"eventType": "comment",
+							"text": "options"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 705383537031206,
+									"parameters": {
+										"variable": "id",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 548263345082911,
+									"parameters": {
+										"variable": "MENU_soundCountdown",
+										"value": "5"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 868962856600283,
+									"parameters": {
+										"audio-file": "menuopen",
+										"loop": "not-looping",
+										"volume": "log10(SETTING_volumeSound)*20",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
+								}
+							],
+							"sid": 316927456573486,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 209433714686553,
+											"parameters": {
+												"variable": "UNLOCK_doomMusic"
+											},
+											"isInverted": true
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 426828976790655,
+											"parameters": {
+												"variable": "MENU_menu",
+												"value": "\"Options\""
+											}
+										},
+										{
+											"id": "set-layer-visible",
+											"objectClass": "System",
+											"sid": 464034406881318,
+											"parameters": {
+												"layer": "\"Main\"",
+												"visibility": "invisible"
+											}
+										},
+										{
+											"id": "set-layer-visible",
+											"objectClass": "System",
+											"sid": 353584426355130,
+											"parameters": {
+												"layer": "\"Options\"",
+												"visibility": "visible"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 822891633224719,
+											"parameters": {
+												"variable": "MENU_selected",
+												"value": "0"
+											}
+										},
+										{
+											"id": "set-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 655324249875481,
+											"parameters": {
+												"variable": "MENU_keyControl",
+												"value": "true"
+											}
+										}
+									],
+									"sid": 878150451536139
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 368720044539435
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 491324181601945,
+											"parameters": {
+												"variable": "MENU_menu",
+												"value": "\"OptionsAlt\""
+											}
+										},
+										{
+											"id": "set-layer-visible",
+											"objectClass": "System",
+											"sid": 278945725479375,
+											"parameters": {
+												"layer": "\"Main\"",
+												"visibility": "invisible"
+											}
+										},
+										{
+											"id": "set-layer-visible",
+											"objectClass": "System",
+											"sid": 770583122983549,
+											"parameters": {
+												"layer": "\"OptionsAlt\"",
+												"visibility": "visible"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 395882652568716,
+											"parameters": {
+												"variable": "MENU_selected",
+												"value": "0"
+											}
+										},
+										{
+											"id": "set-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 588359737150301,
+											"parameters": {
+												"variable": "MENU_keyControl",
+												"value": "true"
+											}
+										}
+									],
+									"sid": 921526537713146
+								}
+							]
+						},
+						{
+							"eventType": "comment",
+							"text": "credits"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 163076921614672,
+									"parameters": {
+										"variable": "id",
+										"comparison": 0,
+										"value": "2"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 998202369335583,
+									"parameters": {
+										"variable": "MENU_soundCountdown",
+										"value": "5"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 566651253908010,
+									"parameters": {
+										"audio-file": "menuopen",
+										"loop": "not-looping",
+										"volume": "log10(SETTING_volumeSound)*20",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 886890040149348,
+									"parameters": {
+										"variable": "MENU_menu",
+										"value": "\"Credits\""
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 296307992271793,
+									"parameters": {
+										"layer": "\"Main\"",
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 657230287877445,
+									"parameters": {
+										"layer": "\"Credits\"",
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 281564259758462,
+									"parameters": {
+										"variable": "MENU_selected",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 197663332264658,
+									"parameters": {
+										"variable": "MENU_keyControl",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 720540507265285
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 857099428529891,
+									"parameters": {
+										"variable": "id",
+										"comparison": 0,
+										"value": "3"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 902263399439880,
+							"children": [
+								{
+									"eventType": "comment",
+									"text": "medals"
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 145638820005498,
+											"parameters": {
+												"first-value": "LayoutName",
+												"comparison": 0,
+												"second-value": "\"menu\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 478418420414672,
+											"parameters": {
+												"variable": "MENU_soundCountdown",
+												"value": "5"
+											}
+										},
+										{
+											"id": "play",
+											"objectClass": "Audio",
+											"sid": 912127301579392,
+											"parameters": {
+												"audio-file": "menuopen",
+												"loop": "not-looping",
+												"volume": "log10(SETTING_volumeSound)*20",
+												"stereo-pan": "0",
+												"tag-optional": "\"\""
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 564256391302008,
+											"parameters": {
+												"variable": "MENU_menu",
+												"value": "\"Medals\""
+											}
+										},
+										{
+											"id": "set-layer-visible",
+											"objectClass": "System",
+											"sid": 891641509468392,
+											"parameters": {
+												"layer": "\"Main\"",
+												"visibility": "invisible"
+											}
+										},
+										{
+											"id": "set-layer-visible",
+											"objectClass": "System",
+											"sid": 509007047849856,
+											"parameters": {
+												"layer": "\"Medals\"",
+												"visibility": "visible"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 315444126161490,
+											"parameters": {
+												"variable": "MENU_selected",
+												"value": "0"
+											}
+										},
+										{
+											"id": "set-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 286692892999494,
+											"parameters": {
+												"variable": "MENU_keyControl",
+												"value": "true"
+											}
+										}
+									],
+									"sid": 551699428235520,
+									"children": [
+										{
+											"eventType": "comment",
+											"text": "dumb"
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-boolean-eventvar",
+													"objectClass": "System",
+													"sid": 182579247948891,
+													"parameters": {
+														"variable": "MEDAL_observations"
+													}
+												},
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "Medal",
+													"sid": 323541144318886,
+													"parameters": {
+														"instance-variable": "id",
+														"comparison": 0,
+														"value": "0"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-animation-frame",
+													"objectClass": "Medal",
+													"sid": 581094336230480,
+													"parameters": {
+														"frame-number": "0"
+													}
+												}
+											],
+											"sid": 419833467682191
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-boolean-eventvar",
+													"objectClass": "System",
+													"sid": 652737859797779,
+													"parameters": {
+														"variable": "MEDAL_items"
+													}
+												},
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "Medal",
+													"sid": 335392562230140,
+													"parameters": {
+														"instance-variable": "id",
+														"comparison": 0,
+														"value": "1"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-animation-frame",
+													"objectClass": "Medal",
+													"sid": 872350544106890,
+													"parameters": {
+														"frame-number": "1"
+													}
+												}
+											],
+											"sid": 108329832932082
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-boolean-eventvar",
+													"objectClass": "System",
+													"sid": 326212169577023,
+													"parameters": {
+														"variable": "MEDAL_spending"
+													}
+												},
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "Medal",
+													"sid": 875598672007973,
+													"parameters": {
+														"instance-variable": "id",
+														"comparison": 0,
+														"value": "2"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-animation-frame",
+													"objectClass": "Medal",
+													"sid": 262221689812809,
+													"parameters": {
+														"frame-number": "2"
+													}
+												}
+											],
+											"sid": 312271040618379
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-boolean-eventvar",
+													"objectClass": "System",
+													"sid": 529330641306758,
+													"parameters": {
+														"variable": "MEDAL_secrets"
+													}
+												},
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "Medal",
+													"sid": 845461815692079,
+													"parameters": {
+														"instance-variable": "id",
+														"comparison": 0,
+														"value": "3"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-animation-frame",
+													"objectClass": "Medal",
+													"sid": 435212756101530,
+													"parameters": {
+														"frame-number": "3"
+													}
+												}
+											],
+											"sid": 668091025507034
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-boolean-eventvar",
+													"objectClass": "System",
+													"sid": 185158252440088,
+													"parameters": {
+														"variable": "MEDAL_time"
+													}
+												},
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "Medal",
+													"sid": 539729360785359,
+													"parameters": {
+														"instance-variable": "id",
+														"comparison": 0,
+														"value": "4"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-animation-frame",
+													"objectClass": "Medal",
+													"sid": 850813695726082,
+													"parameters": {
+														"frame-number": "4"
+													}
+												}
+											],
+											"sid": 469419013885335
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-boolean-eventvar",
+													"objectClass": "System",
+													"sid": 935723109539420,
+													"parameters": {
+														"variable": "MEDAL_drinks"
+													}
+												},
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "Medal",
+													"sid": 915392658952085,
+													"parameters": {
+														"instance-variable": "id",
+														"comparison": 0,
+														"value": "5"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-animation-frame",
+													"objectClass": "Medal",
+													"sid": 756250968256742,
+													"parameters": {
+														"frame-number": "5"
+													}
+												}
+											],
+											"sid": 821333305214527
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-boolean-eventvar",
+													"objectClass": "System",
+													"sid": 347079150192969,
+													"parameters": {
+														"variable": "MEDAL_thoughtful"
+													}
+												},
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "Medal",
+													"sid": 264584920508122,
+													"parameters": {
+														"instance-variable": "id",
+														"comparison": 0,
+														"value": "6"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-animation-frame",
+													"objectClass": "Medal",
+													"sid": 511569928676681,
+													"parameters": {
+														"frame-number": "6"
+													}
+												}
+											],
+											"sid": 352948416660221
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-boolean-eventvar",
+													"objectClass": "System",
+													"sid": 794534717009123,
+													"parameters": {
+														"variable": "MEDAL_doom"
+													}
+												},
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "Medal",
+													"sid": 181193927229924,
+													"parameters": {
+														"instance-variable": "id",
+														"comparison": 0,
+														"value": "7"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-animation-frame",
+													"objectClass": "Medal",
+													"sid": 332594783258921,
+													"parameters": {
+														"frame-number": "7"
+													}
+												}
+											],
+											"sid": 121467524440303
+										}
+									]
+								},
+								{
+									"eventType": "comment",
+									"text": "quit"
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 550716344044669,
+											"parameters": {
+												"first-value": "LayoutName",
+												"comparison": 0,
+												"second-value": "\"level\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 318436753152249,
+											"parameters": {
+												"variable": "MENU_menu",
+												"value": "\"Main\""
+											}
+										},
+										{
+											"callFunction": "transition",
+											"sid": 549291786880395,
+											"parameters": [
+												"\"menu\""
+											]
+										},
+										{
+											"id": "stop",
+											"objectClass": "Audio",
+											"sid": 487051072320793,
+											"parameters": {
+												"tag": "\"music\""
+											}
+										},
+										{
+											"id": "stop-all",
+											"objectClass": "Audio",
+											"sid": 895497613767974
+										}
+									],
+									"sid": 127596774717537
+								}
+							]
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 942459534141419,
+							"parameters": {
+								"variable": "menu",
+								"comparison": 0,
+								"value": "\"Options\""
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 186979840102671,
+							"parameters": {
+								"variable": "MENU_menu",
+								"comparison": 0,
+								"value": "\"OptionsAlt\""
+							}
+						}
+					],
+					"actions": [],
+					"sid": 500914039203438,
+					"children": [
+						{
+							"eventType": "comment",
+							"text": "pickup flash"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 602774469993748,
+									"parameters": {
+										"variable": "id",
+										"comparison": 0,
+										"value": "2"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 552306554290648,
+									"parameters": {
+										"variable": "MENU_soundCountdown",
+										"value": "5"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 813712831324007,
+									"parameters": {
+										"audio-file": "menuselect",
+										"loop": "not-looping",
+										"volume": "log10(SETTING_volumeSound)*20",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
+								},
+								{
+									"id": "toggle-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 835648869545109,
+									"parameters": {
+										"variable": "SETTING_flashing"
+									}
+								}
+							],
+							"sid": 207455428811418
+						},
+						{
+							"eventType": "comment",
+							"text": "fullscreen"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 212399750547004,
+									"parameters": {
+										"variable": "id",
+										"comparison": 0,
+										"value": "3"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 423800081723110,
+									"parameters": {
+										"variable": "MENU_soundCountdown",
+										"value": "5"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 190993203288571,
+									"parameters": {
+										"audio-file": "menuselect",
+										"loop": "not-looping",
+										"volume": "log10(SETTING_volumeSound)*20",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
+								},
+								{
+									"id": "toggle-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 924180421779763,
+									"parameters": {
+										"variable": "SETTING_fullscreen"
+									}
+								}
+							],
+							"sid": 906515472739789,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 821534028475249,
+											"parameters": {
+												"variable": "SETTING_fullscreen"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "request-fullscreen",
+											"objectClass": "Browser",
+											"sid": 273595248790611,
+											"parameters": {
+												"mode": "stretch-letterbox-scale",
+												"navigation-ui": "hide"
+											}
+										}
+									],
+									"sid": 755146385883594
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 836976627060751
+										}
+									],
+									"actions": [
+										{
+											"id": "cancel-fullscreen",
+											"objectClass": "Browser",
+											"sid": 382082709651084
+										}
+									],
+									"sid": 485241222124458
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 250336108983169,
+									"parameters": {
+										"variable": "id",
+										"comparison": 0,
+										"value": "4"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 569439862674371,
+							"children": [
+								{
+									"eventType": "comment",
+									"text": "back"
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 579565759564424,
+											"parameters": {
+												"variable": "menu",
+												"comparison": 0,
+												"value": "\"Options\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 158844612175944,
+											"parameters": {
+												"variable": "MENU_soundCountdown",
+												"value": "5"
+											}
+										},
+										{
+											"id": "play",
+											"objectClass": "Audio",
+											"sid": 934483841148068,
+											"parameters": {
+												"audio-file": "menuclose",
+												"loop": "not-looping",
+												"volume": "log10(SETTING_volumeSound)*20",
+												"stereo-pan": "0",
+												"tag-optional": "\"\""
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 541153313983095,
+											"parameters": {
+												"variable": "MENU_menu",
+												"value": "\"Main\""
+											}
+										},
+										{
+											"id": "set-layer-visible",
+											"objectClass": "System",
+											"sid": 808737891735940,
+											"parameters": {
+												"layer": "\"Options\"",
+												"visibility": "invisible"
+											}
+										},
+										{
+											"id": "set-layer-visible",
+											"objectClass": "System",
+											"sid": 972387486867323,
+											"parameters": {
+												"layer": "\"Main\"",
+												"visibility": "visible"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 287155855857563,
+											"parameters": {
+												"variable": "MENU_selected",
+												"value": "1"
+											}
+										},
+										{
+											"id": "set-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 424059581017079,
+											"parameters": {
+												"variable": "MENU_keyControl",
+												"value": "true"
+											}
+										}
+									],
+									"sid": 588868749523117
+								},
+								{
+									"eventType": "comment",
+									"text": "doom music"
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 209170782845627,
+											"parameters": {
+												"variable": "MENU_menu",
+												"comparison": 0,
+												"value": "\"OptionsAlt\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 543030425900028,
+											"parameters": {
+												"variable": "MENU_soundCountdown",
+												"value": "5"
+											}
+										},
+										{
+											"id": "play",
+											"objectClass": "Audio",
+											"sid": 753175977770136,
+											"parameters": {
+												"audio-file": "menuopen",
+												"loop": "not-looping",
+												"volume": "log10(SETTING_volumeSound)*20",
+												"stereo-pan": "0",
+												"tag-optional": "\"\""
+											}
+										},
+										{
+											"id": "toggle-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 581279162606426,
+											"parameters": {
+												"variable": "SETTING_doomMusic"
+											}
+										},
+										{
+											"id": "stop",
+											"objectClass": "Audio",
+											"sid": 806928261592032,
+											"parameters": {
+												"tag": "\"music\""
+											}
+										}
+									],
+									"sid": 431692091339477,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 329245959397930,
+													"parameters": {
+														"first-value": "LayoutName",
+														"comparison": 0,
+														"second-value": "\"menu\""
+													}
+												}
+											],
+											"actions": [],
+											"sid": 313298534483253,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-boolean-eventvar",
+															"objectClass": "System",
+															"sid": 690061938688862,
+															"parameters": {
+																"variable": "SETTING_doomMusic"
+															},
+															"isInverted": true
+														}
+													],
+													"actions": [
+														{
+															"id": "play",
+															"objectClass": "Audio",
+															"sid": 486998187768965,
+															"parameters": {
+																"audio-file": "vivaldi",
+																"loop": "not-looping",
+																"volume": "(log10(SETTING_volumeMusic)*20)",
+																"stereo-pan": "0",
+																"tag-optional": "\"music\""
+															}
+														}
+													],
+													"sid": 692392780707836
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "else",
+															"objectClass": "System",
+															"sid": 619432369699014
+														}
+													],
+													"actions": [
+														{
+															"id": "play",
+															"objectClass": "Audio",
+															"sid": 219770510687620,
+															"parameters": {
+																"audio-file": "e1m5",
+																"loop": "not-looping",
+																"volume": "(log10(SETTING_volumeMusic)*20)",
+																"stereo-pan": "0",
+																"tag-optional": "\"music\""
+															}
+														}
+													],
+													"sid": 199295963539701
+												}
+											]
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 140193001789825,
+													"parameters": {
+														"first-value": "LayoutName",
+														"comparison": 0,
+														"second-value": "\"level\""
+													}
+												}
+											],
+											"actions": [],
+											"sid": 651124723574873,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-boolean-eventvar",
+															"objectClass": "System",
+															"sid": 898287254681942,
+															"parameters": {
+																"variable": "SETTING_doomMusic"
+															},
+															"isInverted": true
+														}
+													],
+													"actions": [
+														{
+															"id": "play",
+															"objectClass": "Audio",
+															"sid": 932058712409152,
+															"parameters": {
+																"audio-file": "bach",
+																"loop": "looping",
+																"volume": "(log10(SETTING_volumeMusic)*20)",
+																"stereo-pan": "0",
+																"tag-optional": "\"music\""
+															}
+														}
+													],
+													"sid": 185935214934169
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "else",
+															"objectClass": "System",
+															"sid": 260914364634086
+														}
+													],
+													"actions": [
+														{
+															"id": "play",
+															"objectClass": "Audio",
+															"sid": 410922563552636,
+															"parameters": {
+																"audio-file": "e1m1",
+																"loop": "looping",
+																"volume": "(log10(SETTING_volumeMusic)*20)",
+																"stereo-pan": "0",
+																"tag-optional": "\"music\""
+															}
+														}
+													],
+													"sid": 756706600108380
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{
+							"eventType": "comment",
+							"text": "back"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 744978752768969,
+									"parameters": {
+										"variable": "id",
+										"comparison": 0,
+										"value": "5"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 976916217439554,
+									"parameters": {
+										"variable": "MENU_soundCountdown",
+										"value": "5"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 883466633895246,
+									"parameters": {
+										"audio-file": "menuclose",
+										"loop": "not-looping",
+										"volume": "log10(SETTING_volumeSound)*20",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 342634121667545,
+									"parameters": {
+										"variable": "MENU_menu",
+										"value": "\"Main\""
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 493416758633868,
+									"parameters": {
+										"layer": "\"OptionsAlt\"",
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 769386968656134,
+									"parameters": {
+										"layer": "\"Main\"",
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 638367443851119,
+									"parameters": {
+										"variable": "MENU_selected",
+										"value": "1"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 822325030363228,
+									"parameters": {
+										"variable": "MENU_keyControl",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 700821170861530
+						}
+					],
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 564933779585110,
+							"parameters": {
+								"variable": "menu",
+								"comparison": 0,
+								"value": "\"Credits\""
+							}
+						}
+					],
+					"actions": [],
+					"sid": 764288482004873,
+					"children": [
+						{
+							"eventType": "comment",
+							"text": "back"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 645583885806153,
+									"parameters": {
+										"variable": "id",
+										"comparison": 0,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 878086678202787,
+									"parameters": {
+										"variable": "MENU_soundCountdown",
+										"value": "5"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 898057170378167,
+									"parameters": {
+										"audio-file": "menuclose",
+										"loop": "not-looping",
+										"volume": "log10(SETTING_volumeSound)*20",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 438061298160862,
+									"parameters": {
+										"variable": "MENU_menu",
+										"value": "\"Main\""
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 664857727222867,
+									"parameters": {
+										"layer": "\"Credits\"",
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 542330472507001,
+									"parameters": {
+										"layer": "\"Main\"",
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 283800003232911,
+									"parameters": {
+										"variable": "MENU_selected",
+										"value": "2"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 362629828276364,
+									"parameters": {
+										"variable": "MENU_keyControl",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 930821479092301
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 378023707287080,
+							"parameters": {
+								"variable": "menu",
+								"comparison": 0,
+								"value": "\"Medals\""
+							}
+						}
+					],
+					"actions": [],
+					"sid": 428890537399104,
+					"children": [
+						{
+							"eventType": "comment",
+							"text": "back"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 998912233423573,
+									"parameters": {
+										"variable": "id",
+										"comparison": 0,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 178722523564413,
+									"parameters": {
+										"variable": "MENU_soundCountdown",
+										"value": "5"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 397746350144831,
+									"parameters": {
+										"audio-file": "menuclose",
+										"loop": "not-looping",
+										"volume": "log10(SETTING_volumeSound)*20",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 967433830101275,
+									"parameters": {
+										"variable": "MENU_menu",
+										"value": "\"Main\""
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 313326011100650,
+									"parameters": {
+										"layer": "\"Medals\"",
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 228800640873184,
+									"parameters": {
+										"layer": "\"Main\"",
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 289103155729935,
+									"parameters": {
+										"variable": "MENU_selected",
+										"value": "3"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 925053408719649,
+									"parameters": {
+										"variable": "MENU_keyControl",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 623099190128849
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 773278035309482,
+							"parameters": {
+								"variable": "menu",
+								"comparison": 0,
+								"value": "\"Modal\""
+							}
+						}
+					],
+					"actions": [],
+					"sid": 295472886525081,
+					"children": [
+						{
+							"eventType": "comment",
+							"text": "back"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 170026701605054,
+									"parameters": {
+										"variable": "id",
+										"comparison": 0,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 432552463167886,
+									"parameters": {
+										"variable": "MENU_soundCountdown",
+										"value": "5"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 413705228182177,
+									"parameters": {
+										"variable": "MENU_menu",
+										"value": "\"\""
+									}
+								},
+								{
+									"id": "request-pointer-lock",
+									"objectClass": "Mouse",
+									"sid": 254265628702757,
+									"parameters": {
+										"unadjusted-movement": false
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 708271274973188,
+									"parameters": {
+										"layer": "\"Menu\"",
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 267886666227929,
+									"parameters": {
+										"layer": "\"Modal\"",
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 130460382234742,
+									"parameters": {
+										"layer": "\"Fade\"",
+										"visibility": "invisible"
+									}
+								}
+							],
+							"sid": 208166656623902
+						},
+						{
+							"eventType": "comment",
+							"text": "buy"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 121211704898976,
+									"parameters": {
+										"variable": "id",
+										"comparison": 0,
+										"value": "1"
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 782471237155330,
+									"parameters": {
+										"variable": "STAT_wealth",
+										"comparison": 5,
+										"value": "GAME_modalPrice"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 768452739819118,
+									"parameters": {
+										"variable": "MENU_soundCountdown",
+										"value": "5"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 641740889514474,
+									"parameters": {
+										"audio-file": "buy",
+										"loop": "not-looping",
+										"volume": "log10(SETTING_volumeSound)*20",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 396105736857380,
+									"parameters": {
+										"variable": "MENU_menu",
+										"value": "\"\""
+									}
+								},
+								{
+									"id": "request-pointer-lock",
+									"objectClass": "Mouse",
+									"sid": 285895918213492,
+									"parameters": {
+										"unadjusted-movement": false
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 465888495877654,
+									"parameters": {
+										"layer": "\"Menu\"",
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 558270179678656,
+									"parameters": {
+										"layer": "\"Modal\"",
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 747954666494525,
+									"parameters": {
+										"layer": "\"Fade\"",
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "subtract-from-eventvar",
+									"objectClass": "System",
+									"sid": 424753973741778,
+									"parameters": {
+										"variable": "STAT_wealth",
+										"value": "GAME_modalPrice"
+									}
+								},
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 101194405194827,
+									"parameters": {
+										"variable": "STAT_moneySpent",
+										"value": "GAME_modalPrice"
+									}
+								}
+							],
+							"sid": 925567589174567,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "pick-by-unique-id",
+											"objectClass": "Trigger",
+											"sid": 426345005399981,
+											"parameters": {
+												"unique-id": "GAME_modalUID"
+											}
+										},
+										{
+											"id": "is-overlapping-another-object",
+											"objectClass": "Trigger",
+											"sid": 705826699825213,
+											"parameters": {
+												"object": "Billboard"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "destroy",
+											"objectClass": "Billboard",
+											"sid": 591205794125116
+										},
+										{
+											"id": "destroy",
+											"objectClass": "Trigger",
+											"sid": 931719728690369
+										}
+									],
+									"sid": 158745311423856
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 832868160999556,
+					"parameters": {
+						"key": 27
+					}
+				},
+				{
+					"id": "on-click",
+					"objectClass": "Mouse",
+					"sid": 172571018433580,
+					"parameters": {
+						"mouse-button": "right",
+						"click-type": "clicked"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 846271434059872,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 768610229755669,
+							"parameters": {
+								"variable": "BLEED_ready"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 673169963835801,
+							"parameters": {
+								"variable": "MENU_menu",
+								"comparison": 1,
+								"value": "\"\""
+							}
+						}
+					],
+					"actions": [],
+					"sid": 518140243197418,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 623887061477939,
+									"parameters": {
+										"variable": "MENU_menu",
+										"comparison": 0,
+										"value": "\"Main\""
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 634522199979133,
+									"parameters": {
+										"first-value": "LayoutName",
+										"comparison": 0,
+										"second-value": "\"level\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 934083107040122,
+									"parameters": {
+										"variable": "MENU_soundCountdown",
+										"value": "5"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 121172744339852,
+									"parameters": {
+										"audio-file": "menuclose",
+										"loop": "not-looping",
+										"volume": "log10(SETTING_volumeSound)*20",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 418475876985864,
+									"parameters": {
+										"variable": "MENU_menu",
+										"value": "\"\""
+									}
+								},
+								{
+									"id": "request-pointer-lock",
+									"objectClass": "Mouse",
+									"sid": 427165029407205,
+									"parameters": {
+										"unadjusted-movement": false
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 967966095822533,
+									"parameters": {
+										"layer": "\"Menu\"",
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 864940044232725,
+									"parameters": {
+										"layer": "\"Main\"",
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 737247615238537,
+									"parameters": {
+										"layer": "\"Fade\"",
+										"visibility": "invisible"
+									}
+								}
+							],
+							"sid": 542631061090786
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 416879546230222,
+									"parameters": {
+										"variable": "MENU_menu",
+										"comparison": 0,
+										"value": "\"Options\""
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 793670505620286,
+									"parameters": {
+										"variable": "MENU_menu",
+										"comparison": 0,
+										"value": "\"OptionsAlt\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 801780180639609,
+									"parameters": {
+										"variable": "MENU_soundCountdown",
+										"value": "5"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 937156081457105,
+									"parameters": {
+										"audio-file": "menuclose",
+										"loop": "not-looping",
+										"volume": "log10(SETTING_volumeSound)*20",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 901494134239457,
+									"parameters": {
+										"variable": "MENU_menu",
+										"value": "\"Main\""
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 107948437817654,
+									"parameters": {
+										"layer": "\"Options\"",
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 212461516441006,
+									"parameters": {
+										"layer": "\"OptionsAlt\"",
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 839025676430100,
+									"parameters": {
+										"layer": "\"Main\"",
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 731275559105868,
+									"parameters": {
+										"variable": "MENU_selected",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 602314971694953,
+							"isOrBlock": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 392591928831660,
+									"parameters": {
+										"variable": "MENU_menu",
+										"comparison": 0,
+										"value": "\"Credits\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 472973041410892,
+									"parameters": {
+										"variable": "MENU_soundCountdown",
+										"value": "5"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 898129515735224,
+									"parameters": {
+										"audio-file": "menuclose",
+										"loop": "not-looping",
+										"volume": "log10(SETTING_volumeSound)*20",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 634147009626368,
+									"parameters": {
+										"variable": "MENU_menu",
+										"value": "\"Main\""
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 661544101220772,
+									"parameters": {
+										"layer": "\"Credits\"",
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 723901710156320,
+									"parameters": {
+										"layer": "\"Main\"",
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 199991385665540,
+									"parameters": {
+										"variable": "MENU_selected",
+										"value": "2"
+									}
+								}
+							],
+							"sid": 492852270130606
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 205633560698586,
+									"parameters": {
+										"variable": "MENU_menu",
+										"comparison": 0,
+										"value": "\"Medals\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 542272747799417,
+									"parameters": {
+										"variable": "MENU_soundCountdown",
+										"value": "5"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 481431088886767,
+									"parameters": {
+										"audio-file": "menuclose",
+										"loop": "not-looping",
+										"volume": "log10(SETTING_volumeSound)*20",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 643352666609283,
+									"parameters": {
+										"variable": "MENU_menu",
+										"value": "\"Main\""
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 774298820452161,
+									"parameters": {
+										"layer": "\"Medals\"",
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 550428357867102,
+									"parameters": {
+										"layer": "\"Main\"",
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 251604496237685,
+									"parameters": {
+										"variable": "MENU_selected",
+										"value": "3"
+									}
+								}
+							],
+							"sid": 751391685459711
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 193091044486418,
+									"parameters": {
+										"variable": "MENU_menu",
+										"comparison": 0,
+										"value": "\"Modal\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 761469796431681,
+									"parameters": {
+										"variable": "MENU_soundCountdown",
+										"value": "5"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 128658130628889,
+									"parameters": {
+										"variable": "MENU_menu",
+										"value": "\"\""
+									}
+								},
+								{
+									"id": "request-pointer-lock",
+									"objectClass": "Mouse",
+									"sid": 998527920636605,
+									"parameters": {
+										"unadjusted-movement": false
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 637264023324169,
+									"parameters": {
+										"layer": "\"Menu\"",
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 744509136220501,
+									"parameters": {
+										"layer": "\"Modal\"",
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 345245244727246,
+									"parameters": {
+										"layer": "\"Fade\"",
+										"visibility": "invisible"
+									}
+								}
+							],
+							"sid": 342393353246451
+						}
+					]
+				}
+			],
+			"isOrBlock": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 219813663135154,
+					"parameters": {
+						"key": 80
+					}
+				}
+			],
+			"actions": [],
+			"sid": 875279585841107,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 970873988272443,
+							"parameters": {
+								"variable": "BLEED_ready"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 527890695379592,
+							"parameters": {
+								"variable": "MENU_menu",
+								"comparison": 1,
+								"value": "\"\""
+							}
+						}
+					],
+					"actions": [],
+					"sid": 191985644320082,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 103543284217850,
+									"parameters": {
+										"variable": "MENU_menu",
+										"comparison": 0,
+										"value": "\"Main\""
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 529265578975240,
+									"parameters": {
+										"first-value": "LayoutName",
+										"comparison": 0,
+										"second-value": "\"level\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 862625241777237,
+									"parameters": {
+										"variable": "MENU_soundCountdown",
+										"value": "5"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 210017543845158,
+									"parameters": {
+										"audio-file": "menuclose",
+										"loop": "not-looping",
+										"volume": "log10(SETTING_volumeSound)*20",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 792249481671645,
+									"parameters": {
+										"variable": "MENU_menu",
+										"value": "\"\""
+									}
+								},
+								{
+									"id": "request-pointer-lock",
+									"objectClass": "Mouse",
+									"sid": 304625161299413,
+									"parameters": {
+										"unadjusted-movement": false
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 157050385220089,
+									"parameters": {
+										"layer": "\"Menu\"",
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 764346043633544,
+									"parameters": {
+										"layer": "\"Main\"",
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 665937090780396,
+									"parameters": {
+										"layer": "\"Fade\"",
+										"visibility": "invisible"
+									}
+								}
+							],
+							"sid": 476025703032143
+						}
+					]
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 500716906027934,
+					"parameters": {
+						"key": 87
+					}
+				},
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 458649001629437,
+					"parameters": {
+						"key": 38
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 932699156976103,
+					"parameters": {
+						"variable": "MENU_keyControl",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 417858505499807,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 484137455130916,
+							"parameters": {
+								"variable": "BLEED_ready"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 985002951616132,
+							"parameters": {
+								"variable": "GAME_modalArt"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 207734664526284,
+							"parameters": {
+								"variable": "MENU_menu",
+								"comparison": 0,
+								"value": "\"\""
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [],
+					"sid": 447470960998330,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 774042102351448,
+									"parameters": {
+										"variable": "MENU_selected",
+										"comparison": 4,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "subtract-from-eventvar",
+									"objectClass": "System",
+									"sid": 357734250957183,
+									"parameters": {
+										"variable": "MENU_selected",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 249291216281360
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 587888207027415
+								},
+								{
+									"id": "is-on-layer",
+									"objectClass": "MenuFont",
+									"sid": 252819429692389,
+									"parameters": {
+										"layer": "MENU_menu"
+									}
+								},
+								{
+									"id": "pick-highestlowest",
+									"objectClass": "MenuFont",
+									"sid": 813790764682381,
+									"parameters": {
+										"which": "highest",
+										"instance-variable": "id"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 864210214641237,
+									"parameters": {
+										"variable": "MENU_selected",
+										"value": "MenuFont.id"
+									}
+								}
+							],
+							"sid": 776121990717648
+						}
+					]
+				}
+			],
+			"isOrBlock": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 381483078475599,
+					"parameters": {
+						"key": 83
+					}
+				},
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 256645484943542,
+					"parameters": {
+						"key": 40
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 906768246686576,
+					"parameters": {
+						"variable": "MENU_keyControl",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 596970289950613,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 251443771786773,
+							"parameters": {
+								"variable": "BLEED_ready"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 133124478972786,
+							"parameters": {
+								"variable": "GAME_modalArt"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 914558319213211,
+							"parameters": {
+								"variable": "MENU_menu",
+								"comparison": 0,
+								"value": "\"\""
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [],
+					"sid": 724469846501276,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-on-layer",
+									"objectClass": "MenuFont",
+									"sid": 833898686107594,
+									"parameters": {
+										"layer": "MENU_menu"
+									}
+								},
+								{
+									"id": "pick-highestlowest",
+									"objectClass": "MenuFont",
+									"sid": 232780608873354,
+									"parameters": {
+										"which": "highest",
+										"instance-variable": "id"
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 670037130300328,
+									"parameters": {
+										"variable": "MENU_selected",
+										"comparison": 2,
+										"value": "MenuFont.id"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 708841683908323,
+									"parameters": {
+										"variable": "MENU_selected",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 669574427657455
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 558711781602307
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 404564010826430,
+									"parameters": {
+										"variable": "MENU_selected",
+										"value": "0"
+									}
+								}
+							],
+							"sid": 337894604073609
+						}
+					]
+				}
+			],
+			"isOrBlock": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "key-is-down",
+					"objectClass": "Keyboard",
+					"sid": 183674040170208,
+					"parameters": {
+						"key": 39
+					}
+				},
+				{
+					"id": "key-is-down",
+					"objectClass": "Keyboard",
+					"sid": 111631403178458,
+					"parameters": {
+						"key": 68
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 647234371373453,
+					"parameters": {
+						"variable": "MENU_keyControl",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 682698208775619,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 790428618422130,
+							"parameters": {
+								"variable": "MENU_menu",
+								"comparison": 0,
+								"value": "\"Options\""
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 705554077131893,
+							"parameters": {
+								"variable": "MENU_menu",
+								"comparison": 0,
+								"value": "\"OptionsAlt\""
+							}
+						}
+					],
+					"actions": [],
+					"sid": 946969669548118,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "every-x-seconds",
+									"objectClass": "System",
+									"sid": 268303006888722,
+									"parameters": {
+										"interval-seconds": "0.15"
+									}
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Slider",
+									"sid": 691850551286860,
+									"parameters": {
+										"instance-variable": "id",
+										"comparison": 0,
+										"value": "MENU_selected"
+									}
+								},
+								{
+									"id": "compare-x",
+									"objectClass": "Slider",
+									"sid": 728096734531016,
+									"parameters": {
+										"comparison": 1,
+										"x-co-ordinate": "SliderBar.X+SliderBar.Width-4"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 447942151694286,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 452850608222811,
+											"parameters": {
+												"variable": "MENU_selected",
+												"comparison": 0,
+												"value": "0"
+											}
+										},
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 542785656782804,
+											"parameters": {
+												"variable": "MENU_selected",
+												"comparison": 0,
+												"value": "1"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "play",
+											"objectClass": "Audio",
+											"sid": 555158696421136,
+											"parameters": {
+												"audio-file": "menuselect",
+												"loop": "not-looping",
+												"volume": "log10(SETTING_volumeSound)*20",
+												"stereo-pan": "0",
+												"tag-optional": "\"\""
+											}
+										},
+										{
+											"id": "set-x",
+											"objectClass": "Slider",
+											"sid": 971981529571953,
+											"parameters": {
+												"x": "Self.X+5"
+											}
+										}
+									],
+									"sid": 445471587425823,
+									"isOrBlock": true
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 515233819554754
+								}
+							],
+							"actions": [],
+							"sid": 845110571676989,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 788306240466390,
+											"parameters": {
+												"variable": "MENU_selected",
+												"comparison": 0,
+												"value": "2"
+											}
+										},
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 934932156304871,
+											"parameters": {
+												"variable": "MENU_selected",
+												"comparison": 0,
+												"value": "3"
+											}
+										}
+									],
+									"actions": [
+										{
+											"callFunction": "selectMenuItem",
+											"sid": 882473790469417,
+											"parameters": [
+												"MENU_menu",
+												"MENU_selected"
+											]
+										}
+									],
+									"sid": 494862142728656,
+									"isOrBlock": true
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 704861481028054,
+											"parameters": {
+												"variable": "MENU_menu",
+												"comparison": 0,
+												"value": "\"OptionsAlt\""
+											}
+										},
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 486999990914226,
+											"parameters": {
+												"variable": "MENU_selected",
+												"comparison": 0,
+												"value": "4"
+											}
+										}
+									],
+									"actions": [
+										{
+											"callFunction": "selectMenuItem",
+											"sid": 568905647950415,
+											"parameters": [
+												"MENU_menu",
+												"MENU_selected"
+											]
+										}
+									],
+									"sid": 401883022864121
+								}
+							]
+						}
+					],
+					"isOrBlock": true
+				}
+			],
+			"isOrBlock": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "key-is-down",
+					"objectClass": "Keyboard",
+					"sid": 109076982428949,
+					"parameters": {
+						"key": 37
+					}
+				},
+				{
+					"id": "key-is-down",
+					"objectClass": "Keyboard",
+					"sid": 355141561756198,
+					"parameters": {
+						"key": 65
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 965499574620260,
+					"parameters": {
+						"variable": "MENU_keyControl",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 505952096092653,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 280333952797883,
+							"parameters": {
+								"variable": "MENU_menu",
+								"comparison": 0,
+								"value": "\"Options\""
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 778368597608218,
+							"parameters": {
+								"variable": "MENU_menu",
+								"comparison": 0,
+								"value": "\"OptionsAlt\""
+							}
+						}
+					],
+					"actions": [],
+					"sid": 590633271136690,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "every-x-seconds",
+									"objectClass": "System",
+									"sid": 887084175279546,
+									"parameters": {
+										"interval-seconds": "0.15"
+									}
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Slider",
+									"sid": 228784024827515,
+									"parameters": {
+										"instance-variable": "id",
+										"comparison": 0,
+										"value": "MENU_selected"
+									}
+								},
+								{
+									"id": "compare-x",
+									"objectClass": "Slider",
+									"sid": 750700220086099,
+									"parameters": {
+										"comparison": 1,
+										"x-co-ordinate": "SliderBar.X+4"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 629495534501188,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 908515590722756,
+											"parameters": {
+												"variable": "MENU_selected",
+												"comparison": 0,
+												"value": "0"
+											}
+										},
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 820943164766029,
+											"parameters": {
+												"variable": "MENU_selected",
+												"comparison": 0,
+												"value": "1"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "play",
+											"objectClass": "Audio",
+											"sid": 516074947931427,
+											"parameters": {
+												"audio-file": "menuselect",
+												"loop": "not-looping",
+												"volume": "log10(SETTING_volumeSound)*20",
+												"stereo-pan": "0",
+												"tag-optional": "\"\""
+											}
+										},
+										{
+											"id": "set-x",
+											"objectClass": "Slider",
+											"sid": 350490852570718,
+											"parameters": {
+												"x": "Self.X-5"
+											}
+										}
+									],
+									"sid": 949826893520941,
+									"isOrBlock": true
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 424222394651646
+								}
+							],
+							"actions": [],
+							"sid": 716113352905771,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 895527554378317,
+											"parameters": {
+												"variable": "MENU_selected",
+												"comparison": 0,
+												"value": "2"
+											}
+										},
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 754226512976000,
+											"parameters": {
+												"variable": "MENU_selected",
+												"comparison": 0,
+												"value": "3"
+											}
+										}
+									],
+									"actions": [
+										{
+											"callFunction": "selectMenuItem",
+											"sid": 972497692310240,
+											"parameters": [
+												"MENU_menu",
+												"MENU_selected"
+											]
+										}
+									],
+									"sid": 616610962337520,
+									"isOrBlock": true
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 945865375208635,
+											"parameters": {
+												"variable": "MENU_menu",
+												"comparison": 0,
+												"value": "\"OptionsAlt\""
+											}
+										},
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 392200130558146,
+											"parameters": {
+												"variable": "MENU_selected",
+												"comparison": 0,
+												"value": "4"
+											}
+										}
+									],
+									"actions": [
+										{
+											"callFunction": "selectMenuItem",
+											"sid": 916454691487169,
+											"parameters": [
+												"MENU_menu",
+												"MENU_selected"
+											]
+										}
+									],
+									"sid": 467819412443676
+								}
+							]
+						}
+					],
+					"isOrBlock": true
+				}
+			],
+			"isOrBlock": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-drag-start",
+					"objectClass": "Slider",
+					"sid": 684365998974913,
+					"behaviorType": "DragDrop"
+				},
+				{
+					"id": "on-drop",
+					"objectClass": "Slider",
+					"sid": 695835941704837,
+					"behaviorType": "DragDrop"
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 909713705814113,
+					"parameters": {
+						"audio-file": "menuselect",
+						"loop": "not-looping",
+						"volume": "log10(SETTING_volumeSound)*20",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 441357994548310,
+			"isOrBlock": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "SliderBar",
+					"sid": 511591010084748,
+					"parameters": {
+						"instance-variable": "id",
+						"comparison": 0,
+						"value": "Slider.id"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 406104398436525,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-x",
+							"objectClass": "Slider",
+							"sid": 363865777966091,
+							"parameters": {
+								"comparison": 2,
+								"x-co-ordinate": "SliderBar.X+4"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-x",
+							"objectClass": "Slider",
+							"sid": 847630137341374,
+							"parameters": {
+								"x": "SliderBar.X+4"
+							}
+						}
+					],
+					"sid": 377157421227874
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-x",
+							"objectClass": "Slider",
+							"sid": 693366357985492,
+							"parameters": {
+								"comparison": 4,
+								"x-co-ordinate": "SliderBar.X+SliderBar.Width-4"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-x",
+							"objectClass": "Slider",
+							"sid": 583356642184642,
+							"parameters": {
+								"x": "SliderBar.X+SliderBar.Width-4"
+							}
+						}
+					],
+					"sid": 266259753888652
+				}
+			]
+		},
+		{
+			"eventType": "comment",
+			"text": "volume, etc."
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 719681953784653
+				}
+			],
+			"actions": [],
+			"sid": 726938491548330,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "has-tags",
+							"objectClass": "MenuFontSmall",
+							"sid": 637671201067291,
+							"parameters": {
+								"tags": "\"version\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "MenuFontSmall",
+							"sid": 441165568201574,
+							"parameters": {
+								"text": "\"V\"&projectversion"
+							}
+						}
+					],
+					"sid": 516428596565459
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Slider",
+							"sid": 962695136256927,
+							"parameters": {
+								"instance-variable": "id",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-x",
+							"objectClass": "Slider",
+							"sid": 177747926665551,
+							"parameters": {
+								"x": "SETTING_volumeSound*(SliderBar.Width-8)+(SliderBar.X+4)"
+							}
+						}
+					],
+					"sid": 820003599055690
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Slider",
+							"sid": 961731525535907,
+							"parameters": {
+								"instance-variable": "id",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-x",
+							"objectClass": "Slider",
+							"sid": 657659315664844,
+							"parameters": {
+								"x": "SETTING_volumeMusic*(SliderBar.Width-8)+(SliderBar.X+4)"
+							}
+						}
+					],
+					"sid": 823188456972369
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "pick-by-comparison",
+					"objectClass": "System",
+					"sid": 807768198342454,
+					"parameters": {
+						"object": "Slider",
+						"expression": "Slider.LayerName",
+						"comparison": 0,
+						"value": "MENU_menu"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 886882814666106,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Slider",
+							"sid": 949144803560265,
+							"parameters": {
+								"instance-variable": "id",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 134292191287062,
+							"parameters": {
+								"variable": "SETTING_volumeSound",
+								"value": "(Slider.X-(SliderBar.X+4))/(SliderBar.Width-8)"
+							}
+						}
+					],
+					"sid": 552246137062227
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Slider",
+							"sid": 598636734492968,
+							"parameters": {
+								"instance-variable": "id",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 730230513483094,
+							"parameters": {
+								"variable": "SETTING_volumeMusic",
+								"value": "(Slider.X-(SliderBar.X+4))/(SliderBar.Width-8)"
+							}
+						},
+						{
+							"id": "set-volume",
+							"objectClass": "Audio",
+							"sid": 215731736135659,
+							"parameters": {
+								"tag": "\"music\"",
+								"db": "(log10(SETTING_volumeMusic)*20)"
+							}
+						}
+					],
+					"sid": 797373484924395
+				}
+			]
+		},
+		{
+			"eventType": "comment",
+			"text": "selector"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "Selector",
+					"sid": 489782771147022,
+					"parameters": {
+						"instance-variable": "oldY",
+						"comparison": 1,
+						"value": "Self.Y"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 470056008305942,
+					"parameters": {
+						"variable": "MENU_soundCountdown",
+						"comparison": 3,
+						"value": "0"
+					}
+				},
+				{
+					"id": "trigger-once-while-true",
+					"objectClass": "System",
+					"sid": 651160134423149
+				}
+			],
+			"actions": [],
+			"sid": 726878889683711,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 666698220359526,
+							"parameters": {
+								"variable": "BLEED_ready"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 372784378833308,
+							"parameters": {
+								"audio-file": "menuselect",
+								"loop": "not-looping",
+								"volume": "log10(SETTING_volumeSound)*20",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						}
+					],
+					"sid": 287986297256519
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 874784734019951,
+					"parameters": {
+						"key": 70
+					}
+				}
+			],
+			"actions": [],
+			"sid": 675423357313047,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-fullscreen",
+							"objectClass": "Browser",
+							"sid": 795042035627091,
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "request-fullscreen",
+							"objectClass": "Browser",
+							"sid": 999000831241422,
+							"parameters": {
+								"mode": "stretch-letterbox-scale",
+								"navigation-ui": "hide"
+							}
+						}
+					],
+					"sid": 557331899437299
+				}
+			]
+		}
+	],
+	"sid": 815359530309005
+}

@@ -1,0 +1,33 @@
+{
+	"name": "BleedLine",
+	"plugin-id": "TiledBg",
+	"sid": 781017073045391,
+	"isGlobal": true,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Timer",
+			"name": "Timer",
+			"sid": 107847209768875
+		},
+		{
+			"behaviorId": "MoveTo",
+			"name": "MoveTo",
+			"sid": 353714624207946
+		}
+	],
+	"effectTypes": [],
+	"image": {
+		"width": 1,
+		"height": 1,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "lossless",
+		"exportQuality": 0.8,
+		"fileType": "image/png",
+		"imageSpriteId": 7400815,
+		"useCollisionPoly": true,
+		"tag": ""
+	}
+}

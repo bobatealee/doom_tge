@@ -1,0 +1,679 @@
+{
+	"name": "bleed",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "BLEED_ready",
+			"type": "boolean",
+			"initialValue": "true",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 216462287437900
+		},
+		{
+			"eventType": "variable",
+			"name": "BLEED_snapshotReady",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 176375054471396
+		},
+		{
+			"eventType": "variable",
+			"name": "BLEED_interval",
+			"type": "number",
+			"initialValue": "4",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 854712411778849
+		},
+		{
+			"eventType": "variable",
+			"name": "BLEED_randomize",
+			"type": "number",
+			"initialValue": "3",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 955311835774011
+		},
+		{
+			"eventType": "variable",
+			"name": "BLEED_linesCreated",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 208675840111058
+		},
+		{
+			"eventType": "variable",
+			"name": "BLEED_linesReady",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 442058422707001
+		},
+		{
+			"eventType": "variable",
+			"name": "BLEED_linesFinished",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 451279619088540
+		},
+		{
+			"eventType": "variable",
+			"name": "BLEED_layout",
+			"type": "string",
+			"initialValue": "level",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 526455389080261
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 375387442555528
+				}
+			],
+			"actions": [
+				{
+					"id": "move-to-layer",
+					"objectClass": "BleedLine",
+					"sid": 543956758501363,
+					"parameters": {
+						"layer": "\"HUD\""
+					}
+				}
+			],
+			"sid": 733704941033773,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "has-tags",
+							"objectClass": "BleedLine",
+							"sid": 960093303212248,
+							"parameters": {
+								"tags": "\"kill\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "BleedLine",
+							"sid": 126401415785580
+						}
+					],
+					"sid": 530676824861502
+				}
+			]
+		},
+		{
+			"functionName": "transition",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [
+				{
+					"name": "layout",
+					"type": "string",
+					"initialValue": "level",
+					"comment": "",
+					"sid": 995136782061594
+				}
+			],
+			"eventType": "function-block",
+			"conditions": [
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 387892109715635,
+					"parameters": {
+						"variable": "BLEED_ready"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 167823033822857,
+					"parameters": {
+						"variable": "BLEED_layout",
+						"value": "layout"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 411339671981605,
+					"parameters": {
+						"variable": "BLEED_ready",
+						"value": "false"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 110273588537724,
+					"parameters": {
+						"variable": "BLEED_linesReady",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 527138464226611,
+					"parameters": {
+						"variable": "BLEED_randomize",
+						"value": "3"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 513919065134811,
+					"parameters": {
+						"variable": "BLEED_linesCreated",
+						"value": "false"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 541616007905651,
+					"parameters": {
+						"variable": "BLEED_snapshotReady",
+						"value": "false"
+					}
+				},
+				{
+					"id": "snapshot-canvas",
+					"objectClass": "System",
+					"sid": 112971315430754,
+					"parameters": {
+						"format": "png",
+						"jpeg-quality": "100",
+						"x": "0",
+						"y": "0",
+						"width": "0",
+						"height": "0"
+					}
+				},
+				{
+					"id": "wait-for-previous-actions",
+					"objectClass": "System",
+					"sid": 349366477110429
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 208196248168476,
+					"parameters": {
+						"variable": "BLEED_snapshotReady",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 280404997140967
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 645661604051078,
+					"parameters": {
+						"variable": "BLEED_snapshotReady"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 493111048707038,
+					"parameters": {
+						"variable": "BLEED_snapshotReady",
+						"value": "false"
+					}
+				}
+			],
+			"sid": 517040077760337,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "for",
+							"objectClass": "System",
+							"sid": 520491095251941,
+							"parameters": {
+								"name": "\"i\"",
+								"start-index": "0",
+								"end-index": "(ViewportWidth(\"HUD\") - 1)/BLEED_interval"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 627992417281225,
+							"parameters": {
+								"object-to-create": "BleedLine",
+								"layer": "\"HUD\"",
+								"x": "loopindex(\"i\")*BLEED_interval",
+								"y": "0",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "change-tags",
+							"objectClass": "BleedLine",
+							"sid": 781856719935957,
+							"parameters": {
+								"action": "remove",
+								"tags": "\"kill\""
+							}
+						},
+						{
+							"id": "set-size",
+							"objectClass": "BleedLine",
+							"sid": 793736729061658,
+							"parameters": {
+								"width": "BLEED_interval",
+								"height": "ViewportHeight(\"HUD\")"
+							}
+						},
+						{
+							"id": "set-image-offset-x",
+							"objectClass": "BleedLine",
+							"sid": 448120862699149,
+							"parameters": {
+								"offset-x": "-loopindex(\"i\")*(PlatformInfo.CanvasDeviceWidth/ViewportWidth(\"HUD\"))*BLEED_interval"
+							}
+						},
+						{
+							"id": "set-image-scale-x",
+							"objectClass": "BleedLine",
+							"sid": 936812776599939,
+							"parameters": {
+								"scale-x": "100/(PlatformInfo.CanvasDeviceWidth/ViewportWidth(\"HUD\"))"
+							}
+						},
+						{
+							"id": "set-image-scale-y",
+							"objectClass": "BleedLine",
+							"sid": 299400511615151,
+							"parameters": {
+								"scale-y": "100/(PlatformInfo.CanvasDeviceHeight/ViewportHeight(\"HUD\"))"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "BleedLine",
+							"sid": 478728402946272,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 586285013839992
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-x",
+					"objectClass": "BleedLine",
+					"sid": 232189242074012,
+					"parameters": {
+						"comparison": 0,
+						"x-co-ordinate": "ViewportWidth(\"HUD\") - BLEED_interval"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 612898387692375,
+					"parameters": {
+						"variable": "BLEED_linesCreated",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 811985462573699
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-image-url-loaded",
+					"objectClass": "BleedLine",
+					"sid": 683264925111628
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 148061888568726,
+					"parameters": {
+						"variable": "BLEED_linesCreated"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 638404186347463,
+					"parameters": {
+						"variable": "BLEED_linesReady",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 193616989446041
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 277441783163378,
+					"parameters": {
+						"variable": "BLEED_linesCreated"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 639019363302852,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 272484748752901
+						}
+					],
+					"actions": [
+						{
+							"id": "load-image-from-url",
+							"objectClass": "BleedLine",
+							"sid": 570583097950388,
+							"parameters": {
+								"uri": "CanvasSnapshot",
+								"cross-origin": "anonymous"
+							}
+						}
+					],
+					"sid": 841760436636235
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 867581504936805,
+							"parameters": {
+								"variable": "BLEED_linesReady",
+								"comparison": 0,
+								"value": "BleedLine.Count"
+							}
+						},
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 541743090650602
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 665528765843908,
+							"parameters": {
+								"variable": "BLEED_linesCreated",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 147544103313503,
+							"parameters": {
+								"variable": "BLEED_linesReady",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 838429457700181,
+							"parameters": {
+								"layer": "\"Fade\"",
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "go-to-layout-by-name",
+							"objectClass": "System",
+							"sid": 352871106542424,
+							"parameters": {
+								"layout": "BLEED_layout"
+							}
+						}
+					],
+					"sid": 926631291802140,
+					"children": [
+						{
+							"eventType": "comment",
+							"text": "Play the melt effect."
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "for-each",
+									"objectClass": "System",
+									"sid": 315088647077160,
+									"parameters": {
+										"object": "BleedLine"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 974589401743623,
+									"parameters": {
+										"variable": "BLEED_randomize",
+										"value": "clamp(BLEED_randomize+(random(-1, 1)), 0, 5)"
+									}
+								},
+								{
+									"id": "start-timer",
+									"objectClass": "BleedLine",
+									"sid": 766829384475765,
+									"behaviorType": "Timer",
+									"parameters": {
+										"duration": "BLEED_randomize/10",
+										"type": "once",
+										"tag": "\"MeltNow\""
+									}
+								}
+							],
+							"sid": 312145130885072
+						}
+					]
+				}
+			]
+		},
+		{
+			"eventType": "comment",
+			"text": "Move melt canvas down."
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-timer",
+					"objectClass": "BleedLine",
+					"sid": 114645364203404,
+					"behaviorType": "Timer",
+					"parameters": {
+						"tag": "\"MeltNow\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "move-to-position",
+					"objectClass": "BleedLine",
+					"sid": 492513806217756,
+					"behaviorType": "MoveTo",
+					"parameters": {
+						"x": "Self.X",
+						"y": "ViewportHeight(\"HUD\")",
+						"mode": "direct"
+					}
+				}
+			],
+			"sid": 272634283307185
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-arrived",
+					"objectClass": "BleedLine",
+					"sid": 694601505816245,
+					"behaviorType": "MoveTo"
+				}
+			],
+			"actions": [
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 144128159183954,
+					"parameters": {
+						"variable": "BLEED_linesReady",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 265133750501254,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "pick-all",
+							"objectClass": "System",
+							"sid": 212450371254826,
+							"parameters": {
+								"object": "BleedLine"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 825355230353603,
+							"parameters": {
+								"variable": "BLEED_linesReady",
+								"comparison": 0,
+								"value": "BleedLine.Count"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "BleedLine",
+							"sid": 823699203971018
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 630639217562238,
+							"parameters": {
+								"variable": "BLEED_linesReady",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 561876638869929,
+							"parameters": {
+								"variable": "BLEED_linesCreated",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 566893663222712,
+							"parameters": {
+								"variable": "BLEED_ready",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 633762624918106,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 228522354000578,
+									"parameters": {
+										"first-value": "LayoutName",
+										"comparison": 0,
+										"second-value": "\"level\""
+									}
+								}
+							],
+							"actions": [],
+							"sid": 337793752341412
+						}
+					]
+				}
+			]
+		}
+	],
+	"sid": 955279659848991
+}

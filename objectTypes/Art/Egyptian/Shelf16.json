@@ -1,0 +1,51 @@
+{
+	"name": "Shelf16",
+	"plugin-id": "Sprite",
+	"sid": 517779433664320,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 64,
+						"height": 47,
+						"originX": 0.5,
+						"originY": 0.5106382978723404,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 8468675,
+						"collisionPoly": {
+							"points": [
+								0,
+								0.1702127659574468,
+								1,
+								0.1702127659574468,
+								1,
+								0.851063829787234,
+								0,
+								0.851063829787234
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 524883589955961,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

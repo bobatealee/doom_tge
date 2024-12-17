@@ -1,0 +1,30 @@
+{
+	"name": "HUDAmmo",
+	"plugin-id": "Spritefont2",
+	"sid": 244722542216275,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "type",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 625232869685794
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"image": {
+		"width": 60,
+		"height": 8,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "lossless",
+		"exportQuality": 0.8,
+		"fileType": "image/png",
+		"imageSpriteId": 6015568,
+		"useCollisionPoly": true,
+		"tag": ""
+	}
+}

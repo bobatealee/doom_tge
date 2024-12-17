@@ -1,0 +1,30 @@
+{
+	"name": "SliderBar",
+	"plugin-id": "NinePatch",
+	"sid": 271860484758164,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "id",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 606712154355799
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"image": {
+		"width": 4,
+		"height": 4,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "lossless",
+		"exportQuality": 0.8,
+		"fileType": "image/png",
+		"imageSpriteId": 1463510,
+		"useCollisionPoly": true,
+		"tag": ""
+	}
+}

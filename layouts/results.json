@@ -1,0 +1,752 @@
+{
+	"name": "results",
+	"layers": [
+		{
+			"name": "Results",
+			"overriden": 0,
+			"subLayers": [],
+			"instances": [
+				{
+					"type": "Results",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 504,
+					"sid": 205681003741816,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 205681003741816,
+						"expanded": true,
+						"folderName": "",
+						"indexInFolder": -1,
+						"folderNestingLevel": -1
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 0,
+						"y": 0,
+						"width": 320,
+						"height": 180,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "MenuFont",
+					"properties": {
+						"text": "GALLERY",
+						"enable-bbcode": true,
+						"character-width": 20,
+						"character-height": 19,
+						"character-set": "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.!:%/$()#-,",
+						"spacing-data": "[[4, \".:\"],\n[5, \",\"],\n[6, \"Ii! \"],\n[7, \"-\"],\n[8, \"()\"],\n[10, \"1\"],\n[11, \"l\"],\n[12, \"ft$\"],\n[13, \"023456789%/#\"],\n[14, \"cejp\"],\n[15, \"BJZabdhrs\"],\n[16, \"DEFGHLMNPRSTUVWXgkmnuvwxyz\"],\n[17, \"CYoq\"],\n[18, \"AKOQ\"]]",
+						"scale": 1,
+						"character-spacing": -1,
+						"line-height": 0,
+						"horizontal-alignment": "center",
+						"vertical-alignment": "top",
+						"wrapping": "character",
+						"initially-visible": true,
+						"origin": "left",
+						"read-aloud": false
+					},
+					"uid": 505,
+					"sid": 202077296854183,
+					"tags": "",
+					"instanceVariables": {
+						"id": -1
+					},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 202077296854183,
+						"expanded": true,
+						"folderName": "",
+						"indexInFolder": -1,
+						"folderNestingLevel": -1
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 0,
+						"y": 24,
+						"width": 320,
+						"height": 16,
+						"originX": 0,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "MenuFont",
+					"properties": {
+						"text": "FINISHED",
+						"enable-bbcode": true,
+						"character-width": 20,
+						"character-height": 19,
+						"character-set": "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.!:%/$()#-,",
+						"spacing-data": "[[4, \".:\"],\n[5, \",\"],\n[6, \"Ii! \"],\n[7, \"-\"],\n[8, \"()\"],\n[10, \"1\"],\n[11, \"l\"],\n[12, \"ft$\"],\n[13, \"023456789%/#\"],\n[14, \"cejp\"],\n[15, \"BJZabdhrs\"],\n[16, \"DEFGHLMNPRSTUVWXgkmnuvwxyz\"],\n[17, \"CYoq\"],\n[18, \"AKOQ\"]]",
+						"scale": 1,
+						"character-spacing": -1,
+						"line-height": 0,
+						"horizontal-alignment": "center",
+						"vertical-alignment": "top",
+						"wrapping": "character",
+						"initially-visible": true,
+						"origin": "left",
+						"read-aloud": false
+					},
+					"uid": 506,
+					"sid": 335023771420738,
+					"tags": "",
+					"instanceVariables": {
+						"id": -1
+					},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 335023771420738,
+						"expanded": true,
+						"folderName": "",
+						"indexInFolder": -1,
+						"folderNestingLevel": -1
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 0,
+						"y": 44,
+						"width": 320,
+						"height": 16,
+						"originX": 0,
+						"originY": 0.5,
+						"color": [
+							1,
+							0,
+							0,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "MenuFont",
+					"properties": {
+						"text": "Insights:",
+						"enable-bbcode": true,
+						"character-width": 20,
+						"character-height": 19,
+						"character-set": "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.!:%/$()#-,",
+						"spacing-data": "[[4, \".:\"],\n[5, \",\"],\n[6, \"Ii! \"],\n[7, \"-\"],\n[8, \"()\"],\n[10, \"1\"],\n[11, \"l\"],\n[12, \"ft$\"],\n[13, \"023456789%/#\"],\n[14, \"cejp\"],\n[15, \"BJZabdhrs\"],\n[16, \"DEFGHLMNPRSTUVWXgkmnuvwxyz\"],\n[17, \"CYoq\"],\n[18, \"AKOQ\"]]",
+						"scale": 1,
+						"character-spacing": -1,
+						"line-height": 0,
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "character",
+						"initially-visible": true,
+						"origin": "left",
+						"read-aloud": false
+					},
+					"uid": 507,
+					"sid": 716212857895708,
+					"tags": "",
+					"instanceVariables": {
+						"id": -1
+					},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 716212857895708,
+						"expanded": true,
+						"folderName": "",
+						"indexInFolder": -1,
+						"folderNestingLevel": -1
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 24,
+						"y": 76,
+						"width": 136,
+						"height": 16,
+						"originX": 0,
+						"originY": 0.5,
+						"color": [
+							1,
+							0,
+							0,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "MenuFont",
+					"properties": {
+						"text": "Items:",
+						"enable-bbcode": true,
+						"character-width": 20,
+						"character-height": 19,
+						"character-set": "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.!:%/$()#-,",
+						"spacing-data": "[[4, \".:\"],\n[5, \",\"],\n[6, \"Ii! \"],\n[7, \"-\"],\n[8, \"()\"],\n[10, \"1\"],\n[11, \"l\"],\n[12, \"ft$\"],\n[13, \"023456789%/#\"],\n[14, \"cejp\"],\n[15, \"BJZabdhrs\"],\n[16, \"DEFGHLMNPRSTUVWXgkmnuvwxyz\"],\n[17, \"CYoq\"],\n[18, \"AKOQ\"]]",
+						"scale": 1,
+						"character-spacing": -1,
+						"line-height": 0,
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "character",
+						"initially-visible": true,
+						"origin": "left",
+						"read-aloud": false
+					},
+					"uid": 508,
+					"sid": 326108780686310,
+					"tags": "",
+					"instanceVariables": {
+						"id": -1
+					},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 326108780686310,
+						"expanded": true,
+						"folderName": "",
+						"indexInFolder": -1,
+						"folderNestingLevel": -1
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 24,
+						"y": 96,
+						"width": 136,
+						"height": 16,
+						"originX": 0,
+						"originY": 0.5,
+						"color": [
+							1,
+							0,
+							0,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "MenuFont",
+					"properties": {
+						"text": "Spending:",
+						"enable-bbcode": true,
+						"character-width": 20,
+						"character-height": 19,
+						"character-set": "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.!:%/$()#-,",
+						"spacing-data": "[[4, \".:\"],\n[5, \",\"],\n[6, \"Ii! \"],\n[7, \"-\"],\n[8, \"()\"],\n[10, \"1\"],\n[11, \"l\"],\n[12, \"ft$\"],\n[13, \"023456789%/#\"],\n[14, \"cejp\"],\n[15, \"BJZabdhrs\"],\n[16, \"DEFGHLMNPRSTUVWXgkmnuvwxyz\"],\n[17, \"CYoq\"],\n[18, \"AKOQ\"]]",
+						"scale": 1,
+						"character-spacing": -1,
+						"line-height": 0,
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "character",
+						"initially-visible": true,
+						"origin": "left",
+						"read-aloud": false
+					},
+					"uid": 509,
+					"sid": 813801927119528,
+					"tags": "",
+					"instanceVariables": {
+						"id": -1
+					},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 813801927119528,
+						"expanded": true,
+						"folderName": "",
+						"indexInFolder": -1,
+						"folderNestingLevel": -1
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 24,
+						"y": 116,
+						"width": 136,
+						"height": 16,
+						"originX": 0,
+						"originY": 0.5,
+						"color": [
+							1,
+							0,
+							0,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "MenuFont",
+					"properties": {
+						"text": "Secrets:",
+						"enable-bbcode": true,
+						"character-width": 20,
+						"character-height": 19,
+						"character-set": "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.!:%/$()#-,",
+						"spacing-data": "[[4, \".:\"],\n[5, \",\"],\n[6, \"Ii! \"],\n[7, \"-\"],\n[8, \"()\"],\n[10, \"1\"],\n[11, \"l\"],\n[12, \"ft$\"],\n[13, \"023456789%/#\"],\n[14, \"cejp\"],\n[15, \"BJZabdhrs\"],\n[16, \"DEFGHLMNPRSTUVWXgkmnuvwxyz\"],\n[17, \"CYoq\"],\n[18, \"AKOQ\"]]",
+						"scale": 1,
+						"character-spacing": -1,
+						"line-height": 0,
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "character",
+						"initially-visible": true,
+						"origin": "left",
+						"read-aloud": false
+					},
+					"uid": 510,
+					"sid": 668936183011376,
+					"tags": "",
+					"instanceVariables": {
+						"id": -1
+					},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 668936183011376,
+						"expanded": true,
+						"folderName": "",
+						"indexInFolder": -1,
+						"folderNestingLevel": -1
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 24,
+						"y": 136,
+						"width": 136,
+						"height": 16,
+						"originX": 0,
+						"originY": 0.5,
+						"color": [
+							1,
+							0,
+							0,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "MenuFont",
+					"properties": {
+						"text": "100%",
+						"enable-bbcode": true,
+						"character-width": 20,
+						"character-height": 19,
+						"character-set": "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.!:%/$()#-,",
+						"spacing-data": "[[4, \".:\"],\n[5, \",\"],\n[6, \"Ii! \"],\n[7, \"-\"],\n[8, \"()\"],\n[10, \"1\"],\n[11, \"l\"],\n[12, \"ft$\"],\n[13, \"023456789%/#\"],\n[14, \"cejp\"],\n[15, \"BJZabdhrs\"],\n[16, \"DEFGHLMNPRSTUVWXgkmnuvwxyz\"],\n[17, \"CYoq\"],\n[18, \"AKOQ\"]]",
+						"scale": 1,
+						"character-spacing": -1,
+						"line-height": 0,
+						"horizontal-alignment": "right",
+						"vertical-alignment": "top",
+						"wrapping": "character",
+						"initially-visible": true,
+						"origin": "left",
+						"read-aloud": false
+					},
+					"uid": 511,
+					"sid": 721037109764245,
+					"tags": "",
+					"instanceVariables": {
+						"id": 0
+					},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 721037109764245,
+						"expanded": true,
+						"folderName": "",
+						"indexInFolder": -1,
+						"folderNestingLevel": -1
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 220,
+						"y": 76,
+						"width": 76,
+						"height": 16,
+						"originX": 0,
+						"originY": 0.5,
+						"color": [
+							1,
+							0,
+							0,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "MenuFont",
+					"properties": {
+						"text": "Time:",
+						"enable-bbcode": true,
+						"character-width": 20,
+						"character-height": 19,
+						"character-set": "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.!:%/$()#-,",
+						"spacing-data": "[[4, \".:\"],\n[5, \",\"],\n[6, \"Ii! \"],\n[7, \"-\"],\n[8, \"()\"],\n[10, \"1\"],\n[11, \"l\"],\n[12, \"ft$\"],\n[13, \"023456789%/#\"],\n[14, \"cejp\"],\n[15, \"BJZabdhrs\"],\n[16, \"DEFGHLMNPRSTUVWXgkmnuvwxyz\"],\n[17, \"CYoq\"],\n[18, \"AKOQ\"]]",
+						"scale": 1,
+						"character-spacing": -1,
+						"line-height": 0,
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "character",
+						"initially-visible": true,
+						"origin": "left",
+						"read-aloud": false
+					},
+					"uid": 512,
+					"sid": 937061991446477,
+					"tags": "",
+					"instanceVariables": {
+						"id": -1
+					},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 937061991446477,
+						"expanded": true,
+						"folderName": "",
+						"indexInFolder": -1,
+						"folderNestingLevel": -1
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 24,
+						"y": 156,
+						"width": 136,
+						"height": 16,
+						"originX": 0,
+						"originY": 0.5,
+						"color": [
+							1,
+							0,
+							0,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "MenuFont",
+					"properties": {
+						"text": "100%",
+						"enable-bbcode": true,
+						"character-width": 20,
+						"character-height": 19,
+						"character-set": "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.!:%/$()#-,",
+						"spacing-data": "[[4, \".:\"],\n[5, \",\"],\n[6, \"Ii! \"],\n[7, \"-\"],\n[8, \"()\"],\n[10, \"1\"],\n[11, \"l\"],\n[12, \"ft$\"],\n[13, \"023456789%/#\"],\n[14, \"cejp\"],\n[15, \"BJZabdhrs\"],\n[16, \"DEFGHLMNPRSTUVWXgkmnuvwxyz\"],\n[17, \"CYoq\"],\n[18, \"AKOQ\"]]",
+						"scale": 1,
+						"character-spacing": -1,
+						"line-height": 0,
+						"horizontal-alignment": "right",
+						"vertical-alignment": "top",
+						"wrapping": "character",
+						"initially-visible": true,
+						"origin": "left",
+						"read-aloud": false
+					},
+					"uid": 513,
+					"sid": 602358069373630,
+					"tags": "",
+					"instanceVariables": {
+						"id": 1
+					},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 602358069373630,
+						"expanded": true,
+						"folderName": "",
+						"indexInFolder": -1,
+						"folderNestingLevel": -1
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 220,
+						"y": 96,
+						"width": 76,
+						"height": 16,
+						"originX": 0,
+						"originY": 0.5,
+						"color": [
+							1,
+							0,
+							0,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "MenuFont",
+					"properties": {
+						"text": "$100",
+						"enable-bbcode": true,
+						"character-width": 20,
+						"character-height": 19,
+						"character-set": "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.!:%/$()#-,",
+						"spacing-data": "[[4, \".:\"],\n[5, \",\"],\n[6, \"Ii! \"],\n[7, \"-\"],\n[8, \"()\"],\n[10, \"1\"],\n[11, \"l\"],\n[12, \"ft$\"],\n[13, \"023456789%/#\"],\n[14, \"cejp\"],\n[15, \"BJZabdhrs\"],\n[16, \"DEFGHLMNPRSTUVWXgkmnuvwxyz\"],\n[17, \"CYoq\"],\n[18, \"AKOQ\"]]",
+						"scale": 1,
+						"character-spacing": -1,
+						"line-height": 0,
+						"horizontal-alignment": "right",
+						"vertical-alignment": "top",
+						"wrapping": "character",
+						"initially-visible": true,
+						"origin": "left",
+						"read-aloud": false
+					},
+					"uid": 514,
+					"sid": 484771824910171,
+					"tags": "",
+					"instanceVariables": {
+						"id": 2
+					},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 484771824910171,
+						"expanded": true,
+						"folderName": "",
+						"indexInFolder": -1,
+						"folderNestingLevel": -1
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 220,
+						"y": 116,
+						"width": 76,
+						"height": 16,
+						"originX": 0,
+						"originY": 0.5,
+						"color": [
+							1,
+							0,
+							0,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "MenuFont",
+					"properties": {
+						"text": "100%",
+						"enable-bbcode": true,
+						"character-width": 20,
+						"character-height": 19,
+						"character-set": "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.!:%/$()#-,",
+						"spacing-data": "[[4, \".:\"],\n[5, \",\"],\n[6, \"Ii! \"],\n[7, \"-\"],\n[8, \"()\"],\n[10, \"1\"],\n[11, \"l\"],\n[12, \"ft$\"],\n[13, \"023456789%/#\"],\n[14, \"cejp\"],\n[15, \"BJZabdhrs\"],\n[16, \"DEFGHLMNPRSTUVWXgkmnuvwxyz\"],\n[17, \"CYoq\"],\n[18, \"AKOQ\"]]",
+						"scale": 1,
+						"character-spacing": -1,
+						"line-height": 0,
+						"horizontal-alignment": "right",
+						"vertical-alignment": "top",
+						"wrapping": "character",
+						"initially-visible": true,
+						"origin": "left",
+						"read-aloud": false
+					},
+					"uid": 515,
+					"sid": 368010921913003,
+					"tags": "",
+					"instanceVariables": {
+						"id": 3
+					},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 368010921913003,
+						"expanded": true,
+						"folderName": "",
+						"indexInFolder": -1,
+						"folderNestingLevel": -1
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 220,
+						"y": 136,
+						"width": 76,
+						"height": 16,
+						"originX": 0,
+						"originY": 0.5,
+						"color": [
+							1,
+							0,
+							0,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "MenuFont",
+					"properties": {
+						"text": "1:00",
+						"enable-bbcode": true,
+						"character-width": 20,
+						"character-height": 19,
+						"character-set": "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.!:%/$()#-,",
+						"spacing-data": "[[4, \".:\"],\n[5, \",\"],\n[6, \"Ii! \"],\n[7, \"-\"],\n[8, \"()\"],\n[10, \"1\"],\n[11, \"l\"],\n[12, \"ft$\"],\n[13, \"023456789%/#\"],\n[14, \"cejp\"],\n[15, \"BJZabdhrs\"],\n[16, \"DEFGHLMNPRSTUVWXgkmnuvwxyz\"],\n[17, \"CYoq\"],\n[18, \"AKOQ\"]]",
+						"scale": 1,
+						"character-spacing": -1,
+						"line-height": 0,
+						"horizontal-alignment": "right",
+						"vertical-alignment": "top",
+						"wrapping": "character",
+						"initially-visible": true,
+						"origin": "left",
+						"read-aloud": false
+					},
+					"uid": 516,
+					"sid": 635224237280256,
+					"tags": "",
+					"instanceVariables": {
+						"id": 4
+					},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 635224237280256,
+						"expanded": true,
+						"folderName": "",
+						"indexInFolder": -1,
+						"folderNestingLevel": -1
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 220,
+						"y": 156,
+						"width": 76,
+						"height": 16,
+						"originX": 0,
+						"originY": 0.5,
+						"color": [
+							1,
+							0,
+							0,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				}
+			],
+			"sid": 551338610493682,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
+			"isHTMLElementsLayer": false,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.3686274509803922,
+				0.3686274509803922,
+				0.3686274509803922,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 0,
+			"parallaxY": 0,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "2d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		},
+		{
+			"name": "HUD",
+			"overriden": 0,
+			"subLayers": [],
+			"instances": [],
+			"sid": 269349965338311,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
+			"isHTMLElementsLayer": false,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.3686274509803922,
+				0.3686274509803922,
+				0.3686274509803922,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 0,
+			"parallaxY": 0,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "2d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		}
+	],
+	"scene-graphs-folder-root": {
+		"items": [],
+		"subfolders": []
+	},
+	"sid": 194201784319865,
+	"nonworld-instances": [],
+	"effectTypes": [],
+	"width": 320,
+	"height": 180,
+	"unboundedScrolling": false,
+	"vpX": 0.5,
+	"vpY": 0.5,
+	"projection": "perspective",
+	"eventSheet": "results"
+}

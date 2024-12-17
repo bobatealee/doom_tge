@@ -1,0 +1,30 @@
+{
+	"name": "HUDFont",
+	"plugin-id": "Spritefont2",
+	"sid": 589690161828478,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "type",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 903173839603027
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"image": {
+		"width": 192,
+		"height": 18,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "lossless",
+		"exportQuality": 0.8,
+		"fileType": "image/png",
+		"imageSpriteId": 2583924,
+		"useCollisionPoly": true,
+		"tag": ""
+	}
+}

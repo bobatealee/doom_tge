@@ -1,0 +1,51 @@
+{
+	"name": "Japan10",
+	"plugin-id": "Sprite",
+	"sid": 507469883506219,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 74,
+						"height": 128,
+						"originX": 0.5111111111111111,
+						"originY": 0.5060240963855421,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 697248,
+						"collisionPoly": {
+							"points": [
+								0,
+								0.14457831325301204,
+								1,
+								0.14457831325301204,
+								1,
+								0.8674698795180723,
+								0,
+								0.8674698795180723
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 591807324516207,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}
