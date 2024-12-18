@@ -472,6 +472,15 @@
 							}
 						},
 						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 358284995823464,
+							"parameters": {
+								"variable": "PLAYER_weapon",
+								"value": "1"
+							}
+						},
+						{
 							"id": "set-boolean-eventvar",
 							"objectClass": "System",
 							"sid": 651695167934305,
@@ -4125,14 +4134,14 @@
 								{
 									"id": "is-overlapping-another-object",
 									"objectClass": "Sight",
-									"sid": 812376992251388,
+									"sid": 508078657523792,
 									"parameters": {
 										"object": "Ground"
 									}
 								}
 							],
 							"actions": [],
-							"sid": 524735162208757,
+							"sid": 344492081479292,
 							"children": [
 								{
 									"eventType": "block",
@@ -4140,7 +4149,7 @@
 										{
 											"id": "is-on-layer",
 											"objectClass": "Ground",
-											"sid": 597751226130737,
+											"sid": 183105727012308,
 											"parameters": {
 												"layer": "\"Doors\""
 											}
@@ -4148,7 +4157,7 @@
 										{
 											"id": "has-tags",
 											"objectClass": "Ground",
-											"sid": 509636634515269,
+											"sid": 641090489785753,
 											"parameters": {
 												"tags": "\"open\""
 											},
@@ -4159,7 +4168,7 @@
 										{
 											"id": "play",
 											"objectClass": "Audio",
-											"sid": 601387758121728,
+											"sid": 317015319284292,
 											"parameters": {
 												"audio-file": "door",
 												"loop": "not-looping",
@@ -4171,7 +4180,7 @@
 										{
 											"id": "set-instance",
 											"objectClass": "TimelineController",
-											"sid": 932841887910095,
+											"sid": 954882859821724,
 											"parameters": {
 												"object-class": "Ground",
 												"track-id": "\"door\""
@@ -4180,7 +4189,7 @@
 										{
 											"id": "play-timeline",
 											"objectClass": "TimelineController",
-											"sid": 770419202114270,
+											"sid": 133944858910444,
 											"parameters": {
 												"timeline": "Door",
 												"tags": "\"door\""
@@ -4189,14 +4198,14 @@
 										{
 											"id": "change-tags",
 											"objectClass": "Ground",
-											"sid": 606375281874774,
+											"sid": 502941695541146,
 											"parameters": {
 												"action": "add",
 												"tags": "\"open\""
 											}
 										}
 									],
-									"sid": 752426001321043
+									"sid": 597327883107626
 								},
 								{
 									"eventType": "block",
@@ -4204,12 +4213,12 @@
 										{
 											"id": "else",
 											"objectClass": "System",
-											"sid": 848939006394722
+											"sid": 851405665531381
 										},
 										{
 											"id": "is-overlapping-another-object",
 											"objectClass": "Sight",
-											"sid": 320643049558108,
+											"sid": 657871108715622,
 											"parameters": {
 												"object": "Overlay"
 											}
@@ -4217,7 +4226,7 @@
 										{
 											"id": "has-tags",
 											"objectClass": "Overlay",
-											"sid": 504249268403887,
+											"sid": 634308212850519,
 											"parameters": {
 												"tags": "\"exit\""
 											}
@@ -4227,7 +4236,7 @@
 										{
 											"id": "stop",
 											"objectClass": "Audio",
-											"sid": 677414910772951,
+											"sid": 507770855532583,
 											"parameters": {
 												"tag": "\"music\""
 											}
@@ -4235,26 +4244,22 @@
 										{
 											"id": "stop-all",
 											"objectClass": "Audio",
-											"sid": 421611972156476
+											"sid": 123771657779223
 										},
 										{
 											"id": "release-pointer-lock",
 											"objectClass": "Mouse",
-											"sid": 121188367441453
+											"sid": 625694995945925
 										},
 										{
 											"callFunction": "transition",
-											"sid": 727188059546811,
+											"sid": 948683860114362,
 											"parameters": [
 												"\"results\""
 											]
 										}
 									],
-									"sid": 471940565375344
-								},
-								{
-									"eventType": "comment",
-									"text": "second check for grunting"
+									"sid": 981740326850708
 								},
 								{
 									"eventType": "block",
@@ -4262,12 +4267,12 @@
 										{
 											"id": "else",
 											"objectClass": "System",
-											"sid": 604312993404120
+											"sid": 398558184760408
 										},
 										{
 											"id": "is-overlapping-another-object",
 											"objectClass": "Sight",
-											"sid": 807115103946201,
+											"sid": 174560297028459,
 											"parameters": {
 												"object": "Trigger"
 											}
@@ -4275,7 +4280,7 @@
 										{
 											"id": "compare-instance-variable",
 											"objectClass": "Trigger",
-											"sid": 237930220306984,
+											"sid": 729495649435512,
 											"parameters": {
 												"instance-variable": "id",
 												"comparison": 4,
@@ -4284,7 +4289,7 @@
 										}
 									],
 									"actions": [],
-									"sid": 800171786941745
+									"sid": 975602104855148
 								},
 								{
 									"eventType": "block",
@@ -4292,12 +4297,12 @@
 										{
 											"id": "else",
 											"objectClass": "System",
-											"sid": 813086816517677
+											"sid": 830231057455695
 										},
 										{
 											"id": "is-overlapping-another-object",
 											"objectClass": "SmallSight",
-											"sid": 152721926183431,
+											"sid": 196425991138640,
 											"parameters": {
 												"object": "Ground"
 											}
@@ -4305,13 +4310,13 @@
 										{
 											"id": "is-enabled",
 											"objectClass": "Ground",
-											"sid": 836062133981434,
+											"sid": 146297687294409,
 											"behaviorType": "Solid"
 										},
 										{
 											"id": "compare-z-elevation",
 											"objectClass": "Ground",
-											"sid": 469099473372836,
+											"sid": 578832951938627,
 											"parameters": {
 												"which": "z-elevation",
 												"comparison": 4,
@@ -4321,7 +4326,7 @@
 										{
 											"id": "compare-z-elevation",
 											"objectClass": "Ground",
-											"sid": 335527913317418,
+											"sid": 906775083276986,
 											"parameters": {
 												"which": "z-elevation",
 												"comparison": 2,
@@ -4329,18 +4334,9 @@
 											}
 										},
 										{
-											"id": "has-tags",
-											"objectClass": "Ground",
-											"sid": 658773189056621,
-											"parameters": {
-												"tags": "\"collision\""
-											},
-											"isInverted": true
-										},
-										{
 											"id": "compare-eventvar",
 											"objectClass": "System",
-											"sid": 328616930947645,
+											"sid": 580034261965012,
 											"parameters": {
 												"variable": "GAME_gruntCooldown",
 												"comparison": 3,
@@ -4352,7 +4348,7 @@
 										{
 											"id": "set-eventvar-value",
 											"objectClass": "System",
-											"sid": 537858418666238,
+											"sid": 185585180663929,
 											"parameters": {
 												"variable": "GAME_gruntCooldown",
 												"value": "10"
@@ -4361,7 +4357,7 @@
 										{
 											"id": "play",
 											"objectClass": "Audio",
-											"sid": 594066816549706,
+											"sid": 765496779232064,
 											"parameters": {
 												"audio-file": "grunt",
 												"loop": "not-looping",
@@ -4373,14 +4369,14 @@
 										{
 											"id": "set-playback-rate",
 											"objectClass": "Audio",
-											"sid": 946255087568705,
+											"sid": 875133075743899,
 											"parameters": {
 												"tag": "\"grunt\"",
 												"playback-rate": "random(0.95, 1.05)"
 											}
 										}
 									],
-									"sid": 720394465913742
+									"sid": 303329207738331
 								}
 							]
 						},
@@ -4390,7 +4386,7 @@
 								{
 									"id": "is-overlapping-another-object",
 									"objectClass": "Sight",
-									"sid": 929384316708156,
+									"sid": 218030239816669,
 									"parameters": {
 										"object": "Trigger"
 									}
@@ -4398,7 +4394,7 @@
 								{
 									"id": "compare-boolean-eventvar",
 									"objectClass": "System",
-									"sid": 839556741443025,
+									"sid": 777700425647656,
 									"parameters": {
 										"variable": "MENU_paused"
 									},
@@ -4406,7 +4402,7 @@
 								}
 							],
 							"actions": [],
-							"sid": 290291914449174,
+							"sid": 430727578856976,
 							"children": [
 								{
 									"eventType": "block",
@@ -4414,7 +4410,7 @@
 										{
 											"id": "compare-instance-variable",
 											"objectClass": "Trigger",
-											"sid": 675492754114998,
+											"sid": 722825139465182,
 											"parameters": {
 												"instance-variable": "id",
 												"comparison": 4,
@@ -4426,7 +4422,7 @@
 										{
 											"id": "set-animation-frame",
 											"objectClass": "ModalArt",
-											"sid": 968022839041999,
+											"sid": 979649044650227,
 											"parameters": {
 												"frame-number": "Trigger.id"
 											}
@@ -4434,7 +4430,7 @@
 										{
 											"id": "set-boolean-eventvar",
 											"objectClass": "System",
-											"sid": 399476677413737,
+											"sid": 362573959880341,
 											"parameters": {
 												"variable": "MENU_keyControl",
 												"value": "false"
@@ -4443,12 +4439,12 @@
 										{
 											"id": "release-pointer-lock",
 											"objectClass": "Mouse",
-											"sid": 242062083102361
+											"sid": 242266978542777
 										},
 										{
 											"id": "set-boolean-instvar",
 											"objectClass": "Player",
-											"sid": 832313506343169,
+											"sid": 590962915882432,
 											"parameters": {
 												"instance-variable": "playerUp",
 												"value": "false"
@@ -4457,7 +4453,7 @@
 										{
 											"id": "set-boolean-instvar",
 											"objectClass": "Player",
-											"sid": 773532407191421,
+											"sid": 369481604838020,
 											"parameters": {
 												"instance-variable": "playerDown",
 												"value": "false"
@@ -4466,7 +4462,7 @@
 										{
 											"id": "set-boolean-instvar",
 											"objectClass": "Player",
-											"sid": 126803856367503,
+											"sid": 748490931563980,
 											"parameters": {
 												"instance-variable": "playerLeft",
 												"value": "false"
@@ -4475,7 +4471,7 @@
 										{
 											"id": "set-boolean-instvar",
 											"objectClass": "Player",
-											"sid": 748092397816940,
+											"sid": 413358103912279,
 											"parameters": {
 												"instance-variable": "playerRight",
 												"value": "false"
@@ -4484,7 +4480,7 @@
 										{
 											"id": "set-eventvar-value",
 											"objectClass": "System",
-											"sid": 875801363727290,
+											"sid": 567663639413812,
 											"parameters": {
 												"variable": "MENU_soundCountdown",
 												"value": "5"
@@ -4493,7 +4489,7 @@
 										{
 											"id": "play",
 											"objectClass": "Audio",
-											"sid": 999356330418316,
+											"sid": 935211719011136,
 											"parameters": {
 												"audio-file": "menuselect",
 												"loop": "not-looping",
@@ -4505,7 +4501,7 @@
 										{
 											"id": "set-eventvar-value",
 											"objectClass": "System",
-											"sid": 840296550302772,
+											"sid": 687742477378363,
 											"parameters": {
 												"variable": "MENU_selected",
 												"value": "0"
@@ -4514,7 +4510,7 @@
 										{
 											"id": "set-eventvar-value",
 											"objectClass": "System",
-											"sid": 507491119981760,
+											"sid": 451249395158740,
 											"parameters": {
 												"variable": "MENU_menu",
 												"value": "\"Modal\""
@@ -4523,7 +4519,7 @@
 										{
 											"id": "set-layer-visible",
 											"objectClass": "System",
-											"sid": 648033884711705,
+											"sid": 216053986879468,
 											"parameters": {
 												"layer": "\"Modal\"",
 												"visibility": "visible"
@@ -4532,7 +4528,7 @@
 										{
 											"id": "set-layer-visible",
 											"objectClass": "System",
-											"sid": 104502350473206,
+											"sid": 211177694298177,
 											"parameters": {
 												"layer": "\"Fade\"",
 												"visibility": "visible"
@@ -4541,7 +4537,7 @@
 										{
 											"id": "set-layer-visible",
 											"objectClass": "System",
-											"sid": 782255840886241,
+											"sid": 627106511521017,
 											"parameters": {
 												"layer": "\"Menu\"",
 												"visibility": "visible"
@@ -4550,7 +4546,7 @@
 										{
 											"id": "set-boolean-eventvar",
 											"objectClass": "System",
-											"sid": 513464944001774,
+											"sid": 830940486897500,
 											"parameters": {
 												"variable": "MENU_paused",
 												"value": "true"
@@ -4559,14 +4555,14 @@
 										{
 											"id": "set-boolean-eventvar",
 											"objectClass": "System",
-											"sid": 132550385172537,
+											"sid": 526190817934483,
 											"parameters": {
 												"variable": "GAME_modalArt",
 												"value": "false"
 											}
 										}
 									],
-									"sid": 158871361958802,
+									"sid": 778279454943972,
 									"children": [
 										{
 											"eventType": "block",
@@ -4574,7 +4570,7 @@
 												{
 													"id": "has-tags",
 													"objectClass": "Trigger",
-													"sid": 427109205594871,
+													"sid": 722028402977292,
 													"parameters": {
 														"tags": "\"cat\""
 													}
@@ -4582,7 +4578,7 @@
 												{
 													"id": "compare-boolean-eventvar",
 													"objectClass": "System",
-													"sid": 367485625062638,
+													"sid": 132223685767716,
 													"parameters": {
 														"variable": "SETTING_doomMusic"
 													}
@@ -4592,7 +4588,7 @@
 												{
 													"id": "play-by-name",
 													"objectClass": "Audio",
-													"sid": 690557221545729,
+													"sid": 800711506187281,
 													"parameters": {
 														"folder": "sounds",
 														"audio-file-name": "\"Menu/cat\"&round(random(1, 2))",
@@ -4603,7 +4599,7 @@
 													}
 												}
 											],
-											"sid": 782228404977987
+											"sid": 721946908790264
 										},
 										{
 											"eventType": "block",
@@ -4611,7 +4607,7 @@
 												{
 													"id": "has-tags",
 													"objectClass": "Trigger",
-													"sid": 239556591559032,
+													"sid": 768869833530867,
 													"parameters": {
 														"tags": "\"shop\""
 													},
@@ -4622,14 +4618,14 @@
 												{
 													"id": "set-boolean-eventvar",
 													"objectClass": "System",
-													"sid": 765421700859744,
+													"sid": 745201446161360,
 													"parameters": {
 														"variable": "GAME_modalArt",
 														"value": "true"
 													}
 												}
 											],
-											"sid": 949617538054140
+											"sid": 512428898844792
 										},
 										{
 											"eventType": "block",
@@ -4637,7 +4633,7 @@
 												{
 													"id": "is-on-layer",
 													"objectClass": "MenuFont",
-													"sid": 632121037561243,
+													"sid": 195023740524203,
 													"parameters": {
 														"layer": "MENU_menu"
 													}
@@ -4645,7 +4641,7 @@
 												{
 													"id": "compare-instance-variable",
 													"objectClass": "MenuFont",
-													"sid": 713054527627128,
+													"sid": 393571028328044,
 													"parameters": {
 														"instance-variable": "id",
 														"comparison": 0,
@@ -4654,7 +4650,7 @@
 												}
 											],
 											"actions": [],
-											"sid": 868582709333113,
+											"sid": 765241692829240,
 											"children": [
 												{
 													"eventType": "block",
@@ -4662,7 +4658,7 @@
 														{
 															"id": "compare-boolean-eventvar",
 															"objectClass": "System",
-															"sid": 816357505016564,
+															"sid": 194181576401664,
 															"parameters": {
 																"variable": "GAME_modalArt"
 															}
@@ -4672,13 +4668,13 @@
 														{
 															"id": "set-visible",
 															"objectClass": "MenuFont",
-															"sid": 611932043313218,
+															"sid": 343070027615023,
 															"parameters": {
 																"visibility": "invisible"
 															}
 														}
 													],
-													"sid": 173249121867194
+													"sid": 271772668624531
 												},
 												{
 													"eventType": "block",
@@ -4686,20 +4682,20 @@
 														{
 															"id": "else",
 															"objectClass": "System",
-															"sid": 178396582259136
+															"sid": 670284677111846
 														}
 													],
 													"actions": [
 														{
 															"id": "set-visible",
 															"objectClass": "MenuFont",
-															"sid": 612588832599719,
+															"sid": 748056166353240,
 															"parameters": {
 																"visibility": "visible"
 															}
 														}
 													],
-													"sid": 742229726203395
+													"sid": 169148822692103
 												}
 											]
 										},
@@ -4709,14 +4705,14 @@
 												{
 													"id": "has-tags",
 													"objectClass": "MenuFont",
-													"sid": 857100025285806,
+													"sid": 764651624739377,
 													"parameters": {
 														"tags": "\"title\""
 													}
 												}
 											],
 											"actions": [],
-											"sid": 681440082576353,
+											"sid": 374370660789024,
 											"children": [
 												{
 													"eventType": "block",
@@ -4724,7 +4720,7 @@
 														{
 															"id": "compare-boolean-eventvar",
 															"objectClass": "System",
-															"sid": 830709888895416,
+															"sid": 945126100783166,
 															"parameters": {
 																"variable": "GAME_modalArt"
 															}
@@ -4734,13 +4730,13 @@
 														{
 															"id": "set-text",
 															"objectClass": "MenuFont",
-															"sid": 780082188308900,
+															"sid": 965505853276735,
 															"parameters": {
 																"text": "Trigger.title&\" #\""
 															}
 														}
 													],
-													"sid": 687861750973269
+													"sid": 762678789141264
 												},
 												{
 													"eventType": "block",
@@ -4748,14 +4744,14 @@
 														{
 															"id": "else",
 															"objectClass": "System",
-															"sid": 358899643914128
+															"sid": 681730607207525
 														}
 													],
 													"actions": [
 														{
 															"id": "set-text",
 															"objectClass": "MenuFont",
-															"sid": 782888001587654,
+															"sid": 230047674931092,
 															"parameters": {
 																"text": "Trigger.title&\" - $\"&Trigger.description\n"
 															}
@@ -4763,7 +4759,7 @@
 														{
 															"id": "set-eventvar-value",
 															"objectClass": "System",
-															"sid": 497895730978770,
+															"sid": 126026547527612,
 															"parameters": {
 																"variable": "GAME_modalPrice",
 																"value": "int(Trigger.description)"
@@ -4772,14 +4768,14 @@
 														{
 															"id": "set-eventvar-value",
 															"objectClass": "System",
-															"sid": 985546440415555,
+															"sid": 691223543816582,
 															"parameters": {
 																"variable": "GAME_modalUID",
 																"value": "Trigger.UID"
 															}
 														}
 													],
-													"sid": 735443223215575
+													"sid": 500301489824315
 												}
 											]
 										},
@@ -4789,14 +4785,14 @@
 												{
 													"id": "has-tags",
 													"objectClass": "MenuFontSmall",
-													"sid": 192702705929615,
+													"sid": 242958169519201,
 													"parameters": {
 														"tags": "\"description\""
 													}
 												}
 											],
 											"actions": [],
-											"sid": 680702754674898,
+											"sid": 191563764974793,
 											"children": [
 												{
 													"eventType": "block",
@@ -4804,7 +4800,7 @@
 														{
 															"id": "compare-boolean-eventvar",
 															"objectClass": "System",
-															"sid": 958607429334696,
+															"sid": 539457750788798,
 															"parameters": {
 																"variable": "GAME_modalArt"
 															}
@@ -4814,13 +4810,13 @@
 														{
 															"id": "set-text",
 															"objectClass": "MenuFontSmall",
-															"sid": 703016974641772,
+															"sid": 283018968516754,
 															"parameters": {
 																"text": "Trigger.description"
 															}
 														}
 													],
-													"sid": 189152155939377
+													"sid": 273349349768950
 												},
 												{
 													"eventType": "block",
@@ -4828,20 +4824,20 @@
 														{
 															"id": "else",
 															"objectClass": "System",
-															"sid": 457581456110432
+															"sid": 823003555781544
 														}
 													],
 													"actions": [
 														{
 															"id": "set-text",
 															"objectClass": "MenuFontSmall",
-															"sid": 511895724638932,
+															"sid": 893871387442142,
 															"parameters": {
 																"text": "\"\""
 															}
 														}
 													],
-													"sid": 287520860114821
+													"sid": 244068214208985
 												}
 											]
 										},
@@ -4851,7 +4847,7 @@
 												{
 													"id": "has-tags",
 													"objectClass": "Link",
-													"sid": 846595800765995,
+													"sid": 611903539314186,
 													"parameters": {
 														"tags": "\"modal\""
 													}
@@ -4859,7 +4855,7 @@
 												{
 													"id": "has-tags",
 													"objectClass": "MenuFont",
-													"sid": 625334026772190,
+													"sid": 728933066405572,
 													"parameters": {
 														"tags": "\"title\""
 													}
@@ -4869,7 +4865,7 @@
 												{
 													"id": "set-width",
 													"objectClass": "Link",
-													"sid": 186796099747505,
+													"sid": 821165721876859,
 													"parameters": {
 														"width": "MenuFont.TextWidth"
 													}
@@ -4877,14 +4873,14 @@
 												{
 													"id": "set-instvar-value",
 													"objectClass": "Link",
-													"sid": 950181937274983,
+													"sid": 605468741730915,
 													"parameters": {
 														"instance-variable": "link",
 														"value": "Trigger.link"
 													}
 												}
 											],
-											"sid": 930961945690720
+											"sid": 597207081801570
 										},
 										{
 											"eventType": "block",
@@ -4892,7 +4888,7 @@
 												{
 													"id": "is-boolean-instance-variable-set",
 													"objectClass": "Trigger",
-													"sid": 547148096650241,
+													"sid": 243105821839618,
 													"parameters": {
 														"instance-variable": "observed"
 													},
@@ -4901,7 +4897,7 @@
 												{
 													"id": "has-tags",
 													"objectClass": "Trigger",
-													"sid": 283868119128624,
+													"sid": 180208282266235,
 													"parameters": {
 														"tags": "\"shop\""
 													},
@@ -4912,7 +4908,7 @@
 												{
 													"id": "set-boolean-instvar",
 													"objectClass": "Trigger",
-													"sid": 483041222938051,
+													"sid": 220299843646386,
 													"parameters": {
 														"instance-variable": "observed",
 														"value": "true"
@@ -4921,14 +4917,14 @@
 												{
 													"id": "add-to-eventvar",
 													"objectClass": "System",
-													"sid": 902749095486099,
+													"sid": 642357702008664,
 													"parameters": {
 														"variable": "STAT_observations",
 														"value": "1"
 													}
 												}
 											],
-											"sid": 207783337953093
+											"sid": 243757147952507
 										}
 									]
 								},
@@ -4938,7 +4934,7 @@
 										{
 											"id": "compare-instance-variable",
 											"objectClass": "Trigger",
-											"sid": 395438557289370,
+											"sid": 788118860000934,
 											"parameters": {
 												"instance-variable": "id",
 												"comparison": 0,
@@ -4949,14 +4945,14 @@
 									"actions": [
 										{
 											"callFunction": "popup",
-											"sid": 492029787260033,
+											"sid": 222770859790294,
 											"parameters": [
 												"\"...I DON'T WANT TO LOOK AT THIS ONE.\"",
 												"\"me\""
 											]
 										}
 									],
-									"sid": 131029691767851
+									"sid": 523327533779176
 								}
 							]
 						}
@@ -6069,11 +6065,6 @@
 					"parameters": {
 						"key": 80
 					}
-				},
-				{
-					"id": "on-pointer-unlocked",
-					"objectClass": "Mouse",
-					"sid": 528851509661955
 				}
 			],
 			"actions": [
@@ -6258,8 +6249,7 @@
 						}
 					]
 				}
-			],
-			"isOrBlock": true
+			]
 		},
 		{
 			"eventType": "block",

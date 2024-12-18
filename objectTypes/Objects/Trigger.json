@@ -58,6 +58,13 @@
 						"fileType": "image/png",
 						"imageSpriteId": 8130878,
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Image Point 1",
+								"x": 0.5,
+								"y": 0.5
+							}
+						],
 						"duration": 1,
 						"tag": ""
 					}

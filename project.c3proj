@@ -234,7 +234,8 @@
 					"Billboard",
 					"Ground",
 					"Skybox",
-					"Overlay"
+					"Overlay",
+					"Collision"
 				],
 				"subfolders": [],
 				"name": "3D"
@@ -752,7 +753,7 @@
 	},
 	"properties": {
 		"description": "DOOM: The Gallery Experience was created as an art piece designed to parody the wonderfully pretentious world of gallery openings.",
-		"version": "1.0.4",
+		"version": "1.0.5",
 		"autoIncrementVersion": false,
 		"author": "",
 		"authorEmail": "",
