@@ -3,6 +3,7 @@
 	"plugin-id": "Sprite",
 	"sid": 651745941887725,
 	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [
 		{
 			"name": "playerUp",

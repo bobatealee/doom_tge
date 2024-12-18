@@ -3,6 +3,7 @@
 	"plugin-id": "NinePatch",
 	"sid": 555576832715940,
 	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
 	"behaviorTypes": [],
 	"effectTypes": [],

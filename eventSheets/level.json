@@ -2734,9 +2734,14 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "on-tap-object",
+									"id": "on-any-touch-start",
 									"objectClass": "Touch",
-									"sid": 493216879877516,
+									"sid": 914885717633981
+								},
+								{
+									"id": "is-touching-object",
+									"objectClass": "Touch",
+									"sid": 654143034849738,
 									"parameters": {
 										"object": "MobileArms"
 									}
@@ -2953,69 +2958,68 @@
 								{
 									"id": "on-any-touch-start",
 									"objectClass": "Touch",
-									"sid": 853193867069569
+									"sid": 118940717009171
 								},
 								{
 									"id": "is-touching-object",
 									"objectClass": "Touch",
-									"sid": 892898677115578,
+									"sid": 477358468778736,
 									"parameters": {
 										"object": "MobileButtons"
-									},
-									"isInverted": true
+									}
 								},
 								{
-									"id": "is-touching-object",
-									"objectClass": "Touch",
-									"sid": 407488050823428,
+									"id": "compare-animation-frame",
+									"objectClass": "MobileButtons",
+									"sid": 585938665528093,
 									"parameters": {
-										"object": "MobileButtons"
-									},
-									"isInverted": true
-								},
-								{
-									"id": "is-touching-object",
-									"objectClass": "Touch",
-									"sid": 666031197295451,
-									"parameters": {
-										"object": "HUD"
-									},
-									"isInverted": true
-								},
-								{
-									"id": "compare-eventvar",
-									"objectClass": "System",
-									"sid": 333841977498399,
-									"parameters": {
-										"variable": "MENU_menu",
 										"comparison": 0,
-										"value": "\"\""
-									}
-								},
-								{
-									"id": "compare-boolean-eventvar",
-									"objectClass": "System",
-									"sid": 322352002373729,
-									"parameters": {
-										"variable": "BLEED_ready"
-									}
-								},
-								{
-									"id": "compare-boolean-eventvar",
-									"objectClass": "System",
-									"sid": 939994957621201,
-									"parameters": {
-										"variable": "GAME_mobile"
+										"number": "5"
 									}
 								}
 							],
-							"actions": [
+							"actions": [],
+							"sid": 110792976825463,
+							"children": [
 								{
-									"callFunction": "drink",
-									"sid": 667316841126863
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 962836290510680,
+											"parameters": {
+												"variable": "MENU_menu",
+												"comparison": 0,
+												"value": "\"\""
+											}
+										},
+										{
+											"id": "compare-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 402791849010013,
+											"parameters": {
+												"variable": "BLEED_ready"
+											}
+										},
+										{
+											"id": "compare-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 861920877364466,
+											"parameters": {
+												"variable": "GAME_mobile"
+											}
+										}
+									],
+									"actions": [
+										{
+											"callFunction": "drink",
+											"sid": 353693479373688
+										}
+									],
+									"sid": 212066308252792
 								}
-							],
-							"sid": 626414661123196
+							]
 						}
 					]
 				},
@@ -4070,9 +4074,14 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "on-tap-object",
+									"id": "on-any-touch-start",
 									"objectClass": "Touch",
-									"sid": 585067011243575,
+									"sid": 559363905008401
+								},
+								{
+									"id": "is-touching-object",
+									"objectClass": "Touch",
+									"sid": 215899633629843,
 									"parameters": {
 										"object": "MobileButtons"
 									}
@@ -6298,9 +6307,14 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "on-tap-object",
+							"id": "on-any-touch-start",
 							"objectClass": "Touch",
-							"sid": 569937625835221,
+							"sid": 811949163291104
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "Touch",
+							"sid": 470748608454491,
 							"parameters": {
 								"object": "MobileButtons"
 							}
@@ -6308,10 +6322,10 @@
 						{
 							"id": "compare-animation-frame",
 							"objectClass": "MobileButtons",
-							"sid": 600693209055770,
+							"sid": 820838478969838,
 							"parameters": {
 								"comparison": 0,
-								"number": "5"
+								"number": "6"
 							}
 						}
 					],

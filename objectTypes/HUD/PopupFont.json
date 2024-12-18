@@ -3,6 +3,7 @@
 	"plugin-id": "Spritefont2",
 	"sid": 817562335106102,
 	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
 	"behaviorTypes": [],
 	"effectTypes": [],

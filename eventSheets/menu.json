@@ -315,11 +315,6 @@
 										"comparison": 5,
 										"second-value": "0"
 									}
-								},
-								{
-									"id": "is-in-preview",
-									"objectClass": "System",
-									"sid": 843025813271379
 								}
 							],
 							"actions": [],
@@ -398,10 +393,10 @@
 								{
 									"id": "play",
 									"objectClass": "Audio",
-									"sid": 238426367330835,
+									"sid": 671813749106630,
 									"parameters": {
 										"audio-file": "vivaldi",
-										"loop": "not-looping",
+										"loop": "looping",
 										"volume": "(log10(SETTING_volumeMusic)*20)",
 										"stereo-pan": "0",
 										"tag-optional": "\"music\""
@@ -423,13 +418,13 @@
 								{
 									"id": "play",
 									"objectClass": "Audio",
-									"sid": 389225290283492,
+									"sid": 699266915183604,
 									"parameters": {
-										"audio-file": "e1m5",
+										"audio-file": "intro",
 										"loop": "not-looping",
 										"volume": "(log10(SETTING_volumeMusic)*20)",
 										"stereo-pan": "0",
-										"tag-optional": "\"music\""
+										"tag-optional": "\"music doom\""
 									}
 								}
 							],
@@ -487,6 +482,42 @@
 					"sid": 656183370511778
 				}
 			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-ended",
+					"objectClass": "Audio",
+					"sid": 100116143552121,
+					"parameters": {
+						"tag": "\"doom\""
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 561004386064666,
+					"parameters": {
+						"variable": "SETTING_doomMusic"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 398295548432392,
+					"parameters": {
+						"audio-file": "e1m5",
+						"loop": "looping",
+						"volume": "(log10(SETTING_volumeMusic)*20)",
+						"stereo-pan": "0",
+						"tag-optional": "\"music\""
+					}
+				}
+			],
+			"sid": 412499096788300
 		},
 		{
 			"eventType": "block",
@@ -3779,10 +3810,10 @@
 														{
 															"id": "play",
 															"objectClass": "Audio",
-															"sid": 486998187768965,
+															"sid": 833742061561784,
 															"parameters": {
 																"audio-file": "vivaldi",
-																"loop": "not-looping",
+																"loop": "looping",
 																"volume": "(log10(SETTING_volumeMusic)*20)",
 																"stereo-pan": "0",
 																"tag-optional": "\"music\""
@@ -3804,10 +3835,10 @@
 														{
 															"id": "play",
 															"objectClass": "Audio",
-															"sid": 219770510687620,
+															"sid": 593300590478611,
 															"parameters": {
 																"audio-file": "e1m5",
-																"loop": "not-looping",
+																"loop": "looping",
 																"volume": "(log10(SETTING_volumeMusic)*20)",
 																"stereo-pan": "0",
 																"tag-optional": "\"music\""
@@ -6097,6 +6128,15 @@
 						"comparison": 3,
 						"value": "0"
 					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 825477744261110,
+					"parameters": {
+						"variable": "GAME_mobile"
+					},
+					"isInverted": true
 				},
 				{
 					"id": "window-has-focus",

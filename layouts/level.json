@@ -11,99 +11,6 @@
 					"subLayers": [],
 					"instances": [
 						{
-							"type": "test1",
-							"properties": {
-								"initially-visible": false,
-								"origin": "top-left",
-								"wrap-horizontal": "repeat",
-								"wrap-vertical": "repeat",
-								"image-offset-x": 0,
-								"image-offset-y": 0,
-								"image-scale-x": 1,
-								"image-scale-y": 1,
-								"image-angle": 0,
-								"enable-tile-randomization": false,
-								"x-random": 1,
-								"y-random": 1,
-								"angle-random": 1,
-								"blend-margin-x": 0.1,
-								"blend-margin-y": 0.1
-							},
-							"uid": 79,
-							"sid": 419698136647492,
-							"tags": "",
-							"instanceVariables": {},
-							"behaviors": {},
-							"showing": true,
-							"locked": false,
-							"world": {
-								"x": 0,
-								"y": -40,
-								"width": 32,
-								"height": 32,
-								"originX": 0,
-								"originY": 0,
-								"color": [
-									1,
-									1,
-									1,
-									1
-								],
-								"angle": 0,
-								"zElevation": 0
-							}
-						},
-						{
-							"type": "test2",
-							"properties": {
-								"initially-visible": false,
-								"origin": "top-left",
-								"wrap-horizontal": "repeat",
-								"wrap-vertical": "repeat",
-								"image-offset-x": 0,
-								"image-offset-y": 0,
-								"image-scale-x": 1,
-								"image-scale-y": 1,
-								"image-angle": 0,
-								"enable-tile-randomization": false,
-								"x-random": 1,
-								"y-random": 1,
-								"angle-random": 1,
-								"blend-margin-x": 0.1,
-								"blend-margin-y": 0.1
-							},
-							"uid": 7,
-							"sid": 682403215137584,
-							"tags": "",
-							"instanceVariables": {},
-							"behaviors": {},
-							"instanceFolderItem": {
-								"sid": 682403215137584,
-								"expanded": true,
-								"folderName": "",
-								"indexInFolder": -1,
-								"folderNestingLevel": -1
-							},
-							"showing": true,
-							"locked": false,
-							"world": {
-								"x": 40,
-								"y": -40,
-								"width": 32,
-								"height": 32,
-								"originX": 0,
-								"originY": 0,
-								"color": [
-									1,
-									1,
-									1,
-									1
-								],
-								"angle": 0,
-								"zElevation": 0
-							}
-						},
-						{
 							"type": "Wallpaper",
 							"properties": {
 								"initially-visible": false,
@@ -137,7 +44,7 @@
 							"showing": true,
 							"locked": false,
 							"world": {
-								"x": 80,
+								"x": 0,
 								"y": -40,
 								"width": 32,
 								"height": 32,
@@ -187,7 +94,7 @@
 							"showing": true,
 							"locked": false,
 							"world": {
-								"x": 120,
+								"x": 40,
 								"y": -40,
 								"width": 32,
 								"height": 32,
@@ -237,7 +144,7 @@
 							"showing": true,
 							"locked": false,
 							"world": {
-								"x": 160,
+								"x": 80,
 								"y": -40,
 								"width": 32,
 								"height": 32,
@@ -287,7 +194,7 @@
 							"showing": true,
 							"locked": false,
 							"world": {
-								"x": 200,
+								"x": 120,
 								"y": -40,
 								"width": 32,
 								"height": 32,
@@ -337,7 +244,7 @@
 							"showing": true,
 							"locked": false,
 							"world": {
-								"x": 240,
+								"x": 160,
 								"y": -40,
 								"width": 32,
 								"height": 32,
@@ -387,7 +294,7 @@
 							"showing": true,
 							"locked": false,
 							"world": {
-								"x": 280,
+								"x": 200,
 								"y": -40,
 								"width": 32,
 								"height": 32,
@@ -437,7 +344,7 @@
 							"showing": true,
 							"locked": false,
 							"world": {
-								"x": 320,
+								"x": 240,
 								"y": -40,
 								"width": 32,
 								"height": 32,
@@ -487,7 +394,7 @@
 							"showing": true,
 							"locked": false,
 							"world": {
-								"x": 360,
+								"x": 280,
 								"y": -40,
 								"width": 32,
 								"height": 32,
@@ -537,7 +444,7 @@
 							"showing": true,
 							"locked": false,
 							"world": {
-								"x": 400,
+								"x": 320,
 								"y": -40,
 								"width": 32,
 								"height": 32,
@@ -587,7 +494,7 @@
 							"showing": true,
 							"locked": false,
 							"world": {
-								"x": 440,
+								"x": 360,
 								"y": -40,
 								"width": 32,
 								"height": 32,
@@ -631,7 +538,7 @@
 							"showing": true,
 							"locked": false,
 							"world": {
-								"x": 480,
+								"x": 400,
 								"y": -40,
 								"width": 32,
 								"height": 32,
@@ -721,7 +628,7 @@
 							"showing": true,
 							"locked": false,
 							"world": {
-								"x": 520,
+								"x": 440,
 								"y": -40,
 								"width": 32,
 								"height": 32,
@@ -771,7 +678,7 @@
 							"showing": true,
 							"locked": false,
 							"world": {
-								"x": 560,
+								"x": 480,
 								"y": -40,
 								"width": 32,
 								"height": 32,
@@ -821,7 +728,7 @@
 							"showing": true,
 							"locked": false,
 							"world": {
-								"x": 600,
+								"x": 520,
 								"y": -40,
 								"width": 32,
 								"height": 32,
@@ -1204,7 +1111,7 @@
 							"showing": true,
 							"locked": false,
 							"world": {
-								"x": 640,
+								"x": 560,
 								"y": -40,
 								"width": 32,
 								"height": 32,
@@ -1334,7 +1241,7 @@
 							"showing": true,
 							"locked": false,
 							"world": {
-								"x": 680,
+								"x": 600,
 								"y": -40,
 								"width": 32,
 								"height": 32,
@@ -1384,7 +1291,7 @@
 							"showing": true,
 							"locked": false,
 							"world": {
-								"x": 720,
+								"x": 640,
 								"y": -40,
 								"width": 32,
 								"height": 32,
@@ -1784,7 +1691,7 @@
 							"showing": true,
 							"locked": false,
 							"world": {
-								"x": 776,
+								"x": 696,
 								"y": -24,
 								"width": 32,
 								"height": 16,
@@ -1835,7 +1742,7 @@
 							"locked": false,
 							"world": {
 								"x": 760,
-								"y": -116,
+								"y": -40,
 								"width": 32,
 								"height": 32,
 								"originX": 0,
@@ -1884,8 +1791,8 @@
 							"showing": true,
 							"locked": false,
 							"world": {
-								"x": 760,
-								"y": -76,
+								"x": 720,
+								"y": -40,
 								"width": 32,
 								"height": 32,
 								"originX": 0,
@@ -1935,7 +1842,7 @@
 							"locked": false,
 							"world": {
 								"x": 760,
-								"y": -156,
+								"y": -80,
 								"width": 32,
 								"height": 32,
 								"originX": 0,
@@ -2374,8 +2281,8 @@
 							"showing": true,
 							"locked": false,
 							"world": {
-								"x": 696,
-								"y": -152,
+								"x": 700,
+								"y": -136,
 								"width": 64,
 								"height": 58,
 								"originX": 0.5,
@@ -2864,8 +2771,8 @@
 							"showing": true,
 							"locked": false,
 							"world": {
-								"x": 720,
-								"y": -116,
+								"x": 760,
+								"y": -120,
 								"width": 32,
 								"height": 32,
 								"originX": 0,
@@ -3105,7 +3012,7 @@
 							"locked": false,
 							"world": {
 								"x": 772,
-								"y": -252,
+								"y": -212,
 								"width": 58,
 								"height": 128,
 								"originX": 0.5,
@@ -3145,7 +3052,7 @@
 							"locked": false,
 							"world": {
 								"x": 848,
-								"y": -252,
+								"y": -212,
 								"width": 69,
 								"height": 128,
 								"originX": 0.5072463768115942,
@@ -3265,7 +3172,7 @@
 							"locked": false,
 							"world": {
 								"x": 772,
-								"y": -392,
+								"y": -348,
 								"width": 68,
 								"height": 128,
 								"originX": 0.5,
@@ -3905,7 +3812,7 @@
 							"locked": false,
 							"world": {
 								"x": 600,
-								"y": -496,
+								"y": -492,
 								"width": 61,
 								"height": 128,
 								"originX": 0.5081967213114754,
@@ -3945,7 +3852,7 @@
 							"locked": false,
 							"world": {
 								"x": 676,
-								"y": -496,
+								"y": -492,
 								"width": 64,
 								"height": 128,
 								"originX": 0.5,
@@ -3985,7 +3892,7 @@
 							"locked": false,
 							"world": {
 								"x": 748,
-								"y": -532,
+								"y": -492,
 								"width": 60,
 								"height": 128,
 								"originX": 0.5,
@@ -4265,7 +4172,7 @@
 							"locked": false,
 							"world": {
 								"x": 640,
-								"y": -636,
+								"y": -632,
 								"width": 112,
 								"height": 128,
 								"originX": 0.5,
@@ -15532,7 +15439,7 @@
 										"id": 44,
 										"observed": false,
 										"title": "Teddy bear",
-										"description": "97",
+										"description": "96",
 										"link": "nope"
 									},
 									"behaviors": {},
@@ -15624,7 +15531,7 @@
 										"id": 7,
 										"observed": false,
 										"title": "Mini Neptune",
-										"description": "457",
+										"description": "458",
 										"link": "nope"
 									},
 									"behaviors": {},
@@ -25594,7 +25501,7 @@
 										"face-top": true,
 										"face-bottom": true,
 										"z-tiling-factor": 1.5,
-										"object-back": 785345095297028,
+										"object-back": -1,
 										"object-front": 329296576949328,
 										"object-left": 566505342434806,
 										"object-right": 279943581606399,
@@ -34573,7 +34480,7 @@
 							"world": {
 								"x": 60,
 								"y": 122,
-								"width": 32,
+								"width": 96,
 								"height": 32,
 								"originX": 0.5,
 								"originY": 0.5,
@@ -34653,7 +34560,7 @@
 							"world": {
 								"x": 60,
 								"y": 90,
-								"width": 32,
+								"width": 96,
 								"height": 32,
 								"originX": 0.5,
 								"originY": 0.5,
@@ -34672,7 +34579,7 @@
 							"properties": {
 								"initially-visible": true,
 								"initial-animation": "Animation 1",
-								"initial-frame": 4,
+								"initial-frame": 5,
 								"enable-collisions": true,
 								"live-preview": false
 							},
@@ -34760,7 +34667,7 @@
 							"properties": {
 								"initially-visible": true,
 								"initial-animation": "Animation 1",
-								"initial-frame": 5,
+								"initial-frame": 6,
 								"enable-collisions": true,
 								"live-preview": false
 							},
@@ -34785,6 +34692,46 @@
 								"height": 24,
 								"originX": 0.5,
 								"originY": 0.5416666666666666,
+								"color": [
+									1,
+									1,
+									1,
+									0.5
+								],
+								"angle": 0,
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "MobileButtons",
+							"properties": {
+								"initially-visible": true,
+								"initial-animation": "Animation 1",
+								"initial-frame": 4,
+								"enable-collisions": true,
+								"live-preview": false
+							},
+							"uid": 882,
+							"sid": 314170344410064,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"instanceFolderItem": {
+								"sid": 314170344410064,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 252,
+								"y": 122,
+								"width": 32,
+								"height": 32,
+								"originX": 0.5,
+								"originY": 0.5,
 								"color": [
 									1,
 									1,

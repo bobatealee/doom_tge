@@ -1,6 +1,6 @@
 {
 	"projectFormatVersion": 1,
-	"savedWithRelease": 41900,
+	"savedWithRelease": 42000,
 	"name": "DOOM The Gallery Experience",
 	"runtime": "c3",
 	"useWorker": "dom",
@@ -197,8 +197,6 @@
 		"subfolders": [
 			{
 				"items": [
-					"test1",
-					"test2",
 					"Wallpaper",
 					"Wood",
 					"WoodDark",
@@ -648,6 +646,14 @@
 					"file-info": {
 						"purpose": "none"
 					}
+				},
+				{
+					"name": "intro.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 543930099452555,
+					"file-info": {
+						"purpose": "none"
+					}
 				}
 			],
 			"subfolders": []
@@ -746,7 +752,7 @@
 	},
 	"properties": {
 		"description": "DOOM: The Gallery Experience was created as an art piece designed to parody the wonderfully pretentious world of gallery openings.",
-		"version": "1.0.3",
+		"version": "1.0.4",
 		"autoIncrementVersion": false,
 		"author": "",
 		"authorEmail": "",

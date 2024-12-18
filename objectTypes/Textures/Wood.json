@@ -3,6 +3,7 @@
 	"plugin-id": "TiledBg",
 	"sid": 917230400304840,
 	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
 	"behaviorTypes": [],
 	"effectTypes": [],
