@@ -18352,7 +18352,7 @@
 										"id": 21,
 										"observed": false,
 										"title": "Ahhotep scarab",
-										"description": "LATE SECOND INTERMEDIATE PERIOD–EARLY NEW KINGDOM\nCA. 1560–1458 B.C.",
+										"description": "SECOND INTERMEDIATE PERIOD–NEW KINGDOM\nCA. 1560–1458 B.C.",
 										"link": "https://www.metmuseum.org/art/collection/search/544439"
 									},
 									"behaviors": {},
@@ -20607,6 +20607,64 @@
 										"y": 1660,
 										"width": 16,
 										"height": 16,
+										"originX": 0,
+										"originY": 0,
+										"color": [
+											1,
+											1,
+											1,
+											1
+										],
+										"angle": 0,
+										"zElevation": -8
+									}
+								},
+								{
+									"type": "Collision",
+									"properties": {
+										"shape": "box",
+										"z-height": 32,
+										"initially-visible": true,
+										"face-back": false,
+										"face-front": false,
+										"face-left": false,
+										"face-right": false,
+										"face-top": false,
+										"face-bottom": false,
+										"z-tiling-factor": 1.5,
+										"object-back": 566505342434806,
+										"object-front": 566505342434806,
+										"object-left": 566505342434806,
+										"object-right": 566505342434806,
+										"object-top": 566505342434806,
+										"object-bottom": 566505342434806
+									},
+									"uid": 345,
+									"sid": 755074999315589,
+									"tags": "",
+									"instanceVariables": {},
+									"behaviors": {
+										"Solid": {
+											"properties": {
+												"enabled": true,
+												"tags": ""
+											}
+										}
+									},
+									"instanceFolderItem": {
+										"sid": 755074999315589,
+										"expanded": true,
+										"folderName": "",
+										"indexInFolder": -1,
+										"folderNestingLevel": -1
+									},
+									"showing": true,
+									"locked": false,
+									"world": {
+										"x": 2584,
+										"y": 1172,
+										"width": 28,
+										"height": 28,
 										"originX": 0,
 										"originY": 0,
 										"color": [

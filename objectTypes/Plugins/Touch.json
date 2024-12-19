@@ -5,7 +5,7 @@
 	"singleglobal-inst": {
 		"type": "Touch",
 		"properties": {
-			"use-mouse-input": true
+			"use-mouse-input": false
 		},
 		"uid": 716,
 		"sid": 507205909004491,

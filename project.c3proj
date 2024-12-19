@@ -1,6 +1,6 @@
 {
 	"projectFormatVersion": 1,
-	"savedWithRelease": 42000,
+	"savedWithRelease": 42002,
 	"name": "DOOM The Gallery Experience",
 	"runtime": "c3",
 	"useWorker": "dom",
@@ -595,68 +595,73 @@
 					],
 					"subfolders": [],
 					"name": "Gameplay"
+				},
+				{
+					"items": [
+						{
+							"name": "bach.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 677351128859557,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "delibes.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 833179971619099,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "e1m1.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 338482145863080,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "e1m5.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 553327494387864,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "intro.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 543930099452555,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "results.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 979024838707547,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "vivaldi.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 152474268629808,
+							"file-info": {
+								"purpose": "none"
+							}
+						}
+					],
+					"subfolders": [],
+					"name": "Music"
 				}
 			]
 		},
 		"music": {
-			"items": [
-				{
-					"name": "bach.webm",
-					"type": "audio/webm; codecs=opus",
-					"sid": 677351128859557,
-					"file-info": {
-						"purpose": "none"
-					}
-				},
-				{
-					"name": "vivaldi.webm",
-					"type": "audio/webm; codecs=opus",
-					"sid": 152474268629808,
-					"file-info": {
-						"purpose": "none"
-					}
-				},
-				{
-					"name": "e1m5.webm",
-					"type": "audio/webm; codecs=opus",
-					"sid": 553327494387864,
-					"file-info": {
-						"purpose": "none"
-					}
-				},
-				{
-					"name": "e1m1.webm",
-					"type": "audio/webm; codecs=opus",
-					"sid": 338482145863080,
-					"file-info": {
-						"purpose": "none"
-					}
-				},
-				{
-					"name": "delibes.webm",
-					"type": "audio/webm; codecs=opus",
-					"sid": 833179971619099,
-					"file-info": {
-						"purpose": "none"
-					}
-				},
-				{
-					"name": "results.webm",
-					"type": "audio/webm; codecs=opus",
-					"sid": 979024838707547,
-					"file-info": {
-						"purpose": "none"
-					}
-				},
-				{
-					"name": "intro.webm",
-					"type": "audio/webm; codecs=opus",
-					"sid": 543930099452555,
-					"file-info": {
-						"purpose": "none"
-					}
-				}
-			],
+			"items": [],
 			"subfolders": []
 		},
 		"video": {
@@ -735,6 +740,7 @@
 	},
 	"timelines": {
 		"items": [
+			"Beer",
 			"Door",
 			"Drink",
 			"Reach",
@@ -753,7 +759,7 @@
 	},
 	"properties": {
 		"description": "DOOM: The Gallery Experience was created as an art piece designed to parody the wonderfully pretentious world of gallery openings.",
-		"version": "1.0.5",
+		"version": "1.0.6",
 		"autoIncrementVersion": false,
 		"author": "",
 		"authorEmail": "",
@@ -797,7 +803,7 @@
 		"zNear": 1,
 		"zFar": 10000,
 		"maxSpriteSheetSize": 2048,
-		"loaderStyle": "none",
+		"loaderStyle": "progress",
 		"preloadSounds": true,
 		"cordovaiOSScheme": "app",
 		"cordovaAndroidScheme": "https",

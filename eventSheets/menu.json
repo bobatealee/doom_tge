@@ -13,6 +13,16 @@
 		},
 		{
 			"eventType": "variable",
+			"name": "GAME_canLink",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 603530685506523
+		},
+		{
+			"eventType": "variable",
 			"name": "MENU_selected",
 			"type": "number",
 			"initialValue": "0",
@@ -1726,6 +1736,158 @@
 				{
 					"id": "else",
 					"objectClass": "System",
+					"sid": 785280440883023
+				},
+				{
+					"id": "is-touching-object",
+					"objectClass": "Touch",
+					"sid": 345391074704440,
+					"parameters": {
+						"object": "Link"
+					}
+				},
+				{
+					"id": "has-tags",
+					"objectClass": "MenuFontSmall",
+					"sid": 438492512314870,
+					"parameters": {
+						"tags": "Link.TagAt(0)"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "Link",
+					"sid": 649115159956241,
+					"parameters": {
+						"instance-variable": "link",
+						"comparison": 1,
+						"value": "\"nope\""
+					}
+				},
+				{
+					"id": "is-on-layer",
+					"objectClass": "Link",
+					"sid": 831287108335992,
+					"parameters": {
+						"layer": "MENU_menu"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 614917188886138,
+					"parameters": {
+						"variable": "GAME_mobile"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-cursor-style",
+					"objectClass": "Mouse",
+					"sid": 736745661519272,
+					"parameters": {
+						"cursor-style": "hand"
+					}
+				},
+				{
+					"id": "set-default-color",
+					"objectClass": "MenuFontSmall",
+					"sid": 969997220241181,
+					"parameters": {
+						"color": "rgbEx255(192, 192, 255)"
+					}
+				}
+			],
+			"sid": 245970896246804
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "else",
+					"objectClass": "System",
+					"sid": 497628983951955
+				},
+				{
+					"id": "is-touching-object",
+					"objectClass": "Touch",
+					"sid": 200313173290680,
+					"parameters": {
+						"object": "Link"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 163982223765907,
+					"parameters": {
+						"variable": "MENU_menu",
+						"comparison": 0,
+						"value": "\"Modal\""
+					}
+				},
+				{
+					"id": "is-on-layer",
+					"objectClass": "Link",
+					"sid": 835058801896221,
+					"parameters": {
+						"layer": "\"Modal\""
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "Link",
+					"sid": 563685709440621,
+					"parameters": {
+						"instance-variable": "link",
+						"comparison": 1,
+						"value": "\"nope\""
+					}
+				},
+				{
+					"id": "has-tags",
+					"objectClass": "MenuFont",
+					"sid": 800602935975338,
+					"parameters": {
+						"tags": "\"title\""
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 856702681805740,
+					"parameters": {
+						"variable": "GAME_canLink"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 167075720788848,
+					"parameters": {
+						"variable": "GAME_mobile"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-default-color",
+					"objectClass": "MenuFont",
+					"sid": 583822020882798,
+					"parameters": {
+						"color": "rgbEx255(192, 192, 255)"
+					}
+				}
+			],
+			"sid": 144686665515070
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "else",
+					"objectClass": "System",
 					"sid": 566193829405096
 				},
 				{
@@ -2203,6 +2365,14 @@
 				{
 					"id": "compare-boolean-eventvar",
 					"objectClass": "System",
+					"sid": 858864026371118,
+					"parameters": {
+						"variable": "GAME_canLink"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
 					"sid": 470643149672630,
 					"parameters": {
 						"variable": "GAME_mobile"
@@ -2221,6 +2391,28 @@
 				}
 			],
 			"sid": 126212083591151
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-any-touch-end",
+					"objectClass": "Touch",
+					"sid": 968535236583702
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 271404261216168,
+					"parameters": {
+						"variable": "GAME_canLink",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 699497691819727
 		},
 		{
 			"eventType": "block",

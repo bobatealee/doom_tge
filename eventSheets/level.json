@@ -2594,6 +2594,15 @@
 								"tags": "\"drink\""
 							},
 							"isInverted": true
+						},
+						{
+							"id": "is-playing-by-tags",
+							"objectClass": "TimelineController",
+							"sid": 682947358162496,
+							"parameters": {
+								"tags": "\"beer\""
+							},
+							"isInverted": true
 						}
 					],
 					"actions": [],
@@ -3074,6 +3083,15 @@
 										"tags": "\"drink\""
 									},
 									"isInverted": true
+								},
+								{
+									"id": "is-playing-by-tags",
+									"objectClass": "TimelineController",
+									"sid": 714870434241963,
+									"parameters": {
+										"tags": "\"beer\""
+									},
+									"isInverted": true
 								}
 							],
 							"actions": [
@@ -3116,6 +3134,15 @@
 									"sid": 374279136006671,
 									"parameters": {
 										"tag": "\"sip\""
+									},
+									"isInverted": true
+								},
+								{
+									"id": "is-playing-by-tags",
+									"objectClass": "TimelineController",
+									"sid": 443191916620413,
+									"parameters": {
+										"tags": "\"beer\""
 									},
 									"isInverted": true
 								}
@@ -3240,6 +3267,15 @@
 									"sid": 493443167360150,
 									"parameters": {
 										"tag": "\"sip\""
+									},
+									"isInverted": true
+								},
+								{
+									"id": "is-playing-by-tags",
+									"objectClass": "TimelineController",
+									"sid": 180102330867346,
+									"parameters": {
+										"tags": "\"beer\""
 									},
 									"isInverted": true
 								}
@@ -3377,6 +3413,27 @@
 						{
 							"id": "on-keyframe-reached",
 							"objectClass": "TimelineController",
+							"sid": 409834759865834,
+							"parameters": {
+								"tags": "\"reach\"",
+								"match": "any-tags"
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "interact",
+							"sid": 932698242595531
+						}
+					],
+					"sid": 678617386945974
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-keyframe-reached",
+							"objectClass": "TimelineController",
 							"sid": 816294374026500,
 							"parameters": {
 								"tags": "\"swap\"",
@@ -3395,6 +3452,31 @@
 						}
 					],
 					"sid": 577713270000198
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-keyframe-reached",
+							"objectClass": "TimelineController",
+							"sid": 809799072071036,
+							"parameters": {
+								"tags": "\"beer\"",
+								"match": "any-tags"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Arm",
+							"sid": 153294719763849,
+							"parameters": {
+								"frame-number": "2"
+							}
+						}
+					],
+					"sid": 653070213404132
 				},
 				{
 					"eventType": "block",
@@ -4546,6 +4628,15 @@
 										{
 											"id": "set-boolean-eventvar",
 											"objectClass": "System",
+											"sid": 553889560105433,
+											"parameters": {
+												"variable": "GAME_canLink",
+												"value": "false"
+											}
+										},
+										{
+											"id": "set-boolean-eventvar",
+											"objectClass": "System",
 											"sid": 830940486897500,
 											"parameters": {
 												"variable": "MENU_paused",
@@ -5296,6 +5387,14 @@
 							],
 							"actions": [
 								{
+									"id": "stop",
+									"objectClass": "Audio",
+									"sid": 783098227900998,
+									"parameters": {
+										"tag": "\"sip\""
+									}
+								},
+								{
 									"callFunction": "popup",
 									"sid": 718013896592102,
 									"parameters": [
@@ -5338,10 +5437,10 @@
 								{
 									"id": "play-timeline",
 									"objectClass": "TimelineController",
-									"sid": 541403508746125,
+									"sid": 208949891787006,
 									"parameters": {
-										"timeline": "Swap",
-										"tags": "\"swap\""
+										"timeline": "Beer",
+										"tags": "\"beer\""
 									}
 								},
 								{
@@ -6537,6 +6636,10 @@
 			"sid": 836112138465216
 		},
 		{
+			"eventType": "comment",
+			"text": "thanks to construct for forcing mouse movement calculation when not pointer locked vs pointer locked being the same. nothing i can do here without making it feel worse"
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -6581,10 +6684,10 @@
 				{
 					"id": "rotate-camera",
 					"objectClass": "3DCamera",
-					"sid": 191648575897195,
+					"sid": 136245916182270,
 					"parameters": {
 						"rotate-x": "Mouse.MovementX / 10",
-						"rotate-y": "Mouse.MovementY / 10",
+						"rotate-y": "0",
 						"min-polar-angle": "85",
 						"max-polar-angle": "85"
 					}
