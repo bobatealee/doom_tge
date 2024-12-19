@@ -23,6 +23,16 @@
 		},
 		{
 			"eventType": "variable",
+			"name": "GAME_interacted",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 441364849000064
+		},
+		{
+			"eventType": "variable",
 			"name": "MENU_selected",
 			"type": "number",
 			"initialValue": "0",
@@ -6331,11 +6341,6 @@
 					"isInverted": true
 				},
 				{
-					"id": "window-has-focus",
-					"objectClass": "Browser",
-					"sid": 793206654120886
-				},
-				{
 					"id": "trigger-once-while-true",
 					"objectClass": "System",
 					"sid": 651160134423149
@@ -6350,27 +6355,50 @@
 						{
 							"id": "compare-boolean-eventvar",
 							"objectClass": "System",
-							"sid": 666698220359526,
+							"sid": 243133870953717,
 							"parameters": {
-								"variable": "BLEED_ready"
+								"variable": "GAME_interacted"
 							}
-						}
-					],
-					"actions": [
+						},
 						{
-							"id": "play",
-							"objectClass": "Audio",
-							"sid": 372784378833308,
-							"parameters": {
-								"audio-file": "menuselect",
-								"loop": "not-looping",
-								"volume": "log10(SETTING_volumeSound)*20",
-								"stereo-pan": "0",
-								"tag-optional": "\"\""
-							}
+							"id": "window-has-focus",
+							"objectClass": "Browser",
+							"sid": 365721483156201
 						}
 					],
-					"sid": 287986297256519
+					"actions": [],
+					"sid": 311533522134751,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 609753347385664,
+									"parameters": {
+										"variable": "BLEED_ready"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 622886546428310,
+									"parameters": {
+										"audio-file": "menuselect",
+										"loop": "not-looping",
+										"volume": "log10(SETTING_volumeSound)*20",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
+								}
+							],
+							"sid": 925782100483768
+						}
+					],
+					"isOrBlock": true
 				}
 			]
 		},
@@ -6395,7 +6423,7 @@
 						{
 							"id": "is-fullscreen",
 							"objectClass": "Browser",
-							"sid": 795042035627091,
+							"sid": 181526845090814,
 							"isInverted": true
 						}
 					],
@@ -6403,16 +6431,59 @@
 						{
 							"id": "request-fullscreen",
 							"objectClass": "Browser",
-							"sid": 999000831241422,
+							"sid": 168183202504500,
 							"parameters": {
 								"mode": "stretch-letterbox-scale",
 								"navigation-ui": "hide"
 							}
 						}
 					],
-					"sid": 557331899437299
+					"sid": 549120445912557
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "has-pointer-lock",
+							"objectClass": "Mouse",
+							"sid": 736762930411492
+						}
+					],
+					"actions": [
+						{
+							"id": "request-pointer-lock",
+							"objectClass": "Mouse",
+							"sid": 680818960106879,
+							"parameters": {
+								"unadjusted-movement": false
+							}
+						}
+					],
+					"sid": 701803682908168
 				}
 			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-any-click",
+					"objectClass": "Mouse",
+					"sid": 167690531252641
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 583190279564285,
+					"parameters": {
+						"variable": "GAME_interacted",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 590381034377025
 		}
 	],
 	"sid": 815359530309005
