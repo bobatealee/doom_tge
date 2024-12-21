@@ -1,0 +1,29 @@
+{
+	"name": "LoaderBar",
+	"plugin-id": "NinePatch",
+	"sid": 161598198113726,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Tween",
+			"name": "Tween",
+			"sid": 813390719773126
+		}
+	],
+	"effectTypes": [],
+	"image": {
+		"width": 16,
+		"height": 16,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "lossless",
+		"exportQuality": 0.8,
+		"fileType": "image/png",
+		"imageSpriteId": 4407282,
+		"useCollisionPoly": true,
+		"tag": ""
+	}
+}

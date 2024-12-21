@@ -23,16 +23,6 @@
 		},
 		{
 			"eventType": "variable",
-			"name": "GAME_interacted",
-			"type": "boolean",
-			"initialValue": "false",
-			"comment": "",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 441364849000064
-		},
-		{
-			"eventType": "variable",
 			"name": "MENU_selected",
 			"type": "number",
 			"initialValue": "0",
@@ -6346,61 +6336,21 @@
 					"sid": 651160134423149
 				}
 			],
-			"actions": [],
-			"sid": 726878889683711,
-			"children": [
+			"actions": [
 				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 243133870953717,
-							"parameters": {
-								"variable": "GAME_interacted"
-							}
-						},
-						{
-							"id": "window-has-focus",
-							"objectClass": "Browser",
-							"sid": 365721483156201
-						}
-					],
-					"actions": [],
-					"sid": 311533522134751,
-					"children": [
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "compare-boolean-eventvar",
-									"objectClass": "System",
-									"sid": 609753347385664,
-									"parameters": {
-										"variable": "BLEED_ready"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "play",
-									"objectClass": "Audio",
-									"sid": 622886546428310,
-									"parameters": {
-										"audio-file": "menuselect",
-										"loop": "not-looping",
-										"volume": "log10(SETTING_volumeSound)*20",
-										"stereo-pan": "0",
-										"tag-optional": "\"\""
-									}
-								}
-							],
-							"sid": 925782100483768
-						}
-					],
-					"isOrBlock": true
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 375416147768486,
+					"parameters": {
+						"audio-file": "menuselect",
+						"loop": "not-looping",
+						"volume": "log10(SETTING_volumeSound)*20",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
 				}
-			]
+			],
+			"sid": 726878889683711
 		},
 		{
 			"eventType": "block",
@@ -6462,28 +6412,6 @@
 					"sid": 701803682908168
 				}
 			]
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-any-click",
-					"objectClass": "Mouse",
-					"sid": 167690531252641
-				}
-			],
-			"actions": [
-				{
-					"id": "set-boolean-eventvar",
-					"objectClass": "System",
-					"sid": 583190279564285,
-					"parameters": {
-						"variable": "GAME_interacted",
-						"value": "true"
-					}
-				}
-			],
-			"sid": 590381034377025
 		}
 	],
 	"sid": 815359530309005

@@ -421,6 +421,16 @@
 				],
 				"subfolders": [],
 				"name": "Newgrounds"
+			},
+			{
+				"items": [
+					"LoaderBar",
+					"LoaderBase",
+					"LoaderPlay",
+					"LoaderButton"
+				],
+				"subfolders": [],
+				"name": "Loader"
 			}
 		]
 	},
@@ -434,7 +444,8 @@
 		"items": [
 			"level",
 			"menu",
-			"results"
+			"results",
+			"loader"
 		],
 		"subfolders": []
 	},
@@ -443,7 +454,8 @@
 			"menu",
 			"level",
 			"bleed",
-			"results"
+			"results",
+			"loader"
 		],
 		"subfolders": []
 	},
@@ -759,7 +771,7 @@
 	},
 	"properties": {
 		"description": "DOOM: The Gallery Experience was created as an art piece designed to parody the wonderfully pretentious world of gallery openings.",
-		"version": "1.0.7",
+		"version": "1.0.8",
 		"autoIncrementVersion": false,
 		"author": "",
 		"authorEmail": "",
@@ -768,7 +780,7 @@
 		"pixelRounding": true,
 		"zAxisScale": "regular",
 		"fov": 0.7853981633974483,
-		"useLoaderLayout": false,
+		"useLoaderLayout": true,
 		"fullscreenMode": "letterbox-integer-scale",
 		"fullscreenQuality": "low",
 		"viewportFit": "auto",
@@ -799,7 +811,7 @@
 		"sampling": "nearest",
 		"downscaling": "low",
 		"renderingMode": "auto",
-		"anisotropicFiltering": "auto",
+		"anisotropicFiltering": "off",
 		"zNear": 1,
 		"zFar": 10000,
 		"maxSpriteSheetSize": 2048,
@@ -812,5 +824,5 @@
 	},
 	"viewportWidth": 320,
 	"viewportHeight": 180,
-	"firstLayout": "menu"
+	"firstLayout": "loader"
 }

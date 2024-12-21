@@ -7441,9 +7441,9 @@
 									"showing": true,
 									"locked": false,
 									"world": {
-										"x": 1288,
+										"x": 1520,
 										"y": 48,
-										"width": 848,
+										"width": 616,
 										"height": 504,
 										"originX": 0,
 										"originY": 0,
@@ -7751,6 +7751,108 @@
 										"y": 1080,
 										"width": 88,
 										"height": 104,
+										"originX": 0,
+										"originY": 0,
+										"color": [
+											1,
+											1,
+											1,
+											1
+										],
+										"angle": 0,
+										"zElevation": -32
+									}
+								},
+								{
+									"type": "Ground",
+									"properties": {
+										"shape": "box",
+										"z-height": 32,
+										"initially-visible": true,
+										"face-back": true,
+										"face-front": true,
+										"face-left": true,
+										"face-right": true,
+										"face-top": true,
+										"face-bottom": true,
+										"z-tiling-factor": 1.5,
+										"object-back": 785345095297028,
+										"object-front": 917230400304840,
+										"object-left": 310631546030263,
+										"object-right": 310631546030263,
+										"object-top": 310631546030263,
+										"object-bottom": 310631546030263
+									},
+									"uid": 887,
+									"sid": 372313822429010,
+									"tags": "",
+									"instanceVariables": {},
+									"behaviors": {
+										"Solid": {
+											"properties": {
+												"enabled": false,
+												"tags": ""
+											}
+										}
+									},
+									"showing": true,
+									"locked": false,
+									"world": {
+										"x": 1288,
+										"y": 292,
+										"width": 120,
+										"height": 260,
+										"originX": 0,
+										"originY": 0,
+										"color": [
+											1,
+											1,
+											1,
+											1
+										],
+										"angle": 0,
+										"zElevation": -32
+									}
+								},
+								{
+									"type": "Ground",
+									"properties": {
+										"shape": "box",
+										"z-height": 32,
+										"initially-visible": true,
+										"face-back": true,
+										"face-front": true,
+										"face-left": true,
+										"face-right": true,
+										"face-top": true,
+										"face-bottom": true,
+										"z-tiling-factor": 1.5,
+										"object-back": 785345095297028,
+										"object-front": 917230400304840,
+										"object-left": 310631546030263,
+										"object-right": 310631546030263,
+										"object-top": 310631546030263,
+										"object-bottom": 310631546030263
+									},
+									"uid": 888,
+									"sid": 223659421803617,
+									"tags": "",
+									"instanceVariables": {},
+									"behaviors": {
+										"Solid": {
+											"properties": {
+												"enabled": false,
+												"tags": ""
+											}
+										}
+									},
+									"showing": true,
+									"locked": false,
+									"world": {
+										"x": 1408,
+										"y": 272,
+										"width": 112,
+										"height": 100,
 										"originX": 0,
 										"originY": 0,
 										"color": [

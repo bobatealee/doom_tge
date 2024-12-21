@@ -1,0 +1,460 @@
+{
+	"name": "loader",
+	"events": [
+		{
+			"eventType": "include",
+			"includeSheet": "bleed"
+		},
+		{
+			"eventType": "comment",
+			"text": "loading"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 762951166734789
+				}
+			],
+			"actions": [
+				{
+					"id": "stop-animation",
+					"objectClass": "LoaderPlay",
+					"sid": 268226491453486
+				},
+				{
+					"id": "set-opacity",
+					"objectClass": "LoaderPlay",
+					"sid": 926934295815458,
+					"parameters": {
+						"opacity": "0"
+					}
+				},
+				{
+					"id": "set-position",
+					"objectClass": "LoaderButton",
+					"sid": 409769096965801,
+					"parameters": {
+						"x": "LoaderBase.X",
+						"y": "LoaderBase.Y"
+					}
+				},
+				{
+					"id": "set-opacity",
+					"objectClass": "LoaderButton",
+					"sid": 805096918101034,
+					"parameters": {
+						"opacity": "0"
+					}
+				}
+			],
+			"sid": 287526932582744
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "has-tags",
+					"objectClass": "LoaderBar",
+					"sid": 766684935461394,
+					"parameters": {
+						"tags": "\"loading\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-width",
+					"objectClass": "LoaderBar",
+					"sid": 537996348756828,
+					"parameters": {
+						"width": "loadingprogress*(LoaderBase.Width-24)+14"
+					}
+				}
+			],
+			"sid": 438686587985465
+		},
+		{
+			"eventType": "comment",
+			"text": "loaded, play animation"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-loader-layout-complete",
+					"objectClass": "System",
+					"sid": 204418301589303
+				}
+			],
+			"actions": [
+				{
+					"id": "change-tags",
+					"objectClass": "LoaderBar",
+					"sid": 684960941611609,
+					"parameters": {
+						"action": "remove",
+						"tags": "\"loading\""
+					}
+				},
+				{
+					"id": "tween-one-property",
+					"objectClass": "LoaderBase",
+					"sid": 504924937140993,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"shrink\"",
+						"property": "offsetWidth",
+						"end-value": "24",
+						"time": "0.25",
+						"ease": "easeinoutsine",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				},
+				{
+					"id": "tween-one-property",
+					"objectClass": "LoaderBar",
+					"sid": 314141147846201,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"fade\"",
+						"property": "offsetOpacity",
+						"end-value": "0",
+						"time": "0.25",
+						"ease": "easeinoutsine",
+						"destroy-on-complete": "yes",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				},
+				{
+					"id": "tween-one-property",
+					"objectClass": "LoaderButton",
+					"sid": 422919946258039,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"fade\"",
+						"property": "offsetOpacity",
+						"end-value": "100",
+						"time": "0.25",
+						"ease": "easeinoutsine",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				}
+			],
+			"sid": 357260999390746
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tweens-finished",
+					"objectClass": "LoaderBase",
+					"sid": 214149806899183,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"shrink\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "tween-one-property",
+					"objectClass": "LoaderBase",
+					"sid": 314622174683058,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"grow\"",
+						"property": "offsetWidth",
+						"end-value": "80",
+						"time": "0.25",
+						"ease": "easeinoutquint",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				},
+				{
+					"id": "tween-one-property",
+					"objectClass": "LoaderBase",
+					"sid": 397373274804436,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"grow\"",
+						"property": "offsetHeight",
+						"end-value": "40",
+						"time": "0.25",
+						"ease": "easeinoutquint",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				}
+			],
+			"sid": 983132196708858
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tweens-finished",
+					"objectClass": "LoaderBase",
+					"sid": 789073810138110,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"grow\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "tween-one-property",
+					"objectClass": "LoaderPlay",
+					"sid": 525045913931689,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"fade\"",
+						"property": "offsetOpacity",
+						"end-value": "100",
+						"time": "0.25",
+						"ease": "easeinoutsine",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				}
+			],
+			"sid": 547670800960790
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-playing",
+					"objectClass": "LoaderBase",
+					"sid": 611405971985714,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"shrink\""
+					}
+				},
+				{
+					"id": "is-playing",
+					"objectClass": "LoaderBase",
+					"sid": 418751547346796,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"grow\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-size",
+					"objectClass": "LoaderBar",
+					"sid": 972636359441327,
+					"parameters": {
+						"width": "LoaderBase.Width-10",
+						"height": "LoaderBase.Height-10"
+					}
+				},
+				{
+					"id": "set-position",
+					"objectClass": "LoaderBar",
+					"sid": 806757489146535,
+					"parameters": {
+						"x": "LoaderBase.X-Self.Width/2",
+						"y": "LoaderBase.Y-Self.Height-5"
+					}
+				},
+				{
+					"id": "set-size",
+					"objectClass": "LoaderButton",
+					"sid": 894755812889309,
+					"parameters": {
+						"width": "LoaderBase.Width",
+						"height": "LoaderBase.Height"
+					}
+				}
+			],
+			"sid": 123902079563089,
+			"isOrBlock": true
+		},
+		{
+			"eventType": "comment",
+			"text": "play button"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-opacity",
+					"objectClass": "LoaderPlay",
+					"sid": 417547469931731,
+					"parameters": {
+						"comparison": 5,
+						"opacity": "75"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 480265987072640,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "mouse-button-is-down",
+							"objectClass": "Mouse",
+							"sid": 126584671010481,
+							"parameters": {
+								"mouse-button": "left"
+							}
+						},
+						{
+							"id": "cursor-is-over-object",
+							"objectClass": "Mouse",
+							"sid": 261186220448958,
+							"parameters": {
+								"object": "LoaderPlay"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "LoaderPlay",
+							"sid": 265860466893005,
+							"parameters": {
+								"frame-number": "1"
+							}
+						}
+					],
+					"sid": 278833704207314
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 838007641170845
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "Touch",
+							"sid": 221549924436828,
+							"parameters": {
+								"object": "LoaderPlay"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "LoaderPlay",
+							"sid": 270116543939275,
+							"parameters": {
+								"frame-number": "1"
+							}
+						}
+					],
+					"sid": 890931864976295
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 642524067644324
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "LoaderPlay",
+							"sid": 765831974351298,
+							"parameters": {
+								"frame-number": "0"
+							}
+						}
+					],
+					"sid": 596393878817145
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-button-released",
+							"objectClass": "Mouse",
+							"sid": 115959672395776,
+							"parameters": {
+								"mouse-button": "left"
+							}
+						},
+						{
+							"id": "cursor-is-over-object",
+							"objectClass": "Mouse",
+							"sid": 249882538077981,
+							"parameters": {
+								"object": "LoaderPlay"
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "transition",
+							"sid": 617539003601585,
+							"parameters": [
+								"\"menu\""
+							]
+						}
+					],
+					"sid": 753397469904359
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-any-touch-end",
+							"objectClass": "Touch",
+							"sid": 948512449970633
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "Touch",
+							"sid": 531887179192532,
+							"parameters": {
+								"object": "LoaderPlay"
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "transition",
+							"sid": 768947485713570,
+							"parameters": [
+								"\"menu\""
+							]
+						}
+					],
+					"sid": 133796003488468
+				}
+			]
+		}
+	],
+	"sid": 930092798194707
+}
