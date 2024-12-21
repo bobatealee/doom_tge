@@ -57,6 +57,50 @@
 					}
 				},
 				{
+					"type": "LoaderBar",
+					"properties": {
+						"left-margin": 7,
+						"right-margin": 7,
+						"top-margin": 7,
+						"bottom-margin": 7,
+						"edges": "stretch",
+						"fill": "stretch",
+						"initially-visible": true,
+						"origin": "top-left",
+						"seams": "exact"
+					},
+					"uid": 883,
+					"sid": 512524844864654,
+					"tags": "loading",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 512524844864654,
+						"expanded": true,
+						"folderName": "",
+						"indexInFolder": -1,
+						"folderNestingLevel": -1
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 13,
+						"y": 153,
+						"width": 14,
+						"height": 14,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
 					"type": "LoaderButton",
 					"properties": {
 						"left-margin": 8,
@@ -96,56 +140,6 @@
 						"height": 24,
 						"originX": 0.5,
 						"originY": 1,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "LoaderBar",
-					"properties": {
-						"left-margin": 7,
-						"right-margin": 7,
-						"top-margin": 7,
-						"bottom-margin": 7,
-						"edges": "stretch",
-						"fill": "stretch",
-						"initially-visible": true,
-						"origin": "top-left",
-						"seams": "exact"
-					},
-					"uid": 883,
-					"sid": 512524844864654,
-					"tags": "loading",
-					"instanceVariables": {},
-					"behaviors": {
-						"Tween": {
-							"properties": {
-								"enabled": true
-							}
-						}
-					},
-					"instanceFolderItem": {
-						"sid": 512524844864654,
-						"expanded": true,
-						"folderName": "",
-						"indexInFolder": -1,
-						"folderNestingLevel": -1
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 13,
-						"y": 153,
-						"width": 14,
-						"height": 14,
-						"originX": 0,
-						"originY": 0,
 						"color": [
 							1,
 							1,
@@ -242,7 +236,7 @@
 					"locked": false,
 					"world": {
 						"x": 160,
-						"y": 28,
+						"y": 8,
 						"width": 180,
 						"height": 71,
 						"originX": 0.5,
@@ -251,6 +245,69 @@
 							1,
 							1,
 							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "LoaderText",
+					"properties": {
+						"text": "Loading...",
+						"enable-bbcode": true,
+						"character-width": 12,
+						"character-height": 12,
+						"character-set": "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#\"'&()[]|\\/@+=*$<>%",
+						"spacing-data": "[[6,\" \"],\n[2,\".:!'|\"],\n[3,\",;\"],\n[4,\"iIl1\\\"()\"],\n[5,\"fjt[]<>\"],[6,\"ABCDEFGHJKLMNOPQRSTUVWXYZabcdeghkmnopqrsuvwxyz023456789?-_~#&\\\\/@+=*$\"],\n[8,\"%\"]]",
+						"scale": 1,
+						"character-spacing": 0,
+						"line-height": -1,
+						"horizontal-alignment": "center",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 889,
+					"sid": 879278971189018,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"effects": {
+						"WarpObject": {
+							"isEnabled": true,
+							"parameters": {
+								"x-frequency": 3,
+								"y-frequency": 0,
+								"x-amplitude": 1,
+								"y-amplitude": 0,
+								"x-speed": 0.5,
+								"y-speed": 0
+							}
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 879278971189018,
+						"expanded": true,
+						"folderName": "",
+						"indexInFolder": -1,
+						"folderNestingLevel": -1
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 8,
+						"y": 116,
+						"width": 304,
+						"height": 12,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							0.3764705882352941,
+							0.3764705882352941,
+							0.3764705882352941,
 							1
 						],
 						"angle": 0,

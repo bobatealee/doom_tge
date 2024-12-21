@@ -48,9 +48,42 @@
 					"parameters": {
 						"opacity": "0"
 					}
+				},
+				{
+					"id": "request-project-file",
+					"objectClass": "AJAX",
+					"sid": 242596534931063,
+					"parameters": {
+						"tag": "\"splashes\"",
+						"file": "splashes.txt"
+					}
 				}
 			],
 			"sid": 287526932582744
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-completed",
+					"objectClass": "AJAX",
+					"sid": 442188622296109,
+					"parameters": {
+						"tag": "\"splashes\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "LoaderText",
+					"sid": 712843908060248,
+					"parameters": {
+						"text": "tokenat(AJAX.LastData, round(random(0, tokencount(AJAX.LastData, newline)-1)), newline)"
+					}
+				}
+			],
+			"sid": 491137104949478
 		},
 		{
 			"eventType": "block",
@@ -68,9 +101,9 @@
 				{
 					"id": "set-width",
 					"objectClass": "LoaderBar",
-					"sid": 537996348756828,
+					"sid": 740567851646025,
 					"parameters": {
-						"width": "loadingprogress*(LoaderBase.Width-24)+14"
+						"width": "lerp(Self.Width, loadingprogress*(LoaderBase.Width-24)+14, 10*dt)"
 					}
 				}
 			],
@@ -111,23 +144,6 @@
 						"time": "0.25",
 						"ease": "easeinoutsine",
 						"destroy-on-complete": "no",
-						"loop": "no",
-						"ping-pong": "no",
-						"repeat-count": "1"
-					}
-				},
-				{
-					"id": "tween-one-property",
-					"objectClass": "LoaderBar",
-					"sid": 314141147846201,
-					"behaviorType": "Tween",
-					"parameters": {
-						"tags": "\"fade\"",
-						"property": "offsetOpacity",
-						"end-value": "0",
-						"time": "0.25",
-						"ease": "easeinoutsine",
-						"destroy-on-complete": "yes",
 						"loop": "no",
 						"ping-pong": "no",
 						"repeat-count": "1"
@@ -302,14 +318,30 @@
 				{
 					"id": "compare-opacity",
 					"objectClass": "LoaderPlay",
-					"sid": 417547469931731,
+					"sid": 748174866322336,
 					"parameters": {
 						"comparison": 5,
-						"opacity": "75"
+						"opacity": "100"
 					}
 				}
 			],
-			"actions": [],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "LoaderBase",
+					"sid": 600664997558732
+				},
+				{
+					"id": "destroy",
+					"objectClass": "LoaderBar",
+					"sid": 788950998207655
+				},
+				{
+					"id": "destroy",
+					"objectClass": "LoaderButton",
+					"sid": 870563077327642
+				}
+			],
 			"sid": 480265987072640,
 			"children": [
 				{

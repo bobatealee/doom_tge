@@ -1470,6 +1470,48 @@
 			"eventType": "block",
 			"conditions": [
 				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 889531385144274,
+					"parameters": {
+						"first-value": "LayoutName",
+						"comparison": 1,
+						"second-value": "\"results\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-default-color",
+					"objectClass": "MenuFontSmall",
+					"sid": 809931009478827,
+					"parameters": {
+						"color": "rgbEx255(255, 255, 255)"
+					}
+				},
+				{
+					"id": "set-default-color",
+					"objectClass": "MenuFont",
+					"sid": 756944746945900,
+					"parameters": {
+						"color": "rgbEx255(255, 255, 255)"
+					}
+				},
+				{
+					"id": "set-cursor-style",
+					"objectClass": "Mouse",
+					"sid": 551743311701192,
+					"parameters": {
+						"cursor-style": "normal"
+					}
+				}
+			],
+			"sid": 605813828963375
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
 					"id": "cursor-is-over-object",
 					"objectClass": "Mouse",
 					"sid": 496543335782425,
@@ -1881,53 +1923,6 @@
 				}
 			],
 			"sid": 144686665515070
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "else",
-					"objectClass": "System",
-					"sid": 566193829405096
-				},
-				{
-					"id": "compare-two-values",
-					"objectClass": "System",
-					"sid": 902183861003158,
-					"parameters": {
-						"first-value": "LayoutName",
-						"comparison": 1,
-						"second-value": "\"results\""
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-default-color",
-					"objectClass": "MenuFontSmall",
-					"sid": 947075897162886,
-					"parameters": {
-						"color": "rgbEx255(255, 255, 255)"
-					}
-				},
-				{
-					"id": "set-default-color",
-					"objectClass": "MenuFont",
-					"sid": 772660233059063,
-					"parameters": {
-						"color": "rgbEx255(255, 255, 255)"
-					}
-				},
-				{
-					"id": "set-cursor-style",
-					"objectClass": "Mouse",
-					"sid": 266713163962787,
-					"parameters": {
-						"cursor-style": "normal"
-					}
-				}
-			],
-			"sid": 672879603553015
 		},
 		{
 			"eventType": "block",

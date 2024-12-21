@@ -8,6 +8,13 @@
 	"usedAddons": [
 		{
 			"type": "plugin",
+			"id": "AJAX",
+			"name": "AJAX",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "Arr",
 			"name": "Array",
 			"author": "Scirra",
@@ -189,6 +196,13 @@
 			"name": "Posterize",
 			"author": "Scirra",
 			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "warpobject",
+			"name": "Warp object",
+			"author": "Scirra",
+			"bundled": false
 		}
 	],
 	"uniqueId": "h63jh1yt028",
@@ -287,7 +301,8 @@
 					"TimelineController",
 					"Browser",
 					"PlatformInfo",
-					"Touch"
+					"Touch",
+					"AJAX"
 				],
 				"subfolders": [],
 				"name": "Plugins"
@@ -427,7 +442,8 @@
 					"LoaderBar",
 					"LoaderBase",
 					"LoaderPlay",
-					"LoaderButton"
+					"LoaderButton",
+					"LoaderText"
 				],
 				"subfolders": [],
 				"name": "Loader"
@@ -746,7 +762,24 @@
 			"subfolders": []
 		},
 		"general": {
-			"items": [],
+			"items": [
+				{
+					"name": "en-US.json",
+					"type": "application/json",
+					"sid": 835963046129728,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "splashes.txt",
+					"type": "text/plain",
+					"sid": 152259492597153,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
 			"subfolders": []
 		}
 	},
@@ -771,7 +804,7 @@
 	},
 	"properties": {
 		"description": "DOOM: The Gallery Experience was created as an art piece designed to parody the wonderfully pretentious world of gallery openings.",
-		"version": "1.0.9",
+		"version": "1.1.0",
 		"autoIncrementVersion": false,
 		"author": "",
 		"authorEmail": "",

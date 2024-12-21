@@ -1,22 +1,27 @@
 {
-	"name": "LoaderBar",
-	"plugin-id": "NinePatch",
-	"sid": 161598198113726,
+	"name": "LoaderText",
+	"plugin-id": "Spritefont2",
+	"sid": 458831782928546,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
 	"behaviorTypes": [],
-	"effectTypes": [],
+	"effectTypes": [
+		{
+			"effectId": "warpobject",
+			"name": "WarpObject"
+		}
+	],
 	"image": {
-		"width": 16,
-		"height": 16,
+		"width": 156,
+		"height": 84,
 		"originX": 0.5,
 		"originY": 0.5,
 		"originalSource": "",
 		"exportFormat": "lossless",
 		"exportQuality": 0.8,
 		"fileType": "image/png",
-		"imageSpriteId": 4407282,
+		"imageSpriteId": 3521449,
 		"useCollisionPoly": true,
 		"tag": ""
 	}
