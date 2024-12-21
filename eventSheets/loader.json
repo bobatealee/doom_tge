@@ -316,6 +316,67 @@
 					"eventType": "block",
 					"conditions": [
 						{
+							"id": "cursor-is-over-object",
+							"objectClass": "Mouse",
+							"sid": 269250973954533,
+							"parameters": {
+								"object": "LoaderPlay"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "LoaderPlay",
+							"sid": 718580338314418,
+							"parameters": {
+								"frame-number": "1"
+							}
+						},
+						{
+							"id": "set-cursor-style2",
+							"objectClass": "Mouse",
+							"sid": 351596446628294,
+							"parameters": {
+								"cursor-style": "pointer"
+							}
+						}
+					],
+					"sid": 261254635003071
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 860340278746943
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "LoaderPlay",
+							"sid": 995303778704640,
+							"parameters": {
+								"frame-number": "0"
+							}
+						},
+						{
+							"id": "set-cursor-style2",
+							"objectClass": "Mouse",
+							"sid": 134241613613922,
+							"parameters": {
+								"cursor-style": "normal"
+							}
+						}
+					],
+					"sid": 117320218616838
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
 							"id": "mouse-button-is-down",
 							"objectClass": "Mouse",
 							"sid": 126584671010481,
@@ -336,9 +397,9 @@
 						{
 							"id": "set-animation-frame",
 							"objectClass": "LoaderPlay",
-							"sid": 265860466893005,
+							"sid": 445407074735159,
 							"parameters": {
-								"frame-number": "1"
+								"frame-number": "2"
 							}
 						}
 					],
@@ -365,34 +426,13 @@
 						{
 							"id": "set-animation-frame",
 							"objectClass": "LoaderPlay",
-							"sid": 270116543939275,
+							"sid": 915408969934258,
 							"parameters": {
-								"frame-number": "1"
+								"frame-number": "2"
 							}
 						}
 					],
 					"sid": 890931864976295
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "else",
-							"objectClass": "System",
-							"sid": 642524067644324
-						}
-					],
-					"actions": [
-						{
-							"id": "set-animation-frame",
-							"objectClass": "LoaderPlay",
-							"sid": 765831974351298,
-							"parameters": {
-								"frame-number": "0"
-							}
-						}
-					],
-					"sid": 596393878817145
 				},
 				{
 					"eventType": "block",

@@ -771,7 +771,7 @@
 	},
 	"properties": {
 		"description": "DOOM: The Gallery Experience was created as an art piece designed to parody the wonderfully pretentious world of gallery openings.",
-		"version": "1.0.8",
+		"version": "1.0.9",
 		"autoIncrementVersion": false,
 		"author": "",
 		"authorEmail": "",
