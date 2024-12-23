@@ -7,11 +7,14 @@ assignees: bobatealee
 
 ---
 
-**BUG DESCRIPTION**
-Please describe the bug.
+## Bug description
+<!-- Please describe the bug. -->
 
-**STEPS TO REPRODUCE**
-Please include steps on how to reproduce the bug.
 
-**SYSTEM INFORMATION**
-Please include information such as OS, browser, browser version, etc.
+## Steps to reproduce
+<!-- Please include steps on how to reproduce the bug. -->
+
+
+## System information
+<!-- Please include information such as OS, browser, browser version, etc. -->
+
