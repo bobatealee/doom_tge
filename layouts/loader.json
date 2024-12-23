@@ -254,7 +254,7 @@
 				{
 					"type": "LoaderText",
 					"properties": {
-						"text": "Loading...",
+						"text": "...",
 						"enable-bbcode": true,
 						"character-width": 12,
 						"character-height": 12,
@@ -279,11 +279,11 @@
 						"WarpObject": {
 							"isEnabled": true,
 							"parameters": {
-								"x-frequency": 3,
+								"x-frequency": 2,
 								"y-frequency": 0,
 								"x-amplitude": 1,
 								"y-amplitude": 0,
-								"x-speed": 0.5,
+								"x-speed": 1,
 								"y-speed": 0
 							}
 						}
@@ -298,9 +298,9 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 8,
+						"x": 0,
 						"y": 116,
-						"width": 304,
+						"width": 319,
 						"height": 12,
 						"originX": 0,
 						"originY": 0,
