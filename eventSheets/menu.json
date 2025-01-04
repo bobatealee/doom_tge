@@ -439,6 +439,49 @@
 								}
 							],
 							"sid": 605747053526521
+						},
+						{
+							"eventType": "comment",
+							"text": "standalone exclusive"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-windows-webview2-export",
+									"objectClass": "PlatformInfo",
+									"sid": 252362054480271,
+									"isInverted": true
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 906015659330374,
+									"parameters": {
+										"variable": "MENU_menu",
+										"comparison": 0,
+										"value": "\"Main\""
+									}
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "MenuFont",
+									"sid": 620609969299881,
+									"parameters": {
+										"instance-variable": "id",
+										"comparison": 0,
+										"value": "4"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "destroy",
+									"objectClass": "MenuFont",
+									"sid": 575436558764210
+								}
+							],
+							"sid": 581493184656748
 						}
 					]
 				},
@@ -3622,6 +3665,33 @@
 									"sid": 127596774717537
 								}
 							]
+						},
+						{
+							"eventType": "comment",
+							"text": "standalone exclusive: exit"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 624972455708422,
+									"parameters": {
+										"variable": "id",
+										"comparison": 0,
+										"value": "4"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "close",
+									"objectClass": "Browser",
+									"sid": 756638419403749
+								}
+							],
+							"sid": 667414723601970
 						}
 					]
 				},
