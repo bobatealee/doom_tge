@@ -6407,6 +6407,62 @@
 					"sid": 701803682908168
 				}
 			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 807237362575039,
+					"parameters": {
+						"key": 27
+					}
+				}
+			],
+			"actions": [],
+			"sid": 153131388413208,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-fullscreen",
+							"objectClass": "Browser",
+							"sid": 149724363830239
+						}
+					],
+					"actions": [
+						{
+							"id": "cancel-fullscreen",
+							"objectClass": "Browser",
+							"sid": 306270125910585
+						}
+					],
+					"sid": 181503165740656
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "has-pointer-lock",
+							"objectClass": "Mouse",
+							"sid": 377541862936298
+						}
+					],
+					"actions": [
+						{
+							"id": "request-pointer-lock",
+							"objectClass": "Mouse",
+							"sid": 821161267471000,
+							"parameters": {
+								"unadjusted-movement": false
+							}
+						}
+					],
+					"sid": 906604086424255
+				}
+			]
 		}
 	],
 	"sid": 815359530309005
