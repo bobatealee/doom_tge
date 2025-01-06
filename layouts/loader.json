@@ -2,6 +2,40 @@
 	"name": "loader",
 	"layers": [
 		{
+			"name": "Background",
+			"overriden": 0,
+			"subLayers": [],
+			"instances": [],
+			"sid": 695729801456760,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
+			"isHTMLElementsLayer": false,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0,
+				0,
+				0,
+				1
+			],
+			"isTransparent": false,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		},
+		{
 			"name": "Loader",
 			"overriden": 0,
 			"subLayers": [],
@@ -332,7 +366,7 @@
 				0,
 				1
 			],
-			"isTransparent": false,
+			"isTransparent": true,
 			"parallaxX": 0,
 			"parallaxY": 0,
 			"scaleRate": 1,

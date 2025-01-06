@@ -15,19 +15,19 @@
 				{
 					"id": "on-start-of-layout",
 					"objectClass": "System",
-					"sid": 762951166734789
+					"sid": 888958205879775
 				}
 			],
 			"actions": [
 				{
 					"id": "stop-animation",
 					"objectClass": "LoaderPlay",
-					"sid": 268226491453486
+					"sid": 359128639644149
 				},
 				{
 					"id": "set-opacity",
 					"objectClass": "LoaderPlay",
-					"sid": 926934295815458,
+					"sid": 412081193206935,
 					"parameters": {
 						"opacity": "0"
 					}
@@ -35,7 +35,7 @@
 				{
 					"id": "set-position",
 					"objectClass": "LoaderButton",
-					"sid": 409769096965801,
+					"sid": 823724433858641,
 					"parameters": {
 						"x": "LoaderBase.X",
 						"y": "LoaderBase.Y"
@@ -44,7 +44,7 @@
 				{
 					"id": "set-opacity",
 					"objectClass": "LoaderButton",
-					"sid": 805096918101034,
+					"sid": 795567626511797,
 					"parameters": {
 						"opacity": "0"
 					}
@@ -52,14 +52,38 @@
 				{
 					"id": "request-project-file",
 					"objectClass": "AJAX",
-					"sid": 242596534931063,
+					"sid": 668992418317453,
 					"parameters": {
 						"tag": "\"splashes\"",
 						"file": "splashes.txt"
 					}
 				}
 			],
-			"sid": 287526932582744
+			"sid": 604379326552263,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-windows-webview2-export",
+							"objectClass": "PlatformInfo",
+							"sid": 542836016438592
+						}
+					],
+					"actions": [
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 342210766772016,
+							"parameters": {
+								"layer": "\"Loader\"",
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 271458487129875
+				}
+			]
 		},
 		{
 			"eventType": "block",
@@ -67,7 +91,7 @@
 				{
 					"id": "on-completed",
 					"objectClass": "AJAX",
-					"sid": 442188622296109,
+					"sid": 258596696255038,
 					"parameters": {
 						"tag": "\"splashes\""
 					}
@@ -77,13 +101,13 @@
 				{
 					"id": "set-text",
 					"objectClass": "LoaderText",
-					"sid": 712843908060248,
+					"sid": 127941772150268,
 					"parameters": {
 						"text": "tokenat(AJAX.LastData, round(random(0, tokencount(AJAX.LastData, newline)-1)), newline)"
 					}
 				}
 			],
-			"sid": 491137104949478
+			"sid": 872555966577666
 		},
 		{
 			"eventType": "block",
@@ -91,7 +115,7 @@
 				{
 					"id": "has-tags",
 					"objectClass": "LoaderBar",
-					"sid": 766684935461394,
+					"sid": 242874771238469,
 					"parameters": {
 						"tags": "\"loading\""
 					}
@@ -101,13 +125,13 @@
 				{
 					"id": "set-width",
 					"objectClass": "LoaderBar",
-					"sid": 740567851646025,
+					"sid": 693683026562363,
 					"parameters": {
 						"width": "lerp(Self.Width, loadingprogress*(LoaderBase.Width-24)+14, 10*dt)"
 					}
 				}
 			],
-			"sid": 438686587985465
+			"sid": 915847937035001
 		},
 		{
 			"eventType": "comment",
@@ -119,14 +143,14 @@
 				{
 					"id": "on-loader-layout-complete",
 					"objectClass": "System",
-					"sid": 204418301589303
+					"sid": 901642310047575
 				}
 			],
 			"actions": [
 				{
 					"id": "change-tags",
 					"objectClass": "LoaderBar",
-					"sid": 684960941611609,
+					"sid": 763295535012333,
 					"parameters": {
 						"action": "remove",
 						"tags": "\"loading\""
@@ -135,7 +159,7 @@
 				{
 					"id": "tween-one-property",
 					"objectClass": "LoaderBase",
-					"sid": 504924937140993,
+					"sid": 366247487521824,
 					"behaviorType": "Tween",
 					"parameters": {
 						"tags": "\"shrink\"",
@@ -152,7 +176,7 @@
 				{
 					"id": "tween-one-property",
 					"objectClass": "LoaderButton",
-					"sid": 422919946258039,
+					"sid": 376919505772939,
 					"behaviorType": "Tween",
 					"parameters": {
 						"tags": "\"fade\"",
@@ -167,7 +191,7 @@
 					}
 				}
 			],
-			"sid": 357260999390746
+			"sid": 665717663952560
 		},
 		{
 			"eventType": "block",
@@ -175,7 +199,7 @@
 				{
 					"id": "on-tweens-finished",
 					"objectClass": "LoaderBase",
-					"sid": 214149806899183,
+					"sid": 810224695050893,
 					"behaviorType": "Tween",
 					"parameters": {
 						"tags": "\"shrink\""
@@ -186,7 +210,7 @@
 				{
 					"id": "tween-one-property",
 					"objectClass": "LoaderBase",
-					"sid": 314622174683058,
+					"sid": 160106228474291,
 					"behaviorType": "Tween",
 					"parameters": {
 						"tags": "\"grow\"",
@@ -203,7 +227,7 @@
 				{
 					"id": "tween-one-property",
 					"objectClass": "LoaderBase",
-					"sid": 397373274804436,
+					"sid": 284556763195378,
 					"behaviorType": "Tween",
 					"parameters": {
 						"tags": "\"grow\"",
@@ -218,7 +242,7 @@
 					}
 				}
 			],
-			"sid": 983132196708858
+			"sid": 693499155800593
 		},
 		{
 			"eventType": "block",
@@ -226,7 +250,7 @@
 				{
 					"id": "on-tweens-finished",
 					"objectClass": "LoaderBase",
-					"sid": 789073810138110,
+					"sid": 918181253710806,
 					"behaviorType": "Tween",
 					"parameters": {
 						"tags": "\"grow\""
@@ -237,7 +261,7 @@
 				{
 					"id": "tween-one-property",
 					"objectClass": "LoaderPlay",
-					"sid": 525045913931689,
+					"sid": 163803365195700,
 					"behaviorType": "Tween",
 					"parameters": {
 						"tags": "\"fade\"",
@@ -252,7 +276,7 @@
 					}
 				}
 			],
-			"sid": 547670800960790
+			"sid": 550428662194076
 		},
 		{
 			"eventType": "block",
@@ -260,7 +284,7 @@
 				{
 					"id": "is-playing",
 					"objectClass": "LoaderBase",
-					"sid": 611405971985714,
+					"sid": 963915188182187,
 					"behaviorType": "Tween",
 					"parameters": {
 						"tags": "\"shrink\""
@@ -269,7 +293,7 @@
 				{
 					"id": "is-playing",
 					"objectClass": "LoaderBase",
-					"sid": 418751547346796,
+					"sid": 238009545528730,
 					"behaviorType": "Tween",
 					"parameters": {
 						"tags": "\"grow\""
@@ -280,7 +304,7 @@
 				{
 					"id": "set-size",
 					"objectClass": "LoaderBar",
-					"sid": 972636359441327,
+					"sid": 186237929621089,
 					"parameters": {
 						"width": "LoaderBase.Width-10",
 						"height": "LoaderBase.Height-10"
@@ -289,7 +313,7 @@
 				{
 					"id": "set-position",
 					"objectClass": "LoaderBar",
-					"sid": 806757489146535,
+					"sid": 513727894591963,
 					"parameters": {
 						"x": "LoaderBase.X-Self.Width/2",
 						"y": "LoaderBase.Y-Self.Height-5"
@@ -298,14 +322,14 @@
 				{
 					"id": "set-size",
 					"objectClass": "LoaderButton",
-					"sid": 894755812889309,
+					"sid": 326753131810262,
 					"parameters": {
 						"width": "LoaderBase.Width",
 						"height": "LoaderBase.Height"
 					}
 				}
 			],
-			"sid": 123902079563089,
+			"sid": 774833440454377,
 			"isOrBlock": true
 		},
 		{
@@ -318,7 +342,7 @@
 				{
 					"id": "compare-opacity",
 					"objectClass": "LoaderPlay",
-					"sid": 748174866322336,
+					"sid": 406183036565203,
 					"parameters": {
 						"comparison": 5,
 						"opacity": "100"
@@ -329,20 +353,20 @@
 				{
 					"id": "destroy",
 					"objectClass": "LoaderBase",
-					"sid": 600664997558732
+					"sid": 182051452473941
 				},
 				{
 					"id": "destroy",
 					"objectClass": "LoaderBar",
-					"sid": 788950998207655
+					"sid": 315495140767877
 				},
 				{
 					"id": "destroy",
 					"objectClass": "LoaderButton",
-					"sid": 870563077327642
+					"sid": 795928428067330
 				}
 			],
-			"sid": 480265987072640,
+			"sid": 606716803107286,
 			"children": [
 				{
 					"eventType": "block",
@@ -350,7 +374,7 @@
 						{
 							"id": "cursor-is-over-object",
 							"objectClass": "Mouse",
-							"sid": 269250973954533,
+							"sid": 407914646763571,
 							"parameters": {
 								"object": "LoaderPlay"
 							}
@@ -360,7 +384,7 @@
 						{
 							"id": "set-animation-frame",
 							"objectClass": "LoaderPlay",
-							"sid": 718580338314418,
+							"sid": 563669251028442,
 							"parameters": {
 								"frame-number": "1"
 							}
@@ -368,13 +392,13 @@
 						{
 							"id": "set-cursor-style2",
 							"objectClass": "Mouse",
-							"sid": 351596446628294,
+							"sid": 998552378487094,
 							"parameters": {
 								"cursor-style": "pointer"
 							}
 						}
 					],
-					"sid": 261254635003071
+					"sid": 231222883593633
 				},
 				{
 					"eventType": "block",
@@ -382,14 +406,14 @@
 						{
 							"id": "else",
 							"objectClass": "System",
-							"sid": 860340278746943
+							"sid": 374480169825721
 						}
 					],
 					"actions": [
 						{
 							"id": "set-animation-frame",
 							"objectClass": "LoaderPlay",
-							"sid": 995303778704640,
+							"sid": 751709337768315,
 							"parameters": {
 								"frame-number": "0"
 							}
@@ -397,13 +421,13 @@
 						{
 							"id": "set-cursor-style2",
 							"objectClass": "Mouse",
-							"sid": 134241613613922,
+							"sid": 215908555071161,
 							"parameters": {
 								"cursor-style": "normal"
 							}
 						}
 					],
-					"sid": 117320218616838
+					"sid": 840324762479525
 				},
 				{
 					"eventType": "block",
@@ -411,7 +435,7 @@
 						{
 							"id": "mouse-button-is-down",
 							"objectClass": "Mouse",
-							"sid": 126584671010481,
+							"sid": 567622994235161,
 							"parameters": {
 								"mouse-button": "left"
 							}
@@ -419,7 +443,7 @@
 						{
 							"id": "cursor-is-over-object",
 							"objectClass": "Mouse",
-							"sid": 261186220448958,
+							"sid": 358920007976888,
 							"parameters": {
 								"object": "LoaderPlay"
 							}
@@ -429,13 +453,13 @@
 						{
 							"id": "set-animation-frame",
 							"objectClass": "LoaderPlay",
-							"sid": 445407074735159,
+							"sid": 474719985894852,
 							"parameters": {
 								"frame-number": "2"
 							}
 						}
 					],
-					"sid": 278833704207314
+					"sid": 724114935733841
 				},
 				{
 					"eventType": "block",
@@ -443,12 +467,12 @@
 						{
 							"id": "else",
 							"objectClass": "System",
-							"sid": 838007641170845
+							"sid": 369843327085135
 						},
 						{
 							"id": "is-touching-object",
 							"objectClass": "Touch",
-							"sid": 221549924436828,
+							"sid": 925058051101143,
 							"parameters": {
 								"object": "LoaderPlay"
 							}
@@ -458,13 +482,13 @@
 						{
 							"id": "set-animation-frame",
 							"objectClass": "LoaderPlay",
-							"sid": 915408969934258,
+							"sid": 447700247688562,
 							"parameters": {
 								"frame-number": "2"
 							}
 						}
 					],
-					"sid": 890931864976295
+					"sid": 357739889963835
 				},
 				{
 					"eventType": "block",
@@ -472,7 +496,7 @@
 						{
 							"id": "on-button-released",
 							"objectClass": "Mouse",
-							"sid": 115959672395776,
+							"sid": 623661756971870,
 							"parameters": {
 								"mouse-button": "left"
 							}
@@ -480,7 +504,7 @@
 						{
 							"id": "cursor-is-over-object",
 							"objectClass": "Mouse",
-							"sid": 249882538077981,
+							"sid": 106739145704767,
 							"parameters": {
 								"object": "LoaderPlay"
 							}
@@ -489,13 +513,13 @@
 					"actions": [
 						{
 							"callFunction": "transition",
-							"sid": 617539003601585,
+							"sid": 680662123826558,
 							"parameters": [
 								"\"menu\""
 							]
 						}
 					],
-					"sid": 753397469904359
+					"sid": 670901596521887
 				},
 				{
 					"eventType": "block",
@@ -503,12 +527,12 @@
 						{
 							"id": "on-any-touch-end",
 							"objectClass": "Touch",
-							"sid": 948512449970633
+							"sid": 877246686789716
 						},
 						{
 							"id": "is-touching-object",
 							"objectClass": "Touch",
-							"sid": 531887179192532,
+							"sid": 229037047027913,
 							"parameters": {
 								"object": "LoaderPlay"
 							}
@@ -517,15 +541,41 @@
 					"actions": [
 						{
 							"callFunction": "transition",
-							"sid": 768947485713570,
+							"sid": 214467224439766,
 							"parameters": [
 								"\"menu\""
 							]
 						}
 					],
-					"sid": 133796003488468
+					"sid": 454833860237939
 				}
 			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-loader-layout-complete",
+					"objectClass": "System",
+					"sid": 303849572235292
+				},
+				{
+					"id": "is-windows-webview2-export",
+					"objectClass": "PlatformInfo",
+					"sid": 989111331225626
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 867174888903730,
+					"parameters": {
+						"layout": "menu"
+					}
+				}
+			],
+			"sid": 274938986926804
 		}
 	],
 	"sid": 930092798194707

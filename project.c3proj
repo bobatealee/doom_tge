@@ -50,6 +50,13 @@
 		},
 		{
 			"type": "plugin",
+			"id": "LocalStorage",
+			"name": "Local storage",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "Mouse",
 			"name": "Mouse",
 			"author": "Scirra",
@@ -124,6 +131,13 @@
 			"type": "plugin",
 			"id": "Touch",
 			"name": "Touch",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "gamepad",
+			"name": "Gamepad",
 			"author": "Scirra",
 			"bundled": false
 		},
@@ -302,7 +316,9 @@
 					"Browser",
 					"PlatformInfo",
 					"Touch",
-					"AJAX"
+					"AJAX",
+					"Gamepad",
+					"LocalStorage"
 				],
 				"subfolders": [],
 				"name": "Plugins"
@@ -796,10 +812,10 @@
 	},
 	"properties": {
 		"description": "DOOM: The Gallery Experience was created as an art piece designed to parody the wonderfully pretentious world of gallery openings.",
-		"version": "1.1.3",
+		"version": "1.2.0",
 		"autoIncrementVersion": false,
-		"author": "",
-		"authorEmail": "",
+		"author": "Scum Dog Games",
+		"authorEmail": "contact@scum.dog",
 		"authorWebsite": "https://bobatealee.com",
 		"appId": "",
 		"pixelRounding": true,

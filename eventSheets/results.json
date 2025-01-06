@@ -1649,15 +1649,6 @@
 									}
 								},
 								{
-									"id": "set-boolean-eventvar",
-									"objectClass": "System",
-									"sid": 311631246483238,
-									"parameters": {
-										"variable": "UNLOCK_doomMusic",
-										"value": "true"
-									}
-								},
-								{
 									"callFunction": "transition",
 									"sid": 389604241473826,
 									"parameters": [
@@ -1685,7 +1676,26 @@
 					"sid": 699610602499175
 				}
 			],
-			"actions": [],
+			"actions": [
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 297618753783068,
+					"parameters": {
+						"variable": "UNLOCK_doomMusic",
+						"value": "true"
+					}
+				},
+				{
+					"id": "set-item",
+					"objectClass": "LocalStorage",
+					"sid": 308397067137505,
+					"parameters": {
+						"key": "\"doomUnlock\"",
+						"value": "1"
+					}
+				}
+			],
 			"sid": 483386478599973,
 			"children": [
 				{
@@ -1710,6 +1720,15 @@
 							"parameters": {
 								"variable": "MEDAL_observations",
 								"value": "true"
+							}
+						},
+						{
+							"id": "set-item",
+							"objectClass": "LocalStorage",
+							"sid": 141818787414970,
+							"parameters": {
+								"key": "\"medalObservations\"",
+								"value": "1"
 							}
 						}
 					],
@@ -1785,6 +1804,15 @@
 								"variable": "MEDAL_items",
 								"value": "true"
 							}
+						},
+						{
+							"id": "set-item",
+							"objectClass": "LocalStorage",
+							"sid": 951778646710493,
+							"parameters": {
+								"key": "\"medalItems\"",
+								"value": "1"
+							}
 						}
 					],
 					"sid": 317139317077918,
@@ -1858,6 +1886,15 @@
 							"parameters": {
 								"variable": "MEDAL_spending",
 								"value": "true"
+							}
+						},
+						{
+							"id": "set-item",
+							"objectClass": "LocalStorage",
+							"sid": 119099870552764,
+							"parameters": {
+								"key": "\"medalSpending\"",
+								"value": "1"
 							}
 						}
 					],
@@ -1933,6 +1970,15 @@
 								"variable": "MEDAL_secrets",
 								"value": "true"
 							}
+						},
+						{
+							"id": "set-item",
+							"objectClass": "LocalStorage",
+							"sid": 621084704640337,
+							"parameters": {
+								"key": "\"medalSecrets\"",
+								"value": "1"
+							}
 						}
 					],
 					"sid": 390015960963652,
@@ -2006,6 +2052,15 @@
 							"parameters": {
 								"variable": "MEDAL_time",
 								"value": "true"
+							}
+						},
+						{
+							"id": "set-item",
+							"objectClass": "LocalStorage",
+							"sid": 508385479062586,
+							"parameters": {
+								"key": "\"medalTime\"",
+								"value": "1"
 							}
 						}
 					],
@@ -2081,6 +2136,15 @@
 								"variable": "MEDAL_drinks",
 								"value": "true"
 							}
+						},
+						{
+							"id": "set-item",
+							"objectClass": "LocalStorage",
+							"sid": 337942139708213,
+							"parameters": {
+								"key": "\"medalDrinks\"",
+								"value": "1"
+							}
 						}
 					],
 					"sid": 575377418740303,
@@ -2155,6 +2219,15 @@
 								"variable": "MEDAL_thoughtful",
 								"value": "true"
 							}
+						},
+						{
+							"id": "set-item",
+							"objectClass": "LocalStorage",
+							"sid": 733024137890189,
+							"parameters": {
+								"key": "\"medalThoughtful\"",
+								"value": "1"
+							}
 						}
 					],
 					"sid": 449246386015906,
@@ -2226,6 +2299,15 @@
 							"parameters": {
 								"variable": "MEDAL_doom",
 								"value": "true"
+							}
+						},
+						{
+							"id": "set-item",
+							"objectClass": "LocalStorage",
+							"sid": 488550198626255,
+							"parameters": {
+								"key": "\"medalDoom\"",
+								"value": "1"
 							}
 						}
 					],

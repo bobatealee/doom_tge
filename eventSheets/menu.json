@@ -232,6 +232,16 @@
 			"sid": 803942779672599
 		},
 		{
+			"eventType": "variable",
+			"name": "GAME_eraseTimer",
+			"type": "number",
+			"initialValue": "300",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 874529572897963
+		},
+		{
 			"eventType": "include",
 			"includeSheet": "bleed"
 		},
@@ -299,6 +309,110 @@
 							"id": "stop-animation",
 							"objectClass": "Medal",
 							"sid": 531998111877284
+						},
+						{
+							"id": "check-item-exists",
+							"objectClass": "LocalStorage",
+							"sid": 200740576067388,
+							"parameters": {
+								"key": "\"sound\""
+							}
+						},
+						{
+							"id": "check-item-exists",
+							"objectClass": "LocalStorage",
+							"sid": 946824364226741,
+							"parameters": {
+								"key": "\"music\""
+							}
+						},
+						{
+							"id": "check-item-exists",
+							"objectClass": "LocalStorage",
+							"sid": 651668988806350,
+							"parameters": {
+								"key": "\"flashing\""
+							}
+						},
+						{
+							"id": "check-item-exists",
+							"objectClass": "LocalStorage",
+							"sid": 748812615099508,
+							"parameters": {
+								"key": "\"doom\""
+							}
+						},
+						{
+							"id": "check-item-exists",
+							"objectClass": "LocalStorage",
+							"sid": 233450177580684,
+							"parameters": {
+								"key": "\"doomUnlock\""
+							}
+						},
+						{
+							"id": "check-item-exists",
+							"objectClass": "LocalStorage",
+							"sid": 886330285243467,
+							"parameters": {
+								"key": "\"medalObservations\""
+							}
+						},
+						{
+							"id": "check-item-exists",
+							"objectClass": "LocalStorage",
+							"sid": 426181379381152,
+							"parameters": {
+								"key": "\"medalItems\""
+							}
+						},
+						{
+							"id": "check-item-exists",
+							"objectClass": "LocalStorage",
+							"sid": 499580386600407,
+							"parameters": {
+								"key": "\"medalSpending\""
+							}
+						},
+						{
+							"id": "check-item-exists",
+							"objectClass": "LocalStorage",
+							"sid": 275831474681916,
+							"parameters": {
+								"key": "\"medalSecrets\""
+							}
+						},
+						{
+							"id": "check-item-exists",
+							"objectClass": "LocalStorage",
+							"sid": 354465153875372,
+							"parameters": {
+								"key": "\"medalTime\""
+							}
+						},
+						{
+							"id": "check-item-exists",
+							"objectClass": "LocalStorage",
+							"sid": 612424075788673,
+							"parameters": {
+								"key": "\"medalDrinks\""
+							}
+						},
+						{
+							"id": "check-item-exists",
+							"objectClass": "LocalStorage",
+							"sid": 927430775767399,
+							"parameters": {
+								"key": "\"medalThoughtful\""
+							}
+						},
+						{
+							"id": "check-item-exists",
+							"objectClass": "LocalStorage",
+							"sid": 161173386956994,
+							"parameters": {
+								"key": "\"medalDoom\""
+							}
 						}
 					],
 					"sid": 153878180751575,
@@ -454,16 +568,6 @@
 									"isInverted": true
 								},
 								{
-									"id": "compare-eventvar",
-									"objectClass": "System",
-									"sid": 906015659330374,
-									"parameters": {
-										"variable": "MENU_menu",
-										"comparison": 0,
-										"value": "\"Main\""
-									}
-								},
-								{
 									"id": "compare-instance-variable",
 									"objectClass": "MenuFont",
 									"sid": 620609969299881,
@@ -471,6 +575,14 @@
 										"instance-variable": "id",
 										"comparison": 0,
 										"value": "4"
+									}
+								},
+								{
+									"id": "is-on-layer",
+									"objectClass": "MenuFont",
+									"sid": 455903319918516,
+									"parameters": {
+										"layer": "\"Main\""
 									}
 								}
 							],
@@ -533,6 +645,159 @@
 						}
 					],
 					"sid": 656183370511778
+				},
+				{
+					"eventType": "comment",
+					"text": "erase progress"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 953917555947170,
+							"parameters": {
+								"key": 46
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 856378981726857,
+							"parameters": {
+								"variable": "GAME_eraseTimer",
+								"value": "60*dt"
+							}
+						}
+					],
+					"sid": 648420053342944,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "has-tags",
+									"objectClass": "MenuFontSmall",
+									"sid": 878402378406480,
+									"parameters": {
+										"tags": "\"version\""
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 153066951275310,
+									"parameters": {
+										"variable": "GAME_eraseTimer",
+										"comparison": 4,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "MenuFontSmall",
+									"sid": 578696815369456,
+									"parameters": {
+										"text": "\"ERASING... \"&100-round(GAME_eraseTimer/3)&\"%\""
+									}
+								}
+							],
+							"sid": 761297915066790
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 123865527570173,
+									"parameters": {
+										"variable": "GAME_eraseTimer",
+										"comparison": 3,
+										"value": "0"
+									}
+								},
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 522902346227744
+								}
+							],
+							"actions": [
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 382236319991107,
+									"parameters": {
+										"audio-file": "badtime",
+										"loop": "not-looping",
+										"volume": "log10(SETTING_volumeSound)*20",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
+								},
+								{
+									"id": "clear-storage",
+									"objectClass": "LocalStorage",
+									"sid": 812625862407129
+								}
+							],
+							"sid": 597166877878477,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "has-tags",
+											"objectClass": "MenuFontSmall",
+											"sid": 331522974200524,
+											"parameters": {
+												"tags": "\"version\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-text",
+											"objectClass": "MenuFontSmall",
+											"sid": 268351518859165,
+											"parameters": {
+												"text": "\"V\"&projectversion"
+											}
+										}
+									],
+									"sid": 477694580555836
+								}
+							]
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 352353260939227
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 200949731925627,
+							"parameters": {
+								"variable": "GAME_eraseTimer",
+								"value": "300"
+							}
+						}
+					],
+					"sid": 250453745205863
 				}
 			]
 		},
@@ -542,7 +807,7 @@
 				{
 					"id": "on-ended",
 					"objectClass": "Audio",
-					"sid": 100116143552121,
+					"sid": 112002978574818,
 					"parameters": {
 						"tag": "\"doom\""
 					}
@@ -550,7 +815,7 @@
 				{
 					"id": "compare-boolean-eventvar",
 					"objectClass": "System",
-					"sid": 561004386064666,
+					"sid": 290926534435570,
 					"parameters": {
 						"variable": "SETTING_doomMusic"
 					}
@@ -560,7 +825,7 @@
 				{
 					"id": "play",
 					"objectClass": "Audio",
-					"sid": 398295548432392,
+					"sid": 140224364642620,
 					"parameters": {
 						"audio-file": "e1m5",
 						"loop": "looping",
@@ -570,7 +835,1047 @@
 					}
 				}
 			],
-			"sid": 412499096788300
+			"sid": 855838507786643
+		},
+		{
+			"eventType": "comment",
+			"text": "localstorage. this sucks a lot"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-item-exists",
+					"objectClass": "LocalStorage",
+					"sid": 361907625499655,
+					"parameters": {
+						"key": "\"sound\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "get-item",
+					"objectClass": "LocalStorage",
+					"sid": 762045321913546,
+					"parameters": {
+						"key": "\"sound\""
+					}
+				}
+			],
+			"sid": 923995638548330
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-item-get",
+					"objectClass": "LocalStorage",
+					"sid": 879298992273899,
+					"parameters": {
+						"key": "\"sound\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 937459504064357,
+					"parameters": {
+						"variable": "SETTING_volumeSound",
+						"value": "str(LocalStorage.ItemValue)"
+					}
+				}
+			],
+			"sid": 297452535398603,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Slider",
+							"sid": 289672565198674,
+							"parameters": {
+								"instance-variable": "id",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-x",
+							"objectClass": "Slider",
+							"sid": 115957091750013,
+							"parameters": {
+								"x": "SETTING_volumeSound*(SliderBar.Width-8)+(SliderBar.X+4)"
+							}
+						}
+					],
+					"sid": 894527900166776
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-item-exists",
+					"objectClass": "LocalStorage",
+					"sid": 544696289279400,
+					"parameters": {
+						"key": "\"music\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "get-item",
+					"objectClass": "LocalStorage",
+					"sid": 863472552010556,
+					"parameters": {
+						"key": "\"music\""
+					}
+				}
+			],
+			"sid": 395490658661071
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-item-get",
+					"objectClass": "LocalStorage",
+					"sid": 836666429351886,
+					"parameters": {
+						"key": "\"music\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 687410188065814,
+					"parameters": {
+						"variable": "SETTING_volumeMusic",
+						"value": "str(LocalStorage.ItemValue)"
+					}
+				}
+			],
+			"sid": 187300857949429,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Slider",
+							"sid": 372621676258423,
+							"parameters": {
+								"instance-variable": "id",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-x",
+							"objectClass": "Slider",
+							"sid": 580651169670119,
+							"parameters": {
+								"x": "SETTING_volumeMusic*(SliderBar.Width-8)+(SliderBar.X+4)"
+							}
+						},
+						{
+							"id": "set-volume",
+							"objectClass": "Audio",
+							"sid": 199085853232114,
+							"parameters": {
+								"tag": "\"music\"",
+								"db": "(log10(SETTING_volumeMusic)*20)"
+							}
+						}
+					],
+					"sid": 829424974001671
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-item-exists",
+					"objectClass": "LocalStorage",
+					"sid": 787785220408339,
+					"parameters": {
+						"key": "\"flashing\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "get-item",
+					"objectClass": "LocalStorage",
+					"sid": 492007477653480,
+					"parameters": {
+						"key": "\"flashing\""
+					}
+				}
+			],
+			"sid": 984144168508270
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-item-get",
+					"objectClass": "LocalStorage",
+					"sid": 857180520160565,
+					"parameters": {
+						"key": "\"flashing\""
+					}
+				}
+			],
+			"actions": [],
+			"sid": 370830036558495,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-value",
+							"objectClass": "LocalStorage",
+							"sid": 119192725420931,
+							"parameters": {
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 911390136634646,
+							"parameters": {
+								"variable": "SETTING_flashing",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 578774677291609
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 523508506851111
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 104364885147328,
+							"parameters": {
+								"variable": "SETTING_flashing",
+								"value": "false"
+							}
+						}
+					],
+					"sid": 297803989407861
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-item-exists",
+					"objectClass": "LocalStorage",
+					"sid": 471641971232372,
+					"parameters": {
+						"key": "\"doom\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "get-item",
+					"objectClass": "LocalStorage",
+					"sid": 989720109462136,
+					"parameters": {
+						"key": "\"doom\""
+					}
+				}
+			],
+			"sid": 366103808234342
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-item-get",
+					"objectClass": "LocalStorage",
+					"sid": 588973117136075,
+					"parameters": {
+						"key": "\"doom\""
+					}
+				}
+			],
+			"actions": [],
+			"sid": 712689773785071,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-value",
+							"objectClass": "LocalStorage",
+							"sid": 951810840138444,
+							"parameters": {
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 887394670064269,
+							"parameters": {
+								"variable": "SETTING_doomMusic",
+								"value": "true"
+							}
+						},
+						{
+							"id": "stop",
+							"objectClass": "Audio",
+							"sid": 743230916444667,
+							"parameters": {
+								"tag": "\"music\""
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 664200382445068,
+							"parameters": {
+								"audio-file": "intro",
+								"loop": "not-looping",
+								"volume": "(log10(SETTING_volumeMusic)*20)",
+								"stereo-pan": "0",
+								"tag-optional": "\"music doom\""
+							}
+						}
+					],
+					"sid": 715223843518990
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 699012502795667
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 927346788337056,
+							"parameters": {
+								"variable": "SETTING_doomMusic",
+								"value": "false"
+							}
+						}
+					],
+					"sid": 377273653388803
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-item-exists",
+					"objectClass": "LocalStorage",
+					"sid": 453995955934726,
+					"parameters": {
+						"key": "\"doomUnlock\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "get-item",
+					"objectClass": "LocalStorage",
+					"sid": 721903627354007,
+					"parameters": {
+						"key": "\"doomUnlock\""
+					}
+				}
+			],
+			"sid": 919415462601567
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-item-get",
+					"objectClass": "LocalStorage",
+					"sid": 430055206732763,
+					"parameters": {
+						"key": "\"doomUnlock\""
+					}
+				}
+			],
+			"actions": [],
+			"sid": 717095900150139,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-value",
+							"objectClass": "LocalStorage",
+							"sid": 122576407169728,
+							"parameters": {
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 910584434570774,
+							"parameters": {
+								"variable": "UNLOCK_doomMusic",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 124917841314382
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-item-exists",
+					"objectClass": "LocalStorage",
+					"sid": 234285029017446,
+					"parameters": {
+						"key": "\"medalObservations\""
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 858260217872928,
+					"parameters": {
+						"variable": "NGIO_medals"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "get-item",
+					"objectClass": "LocalStorage",
+					"sid": 369368225304213,
+					"parameters": {
+						"key": "\"medalObservations\""
+					}
+				}
+			],
+			"sid": 263160584644433
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-item-get",
+					"objectClass": "LocalStorage",
+					"sid": 842205769749852,
+					"parameters": {
+						"key": "\"medalObservations\""
+					}
+				}
+			],
+			"actions": [],
+			"sid": 104741996101796,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-value",
+							"objectClass": "LocalStorage",
+							"sid": 185476513432738,
+							"parameters": {
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 708080555676830,
+							"parameters": {
+								"variable": "MEDAL_observations",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 349237390577238
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-item-exists",
+					"objectClass": "LocalStorage",
+					"sid": 714230083963265,
+					"parameters": {
+						"key": "\"medalItems\""
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 858260217872928,
+					"parameters": {
+						"variable": "NGIO_medals"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "get-item",
+					"objectClass": "LocalStorage",
+					"sid": 670523329354683,
+					"parameters": {
+						"key": "\"medalItems\""
+					}
+				}
+			],
+			"sid": 938368098980555
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-item-get",
+					"objectClass": "LocalStorage",
+					"sid": 843378214321037,
+					"parameters": {
+						"key": "\"medalItems\""
+					}
+				}
+			],
+			"actions": [],
+			"sid": 885911753096833,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-value",
+							"objectClass": "LocalStorage",
+							"sid": 694098246134232,
+							"parameters": {
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 666077940806828,
+							"parameters": {
+								"variable": "MEDAL_items",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 934978744521899
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-item-exists",
+					"objectClass": "LocalStorage",
+					"sid": 796597542144559,
+					"parameters": {
+						"key": "\"medalSpending\""
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 858260217872928,
+					"parameters": {
+						"variable": "NGIO_medals"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "get-item",
+					"objectClass": "LocalStorage",
+					"sid": 158721717181278,
+					"parameters": {
+						"key": "\"medalSpending\""
+					}
+				}
+			],
+			"sid": 367276173591282
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-item-get",
+					"objectClass": "LocalStorage",
+					"sid": 697075652182712,
+					"parameters": {
+						"key": "\"medalSpending\""
+					}
+				}
+			],
+			"actions": [],
+			"sid": 285327130871302,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-value",
+							"objectClass": "LocalStorage",
+							"sid": 340103421599065,
+							"parameters": {
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 438964054778132,
+							"parameters": {
+								"variable": "MEDAL_spending",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 624064797227058
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-item-exists",
+					"objectClass": "LocalStorage",
+					"sid": 303406305801292,
+					"parameters": {
+						"key": "\"medalSecrets\""
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 858260217872928,
+					"parameters": {
+						"variable": "NGIO_medals"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "get-item",
+					"objectClass": "LocalStorage",
+					"sid": 892355058220747,
+					"parameters": {
+						"key": "\"medalSecrets\""
+					}
+				}
+			],
+			"sid": 921159376325516
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-item-get",
+					"objectClass": "LocalStorage",
+					"sid": 385287939461368,
+					"parameters": {
+						"key": "\"medalSecrets\""
+					}
+				}
+			],
+			"actions": [],
+			"sid": 576038428300093,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-value",
+							"objectClass": "LocalStorage",
+							"sid": 564914946999178,
+							"parameters": {
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 792719754127206,
+							"parameters": {
+								"variable": "MEDAL_secrets",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 453109240100983
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-item-exists",
+					"objectClass": "LocalStorage",
+					"sid": 982479456838038,
+					"parameters": {
+						"key": "\"medalTime\""
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 858260217872928,
+					"parameters": {
+						"variable": "NGIO_medals"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "get-item",
+					"objectClass": "LocalStorage",
+					"sid": 896036455452313,
+					"parameters": {
+						"key": "\"medalTime\""
+					}
+				}
+			],
+			"sid": 301574162023968
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-item-get",
+					"objectClass": "LocalStorage",
+					"sid": 970000812261276,
+					"parameters": {
+						"key": "\"medalTime\""
+					}
+				}
+			],
+			"actions": [],
+			"sid": 652895900334717,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-value",
+							"objectClass": "LocalStorage",
+							"sid": 698843809818135,
+							"parameters": {
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 855528540392260,
+							"parameters": {
+								"variable": "MEDAL_time",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 610339128934640
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-item-exists",
+					"objectClass": "LocalStorage",
+					"sid": 185924663384344,
+					"parameters": {
+						"key": "\"medalDrinks\""
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 858260217872928,
+					"parameters": {
+						"variable": "NGIO_medals"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "get-item",
+					"objectClass": "LocalStorage",
+					"sid": 149657856864218,
+					"parameters": {
+						"key": "\"medalDrinks\""
+					}
+				}
+			],
+			"sid": 157710841003685
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-item-get",
+					"objectClass": "LocalStorage",
+					"sid": 419214000579505,
+					"parameters": {
+						"key": "\"medalDrinks\""
+					}
+				}
+			],
+			"actions": [],
+			"sid": 880378672663607,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-value",
+							"objectClass": "LocalStorage",
+							"sid": 216540860786673,
+							"parameters": {
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 652396064994695,
+							"parameters": {
+								"variable": "MEDAL_drinks",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 279019934574440
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-item-exists",
+					"objectClass": "LocalStorage",
+					"sid": 892286561384365,
+					"parameters": {
+						"key": "\"medalThoughtful\""
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 240483133703419,
+					"parameters": {
+						"variable": "NGIO_medals"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "get-item",
+					"objectClass": "LocalStorage",
+					"sid": 429811790097087,
+					"parameters": {
+						"key": "\"medalThoughtful\""
+					}
+				}
+			],
+			"sid": 992917512497480
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-item-get",
+					"objectClass": "LocalStorage",
+					"sid": 518961567033749,
+					"parameters": {
+						"key": "\"medalThoughtful\""
+					}
+				}
+			],
+			"actions": [],
+			"sid": 629760859374572,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-value",
+							"objectClass": "LocalStorage",
+							"sid": 184059206850049,
+							"parameters": {
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 692074901161969,
+							"parameters": {
+								"variable": "MEDAL_thoughtful",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 133145388452671
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-item-exists",
+					"objectClass": "LocalStorage",
+					"sid": 492317375973689,
+					"parameters": {
+						"key": "\"medalDoom\""
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 187681602228728,
+					"parameters": {
+						"variable": "NGIO_medals"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "get-item",
+					"objectClass": "LocalStorage",
+					"sid": 689770675749775,
+					"parameters": {
+						"key": "\"medalDoom\""
+					}
+				}
+			],
+			"sid": 812907770412074
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-item-get",
+					"objectClass": "LocalStorage",
+					"sid": 527921144479537,
+					"parameters": {
+						"key": "\"medalDoom\""
+					}
+				}
+			],
+			"actions": [],
+			"sid": 930223439267733,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-value",
+							"objectClass": "LocalStorage",
+							"sid": 896933700134807,
+							"parameters": {
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 539523163496210,
+							"parameters": {
+								"variable": "MEDAL_doom",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 505168819503901
+				}
+			]
 		},
 		{
 			"eventType": "block",
@@ -607,6 +1912,78 @@
 					"parameters": {
 						"variable": "NGIO_medals",
 						"value": "true"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 886340452239491,
+					"parameters": {
+						"variable": "MEDAL_observations",
+						"value": "false"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 677090337920078,
+					"parameters": {
+						"variable": "MEDAL_items",
+						"value": "false"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 104996019233783,
+					"parameters": {
+						"variable": "MEDAL_spending",
+						"value": "false"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 582841020477225,
+					"parameters": {
+						"variable": "MEDAL_secrets",
+						"value": "false"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 903601367151127,
+					"parameters": {
+						"variable": "MEDAL_time",
+						"value": "false"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 796440981932892,
+					"parameters": {
+						"variable": "MEDAL_drinks",
+						"value": "false"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 884420587773208,
+					"parameters": {
+						"variable": "MEDAL_thoughtful",
+						"value": "false"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 927850679973050,
+					"parameters": {
+						"variable": "MEDAL_doom",
+						"value": "false"
 					}
 				}
 			],
@@ -677,15 +2054,6 @@
 										"variable": "MEDAL_observations",
 										"value": "true"
 									}
-								},
-								{
-									"id": "set-boolean-eventvar",
-									"objectClass": "System",
-									"sid": 894634829941900,
-									"parameters": {
-										"variable": "UNLOCK_doomMusic",
-										"value": "true"
-									}
 								}
 							],
 							"sid": 218047858347578
@@ -720,15 +2088,6 @@
 									"sid": 327601863882548,
 									"parameters": {
 										"variable": "MEDAL_items",
-										"value": "true"
-									}
-								},
-								{
-									"id": "set-boolean-eventvar",
-									"objectClass": "System",
-									"sid": 470615136993804,
-									"parameters": {
-										"variable": "UNLOCK_doomMusic",
 										"value": "true"
 									}
 								}
@@ -767,15 +2126,6 @@
 										"variable": "MEDAL_spending",
 										"value": "true"
 									}
-								},
-								{
-									"id": "set-boolean-eventvar",
-									"objectClass": "System",
-									"sid": 656261023969365,
-									"parameters": {
-										"variable": "UNLOCK_doomMusic",
-										"value": "true"
-									}
 								}
 							],
 							"sid": 679333908943933
@@ -810,15 +2160,6 @@
 									"sid": 187380470646931,
 									"parameters": {
 										"variable": "MEDAL_secrets",
-										"value": "true"
-									}
-								},
-								{
-									"id": "set-boolean-eventvar",
-									"objectClass": "System",
-									"sid": 939728987212479,
-									"parameters": {
-										"variable": "UNLOCK_doomMusic",
 										"value": "true"
 									}
 								}
@@ -857,15 +2198,6 @@
 										"variable": "MEDAL_time",
 										"value": "true"
 									}
-								},
-								{
-									"id": "set-boolean-eventvar",
-									"objectClass": "System",
-									"sid": 930647802728238,
-									"parameters": {
-										"variable": "UNLOCK_doomMusic",
-										"value": "true"
-									}
 								}
 							],
 							"sid": 804216350740589
@@ -900,15 +2232,6 @@
 									"sid": 871531415698280,
 									"parameters": {
 										"variable": "MEDAL_drinks",
-										"value": "true"
-									}
-								},
-								{
-									"id": "set-boolean-eventvar",
-									"objectClass": "System",
-									"sid": 659982687613667,
-									"parameters": {
-										"variable": "UNLOCK_doomMusic",
 										"value": "true"
 									}
 								}
@@ -947,15 +2270,6 @@
 										"variable": "MEDAL_thoughtful",
 										"value": "true"
 									}
-								},
-								{
-									"id": "set-boolean-eventvar",
-									"objectClass": "System",
-									"sid": 390521578013882,
-									"parameters": {
-										"variable": "UNLOCK_doomMusic",
-										"value": "true"
-									}
 								}
 							],
 							"sid": 715922328378557
@@ -990,15 +2304,6 @@
 									"sid": 763487068707275,
 									"parameters": {
 										"variable": "MEDAL_doom",
-										"value": "true"
-									}
-								},
-								{
-									"id": "set-boolean-eventvar",
-									"objectClass": "System",
-									"sid": 509360863152680,
-									"parameters": {
-										"variable": "UNLOCK_doomMusic",
 										"value": "true"
 									}
 								}
@@ -2673,6 +3978,15 @@
 					"parameters": {
 						"key": 13
 					}
+				},
+				{
+					"id": "on-button-pressed",
+					"objectClass": "Gamepad",
+					"sid": 107728974552173,
+					"parameters": {
+						"gamepad": "0",
+						"button": "button-a"
+					}
 				}
 			],
 			"actions": [
@@ -3970,6 +5284,42 @@
 												"variable": "MENU_keyControl",
 												"value": "true"
 											}
+										},
+										{
+											"id": "set-item",
+											"objectClass": "LocalStorage",
+											"sid": 830727103031327,
+											"parameters": {
+												"key": "\"sound\"",
+												"value": "SETTING_volumeSound"
+											}
+										},
+										{
+											"id": "set-item",
+											"objectClass": "LocalStorage",
+											"sid": 178741893550431,
+											"parameters": {
+												"key": "\"music\"",
+												"value": "SETTING_volumeMusic"
+											}
+										},
+										{
+											"id": "set-item",
+											"objectClass": "LocalStorage",
+											"sid": 186869766111176,
+											"parameters": {
+												"key": "\"flashing\"",
+												"value": "SETTING_flashing"
+											}
+										},
+										{
+											"id": "set-item",
+											"objectClass": "LocalStorage",
+											"sid": 994463159507573,
+											"parameters": {
+												"key": "\"doom\"",
+												"value": "SETTING_doomMusic"
+											}
 										}
 									],
 									"sid": 588868749523117
@@ -4266,6 +5616,42 @@
 									"parameters": {
 										"variable": "MENU_keyControl",
 										"value": "true"
+									}
+								},
+								{
+									"id": "set-item",
+									"objectClass": "LocalStorage",
+									"sid": 132289201698463,
+									"parameters": {
+										"key": "\"sound\"",
+										"value": "SETTING_volumeSound"
+									}
+								},
+								{
+									"id": "set-item",
+									"objectClass": "LocalStorage",
+									"sid": 729898754745116,
+									"parameters": {
+										"key": "\"music\"",
+										"value": "SETTING_volumeMusic"
+									}
+								},
+								{
+									"id": "set-item",
+									"objectClass": "LocalStorage",
+									"sid": 853305951701764,
+									"parameters": {
+										"key": "\"flashing\"",
+										"value": "SETTING_flashing"
+									}
+								},
+								{
+									"id": "set-item",
+									"objectClass": "LocalStorage",
+									"sid": 752804200437906,
+									"parameters": {
+										"key": "\"doom\"",
+										"value": "SETTING_doomMusic"
 									}
 								}
 							],
@@ -4746,6 +6132,15 @@
 						"mouse-button": "right",
 						"click-type": "clicked"
 					}
+				},
+				{
+					"id": "on-button-pressed",
+					"objectClass": "Gamepad",
+					"sid": 107162488386384,
+					"parameters": {
+						"gamepad": "0",
+						"button": "button-b"
+					}
 				}
 			],
 			"actions": [],
@@ -4958,6 +6353,42 @@
 									"parameters": {
 										"variable": "MENU_selected",
 										"value": "1"
+									}
+								},
+								{
+									"id": "set-item",
+									"objectClass": "LocalStorage",
+									"sid": 701985010181167,
+									"parameters": {
+										"key": "\"sound\"",
+										"value": "SETTING_volumeSound"
+									}
+								},
+								{
+									"id": "set-item",
+									"objectClass": "LocalStorage",
+									"sid": 998381870375059,
+									"parameters": {
+										"key": "\"music\"",
+										"value": "SETTING_volumeMusic"
+									}
+								},
+								{
+									"id": "set-item",
+									"objectClass": "LocalStorage",
+									"sid": 826177381708132,
+									"parameters": {
+										"key": "\"flashing\"",
+										"value": "SETTING_flashing"
+									}
+								},
+								{
+									"id": "set-item",
+									"objectClass": "LocalStorage",
+									"sid": 823027403569583,
+									"parameters": {
+										"key": "\"doom\"",
+										"value": "SETTING_doomMusic"
 									}
 								}
 							],
@@ -5187,7 +6618,8 @@
 						}
 					]
 				}
-			]
+			],
+			"isOrBlock": true
 		},
 		{
 			"eventType": "block",
@@ -5198,6 +6630,15 @@
 					"sid": 219813663135154,
 					"parameters": {
 						"key": 80
+					}
+				},
+				{
+					"id": "on-button-pressed",
+					"objectClass": "Gamepad",
+					"sid": 984594373670754,
+					"parameters": {
+						"gamepad": "0",
+						"button": "start-menu"
 					}
 				}
 			],
@@ -5324,7 +6765,8 @@
 						}
 					]
 				}
-			]
+			],
+			"isOrBlock": true
 		},
 		{
 			"eventType": "block",
@@ -5343,6 +6785,15 @@
 					"sid": 458649001629437,
 					"parameters": {
 						"key": 38
+					}
+				},
+				{
+					"id": "on-button-pressed",
+					"objectClass": "Gamepad",
+					"sid": 383734851840814,
+					"parameters": {
+						"gamepad": "0",
+						"button": "d-pad-up"
 					}
 				}
 			],
@@ -5483,6 +6934,15 @@
 					"parameters": {
 						"key": 40
 					}
+				},
+				{
+					"id": "on-button-pressed",
+					"objectClass": "Gamepad",
+					"sid": 237685436230269,
+					"parameters": {
+						"gamepad": "0",
+						"button": "d-pad-down"
+					}
 				}
 			],
 			"actions": [
@@ -5621,6 +7081,15 @@
 					"sid": 111631403178458,
 					"parameters": {
 						"key": 68
+					}
+				},
+				{
+					"id": "is-button-down",
+					"objectClass": "Gamepad",
+					"sid": 461678263709367,
+					"parameters": {
+						"gamepad": "0",
+						"button": "d-pad-right"
 					}
 				}
 			],
@@ -5859,6 +7328,15 @@
 					"sid": 355141561756198,
 					"parameters": {
 						"key": 65
+					}
+				},
+				{
+					"id": "is-button-down",
+					"objectClass": "Gamepad",
+					"sid": 303769191874995,
+					"parameters": {
+						"gamepad": "0",
+						"button": "d-pad-left"
 					}
 				}
 			],

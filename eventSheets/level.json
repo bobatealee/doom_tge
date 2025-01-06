@@ -1753,6 +1753,26 @@
 									"parameters": {
 										"key": 87
 									}
+								},
+								{
+									"id": "is-button-down",
+									"objectClass": "Gamepad",
+									"sid": 323655876340355,
+									"parameters": {
+										"gamepad": "0",
+										"button": "d-pad-up"
+									}
+								},
+								{
+									"id": "compare-axis",
+									"objectClass": "Gamepad",
+									"sid": 459092694895884,
+									"parameters": {
+										"gamepad": "0",
+										"axis": "left-analog-y-axis",
+										"comparison": 2,
+										"value": "-40"
+									}
 								}
 							],
 							"actions": [
@@ -1860,6 +1880,26 @@
 									"parameters": {
 										"key": 83
 									}
+								},
+								{
+									"id": "is-button-down",
+									"objectClass": "Gamepad",
+									"sid": 503972283145862,
+									"parameters": {
+										"gamepad": "0",
+										"button": "d-pad-down"
+									}
+								},
+								{
+									"id": "compare-axis",
+									"objectClass": "Gamepad",
+									"sid": 861461711142562,
+									"parameters": {
+										"gamepad": "0",
+										"axis": "left-analog-y-axis",
+										"comparison": 4,
+										"value": "40"
+									}
 								}
 							],
 							"actions": [
@@ -1959,6 +1999,17 @@
 									"parameters": {
 										"key": 65
 									}
+								},
+								{
+									"id": "compare-axis",
+									"objectClass": "Gamepad",
+									"sid": 181432435550097,
+									"parameters": {
+										"gamepad": "0",
+										"axis": "left-analog-x-axis",
+										"comparison": 2,
+										"value": "-40"
+									}
 								}
 							],
 							"actions": [
@@ -2023,7 +2074,8 @@
 									],
 									"sid": 608477639757219
 								}
-							]
+							],
+							"isOrBlock": true
 						},
 						{
 							"eventType": "block",
@@ -2056,6 +2108,17 @@
 									"sid": 894462479954046,
 									"parameters": {
 										"key": 68
+									}
+								},
+								{
+									"id": "compare-axis",
+									"objectClass": "Gamepad",
+									"sid": 755255136255501,
+									"parameters": {
+										"gamepad": "0",
+										"axis": "left-analog-x-axis",
+										"comparison": 4,
+										"value": "40"
 									}
 								}
 							],
@@ -2121,7 +2184,8 @@
 									],
 									"sid": 176579791590425
 								}
-							]
+							],
+							"isOrBlock": true
 						},
 						{
 							"eventType": "block",
@@ -2159,22 +2223,32 @@
 									"parameters": {
 										"key": 37
 									}
+								},
+								{
+									"id": "is-button-down",
+									"objectClass": "Gamepad",
+									"sid": 592878304600186,
+									"parameters": {
+										"gamepad": "0",
+										"button": "d-pad-left"
+									}
 								}
 							],
 							"actions": [
 								{
 									"id": "rotate-camera",
 									"objectClass": "3DCamera",
-									"sid": 457252645166028,
+									"sid": 959447383338431,
 									"parameters": {
-										"rotate-x": "dt*-120",
+										"rotate-x": "dt*-90",
 										"rotate-y": "0",
 										"min-polar-angle": "85",
 										"max-polar-angle": "85"
 									}
 								}
 							],
-							"sid": 829457450508154
+							"sid": 829457450508154,
+							"isOrBlock": true
 						},
 						{
 							"eventType": "block",
@@ -2186,22 +2260,74 @@
 									"parameters": {
 										"key": 39
 									}
+								},
+								{
+									"id": "is-button-down",
+									"objectClass": "Gamepad",
+									"sid": 281741864606685,
+									"parameters": {
+										"gamepad": "0",
+										"button": "d-pad-right"
+									}
 								}
 							],
 							"actions": [
 								{
 									"id": "rotate-camera",
 									"objectClass": "3DCamera",
-									"sid": 474957258523075,
+									"sid": 625067023675256,
 									"parameters": {
-										"rotate-x": "dt*120",
+										"rotate-x": "dt*90",
 										"rotate-y": "0",
 										"min-polar-angle": "85",
 										"max-polar-angle": "85"
 									}
 								}
 							],
-							"sid": 685540342901476
+							"sid": 685540342901476,
+							"isOrBlock": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-axis",
+									"objectClass": "Gamepad",
+									"sid": 134407434374830,
+									"parameters": {
+										"gamepad": "0",
+										"axis": "right-analog-x-axis",
+										"comparison": 2,
+										"value": "-1"
+									}
+								},
+								{
+									"id": "compare-axis",
+									"objectClass": "Gamepad",
+									"sid": 427142771203513,
+									"parameters": {
+										"gamepad": "0",
+										"axis": "right-analog-x-axis",
+										"comparison": 4,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "rotate-camera",
+									"objectClass": "3DCamera",
+									"sid": 736115303327467,
+									"parameters": {
+										"rotate-x": "dt*Gamepad.Axis(0, 2)*1.5",
+										"rotate-y": "0",
+										"min-polar-angle": "85",
+										"max-polar-angle": "85"
+									}
+								}
+							],
+							"sid": 966603065341980,
+							"isOrBlock": true
 						},
 						{
 							"eventType": "block",
@@ -2928,6 +3054,267 @@
 							"eventType": "block",
 							"conditions": [
 								{
+									"id": "on-button-pressed",
+									"objectClass": "Gamepad",
+									"sid": 944316155629398,
+									"parameters": {
+										"gamepad": "0",
+										"button": "right-shoulder-button"
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 821177244916599,
+									"parameters": {
+										"variable": "MENU_menu",
+										"comparison": 0,
+										"value": "\"\""
+									}
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 502726204455675,
+									"parameters": {
+										"variable": "BLEED_ready"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "play-timeline",
+									"objectClass": "TimelineController",
+									"sid": 929369435379756,
+									"parameters": {
+										"timeline": "Swap",
+										"tags": "\"swap\""
+									}
+								},
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 642200315130461,
+									"parameters": {
+										"variable": "PLAYER_weapon",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 318701827662078,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 455570343776222,
+											"parameters": {
+												"variable": "GAME_beer"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 732417999255964,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 883259654307933,
+													"parameters": {
+														"variable": "PLAYER_weapon",
+														"comparison": 4,
+														"value": "2"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 440259382428556,
+													"parameters": {
+														"variable": "PLAYER_weapon",
+														"value": "0"
+													}
+												}
+											],
+											"sid": 868010558740658
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 413860146022169
+										}
+									],
+									"actions": [],
+									"sid": 496734781836421,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 126632681870838,
+													"parameters": {
+														"variable": "PLAYER_weapon",
+														"comparison": 4,
+														"value": "1"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 194647409469617,
+													"parameters": {
+														"variable": "PLAYER_weapon",
+														"value": "0"
+													}
+												}
+											],
+											"sid": 685877856411792
+										}
+									]
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-button-pressed",
+									"objectClass": "Gamepad",
+									"sid": 684879880352260,
+									"parameters": {
+										"gamepad": "0",
+										"button": "left-shoulder-button"
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 973867170408495,
+									"parameters": {
+										"variable": "MENU_menu",
+										"comparison": 0,
+										"value": "\"\""
+									}
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 822210612367629,
+									"parameters": {
+										"variable": "BLEED_ready"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "play-timeline",
+									"objectClass": "TimelineController",
+									"sid": 864438641416359,
+									"parameters": {
+										"timeline": "Swap",
+										"tags": "\"swap\""
+									}
+								},
+								{
+									"id": "subtract-from-eventvar",
+									"objectClass": "System",
+									"sid": 530696809286723,
+									"parameters": {
+										"variable": "PLAYER_weapon",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 260960488235911,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 380345455633566,
+											"parameters": {
+												"variable": "PLAYER_weapon",
+												"comparison": 2,
+												"value": "0"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 894665348072767,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-boolean-eventvar",
+													"objectClass": "System",
+													"sid": 309935648540172,
+													"parameters": {
+														"variable": "GAME_beer"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 662374118029954,
+													"parameters": {
+														"variable": "PLAYER_weapon",
+														"value": "2"
+													}
+												}
+											],
+											"sid": 518096583003570
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "else",
+													"objectClass": "System",
+													"sid": 476055980095619
+												}
+											],
+											"actions": [
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 253452864656510,
+													"parameters": {
+														"variable": "PLAYER_weapon",
+														"value": "1"
+													}
+												}
+											],
+											"sid": 493092507638453
+										}
+									]
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
 									"id": "on-click",
 									"objectClass": "Mouse",
 									"sid": 898418880834446,
@@ -2960,6 +3347,15 @@
 									"parameters": {
 										"key": 16
 									}
+								},
+								{
+									"id": "on-button-pressed",
+									"objectClass": "Gamepad",
+									"sid": 146700137805152,
+									"parameters": {
+										"gamepad": "0",
+										"button": "right-shoulder-trigger"
+									}
 								}
 							],
 							"actions": [
@@ -2968,7 +3364,8 @@
 									"sid": 824169795723456
 								}
 							],
-							"sid": 364004330106437
+							"sid": 364004330106437,
+							"isOrBlock": true
 						},
 						{
 							"eventType": "block",
@@ -4089,6 +4486,15 @@
 							"sid": 865245478291609,
 							"parameters": {
 								"key": 32
+							}
+						},
+						{
+							"id": "on-button-pressed",
+							"objectClass": "Gamepad",
+							"sid": 164355819453586,
+							"parameters": {
+								"gamepad": "0",
+								"button": "button-a"
 							}
 						}
 					],
@@ -6164,16 +6570,25 @@
 					"parameters": {
 						"key": 80
 					}
+				},
+				{
+					"id": "on-button-pressed",
+					"objectClass": "Gamepad",
+					"sid": 529440544685915,
+					"parameters": {
+						"gamepad": "0",
+						"button": "start-menu"
+					}
 				}
 			],
 			"actions": [
 				{
 					"id": "set-boolean-eventvar",
 					"objectClass": "System",
-					"sid": 683659520424149,
+					"sid": 397316831586925,
 					"parameters": {
 						"variable": "MENU_keyControl",
-						"value": "false"
+						"value": "true"
 					}
 				},
 				{
@@ -6348,7 +6763,8 @@
 						}
 					]
 				}
-			]
+			],
+			"isOrBlock": true
 		},
 		{
 			"eventType": "block",
