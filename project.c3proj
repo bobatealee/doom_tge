@@ -1,6 +1,6 @@
 {
 	"projectFormatVersion": 1,
-	"savedWithRelease": 42002,
+	"savedWithRelease": 42100,
 	"name": "DOOM The Gallery Experience",
 	"runtime": "c3",
 	"useWorker": "dom",
@@ -38,6 +38,20 @@
 			"type": "plugin",
 			"id": "Camera3D",
 			"name": "3D camera",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Dictionary",
+			"name": "Dictionary",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "FileSystem",
+			"name": "File system",
 			"author": "Scirra",
 			"bundled": false
 		},
@@ -221,7 +235,9 @@
 	],
 	"uniqueId": "h63jh1yt028",
 	"objectTypes": {
-		"items": [],
+		"items": [
+			"FileSystem"
+		],
 		"subfolders": [
 			{
 				"items": [
@@ -318,7 +334,8 @@
 					"Touch",
 					"AJAX",
 					"Gamepad",
-					"LocalStorage"
+					"LocalStorage",
+					"SaveFile"
 				],
 				"subfolders": [],
 				"name": "Plugins"
@@ -459,7 +476,8 @@
 					"LoaderBase",
 					"LoaderPlay",
 					"LoaderButton",
-					"LoaderText"
+					"LoaderText",
+					"Scumdog"
 				],
 				"subfolders": [],
 				"name": "Loader"
@@ -474,20 +492,20 @@
 	},
 	"layouts": {
 		"items": [
-			"level",
-			"menu",
-			"results",
-			"loader"
+			"Level",
+			"Menu",
+			"Results",
+			"Loader"
 		],
 		"subfolders": []
 	},
 	"eventSheets": {
 		"items": [
-			"menu",
-			"level",
-			"bleed",
-			"results",
-			"loader"
+			"Menu",
+			"Level",
+			"Global",
+			"Results",
+			"Loader"
 		],
 		"subfolders": []
 	},
@@ -812,11 +830,11 @@
 	},
 	"properties": {
 		"description": "DOOM: The Gallery Experience was created as an art piece designed to parody the wonderfully pretentious world of gallery openings.",
-		"version": "1.2.0",
+		"version": "1.2.1",
 		"autoIncrementVersion": false,
-		"author": "Scum Dog Games",
+		"author": "SCUM DOG GAMES",
 		"authorEmail": "contact@scum.dog",
-		"authorWebsite": "https://bobatealee.com",
+		"authorWebsite": "https://scum.dog/",
 		"appId": "",
 		"pixelRounding": true,
 		"zAxisScale": "regular",
@@ -865,5 +883,5 @@
 	},
 	"viewportWidth": 320,
 	"viewportHeight": 180,
-	"firstLayout": "loader"
+	"firstLayout": "Loader"
 }

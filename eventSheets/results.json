@@ -1,5 +1,5 @@
 {
-	"name": "results",
+	"name": "Results",
 	"events": [
 		{
 			"eventType": "variable",
@@ -43,11 +43,11 @@
 		},
 		{
 			"eventType": "include",
-			"includeSheet": "bleed"
+			"includeSheet": "Global"
 		},
 		{
 			"eventType": "include",
-			"includeSheet": "menu"
+			"includeSheet": "Menu"
 		},
 		{
 			"eventType": "block",
@@ -251,7 +251,7 @@
 			"children": [
 				{
 					"eventType": "comment",
-					"text": "mosh!"
+					"text": "These go faster"
 				},
 				{
 					"eventType": "block",
@@ -492,7 +492,7 @@
 		},
 		{
 			"eventType": "comment",
-			"text": "observations"
+			"text": "Observations"
 		},
 		{
 			"eventType": "block",
@@ -580,7 +580,7 @@
 		},
 		{
 			"eventType": "comment",
-			"text": "items"
+			"text": "Items"
 		},
 		{
 			"eventType": "block",
@@ -668,7 +668,7 @@
 		},
 		{
 			"eventType": "comment",
-			"text": "spending"
+			"text": "Spending"
 		},
 		{
 			"eventType": "block",
@@ -756,7 +756,7 @@
 		},
 		{
 			"eventType": "comment",
-			"text": "secrets"
+			"text": "Secrets"
 		},
 		{
 			"eventType": "block",
@@ -844,7 +844,7 @@
 		},
 		{
 			"eventType": "comment",
-			"text": "time"
+			"text": "Time"
 		},
 		{
 			"eventType": "block",
@@ -932,7 +932,7 @@
 		},
 		{
 			"eventType": "comment",
-			"text": "set text"
+			"text": "Set text"
 		},
 		{
 			"eventType": "block",
@@ -1665,7 +1665,7 @@
 		},
 		{
 			"eventType": "comment",
-			"text": "medals"
+			"text": "Medals"
 		},
 		{
 			"eventType": "block",
@@ -1684,15 +1684,6 @@
 					"parameters": {
 						"variable": "UNLOCK_doomMusic",
 						"value": "true"
-					}
-				},
-				{
-					"id": "set-item",
-					"objectClass": "LocalStorage",
-					"sid": 308397067137505,
-					"parameters": {
-						"key": "\"doomUnlock\"",
-						"value": "1"
 					}
 				}
 			],
@@ -1721,15 +1712,6 @@
 								"variable": "MEDAL_observations",
 								"value": "true"
 							}
-						},
-						{
-							"id": "set-item",
-							"objectClass": "LocalStorage",
-							"sid": 141818787414970,
-							"parameters": {
-								"key": "\"medalObservations\"",
-								"value": "1"
-							}
 						}
 					],
 					"sid": 918426348650346,
@@ -1740,7 +1722,7 @@
 								{
 									"id": "compare-boolean-eventvar",
 									"objectClass": "System",
-									"sid": 152394998890498,
+									"sid": 912674068395615,
 									"parameters": {
 										"variable": "NGIO_medals"
 									}
@@ -1804,15 +1786,6 @@
 								"variable": "MEDAL_items",
 								"value": "true"
 							}
-						},
-						{
-							"id": "set-item",
-							"objectClass": "LocalStorage",
-							"sid": 951778646710493,
-							"parameters": {
-								"key": "\"medalItems\"",
-								"value": "1"
-							}
 						}
 					],
 					"sid": 317139317077918,
@@ -1823,7 +1796,7 @@
 								{
 									"id": "compare-boolean-eventvar",
 									"objectClass": "System",
-									"sid": 236175693815510,
+									"sid": 923039352980692,
 									"parameters": {
 										"variable": "NGIO_medals"
 									}
@@ -1887,15 +1860,6 @@
 								"variable": "MEDAL_spending",
 								"value": "true"
 							}
-						},
-						{
-							"id": "set-item",
-							"objectClass": "LocalStorage",
-							"sid": 119099870552764,
-							"parameters": {
-								"key": "\"medalSpending\"",
-								"value": "1"
-							}
 						}
 					],
 					"sid": 392054241258361,
@@ -1906,7 +1870,7 @@
 								{
 									"id": "compare-boolean-eventvar",
 									"objectClass": "System",
-									"sid": 266455082582726,
+									"sid": 600578063048231,
 									"parameters": {
 										"variable": "NGIO_medals"
 									}
@@ -1970,15 +1934,6 @@
 								"variable": "MEDAL_secrets",
 								"value": "true"
 							}
-						},
-						{
-							"id": "set-item",
-							"objectClass": "LocalStorage",
-							"sid": 621084704640337,
-							"parameters": {
-								"key": "\"medalSecrets\"",
-								"value": "1"
-							}
 						}
 					],
 					"sid": 390015960963652,
@@ -1989,7 +1944,7 @@
 								{
 									"id": "compare-boolean-eventvar",
 									"objectClass": "System",
-									"sid": 990384676067293,
+									"sid": 608737528458581,
 									"parameters": {
 										"variable": "NGIO_medals"
 									}
@@ -2053,15 +2008,6 @@
 								"variable": "MEDAL_time",
 								"value": "true"
 							}
-						},
-						{
-							"id": "set-item",
-							"objectClass": "LocalStorage",
-							"sid": 508385479062586,
-							"parameters": {
-								"key": "\"medalTime\"",
-								"value": "1"
-							}
 						}
 					],
 					"sid": 847509684259350,
@@ -2072,7 +2018,7 @@
 								{
 									"id": "compare-boolean-eventvar",
 									"objectClass": "System",
-									"sid": 399207934039197,
+									"sid": 807100463464001,
 									"parameters": {
 										"variable": "NGIO_medals"
 									}
@@ -2136,15 +2082,6 @@
 								"variable": "MEDAL_drinks",
 								"value": "true"
 							}
-						},
-						{
-							"id": "set-item",
-							"objectClass": "LocalStorage",
-							"sid": 337942139708213,
-							"parameters": {
-								"key": "\"medalDrinks\"",
-								"value": "1"
-							}
 						}
 					],
 					"sid": 575377418740303,
@@ -2155,7 +2092,7 @@
 								{
 									"id": "compare-boolean-eventvar",
 									"objectClass": "System",
-									"sid": 133964939113446,
+									"sid": 978017877101009,
 									"parameters": {
 										"variable": "NGIO_medals"
 									}
@@ -2219,15 +2156,6 @@
 								"variable": "MEDAL_thoughtful",
 								"value": "true"
 							}
-						},
-						{
-							"id": "set-item",
-							"objectClass": "LocalStorage",
-							"sid": 733024137890189,
-							"parameters": {
-								"key": "\"medalThoughtful\"",
-								"value": "1"
-							}
 						}
 					],
 					"sid": 449246386015906,
@@ -2238,7 +2166,7 @@
 								{
 									"id": "compare-boolean-eventvar",
 									"objectClass": "System",
-									"sid": 592335763505157,
+									"sid": 103535766656439,
 									"parameters": {
 										"variable": "NGIO_medals"
 									}
@@ -2300,15 +2228,6 @@
 								"variable": "MEDAL_doom",
 								"value": "true"
 							}
-						},
-						{
-							"id": "set-item",
-							"objectClass": "LocalStorage",
-							"sid": 488550198626255,
-							"parameters": {
-								"key": "\"medalDoom\"",
-								"value": "1"
-							}
 						}
 					],
 					"sid": 706367358908529,
@@ -2319,7 +2238,7 @@
 								{
 									"id": "compare-boolean-eventvar",
 									"objectClass": "System",
-									"sid": 591047550471961,
+									"sid": 175653897795587,
 									"parameters": {
 										"variable": "NGIO_medals"
 									}
@@ -2359,6 +2278,17 @@
 							"sid": 293366384156154
 						}
 					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"callFunction": "save",
+							"sid": 282028246250513
+						}
+					],
+					"sid": 652482770253745
 				}
 			]
 		}

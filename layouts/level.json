@@ -1,5 +1,5 @@
 {
-	"name": "level",
+	"name": "Level",
 	"layers": [
 		{
 			"name": "3D",
@@ -35326,8 +35326,8 @@
 								"enable-bbcode": true,
 								"character-width": 12,
 								"character-height": 10,
-								"character-set": "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.,!':()–#$",
-								"spacing-data": "[[3, \" \"],\n[4, \"I.,!':\"],\n[5, \"1\"],\n[6, \"–\"],\n[7, \"SVZ45()\"],\n[8, \"ABCDEFGHJKLNOPQRTUY0236789#*\"],\n[9, \"MWX\"]]",
+								"character-set": "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.,!':()–#$%&",
+								"spacing-data": "[[3, \" \"],\n[4, \"I.,!':\"],\n[5, \"1\"],\n[6, \"–\"],\n[7, \"SVZ45()\"],\n[8, \"ABCDEFGHJKLNOPQRTUY0236789#*%&\"],\n[9, \"MWX\"]]",
 								"scale": 1,
 								"character-spacing": 0,
 								"line-height": 0,
@@ -35697,112 +35697,12 @@
 						{
 							"type": "MenuFontSmall",
 							"properties": {
-								"text": "FILIPPO MEOZZI\nLIAM STONE",
-								"enable-bbcode": true,
-								"character-width": 12,
-								"character-height": 10,
-								"character-set": "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.,!':()–#$",
-								"spacing-data": "[[3, \" \"],\n[4, \"I.,!':\"],\n[5, \"1\"],\n[6, \"–\"],\n[7, \"SVZ45()\"],\n[8, \"ABCDEFGHJKLNOPQRTUY0236789#*\"],\n[9, \"MWX\"]]",
-								"scale": 1,
-								"character-spacing": 0,
-								"line-height": 0,
-								"horizontal-alignment": "left",
-								"vertical-alignment": "top",
-								"wrapping": "word",
-								"initially-visible": true,
-								"origin": "top-left",
-								"read-aloud": false
-							},
-							"uid": 468,
-							"sid": 614662724673865,
-							"tags": "",
-							"instanceVariables": {},
-							"behaviors": {},
-							"instanceFolderItem": {
-								"sid": 614662724673865,
-								"expanded": true,
-								"folderName": "",
-								"indexInFolder": -1,
-								"folderNestingLevel": -1
-							},
-							"showing": true,
-							"locked": false,
-							"world": {
-								"x": 164,
-								"y": 44,
-								"width": 152,
-								"height": 20,
-								"originX": 0,
-								"originY": 0,
-								"color": [
-									1,
-									1,
-									1,
-									1
-								],
-								"angle": 0,
-								"zElevation": 0
-							}
-						},
-						{
-							"type": "MenuFontSmall",
-							"properties": {
-								"text": "CREATED BY:",
-								"enable-bbcode": true,
-								"character-width": 12,
-								"character-height": 10,
-								"character-set": "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.,!':()–#$",
-								"spacing-data": "[[3, \" \"],\n[4, \"I.,!':\"],\n[5, \"1\"],\n[6, \"–\"],\n[7, \"SVZ45()\"],\n[8, \"ABCDEFGHJKLNOPQRTUY0236789#*\"],\n[9, \"MWX\"]]",
-								"scale": 1,
-								"character-spacing": 0,
-								"line-height": 0,
-								"horizontal-alignment": "right",
-								"vertical-alignment": "top",
-								"wrapping": "word",
-								"initially-visible": true,
-								"origin": "top-left",
-								"read-aloud": false
-							},
-							"uid": 469,
-							"sid": 936741719712117,
-							"tags": "",
-							"instanceVariables": {},
-							"behaviors": {},
-							"instanceFolderItem": {
-								"sid": 936741719712117,
-								"expanded": true,
-								"folderName": "",
-								"indexInFolder": -1,
-								"folderNestingLevel": -1
-							},
-							"showing": true,
-							"locked": false,
-							"world": {
-								"x": 4,
-								"y": 44,
-								"width": 152,
-								"height": 12,
-								"originX": 0,
-								"originY": 0,
-								"color": [
-									1,
-									1,
-									1,
-									1
-								],
-								"angle": 0,
-								"zElevation": 0
-							}
-						},
-						{
-							"type": "MenuFontSmall",
-							"properties": {
 								"text": "DOOM IS COPYRIGHT # 1993 ID SOFTWARE",
 								"enable-bbcode": true,
 								"character-width": 12,
 								"character-height": 10,
-								"character-set": "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.,!':()–#$",
-								"spacing-data": "[[3, \" \"],\n[4, \"I.,!':\"],\n[5, \"1\"],\n[6, \"–\"],\n[7, \"SVZ45()\"],\n[8, \"ABCDEFGHJKLNOPQRTUY0236789#*\"],\n[9, \"MWX\"]]",
+								"character-set": "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.,!':()–#$%&",
+								"spacing-data": "[[3, \" \"],\n[4, \"I.,!':\"],\n[5, \"1\"],\n[6, \"–\"],\n[7, \"SVZ45()\"],\n[8, \"ABCDEFGHJKLNOPQRTUY0236789#*%&\"],\n[9, \"MWX\"]]",
 								"scale": 1,
 								"character-spacing": 0,
 								"line-height": 0,
@@ -35829,7 +35729,7 @@
 							"locked": false,
 							"world": {
 								"x": 0,
-								"y": 144,
+								"y": 140,
 								"width": 320,
 								"height": 12,
 								"originX": 0,
@@ -35903,8 +35803,8 @@
 								"enable-bbcode": true,
 								"character-width": 12,
 								"character-height": 10,
-								"character-set": "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.,!':()–#$",
-								"spacing-data": "[[3, \" \"],\n[4, \"I.,!':\"],\n[5, \"1\"],\n[6, \"–\"],\n[7, \"SVZ45()\"],\n[8, \"ABCDEFGHJKLNOPQRTUY0236789#*\"],\n[9, \"MWX\"]]",
+								"character-set": "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.,!':()–#$%&",
+								"spacing-data": "[[3, \" \"],\n[4, \"I.,!':\"],\n[5, \"1\"],\n[6, \"–\"],\n[7, \"SVZ45()\"],\n[8, \"ABCDEFGHJKLNOPQRTUY0236789#*%&\"],\n[9, \"MWX\"]]",
 								"scale": 1,
 								"character-spacing": 0,
 								"line-height": 0,
@@ -35915,13 +35815,13 @@
 								"origin": "top-left",
 								"read-aloud": false
 							},
-							"uid": 472,
-							"sid": 600374110095321,
+							"uid": 454,
+							"sid": 796538191187304,
 							"tags": "met",
 							"instanceVariables": {},
 							"behaviors": {},
 							"instanceFolderItem": {
-								"sid": 600374110095321,
+								"sid": 796538191187304,
 								"expanded": true,
 								"folderName": "",
 								"indexInFolder": -1,
@@ -35930,10 +35830,10 @@
 							"showing": true,
 							"locked": false,
 							"world": {
-								"x": 164,
-								"y": 76,
-								"width": 152,
-								"height": 20,
+								"x": 80,
+								"y": 84,
+								"width": 232,
+								"height": 12,
 								"originX": 0,
 								"originY": 0,
 								"color": [
@@ -35953,8 +35853,8 @@
 								"enable-bbcode": true,
 								"character-width": 12,
 								"character-height": 10,
-								"character-set": "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.,!':()–#$",
-								"spacing-data": "[[3, \" \"],\n[4, \"I.,!':\"],\n[5, \"1\"],\n[6, \"–\"],\n[7, \"SVZ45()\"],\n[8, \"ABCDEFGHJKLNOPQRTUY0236789#*\"],\n[9, \"MWX\"]]",
+								"character-set": "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.,!':()–#$%&",
+								"spacing-data": "[[3, \" \"],\n[4, \"I.,!':\"],\n[5, \"1\"],\n[6, \"–\"],\n[7, \"SVZ45()\"],\n[8, \"ABCDEFGHJKLNOPQRTUY0236789#*%&\"],\n[9, \"MWX\"]]",
 								"scale": 1,
 								"character-spacing": 0,
 								"line-height": 0,
@@ -35965,13 +35865,13 @@
 								"origin": "top-left",
 								"read-aloud": false
 							},
-							"uid": 473,
-							"sid": 142933642295001,
+							"uid": 468,
+							"sid": 583072865062309,
 							"tags": "music",
 							"instanceVariables": {},
 							"behaviors": {},
 							"instanceFolderItem": {
-								"sid": 142933642295001,
+								"sid": 583072865062309,
 								"expanded": true,
 								"folderName": "",
 								"indexInFolder": -1,
@@ -35980,9 +35880,9 @@
 							"showing": true,
 							"locked": false,
 							"world": {
-								"x": 164,
-								"y": 124,
-								"width": 152,
+								"x": 80,
+								"y": 108,
+								"width": 232,
 								"height": 12,
 								"originX": 0,
 								"originY": 0,
@@ -36003,8 +35903,8 @@
 								"enable-bbcode": true,
 								"character-width": 12,
 								"character-height": 10,
-								"character-set": "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.,!':()–#$",
-								"spacing-data": "[[3, \" \"],\n[4, \"I.,!':\"],\n[5, \"1\"],\n[6, \"–\"],\n[7, \"SVZ45()\"],\n[8, \"ABCDEFGHJKLNOPQRTUY0236789#*\"],\n[9, \"MWX\"]]",
+								"character-set": "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.,!':()–#$%&",
+								"spacing-data": "[[3, \" \"],\n[4, \"I.,!':\"],\n[5, \"1\"],\n[6, \"–\"],\n[7, \"SVZ45()\"],\n[8, \"ABCDEFGHJKLNOPQRTUY0236789#*%&\"],\n[9, \"MWX\"]]",
 								"scale": 1,
 								"character-spacing": 0,
 								"line-height": 0,
@@ -36015,13 +35915,13 @@
 								"origin": "top-left",
 								"read-aloud": false
 							},
-							"uid": 502,
-							"sid": 757953821301807,
+							"uid": 469,
+							"sid": 136294244997622,
 							"tags": "sprites",
 							"instanceVariables": {},
 							"behaviors": {},
 							"instanceFolderItem": {
-								"sid": 757953821301807,
+								"sid": 136294244997622,
 								"expanded": true,
 								"folderName": "",
 								"indexInFolder": -1,
@@ -36030,10 +35930,10 @@
 							"showing": true,
 							"locked": false,
 							"world": {
-								"x": 164,
-								"y": 100,
-								"width": 152,
-								"height": 20,
+								"x": 80,
+								"y": 96,
+								"width": 232,
+								"height": 12,
 								"originX": 0,
 								"originY": 0,
 								"color": [
@@ -36053,25 +35953,25 @@
 								"enable-bbcode": true,
 								"character-width": 12,
 								"character-height": 10,
-								"character-set": "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.,!':()–#$",
-								"spacing-data": "[[3, \" \"],\n[4, \"I.,!':\"],\n[5, \"1\"],\n[6, \"–\"],\n[7, \"SVZ45()\"],\n[8, \"ABCDEFGHJKLNOPQRTUY0236789#*\"],\n[9, \"MWX\"]]",
+								"character-set": "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.,!':()–#$%&",
+								"spacing-data": "[[3, \" \"],\n[4, \"I.,!':\"],\n[5, \"1\"],\n[6, \"–\"],\n[7, \"SVZ45()\"],\n[8, \"ABCDEFGHJKLNOPQRTUY0236789#*%&\"],\n[9, \"MWX\"]]",
 								"scale": 1,
 								"character-spacing": 0,
 								"line-height": 0,
-								"horizontal-alignment": "right",
+								"horizontal-alignment": "left",
 								"vertical-alignment": "top",
 								"wrapping": "word",
 								"initially-visible": true,
 								"origin": "top-left",
 								"read-aloud": false
 							},
-							"uid": 602,
-							"sid": 180092334945436,
+							"uid": 472,
+							"sid": 595763803627131,
 							"tags": "",
 							"instanceVariables": {},
 							"behaviors": {},
 							"instanceFolderItem": {
-								"sid": 180092334945436,
+								"sid": 595763803627131,
 								"expanded": true,
 								"folderName": "",
 								"indexInFolder": -1,
@@ -36080,9 +35980,9 @@
 							"showing": true,
 							"locked": false,
 							"world": {
-								"x": 4,
-								"y": 76,
-								"width": 152,
+								"x": 80,
+								"y": 68,
+								"width": 232,
 								"height": 12,
 								"originX": 0,
 								"originY": 0,
@@ -36105,15 +36005,15 @@
 								"enable-collisions": true,
 								"live-preview": false
 							},
-							"uid": 603,
-							"sid": 167521524291375,
+							"uid": 473,
+							"sid": 510852892908759,
 							"tags": "met",
 							"instanceVariables": {
 								"link": "https://www.metmuseum.org/art/collection/search?showOnly=openAccess"
 							},
 							"behaviors": {},
 							"instanceFolderItem": {
-								"sid": 167521524291375,
+								"sid": 510852892908759,
 								"expanded": true,
 								"folderName": "",
 								"indexInFolder": -1,
@@ -36122,10 +36022,10 @@
 							"showing": true,
 							"locked": false,
 							"world": {
-								"x": 164,
-								"y": 76,
-								"width": 140,
-								"height": 18,
+								"x": 80,
+								"y": 84,
+								"width": 228,
+								"height": 8,
 								"originX": 0,
 								"originY": 0,
 								"color": [
@@ -36133,6 +36033,136 @@
 									1,
 									1,
 									0.25
+								],
+								"angle": 0,
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "Link",
+							"properties": {
+								"initially-visible": false,
+								"initial-animation": "Animation 1",
+								"initial-frame": 0,
+								"enable-collisions": true,
+								"live-preview": false
+							},
+							"uid": 502,
+							"sid": 241142642855386,
+							"tags": "sprites",
+							"instanceVariables": {
+								"link": "https://www.spriters-resource.com/ms_dos/doomdoomii/"
+							},
+							"behaviors": {},
+							"instanceFolderItem": {
+								"sid": 241142642855386,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 80,
+								"y": 96,
+								"width": 168,
+								"height": 8,
+								"originX": 0,
+								"originY": 0,
+								"color": [
+									1,
+									1,
+									1,
+									0.25
+								],
+								"angle": 0,
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "Link",
+							"properties": {
+								"initially-visible": false,
+								"initial-animation": "Animation 1",
+								"initial-frame": 0,
+								"enable-collisions": true,
+								"live-preview": false
+							},
+							"uid": 602,
+							"sid": 388221214076948,
+							"tags": "music",
+							"instanceVariables": {
+								"link": "https://pmmusic.pro/downloads/"
+							},
+							"behaviors": {},
+							"instanceFolderItem": {
+								"sid": 388221214076948,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 80,
+								"y": 108,
+								"width": 68,
+								"height": 8,
+								"originX": 0,
+								"originY": 0,
+								"color": [
+									1,
+									1,
+									1,
+									0.25
+								],
+								"angle": 0,
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "Scumdog",
+							"properties": {
+								"initially-visible": true,
+								"initial-animation": "color",
+								"initial-frame": 0,
+								"enable-collisions": true,
+								"live-preview": false
+							},
+							"uid": 603,
+							"sid": 729272465770635,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {
+								"Tween": {
+									"properties": {
+										"enabled": true
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 729272465770635,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 40,
+								"y": 92,
+								"width": 64,
+								"height": 64,
+								"originX": 0.5,
+								"originY": 0.5,
+								"color": [
+									1,
+									1,
+									1,
+									1
 								],
 								"angle": 0,
 								"zElevation": 0
@@ -36148,14 +36178,14 @@
 								"live-preview": false
 							},
 							"uid": 604,
-							"sid": 818157069359501,
-							"tags": "sprites",
+							"sid": 873241878152268,
+							"tags": "scumdog",
 							"instanceVariables": {
-								"link": "https://www.spriters-resource.com/ms_dos/doomdoomii/"
+								"link": "https://scum.dog/"
 							},
 							"behaviors": {},
 							"instanceFolderItem": {
-								"sid": 818157069359501,
+								"sid": 873241878152268,
 								"expanded": true,
 								"folderName": "",
 								"indexInFolder": -1,
@@ -36164,52 +36194,10 @@
 							"showing": true,
 							"locked": false,
 							"world": {
-								"x": 164,
-								"y": 100,
-								"width": 92,
-								"height": 18,
-								"originX": 0,
-								"originY": 0,
-								"color": [
-									1,
-									1,
-									1,
-									0.25
-								],
-								"angle": 0,
-								"zElevation": 0
-							}
-						},
-						{
-							"type": "Link",
-							"properties": {
-								"initially-visible": false,
-								"initial-animation": "Animation 1",
-								"initial-frame": 0,
-								"enable-collisions": true,
-								"live-preview": false
-							},
-							"uid": 605,
-							"sid": 488931976871945,
-							"tags": "music",
-							"instanceVariables": {
-								"link": "https://pmmusic.pro/downloads/"
-							},
-							"behaviors": {},
-							"instanceFolderItem": {
-								"sid": 488931976871945,
-								"expanded": true,
-								"folderName": "",
-								"indexInFolder": -1,
-								"folderNestingLevel": -1
-							},
-							"showing": true,
-							"locked": false,
-							"world": {
-								"x": 164,
-								"y": 124,
-								"width": 72,
-								"height": 8,
+								"x": 8,
+								"y": 60,
+								"width": 64,
+								"height": 64,
 								"originX": 0,
 								"originY": 0,
 								"color": [
@@ -36225,16 +36213,16 @@
 						{
 							"type": "MenuFontSmall",
 							"properties": {
-								"text": "CONTACT US $",
+								"text": "CREATED BY FILIPPO MEOZZI & LIAM STONE",
 								"enable-bbcode": true,
 								"character-width": 12,
 								"character-height": 10,
-								"character-set": "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.,!':()–#$",
-								"spacing-data": "[[3, \" \"],\n[4, \"I.,!':\"],\n[5, \"1\"],\n[6, \"–\"],\n[7, \"SVZ45()\"],\n[8, \"ABCDEFGHJKLNOPQRTUY0236789#*\"],\n[9, \"MWX\"]]",
+								"character-set": "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.,!':()–#$%&",
+								"spacing-data": "[[3, \" \"],\n[4, \"I.,!':\"],\n[5, \"1\"],\n[6, \"–\"],\n[7, \"SVZ45()\"],\n[8, \"ABCDEFGHJKLNOPQRTUY0236789#*%&\"],\n[9, \"MWX\"]]",
 								"scale": 1,
 								"character-spacing": 0,
 								"line-height": 0,
-								"horizontal-alignment": "left",
+								"horizontal-alignment": "center",
 								"vertical-alignment": "top",
 								"wrapping": "word",
 								"initially-visible": true,
@@ -36242,12 +36230,12 @@
 								"read-aloud": false
 							},
 							"uid": 895,
-							"sid": 336211942936075,
-							"tags": "contact",
+							"sid": 955896818603435,
+							"tags": "",
 							"instanceVariables": {},
 							"behaviors": {},
 							"instanceFolderItem": {
-								"sid": 336211942936075,
+								"sid": 955896818603435,
 								"expanded": true,
 								"folderName": "",
 								"indexInFolder": -1,
@@ -36256,9 +36244,9 @@
 							"showing": true,
 							"locked": false,
 							"world": {
-								"x": 164,
-								"y": 64,
-								"width": 152,
+								"x": 8,
+								"y": 44,
+								"width": 304,
 								"height": 12,
 								"originX": 0,
 								"originY": 0,
@@ -36267,48 +36255,6 @@
 									1,
 									1,
 									1
-								],
-								"angle": 0,
-								"zElevation": 0
-							}
-						},
-						{
-							"type": "Link",
-							"properties": {
-								"initially-visible": false,
-								"initial-animation": "Animation 1",
-								"initial-frame": 0,
-								"enable-collisions": true,
-								"live-preview": false
-							},
-							"uid": 896,
-							"sid": 783440944131023,
-							"tags": "contact",
-							"instanceVariables": {
-								"link": "mailto:contact@scum.dog"
-							},
-							"behaviors": {},
-							"instanceFolderItem": {
-								"sid": 783440944131023,
-								"expanded": true,
-								"folderName": "",
-								"indexInFolder": -1,
-								"folderNestingLevel": -1
-							},
-							"showing": true,
-							"locked": false,
-							"world": {
-								"x": 164,
-								"y": 64,
-								"width": 88,
-								"height": 8,
-								"originX": 0,
-								"originY": 0,
-								"color": [
-									1,
-									1,
-									1,
-									0.25
 								],
 								"angle": 0,
 								"zElevation": 0
@@ -37690,8 +37636,8 @@
 								"enable-bbcode": true,
 								"character-width": 12,
 								"character-height": 10,
-								"character-set": "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.,!':()–#$",
-								"spacing-data": "[[3, \" \"],\n[4, \"I.,!':\"],\n[5, \"1\"],\n[6, \"–\"],\n[7, \"SVZ45()\"],\n[8, \"ABCDEFGHJKLNOPQRTUY0236789#*\"],\n[9, \"MWX\"]]",
+								"character-set": "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.,!':()–#$%&",
+								"spacing-data": "[[3, \" \"],\n[4, \"I.,!':\"],\n[5, \"1\"],\n[6, \"–\"],\n[7, \"SVZ45()\"],\n[8, \"ABCDEFGHJKLNOPQRTUY0236789#*%&\"],\n[9, \"MWX\"]]",
 								"scale": 1,
 								"character-spacing": 0,
 								"line-height": 0,
@@ -37952,6 +37898,14 @@
 			"sid": 173481665648606,
 			"tags": "",
 			"instanceVariables": {}
+		},
+		{
+			"type": "SaveFile",
+			"properties": {},
+			"uid": 898,
+			"sid": 628484314203062,
+			"tags": "",
+			"instanceVariables": {}
 		}
 	],
 	"effectTypes": [],
@@ -37961,5 +37915,5 @@
 	"vpX": 0.5,
 	"vpY": 0.3,
 	"projection": "perspective",
-	"eventSheet": "level"
+	"eventSheet": "Level"
 }

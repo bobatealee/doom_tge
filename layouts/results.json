@@ -1,5 +1,5 @@
 {
-	"name": "results",
+	"name": "Results",
 	"layers": [
 		{
 			"name": "Results",
@@ -748,5 +748,5 @@
 	"vpX": 0.5,
 	"vpY": 0.5,
 	"projection": "perspective",
-	"eventSheet": "results"
+	"eventSheet": "Results"
 }

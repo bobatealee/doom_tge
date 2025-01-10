@@ -1,6 +1,10 @@
 {
-	"name": "level",
+	"name": "Level",
 	"events": [
+		{
+			"eventType": "comment",
+			"text": "Game logic"
+		},
 		{
 			"eventType": "variable",
 			"name": "GAME_beer",
@@ -50,6 +54,10 @@
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 765279586470823
+		},
+		{
+			"eventType": "comment",
+			"text": "Stats for results screen"
 		},
 		{
 			"eventType": "variable",
@@ -192,6 +200,10 @@
 			"sid": 519497277225697
 		},
 		{
+			"eventType": "comment",
+			"text": "Modal"
+		},
+		{
 			"eventType": "variable",
 			"name": "GAME_modalArt",
 			"type": "boolean",
@@ -222,6 +234,10 @@
 			"sid": 874751493206115
 		},
 		{
+			"eventType": "comment",
+			"text": "Player and misc"
+		},
+		{
 			"eventType": "variable",
 			"name": "PLAYER_cameraHeight",
 			"type": "number",
@@ -230,6 +246,26 @@
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 394788926745905
+		},
+		{
+			"eventType": "variable",
+			"name": "PLAYER_horizontalScale",
+			"type": "number",
+			"initialValue": "1",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 610287879816672
+		},
+		{
+			"eventType": "variable",
+			"name": "PLAYER_verticalScale",
+			"type": "number",
+			"initialValue": "1",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 619795256449368
 		},
 		{
 			"eventType": "variable",
@@ -260,26 +296,6 @@
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 394447909886248
-		},
-		{
-			"eventType": "variable",
-			"name": "PLAYER_jumpStrength",
-			"type": "number",
-			"initialValue": "3",
-			"comment": "",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 840121012847824
-		},
-		{
-			"eventType": "variable",
-			"name": "PLAYER_coyoteTime",
-			"type": "number",
-			"initialValue": "10",
-			"comment": "",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 625686365563330
 		},
 		{
 			"eventType": "variable",
@@ -333,11 +349,11 @@
 		},
 		{
 			"eventType": "include",
-			"includeSheet": "bleed"
+			"includeSheet": "Global"
 		},
 		{
 			"eventType": "include",
-			"includeSheet": "menu"
+			"includeSheet": "Menu"
 		},
 		{
 			"eventType": "group",
@@ -348,7 +364,7 @@
 			"children": [
 				{
 					"eventType": "comment",
-					"text": "initialization"
+					"text": "Initialization"
 				},
 				{
 					"eventType": "block",
@@ -873,7 +889,7 @@
 				},
 				{
 					"eventType": "comment",
-					"text": "gravity"
+					"text": "Gravity"
 				},
 				{
 					"eventType": "block",
@@ -917,7 +933,7 @@
 				},
 				{
 					"eventType": "comment",
-					"text": "our little friend likes to look around"
+					"text": "Our little friend likes to look around"
 				},
 				{
 					"eventType": "block",
@@ -1007,7 +1023,7 @@
 				},
 				{
 					"eventType": "comment",
-					"text": "tick calculations for various things in the world"
+					"text": "Tick calculations for various things in the world"
 				},
 				{
 					"eventType": "block",
@@ -1298,7 +1314,7 @@
 			"children": [
 				{
 					"eventType": "comment",
-					"text": "calculate movement in a 2D plane"
+					"text": "Calculate movement in a 2D plane"
 				},
 				{
 					"eventType": "block",
@@ -1376,7 +1392,7 @@
 				},
 				{
 					"eventType": "comment",
-					"text": "deceleration"
+					"text": "Deceleration"
 				},
 				{
 					"eventType": "block",
@@ -1582,7 +1598,7 @@
 				},
 				{
 					"eventType": "comment",
-					"text": "move!"
+					"text": "Move"
 				},
 				{
 					"eventType": "block",
@@ -1629,7 +1645,7 @@
 				},
 				{
 					"eventType": "comment",
-					"text": "move up ledges"
+					"text": "Move up ledges"
 				},
 				{
 					"eventType": "block",
@@ -1708,7 +1724,113 @@
 				},
 				{
 					"eventType": "comment",
-					"text": "controls"
+					"text": "Controller sensitivity"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-axis",
+							"objectClass": "Gamepad",
+							"sid": 545562882664591,
+							"parameters": {
+								"gamepad": "0",
+								"axis": "left-analog-y-axis",
+								"comparison": 2,
+								"value": "-1"
+							}
+						},
+						{
+							"id": "compare-axis",
+							"objectClass": "Gamepad",
+							"sid": 320792487313281,
+							"parameters": {
+								"gamepad": "0",
+								"axis": "left-analog-y-axis",
+								"comparison": 4,
+								"value": "1"
+							}
+						},
+						{
+							"id": "compare-axis",
+							"objectClass": "Gamepad",
+							"sid": 430040352911352,
+							"parameters": {
+								"gamepad": "0",
+								"axis": "left-analog-x-axis",
+								"comparison": 2,
+								"value": "-1"
+							}
+						},
+						{
+							"id": "compare-axis",
+							"objectClass": "Gamepad",
+							"sid": 435306722604452,
+							"parameters": {
+								"gamepad": "0",
+								"axis": "left-analog-x-axis",
+								"comparison": 4,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 509086622241125,
+							"parameters": {
+								"variable": "PLAYER_horizontalScale",
+								"value": "abs(Gamepad.RawAxis(0, 0))"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 672018811198955,
+							"parameters": {
+								"variable": "PLAYER_verticalScale",
+								"value": "abs(Gamepad.RawAxis(0, 1))"
+							}
+						}
+					],
+					"sid": 202841644099719,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 836620709642071
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 782905158894165,
+							"parameters": {
+								"variable": "PLAYER_horizontalScale",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 853026743569845,
+							"parameters": {
+								"variable": "PLAYER_verticalScale",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 752089401520619
+				},
+				{
+					"eventType": "comment",
+					"text": "Controls"
 				},
 				{
 					"eventType": "block",
@@ -1766,12 +1888,12 @@
 								{
 									"id": "compare-axis",
 									"objectClass": "Gamepad",
-									"sid": 459092694895884,
+									"sid": 691438612562142,
 									"parameters": {
 										"gamepad": "0",
 										"axis": "left-analog-y-axis",
 										"comparison": 2,
-										"value": "-40"
+										"value": "-1"
 									}
 								}
 							],
@@ -1794,11 +1916,11 @@
 										{
 											"id": "compare-instance-variable",
 											"objectClass": "Player",
-											"sid": 499891453441918,
+											"sid": 160327066778077,
 											"parameters": {
 												"instance-variable": "playerSpeedVertical",
 												"comparison": 2,
-												"value": "Self.8Direction.MaxSpeed"
+												"value": "Self.8Direction.MaxSpeed*PLAYER_verticalScale"
 											}
 										}
 									],
@@ -1806,10 +1928,10 @@
 										{
 											"id": "add-to-instvar",
 											"objectClass": "Player",
-											"sid": 491557999633350,
+											"sid": 461905784860608,
 											"parameters": {
 												"instance-variable": "playerSpeedVertical",
-												"value": "PLAYER_acceleration"
+												"value": "PLAYER_acceleration*PLAYER_verticalScale"
 											}
 										}
 									],
@@ -1828,10 +1950,10 @@
 										{
 											"id": "set-instvar-value",
 											"objectClass": "Player",
-											"sid": 567531429888664,
+											"sid": 408073044073708,
 											"parameters": {
 												"instance-variable": "playerSpeedVertical",
-												"value": "Self.8Direction.MaxSpeed"
+												"value": "Self.8Direction.MaxSpeed*PLAYER_verticalScale"
 											}
 										}
 									],
@@ -1893,12 +2015,12 @@
 								{
 									"id": "compare-axis",
 									"objectClass": "Gamepad",
-									"sid": 861461711142562,
+									"sid": 912077367886074,
 									"parameters": {
 										"gamepad": "0",
 										"axis": "left-analog-y-axis",
 										"comparison": 4,
-										"value": "40"
+										"value": "1"
 									}
 								}
 							],
@@ -1921,11 +2043,11 @@
 										{
 											"id": "compare-instance-variable",
 											"objectClass": "Player",
-											"sid": 618584422612868,
+											"sid": 844949278325174,
 											"parameters": {
 												"instance-variable": "playerSpeedVertical",
 												"comparison": 4,
-												"value": "-Self.8Direction.MaxSpeed"
+												"value": "-(Self.8Direction.MaxSpeed*PLAYER_verticalScale)"
 											}
 										}
 									],
@@ -1933,10 +2055,10 @@
 										{
 											"id": "subtract-from-instvar",
 											"objectClass": "Player",
-											"sid": 355808879212930,
+											"sid": 820820039588611,
 											"parameters": {
 												"instance-variable": "playerSpeedVertical",
-												"value": "PLAYER_acceleration"
+												"value": "PLAYER_acceleration*PLAYER_verticalScale"
 											}
 										}
 									],
@@ -1955,10 +2077,10 @@
 										{
 											"id": "set-instvar-value",
 											"objectClass": "Player",
-											"sid": 435136892603052,
+											"sid": 589445586234904,
 											"parameters": {
 												"instance-variable": "playerSpeedVertical",
-												"value": "-Self.8Direction.MaxSpeed"
+												"value": "-(Self.8Direction.MaxSpeed*PLAYER_verticalScale)"
 											}
 										}
 									],
@@ -2003,12 +2125,12 @@
 								{
 									"id": "compare-axis",
 									"objectClass": "Gamepad",
-									"sid": 181432435550097,
+									"sid": 241803126882556,
 									"parameters": {
 										"gamepad": "0",
 										"axis": "left-analog-x-axis",
 										"comparison": 2,
-										"value": "-40"
+										"value": "-1"
 									}
 								}
 							],
@@ -2031,11 +2153,11 @@
 										{
 											"id": "compare-instance-variable",
 											"objectClass": "Player",
-											"sid": 806581835418784,
+											"sid": 592977823776449,
 											"parameters": {
 												"instance-variable": "playerSpeedHorizontal",
 												"comparison": 4,
-												"value": "-Self.8Direction.MaxSpeed*0.75"
+												"value": "-(Self.8Direction.MaxSpeed*PLAYER_horizontalScale)*0.75"
 											}
 										}
 									],
@@ -2043,10 +2165,10 @@
 										{
 											"id": "subtract-from-instvar",
 											"objectClass": "Player",
-											"sid": 302675527241119,
+											"sid": 310451334345660,
 											"parameters": {
 												"instance-variable": "playerSpeedHorizontal",
-												"value": "PLAYER_acceleration"
+												"value": "PLAYER_acceleration*PLAYER_horizontalScale"
 											}
 										}
 									],
@@ -2065,10 +2187,10 @@
 										{
 											"id": "set-instvar-value",
 											"objectClass": "Player",
-											"sid": 763845101368580,
+											"sid": 531627310912456,
 											"parameters": {
 												"instance-variable": "playerSpeedHorizontal",
-												"value": "-Self.8Direction.MaxSpeed*0.75"
+												"value": "-(Self.8Direction.MaxSpeed*PLAYER_horizontalScale)*0.75"
 											}
 										}
 									],
@@ -2113,12 +2235,12 @@
 								{
 									"id": "compare-axis",
 									"objectClass": "Gamepad",
-									"sid": 755255136255501,
+									"sid": 255736789227463,
 									"parameters": {
 										"gamepad": "0",
 										"axis": "left-analog-x-axis",
 										"comparison": 4,
-										"value": "40"
+										"value": "1"
 									}
 								}
 							],
@@ -2141,11 +2263,11 @@
 										{
 											"id": "compare-instance-variable",
 											"objectClass": "Player",
-											"sid": 450410566675373,
+											"sid": 506591181633487,
 											"parameters": {
 												"instance-variable": "playerSpeedHorizontal",
 												"comparison": 2,
-												"value": "Self.8Direction.MaxSpeed*0.75"
+												"value": "(Self.8Direction.MaxSpeed*PLAYER_horizontalScale)*0.75"
 											}
 										}
 									],
@@ -2153,10 +2275,10 @@
 										{
 											"id": "add-to-instvar",
 											"objectClass": "Player",
-											"sid": 432266894736425,
+											"sid": 306563127359026,
 											"parameters": {
 												"instance-variable": "playerSpeedHorizontal",
-												"value": "PLAYER_acceleration"
+												"value": "PLAYER_acceleration*PLAYER_horizontalScale"
 											}
 										}
 									],
@@ -2175,10 +2297,10 @@
 										{
 											"id": "set-instvar-value",
 											"objectClass": "Player",
-											"sid": 675560659822644,
+											"sid": 759266191674569,
 											"parameters": {
 												"instance-variable": "playerSpeedHorizontal",
-												"value": "Self.8Direction.MaxSpeed*0.75"
+												"value": "(Self.8Direction.MaxSpeed*PLAYER_horizontalScale)*0.75"
 											}
 										}
 									],
@@ -2211,81 +2333,7 @@
 						},
 						{
 							"eventType": "comment",
-							"text": "bonus: tank controls"
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "key-is-down",
-									"objectClass": "Keyboard",
-									"sid": 155730455773241,
-									"parameters": {
-										"key": 37
-									}
-								},
-								{
-									"id": "is-button-down",
-									"objectClass": "Gamepad",
-									"sid": 592878304600186,
-									"parameters": {
-										"gamepad": "0",
-										"button": "d-pad-left"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "rotate-camera",
-									"objectClass": "3DCamera",
-									"sid": 959447383338431,
-									"parameters": {
-										"rotate-x": "dt*-90",
-										"rotate-y": "0",
-										"min-polar-angle": "85",
-										"max-polar-angle": "85"
-									}
-								}
-							],
-							"sid": 829457450508154,
-							"isOrBlock": true
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "key-is-down",
-									"objectClass": "Keyboard",
-									"sid": 918506756446912,
-									"parameters": {
-										"key": 39
-									}
-								},
-								{
-									"id": "is-button-down",
-									"objectClass": "Gamepad",
-									"sid": 281741864606685,
-									"parameters": {
-										"gamepad": "0",
-										"button": "d-pad-right"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "rotate-camera",
-									"objectClass": "3DCamera",
-									"sid": 625067023675256,
-									"parameters": {
-										"rotate-x": "dt*90",
-										"rotate-y": "0",
-										"min-polar-angle": "85",
-										"max-polar-angle": "85"
-									}
-								}
-							],
-							"sid": 685540342901476,
-							"isOrBlock": true
+							"text": "Bonus tank controls"
 						},
 						{
 							"eventType": "block",
@@ -2293,7 +2341,7 @@
 								{
 									"id": "compare-axis",
 									"objectClass": "Gamepad",
-									"sid": 134407434374830,
+									"sid": 755690082394944,
 									"parameters": {
 										"gamepad": "0",
 										"axis": "right-analog-x-axis",
@@ -2304,7 +2352,7 @@
 								{
 									"id": "compare-axis",
 									"objectClass": "Gamepad",
-									"sid": 427142771203513,
+									"sid": 858713098731735,
 									"parameters": {
 										"gamepad": "0",
 										"axis": "right-analog-x-axis",
@@ -2317,7 +2365,7 @@
 								{
 									"id": "rotate-camera",
 									"objectClass": "3DCamera",
-									"sid": 736115303327467,
+									"sid": 463351849769453,
 									"parameters": {
 										"rotate-x": "dt*Gamepad.Axis(0, 2)*1.5",
 										"rotate-y": "0",
@@ -2326,8 +2374,96 @@
 									}
 								}
 							],
-							"sid": 966603065341980,
+							"sid": 739275361812064,
 							"isOrBlock": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 185069147976827
+								}
+							],
+							"actions": [],
+							"sid": 644181314760745,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "key-is-down",
+											"objectClass": "Keyboard",
+											"sid": 263886585457771,
+											"parameters": {
+												"key": 37
+											}
+										},
+										{
+											"id": "is-button-down",
+											"objectClass": "Gamepad",
+											"sid": 389933380897072,
+											"parameters": {
+												"gamepad": "0",
+												"button": "d-pad-left"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "rotate-camera",
+											"objectClass": "3DCamera",
+											"sid": 134744783141444,
+											"parameters": {
+												"rotate-x": "dt*-90",
+												"rotate-y": "0",
+												"min-polar-angle": "85",
+												"max-polar-angle": "85"
+											}
+										}
+									],
+									"sid": 513671544479795,
+									"isOrBlock": true
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "key-is-down",
+											"objectClass": "Keyboard",
+											"sid": 987045102854354,
+											"parameters": {
+												"key": 39
+											}
+										},
+										{
+											"id": "is-button-down",
+											"objectClass": "Gamepad",
+											"sid": 108854068034883,
+											"parameters": {
+												"gamepad": "0",
+												"button": "d-pad-right"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "rotate-camera",
+											"objectClass": "3DCamera",
+											"sid": 786432737602955,
+											"parameters": {
+												"rotate-x": "dt*90",
+												"rotate-y": "0",
+												"min-polar-angle": "85",
+												"max-polar-angle": "85"
+											}
+										}
+									],
+									"sid": 186531853879643,
+									"isOrBlock": true
+								}
+							]
 						},
 						{
 							"eventType": "block",
@@ -4000,15 +4136,6 @@
 										"variable": "PLAYER_onGround",
 										"value": "true"
 									}
-								},
-								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 811544451396356,
-									"parameters": {
-										"variable": "PLAYER_coyoteTime",
-										"value": "10"
-									}
 								}
 							],
 							"sid": 397095036805296
@@ -4035,40 +4162,11 @@
 							}
 						}
 					],
-					"sid": 995175006494167,
-					"children": [
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "compare-eventvar",
-									"objectClass": "System",
-									"sid": 281390756414554,
-									"parameters": {
-										"variable": "PLAYER_coyoteTime",
-										"comparison": 4,
-										"value": "0"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "subtract-from-eventvar",
-									"objectClass": "System",
-									"sid": 189537357345849,
-									"parameters": {
-										"variable": "PLAYER_coyoteTime",
-										"value": "60*dt"
-									}
-								}
-							],
-							"sid": 332267426769708
-						}
-					]
+					"sid": 995175006494167
 				},
 				{
 					"eventType": "comment",
-					"text": "collision types"
+					"text": "Collision types"
 				},
 				{
 					"eventType": "block",
@@ -4632,6 +4730,10 @@
 							"sid": 344492081479292,
 							"children": [
 								{
+									"eventType": "comment",
+									"text": "Open doors"
+								},
+								{
 									"eventType": "block",
 									"conditions": [
 										{
@@ -4694,6 +4796,10 @@
 										}
 									],
 									"sid": 597327883107626
+								},
+								{
+									"eventType": "comment",
+									"text": "Finish the level"
 								},
 								{
 									"eventType": "block",
@@ -4778,6 +4884,10 @@
 									],
 									"actions": [],
 									"sid": 975602104855148
+								},
+								{
+									"eventType": "comment",
+									"text": "Bump into a wall"
 								},
 								{
 									"eventType": "block",
@@ -4869,6 +4979,10 @@
 							]
 						},
 						{
+							"eventType": "comment",
+							"text": "Interact with artwork"
+						},
+						{
 							"eventType": "block",
 							"conditions": [
 								{
@@ -4916,151 +5030,41 @@
 											}
 										},
 										{
-											"id": "set-boolean-eventvar",
-											"objectClass": "System",
-											"sid": 362573959880341,
-											"parameters": {
-												"variable": "MENU_keyControl",
-												"value": "false"
-											}
-										},
-										{
-											"id": "release-pointer-lock",
-											"objectClass": "Mouse",
-											"sid": 242266978542777
-										},
-										{
-											"id": "set-boolean-instvar",
-											"objectClass": "Player",
-											"sid": 590962915882432,
-											"parameters": {
-												"instance-variable": "playerUp",
-												"value": "false"
-											}
-										},
-										{
-											"id": "set-boolean-instvar",
-											"objectClass": "Player",
-											"sid": 369481604838020,
-											"parameters": {
-												"instance-variable": "playerDown",
-												"value": "false"
-											}
-										},
-										{
-											"id": "set-boolean-instvar",
-											"objectClass": "Player",
-											"sid": 748490931563980,
-											"parameters": {
-												"instance-variable": "playerLeft",
-												"value": "false"
-											}
-										},
-										{
-											"id": "set-boolean-instvar",
-											"objectClass": "Player",
-											"sid": 413358103912279,
-											"parameters": {
-												"instance-variable": "playerRight",
-												"value": "false"
-											}
-										},
-										{
-											"id": "set-eventvar-value",
-											"objectClass": "System",
-											"sid": 567663639413812,
-											"parameters": {
-												"variable": "MENU_soundCountdown",
-												"value": "5"
-											}
-										},
-										{
-											"id": "play",
-											"objectClass": "Audio",
-											"sid": 935211719011136,
-											"parameters": {
-												"audio-file": "menuselect",
-												"loop": "not-looping",
-												"volume": "log10(SETTING_volumeSound)*20",
-												"stereo-pan": "0",
-												"tag-optional": "\"\""
-											}
-										},
-										{
-											"id": "set-eventvar-value",
-											"objectClass": "System",
-											"sid": 687742477378363,
-											"parameters": {
-												"variable": "MENU_selected",
-												"value": "0"
-											}
-										},
-										{
-											"id": "set-eventvar-value",
-											"objectClass": "System",
-											"sid": 451249395158740,
-											"parameters": {
-												"variable": "MENU_menu",
-												"value": "\"Modal\""
-											}
-										},
-										{
-											"id": "set-layer-visible",
-											"objectClass": "System",
-											"sid": 216053986879468,
-											"parameters": {
-												"layer": "\"Modal\"",
-												"visibility": "visible"
-											}
-										},
-										{
-											"id": "set-layer-visible",
-											"objectClass": "System",
-											"sid": 211177694298177,
-											"parameters": {
-												"layer": "\"Fade\"",
-												"visibility": "visible"
-											}
-										},
-										{
-											"id": "set-layer-visible",
-											"objectClass": "System",
-											"sid": 627106511521017,
-											"parameters": {
-												"layer": "\"Menu\"",
-												"visibility": "visible"
-											}
-										},
-										{
-											"id": "set-boolean-eventvar",
-											"objectClass": "System",
-											"sid": 553889560105433,
-											"parameters": {
-												"variable": "GAME_canLink",
-												"value": "false"
-											}
-										},
-										{
-											"id": "set-boolean-eventvar",
-											"objectClass": "System",
-											"sid": 830940486897500,
-											"parameters": {
-												"variable": "MENU_paused",
-												"value": "true"
-											}
-										},
-										{
-											"id": "set-boolean-eventvar",
-											"objectClass": "System",
-											"sid": 526190817934483,
-											"parameters": {
-												"variable": "GAME_modalArt",
-												"value": "false"
-											}
+											"callFunction": "openMenu",
+											"sid": 136707540513009,
+											"parameters": [
+												"\"Modal\""
+											]
 										}
 									],
 									"sid": 778279454943972,
 									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "has-tags",
+													"objectClass": "Trigger",
+													"sid": 746833530776143,
+													"parameters": {
+														"tags": "\"shop\""
+													},
+													"isInverted": true
+												}
+											],
+											"actions": [
+												{
+													"id": "set-boolean-eventvar",
+													"objectClass": "System",
+													"sid": 899141037282479,
+													"parameters": {
+														"variable": "GAME_modalArt",
+														"value": "true"
+													}
+												}
+											],
+											"sid": 644753038437562
+										},
 										{
 											"eventType": "block",
 											"conditions": [
@@ -5097,32 +5101,6 @@
 												}
 											],
 											"sid": 721946908790264
-										},
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "has-tags",
-													"objectClass": "Trigger",
-													"sid": 768869833530867,
-													"parameters": {
-														"tags": "\"shop\""
-													},
-													"isInverted": true
-												}
-											],
-											"actions": [
-												{
-													"id": "set-boolean-eventvar",
-													"objectClass": "System",
-													"sid": 745201446161360,
-													"parameters": {
-														"variable": "GAME_modalArt",
-														"value": "true"
-													}
-												}
-											],
-											"sid": 512428898844792
 										},
 										{
 											"eventType": "block",
@@ -5457,7 +5435,7 @@
 				},
 				{
 					"eventType": "comment",
-					"text": "pickups"
+					"text": "Pickups"
 				},
 				{
 					"eventType": "block",
@@ -6283,7 +6261,7 @@
 		},
 		{
 			"eventType": "comment",
-			"text": "camera oddities"
+			"text": "This has to run after everything"
 		},
 		{
 			"eventType": "block",
@@ -6561,6 +6539,10 @@
 			]
 		},
 		{
+			"eventType": "comment",
+			"text": "Pause the game"
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -6583,57 +6565,81 @@
 			],
 			"actions": [
 				{
-					"id": "set-boolean-eventvar",
-					"objectClass": "System",
-					"sid": 397316831586925,
-					"parameters": {
-						"variable": "MENU_keyControl",
-						"value": "true"
-					}
-				},
-				{
-					"id": "release-pointer-lock",
-					"objectClass": "Mouse",
-					"sid": 162380197506594
-				},
-				{
-					"id": "set-boolean-instvar",
-					"objectClass": "Player",
-					"sid": 696064398735712,
-					"parameters": {
-						"instance-variable": "playerUp",
-						"value": "false"
-					}
-				},
-				{
-					"id": "set-boolean-instvar",
-					"objectClass": "Player",
-					"sid": 820264754572196,
-					"parameters": {
-						"instance-variable": "playerDown",
-						"value": "false"
-					}
-				},
-				{
-					"id": "set-boolean-instvar",
-					"objectClass": "Player",
-					"sid": 665221471455256,
-					"parameters": {
-						"instance-variable": "playerLeft",
-						"value": "false"
-					}
-				},
-				{
-					"id": "set-boolean-instvar",
-					"objectClass": "Player",
-					"sid": 904655793087275,
-					"parameters": {
-						"instance-variable": "playerRight",
-						"value": "false"
-					}
+					"callFunction": "openMenu",
+					"sid": 440945531182333,
+					"parameters": [
+						"\"Main\""
+					]
 				}
 			],
 			"sid": 399615904934950,
+			"isOrBlock": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-any-touch-start",
+					"objectClass": "Touch",
+					"sid": 414875299669693
+				},
+				{
+					"id": "is-touching-object",
+					"objectClass": "Touch",
+					"sid": 335510515414900,
+					"parameters": {
+						"object": "MobileButtons"
+					}
+				},
+				{
+					"id": "compare-animation-frame",
+					"objectClass": "MobileButtons",
+					"sid": 582675604950775,
+					"parameters": {
+						"comparison": 0,
+						"number": "6"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 178422415697693,
+					"parameters": {
+						"variable": "GAME_mobile"
+					}
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "openMenu",
+					"sid": 168651524235527,
+					"parameters": [
+						"\"Main\""
+					]
+				}
+			],
+			"sid": 348045709474083
+		},
+		{
+			"functionName": "openMenu",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [
+				{
+					"name": "menu",
+					"type": "string",
+					"initialValue": "Menu",
+					"comment": "",
+					"sid": 690411372652556
+				}
+			],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [],
+			"sid": 759161366039146,
 			"children": [
 				{
 					"eventType": "block",
@@ -6641,7 +6647,7 @@
 						{
 							"id": "compare-boolean-eventvar",
 							"objectClass": "System",
-							"sid": 443001687254520,
+							"sid": 620296394732945,
 							"parameters": {
 								"variable": "BLEED_ready"
 							}
@@ -6649,35 +6655,104 @@
 						{
 							"id": "compare-boolean-eventvar",
 							"objectClass": "System",
-							"sid": 601216936315829,
+							"sid": 490834444845834,
 							"parameters": {
 								"variable": "MENU_paused"
 							},
 							"isInverted": true
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 386179077635155,
+							"parameters": {
+								"variable": "MENU_menu",
+								"comparison": 0,
+								"value": "\"\""
+							}
 						}
 					],
-					"actions": [],
-					"sid": 837982659923443,
+					"actions": [
+						{
+							"type": "comment",
+							"text": "Stop player control"
+						},
+						{
+							"id": "release-pointer-lock",
+							"objectClass": "Mouse",
+							"sid": 182155193376756
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Player",
+							"sid": 137310843364859,
+							"parameters": {
+								"instance-variable": "playerUp",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Player",
+							"sid": 816662668734900,
+							"parameters": {
+								"instance-variable": "playerDown",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Player",
+							"sid": 732179051839496,
+							"parameters": {
+								"instance-variable": "playerLeft",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Player",
+							"sid": 449169901537598,
+							"parameters": {
+								"instance-variable": "playerRight",
+								"value": "false"
+							}
+						}
+					],
+					"sid": 768104159166789,
 					"children": [
+						{
+							"eventType": "comment",
+							"text": "Pause"
+						},
 						{
 							"eventType": "block",
 							"conditions": [
 								{
 									"id": "compare-eventvar",
 									"objectClass": "System",
-									"sid": 382867445727001,
+									"sid": 478426072528058,
 									"parameters": {
-										"variable": "MENU_menu",
+										"variable": "menu",
 										"comparison": 0,
-										"value": "\"\""
+										"value": "\"Main\""
 									}
 								}
 							],
 							"actions": [
 								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 405952735168285,
+									"parameters": {
+										"variable": "MENU_keyControl",
+										"value": "true"
+									}
+								},
+								{
 									"id": "set-eventvar-value",
 									"objectClass": "System",
-									"sid": 127008929718429,
+									"sid": 895328217047839,
 									"parameters": {
 										"variable": "MENU_soundCountdown",
 										"value": "5"
@@ -6686,7 +6761,7 @@
 								{
 									"id": "play",
 									"objectClass": "Audio",
-									"sid": 706585044204935,
+									"sid": 136170157896357,
 									"parameters": {
 										"audio-file": "menuopen",
 										"loop": "not-looping",
@@ -6698,16 +6773,7 @@
 								{
 									"id": "set-eventvar-value",
 									"objectClass": "System",
-									"sid": 544870536472036,
-									"parameters": {
-										"variable": "MENU_selected",
-										"value": "0"
-									}
-								},
-								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 103676546107889,
+									"sid": 125250244285023,
 									"parameters": {
 										"variable": "MENU_menu",
 										"value": "\"Main\""
@@ -6716,25 +6782,7 @@
 								{
 									"id": "set-layer-visible",
 									"objectClass": "System",
-									"sid": 815185993165894,
-									"parameters": {
-										"layer": "\"Menu\"",
-										"visibility": "visible"
-									}
-								},
-								{
-									"id": "set-layer-visible",
-									"objectClass": "System",
-									"sid": 856709761254058,
-									"parameters": {
-										"layer": "\"Main\"",
-										"visibility": "visible"
-									}
-								},
-								{
-									"id": "set-layer-visible",
-									"objectClass": "System",
-									"sid": 513069530088310,
+									"sid": 313102254671367,
 									"parameters": {
 										"layer": "\"Fade\"",
 										"visibility": "visible"
@@ -6743,220 +6791,187 @@
 								{
 									"id": "set-layer-visible",
 									"objectClass": "System",
-									"sid": 164022657700267,
+									"sid": 124133989235321,
 									"parameters": {
 										"layer": "\"Menu\"",
 										"visibility": "visible"
 									}
 								},
 								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 660365440442620,
+									"parameters": {
+										"layer": "\"Main\"",
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 358328873924895,
+									"parameters": {
+										"variable": "MENU_selected",
+										"value": "0"
+									}
+								},
+								{
 									"id": "set-boolean-eventvar",
 									"objectClass": "System",
-									"sid": 797463682509057,
+									"sid": 685038974791339,
 									"parameters": {
 										"variable": "MENU_paused",
 										"value": "true"
 									}
 								}
 							],
-							"sid": 861834870391864
+							"sid": 168202496204761
+						},
+						{
+							"eventType": "comment",
+							"text": "Modal"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 203396223286918,
+									"parameters": {
+										"variable": "menu",
+										"comparison": 0,
+										"value": "\"Modal\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 782321629493921,
+									"parameters": {
+										"variable": "MENU_keyControl",
+										"value": "true"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 316182078749139,
+									"parameters": {
+										"variable": "MENU_soundCountdown",
+										"value": "5"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 421049811893427,
+									"parameters": {
+										"audio-file": "menuselect",
+										"loop": "not-looping",
+										"volume": "log10(SETTING_volumeSound)*20",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 776369202625885,
+									"parameters": {
+										"variable": "MENU_menu",
+										"value": "\"Modal\""
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 199609724532537,
+									"parameters": {
+										"layer": "\"Fade\"",
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 366917144468601,
+									"parameters": {
+										"layer": "\"Modal\"",
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 909675375613695,
+									"parameters": {
+										"layer": "\"Menu\"",
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 582264564005211,
+									"parameters": {
+										"variable": "MENU_selected",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 811564253265598,
+									"parameters": {
+										"variable": "MENU_paused",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 904845194057391,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 687514191376769,
+											"parameters": {
+												"variable": "GAME_mobile"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 834412086844230,
+											"parameters": {
+												"variable": "GAME_canLink",
+												"value": "false"
+											}
+										}
+									],
+									"sid": 691370586376137
+								}
+							]
 						}
 					]
-				}
-			],
-			"isOrBlock": true
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "compare-eventvar",
-					"objectClass": "System",
-					"sid": 761702886629245,
-					"parameters": {
-						"variable": "MENU_menu",
-						"comparison": 0,
-						"value": "\"\""
-					}
 				},
-				{
-					"id": "compare-boolean-eventvar",
-					"objectClass": "System",
-					"sid": 148534359461680,
-					"parameters": {
-						"variable": "BLEED_ready"
-					}
-				},
-				{
-					"id": "compare-boolean-eventvar",
-					"objectClass": "System",
-					"sid": 600910986690457,
-					"parameters": {
-						"variable": "MENU_paused"
-					},
-					"isInverted": true
-				},
-				{
-					"id": "compare-boolean-eventvar",
-					"objectClass": "System",
-					"sid": 459056372013304,
-					"parameters": {
-						"variable": "GAME_mobile"
-					}
-				}
-			],
-			"actions": [],
-			"sid": 921943406767359,
-			"children": [
 				{
 					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-any-touch-start",
-							"objectClass": "Touch",
-							"sid": 811949163291104
-						},
-						{
-							"id": "is-touching-object",
-							"objectClass": "Touch",
-							"sid": 470748608454491,
-							"parameters": {
-								"object": "MobileButtons"
-							}
-						},
-						{
-							"id": "compare-animation-frame",
-							"objectClass": "MobileButtons",
-							"sid": 820838478969838,
-							"parameters": {
-								"comparison": 0,
-								"number": "6"
-							}
-						}
-					],
+					"conditions": [],
 					"actions": [
 						{
-							"id": "set-boolean-instvar",
-							"objectClass": "Player",
-							"sid": 150222702907285,
-							"parameters": {
-								"instance-variable": "playerUp",
-								"value": "false"
-							}
-						},
-						{
-							"id": "set-boolean-instvar",
-							"objectClass": "Player",
-							"sid": 435231739775859,
-							"parameters": {
-								"instance-variable": "playerDown",
-								"value": "false"
-							}
-						},
-						{
-							"id": "set-boolean-instvar",
-							"objectClass": "Player",
-							"sid": 345921586017918,
-							"parameters": {
-								"instance-variable": "playerLeft",
-								"value": "false"
-							}
-						},
-						{
-							"id": "set-boolean-instvar",
-							"objectClass": "Player",
-							"sid": 748614569741349,
-							"parameters": {
-								"instance-variable": "playerRight",
-								"value": "false"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 965736746418382,
-							"parameters": {
-								"variable": "MENU_soundCountdown",
-								"value": "5"
-							}
-						},
-						{
-							"id": "play",
-							"objectClass": "Audio",
-							"sid": 680581840702871,
-							"parameters": {
-								"audio-file": "menuopen",
-								"loop": "not-looping",
-								"volume": "log10(SETTING_volumeSound)*20",
-								"stereo-pan": "0",
-								"tag-optional": "\"\""
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 946830727633056,
-							"parameters": {
-								"variable": "MENU_selected",
-								"value": "0"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 396175402555945,
-							"parameters": {
-								"variable": "MENU_menu",
-								"value": "\"Main\""
-							}
-						},
-						{
-							"id": "set-layer-visible",
-							"objectClass": "System",
-							"sid": 108044481503470,
-							"parameters": {
-								"layer": "\"Menu\"",
-								"visibility": "visible"
-							}
-						},
-						{
-							"id": "set-layer-visible",
-							"objectClass": "System",
-							"sid": 834445045283813,
-							"parameters": {
-								"layer": "\"Main\"",
-								"visibility": "visible"
-							}
-						},
-						{
-							"id": "set-layer-visible",
-							"objectClass": "System",
-							"sid": 327831109961828,
-							"parameters": {
-								"layer": "\"Fade\"",
-								"visibility": "visible"
-							}
-						},
-						{
-							"id": "set-layer-visible",
-							"objectClass": "System",
-							"sid": 217087237237711,
-							"parameters": {
-								"layer": "\"Menu\"",
-								"visibility": "visible"
-							}
-						},
-						{
-							"id": "set-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 216211800268888,
-							"parameters": {
-								"variable": "MENU_paused",
-								"value": "true"
-							}
+							"callFunction": "updateMenus",
+							"sid": 727424786463922
 						}
 					],
-					"sid": 862821520368257
+					"sid": 602464039950730
 				}
 			]
 		},
@@ -7050,10 +7065,6 @@
 				}
 			],
 			"sid": 836112138465216
-		},
-		{
-			"eventType": "comment",
-			"text": "thanks to construct for forcing mouse movement calculation when not pointer locked vs pointer locked being the same. nothing i can do here without making it feel worse"
 		},
 		{
 			"eventType": "block",

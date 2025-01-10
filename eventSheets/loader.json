@@ -1,13 +1,13 @@
 {
-	"name": "loader",
+	"name": "Loader",
 	"events": [
 		{
 			"eventType": "include",
-			"includeSheet": "bleed"
+			"includeSheet": "Global"
 		},
 		{
 			"eventType": "comment",
-			"text": "loading"
+			"text": "Loading"
 		},
 		{
 			"eventType": "block",
@@ -45,6 +45,14 @@
 					"id": "set-opacity",
 					"objectClass": "LoaderButton",
 					"sid": 795567626511797,
+					"parameters": {
+						"opacity": "0"
+					}
+				},
+				{
+					"id": "set-opacity",
+					"objectClass": "Scumdog",
+					"sid": 179014781806841,
 					"parameters": {
 						"opacity": "0"
 					}
@@ -135,7 +143,7 @@
 		},
 		{
 			"eventType": "comment",
-			"text": "loaded, play animation"
+			"text": "Loaded, play animation"
 		},
 		{
 			"eventType": "block",
@@ -333,19 +341,15 @@
 			"isOrBlock": true
 		},
 		{
-			"eventType": "comment",
-			"text": "play button"
-		},
-		{
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "compare-opacity",
+					"id": "on-tweens-finished",
 					"objectClass": "LoaderPlay",
-					"sid": 406183036565203,
+					"sid": 749430001782046,
+					"behaviorType": "Tween",
 					"parameters": {
-						"comparison": 5,
-						"opacity": "100"
+						"tags": "\"fade\""
 					}
 				}
 			],
@@ -353,20 +357,107 @@
 				{
 					"id": "destroy",
 					"objectClass": "LoaderBase",
-					"sid": 182051452473941
+					"sid": 870868212462516
 				},
 				{
 					"id": "destroy",
 					"objectClass": "LoaderBar",
-					"sid": 315495140767877
+					"sid": 206101229349583
 				},
 				{
 					"id": "destroy",
 					"objectClass": "LoaderButton",
-					"sid": 795928428067330
+					"sid": 865517312089935
 				}
 			],
-			"sid": 606716803107286,
+			"sid": 986518893008223
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tweens-finished",
+					"objectClass": "Scumdog",
+					"sid": 148674617197449,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"fade\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 783777538526146,
+					"parameters": {
+						"seconds": "1.5",
+						"use-timescale": true
+					}
+				},
+				{
+					"id": "tween-one-property",
+					"objectClass": "Scumdog",
+					"sid": 787707835392298,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"final\"",
+						"property": "offsetOpacity",
+						"end-value": "0",
+						"time": "0.25",
+						"ease": "easeoutsine",
+						"destroy-on-complete": "yes",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				}
+			],
+			"sid": 994371488821494
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tweens-finished",
+					"objectClass": "Scumdog",
+					"sid": 127959489357858,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"final\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "transition",
+					"sid": 672674490908948,
+					"parameters": [
+						"\"menu\""
+					]
+				}
+			],
+			"sid": 627526675365601
+		},
+		{
+			"eventType": "comment",
+			"text": "Buttons"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-opacity",
+					"objectClass": "LoaderPlay",
+					"sid": 544197971965215,
+					"parameters": {
+						"comparison": 5,
+						"opacity": "100"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 593922867692944,
 			"children": [
 				{
 					"eventType": "block",
@@ -374,7 +465,7 @@
 						{
 							"id": "cursor-is-over-object",
 							"objectClass": "Mouse",
-							"sid": 407914646763571,
+							"sid": 327518216723506,
 							"parameters": {
 								"object": "LoaderPlay"
 							}
@@ -384,7 +475,7 @@
 						{
 							"id": "set-animation-frame",
 							"objectClass": "LoaderPlay",
-							"sid": 563669251028442,
+							"sid": 343286419502410,
 							"parameters": {
 								"frame-number": "1"
 							}
@@ -392,13 +483,13 @@
 						{
 							"id": "set-cursor-style2",
 							"objectClass": "Mouse",
-							"sid": 998552378487094,
+							"sid": 333116927099100,
 							"parameters": {
 								"cursor-style": "pointer"
 							}
 						}
 					],
-					"sid": 231222883593633
+					"sid": 840087567688360
 				},
 				{
 					"eventType": "block",
@@ -406,14 +497,14 @@
 						{
 							"id": "else",
 							"objectClass": "System",
-							"sid": 374480169825721
+							"sid": 813271805637255
 						}
 					],
 					"actions": [
 						{
 							"id": "set-animation-frame",
 							"objectClass": "LoaderPlay",
-							"sid": 751709337768315,
+							"sid": 415509829513776,
 							"parameters": {
 								"frame-number": "0"
 							}
@@ -421,13 +512,13 @@
 						{
 							"id": "set-cursor-style2",
 							"objectClass": "Mouse",
-							"sid": 215908555071161,
+							"sid": 228808625416227,
 							"parameters": {
 								"cursor-style": "normal"
 							}
 						}
 					],
-					"sid": 840324762479525
+					"sid": 648567371196179
 				},
 				{
 					"eventType": "block",
@@ -435,60 +526,55 @@
 						{
 							"id": "mouse-button-is-down",
 							"objectClass": "Mouse",
-							"sid": 567622994235161,
+							"sid": 135491732011165,
 							"parameters": {
 								"mouse-button": "left"
 							}
 						},
 						{
-							"id": "cursor-is-over-object",
-							"objectClass": "Mouse",
-							"sid": 358920007976888,
-							"parameters": {
-								"object": "LoaderPlay"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-animation-frame",
-							"objectClass": "LoaderPlay",
-							"sid": 474719985894852,
-							"parameters": {
-								"frame-number": "2"
-							}
-						}
-					],
-					"sid": 724114935733841
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "else",
-							"objectClass": "System",
-							"sid": 369843327085135
-						},
-						{
-							"id": "is-touching-object",
+							"id": "is-in-touch",
 							"objectClass": "Touch",
-							"sid": 925058051101143,
-							"parameters": {
-								"object": "LoaderPlay"
-							}
+							"sid": 544243923182945
 						}
 					],
-					"actions": [
+					"actions": [],
+					"sid": 509864687454465,
+					"children": [
 						{
-							"id": "set-animation-frame",
-							"objectClass": "LoaderPlay",
-							"sid": 447700247688562,
-							"parameters": {
-								"frame-number": "2"
-							}
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "cursor-is-over-object",
+									"objectClass": "Mouse",
+									"sid": 966948047471203,
+									"parameters": {
+										"object": "LoaderPlay"
+									}
+								},
+								{
+									"id": "is-touching-object",
+									"objectClass": "Touch",
+									"sid": 884577035102966,
+									"parameters": {
+										"object": "LoaderPlay"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation-frame",
+									"objectClass": "LoaderPlay",
+									"sid": 367779050804547,
+									"parameters": {
+										"frame-number": "2"
+									}
+								}
+							],
+							"sid": 143970946205519,
+							"isOrBlock": true
 						}
 					],
-					"sid": 357739889963835
+					"isOrBlock": true
 				},
 				{
 					"eventType": "block",
@@ -496,58 +582,95 @@
 						{
 							"id": "on-button-released",
 							"objectClass": "Mouse",
-							"sid": 623661756971870,
+							"sid": 677926805656591,
 							"parameters": {
 								"mouse-button": "left"
 							}
 						},
 						{
-							"id": "cursor-is-over-object",
-							"objectClass": "Mouse",
-							"sid": 106739145704767,
-							"parameters": {
-								"object": "LoaderPlay"
-							}
-						}
-					],
-					"actions": [
-						{
-							"callFunction": "transition",
-							"sid": 680662123826558,
-							"parameters": [
-								"\"menu\""
-							]
-						}
-					],
-					"sid": 670901596521887
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
 							"id": "on-any-touch-end",
 							"objectClass": "Touch",
-							"sid": 877246686789716
-						},
-						{
-							"id": "is-touching-object",
-							"objectClass": "Touch",
-							"sid": 229037047027913,
-							"parameters": {
-								"object": "LoaderPlay"
-							}
+							"sid": 909362410883178
 						}
 					],
-					"actions": [
+					"actions": [],
+					"sid": 720966654444962,
+					"children": [
 						{
-							"callFunction": "transition",
-							"sid": 214467224439766,
-							"parameters": [
-								"\"menu\""
-							]
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "cursor-is-over-object",
+									"objectClass": "Mouse",
+									"sid": 130472827658429,
+									"parameters": {
+										"object": "LoaderPlay"
+									}
+								},
+								{
+									"id": "is-touching-object",
+									"objectClass": "Touch",
+									"sid": 912417994610310,
+									"parameters": {
+										"object": "LoaderPlay"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "destroy",
+									"objectClass": "LoaderPlay",
+									"sid": 572481405492611
+								},
+								{
+									"id": "set-cursor-style2",
+									"objectClass": "Mouse",
+									"sid": 255201690873818,
+									"parameters": {
+										"cursor-style": "normal"
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 256607523804621,
+									"parameters": {
+										"layer": "\"Loader\"",
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 840013668449848,
+									"parameters": {
+										"layer": "\"Logo\"",
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "tween-one-property",
+									"objectClass": "Scumdog",
+									"sid": 284274477146251,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"fade\"",
+										"property": "offsetOpacity",
+										"end-value": "100",
+										"time": "0.5",
+										"ease": "easeinsine",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no",
+										"repeat-count": "1"
+									}
+								}
+							],
+							"sid": 572351541222331,
+							"isOrBlock": true
 						}
 					],
-					"sid": 454833860237939
+					"isOrBlock": true
 				}
 			]
 		},
@@ -558,24 +681,64 @@
 					"id": "on-loader-layout-complete",
 					"objectClass": "System",
 					"sid": 303849572235292
+				}
+			],
+			"actions": [],
+			"sid": 274938986926804,
+			"children": [
+				{
+					"eventType": "comment",
+					"text": "Standalone skips right to the logo"
 				},
 				{
-					"id": "is-windows-webview2-export",
-					"objectClass": "PlatformInfo",
-					"sid": 989111331225626
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-windows-webview2-export",
+							"objectClass": "PlatformInfo",
+							"sid": 140934278045465
+						}
+					],
+					"actions": [
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 317666153799019,
+							"parameters": {
+								"layer": "\"Loader\"",
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 709220316976793,
+							"parameters": {
+								"layer": "\"Logo\"",
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "tween-one-property",
+							"objectClass": "Scumdog",
+							"sid": 271677212906384,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"fade\"",
+								"property": "offsetOpacity",
+								"end-value": "100",
+								"time": "0.5",
+								"ease": "easeinsine",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "no",
+								"repeat-count": "1"
+							}
+						}
+					],
+					"sid": 549819627923406
 				}
-			],
-			"actions": [
-				{
-					"id": "go-to-layout",
-					"objectClass": "System",
-					"sid": 867174888903730,
-					"parameters": {
-						"layout": "menu"
-					}
-				}
-			],
-			"sid": 274938986926804
+			]
 		}
 	],
 	"sid": 930092798194707

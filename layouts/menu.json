@@ -1,5 +1,5 @@
 {
-	"name": "menu",
+	"name": "Menu",
 	"layers": [
 		{
 			"name": "Debug",
@@ -3801,112 +3801,12 @@
 						{
 							"type": "MenuFontSmall",
 							"properties": {
-								"text": "FILIPPO MEOZZI\nLIAM STONE",
-								"enable-bbcode": true,
-								"character-width": 12,
-								"character-height": 10,
-								"character-set": "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.,!':()–#$%",
-								"spacing-data": "[[3, \" \"],\n[4, \"I.,!':\"],\n[5, \"1\"],\n[6, \"–\"],\n[7, \"SVZ45()\"],\n[8, \"ABCDEFGHJKLNOPQRTUY0236789#*%\"],\n[9, \"MWX\"]]",
-								"scale": 1,
-								"character-spacing": 0,
-								"line-height": 0,
-								"horizontal-alignment": "left",
-								"vertical-alignment": "top",
-								"wrapping": "word",
-								"initially-visible": true,
-								"origin": "top-left",
-								"read-aloud": false
-							},
-							"uid": 453,
-							"sid": 567313025198192,
-							"tags": "",
-							"instanceVariables": {},
-							"behaviors": {},
-							"instanceFolderItem": {
-								"sid": 567313025198192,
-								"expanded": true,
-								"folderName": "",
-								"indexInFolder": -1,
-								"folderNestingLevel": -1
-							},
-							"showing": true,
-							"locked": false,
-							"world": {
-								"x": 164,
-								"y": 40,
-								"width": 152,
-								"height": 20,
-								"originX": 0,
-								"originY": 0,
-								"color": [
-									1,
-									1,
-									1,
-									1
-								],
-								"angle": 0,
-								"zElevation": 0
-							}
-						},
-						{
-							"type": "MenuFontSmall",
-							"properties": {
-								"text": "CREATED BY:",
-								"enable-bbcode": true,
-								"character-width": 12,
-								"character-height": 10,
-								"character-set": "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.,!':()–#$%",
-								"spacing-data": "[[3, \" \"],\n[4, \"I.,!':\"],\n[5, \"1\"],\n[6, \"–\"],\n[7, \"SVZ45()\"],\n[8, \"ABCDEFGHJKLNOPQRTUY0236789#*%\"],\n[9, \"MWX\"]]",
-								"scale": 1,
-								"character-spacing": 0,
-								"line-height": 0,
-								"horizontal-alignment": "right",
-								"vertical-alignment": "top",
-								"wrapping": "word",
-								"initially-visible": true,
-								"origin": "top-left",
-								"read-aloud": false
-							},
-							"uid": 454,
-							"sid": 709037269009470,
-							"tags": "",
-							"instanceVariables": {},
-							"behaviors": {},
-							"instanceFolderItem": {
-								"sid": 709037269009470,
-								"expanded": true,
-								"folderName": "",
-								"indexInFolder": -1,
-								"folderNestingLevel": -1
-							},
-							"showing": true,
-							"locked": false,
-							"world": {
-								"x": 4,
-								"y": 40,
-								"width": 152,
-								"height": 12,
-								"originX": 0,
-								"originY": 0,
-								"color": [
-									1,
-									1,
-									1,
-									1
-								],
-								"angle": 0,
-								"zElevation": 0
-							}
-						},
-						{
-							"type": "MenuFontSmall",
-							"properties": {
 								"text": "DOOM IS COPYRIGHT # 1993 ID SOFTWARE",
 								"enable-bbcode": true,
 								"character-width": 12,
 								"character-height": 10,
-								"character-set": "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.,!':()–#$%",
-								"spacing-data": "[[3, \" \"],\n[4, \"I.,!':\"],\n[5, \"1\"],\n[6, \"–\"],\n[7, \"SVZ45()\"],\n[8, \"ABCDEFGHJKLNOPQRTUY0236789#*%\"],\n[9, \"MWX\"]]",
+								"character-set": "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.,!':()–#$%&",
+								"spacing-data": "[[3, \" \"],\n[4, \"I.,!':\"],\n[5, \"1\"],\n[6, \"–\"],\n[7, \"SVZ45()\"],\n[8, \"ABCDEFGHJKLNOPQRTUY0236789#*%&\"],\n[9, \"MWX\"]]",
 								"scale": 1,
 								"character-spacing": 0,
 								"line-height": 0,
@@ -3932,9 +3832,9 @@
 							"showing": true,
 							"locked": false,
 							"world": {
-								"x": 0,
+								"x": 8,
 								"y": 140,
-								"width": 320,
+								"width": 304,
 								"height": 12,
 								"originX": 0,
 								"originY": 0,
@@ -4007,8 +3907,8 @@
 								"enable-bbcode": true,
 								"character-width": 12,
 								"character-height": 10,
-								"character-set": "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.,!':()–#$%",
-								"spacing-data": "[[3, \" \"],\n[4, \"I.,!':\"],\n[5, \"1\"],\n[6, \"–\"],\n[7, \"SVZ45()\"],\n[8, \"ABCDEFGHJKLNOPQRTUY0236789#*%\"],\n[9, \"MWX\"]]",
+								"character-set": "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.,!':()–#$%&",
+								"spacing-data": "[[3, \" \"],\n[4, \"I.,!':\"],\n[5, \"1\"],\n[6, \"–\"],\n[7, \"SVZ45()\"],\n[8, \"ABCDEFGHJKLNOPQRTUY0236789#*%&\"],\n[9, \"MWX\"]]",
 								"scale": 1,
 								"character-spacing": 0,
 								"line-height": 0,
@@ -4034,10 +3934,10 @@
 							"showing": true,
 							"locked": false,
 							"world": {
-								"x": 164,
-								"y": 76,
-								"width": 152,
-								"height": 20,
+								"x": 80,
+								"y": 84,
+								"width": 232,
+								"height": 12,
 								"originX": 0,
 								"originY": 0,
 								"color": [
@@ -4057,8 +3957,8 @@
 								"enable-bbcode": true,
 								"character-width": 12,
 								"character-height": 10,
-								"character-set": "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.,!':()–#$%",
-								"spacing-data": "[[3, \" \"],\n[4, \"I.,!':\"],\n[5, \"1\"],\n[6, \"–\"],\n[7, \"SVZ45()\"],\n[8, \"ABCDEFGHJKLNOPQRTUY0236789#*%\"],\n[9, \"MWX\"]]",
+								"character-set": "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.,!':()–#$%&",
+								"spacing-data": "[[3, \" \"],\n[4, \"I.,!':\"],\n[5, \"1\"],\n[6, \"–\"],\n[7, \"SVZ45()\"],\n[8, \"ABCDEFGHJKLNOPQRTUY0236789#*%&\"],\n[9, \"MWX\"]]",
 								"scale": 1,
 								"character-spacing": 0,
 								"line-height": 0,
@@ -4084,9 +3984,9 @@
 							"showing": true,
 							"locked": false,
 							"world": {
-								"x": 164,
-								"y": 124,
-								"width": 152,
+								"x": 80,
+								"y": 108,
+								"width": 232,
 								"height": 12,
 								"originX": 0,
 								"originY": 0,
@@ -4107,8 +4007,8 @@
 								"enable-bbcode": true,
 								"character-width": 12,
 								"character-height": 10,
-								"character-set": "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.,!':()–#$%",
-								"spacing-data": "[[3, \" \"],\n[4, \"I.,!':\"],\n[5, \"1\"],\n[6, \"–\"],\n[7, \"SVZ45()\"],\n[8, \"ABCDEFGHJKLNOPQRTUY0236789#*%\"],\n[9, \"MWX\"]]",
+								"character-set": "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.,!':()–#$%&",
+								"spacing-data": "[[3, \" \"],\n[4, \"I.,!':\"],\n[5, \"1\"],\n[6, \"–\"],\n[7, \"SVZ45()\"],\n[8, \"ABCDEFGHJKLNOPQRTUY0236789#*%&\"],\n[9, \"MWX\"]]",
 								"scale": 1,
 								"character-spacing": 0,
 								"line-height": 0,
@@ -4134,10 +4034,10 @@
 							"showing": true,
 							"locked": false,
 							"world": {
-								"x": 164,
-								"y": 100,
-								"width": 152,
-								"height": 20,
+								"x": 80,
+								"y": 96,
+								"width": 232,
+								"height": 12,
 								"originX": 0,
 								"originY": 0,
 								"color": [
@@ -4157,12 +4057,12 @@
 								"enable-bbcode": true,
 								"character-width": 12,
 								"character-height": 10,
-								"character-set": "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.,!':()–#$%",
-								"spacing-data": "[[3, \" \"],\n[4, \"I.,!':\"],\n[5, \"1\"],\n[6, \"–\"],\n[7, \"SVZ45()\"],\n[8, \"ABCDEFGHJKLNOPQRTUY0236789#*%\"],\n[9, \"MWX\"]]",
+								"character-set": "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.,!':()–#$%&",
+								"spacing-data": "[[3, \" \"],\n[4, \"I.,!':\"],\n[5, \"1\"],\n[6, \"–\"],\n[7, \"SVZ45()\"],\n[8, \"ABCDEFGHJKLNOPQRTUY0236789#*%&\"],\n[9, \"MWX\"]]",
 								"scale": 1,
 								"character-spacing": 0,
 								"line-height": 0,
-								"horizontal-alignment": "right",
+								"horizontal-alignment": "left",
 								"vertical-alignment": "top",
 								"wrapping": "word",
 								"initially-visible": true,
@@ -4184,9 +4084,9 @@
 							"showing": true,
 							"locked": false,
 							"world": {
-								"x": 4,
-								"y": 76,
-								"width": 152,
+								"x": 80,
+								"y": 68,
+								"width": 232,
 								"height": 12,
 								"originX": 0,
 								"originY": 0,
@@ -4226,10 +4126,10 @@
 							"showing": true,
 							"locked": false,
 							"world": {
-								"x": 164,
-								"y": 76,
-								"width": 140,
-								"height": 18,
+								"x": 80,
+								"y": 84,
+								"width": 228,
+								"height": 8,
 								"originX": 0,
 								"originY": 0,
 								"color": [
@@ -4268,10 +4168,10 @@
 							"showing": true,
 							"locked": false,
 							"world": {
-								"x": 164,
-								"y": 100,
-								"width": 92,
-								"height": 18,
+								"x": 80,
+								"y": 96,
+								"width": 168,
+								"height": 8,
 								"originX": 0,
 								"originY": 0,
 								"color": [
@@ -4310,8 +4210,8 @@
 							"showing": true,
 							"locked": false,
 							"world": {
-								"x": 164,
-								"y": 124,
+								"x": 80,
+								"y": 108,
 								"width": 68,
 								"height": 8,
 								"originX": 0,
@@ -4327,31 +4227,27 @@
 							}
 						},
 						{
-							"type": "MenuFontSmall",
+							"type": "Scumdog",
 							"properties": {
-								"text": "CONTACT US $",
-								"enable-bbcode": true,
-								"character-width": 12,
-								"character-height": 10,
-								"character-set": "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.,!':()–#$%",
-								"spacing-data": "[[3, \" \"],\n[4, \"I.,!':\"],\n[5, \"1\"],\n[6, \"–\"],\n[7, \"SVZ45()\"],\n[8, \"ABCDEFGHJKLNOPQRTUY0236789#*%\"],\n[9, \"MWX\"]]",
-								"scale": 1,
-								"character-spacing": 0,
-								"line-height": 0,
-								"horizontal-alignment": "left",
-								"vertical-alignment": "top",
-								"wrapping": "word",
 								"initially-visible": true,
-								"origin": "top-left",
-								"read-aloud": false
+								"initial-animation": "color",
+								"initial-frame": 0,
+								"enable-collisions": true,
+								"live-preview": false
 							},
-							"uid": 893,
-							"sid": 291015591428578,
-							"tags": "contact",
+							"uid": 453,
+							"sid": 321167600364026,
+							"tags": "",
 							"instanceVariables": {},
-							"behaviors": {},
+							"behaviors": {
+								"Tween": {
+									"properties": {
+										"enabled": true
+									}
+								}
+							},
 							"instanceFolderItem": {
-								"sid": 291015591428578,
+								"sid": 321167600364026,
 								"expanded": true,
 								"folderName": "",
 								"indexInFolder": -1,
@@ -4360,12 +4256,12 @@
 							"showing": true,
 							"locked": false,
 							"world": {
-								"x": 164,
-								"y": 60,
-								"width": 152,
-								"height": 12,
-								"originX": 0,
-								"originY": 0,
+								"x": 40,
+								"y": 92,
+								"width": 64,
+								"height": 64,
+								"originX": 0.5,
+								"originY": 0.5,
 								"color": [
 									1,
 									1,
@@ -4387,9 +4283,9 @@
 							},
 							"uid": 894,
 							"sid": 645332492463839,
-							"tags": "contact",
+							"tags": "scumdog",
 							"instanceVariables": {
-								"link": "mailto:contact@scum.dog"
+								"link": "https://scum.dog/"
 							},
 							"behaviors": {},
 							"instanceFolderItem": {
@@ -4402,10 +4298,10 @@
 							"showing": true,
 							"locked": false,
 							"world": {
-								"x": 164,
+								"x": 8,
 								"y": 60,
-								"width": 88,
-								"height": 8,
+								"width": 64,
+								"height": 64,
 								"originX": 0,
 								"originY": 0,
 								"color": [
@@ -4413,6 +4309,56 @@
 									1,
 									1,
 									0.25
+								],
+								"angle": 0,
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "MenuFontSmall",
+							"properties": {
+								"text": "CREATED BY FILIPPO MEOZZI & LIAM STONE",
+								"enable-bbcode": true,
+								"character-width": 12,
+								"character-height": 10,
+								"character-set": "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.,!':()–#$%&",
+								"spacing-data": "[[3, \" \"],\n[4, \"I.,!':\"],\n[5, \"1\"],\n[6, \"–\"],\n[7, \"SVZ45()\"],\n[8, \"ABCDEFGHJKLNOPQRTUY0236789#*%&\"],\n[9, \"MWX\"]]",
+								"scale": 1,
+								"character-spacing": 0,
+								"line-height": 0,
+								"horizontal-alignment": "center",
+								"vertical-alignment": "top",
+								"wrapping": "word",
+								"initially-visible": true,
+								"origin": "top-left",
+								"read-aloud": false
+							},
+							"uid": 893,
+							"sid": 787148562166574,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"instanceFolderItem": {
+								"sid": 787148562166574,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 8,
+								"y": 44,
+								"width": 304,
+								"height": 12,
+								"originX": 0,
+								"originY": 0,
+								"color": [
+									1,
+									1,
+									1,
+									1
 								],
 								"angle": 0,
 								"zElevation": 0
@@ -5794,8 +5740,8 @@
 								"enable-bbcode": true,
 								"character-width": 12,
 								"character-height": 10,
-								"character-set": "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.,!':()–#$%",
-								"spacing-data": "[[3, \" \"],\n[4, \"I.,!':\"],\n[5, \"1\"],\n[6, \"–\"],\n[7, \"SVZ45()\"],\n[8, \"ABCDEFGHJKLNOPQRTUY0236789#*%\"],\n[9, \"MWX\"]]",
+								"character-set": "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.,!':()–#$%&",
+								"spacing-data": "[[3, \" \"],\n[4, \"I.,!':\"],\n[5, \"1\"],\n[6, \"–\"],\n[7, \"SVZ45()\"],\n[8, \"ABCDEFGHJKLNOPQRTUY0236789#*%&\"],\n[9, \"MWX\"]]",
 								"scale": 1,
 								"character-spacing": 0,
 								"line-height": 0,
@@ -6162,5 +6108,5 @@
 	"vpX": 0.5,
 	"vpY": 0.5,
 	"projection": "perspective",
-	"eventSheet": "menu"
+	"eventSheet": "Menu"
 }
