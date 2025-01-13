@@ -4,6 +4,7 @@ DOOM: The Gallery Experience was created as an art piece designed to parody the 
 Play it on [Newgrounds](https://www.newgrounds.com/portal/view/960452), [itch.io](https://bobatealee.itch.io/doom-the-gallery-experience), or [my website](https://bobatealee.com/games/doom_tge/)!
 
 # CREDITS
+https://scum.dog/ \
 Filippo Meozzi - Producer, Director\
 Liam Stone - Programming, Misc. Art\
 [The Met Open Access Collection](https://www.metmuseum.org/art/collection/search?showOnly=openAccess)\
