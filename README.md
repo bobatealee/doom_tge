@@ -1,7 +1,7 @@
 # ABOUT
 DOOM: The Gallery Experience was created as an art piece designed to parody the wonderfully pretentious world of gallery openings.
 
-Play it on [Newgrounds](https://www.newgrounds.com/portal/view/960452), [itch.io](https://bobatealee.itch.io/doom-the-gallery-experience), or [my website](https://bobatealee.com/games/doom_tge/)!
+Play it on [Newgrounds](https://www.newgrounds.com/portal/view/960452), [itch.io](https://bobatealee.itch.io/doom-the-gallery-experience), or on [scum.dog](https://scum.dog/games/doom_tge)!
 
 # CREDITS
 https://scum.dog/ \
