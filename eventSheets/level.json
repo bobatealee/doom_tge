@@ -56,6 +56,26 @@
 			"sid": 765279586470823
 		},
 		{
+			"eventType": "variable",
+			"name": "GAME_inactivityMax",
+			"type": "number",
+			"initialValue": "300",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 643436251545777
+		},
+		{
+			"eventType": "variable",
+			"name": "GAME_inactivityTimer",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 540393185816834
+		},
+		{
 			"eventType": "comment",
 			"text": "Stats for results screen"
 		},
@@ -326,26 +346,6 @@
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 236733243363586
-		},
-		{
-			"eventType": "variable",
-			"name": "GAME_inactivityMax",
-			"type": "number",
-			"initialValue": "180",
-			"comment": "",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 848515793754242
-		},
-		{
-			"eventType": "variable",
-			"name": "GAME_inactivityTimer",
-			"type": "number",
-			"initialValue": "0",
-			"comment": "",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 852554929910455
 		},
 		{
 			"eventType": "include",
@@ -698,6 +698,14 @@
 							"sid": 158324766986037
 						},
 						{
+							"id": "set-animation-frame",
+							"objectClass": "Doomguy",
+							"sid": 501027699479898,
+							"parameters": {
+								"frame-number": "1"
+							}
+						},
+						{
 							"id": "stop-animation",
 							"objectClass": "Arm",
 							"sid": 217512652230143
@@ -986,6 +994,33 @@
 					"eventType": "block",
 					"conditions": [
 						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 887463980477609,
+							"parameters": {
+								"variable": "GAME_inactivityTimer",
+								"comparison": 5,
+								"value": "GAME_inactivityMax/2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Doomguy",
+							"sid": 646078316025765,
+							"parameters": {
+								"animation": "\"sleep\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 643032818343506
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
 							"id": "compare-boolean-eventvar",
 							"objectClass": "System",
 							"sid": 646825927220792,
@@ -1237,13 +1272,29 @@
 							"id": "is-in-touch",
 							"objectClass": "Touch",
 							"sid": 243717239435569
+						},
+						{
+							"id": "on-any-button-pressed",
+							"objectClass": "Gamepad",
+							"sid": 290945490622622,
+							"parameters": {
+								"gamepad": "0"
+							}
+						},
+						{
+							"id": "on-any-button-released",
+							"objectClass": "Gamepad",
+							"sid": 681749432582920,
+							"parameters": {
+								"gamepad": "0"
+							}
 						}
 					],
 					"actions": [
 						{
 							"id": "set-eventvar-value",
 							"objectClass": "System",
-							"sid": 901115457082451,
+							"sid": 377642296710638,
 							"parameters": {
 								"variable": "GAME_inactivityTimer",
 								"value": "0"
@@ -1251,6 +1302,80 @@
 						}
 					],
 					"sid": 863884342741470,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 241899584878348,
+									"parameters": {
+										"variable": "BLEED_ready"
+									}
+								},
+								{
+									"id": "is-animation-playing",
+									"objectClass": "Doomguy",
+									"sid": 553344880099563,
+									"parameters": {
+										"animation": "\"sleep\""
+									}
+								},
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 912652033999983
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Doomguy",
+									"sid": 137681128912721,
+									"parameters": {
+										"animation": "\"default\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "stop-animation",
+									"objectClass": "Doomguy",
+									"sid": 642517331220159
+								},
+								{
+									"id": "set-animation-frame",
+									"objectClass": "Doomguy",
+									"sid": 822825429998319,
+									"parameters": {
+										"frame-number": "1"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 946501914204257,
+									"parameters": {
+										"audio-file": "grunt",
+										"loop": "not-looping",
+										"volume": "log10(SETTING_volumeSound)*20",
+										"stereo-pan": "0",
+										"tag-optional": "\"grunt\""
+									}
+								},
+								{
+									"id": "set-playback-rate",
+									"objectClass": "Audio",
+									"sid": 915476414975342,
+									"parameters": {
+										"tag": "\"grunt\"",
+										"playback-rate": "random(0.95, 1.05)"
+									}
+								}
+							],
+							"sid": 386942558432612
+						}
+					],
 					"isOrBlock": true
 				},
 				{
@@ -4844,6 +4969,24 @@
 											"id": "release-pointer-lock",
 											"objectClass": "Mouse",
 											"sid": 625694995945925
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Player",
+											"sid": 186095739513536,
+											"parameters": {
+												"instance-variable": "playerSpeedHorizontal",
+												"value": "0"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Player",
+											"sid": 482477796455414,
+											"parameters": {
+												"instance-variable": "playerSpeedVertical",
+												"value": "0"
+											}
 										},
 										{
 											"callFunction": "transition",

@@ -1,0 +1,21 @@
+body {
+	position: relative;
+}
+
+@keyframes fadeBorder {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes fadeBackground {
+	25% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}

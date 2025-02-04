@@ -1,0 +1,12 @@
+{
+	"name": "FileSystem",
+	"plugin-id": "FileSystem",
+	"sid": 743581922799810,
+	"singleglobal-inst": {
+		"type": "FileSystem",
+		"properties": {},
+		"uid": 460,
+		"sid": 726451476838670,
+		"tags": ""
+	}
+}

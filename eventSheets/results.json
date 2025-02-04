@@ -1222,6 +1222,15 @@
 					"id": "on-tap",
 					"objectClass": "Touch",
 					"sid": 885125819486884
+				},
+				{
+					"id": "on-button-pressed",
+					"objectClass": "Gamepad",
+					"sid": 569105394648046,
+					"parameters": {
+						"gamepad": "0",
+						"button": "button-a"
+					}
 				}
 			],
 			"actions": [],

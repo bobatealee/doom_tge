@@ -6002,7 +6002,7 @@
 				{
 					"type": "BleedLine",
 					"properties": {
-						"initially-visible": false,
+						"initially-visible": true,
 						"origin": "top-left",
 						"wrap-horizontal": "repeat",
 						"wrap-vertical": "repeat",
@@ -6018,8 +6018,8 @@
 						"blend-margin-x": 0.1,
 						"blend-margin-y": 0.1
 					},
-					"uid": 460,
-					"sid": 650798449923213,
+					"uid": 901,
+					"sid": 905872509104108,
 					"tags": "kill",
 					"instanceVariables": {},
 					"behaviors": {
@@ -6039,7 +6039,7 @@
 						}
 					},
 					"instanceFolderItem": {
-						"sid": 650798449923213,
+						"sid": 905872509104108,
 						"expanded": true,
 						"folderName": "",
 						"indexInFolder": -1,
@@ -6048,9 +6048,9 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": -24,
-						"y": -96,
-						"width": 1,
+						"x": -28,
+						"y": -16,
+						"width": 8,
 						"height": 180,
 						"originX": 0,
 						"originY": 0,

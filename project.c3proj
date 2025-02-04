@@ -1,6 +1,6 @@
 {
 	"projectFormatVersion": 1,
-	"savedWithRelease": 42100,
+	"savedWithRelease": 42400,
 	"name": "DOOM The Gallery Experience",
 	"runtime": "c3",
 	"useWorker": "dom",
@@ -235,9 +235,7 @@
 	],
 	"uniqueId": "h63jh1yt028",
 	"objectTypes": {
-		"items": [
-			"FileSystem"
-		],
+		"items": [],
 		"subfolders": [
 			{
 				"items": [
@@ -335,7 +333,8 @@
 					"AJAX",
 					"Gamepad",
 					"LocalStorage",
-					"SaveFile"
+					"SaveFile",
+					"FileSystem"
 				],
 				"subfolders": [],
 				"name": "Plugins"
@@ -346,12 +345,12 @@
 					"MenuFont",
 					"Selector",
 					"Link",
-					"BleedLine",
 					"MenuFontSmall",
 					"Fade",
 					"Slider",
 					"SliderBar",
-					"Medal"
+					"Medal",
+					"BleedLine"
 				],
 				"subfolders": [],
 				"name": "Menu"
@@ -492,10 +491,10 @@
 	},
 	"layouts": {
 		"items": [
-			"Level",
+			"Loader",
 			"Menu",
-			"Results",
-			"Loader"
+			"Level",
+			"Results"
 		],
 		"subfolders": []
 	},
@@ -659,71 +658,71 @@
 					"name": "Gameplay"
 				},
 				{
-					"items": [
-						{
-							"name": "bach.webm",
-							"type": "audio/webm; codecs=opus",
-							"sid": 677351128859557,
-							"file-info": {
-								"purpose": "none"
-							}
-						},
-						{
-							"name": "delibes.webm",
-							"type": "audio/webm; codecs=opus",
-							"sid": 833179971619099,
-							"file-info": {
-								"purpose": "none"
-							}
-						},
-						{
-							"name": "e1m1.webm",
-							"type": "audio/webm; codecs=opus",
-							"sid": 338482145863080,
-							"file-info": {
-								"purpose": "none"
-							}
-						},
-						{
-							"name": "e1m5.webm",
-							"type": "audio/webm; codecs=opus",
-							"sid": 553327494387864,
-							"file-info": {
-								"purpose": "none"
-							}
-						},
-						{
-							"name": "intro.webm",
-							"type": "audio/webm; codecs=opus",
-							"sid": 543930099452555,
-							"file-info": {
-								"purpose": "none"
-							}
-						},
-						{
-							"name": "results.webm",
-							"type": "audio/webm; codecs=opus",
-							"sid": 979024838707547,
-							"file-info": {
-								"purpose": "none"
-							}
-						},
-						{
-							"name": "vivaldi.webm",
-							"type": "audio/webm; codecs=opus",
-							"sid": 152474268629808,
-							"file-info": {
-								"purpose": "none"
-							}
-						}
-					],
+					"items": [],
 					"subfolders": [],
 					"name": "Music"
 				}
 			]
 		},
 		"music": {
-			"items": [],
+			"items": [
+				{
+					"name": "bach.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 677351128859557,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "delibes.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 833179971619099,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "e1m1.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 338482145863080,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "e1m5.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 553327494387864,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "intro.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 543930099452555,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "results.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 979024838707547,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "vivaldi.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 152474268629808,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
 			"subfolders": []
 		},
 		"video": {
@@ -804,6 +803,22 @@
 					"file-info": {
 						"purpose": "none"
 					}
+				},
+				{
+					"name": "border.png",
+					"type": "image/png",
+					"sid": 357039827477666,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "main.css",
+					"type": "text/css",
+					"sid": 259570747766095,
+					"file-info": {
+						"purpose": "stylesheet"
+					}
 				}
 			],
 			"subfolders": []
@@ -830,12 +845,12 @@
 	},
 	"properties": {
 		"description": "DOOM: The Gallery Experience was created as an art piece designed to parody the wonderfully pretentious world of gallery openings.",
-		"version": "1.2.1",
+		"version": "1.2.3",
 		"autoIncrementVersion": false,
 		"author": "SCUM DOG GAMES",
 		"authorEmail": "contact@scum.dog",
 		"authorWebsite": "https://scum.dog/",
-		"appId": "",
+		"appId": "dog.scum.doomtge",
 		"pixelRounding": true,
 		"zAxisScale": "regular",
 		"fov": 0.7853981633974483,
@@ -850,9 +865,9 @@
 			0
 		],
 		"splashColor": [
-			1,
-			1,
-			1,
+			0,
+			0,
+			0,
 			0
 		],
 		"useThemeColor": false,

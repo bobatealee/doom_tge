@@ -383,7 +383,7 @@
 										{
 											"id": "is-windows-webview2-export",
 											"objectClass": "PlatformInfo",
-											"sid": 245436247376100,
+											"sid": 870818555078625,
 											"isInverted": true
 										}
 									],
@@ -634,11 +634,11 @@
 										{
 											"id": "delete",
 											"objectClass": "FileSystem",
-											"sid": 713535715280483,
+											"sid": 110351559563423,
 											"parameters": {
 												"picker-tag": "\"<local-app-data>\"",
-												"folder-path": "\"SCUMDOG/doom_tge/saveData1.txt\"",
-												"recursive": false,
+												"folder-path": "\"SCUMDOG/doom_tge\"",
+												"recursive": true,
 												"file-tag": "\"\""
 											}
 										},
@@ -2583,7 +2583,7 @@
 										{
 											"id": "open-url-in-new-window",
 											"objectClass": "Browser",
-											"sid": 697104058803210,
+											"sid": 571386876699441,
 											"parameters": {
 												"url": "Link.link",
 												"tag": "\"\""
@@ -3703,6 +3703,24 @@
 													}
 												},
 												{
+													"id": "set-instvar-value",
+													"objectClass": "Player",
+													"sid": 470230595266286,
+													"parameters": {
+														"instance-variable": "playerSpeedHorizontal",
+														"value": "0"
+													}
+												},
+												{
+													"id": "set-instvar-value",
+													"objectClass": "Player",
+													"sid": 595407378068971,
+													"parameters": {
+														"instance-variable": "playerSpeedVertical",
+														"value": "0"
+													}
+												},
+												{
 													"callFunction": "transition",
 													"sid": 803321974149749,
 													"parameters": [
@@ -3818,9 +3836,9 @@
 										{
 											"id": "play",
 											"objectClass": "Audio",
-											"sid": 777704348755432,
+											"sid": 864866509440266,
 											"parameters": {
-												"audio-file": "menuselect",
+												"audio-file": "menuopen",
 												"loop": "not-looping",
 												"volume": "log10(SETTING_volumeSound)*20",
 												"stereo-pan": "0",
@@ -3869,9 +3887,9 @@
 										{
 											"id": "play",
 											"objectClass": "Audio",
-											"sid": 712664438186620,
+											"sid": 944522810874774,
 											"parameters": {
-												"audio-file": "menuselect",
+												"audio-file": "menuopen",
 												"loop": "not-looping",
 												"volume": "log10(SETTING_volumeSound)*20",
 												"stereo-pan": "0",

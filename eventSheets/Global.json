@@ -13,13 +13,13 @@
 		},
 		{
 			"eventType": "variable",
-			"name": "BLEED_snapshotReady",
-			"type": "boolean",
-			"initialValue": "false",
+			"name": "BLEED_lineAmount",
+			"type": "number",
+			"initialValue": "0",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
-			"sid": 176375054471396
+			"sid": 132958272256390
 		},
 		{
 			"eventType": "variable",
@@ -40,6 +40,16 @@
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 955311835774011
+		},
+		{
+			"eventType": "variable",
+			"name": "BLEED_snapshotReady",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 443465505790756
 		},
 		{
 			"eventType": "variable",
@@ -265,7 +275,7 @@
 						{
 							"id": "move-to-layer",
 							"objectClass": "BleedLine",
-							"sid": 415280041275300,
+							"sid": 362125604928508,
 							"parameters": {
 								"layer": "\"HUD\""
 							}
@@ -279,7 +289,7 @@
 								{
 									"id": "has-tags",
 									"objectClass": "BleedLine",
-									"sid": 450884809351866,
+									"sid": 198469336129872,
 									"parameters": {
 										"tags": "\"kill\""
 									}
@@ -289,7 +299,7 @@
 								{
 									"id": "destroy",
 									"objectClass": "BleedLine",
-									"sid": 526332972253122
+									"sid": 375512621690815
 								}
 							],
 							"sid": 312499564027978
@@ -325,6 +335,15 @@
 					],
 					"actions": [
 						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 964568043335307,
+							"parameters": {
+								"variable": "BLEED_ready",
+								"value": "false"
+							}
+						},
+						{
 							"id": "set-eventvar-value",
 							"objectClass": "System",
 							"sid": 533428894602088,
@@ -334,21 +353,21 @@
 							}
 						},
 						{
-							"id": "set-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 783385789643759,
-							"parameters": {
-								"variable": "BLEED_ready",
-								"value": "false"
-							}
-						},
-						{
 							"id": "set-eventvar-value",
 							"objectClass": "System",
 							"sid": 887432743307609,
 							"parameters": {
 								"variable": "BLEED_linesReady",
 								"value": "0"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 709079909121103,
+							"parameters": {
+								"variable": "BLEED_linesCreated",
+								"value": "false"
 							}
 						},
 						{
@@ -363,75 +382,36 @@
 						{
 							"id": "set-boolean-eventvar",
 							"objectClass": "System",
-							"sid": 100800146442529,
+							"sid": 109505032596818,
 							"parameters": {
-								"variable": "BLEED_linesCreated",
+								"variable": "BLEED_snapshotReady",
 								"value": "false"
 							}
 						},
 						{
-							"id": "set-boolean-eventvar",
+							"id": "set-eventvar-value",
 							"objectClass": "System",
-							"sid": 442892495493911,
+							"sid": 424960069056704,
 							"parameters": {
-								"variable": "BLEED_snapshotReady",
-								"value": "false"
+								"variable": "BLEED_lineAmount",
+								"value": "ceil(ViewportWidth(\"HUD\")/BLEED_interval)"
 							}
 						},
 						{
 							"id": "snapshot-canvas",
 							"objectClass": "System",
-							"sid": 627120090479081,
+							"sid": 149611646729829,
 							"parameters": {
 								"format": "png",
-								"jpeg-quality": "100",
+								"jpeg-quality": "0",
 								"x": "0",
 								"y": "0",
 								"width": "0",
 								"height": "0"
 							}
-						},
-						{
-							"id": "wait-for-previous-actions",
-							"objectClass": "System",
-							"sid": 315914454826878
-						},
-						{
-							"id": "set-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 558391434545833,
-							"parameters": {
-								"variable": "BLEED_snapshotReady",
-								"value": "true"
-							}
 						}
 					],
-					"sid": 465184726959271
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 401556449520017,
-							"parameters": {
-								"variable": "BLEED_snapshotReady"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 166819394426181,
-							"parameters": {
-								"variable": "BLEED_snapshotReady",
-								"value": "false"
-							}
-						}
-					],
-					"sid": 999403599649674,
+					"sid": 465184726959271,
 					"children": [
 						{
 							"eventType": "block",
@@ -439,11 +419,11 @@
 								{
 									"id": "for",
 									"objectClass": "System",
-									"sid": 467111722286909,
+									"sid": 514634827619178,
 									"parameters": {
 										"name": "\"i\"",
 										"start-index": "0",
-										"end-index": "(ViewportWidth(\"HUD\") - 1)/BLEED_interval"
+										"end-index": "BLEED_lineAmount-1"
 									}
 								}
 							],
@@ -451,7 +431,7 @@
 								{
 									"id": "create-object",
 									"objectClass": "System",
-									"sid": 400290169850269,
+									"sid": 192936895576732,
 									"parameters": {
 										"object-to-create": "BleedLine",
 										"layer": "\"HUD\"",
@@ -464,33 +444,16 @@
 								{
 									"id": "change-tags",
 									"objectClass": "BleedLine",
-									"sid": 250639680700468,
+									"sid": 373284093014134,
 									"parameters": {
 										"action": "remove",
 										"tags": "\"kill\""
 									}
 								},
 								{
-									"id": "set-size",
-									"objectClass": "BleedLine",
-									"sid": 890286268117211,
-									"parameters": {
-										"width": "BLEED_interval",
-										"height": "ViewportHeight(\"HUD\")"
-									}
-								},
-								{
-									"id": "set-image-offset-x",
-									"objectClass": "BleedLine",
-									"sid": 994676497088519,
-									"parameters": {
-										"offset-x": "-loopindex(\"i\")*(PlatformInfo.CanvasDeviceWidth/ViewportWidth(\"HUD\"))*BLEED_interval"
-									}
-								},
-								{
 									"id": "set-image-scale-x",
 									"objectClass": "BleedLine",
-									"sid": 430781015094142,
+									"sid": 777733733587537,
 									"parameters": {
 										"scale-x": "100/(PlatformInfo.CanvasDeviceWidth/ViewportWidth(\"HUD\"))"
 									}
@@ -498,210 +461,48 @@
 								{
 									"id": "set-image-scale-y",
 									"objectClass": "BleedLine",
-									"sid": 362920244150312,
+									"sid": 282064481688092,
 									"parameters": {
 										"scale-y": "100/(PlatformInfo.CanvasDeviceHeight/ViewportHeight(\"HUD\"))"
 									}
 								},
 								{
-									"id": "set-visible",
+									"id": "set-image-offset-x",
 									"objectClass": "BleedLine",
-									"sid": 604577087427222,
+									"sid": 881975160483598,
 									"parameters": {
-										"visibility": "visible"
+										"offset-x": "-loopindex(\"i\")*(PlatformInfo.CanvasDeviceWidth/ViewportWidth(\"HUD\"))*BLEED_interval\n"
 									}
 								}
 							],
-							"sid": 497801002830682
-						}
-					]
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-x",
-							"objectClass": "BleedLine",
-							"sid": 448259645808593,
-							"parameters": {
-								"comparison": 0,
-								"x-co-ordinate": "ViewportWidth(\"HUD\") - BLEED_interval"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 214616015021864,
-							"parameters": {
-								"variable": "BLEED_linesCreated",
-								"value": "true"
-							}
-						}
-					],
-					"sid": 414180885781003
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-image-url-loaded",
-							"objectClass": "BleedLine",
-							"sid": 439374602780760
-						},
-						{
-							"id": "compare-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 761538143978033,
-							"parameters": {
-								"variable": "BLEED_linesCreated"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "add-to-eventvar",
-							"objectClass": "System",
-							"sid": 191106065877537,
-							"parameters": {
-								"variable": "BLEED_linesReady",
-								"value": "1"
-							}
-						}
-					],
-					"sid": 876596511373862
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 619465276553288,
-							"parameters": {
-								"variable": "BLEED_linesCreated"
-							}
-						}
-					],
-					"actions": [],
-					"sid": 278657753413814,
-					"children": [
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "trigger-once-while-true",
-									"objectClass": "System",
-									"sid": 349064100421016
-								}
-							],
-							"actions": [
-								{
-									"id": "load-image-from-url",
-									"objectClass": "BleedLine",
-									"sid": 659202462016703,
-									"parameters": {
-										"uri": "CanvasSnapshot",
-										"cross-origin": "anonymous"
-									}
-								}
-							],
-							"sid": 690337597652465
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "compare-eventvar",
-									"objectClass": "System",
-									"sid": 443773669829689,
-									"parameters": {
-										"variable": "BLEED_linesReady",
-										"comparison": 0,
-										"value": "BleedLine.Count"
-									}
-								},
-								{
-									"id": "trigger-once-while-true",
-									"objectClass": "System",
-									"sid": 940324375669197
-								}
-							],
-							"actions": [
-								{
-									"id": "set-boolean-eventvar",
-									"objectClass": "System",
-									"sid": 219241069896362,
-									"parameters": {
-										"variable": "BLEED_linesCreated",
-										"value": "false"
-									}
-								},
-								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 105011902221343,
-									"parameters": {
-										"variable": "BLEED_linesReady",
-										"value": "0"
-									}
-								},
-								{
-									"id": "set-layer-visible",
-									"objectClass": "System",
-									"sid": 924301423550969,
-									"parameters": {
-										"layer": "\"Fade\"",
-										"visibility": "invisible"
-									}
-								},
-								{
-									"id": "go-to-layout-by-name",
-									"objectClass": "System",
-									"sid": 390367872663496,
-									"parameters": {
-										"layout": "BLEED_layout"
-									}
-								}
-							],
-							"sid": 196627836189224,
+							"sid": 470069284656499,
 							"children": [
 								{
 									"eventType": "block",
 									"conditions": [
 										{
-											"id": "for-each",
+											"id": "compare-two-values",
 											"objectClass": "System",
-											"sid": 593043148072747,
+											"sid": 404605048432614,
 											"parameters": {
-												"object": "BleedLine"
+												"first-value": "BleedLine.Count",
+												"comparison": 0,
+												"second-value": "BLEED_lineAmount"
 											}
 										}
 									],
 									"actions": [
 										{
-											"id": "set-eventvar-value",
+											"id": "set-boolean-eventvar",
 											"objectClass": "System",
-											"sid": 412422809694923,
+											"sid": 968347041371057,
 											"parameters": {
-												"variable": "BLEED_randomize",
-												"value": "clamp(BLEED_randomize+(random(-1, 1)), 0, 5)"
-											}
-										},
-										{
-											"id": "start-timer",
-											"objectClass": "BleedLine",
-											"sid": 944988386197880,
-											"behaviorType": "Timer",
-											"parameters": {
-												"duration": "BLEED_randomize/10",
-												"type": "once",
-												"tag": "\"MeltNow\""
+												"variable": "BLEED_linesCreated",
+												"value": "true"
 											}
 										}
 									],
-									"sid": 952900489586754
+									"sid": 200911602488076
 								}
 							]
 						}
@@ -711,9 +512,194 @@
 					"eventType": "block",
 					"conditions": [
 						{
+							"id": "on-canvas-snapshot",
+							"objectClass": "System",
+							"sid": 503034002435781
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 770608902762994,
+							"parameters": {
+								"variable": "BLEED_snapshotReady",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 930587867909655
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 524561787600932,
+							"parameters": {
+								"variable": "BLEED_linesCreated"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 685705367857381,
+							"parameters": {
+								"variable": "BLEED_snapshotReady"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 342707102876029,
+							"parameters": {
+								"variable": "BLEED_snapshotReady",
+								"value": "false"
+							}
+						},
+						{
+							"id": "load-image-from-url",
+							"objectClass": "BleedLine",
+							"sid": 678717996462352,
+							"parameters": {
+								"uri": "CanvasSnapshot",
+								"cross-origin": "anonymous"
+							}
+						}
+					],
+					"sid": 669818301521962
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-image-url-loaded",
+							"objectClass": "BleedLine",
+							"sid": 712830149605871
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 195695678684111,
+							"parameters": {
+								"variable": "BLEED_linesReady",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 125392871477816
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 134856875125563,
+							"parameters": {
+								"variable": "BLEED_linesCreated"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 828337625642387,
+							"parameters": {
+								"variable": "BLEED_linesReady",
+								"comparison": 0,
+								"value": "BleedLine.Count"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 177912319303954,
+							"parameters": {
+								"variable": "BLEED_linesCreated",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 743180741314772,
+							"parameters": {
+								"variable": "BLEED_linesReady",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 683538621202122,
+							"parameters": {
+								"layer": "\"Fade\"",
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "go-to-layout-by-name",
+							"objectClass": "System",
+							"sid": 781506831117568,
+							"parameters": {
+								"layout": "BLEED_layout"
+							}
+						}
+					],
+					"sid": 242595414169089,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "for-each",
+									"objectClass": "System",
+									"sid": 358318522177086,
+									"parameters": {
+										"object": "BleedLine"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 762417873240466,
+									"parameters": {
+										"variable": "BLEED_randomize",
+										"value": "clamp(BLEED_randomize+(random(-1, 1)), 0, 5)"
+									}
+								},
+								{
+									"id": "start-timer",
+									"objectClass": "BleedLine",
+									"sid": 362634375235989,
+									"behaviorType": "Timer",
+									"parameters": {
+										"duration": "BLEED_randomize/10",
+										"type": "once",
+										"tag": "\"MeltNow\""
+									}
+								}
+							],
+							"sid": 778368716851941
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
 							"id": "on-timer",
 							"objectClass": "BleedLine",
-							"sid": 898040341125573,
+							"sid": 135624054976858,
 							"behaviorType": "Timer",
 							"parameters": {
 								"tag": "\"MeltNow\""
@@ -724,7 +710,7 @@
 						{
 							"id": "move-to-position",
 							"objectClass": "BleedLine",
-							"sid": 522196593979280,
+							"sid": 783836307589609,
 							"behaviorType": "MoveTo",
 							"parameters": {
 								"x": "Self.X",
@@ -741,7 +727,7 @@
 						{
 							"id": "on-arrived",
 							"objectClass": "BleedLine",
-							"sid": 975150672153024,
+							"sid": 913039248325622,
 							"behaviorType": "MoveTo"
 						}
 					],
@@ -764,7 +750,7 @@
 								{
 									"id": "pick-all",
 									"objectClass": "System",
-									"sid": 696772268447221,
+									"sid": 288135007889621,
 									"parameters": {
 										"object": "BleedLine"
 									}
@@ -772,7 +758,7 @@
 								{
 									"id": "compare-eventvar",
 									"objectClass": "System",
-									"sid": 922254638848995,
+									"sid": 811366859458152,
 									"parameters": {
 										"variable": "BLEED_linesReady",
 										"comparison": 0,
@@ -784,7 +770,7 @@
 								{
 									"id": "destroy",
 									"objectClass": "BleedLine",
-									"sid": 519049029525841
+									"sid": 306359330047356
 								},
 								{
 									"id": "set-eventvar-value",
@@ -869,19 +855,19 @@
 								{
 									"id": "desktop-features-supported",
 									"objectClass": "FileSystem",
-									"sid": 373142827176255
+									"sid": 984507328984960
 								},
 								{
 									"id": "is-supported",
 									"objectClass": "FileSystem",
-									"sid": 618423712965964
+									"sid": 389388469996906
 								}
 							],
 							"actions": [
 								{
 									"id": "read-text-file",
 									"objectClass": "FileSystem",
-									"sid": 997112006108188,
+									"sid": 839054900001688,
 									"parameters": {
 										"picker-tag": "\"<local-app-data>\"",
 										"folder-path": "\"SCUMDOG/doom_tge/saveData1.txt\"",
@@ -889,7 +875,7 @@
 									}
 								}
 							],
-							"sid": 569285027442430
+							"sid": 163946342895667
 						},
 						{
 							"eventType": "block",
@@ -1147,19 +1133,19 @@
 								{
 									"id": "desktop-features-supported",
 									"objectClass": "FileSystem",
-									"sid": 168099235068781
+									"sid": 745391660782368
 								},
 								{
 									"id": "is-supported",
 									"objectClass": "FileSystem",
-									"sid": 799554915120992
+									"sid": 881078880393331
 								}
 							],
 							"actions": [
 								{
 									"id": "write-text-file",
 									"objectClass": "FileSystem",
-									"sid": 862413668251494,
+									"sid": 576591997485494,
 									"parameters": {
 										"picker-tag": "\"<local-app-data>\"",
 										"folder-path": "\"SCUMDOG/doom_tge/saveData1.txt\"",
@@ -1169,7 +1155,7 @@
 									}
 								}
 							],
-							"sid": 845116448172382
+							"sid": 708873468172197
 						},
 						{
 							"eventType": "comment",
@@ -1207,34 +1193,6 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "on-file-operation-complete",
-							"objectClass": "FileSystem",
-							"sid": 196902599557550,
-							"parameters": {
-								"file-tag": "\"load\""
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "load",
-							"objectClass": "SaveFile",
-							"sid": 758064754201482,
-							"parameters": {
-								"json": "Browser.ExecJS(\"atob('\"&FileSystem.FileText&\"')\")"
-							}
-						},
-						{
-							"callFunction": "load",
-							"sid": 412124073200340
-						}
-					],
-					"sid": 620451986257328
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
 							"id": "on-item-exists",
 							"objectClass": "LocalStorage",
 							"sid": 496881022474661,
@@ -1260,6 +1218,34 @@
 					"sid": 558550667383501
 				},
 				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-file-operation-complete",
+							"objectClass": "FileSystem",
+							"sid": 668458494475909,
+							"parameters": {
+								"file-tag": "\"load\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "load",
+							"objectClass": "SaveFile",
+							"sid": 920258832638039,
+							"parameters": {
+								"json": "Browser.ExecJS(\"atob('\"&FileSystem.FileText&\"')\")"
+							}
+						},
+						{
+							"callFunction": "load",
+							"sid": 357904269730941
+						}
+					],
+					"sid": 778608871346343
+				},
+				{
 					"functionName": "load",
 					"functionDescription": "",
 					"functionCategory": "",
@@ -1269,249 +1255,76 @@
 					"functionParameters": [],
 					"eventType": "function-block",
 					"conditions": [],
-					"actions": [
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 780897394872645,
-							"parameters": {
-								"variable": "SETTING_volumeSound",
-								"value": "SaveFile.Get(\"sound\")"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 251209780518926,
-							"parameters": {
-								"variable": "SETTING_volumeMusic",
-								"value": "SaveFile.Get(\"music\")"
-							}
-						}
-					],
+					"actions": [],
 					"sid": 636239903648137,
 					"children": [
 						{
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "compare-instance-variable",
-									"objectClass": "Slider",
-									"sid": 672558607808163,
-									"parameters": {
-										"instance-variable": "id",
-										"comparison": 0,
-										"value": "0"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-x",
-									"objectClass": "Slider",
-									"sid": 952537531242301,
-									"parameters": {
-										"x": "SETTING_volumeSound*(SliderBar.Width-8)+(SliderBar.X+4)"
-									}
-								}
-							],
-							"sid": 967409285895629
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "compare-instance-variable",
-									"objectClass": "Slider",
-									"sid": 114583251496935,
-									"parameters": {
-										"instance-variable": "id",
-										"comparison": 0,
-										"value": "1"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-x",
-									"objectClass": "Slider",
-									"sid": 588363605376399,
-									"parameters": {
-										"x": "SETTING_volumeMusic*(SliderBar.Width-8)+(SliderBar.X+4)"
-									}
-								},
-								{
-									"id": "set-volume",
-									"objectClass": "Audio",
-									"sid": 498997949919021,
-									"parameters": {
-										"tag": "\"music\"",
-										"db": "(log10(SETTING_volumeMusic)*20)"
-									}
-								}
-							],
-							"sid": 384587720917761
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "compare-value",
+									"id": "is-empty",
 									"objectClass": "SaveFile",
-									"sid": 637446387786575,
-									"parameters": {
-										"key": "\"flashing\"",
-										"comparison": 0,
-										"value": "0"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-boolean-eventvar",
-									"objectClass": "System",
-									"sid": 862927730074830,
-									"parameters": {
-										"variable": "SETTING_flashing",
-										"value": "false"
-									}
-								}
-							],
-							"sid": 672261831851768
-						},
-						{
-							"eventType": "comment",
-							"text": "Standalone exclusive"
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "is-windows-webview2-export",
-									"objectClass": "PlatformInfo",
-									"sid": 535169407490924
-								}
-							],
-							"actions": [],
-							"sid": 557697243313326,
-							"children": [
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "compare-value",
-											"objectClass": "SaveFile",
-											"sid": 463874805018027,
-											"parameters": {
-												"key": "\"fullscreen\"",
-												"comparison": 0,
-												"value": "1"
-											}
-										}
-									],
-									"actions": [
-										{
-											"id": "request-fullscreen",
-											"objectClass": "Browser",
-											"sid": 239157328587513,
-											"parameters": {
-												"mode": "stretch-letterbox-scale",
-												"navigation-ui": "hide"
-											}
-										},
-										{
-											"id": "set-boolean-eventvar",
-											"objectClass": "System",
-											"sid": 925631438927632,
-											"parameters": {
-												"variable": "SETTING_fullscreen",
-												"value": "true"
-											}
-										}
-									],
-									"sid": 701210416191797
-								}
-							]
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "compare-value",
-									"objectClass": "SaveFile",
-									"sid": 209955534064916,
-									"parameters": {
-										"key": "\"doomMusic\"",
-										"comparison": 0,
-										"value": "1"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-boolean-eventvar",
-									"objectClass": "System",
-									"sid": 365477567677985,
-									"parameters": {
-										"variable": "SETTING_doomMusic",
-										"value": "true"
-									}
-								}
-							],
-							"sid": 100439616555357
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "compare-value",
-									"objectClass": "SaveFile",
-									"sid": 143319708526804,
-									"parameters": {
-										"key": "\"doomUnlock\"",
-										"comparison": 0,
-										"value": "1"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-boolean-eventvar",
-									"objectClass": "System",
-									"sid": 659093702989223,
-									"parameters": {
-										"variable": "UNLOCK_doomMusic",
-										"value": "true"
-									}
-								}
-							],
-							"sid": 601114218643332
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "compare-boolean-eventvar",
-									"objectClass": "System",
-									"sid": 537360381820419,
-									"parameters": {
-										"variable": "NGIO_medals"
-									},
+									"sid": 235352143044544,
 									"isInverted": true
 								}
 							],
-							"actions": [],
-							"sid": 591778627805088,
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 854898922912960,
+									"parameters": {
+										"variable": "SETTING_volumeSound",
+										"value": "SaveFile.Get(\"sound\")"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 723390258764380,
+									"parameters": {
+										"variable": "SETTING_volumeMusic",
+										"value": "SaveFile.Get(\"music\")"
+									}
+								}
+							],
+							"sid": 290014656295176,
 							"children": [
 								{
 									"eventType": "block",
 									"conditions": [
 										{
-											"id": "compare-value",
-											"objectClass": "SaveFile",
-											"sid": 705934050027712,
+											"id": "compare-instance-variable",
+											"objectClass": "Slider",
+											"sid": 555704181316267,
 											"parameters": {
-												"key": "\"medalObservations\"",
+												"instance-variable": "id",
+												"comparison": 0,
+												"value": "0"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-x",
+											"objectClass": "Slider",
+											"sid": 100002967447358,
+											"parameters": {
+												"x": "SETTING_volumeSound*(SliderBar.Width-8)+(SliderBar.X+4)"
+											}
+										}
+									],
+									"sid": 110276431975103
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Slider",
+											"sid": 477609080583606,
+											"parameters": {
+												"instance-variable": "id",
 												"comparison": 0,
 												"value": "1"
 											}
@@ -1519,16 +1332,24 @@
 									],
 									"actions": [
 										{
-											"id": "set-boolean-eventvar",
-											"objectClass": "System",
-											"sid": 892101326309111,
+											"id": "set-x",
+											"objectClass": "Slider",
+											"sid": 283878280336817,
 											"parameters": {
-												"variable": "MEDAL_observations",
-												"value": "true"
+												"x": "SETTING_volumeMusic*(SliderBar.Width-8)+(SliderBar.X+4)"
+											}
+										},
+										{
+											"id": "set-volume",
+											"objectClass": "Audio",
+											"sid": 272457309456236,
+											"parameters": {
+												"tag": "\"music\"",
+												"db": "(log10(SETTING_volumeMusic)*20)"
 											}
 										}
 									],
-									"sid": 884458040908796
+									"sid": 103971041440672
 								},
 								{
 									"eventType": "block",
@@ -1536,11 +1357,11 @@
 										{
 											"id": "compare-value",
 											"objectClass": "SaveFile",
-											"sid": 567318245960693,
+											"sid": 294833548449334,
 											"parameters": {
-												"key": "\"medalItems\"",
+												"key": "\"flashing\"",
 												"comparison": 0,
-												"value": "1"
+												"value": "0"
 											}
 										}
 									],
@@ -1548,14 +1369,68 @@
 										{
 											"id": "set-boolean-eventvar",
 											"objectClass": "System",
-											"sid": 880158603901765,
+											"sid": 662340348450732,
 											"parameters": {
-												"variable": "MEDAL_items",
-												"value": "true"
+												"variable": "SETTING_flashing",
+												"value": "false"
 											}
 										}
 									],
-									"sid": 898428897667090
+									"sid": 793859521607473
+								},
+								{
+									"eventType": "comment",
+									"text": "Standalone exclusive"
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-windows-webview2-export",
+											"objectClass": "PlatformInfo",
+											"sid": 302023803790266
+										}
+									],
+									"actions": [],
+									"sid": 979701697902520,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-value",
+													"objectClass": "SaveFile",
+													"sid": 236369349385038,
+													"parameters": {
+														"key": "\"fullscreen\"",
+														"comparison": 0,
+														"value": "1"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "request-fullscreen",
+													"objectClass": "Browser",
+													"sid": 251363654817981,
+													"parameters": {
+														"mode": "stretch-letterbox-scale",
+														"navigation-ui": "hide"
+													}
+												},
+												{
+													"id": "set-boolean-eventvar",
+													"objectClass": "System",
+													"sid": 522135566657812,
+													"parameters": {
+														"variable": "SETTING_fullscreen",
+														"value": "true"
+													}
+												}
+											],
+											"sid": 862647670848126
+										}
+									]
 								},
 								{
 									"eventType": "block",
@@ -1563,9 +1438,9 @@
 										{
 											"id": "compare-value",
 											"objectClass": "SaveFile",
-											"sid": 534453490937570,
+											"sid": 706953779621646,
 											"parameters": {
-												"key": "\"medalSpending\"",
+												"key": "\"doomMusic\"",
 												"comparison": 0,
 												"value": "1"
 											}
@@ -1575,14 +1450,14 @@
 										{
 											"id": "set-boolean-eventvar",
 											"objectClass": "System",
-											"sid": 669218644255977,
+											"sid": 797548613507318,
 											"parameters": {
-												"variable": "MEDAL_spending",
+												"variable": "SETTING_doomMusic",
 												"value": "true"
 											}
 										}
 									],
-									"sid": 580022080931114
+									"sid": 914013293870871
 								},
 								{
 									"eventType": "block",
@@ -1590,9 +1465,9 @@
 										{
 											"id": "compare-value",
 											"objectClass": "SaveFile",
-											"sid": 817161529925562,
+											"sid": 687959868546244,
 											"parameters": {
-												"key": "\"medalSecrets\"",
+												"key": "\"doomUnlock\"",
 												"comparison": 0,
 												"value": "1"
 											}
@@ -1602,122 +1477,248 @@
 										{
 											"id": "set-boolean-eventvar",
 											"objectClass": "System",
-											"sid": 176415913665268,
+											"sid": 178792243366612,
 											"parameters": {
-												"variable": "MEDAL_secrets",
+												"variable": "UNLOCK_doomMusic",
 												"value": "true"
 											}
 										}
 									],
-									"sid": 956609498640000
+									"sid": 101160684079450
 								},
 								{
 									"eventType": "block",
 									"conditions": [
 										{
-											"id": "compare-value",
-											"objectClass": "SaveFile",
-											"sid": 752399915809447,
-											"parameters": {
-												"key": "\"medalTime\"",
-												"comparison": 0,
-												"value": "1"
-											}
-										}
-									],
-									"actions": [
-										{
-											"id": "set-boolean-eventvar",
+											"id": "compare-boolean-eventvar",
 											"objectClass": "System",
-											"sid": 551860138442225,
+											"sid": 479737994197089,
 											"parameters": {
-												"variable": "MEDAL_time",
-												"value": "true"
-											}
+												"variable": "NGIO_medals"
+											},
+											"isInverted": true
 										}
 									],
-									"sid": 212741863281532
-								},
-								{
-									"eventType": "block",
-									"conditions": [
+									"actions": [],
+									"sid": 445135968585370,
+									"children": [
 										{
-											"id": "compare-value",
-											"objectClass": "SaveFile",
-											"sid": 275842659632678,
-											"parameters": {
-												"key": "\"medalDrinks\"",
-												"comparison": 0,
-												"value": "1"
-											}
-										}
-									],
-									"actions": [
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-value",
+													"objectClass": "SaveFile",
+													"sid": 109142381985470,
+													"parameters": {
+														"key": "\"medalObservations\"",
+														"comparison": 0,
+														"value": "1"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-boolean-eventvar",
+													"objectClass": "System",
+													"sid": 634180661891383,
+													"parameters": {
+														"variable": "MEDAL_observations",
+														"value": "true"
+													}
+												}
+											],
+											"sid": 977282426797730
+										},
 										{
-											"id": "set-boolean-eventvar",
-											"objectClass": "System",
-											"sid": 649828770699026,
-											"parameters": {
-												"variable": "MEDAL_drinks",
-												"value": "true"
-											}
-										}
-									],
-									"sid": 598295969836150
-								},
-								{
-									"eventType": "block",
-									"conditions": [
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-value",
+													"objectClass": "SaveFile",
+													"sid": 497606849310630,
+													"parameters": {
+														"key": "\"medalItems\"",
+														"comparison": 0,
+														"value": "1"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-boolean-eventvar",
+													"objectClass": "System",
+													"sid": 371824058062725,
+													"parameters": {
+														"variable": "MEDAL_items",
+														"value": "true"
+													}
+												}
+											],
+											"sid": 214624348936541
+										},
 										{
-											"id": "compare-value",
-											"objectClass": "SaveFile",
-											"sid": 558009346389196,
-											"parameters": {
-												"key": "\"medalThoughtful\"",
-												"comparison": 0,
-												"value": "1"
-											}
-										}
-									],
-									"actions": [
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-value",
+													"objectClass": "SaveFile",
+													"sid": 611314212428029,
+													"parameters": {
+														"key": "\"medalSpending\"",
+														"comparison": 0,
+														"value": "1"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-boolean-eventvar",
+													"objectClass": "System",
+													"sid": 472343753554283,
+													"parameters": {
+														"variable": "MEDAL_spending",
+														"value": "true"
+													}
+												}
+											],
+											"sid": 676570526105899
+										},
 										{
-											"id": "set-boolean-eventvar",
-											"objectClass": "System",
-											"sid": 458420110660805,
-											"parameters": {
-												"variable": "MEDAL_thoughtful",
-												"value": "true"
-											}
-										}
-									],
-									"sid": 841421775503067
-								},
-								{
-									"eventType": "block",
-									"conditions": [
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-value",
+													"objectClass": "SaveFile",
+													"sid": 245444797647277,
+													"parameters": {
+														"key": "\"medalSecrets\"",
+														"comparison": 0,
+														"value": "1"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-boolean-eventvar",
+													"objectClass": "System",
+													"sid": 748987974797059,
+													"parameters": {
+														"variable": "MEDAL_secrets",
+														"value": "true"
+													}
+												}
+											],
+											"sid": 761480154657873
+										},
 										{
-											"id": "compare-value",
-											"objectClass": "SaveFile",
-											"sid": 731577968380137,
-											"parameters": {
-												"key": "\"medalThoughtful\"",
-												"comparison": 0,
-												"value": "1"
-											}
-										}
-									],
-									"actions": [
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-value",
+													"objectClass": "SaveFile",
+													"sid": 180589229366416,
+													"parameters": {
+														"key": "\"medalTime\"",
+														"comparison": 0,
+														"value": "1"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-boolean-eventvar",
+													"objectClass": "System",
+													"sid": 505330484799053,
+													"parameters": {
+														"variable": "MEDAL_time",
+														"value": "true"
+													}
+												}
+											],
+											"sid": 537388635861170
+										},
 										{
-											"id": "set-boolean-eventvar",
-											"objectClass": "System",
-											"sid": 519844824580898,
-											"parameters": {
-												"variable": "MEDAL_doom",
-												"value": "true"
-											}
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-value",
+													"objectClass": "SaveFile",
+													"sid": 682703943526580,
+													"parameters": {
+														"key": "\"medalDrinks\"",
+														"comparison": 0,
+														"value": "1"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-boolean-eventvar",
+													"objectClass": "System",
+													"sid": 834532468359901,
+													"parameters": {
+														"variable": "MEDAL_drinks",
+														"value": "true"
+													}
+												}
+											],
+											"sid": 504118738322034
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-value",
+													"objectClass": "SaveFile",
+													"sid": 218067784125297,
+													"parameters": {
+														"key": "\"medalThoughtful\"",
+														"comparison": 0,
+														"value": "1"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-boolean-eventvar",
+													"objectClass": "System",
+													"sid": 135175397513430,
+													"parameters": {
+														"variable": "MEDAL_thoughtful",
+														"value": "true"
+													}
+												}
+											],
+											"sid": 560746921203113
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-value",
+													"objectClass": "SaveFile",
+													"sid": 542758554674637,
+													"parameters": {
+														"key": "\"medalThoughtful\"",
+														"comparison": 0,
+														"value": "1"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-boolean-eventvar",
+													"objectClass": "System",
+													"sid": 571593045071837,
+													"parameters": {
+														"variable": "MEDAL_doom",
+														"value": "true"
+													}
+												}
+											],
+											"sid": 131099857404895
 										}
-									],
-									"sid": 833180455940392
+									]
 								}
 							]
 						}
