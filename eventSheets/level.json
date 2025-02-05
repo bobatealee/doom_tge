@@ -57,23 +57,13 @@
 		},
 		{
 			"eventType": "variable",
-			"name": "GAME_inactivityMax",
+			"name": "GAME_inactivity",
 			"type": "number",
 			"initialValue": "300",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 643436251545777
-		},
-		{
-			"eventType": "variable",
-			"name": "GAME_inactivityTimer",
-			"type": "number",
-			"initialValue": "0",
-			"comment": "",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 540393185816834
 		},
 		{
 			"eventType": "comment",
@@ -181,7 +171,7 @@
 		},
 		{
 			"eventType": "variable",
-			"name": "GAME_targetTime",
+			"name": "GAME_goodTime",
 			"type": "number",
 			"initialValue": "20",
 			"comment": "",
@@ -193,7 +183,7 @@
 			"eventType": "variable",
 			"name": "GAME_badTime",
 			"type": "number",
-			"initialValue": "900",
+			"initialValue": "21",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
@@ -560,15 +550,6 @@
 							}
 						},
 						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 165060343395732,
-							"parameters": {
-								"variable": "GAME_inactivityTimer",
-								"value": "0"
-							}
-						},
-						{
 							"id": "set-boolean-eventvar",
 							"objectClass": "System",
 							"sid": 566274938654567,
@@ -755,6 +736,17 @@
 							"parameters": {
 								"seconds": "1",
 								"use-timescale": true
+							}
+						},
+						{
+							"id": "start-timer",
+							"objectClass": "Doomguy",
+							"sid": 224856052610944,
+							"behaviorType": "Timer",
+							"parameters": {
+								"duration": "GAME_inactivity",
+								"type": "once",
+								"tag": "\"inactivity\""
 							}
 						}
 					],
@@ -949,73 +941,91 @@
 						{
 							"id": "compare-boolean-eventvar",
 							"objectClass": "System",
-							"sid": 399287567966821,
+							"sid": 644641912138585,
 							"parameters": {
-								"variable": "GAME_guyOverride"
+								"variable": "BLEED_freeze"
 							},
 							"isInverted": true
+						}
+					],
+					"actions": [],
+					"sid": 126605184734426,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 371747587986508,
+									"parameters": {
+										"variable": "GAME_guyOverride"
+									},
+									"isInverted": true
+								},
+								{
+									"id": "every-x-seconds",
+									"objectClass": "System",
+									"sid": 406387697373601,
+									"parameters": {
+										"interval-seconds": "random(0.25, 2)"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Doomguy",
+									"sid": 760590760877336,
+									"parameters": {
+										"animation": "\"default\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "stop-animation",
+									"objectClass": "Doomguy",
+									"sid": 424466944782797
+								},
+								{
+									"id": "set-animation-frame",
+									"objectClass": "Doomguy",
+									"sid": 968186122917498,
+									"parameters": {
+										"frame-number": "round(random(0, 2))"
+									}
+								}
+							],
+							"sid": 990464777602522
 						},
 						{
-							"id": "every-x-seconds",
-							"objectClass": "System",
-							"sid": 672602951764380,
-							"parameters": {
-								"interval-seconds": "random(0.25, 2)"
-							}
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 714857348997651,
+									"parameters": {
+										"first-value": "Doomguy.Timer.CurrentTime(\"inactivity\")",
+										"comparison": 5,
+										"second-value": "GAME_inactivity/2"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Doomguy",
+									"sid": 335584016909015,
+									"parameters": {
+										"animation": "\"sleep\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 212485391882017
 						}
-					],
-					"actions": [
-						{
-							"id": "set-animation",
-							"objectClass": "Doomguy",
-							"sid": 803159078249656,
-							"parameters": {
-								"animation": "\"default\"",
-								"from": "beginning"
-							}
-						},
-						{
-							"id": "stop-animation",
-							"objectClass": "Doomguy",
-							"sid": 289356638529132
-						},
-						{
-							"id": "set-animation-frame",
-							"objectClass": "Doomguy",
-							"sid": 668331472606251,
-							"parameters": {
-								"frame-number": "round(random(0, 2))"
-							}
-						}
-					],
-					"sid": 608436851001747
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 887463980477609,
-							"parameters": {
-								"variable": "GAME_inactivityTimer",
-								"comparison": 5,
-								"value": "GAME_inactivityMax/2"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-animation",
-							"objectClass": "Doomguy",
-							"sid": 646078316025765,
-							"parameters": {
-								"animation": "\"sleep\"",
-								"from": "beginning"
-							}
-						}
-					],
-					"sid": 643032818343506
+					]
 				},
 				{
 					"eventType": "block",
@@ -1023,7 +1033,7 @@
 						{
 							"id": "compare-boolean-eventvar",
 							"objectClass": "System",
-							"sid": 646825927220792,
+							"sid": 769388687763507,
 							"parameters": {
 								"variable": "GAME_guyOverride"
 							}
@@ -1031,14 +1041,14 @@
 						{
 							"id": "trigger-once-while-true",
 							"objectClass": "System",
-							"sid": 458728050886719
+							"sid": 399587866641065
 						}
 					],
 					"actions": [
 						{
 							"id": "wait",
 							"objectClass": "System",
-							"sid": 812415952801071,
+							"sid": 414213921256308,
 							"parameters": {
 								"seconds": "2",
 								"use-timescale": true
@@ -1047,14 +1057,14 @@
 						{
 							"id": "set-boolean-eventvar",
 							"objectClass": "System",
-							"sid": 698815619590183,
+							"sid": 972194740153202,
 							"parameters": {
 								"variable": "GAME_guyOverride",
 								"value": "false"
 							}
 						}
 					],
-					"sid": 103684052941020
+					"sid": 783036520419500
 				},
 				{
 					"eventType": "comment",
@@ -1071,78 +1081,12 @@
 					],
 					"actions": [
 						{
-							"id": "set-image-offset-x",
-							"objectClass": "Sky",
-							"sid": 370741052581252,
-							"parameters": {
-								"offset-x": "Self.ImageOffsetX + dt*3"
-							}
-						},
-						{
-							"id": "set-image-offset-y",
-							"objectClass": "Sky",
-							"sid": 301444039405038,
-							"parameters": {
-								"offset-y": "Self.ImageOffsetY + dt*3"
-							}
-						},
-						{
-							"id": "set-image-offset-x",
-							"objectClass": "Water",
-							"sid": 963735990874905,
-							"parameters": {
-								"offset-x": "Self.ImageOffsetX + dt*2"
-							}
-						},
-						{
-							"id": "set-image-offset-y",
-							"objectClass": "Water",
-							"sid": 729243345875002,
-							"parameters": {
-								"offset-y": "Self.ImageOffsetY + dt*2"
-							}
-						},
-						{
-							"id": "set-image-offset-x",
-							"objectClass": "Space",
-							"sid": 943502583758796,
-							"parameters": {
-								"offset-x": "Self.ImageOffsetX + dt*2"
-							}
-						},
-						{
-							"id": "set-image-offset-y",
-							"objectClass": "Space",
-							"sid": 983238000486922,
-							"parameters": {
-								"offset-y": "Self.ImageOffsetY + dt*2"
-							}
-						},
-						{
-							"id": "set-angle-toward-position",
-							"objectClass": "Billboard",
-							"sid": 865001344074934,
-							"parameters": {
-								"x": "Player.X",
-								"y": "Player.Y"
-							}
-						},
-						{
 							"id": "set-position",
 							"objectClass": "PlayerPickup",
 							"sid": 748107733040885,
 							"parameters": {
 								"x": "Player.X",
 								"y": "Player.Y"
-							}
-						},
-						{
-							"id": "add-to-eventvar",
-							"objectClass": "System",
-							"sid": 413215184196964,
-							"parameters": {
-								"variable": "GAME_inactivityTimer",
-								"value": "dt"
 							}
 						}
 					],
@@ -1152,21 +1096,95 @@
 							"eventType": "block",
 							"conditions": [
 								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 816302795869452,
+									"parameters": {
+										"variable": "BLEED_freeze"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-image-offset-x",
+									"objectClass": "Sky",
+									"sid": 527325674465312,
+									"parameters": {
+										"offset-x": "Self.ImageOffsetX + dt*3"
+									}
+								},
+								{
+									"id": "set-image-offset-y",
+									"objectClass": "Sky",
+									"sid": 497487071426095,
+									"parameters": {
+										"offset-y": "Self.ImageOffsetY + dt*3"
+									}
+								},
+								{
+									"id": "set-image-offset-x",
+									"objectClass": "Water",
+									"sid": 965764196220280,
+									"parameters": {
+										"offset-x": "Self.ImageOffsetX + dt*2"
+									}
+								},
+								{
+									"id": "set-image-offset-y",
+									"objectClass": "Water",
+									"sid": 830636188049515,
+									"parameters": {
+										"offset-y": "Self.ImageOffsetY + dt*2"
+									}
+								},
+								{
+									"id": "set-image-offset-x",
+									"objectClass": "Space",
+									"sid": 236149037656203,
+									"parameters": {
+										"offset-x": "Self.ImageOffsetX + dt*2"
+									}
+								},
+								{
+									"id": "set-image-offset-y",
+									"objectClass": "Space",
+									"sid": 799572525826833,
+									"parameters": {
+										"offset-y": "Self.ImageOffsetY + dt*2"
+									}
+								},
+								{
+									"id": "set-angle-toward-position",
+									"objectClass": "Billboard",
+									"sid": 491708764297552,
+									"parameters": {
+										"x": "Player.X",
+										"y": "Player.Y"
+									}
+								}
+							],
+							"sid": 855431241544489
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 738093091509777,
+									"parameters": {
+										"variable": "BLEED_ready"
+									}
+								},
+								{
 									"id": "compare-eventvar",
 									"objectClass": "System",
-									"sid": 713522059186109,
+									"sid": 997369612697656,
 									"parameters": {
 										"variable": "MENU_menu",
 										"comparison": 0,
 										"value": "\"\""
-									}
-								},
-								{
-									"id": "compare-boolean-eventvar",
-									"objectClass": "System",
-									"sid": 991209025586273,
-									"parameters": {
-										"variable": "BLEED_ready"
 									}
 								}
 							],
@@ -1174,26 +1192,26 @@
 								{
 									"id": "add-to-eventvar",
 									"objectClass": "System",
-									"sid": 264915996801511,
+									"sid": 568790879453564,
 									"parameters": {
 										"variable": "GAME_time",
 										"value": "dt"
 									}
 								}
 							],
-							"sid": 888556290200875
+							"sid": 770029836114426
 						},
 						{
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "compare-eventvar",
+									"id": "compare-two-values",
 									"objectClass": "System",
-									"sid": 700177950217714,
+									"sid": 451535138048800,
 									"parameters": {
-										"variable": "GAME_inactivityTimer",
+										"first-value": "Doomguy.Timer.CurrentTime(\"inactivity\")",
 										"comparison": 5,
-										"value": "GAME_inactivityMax"
+										"second-value": "GAME_inactivity"
 									}
 								}
 							],
@@ -1290,19 +1308,47 @@
 							}
 						}
 					],
-					"actions": [
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 377642296710638,
-							"parameters": {
-								"variable": "GAME_inactivityTimer",
-								"value": "0"
-							}
-						}
-					],
+					"actions": [],
 					"sid": 863884342741470,
 					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 217881203410005,
+									"parameters": {
+										"variable": "MENU_menu",
+										"comparison": 0,
+										"value": "\"\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "stop-timer",
+									"objectClass": "Doomguy",
+									"sid": 100863958482572,
+									"behaviorType": "Timer",
+									"parameters": {
+										"tag": "\"inactivity\""
+									}
+								},
+								{
+									"id": "start-timer",
+									"objectClass": "Doomguy",
+									"sid": 831143370792047,
+									"behaviorType": "Timer",
+									"parameters": {
+										"duration": "GAME_inactivity",
+										"type": "once",
+										"tag": "\"inactivity\""
+									}
+								}
+							],
+							"sid": 582138431880054
+						},
 						{
 							"eventType": "block",
 							"conditions": [
@@ -4150,7 +4196,7 @@
 							"id": "set-magnitude",
 							"objectClass": "Arm",
 							"sid": 269092260703926,
-							"behaviorType": "Sine",
+							"behaviorType": "Vertical",
 							"parameters": {
 								"magnitude": "4*(Player.8Direction.Speed/Player.8Direction.MaxSpeed)"
 							}
@@ -4159,7 +4205,7 @@
 							"id": "set-magnitude",
 							"objectClass": "Arm",
 							"sid": 176512171233078,
-							"behaviorType": "Sine2",
+							"behaviorType": "Horizontal",
 							"parameters": {
 								"magnitude": "8*(Player.8Direction.Speed/Player.8Direction.MaxSpeed)"
 							}
@@ -4168,7 +4214,7 @@
 							"id": "set-magnitude",
 							"objectClass": "Arm",
 							"sid": 259250242705381,
-							"behaviorType": "Sine3",
+							"behaviorType": "Bob",
 							"parameters": {
 								"magnitude": "2*(Player.8Direction.Speed/Player.8Direction.MaxSpeed)"
 							}
@@ -6450,7 +6496,7 @@
 					"parameters": {
 						"x": "PlayerCam.X",
 						"y": "PlayerCam.Y",
-						"z": "PlayerCam.ZElevation+PLAYER_cameraHeight+Arm.Sine3.Value",
+						"z": "PlayerCam.ZElevation+PLAYER_cameraHeight+Arm.Bob.Value",
 						"which": "camera"
 					}
 				}
@@ -6859,6 +6905,15 @@
 							"parameters": {
 								"instance-variable": "playerRight",
 								"value": "false"
+							}
+						},
+						{
+							"id": "pause-resume-all-timers",
+							"objectClass": "Doomguy",
+							"sid": 758945628536066,
+							"behaviorType": "Timer",
+							"parameters": {
+								"state": "paused"
 							}
 						}
 					],

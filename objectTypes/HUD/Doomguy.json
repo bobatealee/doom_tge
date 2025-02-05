@@ -5,7 +5,13 @@
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
-	"behaviorTypes": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Timer",
+			"name": "Timer",
+			"sid": 126337612815656
+		}
+	],
 	"effectTypes": [],
 	"animations": {
 		"items": [

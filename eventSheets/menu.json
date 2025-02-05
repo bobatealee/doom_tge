@@ -465,6 +465,15 @@
 							"id": "every-tick",
 							"objectClass": "System",
 							"sid": 163976656611256
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 256289978366673,
+							"parameters": {
+								"variable": "BLEED_freeze"
+							},
+							"isInverted": true
 						}
 					],
 					"actions": [
@@ -530,6 +539,14 @@
 								"variable": "MENU_menu",
 								"comparison": 0,
 								"value": "\"Main\""
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 938473527518326,
+							"parameters": {
+								"variable": "BLEED_ready"
 							}
 						}
 					],
@@ -648,7 +665,154 @@
 											"sid": 599257456359531
 										}
 									],
-									"sid": 140891866759961
+									"sid": 140891866759961,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-boolean-eventvar",
+													"objectClass": "System",
+													"sid": 763008184294646,
+													"parameters": {
+														"variable": "NGIO_medals"
+													},
+													"isInverted": true
+												}
+											],
+											"actions": [
+												{
+													"id": "set-boolean-eventvar",
+													"objectClass": "System",
+													"sid": 511201638828288,
+													"parameters": {
+														"variable": "MEDAL_observations",
+														"value": "false"
+													}
+												},
+												{
+													"id": "set-boolean-eventvar",
+													"objectClass": "System",
+													"sid": 826642492717183,
+													"parameters": {
+														"variable": "MEDAL_items",
+														"value": "false"
+													}
+												},
+												{
+													"id": "set-boolean-eventvar",
+													"objectClass": "System",
+													"sid": 502319737837991,
+													"parameters": {
+														"variable": "MEDAL_spending",
+														"value": "false"
+													}
+												},
+												{
+													"id": "set-boolean-eventvar",
+													"objectClass": "System",
+													"sid": 264966915449425,
+													"parameters": {
+														"variable": "MEDAL_secrets",
+														"value": "false"
+													}
+												},
+												{
+													"id": "set-boolean-eventvar",
+													"objectClass": "System",
+													"sid": 570902170120394,
+													"parameters": {
+														"variable": "MEDAL_time",
+														"value": "false"
+													}
+												},
+												{
+													"id": "set-boolean-eventvar",
+													"objectClass": "System",
+													"sid": 880223876496495,
+													"parameters": {
+														"variable": "MEDAL_drinks",
+														"value": "false"
+													}
+												},
+												{
+													"id": "set-boolean-eventvar",
+													"objectClass": "System",
+													"sid": 667671357323618,
+													"parameters": {
+														"variable": "MEDAL_thoughtful",
+														"value": "false"
+													}
+												},
+												{
+													"id": "set-boolean-eventvar",
+													"objectClass": "System",
+													"sid": 215783656968559,
+													"parameters": {
+														"variable": "MEDAL_doom",
+														"value": "false"
+													}
+												},
+												{
+													"id": "set-boolean-eventvar",
+													"objectClass": "System",
+													"sid": 720356280352732,
+													"parameters": {
+														"variable": "UNLOCK_doomMusic",
+														"value": "false"
+													}
+												}
+											],
+											"sid": 679304439613152,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-boolean-eventvar",
+															"objectClass": "System",
+															"sid": 839241529302597,
+															"parameters": {
+																"variable": "SETTING_doomMusic"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-boolean-eventvar",
+															"objectClass": "System",
+															"sid": 870992298205809,
+															"parameters": {
+																"variable": "SETTING_doomMusic",
+																"value": "false"
+															}
+														},
+														{
+															"id": "stop",
+															"objectClass": "Audio",
+															"sid": 620704936404867,
+															"parameters": {
+																"tag": "\"music\""
+															}
+														},
+														{
+															"id": "play",
+															"objectClass": "Audio",
+															"sid": 305945517072143,
+															"parameters": {
+																"audio-file": "vivaldi",
+																"loop": "looping",
+																"volume": "(log10(SETTING_volumeMusic)*20)",
+																"stereo-pan": "0",
+																"tag-optional": "\"music\""
+															}
+														}
+													],
+													"sid": 326496904363067
+												}
+											]
+										}
+									]
 								}
 							]
 						}
@@ -3036,6 +3200,15 @@
 														"layer": "\"Fade\"",
 														"visibility": "invisible"
 													}
+												},
+												{
+													"id": "pause-resume-all-timers",
+													"objectClass": "Doomguy",
+													"sid": 591958981996261,
+													"behaviorType": "Timer",
+													"parameters": {
+														"state": "resumed"
+													}
 												}
 											],
 											"sid": 626819531978746
@@ -3395,6 +3568,14 @@
 													"parameters": {
 														"variable": "MENU_keyControl",
 														"value": "true"
+													}
+												},
+												{
+													"id": "set-animation-frame",
+													"objectClass": "Medal",
+													"sid": 961456966386691,
+													"parameters": {
+														"frame-number": "8"
 													}
 												}
 											],
@@ -4687,6 +4868,15 @@
 											"parameters": {
 												"variable": "GAME_modalArt",
 												"value": "false"
+											}
+										},
+										{
+											"id": "pause-resume-all-timers",
+											"objectClass": "Doomguy",
+											"sid": 313949054667450,
+											"behaviorType": "Timer",
+											"parameters": {
+												"state": "resumed"
 											}
 										}
 									],

@@ -13,6 +13,16 @@
 		},
 		{
 			"eventType": "variable",
+			"name": "BLEED_freeze",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 917111341908008
+		},
+		{
+			"eventType": "variable",
 			"name": "BLEED_lineAmount",
 			"type": "number",
 			"initialValue": "0",
@@ -344,6 +354,15 @@
 							}
 						},
 						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 722821289893707,
+							"parameters": {
+								"variable": "BLEED_freeze",
+								"value": "true"
+							}
+						},
+						{
 							"id": "set-eventvar-value",
 							"objectClass": "System",
 							"sid": 533428894602088,
@@ -396,6 +415,43 @@
 								"variable": "BLEED_lineAmount",
 								"value": "ceil(ViewportWidth(\"HUD\")/BLEED_interval)"
 							}
+						},
+						{
+							"id": "set-active",
+							"objectClass": "Arm",
+							"sid": 395988250223661,
+							"behaviorType": "Vertical",
+							"parameters": {
+								"state": "inactive"
+							}
+						},
+						{
+							"id": "set-active",
+							"objectClass": "Arm",
+							"sid": 790950065383205,
+							"behaviorType": "Horizontal",
+							"parameters": {
+								"state": "inactive"
+							}
+						},
+						{
+							"id": "set-active",
+							"objectClass": "Arm",
+							"sid": 725156516596888,
+							"behaviorType": "Bob",
+							"parameters": {
+								"state": "inactive"
+							}
+						},
+						{
+							"id": "pause-all-timelines",
+							"objectClass": "TimelineController",
+							"sid": 541939609137120
+						},
+						{
+							"id": "stop-animation",
+							"objectClass": "Selector",
+							"sid": 579220654872261
 						},
 						{
 							"id": "snapshot-canvas",
@@ -651,6 +707,15 @@
 							"parameters": {
 								"layout": "BLEED_layout"
 							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 280712793193412,
+							"parameters": {
+								"variable": "BLEED_freeze",
+								"value": "false"
+							}
 						}
 					],
 					"sid": 242595414169089,
@@ -680,12 +745,12 @@
 								{
 									"id": "start-timer",
 									"objectClass": "BleedLine",
-									"sid": 362634375235989,
+									"sid": 146604785636673,
 									"behaviorType": "Timer",
 									"parameters": {
 										"duration": "BLEED_randomize/10",
 										"type": "once",
-										"tag": "\"MeltNow\""
+										"tag": "\"bleed\""
 									}
 								}
 							],
@@ -699,10 +764,10 @@
 						{
 							"id": "on-timer",
 							"objectClass": "BleedLine",
-							"sid": 135624054976858,
+							"sid": 671203404000478,
 							"behaviorType": "Timer",
 							"parameters": {
-								"tag": "\"MeltNow\""
+								"tag": "\"bleed\""
 							}
 						}
 					],

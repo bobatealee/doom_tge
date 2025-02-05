@@ -8,17 +8,17 @@
 	"behaviorTypes": [
 		{
 			"behaviorId": "Sin",
-			"name": "Sine",
+			"name": "Vertical",
 			"sid": 671818418128868
 		},
 		{
 			"behaviorId": "Sin",
-			"name": "Sine2",
+			"name": "Horizontal",
 			"sid": 524763206142678
 		},
 		{
 			"behaviorId": "Sin",
-			"name": "Sine3",
+			"name": "Bob",
 			"sid": 868688882661121
 		}
 	],

@@ -34000,7 +34000,7 @@
 							"tags": "collision",
 							"instanceVariables": {},
 							"behaviors": {
-								"Sine": {
+								"Vertical": {
 									"properties": {
 										"movement": "vertical",
 										"wave": "sine",
@@ -34014,7 +34014,7 @@
 										"live-preview": false
 									}
 								},
-								"Sine2": {
+								"Horizontal": {
 									"properties": {
 										"movement": "horizontal",
 										"wave": "sine",
@@ -34028,7 +34028,7 @@
 										"live-preview": false
 									}
 								},
-								"Sine3": {
+								"Bob": {
 									"properties": {
 										"movement": "value-only",
 										"wave": "sine",
@@ -34122,7 +34122,11 @@
 							"sid": 594670495025873,
 							"tags": "collision",
 							"instanceVariables": {},
-							"behaviors": {},
+							"behaviors": {
+								"Timer": {
+									"properties": {}
+								}
+							},
 							"instanceFolderItem": {
 								"sid": 594670495025873,
 								"expanded": true,

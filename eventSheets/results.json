@@ -395,10 +395,10 @@
 						{
 							"id": "compare-eventvar",
 							"objectClass": "System",
-							"sid": 530984372231246,
+							"sid": 153762037201775,
 							"parameters": {
 								"variable": "RESULTS_status",
-								"comparison": 0,
+								"comparison": 5,
 								"value": "4"
 							}
 						}
@@ -412,10 +412,10 @@
 								{
 									"id": "compare-eventvar",
 									"objectClass": "System",
-									"sid": 963262398374332,
+									"sid": 487518477897747,
 									"parameters": {
 										"variable": "GAME_time",
-										"comparison": 2,
+										"comparison": 5,
 										"value": "GAME_badTime"
 									}
 								}
@@ -424,32 +424,7 @@
 								{
 									"id": "play",
 									"objectClass": "Audio",
-									"sid": 250257339024409,
-									"parameters": {
-										"audio-file": "menuclose",
-										"loop": "not-looping",
-										"volume": "log10(SETTING_volumeSound)*20",
-										"stereo-pan": "0",
-										"tag-optional": "\"\""
-									}
-								}
-							],
-							"sid": 894304680716282
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "else",
-									"objectClass": "System",
-									"sid": 322400529586217
-								}
-							],
-							"actions": [
-								{
-									"id": "play",
-									"objectClass": "Audio",
-									"sid": 668082851688950,
+									"sid": 210165006895721,
 									"parameters": {
 										"audio-file": "badtime",
 										"loop": "not-looping",
@@ -459,7 +434,32 @@
 									}
 								}
 							],
-							"sid": 234180998464324
+							"sid": 611899487464450
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 482409267055464
+								}
+							],
+							"actions": [
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 114806154290191,
+									"parameters": {
+										"audio-file": "menuclose",
+										"loop": "not-looping",
+										"volume": "log10(SETTING_volumeSound)*20",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
+								}
+							],
+							"sid": 549771379013934
 						}
 					]
 				},
@@ -912,7 +912,7 @@
 							"parameters": {
 								"variable": "GAME_time",
 								"comparison": 2,
-								"value": "GAME_targetTime"
+								"value": "GAME_goodTime"
 							}
 						}
 					],
@@ -1550,7 +1550,7 @@
 													"parameters": {
 														"variable": "GAME_time",
 														"comparison": 2,
-														"value": "GAME_targetTime"
+														"value": "GAME_goodTime"
 													}
 												}
 											],
@@ -1572,10 +1572,10 @@
 												{
 													"id": "compare-eventvar",
 													"objectClass": "System",
-													"sid": 598440589493962,
+													"sid": 289482916481791,
 													"parameters": {
 														"variable": "GAME_time",
-														"comparison": 2,
+														"comparison": 5,
 														"value": "GAME_badTime"
 													}
 												}
@@ -1584,9 +1584,9 @@
 												{
 													"id": "play",
 													"objectClass": "Audio",
-													"sid": 401755698885501,
+													"sid": 488038934301950,
 													"parameters": {
-														"audio-file": "menuclose",
+														"audio-file": "badtime",
 														"loop": "not-looping",
 														"volume": "log10(SETTING_volumeSound)*20",
 														"stereo-pan": "0",
@@ -1609,9 +1609,9 @@
 												{
 													"id": "play",
 													"objectClass": "Audio",
-													"sid": 250196286692530,
+													"sid": 373058732119374,
 													"parameters": {
-														"audio-file": "badtime",
+														"audio-file": "menuclose",
 														"loop": "not-looping",
 														"volume": "log10(SETTING_volumeSound)*20",
 														"stereo-pan": "0",
@@ -2004,7 +2004,7 @@
 							"parameters": {
 								"variable": "GAME_time",
 								"comparison": 2,
-								"value": "GAME_targetTime"
+								"value": "GAME_goodTime"
 							}
 						}
 					],
