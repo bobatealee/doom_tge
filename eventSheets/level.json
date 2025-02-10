@@ -183,7 +183,7 @@
 			"eventType": "variable",
 			"name": "GAME_badTime",
 			"type": "number",
-			"initialValue": "21",
+			"initialValue": "900",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,

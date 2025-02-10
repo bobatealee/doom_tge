@@ -1454,6 +1454,11 @@
 											"id": "is-windows-webview2-export",
 											"objectClass": "PlatformInfo",
 											"sid": 302023803790266
+										},
+										{
+											"id": "is-linux-cef-export",
+											"objectClass": "PlatformInfo",
+											"sid": 594593286314654
 										}
 									],
 									"actions": [],
@@ -1495,7 +1500,8 @@
 											],
 											"sid": 862647670848126
 										}
-									]
+									],
+									"isOrBlock": true
 								},
 								{
 									"eventType": "block",

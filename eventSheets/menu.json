@@ -385,6 +385,12 @@
 											"objectClass": "PlatformInfo",
 											"sid": 870818555078625,
 											"isInverted": true
+										},
+										{
+											"id": "is-linux-cef-export",
+											"objectClass": "PlatformInfo",
+											"sid": 170409637348981,
+											"isInverted": true
 										}
 									],
 									"actions": [

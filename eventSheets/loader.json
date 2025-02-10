@@ -76,6 +76,11 @@
 							"id": "is-windows-webview2-export",
 							"objectClass": "PlatformInfo",
 							"sid": 962758741477651
+						},
+						{
+							"id": "is-linux-cef-export",
+							"objectClass": "PlatformInfo",
+							"sid": 205616012551624
 						}
 					],
 					"actions": [
@@ -89,7 +94,8 @@
 							}
 						}
 					],
-					"sid": 271458487129875
+					"sid": 271458487129875,
+					"isOrBlock": true
 				}
 			]
 		},
@@ -697,6 +703,11 @@
 							"id": "is-windows-webview2-export",
 							"objectClass": "PlatformInfo",
 							"sid": 111149204659890
+						},
+						{
+							"id": "is-linux-cef-export",
+							"objectClass": "PlatformInfo",
+							"sid": 216438518798868
 						}
 					],
 					"actions": [
@@ -736,7 +747,8 @@
 							}
 						}
 					],
-					"sid": 549819627923406
+					"sid": 549819627923406,
+					"isOrBlock": true
 				}
 			]
 		}
