@@ -485,7 +485,7 @@
 											"objectClass": "Audio",
 											"sid": 115784754399819,
 											"parameters": {
-												"audio-file": "vivaldi",
+												"audio-file": "menu",
 												"loop": "looping",
 												"volume": "(log10(SETTING_volumeMusic)*20)",
 												"stereo-pan": "0",
@@ -510,7 +510,7 @@
 											"objectClass": "Audio",
 											"sid": 956471408155681,
 											"parameters": {
-												"audio-file": "intro",
+												"audio-file": "menuDoomIntro",
 												"loop": "not-looping",
 												"volume": "(log10(SETTING_volumeMusic)*20)",
 												"stereo-pan": "0",
@@ -869,7 +869,7 @@
 																	"objectClass": "Audio",
 																	"sid": 167736689191560,
 																	"parameters": {
-																		"audio-file": "vivaldi",
+																		"audio-file": "menu",
 																		"loop": "looping",
 																		"volume": "(log10(SETTING_volumeMusic)*20)",
 																		"stereo-pan": "0",
@@ -947,7 +947,7 @@
 									"objectClass": "Audio",
 									"sid": 640406510439922,
 									"parameters": {
-										"audio-file": "e1m5",
+										"audio-file": "menuDoom",
 										"loop": "looping",
 										"volume": "(log10(SETTING_volumeMusic)*20)",
 										"stereo-pan": "0",
@@ -4179,7 +4179,7 @@
 																	"objectClass": "Audio",
 																	"sid": 622829055601669,
 																	"parameters": {
-																		"audio-file": "vivaldi",
+																		"audio-file": "menu",
 																		"loop": "looping",
 																		"volume": "(log10(SETTING_volumeMusic)*20)",
 																		"stereo-pan": "0",
@@ -4204,7 +4204,7 @@
 																	"objectClass": "Audio",
 																	"sid": 903332856166516,
 																	"parameters": {
-																		"audio-file": "intro",
+																		"audio-file": "menuDoomIntro",
 																		"loop": "not-looping",
 																		"volume": "(log10(SETTING_volumeMusic)*20)",
 																		"stereo-pan": "0",
@@ -4252,7 +4252,7 @@
 																	"objectClass": "Audio",
 																	"sid": 560811677074939,
 																	"parameters": {
-																		"audio-file": "bach",
+																		"audio-file": "level",
 																		"loop": "looping",
 																		"volume": "(log10(SETTING_volumeMusic)*20)",
 																		"stereo-pan": "0",
@@ -4277,7 +4277,7 @@
 																	"objectClass": "Audio",
 																	"sid": 641044697102774,
 																	"parameters": {
-																		"audio-file": "e1m1",
+																		"audio-file": "levelDoom",
 																		"loop": "looping",
 																		"volume": "(log10(SETTING_volumeMusic)*20)",
 																		"stereo-pan": "0",

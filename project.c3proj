@@ -685,7 +685,7 @@
 		"music": {
 			"items": [
 				{
-					"name": "bach.webm",
+					"name": "level.webm",
 					"type": "audio/webm; codecs=opus",
 					"sid": 677351128859557,
 					"file-info": {
@@ -693,7 +693,7 @@
 					}
 				},
 				{
-					"name": "delibes.webm",
+					"name": "results.webm",
 					"type": "audio/webm; codecs=opus",
 					"sid": 833179971619099,
 					"file-info": {
@@ -701,7 +701,7 @@
 					}
 				},
 				{
-					"name": "e1m1.webm",
+					"name": "levelDoom.webm",
 					"type": "audio/webm; codecs=opus",
 					"sid": 338482145863080,
 					"file-info": {
@@ -709,7 +709,7 @@
 					}
 				},
 				{
-					"name": "e1m5.webm",
+					"name": "menuDoom.webm",
 					"type": "audio/webm; codecs=opus",
 					"sid": 553327494387864,
 					"file-info": {
@@ -717,7 +717,7 @@
 					}
 				},
 				{
-					"name": "intro.webm",
+					"name": "menuDoomIntro.webm",
 					"type": "audio/webm; codecs=opus",
 					"sid": 543930099452555,
 					"file-info": {
@@ -725,7 +725,7 @@
 					}
 				},
 				{
-					"name": "results.webm",
+					"name": "resultsDoom.webm",
 					"type": "audio/webm; codecs=opus",
 					"sid": 979024838707547,
 					"file-info": {
@@ -733,7 +733,7 @@
 					}
 				},
 				{
-					"name": "vivaldi.webm",
+					"name": "menu.webm",
 					"type": "audio/webm; codecs=opus",
 					"sid": 152474268629808,
 					"file-info": {
@@ -863,7 +863,7 @@
 	},
 	"properties": {
 		"description": "DOOM: The Gallery Experience was created as an art piece designed to parody the wonderfully pretentious world of gallery openings.",
-		"version": "1.3.0",
+		"version": "1.3.1",
 		"autoIncrementVersion": false,
 		"author": "SCUM DOG GAMES",
 		"authorEmail": "contact@scum.dog",
@@ -896,7 +896,7 @@
 			0
 		],
 		"orientations": "landscape",
-		"webgpu": "auto",
+		"webgpu": "no",
 		"gpuPreference": "high-performance",
 		"scriptsType": "module",
 		"framerateMode": "vsync",

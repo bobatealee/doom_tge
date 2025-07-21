@@ -815,7 +815,7 @@
 									"objectClass": "Audio",
 									"sid": 990116883912068,
 									"parameters": {
-										"audio-file": "bach",
+										"audio-file": "level",
 										"loop": "looping",
 										"volume": "(log10(SETTING_volumeMusic)*20)",
 										"stereo-pan": "0",
@@ -840,7 +840,7 @@
 									"objectClass": "Audio",
 									"sid": 416803101838258,
 									"parameters": {
-										"audio-file": "e1m1",
+										"audio-file": "levelDoom",
 										"loop": "looping",
 										"volume": "(log10(SETTING_volumeMusic)*20)",
 										"stereo-pan": "0",

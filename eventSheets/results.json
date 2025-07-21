@@ -142,7 +142,7 @@
 									"objectClass": "Audio",
 									"sid": 939346731788837,
 									"parameters": {
-										"audio-file": "delibes",
+										"audio-file": "results",
 										"loop": "looping",
 										"volume": "(log10(SETTING_volumeMusic)*20)",
 										"stereo-pan": "0",
@@ -167,7 +167,7 @@
 									"objectClass": "Audio",
 									"sid": 853214753368810,
 									"parameters": {
-										"audio-file": "results",
+										"audio-file": "resultsDoom",
 										"loop": "looping",
 										"volume": "(log10(SETTING_volumeMusic)*20)",
 										"stereo-pan": "0",
