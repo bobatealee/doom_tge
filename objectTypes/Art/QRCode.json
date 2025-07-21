@@ -1,0 +1,15 @@
+{
+	"name": "QRCode",
+	"plugin-id": "qrcode",
+	"sid": 764897959088149,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [
+		{
+			"effectId": "replacecolor",
+			"name": "ReplaceColor"
+		}
+	]
+}

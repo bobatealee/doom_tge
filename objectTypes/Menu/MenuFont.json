@@ -11,9 +11,22 @@
 			"desc": "",
 			"show": true,
 			"sid": 879010047198365
+		},
+		{
+			"name": "type",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 794606244232523
 		}
 	],
-	"behaviorTypes": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Tween",
+			"name": "Tween",
+			"sid": 628406579899682
+		}
+	],
 	"effectTypes": [],
 	"image": {
 		"width": 260,

@@ -81,6 +81,14 @@
 							"id": "is-linux-cef-export",
 							"objectClass": "PlatformInfo",
 							"sid": 205616012551624
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 696224021461838,
+							"parameters": {
+								"variable": "GAME_kiosk"
+							}
 						}
 					],
 					"actions": [
@@ -382,13 +390,35 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "on-tweens-finished",
+					"id": "is-playing",
 					"objectClass": "Scumdog",
-					"sid": 148674617197449,
+					"sid": 443362862971078,
 					"behaviorType": "Tween",
 					"parameters": {
 						"tags": "\"fade\""
+					},
+					"isInverted": true
+				},
+				{
+					"id": "layer-is-visible",
+					"objectClass": "System",
+					"sid": 447369987621527,
+					"parameters": {
+						"layer": "\"Logo\""
 					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 398683463737565,
+					"parameters": {
+						"variable": "GAME_loaded"
+					}
+				},
+				{
+					"id": "trigger-once-while-true",
+					"objectClass": "System",
+					"sid": 527745602945067
 				}
 			],
 			"actions": [
@@ -708,6 +738,14 @@
 							"id": "is-linux-cef-export",
 							"objectClass": "PlatformInfo",
 							"sid": 216438518798868
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 261291097296435,
+							"parameters": {
+								"variable": "GAME_kiosk"
+							}
 						}
 					],
 					"actions": [

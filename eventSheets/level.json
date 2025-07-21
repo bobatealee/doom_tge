@@ -56,16 +56,6 @@
 			"sid": 765279586470823
 		},
 		{
-			"eventType": "variable",
-			"name": "GAME_inactivity",
-			"type": "number",
-			"initialValue": "300",
-			"comment": "",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 643436251545777
-		},
-		{
 			"eventType": "comment",
 			"text": "Stats for results screen"
 		},
@@ -131,6 +121,16 @@
 		},
 		{
 			"eventType": "variable",
+			"name": "STAT_moneySpent",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 538620338493091
+		},
+		{
+			"eventType": "variable",
 			"name": "STAT_secrets",
 			"type": "number",
 			"initialValue": "0",
@@ -138,16 +138,6 @@
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 316729205831241
-		},
-		{
-			"eventType": "variable",
-			"name": "STAT_moneySpent",
-			"type": "number",
-			"initialValue": "0",
-			"comment": "",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 161365884561925
 		},
 		{
 			"eventType": "variable",
@@ -559,6 +549,24 @@
 							}
 						},
 						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 735278276303338,
+							"parameters": {
+								"variable": "GAME_mouseLook",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 372419590141936,
+							"parameters": {
+								"variable": "GAME_mouseLock",
+								"value": "false"
+							}
+						},
+						{
 							"id": "set-z-elevation",
 							"objectClass": "Sight",
 							"sid": 657439558256323,
@@ -726,6 +734,42 @@
 							"sid": 126117139494153,
 							"parameters": {
 								"layer": "\"Main\"",
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 723202465510503,
+							"parameters": {
+								"layer": "\"Options\"",
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 144471265132025,
+							"parameters": {
+								"layer": "\"OptionsAlt\"",
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 644130972997948,
+							"parameters": {
+								"layer": "\"Credits\"",
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 212668308689007,
+							"parameters": {
+								"layer": "\"Modal\"",
 								"visibility": "invisible"
 							}
 						},
@@ -1174,7 +1218,7 @@
 									"objectClass": "System",
 									"sid": 738093091509777,
 									"parameters": {
-										"variable": "BLEED_ready"
+										"variable": "BLEED_standby"
 									}
 								},
 								{
@@ -1217,15 +1261,6 @@
 							],
 							"actions": [
 								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 470757447538288,
-									"parameters": {
-										"variable": "MENU_menu",
-										"value": "\"Main\""
-									}
-								},
-								{
 									"callFunction": "transition",
 									"sid": 486670365135240,
 									"parameters": [
@@ -1254,6 +1289,10 @@
 							"sid": 924551755758758
 						}
 					]
+				},
+				{
+					"eventType": "comment",
+					"text": "Big ugly inactivity check"
 				},
 				{
 					"eventType": "block",
@@ -1306,6 +1345,50 @@
 							"parameters": {
 								"gamepad": "0"
 							}
+						},
+						{
+							"id": "compare-axis",
+							"objectClass": "Gamepad",
+							"sid": 418729699051220,
+							"parameters": {
+								"gamepad": "0",
+								"axis": "left-analog-x-axis",
+								"comparison": 1,
+								"value": "0"
+							}
+						},
+						{
+							"id": "compare-axis",
+							"objectClass": "Gamepad",
+							"sid": 902562975143778,
+							"parameters": {
+								"gamepad": "0",
+								"axis": "left-analog-y-axis",
+								"comparison": 1,
+								"value": "0"
+							}
+						},
+						{
+							"id": "compare-axis",
+							"objectClass": "Gamepad",
+							"sid": 612108561639608,
+							"parameters": {
+								"gamepad": "0",
+								"axis": "right-analog-x-axis",
+								"comparison": 1,
+								"value": "0"
+							}
+						},
+						{
+							"id": "compare-axis",
+							"objectClass": "Gamepad",
+							"sid": 825727934064597,
+							"parameters": {
+								"gamepad": "0",
+								"axis": "right-analog-y-axis",
+								"comparison": 1,
+								"value": "0"
+							}
 						}
 					],
 					"actions": [],
@@ -1318,6 +1401,7 @@
 									"id": "compare-eventvar",
 									"objectClass": "System",
 									"sid": 217881203410005,
+									"disabled": true,
 									"parameters": {
 										"variable": "MENU_menu",
 										"comparison": 0,
@@ -1357,7 +1441,7 @@
 									"objectClass": "System",
 									"sid": 241899584878348,
 									"parameters": {
-										"variable": "BLEED_ready"
+										"variable": "BLEED_standby"
 									}
 								},
 								{
@@ -1457,7 +1541,7 @@
 							"objectClass": "System",
 							"sid": 179443366625894,
 							"parameters": {
-								"variable": "BLEED_ready"
+								"variable": "BLEED_standby"
 							}
 						}
 					],
@@ -2011,7 +2095,7 @@
 							"objectClass": "System",
 							"sid": 457181140556278,
 							"parameters": {
-								"variable": "BLEED_ready"
+								"variable": "BLEED_standby"
 							}
 						},
 						{
@@ -2654,7 +2738,7 @@
 									"objectClass": "System",
 									"sid": 156062811349271,
 									"parameters": {
-										"variable": "BLEED_ready"
+										"variable": "BLEED_standby"
 									}
 								},
 								{
@@ -2997,7 +3081,7 @@
 							"objectClass": "System",
 							"sid": 448684656495643,
 							"parameters": {
-								"variable": "BLEED_ready"
+								"variable": "BLEED_standby"
 							}
 						},
 						{
@@ -3212,7 +3296,7 @@
 									"objectClass": "System",
 									"sid": 541962671168363,
 									"parameters": {
-										"variable": "BLEED_ready"
+										"variable": "BLEED_standby"
 									}
 								},
 								{
@@ -3384,7 +3468,7 @@
 									"objectClass": "System",
 									"sid": 502726204455675,
 									"parameters": {
-										"variable": "BLEED_ready"
+										"variable": "BLEED_standby"
 									}
 								}
 							],
@@ -3524,7 +3608,7 @@
 									"objectClass": "System",
 									"sid": 822210612367629,
 									"parameters": {
-										"variable": "BLEED_ready"
+										"variable": "BLEED_standby"
 									}
 								}
 							],
@@ -3663,6 +3747,15 @@
 										"gamepad": "0",
 										"button": "right-shoulder-trigger"
 									}
+								},
+								{
+									"id": "on-button-pressed",
+									"objectClass": "Gamepad",
+									"sid": 815007558919826,
+									"parameters": {
+										"gamepad": "0",
+										"button": "button-x"
+									}
 								}
 							],
 							"actions": [
@@ -3721,7 +3814,7 @@
 											"objectClass": "System",
 											"sid": 402791849010013,
 											"parameters": {
-												"variable": "BLEED_ready"
+												"variable": "BLEED_standby"
 											}
 										},
 										{
@@ -4778,7 +4871,7 @@
 									"objectClass": "System",
 									"sid": 767632615345168,
 									"parameters": {
-										"variable": "BLEED_ready"
+										"variable": "BLEED_standby"
 									}
 								},
 								{
@@ -4821,7 +4914,7 @@
 							"objectClass": "System",
 							"sid": 853931099818806,
 							"parameters": {
-								"variable": "BLEED_ready"
+								"variable": "BLEED_standby"
 							}
 						},
 						{
@@ -4869,6 +4962,366 @@
 								}
 							],
 							"sid": 999519083709304
+						}
+					]
+				},
+				{
+					"eventType": "comment",
+					"text": "Modal title scrolling"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 288152520386156,
+							"parameters": {
+								"variable": "MENU_menu",
+								"comparison": 0,
+								"value": "\"Modal\""
+							}
+						}
+					],
+					"actions": [],
+					"sid": 937248263974408,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-tweens-finished",
+									"objectClass": "MenuFont",
+									"sid": 146371281476874,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"left\""
+									}
+								},
+								{
+									"id": "has-tags",
+									"objectClass": "MenuMask",
+									"sid": 264000785436921,
+									"parameters": {
+										"tags": "\"right\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "tween-one-property",
+									"objectClass": "MenuMask",
+									"sid": 434078825227576,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"\"",
+										"property": "offsetOpacity",
+										"end-value": "0",
+										"time": "0.25",
+										"ease": "noease",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no",
+										"repeat-count": "1"
+									}
+								},
+								{
+									"id": "start-timer",
+									"objectClass": "ModalArt",
+									"sid": 565223348900350,
+									"behaviorType": "Timer",
+									"parameters": {
+										"duration": "1.0",
+										"type": "once",
+										"tag": "\"right\""
+									}
+								}
+							],
+							"sid": 251020698551009
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-tweens-finished",
+									"objectClass": "MenuFont",
+									"sid": 226840197005282,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"right\""
+									}
+								},
+								{
+									"id": "has-tags",
+									"objectClass": "MenuMask",
+									"sid": 675017015660449,
+									"parameters": {
+										"tags": "\"left\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "tween-one-property",
+									"objectClass": "MenuMask",
+									"sid": 428484569769316,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"\"",
+										"property": "offsetOpacity",
+										"end-value": "0",
+										"time": "0.25",
+										"ease": "noease",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no",
+										"repeat-count": "1"
+									}
+								},
+								{
+									"id": "start-timer",
+									"objectClass": "ModalArt",
+									"sid": 949925453020536,
+									"behaviorType": "Timer",
+									"parameters": {
+										"duration": "3",
+										"type": "once",
+										"tag": "\"left\""
+									}
+								}
+							],
+							"sid": 620849698644408
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-timer",
+							"objectClass": "ModalArt",
+							"sid": 756798628016220,
+							"behaviorType": "Timer",
+							"parameters": {
+								"tag": "\"left\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "scrollTitle",
+							"sid": 682135966453915,
+							"parameters": [
+								"\"left\""
+							]
+						}
+					],
+					"sid": 492704066471979
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-timer",
+							"objectClass": "ModalArt",
+							"sid": 281800523994637,
+							"behaviorType": "Timer",
+							"parameters": {
+								"tag": "\"right\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "scrollTitle",
+							"sid": 750725650314734,
+							"parameters": [
+								"\"right\""
+							]
+						}
+					],
+					"sid": 642769691294226
+				},
+				{
+					"functionName": "scrollTitle",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [
+						{
+							"name": "direction",
+							"type": "string",
+							"initialValue": "left",
+							"comment": "",
+							"sid": 138795182773534
+						}
+					],
+					"eventType": "function-block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 337899815842184,
+							"parameters": {
+								"variable": "MENU_menu",
+								"comparison": 0,
+								"value": "\"Modal\""
+							}
+						},
+						{
+							"id": "has-tags",
+							"objectClass": "MenuFont",
+							"sid": 509995029818490,
+							"parameters": {
+								"tags": "\"title\""
+							}
+						},
+						{
+							"id": "has-tags",
+							"objectClass": "MenuFontSmall",
+							"sid": 145839837348861,
+							"parameters": {
+								"tags": "\"description\""
+							}
+						}
+					],
+					"actions": [],
+					"sid": 685230660249607,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-width",
+									"objectClass": "MenuFontSmall",
+									"sid": 413474965618805,
+									"parameters": {
+										"comparison": 2,
+										"width": "MenuFont.TextWidth"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 987460924041671,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 888360150717908,
+											"parameters": {
+												"variable": "direction",
+												"comparison": 0,
+												"value": "\"left\""
+											}
+										},
+										{
+											"id": "has-tags",
+											"objectClass": "MenuMask",
+											"sid": 692186884584735,
+											"parameters": {
+												"tags": "\"left\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "tween-one-property",
+											"objectClass": "MenuMask",
+											"sid": 192563659081833,
+											"behaviorType": "Tween",
+											"parameters": {
+												"tags": "\"\"",
+												"property": "offsetOpacity",
+												"end-value": "100",
+												"time": "0.25",
+												"ease": "noease",
+												"destroy-on-complete": "no",
+												"loop": "no",
+												"ping-pong": "no",
+												"repeat-count": "1"
+											}
+										},
+										{
+											"id": "tween-one-property",
+											"objectClass": "MenuFont",
+											"sid": 863888548269484,
+											"behaviorType": "Tween",
+											"parameters": {
+												"tags": "\"left\"",
+												"property": "offsetX",
+												"end-value": "(MenuFontSmall.X-1)+(MenuFontSmall.Width-Self.TextWidth)",
+												"time": "distance(MenuFontSmall.X, 0, (MenuFontSmall.X-1)+(MenuFontSmall.Width-Self.TextWidth), 0)/15",
+												"ease": "noease",
+												"destroy-on-complete": "no",
+												"loop": "no",
+												"ping-pong": "no",
+												"repeat-count": "1"
+											}
+										}
+									],
+									"sid": 287612695337487
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 791929133803947
+										},
+										{
+											"id": "has-tags",
+											"objectClass": "MenuMask",
+											"sid": 734824006350076,
+											"parameters": {
+												"tags": "\"right\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "tween-one-property",
+											"objectClass": "MenuMask",
+											"sid": 815474974757603,
+											"behaviorType": "Tween",
+											"parameters": {
+												"tags": "\"\"",
+												"property": "offsetOpacity",
+												"end-value": "100",
+												"time": "0.25",
+												"ease": "noease",
+												"destroy-on-complete": "no",
+												"loop": "no",
+												"ping-pong": "no",
+												"repeat-count": "1"
+											}
+										},
+										{
+											"id": "tween-one-property",
+											"objectClass": "MenuFont",
+											"sid": 305905957540922,
+											"behaviorType": "Tween",
+											"parameters": {
+												"tags": "\"right\"",
+												"property": "offsetX",
+												"end-value": "MenuFontSmall.X",
+												"time": "distance(MenuFontSmall.X, 0, (MenuFontSmall.X-1)+(MenuFontSmall.Width-Self.TextWidth), 0)/15",
+												"ease": "noease",
+												"destroy-on-complete": "no",
+												"loop": "no",
+												"ping-pong": "no",
+												"repeat-count": "1"
+											}
+										}
+									],
+									"sid": 757840857278645
+								}
+							]
 						}
 					]
 				},
@@ -5012,6 +5465,18 @@
 											"sid": 123771657779223
 										},
 										{
+											"id": "play",
+											"objectClass": "Audio",
+											"sid": 169824160582264,
+											"parameters": {
+												"audio-file": "menuopen",
+												"loop": "not-looping",
+												"volume": "log10(SETTING_volumeSound)*20",
+												"stereo-pan": "0",
+												"tag-optional": "\"\""
+											}
+										},
+										{
 											"id": "release-pointer-lock",
 											"objectClass": "Mouse",
 											"sid": 625694995945925
@@ -5032,6 +5497,15 @@
 											"parameters": {
 												"instance-variable": "playerSpeedVertical",
 												"value": "0"
+											}
+										},
+										{
+											"id": "set-animation",
+											"objectClass": "Switch",
+											"sid": 472145691720060,
+											"parameters": {
+												"animation": "\"on\"",
+												"from": "beginning"
 											}
 										},
 										{
@@ -5224,6 +5698,14 @@
 											"parameters": [
 												"\"Modal\""
 											]
+										},
+										{
+											"id": "set-text",
+											"objectClass": "QRCode",
+											"sid": 157127622044310,
+											"parameters": {
+												"text": "\"https://scum.dog/games/doom_tge/art?=\"&Trigger.id"
+											}
 										}
 									],
 									"sid": 778279454943972,
@@ -5252,7 +5734,70 @@
 													}
 												}
 											],
-											"sid": 644753038437562
+											"sid": 644753038437562,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-boolean-eventvar",
+															"objectClass": "System",
+															"sid": 797499880786668,
+															"parameters": {
+																"variable": "GAME_kiosk"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-visible",
+															"objectClass": "QRCode",
+															"sid": 805210145162772,
+															"parameters": {
+																"visibility": "visible"
+															}
+														},
+														{
+															"id": "set-visible",
+															"objectClass": "QRCodeBorder",
+															"sid": 254922792352319,
+															"parameters": {
+																"visibility": "visible"
+															}
+														}
+													],
+													"sid": 596348456340444
+												}
+											]
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "else",
+													"objectClass": "System",
+													"sid": 519333917947731
+												}
+											],
+											"actions": [
+												{
+													"id": "set-visible",
+													"objectClass": "QRCode",
+													"sid": 949228135972070,
+													"parameters": {
+														"visibility": "invisible"
+													}
+												},
+												{
+													"id": "set-visible",
+													"objectClass": "QRCodeBorder",
+													"sid": 781933871573501,
+													"parameters": {
+														"visibility": "invisible"
+													}
+												}
+											],
+											"sid": 355054454973183
 										},
 										{
 											"eventType": "block",
@@ -5375,7 +5920,16 @@
 													}
 												}
 											],
-											"actions": [],
+											"actions": [
+												{
+													"id": "set-x",
+													"objectClass": "MenuFont",
+													"sid": 855440258086555,
+													"parameters": {
+														"x": "16"
+													}
+												}
+											],
 											"sid": 374370660789024,
 											"children": [
 												{
@@ -5394,13 +5948,60 @@
 														{
 															"id": "set-text",
 															"objectClass": "MenuFont",
-															"sid": 965505853276735,
+															"sid": 889725088221871,
 															"parameters": {
-																"text": "Trigger.title&\" #\""
+																"text": "Trigger.title"
 															}
 														}
 													],
-													"sid": 762678789141264
+													"sid": 762678789141264,
+													"children": [
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "compare-boolean-eventvar",
+																	"objectClass": "System",
+																	"sid": 442595801624489,
+																	"parameters": {
+																		"variable": "GAME_kiosk"
+																	}
+																}
+															],
+															"actions": [
+																{
+																	"id": "set-x",
+																	"objectClass": "MenuFont",
+																	"sid": 788223237915458,
+																	"parameters": {
+																		"x": "60"
+																	}
+																}
+															],
+															"sid": 277964330861081
+														},
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "else",
+																	"objectClass": "System",
+																	"sid": 580096565378545
+																}
+															],
+															"actions": [
+																{
+																	"id": "append-text",
+																	"objectClass": "MenuFont",
+																	"sid": 650537943285011,
+																	"parameters": {
+																		"text": "\" #\""
+																	}
+																}
+															],
+															"sid": 575743560867834
+														}
+													]
 												},
 												{
 													"eventType": "block",
@@ -5455,7 +6056,24 @@
 													}
 												}
 											],
-											"actions": [],
+											"actions": [
+												{
+													"id": "set-x",
+													"objectClass": "MenuFontSmall",
+													"sid": 675005215070084,
+													"parameters": {
+														"x": "16"
+													}
+												},
+												{
+													"id": "set-width",
+													"objectClass": "MenuFontSmall",
+													"sid": 167022728133191,
+													"parameters": {
+														"width": "288"
+													}
+												}
+											],
 											"sid": 191563764974793,
 											"children": [
 												{
@@ -5480,7 +6098,41 @@
 															}
 														}
 													],
-													"sid": 273349349768950
+													"sid": 273349349768950,
+													"children": [
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "compare-boolean-eventvar",
+																	"objectClass": "System",
+																	"sid": 824308691717258,
+																	"parameters": {
+																		"variable": "GAME_kiosk"
+																	}
+																}
+															],
+															"actions": [
+																{
+																	"id": "set-x",
+																	"objectClass": "MenuFontSmall",
+																	"sid": 508977420807783,
+																	"parameters": {
+																		"x": "60"
+																	}
+																},
+																{
+																	"id": "set-width",
+																	"objectClass": "MenuFontSmall",
+																	"sid": 774636856921271,
+																	"parameters": {
+																		"width": "244"
+																	}
+																}
+															],
+															"sid": 952129416841141
+														}
+													]
 												},
 												{
 													"eventType": "block",
@@ -5502,6 +6154,137 @@
 														}
 													],
 													"sid": 244068214208985
+												},
+												{
+													"eventType": "block",
+													"conditions": [],
+													"actions": [
+														{
+															"id": "stop-all-tweens",
+															"objectClass": "MenuFont",
+															"sid": 442948708627800,
+															"behaviorType": "Tween"
+														},
+														{
+															"id": "stop-all-tweens",
+															"objectClass": "MenuMask",
+															"sid": 896712851122478,
+															"behaviorType": "Tween"
+														},
+														{
+															"id": "set-opacity",
+															"objectClass": "MenuMask",
+															"sid": 122616981746285,
+															"parameters": {
+																"opacity": "0"
+															}
+														}
+													],
+													"sid": 389085579617430,
+													"children": [
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "compare-boolean-eventvar",
+																	"objectClass": "System",
+																	"sid": 489773767361400,
+																	"parameters": {
+																		"variable": "GAME_modalArt"
+																	}
+																}
+															],
+															"actions": [
+																{
+																	"id": "start-timer",
+																	"objectClass": "ModalArt",
+																	"sid": 509631904185277,
+																	"behaviorType": "Timer",
+																	"parameters": {
+																		"duration": "1.0",
+																		"type": "once",
+																		"tag": "\"left\""
+																	}
+																}
+															],
+															"sid": 912513621414352,
+															"children": [
+																{
+																	"eventType": "block",
+																	"conditions": [
+																		{
+																			"id": "compare-boolean-eventvar",
+																			"objectClass": "System",
+																			"sid": 366494838876605,
+																			"parameters": {
+																				"variable": "GAME_kiosk"
+																			}
+																		},
+																		{
+																			"id": "has-tags",
+																			"objectClass": "MenuMask",
+																			"sid": 959889014567644,
+																			"parameters": {
+																				"tags": "\"left\""
+																			}
+																		}
+																	],
+																	"actions": [
+																		{
+																			"id": "set-x",
+																			"objectClass": "MenuMask",
+																			"sid": 745456088221398,
+																			"parameters": {
+																				"x": "0"
+																			}
+																		}
+																	],
+																	"sid": 988644367187980
+																},
+																{
+																	"eventType": "block",
+																	"conditions": [
+																		{
+																			"id": "has-tags",
+																			"objectClass": "MenuFont",
+																			"sid": 920041962701711,
+																			"parameters": {
+																				"tags": "\"title\""
+																			}
+																		},
+																		{
+																			"id": "compare-width",
+																			"objectClass": "MenuFontSmall",
+																			"sid": 785374765241718,
+																			"parameters": {
+																				"comparison": 2,
+																				"width": "MenuFont.TextWidth"
+																			}
+																		},
+																		{
+																			"id": "has-tags",
+																			"objectClass": "MenuMask",
+																			"sid": 993228978736275,
+																			"parameters": {
+																				"tags": "\"right\""
+																			}
+																		}
+																	],
+																	"actions": [
+																		{
+																			"id": "set-opacity",
+																			"objectClass": "MenuMask",
+																			"sid": 115827333812673,
+																			"parameters": {
+																				"opacity": "100"
+																			}
+																		}
+																	],
+																	"sid": 622260840210340
+																}
+															]
+														}
+													]
 												}
 											]
 										},
@@ -5527,14 +6310,6 @@
 											],
 											"actions": [
 												{
-													"id": "set-width",
-													"objectClass": "Link",
-													"sid": 821165721876859,
-													"parameters": {
-														"width": "MenuFont.TextWidth"
-													}
-												},
-												{
 													"id": "set-instvar-value",
 													"objectClass": "Link",
 													"sid": 605468741730915,
@@ -5544,7 +6319,55 @@
 													}
 												}
 											],
-											"sid": 597207081801570
+											"sid": 597207081801570,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-width",
+															"objectClass": "MenuFontSmall",
+															"sid": 499196345727848,
+															"parameters": {
+																"comparison": 4,
+																"width": "MenuFont.TextWidth"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-width",
+															"objectClass": "Link",
+															"sid": 327579765882330,
+															"parameters": {
+																"width": "MenuFont.TextWidth"
+															}
+														}
+													],
+													"sid": 328717637786909
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "else",
+															"objectClass": "System",
+															"sid": 751643580664483
+														}
+													],
+													"actions": [
+														{
+															"id": "set-width",
+															"objectClass": "Link",
+															"sid": 890199259444682,
+															"parameters": {
+																"width": "MenuFontSmall.Width"
+															}
+														}
+													],
+													"sid": 566672499884741
+												}
+											]
 										},
 										{
 											"eventType": "block",
@@ -6838,7 +7661,7 @@
 							"objectClass": "System",
 							"sid": 620296394732945,
 							"parameters": {
-								"variable": "BLEED_ready"
+								"variable": "BLEED_standby"
 							}
 						},
 						{
@@ -6908,12 +7731,12 @@
 							}
 						},
 						{
-							"id": "pause-resume-all-timers",
+							"id": "stop-timer",
 							"objectClass": "Doomguy",
-							"sid": 758945628536066,
+							"sid": 189937709717621,
 							"behaviorType": "Timer",
 							"parameters": {
-								"state": "paused"
+								"tag": "\"inactivity\""
 							}
 						}
 					],
@@ -7242,6 +8065,15 @@
 					}
 				},
 				{
+					"id": "stop-timer",
+					"objectClass": "Doomguy",
+					"sid": 486270321917551,
+					"behaviorType": "Timer",
+					"parameters": {
+						"tag": "\"inactivity\""
+					}
+				},
+				{
 					"callFunction": "transition",
 					"sid": 951082657843625,
 					"parameters": [
@@ -7265,6 +8097,51 @@
 			"sid": 836112138465216
 		},
 		{
+			"eventType": "comment",
+			"text": "Mouse look can return bogus values when switching between pointer lock states, this invalidates it"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-pointer-locked",
+					"objectClass": "Mouse",
+					"sid": 981402781680322
+				},
+				{
+					"id": "on-pointer-unlocked",
+					"objectClass": "Mouse",
+					"sid": 714977923498405
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 257210594877113,
+					"parameters": {
+						"variable": "GAME_mouseLook",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 746624354542638,
+					"parameters": {
+						"variable": "GAME_mouseLock",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 248742366224461,
+			"isOrBlock": true
+		},
+		{
+			"eventType": "comment",
+			"text": "Mouse look"
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -7275,50 +8152,106 @@
 				{
 					"id": "has-pointer-lock",
 					"objectClass": "Mouse",
-					"sid": 918660682356812
-				},
-				{
-					"id": "compare-eventvar",
-					"objectClass": "System",
-					"sid": 404680810526254,
-					"parameters": {
-						"variable": "MENU_menu",
-						"comparison": 0,
-						"value": "\"\""
-					}
-				},
-				{
-					"id": "compare-boolean-eventvar",
-					"objectClass": "System",
-					"sid": 346881167645682,
-					"parameters": {
-						"variable": "BLEED_ready"
-					}
-				},
-				{
-					"id": "compare-boolean-eventvar",
-					"objectClass": "System",
-					"sid": 989464060268182,
-					"parameters": {
-						"variable": "MENU_paused"
-					},
-					"isInverted": true
+					"sid": 924830423189992
 				}
 			],
-			"actions": [
+			"actions": [],
+			"sid": 410074131779764,
+			"children": [
 				{
-					"id": "rotate-camera",
-					"objectClass": "3DCamera",
-					"sid": 136245916182270,
-					"parameters": {
-						"rotate-x": "Mouse.MovementX / 10",
-						"rotate-y": "0",
-						"min-polar-angle": "85",
-						"max-polar-angle": "85"
-					}
+					"eventType": "comment",
+					"text": "If not in a menu, paused, or in a transition, detect mouse movement"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 652091056992731,
+							"parameters": {
+								"variable": "MENU_menu",
+								"comparison": 0,
+								"value": "\"\""
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 562813329961270,
+							"parameters": {
+								"variable": "MENU_paused"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 699405155184854,
+							"parameters": {
+								"variable": "BLEED_standby"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 345701094119353,
+							"parameters": {
+								"variable": "GAME_mouseLock"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 558373844032255,
+							"parameters": {
+								"variable": "GAME_mouseLook",
+								"value": "Mouse.MovementX"
+							}
+						},
+						{
+							"id": "rotate-camera",
+							"objectClass": "3DCamera",
+							"sid": 176222125534619,
+							"parameters": {
+								"rotate-x": "GAME_mouseLook/10",
+								"rotate-y": "0",
+								"min-polar-angle": "85",
+								"max-polar-angle": "85"
+							}
+						}
+					],
+					"sid": 674066149221495
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 245075732259176,
+							"parameters": {
+								"variable": "GAME_mouseLock"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 125926869197203,
+							"parameters": {
+								"variable": "GAME_mouseLock",
+								"value": "false"
+							}
+						}
+					],
+					"sid": 235072708969850
 				}
-			],
-			"sid": 410074131779764
+			]
 		},
 		{
 			"eventType": "block",

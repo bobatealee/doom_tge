@@ -5,7 +5,13 @@
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
-	"behaviorTypes": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Timer",
+			"name": "Timer",
+			"sid": 153085719084785
+		}
+	],
 	"effectTypes": [],
 	"animations": {
 		"items": [
@@ -20,7 +26,7 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 259119,
+						"imageSpriteId": 7779399,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
@@ -90,7 +96,7 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 7089229,
+						"imageSpriteId": 1763197,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
@@ -104,7 +110,7 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 1763197,
+						"imageSpriteId": 7089229,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""

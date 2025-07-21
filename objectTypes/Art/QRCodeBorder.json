@@ -1,7 +1,7 @@
 {
-	"name": "PlayerPickup",
+	"name": "QRCodeBorder",
 	"plugin-id": "Sprite",
-	"sid": 604531871704601,
+	"sid": 717134783896875,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
@@ -12,21 +12,21 @@
 			{
 				"frames": [
 					{
-						"width": 1,
-						"height": 1,
-						"originX": 0.5,
-						"originY": 0.5,
+						"width": 45,
+						"height": 45,
+						"originX": 0.13333333333333333,
+						"originY": 0.13333333333333333,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 3048470,
+						"imageSpriteId": 2143310,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 194807973509878,
+				"sid": 908245583834635,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

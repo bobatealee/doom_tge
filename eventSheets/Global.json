@@ -2,8 +2,12 @@
 	"name": "Global",
 	"events": [
 		{
+			"eventType": "comment",
+			"text": "Bleed"
+		},
+		{
 			"eventType": "variable",
-			"name": "BLEED_ready",
+			"name": "BLEED_standby",
 			"type": "boolean",
 			"initialValue": "true",
 			"comment": "",
@@ -117,6 +121,16 @@
 		},
 		{
 			"eventType": "variable",
+			"name": "GAME_loaded",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 159210669455496
+		},
+		{
+			"eventType": "variable",
 			"name": "NGIO_init",
 			"type": "boolean",
 			"initialValue": "false",
@@ -134,6 +148,127 @@
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 815933123732572
+		},
+		{
+			"eventType": "comment",
+			"text": "Kiosk Mode"
+		},
+		{
+			"eventType": "variable",
+			"name": "GAME_kiosk",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 631337107565236
+		},
+		{
+			"eventType": "comment",
+			"text": "Inactivity"
+		},
+		{
+			"eventType": "variable",
+			"name": "GAME_inactivity",
+			"type": "number",
+			"initialValue": "300",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 300259281988218
+		},
+		{
+			"eventType": "variable",
+			"name": "GAME_inactivityResults",
+			"type": "number",
+			"initialValue": "30",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 638425383908199
+		},
+		{
+			"eventType": "comment",
+			"text": "Set up kiosk mode"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 927074835216433,
+					"parameters": {
+						"variable": "GAME_kiosk"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 744923478531370,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 468631600241744
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 852897492151535,
+							"parameters": {
+								"variable": "GAME_inactivity",
+								"value": "60"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 119874430807929,
+							"parameters": {
+								"variable": "GAME_inactivityResults",
+								"value": "10"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 930448513274621,
+							"parameters": {
+								"variable": "GAME_loaded",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 681683362442756
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-any-click",
+							"objectClass": "Mouse",
+							"sid": 974339581459323
+						}
+					],
+					"actions": [
+						{
+							"id": "request-fullscreen",
+							"objectClass": "Browser",
+							"sid": 283157753609108,
+							"parameters": {
+								"mode": "stretch-letterbox-scale",
+								"navigation-ui": "hide"
+							}
+						}
+					],
+					"sid": 726890112393344
+				}
+			]
 		},
 		{
 			"eventType": "comment",
@@ -156,6 +291,15 @@
 					"sid": 544988376318090,
 					"parameters": {
 						"variable": "GAME_mobile"
+					},
+					"isInverted": true
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 640702808360169,
+					"parameters": {
+						"variable": "GAME_kiosk"
 					},
 					"isInverted": true
 				}
@@ -339,7 +483,7 @@
 							"objectClass": "System",
 							"sid": 206956670889719,
 							"parameters": {
-								"variable": "BLEED_ready"
+								"variable": "BLEED_standby"
 							}
 						}
 					],
@@ -349,7 +493,7 @@
 							"objectClass": "System",
 							"sid": 964568043335307,
 							"parameters": {
-								"variable": "BLEED_ready",
+								"variable": "BLEED_standby",
 								"value": "false"
 							}
 						},
@@ -860,7 +1004,7 @@
 									"objectClass": "System",
 									"sid": 191160128276881,
 									"parameters": {
-										"variable": "BLEED_ready",
+										"variable": "BLEED_standby",
 										"value": "true"
 									}
 								}
@@ -912,7 +1056,45 @@
 					"children": [
 						{
 							"eventType": "comment",
-							"text": "Grab and load save data"
+							"text": "Kiosk Mode check"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 279297156837834,
+									"parameters": {
+										"variable": "GAME_kiosk"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "request-fullscreen",
+									"objectClass": "Browser",
+									"sid": 731471298252513,
+									"parameters": {
+										"mode": "stretch-letterbox-scale",
+										"navigation-ui": "hide"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 615861423858417,
+									"parameters": {
+										"variable": "SETTING_fullscreen",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 406272192411305
+						},
+						{
+							"eventType": "comment",
+							"text": "Grab and load save data on desktop"
 						},
 						{
 							"eventType": "block",
@@ -920,19 +1102,19 @@
 								{
 									"id": "desktop-features-supported",
 									"objectClass": "FileSystem",
-									"sid": 984507328984960
+									"sid": 819715451601328
 								},
 								{
 									"id": "is-supported",
 									"objectClass": "FileSystem",
-									"sid": 389388469996906
+									"sid": 920799362752133
 								}
 							],
 							"actions": [
 								{
 									"id": "read-text-file",
 									"objectClass": "FileSystem",
-									"sid": 839054900001688,
+									"sid": 321285899792696,
 									"parameters": {
 										"picker-tag": "\"<local-app-data>\"",
 										"folder-path": "\"SCUMDOG/doom_tge/saveData1.txt\"",
@@ -940,7 +1122,11 @@
 									}
 								}
 							],
-							"sid": 163946342895667
+							"sid": 576606649833922
+						},
+						{
+							"eventType": "comment",
+							"text": "Grab and load save data on web"
 						},
 						{
 							"eventType": "block",
@@ -948,20 +1134,20 @@
 								{
 									"id": "else",
 									"objectClass": "System",
-									"sid": 131182844193443
+									"sid": 897391865192216
 								}
 							],
 							"actions": [
 								{
 									"id": "check-item-exists",
 									"objectClass": "LocalStorage",
-									"sid": 201867411874263,
+									"sid": 648921025536840,
 									"parameters": {
 										"key": "\"saveData1\""
 									}
 								}
 							],
-							"sid": 939922895383023
+							"sid": 875127844759495
 						},
 						{
 							"eventType": "comment",
@@ -1252,7 +1438,68 @@
 				},
 				{
 					"eventType": "comment",
-					"text": "Save data exists, load it"
+					"text": "Desktop save data exists"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-file-operation-complete",
+							"objectClass": "FileSystem",
+							"sid": 864240603122425,
+							"parameters": {
+								"file-tag": "\"load\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "load",
+							"objectClass": "SaveFile",
+							"sid": 584476931445603,
+							"parameters": {
+								"json": "Browser.ExecJS(\"atob('\"&FileSystem.FileText&\"')\")"
+							}
+						},
+						{
+							"callFunction": "load",
+							"sid": 449013952442183
+						}
+					],
+					"sid": 350589509741508
+				},
+				{
+					"eventType": "comment",
+					"text": "Desktop save data does not exist"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-file-operation-error",
+							"objectClass": "FileSystem",
+							"sid": 295382391093610,
+							"parameters": {
+								"file-tag": "\"load\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 944638353402636,
+							"parameters": {
+								"variable": "GAME_loaded",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 910224615908252
+				},
+				{
+					"eventType": "comment",
+					"text": "Web save data exists"
 				},
 				{
 					"eventType": "block",
@@ -1283,32 +1530,37 @@
 					"sid": 558550667383501
 				},
 				{
+					"eventType": "comment",
+					"text": "Web save data does not exist"
+				},
+				{
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "on-file-operation-complete",
-							"objectClass": "FileSystem",
-							"sid": 668458494475909,
+							"id": "on-item-missing",
+							"objectClass": "LocalStorage",
+							"sid": 737818623220528,
 							"parameters": {
-								"file-tag": "\"load\""
+								"key": "\"saveData1\""
 							}
 						}
 					],
 					"actions": [
 						{
-							"id": "load",
-							"objectClass": "SaveFile",
-							"sid": 920258832638039,
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 200430769805887,
 							"parameters": {
-								"json": "Browser.ExecJS(\"atob('\"&FileSystem.FileText&\"')\")"
+								"variable": "GAME_loaded",
+								"value": "true"
 							}
-						},
-						{
-							"callFunction": "load",
-							"sid": 357904269730941
 						}
 					],
-					"sid": 778608871346343
+					"sid": 696855132148861
+				},
+				{
+					"eventType": "comment",
+					"text": "Load the data"
 				},
 				{
 					"functionName": "load",
@@ -1320,7 +1572,17 @@
 					"functionParameters": [],
 					"eventType": "function-block",
 					"conditions": [],
-					"actions": [],
+					"actions": [
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 136313928558680,
+							"parameters": {
+								"variable": "GAME_loaded",
+								"value": "true"
+							}
+						}
+					],
 					"sid": 636239903648137,
 					"children": [
 						{

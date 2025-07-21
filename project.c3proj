@@ -1,6 +1,6 @@
 {
 	"projectFormatVersion": 1,
-	"savedWithRelease": 42402,
+	"savedWithRelease": 44800,
 	"name": "DOOM The Gallery Experience",
 	"runtime": "c3",
 	"useWorker": "dom",
@@ -156,6 +156,13 @@
 			"bundled": false
 		},
 		{
+			"type": "plugin",
+			"id": "qrcode",
+			"name": "QR code",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
 			"type": "behavior",
 			"id": "DragnDrop",
 			"name": "Drag & Drop",
@@ -227,6 +234,13 @@
 		},
 		{
 			"type": "effect",
+			"id": "replacecolor",
+			"name": "Replace color",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "effect",
 			"id": "warpobject",
 			"name": "Warp object",
 			"author": "Scirra",
@@ -255,7 +269,6 @@
 					"DoorSmall",
 					"Space",
 					"WallpaperSecret",
-					"Panel",
 					"DoorExit",
 					"Exit",
 					"ElevatorFloor",
@@ -266,7 +279,8 @@
 					"Sign2",
 					"Sign3",
 					"Sign4",
-					"Sign5"
+					"Sign5",
+					"Switch"
 				],
 				"subfolders": [],
 				"name": "Textures"
@@ -350,7 +364,8 @@
 					"Slider",
 					"SliderBar",
 					"Medal",
-					"BleedLine"
+					"BleedLine",
+					"MenuMask"
 				],
 				"subfolders": [],
 				"name": "Menu"
@@ -358,7 +373,9 @@
 			{
 				"items": [
 					"Me",
-					"ModalArt"
+					"ModalArt",
+					"QRCode",
+					"QRCodeBorder"
 				],
 				"subfolders": [
 					{
@@ -483,6 +500,7 @@
 			}
 		]
 	},
+	"functionsName": "Functions",
 	"autosaveData": null,
 	"containers": [],
 	"families": {
@@ -845,7 +863,7 @@
 	},
 	"properties": {
 		"description": "DOOM: The Gallery Experience was created as an art piece designed to parody the wonderfully pretentious world of gallery openings.",
-		"version": "1.2.5",
+		"version": "1.3.0",
 		"autoIncrementVersion": false,
 		"author": "SCUM DOG GAMES",
 		"authorEmail": "contact@scum.dog",

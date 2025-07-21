@@ -36,6 +36,26 @@
 			"sid": 603530685506523
 		},
 		{
+			"eventType": "variable",
+			"name": "GAME_mouseLook",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 507173216150369
+		},
+		{
+			"eventType": "variable",
+			"name": "GAME_mouseLock",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 635620958029323
+		},
+		{
 			"eventType": "comment",
 			"text": "Menu"
 		},
@@ -242,436 +262,156 @@
 			"includeSheet": "Global"
 		},
 		{
-			"eventType": "comment",
-			"text": "Exclusive to the menu"
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "compare-two-values",
-					"objectClass": "System",
-					"sid": 836950711406655,
-					"parameters": {
-						"first-value": "LayoutName",
-						"comparison": 0,
-						"second-value": "\"Menu\""
-					}
-				}
-			],
-			"actions": [],
-			"sid": 279576580918985,
+			"eventType": "group",
+			"disabled": false,
+			"title": "Main Menu",
+			"description": "",
+			"isActiveOnStart": true,
 			"children": [
 				{
 					"eventType": "comment",
-					"text": "Initialization"
+					"text": "Exclusive main menu logic"
 				},
 				{
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "on-start-of-layout",
+							"id": "compare-two-values",
 							"objectClass": "System",
-							"sid": 269286137295562
+							"sid": 702501972254589,
+							"parameters": {
+								"first-value": "LayoutName",
+								"comparison": 0,
+								"second-value": "\"Menu\""
+							}
 						}
 					],
-					"actions": [
-						{
-							"id": "look-parallel-to-layout",
-							"objectClass": "3DCamera",
-							"sid": 533892688946287,
-							"parameters": {
-								"cam-x": "160",
-								"cam-y": "160",
-								"cam-z": "16",
-								"look-angle": "0"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 859086788598643,
-							"parameters": {
-								"variable": "MENU_menu",
-								"value": "\"Main\""
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 924222131708475,
-							"parameters": {
-								"variable": "MENU_selected",
-								"value": "0"
-							}
-						},
-						{
-							"id": "set-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 775006097116034,
-							"parameters": {
-								"variable": "GAME_canLink",
-								"value": "true"
-							}
-						},
-						{
-							"id": "stop-animation",
-							"objectClass": "Medal",
-							"sid": 531998111877284
-						}
-					],
-					"sid": 153878180751575,
+					"actions": [],
+					"sid": 883886415276601,
 					"children": [
 						{
 							"eventType": "comment",
-							"text": "Game is mobile, initialize mobile controls"
+							"text": "Initialization"
 						},
 						{
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "is-on-mobile",
-									"objectClass": "PlatformInfo",
-									"sid": 593494154698060
+									"id": "on-start-of-layout",
+									"objectClass": "System",
+									"sid": 134600945883562
 								}
 							],
 							"actions": [
+								{
+									"id": "look-parallel-to-layout",
+									"objectClass": "3DCamera",
+									"sid": 988655053210579,
+									"parameters": {
+										"cam-x": "160",
+										"cam-y": "160",
+										"cam-z": "16",
+										"look-angle": "0"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 867220875858785,
+									"parameters": {
+										"variable": "MENU_menu",
+										"value": "\"Main\""
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 769646935914815,
+									"parameters": {
+										"variable": "MENU_selected",
+										"value": "0"
+									}
+								},
 								{
 									"id": "set-boolean-eventvar",
 									"objectClass": "System",
-									"sid": 711825814262039,
+									"sid": 944249398749544,
 									"parameters": {
-										"variable": "GAME_mobile",
+										"variable": "GAME_canLink",
 										"value": "true"
 									}
-								}
-							],
-							"sid": 448092164759569
-						},
-						{
-							"eventType": "comment",
-							"text": "Game is not standalone, destroy the exit button"
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "compare-instance-variable",
-									"objectClass": "MenuFont",
-									"sid": 245888842099189,
-									"parameters": {
-										"instance-variable": "id",
-										"comparison": 0,
-										"value": "4"
-									}
 								},
 								{
-									"id": "is-on-layer",
-									"objectClass": "MenuFont",
-									"sid": 399962720215053,
+									"id": "stop-animation",
+									"objectClass": "Medal",
+									"sid": 843610605230417
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 687135217455740,
 									"parameters": {
-										"layer": "\"Main\""
+										"variable": "GAME_modalArt",
+										"value": "false"
 									}
 								}
 							],
-							"actions": [],
-							"sid": 429940923840477,
+							"sid": 913051516380710,
 							"children": [
+								{
+									"eventType": "comment",
+									"text": "Game is mobile, initialize mobile controls"
+								},
 								{
 									"eventType": "block",
 									"conditions": [
 										{
-											"id": "is-windows-webview2-export",
+											"id": "is-on-mobile",
 											"objectClass": "PlatformInfo",
-											"sid": 870818555078625,
-											"isInverted": true
-										},
-										{
-											"id": "is-linux-cef-export",
-											"objectClass": "PlatformInfo",
-											"sid": 170409637348981,
-											"isInverted": true
+											"sid": 739760457076466
 										}
 									],
 									"actions": [
 										{
-											"id": "destroy",
+											"id": "set-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 707656493915862,
+											"parameters": {
+												"variable": "GAME_mobile",
+												"value": "true"
+											}
+										}
+									],
+									"sid": 144988901165763
+								},
+								{
+									"eventType": "comment",
+									"text": "Game is not standalone, destroy the exit button"
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
 											"objectClass": "MenuFont",
-											"sid": 419098735336557
-										}
-									],
-									"sid": 525069519356562
-								}
-							]
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "compare-boolean-eventvar",
-									"objectClass": "System",
-									"sid": 824201744434630,
-									"parameters": {
-										"variable": "SETTING_doomMusic"
-									},
-									"isInverted": true
-								}
-							],
-							"actions": [
-								{
-									"id": "play",
-									"objectClass": "Audio",
-									"sid": 671813749106630,
-									"parameters": {
-										"audio-file": "vivaldi",
-										"loop": "looping",
-										"volume": "(log10(SETTING_volumeMusic)*20)",
-										"stereo-pan": "0",
-										"tag-optional": "\"music\""
-									}
-								}
-							],
-							"sid": 229817647177295
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "else",
-									"objectClass": "System",
-									"sid": 538935163156587
-								}
-							],
-							"actions": [
-								{
-									"id": "play",
-									"objectClass": "Audio",
-									"sid": 699266915183604,
-									"parameters": {
-										"audio-file": "intro",
-										"loop": "not-looping",
-										"volume": "(log10(SETTING_volumeMusic)*20)",
-										"stereo-pan": "0",
-										"tag-optional": "\"music doom\""
-									}
-								}
-							],
-							"sid": 605747053526521
-						}
-					]
-				},
-				{
-					"eventType": "comment",
-					"text": "Main menu panorama"
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "every-tick",
-							"objectClass": "System",
-							"sid": 163976656611256
-						},
-						{
-							"id": "compare-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 256289978366673,
-							"parameters": {
-								"variable": "BLEED_freeze"
-							},
-							"isInverted": true
-						}
-					],
-					"actions": [
-						{
-							"id": "rotate-camera",
-							"objectClass": "3DCamera",
-							"sid": 303484401841633,
-							"parameters": {
-								"rotate-x": "dt*4",
-								"rotate-y": "Logo.Sine.Value",
-								"min-polar-angle": "0",
-								"max-polar-angle": "180"
-							}
-						},
-						{
-							"id": "set-image-offset-x",
-							"objectClass": "Sky",
-							"sid": 356055337454625,
-							"parameters": {
-								"offset-x": "Self.ImageOffsetX + dt*3"
-							}
-						},
-						{
-							"id": "set-image-offset-y",
-							"objectClass": "Sky",
-							"sid": 658826618012417,
-							"parameters": {
-								"offset-y": "Self.ImageOffsetY + dt*3"
-							}
-						},
-						{
-							"id": "set-angle-toward-position",
-							"objectClass": "Billboard",
-							"sid": 420255359805221,
-							"parameters": {
-								"x": "160",
-								"y": "160"
-							}
-						}
-					],
-					"sid": 656183370511778
-				},
-				{
-					"eventType": "comment",
-					"text": "Erase progress"
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "key-is-down",
-							"objectClass": "Keyboard",
-							"sid": 953917555947170,
-							"parameters": {
-								"key": 46
-							}
-						},
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 972848796534948,
-							"parameters": {
-								"variable": "MENU_menu",
-								"comparison": 0,
-								"value": "\"Main\""
-							}
-						},
-						{
-							"id": "compare-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 938473527518326,
-							"parameters": {
-								"variable": "BLEED_ready"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "subtract-from-eventvar",
-							"objectClass": "System",
-							"sid": 856378981726857,
-							"parameters": {
-								"variable": "GAME_eraseTimer",
-								"value": "60*dt"
-							}
-						}
-					],
-					"sid": 648420053342944,
-					"children": [
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "has-tags",
-									"objectClass": "MenuFontSmall",
-									"sid": 878402378406480,
-									"parameters": {
-										"tags": "\"version\""
-									}
-								}
-							],
-							"actions": [],
-							"sid": 761297915066790,
-							"children": [
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "compare-eventvar",
-											"objectClass": "System",
-											"sid": 719080366416390,
+											"sid": 603598588252425,
 											"parameters": {
-												"variable": "GAME_eraseTimer",
-												"comparison": 4,
-												"value": "0"
-											}
-										}
-									],
-									"actions": [
-										{
-											"id": "set-text",
-											"objectClass": "MenuFontSmall",
-											"sid": 284352790076405,
-											"parameters": {
-												"text": "\"ERASING... \"&100-round((GAME_eraseTimer*100)/180)&\"%\""
-											}
-										}
-									],
-									"sid": 189744970175627
-								},
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "compare-eventvar",
-											"objectClass": "System",
-											"sid": 677055318140665,
-											"parameters": {
-												"variable": "GAME_eraseTimer",
-												"comparison": 3,
-												"value": "0"
+												"instance-variable": "id",
+												"comparison": 0,
+												"value": "4"
 											}
 										},
 										{
-											"id": "trigger-once-while-true",
-											"objectClass": "System",
-											"sid": 825452552850260
+											"id": "is-on-layer",
+											"objectClass": "MenuFont",
+											"sid": 893658590082456,
+											"parameters": {
+												"layer": "\"Main\""
+											}
 										}
 									],
-									"actions": [
-										{
-											"id": "play",
-											"objectClass": "Audio",
-											"sid": 519051745538374,
-											"parameters": {
-												"audio-file": "badtime",
-												"loop": "not-looping",
-												"volume": "log10(SETTING_volumeSound)*20",
-												"stereo-pan": "0",
-												"tag-optional": "\"\""
-											}
-										},
-										{
-											"id": "set-text",
-											"objectClass": "MenuFontSmall",
-											"sid": 861422970766996,
-											"parameters": {
-												"text": "\"V\"&projectversion"
-											}
-										},
-										{
-											"type": "comment",
-											"text": "Delete save file and clear local storage"
-										},
-										{
-											"id": "delete",
-											"objectClass": "FileSystem",
-											"sid": 110351559563423,
-											"parameters": {
-												"picker-tag": "\"<local-app-data>\"",
-												"folder-path": "\"SCUMDOG/doom_tge\"",
-												"recursive": true,
-												"file-tag": "\"\""
-											}
-										},
-										{
-											"id": "clear-storage",
-											"objectClass": "LocalStorage",
-											"sid": 599257456359531
-										}
-									],
-									"sid": 140891866759961,
+									"actions": [],
+									"sid": 892844744522110,
 									"children": [
 										{
 											"eventType": "block",
@@ -679,97 +419,322 @@
 												{
 													"id": "compare-boolean-eventvar",
 													"objectClass": "System",
-													"sid": 763008184294646,
+													"sid": 859326542781809,
 													"parameters": {
-														"variable": "NGIO_medals"
-													},
+														"variable": "GAME_kiosk"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "destroy",
+													"objectClass": "MenuFont",
+													"sid": 368776915992564
+												}
+											],
+											"sid": 762875295241743
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "else",
+													"objectClass": "System",
+													"sid": 532892175009546
+												},
+												{
+													"id": "is-windows-webview2-export",
+													"objectClass": "PlatformInfo",
+													"sid": 301346666853720,
+													"isInverted": true
+												},
+												{
+													"id": "is-linux-cef-export",
+													"objectClass": "PlatformInfo",
+													"sid": 744401089762824,
 													"isInverted": true
 												}
 											],
 											"actions": [
 												{
-													"id": "set-boolean-eventvar",
-													"objectClass": "System",
-													"sid": 511201638828288,
-													"parameters": {
-														"variable": "MEDAL_observations",
-														"value": "false"
-													}
-												},
+													"id": "destroy",
+													"objectClass": "MenuFont",
+													"sid": 754269595915895
+												}
+											],
+											"sid": 183661698865758
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 597318008910497,
+											"parameters": {
+												"variable": "SETTING_doomMusic"
+											},
+											"isInverted": true
+										}
+									],
+									"actions": [
+										{
+											"id": "play",
+											"objectClass": "Audio",
+											"sid": 115784754399819,
+											"parameters": {
+												"audio-file": "vivaldi",
+												"loop": "looping",
+												"volume": "(log10(SETTING_volumeMusic)*20)",
+												"stereo-pan": "0",
+												"tag-optional": "\"music\""
+											}
+										}
+									],
+									"sid": 797278130333543
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 966378272332585
+										}
+									],
+									"actions": [
+										{
+											"id": "play",
+											"objectClass": "Audio",
+											"sid": 956471408155681,
+											"parameters": {
+												"audio-file": "intro",
+												"loop": "not-looping",
+												"volume": "(log10(SETTING_volumeMusic)*20)",
+												"stereo-pan": "0",
+												"tag-optional": "\"music doom\""
+											}
+										}
+									],
+									"sid": 209340038774343
+								}
+							]
+						},
+						{
+							"eventType": "comment",
+							"text": "Panorama"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "every-tick",
+									"objectClass": "System",
+									"sid": 601852578752827
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 490554332348378,
+									"parameters": {
+										"variable": "BLEED_freeze"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "rotate-camera",
+									"objectClass": "3DCamera",
+									"sid": 254499201721648,
+									"parameters": {
+										"rotate-x": "dt*4",
+										"rotate-y": "dt*Logo.Sine.Value",
+										"min-polar-angle": "0",
+										"max-polar-angle": "180"
+									}
+								},
+								{
+									"id": "set-image-offset-x",
+									"objectClass": "Sky",
+									"sid": 880191589712370,
+									"parameters": {
+										"offset-x": "Self.ImageOffsetX + dt*3"
+									}
+								},
+								{
+									"id": "set-image-offset-y",
+									"objectClass": "Sky",
+									"sid": 483902501037201,
+									"parameters": {
+										"offset-y": "Self.ImageOffsetY + dt*3"
+									}
+								},
+								{
+									"id": "set-angle-toward-position",
+									"objectClass": "Billboard",
+									"sid": 119896352119527,
+									"parameters": {
+										"x": "160",
+										"y": "160"
+									}
+								}
+							],
+							"sid": 633368536264552
+						},
+						{
+							"eventType": "comment",
+							"text": "Erase progress"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "key-is-down",
+									"objectClass": "Keyboard",
+									"sid": 576443146274772,
+									"parameters": {
+										"key": 46
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 893899480662431,
+									"parameters": {
+										"variable": "MENU_menu",
+										"comparison": 0,
+										"value": "\"Main\""
+									}
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 109761904478605,
+									"parameters": {
+										"variable": "BLEED_standby"
+									}
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 574125593655943,
+									"parameters": {
+										"variable": "GAME_kiosk"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "subtract-from-eventvar",
+									"objectClass": "System",
+									"sid": 151793081921563,
+									"parameters": {
+										"variable": "GAME_eraseTimer",
+										"value": "60*dt"
+									}
+								}
+							],
+							"sid": 720145652424817,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "has-tags",
+											"objectClass": "MenuFontSmall",
+											"sid": 725076888872618,
+											"parameters": {
+												"tags": "\"version\""
+											}
+										}
+									],
+									"actions": [],
+									"sid": 118875467391578,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
 												{
-													"id": "set-boolean-eventvar",
+													"id": "compare-eventvar",
 													"objectClass": "System",
-													"sid": 826642492717183,
+													"sid": 669065834954353,
 													"parameters": {
-														"variable": "MEDAL_items",
-														"value": "false"
-													}
-												},
-												{
-													"id": "set-boolean-eventvar",
-													"objectClass": "System",
-													"sid": 502319737837991,
-													"parameters": {
-														"variable": "MEDAL_spending",
-														"value": "false"
-													}
-												},
-												{
-													"id": "set-boolean-eventvar",
-													"objectClass": "System",
-													"sid": 264966915449425,
-													"parameters": {
-														"variable": "MEDAL_secrets",
-														"value": "false"
-													}
-												},
-												{
-													"id": "set-boolean-eventvar",
-													"objectClass": "System",
-													"sid": 570902170120394,
-													"parameters": {
-														"variable": "MEDAL_time",
-														"value": "false"
-													}
-												},
-												{
-													"id": "set-boolean-eventvar",
-													"objectClass": "System",
-													"sid": 880223876496495,
-													"parameters": {
-														"variable": "MEDAL_drinks",
-														"value": "false"
-													}
-												},
-												{
-													"id": "set-boolean-eventvar",
-													"objectClass": "System",
-													"sid": 667671357323618,
-													"parameters": {
-														"variable": "MEDAL_thoughtful",
-														"value": "false"
-													}
-												},
-												{
-													"id": "set-boolean-eventvar",
-													"objectClass": "System",
-													"sid": 215783656968559,
-													"parameters": {
-														"variable": "MEDAL_doom",
-														"value": "false"
-													}
-												},
-												{
-													"id": "set-boolean-eventvar",
-													"objectClass": "System",
-													"sid": 720356280352732,
-													"parameters": {
-														"variable": "UNLOCK_doomMusic",
-														"value": "false"
+														"variable": "GAME_eraseTimer",
+														"comparison": 4,
+														"value": "0"
 													}
 												}
 											],
-											"sid": 679304439613152,
+											"actions": [
+												{
+													"id": "set-text",
+													"objectClass": "MenuFontSmall",
+													"sid": 385148327963342,
+													"parameters": {
+														"text": "\"ERASING... \"&100-round((GAME_eraseTimer*100)/180)&\"%\""
+													}
+												}
+											],
+											"sid": 636230984686607
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 933645871798276,
+													"parameters": {
+														"variable": "GAME_eraseTimer",
+														"comparison": 3,
+														"value": "0"
+													}
+												},
+												{
+													"id": "trigger-once-while-true",
+													"objectClass": "System",
+													"sid": 496213121324019
+												}
+											],
+											"actions": [
+												{
+													"id": "play",
+													"objectClass": "Audio",
+													"sid": 590312389513390,
+													"parameters": {
+														"audio-file": "badtime",
+														"loop": "not-looping",
+														"volume": "log10(SETTING_volumeSound)*20",
+														"stereo-pan": "0",
+														"tag-optional": "\"\""
+													}
+												},
+												{
+													"type": "comment",
+													"text": "Delete save file and clear local storage"
+												},
+												{
+													"id": "delete",
+													"objectClass": "FileSystem",
+													"sid": 320718216539715,
+													"parameters": {
+														"picker-tag": "\"<local-app-data>\"",
+														"folder-path": "\"SCUMDOG/doom_tge\"",
+														"recursive": true,
+														"file-tag": "\"\""
+													}
+												},
+												{
+													"id": "clear-storage",
+													"objectClass": "LocalStorage",
+													"sid": 922491415784896
+												}
+											],
+											"sid": 934155083208691,
 											"children": [
 												{
 													"eventType": "block",
@@ -777,146 +742,225 @@
 														{
 															"id": "compare-boolean-eventvar",
 															"objectClass": "System",
-															"sid": 839241529302597,
+															"sid": 435729012889095,
 															"parameters": {
-																"variable": "SETTING_doomMusic"
-															}
+																"variable": "NGIO_medals"
+															},
+															"isInverted": true
 														}
 													],
 													"actions": [
 														{
 															"id": "set-boolean-eventvar",
 															"objectClass": "System",
-															"sid": 870992298205809,
+															"sid": 913599127078600,
 															"parameters": {
-																"variable": "SETTING_doomMusic",
+																"variable": "MEDAL_observations",
 																"value": "false"
 															}
 														},
 														{
-															"id": "stop",
-															"objectClass": "Audio",
-															"sid": 620704936404867,
+															"id": "set-boolean-eventvar",
+															"objectClass": "System",
+															"sid": 418864046604102,
 															"parameters": {
-																"tag": "\"music\""
+																"variable": "MEDAL_items",
+																"value": "false"
 															}
 														},
 														{
-															"id": "play",
-															"objectClass": "Audio",
-															"sid": 305945517072143,
+															"id": "set-boolean-eventvar",
+															"objectClass": "System",
+															"sid": 439224046804506,
 															"parameters": {
-																"audio-file": "vivaldi",
-																"loop": "looping",
-																"volume": "(log10(SETTING_volumeMusic)*20)",
-																"stereo-pan": "0",
-																"tag-optional": "\"music\""
+																"variable": "MEDAL_spending",
+																"value": "false"
+															}
+														},
+														{
+															"id": "set-boolean-eventvar",
+															"objectClass": "System",
+															"sid": 441428986347876,
+															"parameters": {
+																"variable": "MEDAL_secrets",
+																"value": "false"
+															}
+														},
+														{
+															"id": "set-boolean-eventvar",
+															"objectClass": "System",
+															"sid": 127084296796019,
+															"parameters": {
+																"variable": "MEDAL_time",
+																"value": "false"
+															}
+														},
+														{
+															"id": "set-boolean-eventvar",
+															"objectClass": "System",
+															"sid": 489869131614017,
+															"parameters": {
+																"variable": "MEDAL_drinks",
+																"value": "false"
+															}
+														},
+														{
+															"id": "set-boolean-eventvar",
+															"objectClass": "System",
+															"sid": 896950036243469,
+															"parameters": {
+																"variable": "MEDAL_thoughtful",
+																"value": "false"
+															}
+														},
+														{
+															"id": "set-boolean-eventvar",
+															"objectClass": "System",
+															"sid": 932105564443558,
+															"parameters": {
+																"variable": "MEDAL_doom",
+																"value": "false"
+															}
+														},
+														{
+															"id": "set-boolean-eventvar",
+															"objectClass": "System",
+															"sid": 769428637641561,
+															"parameters": {
+																"variable": "UNLOCK_doomMusic",
+																"value": "false"
 															}
 														}
 													],
-													"sid": 326496904363067
+													"sid": 914290832496711,
+													"children": [
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "compare-boolean-eventvar",
+																	"objectClass": "System",
+																	"sid": 404911105970406,
+																	"parameters": {
+																		"variable": "SETTING_doomMusic"
+																	}
+																}
+															],
+															"actions": [
+																{
+																	"id": "set-boolean-eventvar",
+																	"objectClass": "System",
+																	"sid": 720862541192437,
+																	"parameters": {
+																		"variable": "SETTING_doomMusic",
+																		"value": "false"
+																	}
+																},
+																{
+																	"id": "stop",
+																	"objectClass": "Audio",
+																	"sid": 253733192925099,
+																	"parameters": {
+																		"tag": "\"music\""
+																	}
+																},
+																{
+																	"id": "play",
+																	"objectClass": "Audio",
+																	"sid": 167736689191560,
+																	"parameters": {
+																		"audio-file": "vivaldi",
+																		"loop": "looping",
+																		"volume": "(log10(SETTING_volumeMusic)*20)",
+																		"stereo-pan": "0",
+																		"tag-optional": "\"music\""
+																	}
+																}
+															],
+															"sid": 915395576724956
+														}
+													]
 												}
 											]
 										}
 									]
 								}
 							]
-						}
-					]
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "else",
-							"objectClass": "System",
-							"sid": 183791188142505
-						}
-					],
-					"actions": [
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 297035445840969,
-							"parameters": {
-								"variable": "GAME_eraseTimer",
-								"value": "180"
-							}
-						}
-					],
-					"sid": 379683784194070,
-					"children": [
+						},
 						{
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "has-tags",
-									"objectClass": "MenuFontSmall",
-									"sid": 364779860287047,
+									"id": "else",
+									"objectClass": "System",
+									"sid": 499973880700914
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 972798241925950,
 									"parameters": {
-										"tags": "\"version\""
+										"variable": "GAME_eraseTimer",
+										"value": "180"
+									}
+								}
+							],
+							"sid": 710203648805347
+						},
+						{
+							"eventType": "comment",
+							"text": "Intro music transition"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-ended",
+									"objectClass": "Audio",
+									"sid": 995868009096261,
+									"parameters": {
+										"tag": "\"doom\""
+									}
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 839638978322644,
+									"parameters": {
+										"variable": "SETTING_doomMusic"
+									}
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 146463603234519,
+									"parameters": {
+										"variable": "BLEED_standby"
 									}
 								}
 							],
 							"actions": [
 								{
-									"id": "set-text",
-									"objectClass": "MenuFontSmall",
-									"sid": 535143306214064,
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 640406510439922,
 									"parameters": {
-										"text": "\"V\"&projectversion"
+										"audio-file": "e1m5",
+										"loop": "looping",
+										"volume": "(log10(SETTING_volumeMusic)*20)",
+										"stereo-pan": "0",
+										"tag-optional": "\"music\""
 									}
 								}
 							],
-							"sid": 133871081205930
+							"sid": 113285917617157
 						}
 					]
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-ended",
-							"objectClass": "Audio",
-							"sid": 870525082337915,
-							"parameters": {
-								"tag": "\"doom\""
-							}
-						},
-						{
-							"id": "compare-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 225031887997564,
-							"parameters": {
-								"variable": "SETTING_doomMusic"
-							}
-						},
-						{
-							"id": "compare-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 964883404398330,
-							"parameters": {
-								"variable": "BLEED_ready"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "play",
-							"objectClass": "Audio",
-							"sid": 146322887011736,
-							"parameters": {
-								"audio-file": "e1m5",
-								"loop": "looping",
-								"volume": "(log10(SETTING_volumeMusic)*20)",
-								"stereo-pan": "0",
-								"tag-optional": "\"music\""
-							}
-						}
-					],
-					"sid": 458738100623510
 				}
-			]
+			],
+			"sid": 745092460827006
 		},
 		{
 			"eventType": "group",
@@ -925,6 +969,61 @@
 			"description": "",
 			"isActiveOnStart": true,
 			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "has-tags",
+							"objectClass": "MenuFontSmall",
+							"sid": 422713352451108,
+							"parameters": {
+								"tags": "\"version\""
+							}
+						}
+					],
+					"actions": [],
+					"sid": 528313181280587,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 887138414978473,
+									"parameters": {
+										"variable": "GAME_eraseTimer",
+										"comparison": 3,
+										"value": "0"
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 412877234076638,
+									"parameters": {
+										"variable": "GAME_eraseTimer",
+										"comparison": 2,
+										"value": "180"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "MenuFontSmall",
+									"sid": 249331055750873,
+									"parameters": {
+										"text": "\"V\"&projectversion"
+									}
+								}
+							],
+							"sid": 367493889452165,
+							"isOrBlock": true
+						}
+					]
+				},
 				{
 					"eventType": "comment",
 					"text": "Handle skull cursor, conditional stuff in menus"
@@ -992,51 +1091,11 @@
 										{
 											"id": "compare-eventvar",
 											"objectClass": "System",
-											"sid": 372609047196544,
+											"sid": 239827272815859,
 											"parameters": {
 												"variable": "MENU_menu",
 												"comparison": 0,
-												"value": "\"Options\""
-											}
-										},
-										{
-											"id": "compare-eventvar",
-											"objectClass": "System",
-											"sid": 172259834915168,
-											"parameters": {
-												"variable": "MENU_menu",
-												"comparison": 0,
-												"value": "\"OptionsAlt\""
-											}
-										},
-										{
-											"id": "compare-eventvar",
-											"objectClass": "System",
-											"sid": 318718740214703,
-											"parameters": {
-												"variable": "MENU_menu",
-												"comparison": 0,
-												"value": "\"Credits\""
-											}
-										},
-										{
-											"id": "compare-eventvar",
-											"objectClass": "System",
-											"sid": 573892953410362,
-											"parameters": {
-												"variable": "MENU_menu",
-												"comparison": 0,
-												"value": "\"Medals\""
-											}
-										},
-										{
-											"id": "compare-eventvar",
-											"objectClass": "System",
-											"sid": 139100900112178,
-											"parameters": {
-												"variable": "MENU_menu",
-												"comparison": 0,
-												"value": "\"Modal\""
+												"value": "\"Main\""
 											}
 										}
 									],
@@ -1044,14 +1103,13 @@
 										{
 											"id": "set-visible",
 											"objectClass": "Logo",
-											"sid": 776735675250957,
+											"sid": 446588728025009,
 											"parameters": {
-												"visibility": "invisible"
+												"visibility": "visible"
 											}
 										}
 									],
-									"sid": 545732413460288,
-									"isOrBlock": true
+									"sid": 545732413460288
 								},
 								{
 									"eventType": "block",
@@ -1066,9 +1124,9 @@
 										{
 											"id": "set-visible",
 											"objectClass": "Logo",
-											"sid": 900959601091809,
+											"sid": 480789517883745,
 											"parameters": {
-												"visibility": "visible"
+												"visibility": "invisible"
 											}
 										}
 									],
@@ -1095,322 +1153,6 @@
 					],
 					"sid": 488167329599411,
 					"children": [
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "compare-eventvar",
-									"objectClass": "System",
-									"sid": 615918540111142,
-									"parameters": {
-										"variable": "MENU_menu",
-										"comparison": 0,
-										"value": "\"Options\""
-									}
-								},
-								{
-									"id": "compare-eventvar",
-									"objectClass": "System",
-									"sid": 252859088065016,
-									"parameters": {
-										"variable": "MENU_menu",
-										"comparison": 0,
-										"value": "\"OptionsAlt\""
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-enabled",
-									"objectClass": "Slider",
-									"sid": 714214499846530,
-									"behaviorType": "DragDrop",
-									"parameters": {
-										"state": "enabled"
-									}
-								}
-							],
-							"sid": 908053798549217,
-							"children": [
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "is-on-layer",
-											"objectClass": "MenuFont",
-											"sid": 944344438319745,
-											"parameters": {
-												"layer": "\"Options\""
-											}
-										},
-										{
-											"id": "is-on-layer",
-											"objectClass": "MenuFont",
-											"sid": 229708959758282,
-											"parameters": {
-												"layer": "\"OptionsAlt\""
-											}
-										}
-									],
-									"actions": [],
-									"sid": 225375652090469,
-									"children": [
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "compare-instance-variable",
-													"objectClass": "MenuFont",
-													"sid": 973258956826811,
-													"parameters": {
-														"instance-variable": "id",
-														"comparison": 0,
-														"value": "2"
-													}
-												}
-											],
-											"actions": [],
-											"sid": 418754851920938,
-											"children": [
-												{
-													"eventType": "block",
-													"conditions": [
-														{
-															"id": "compare-boolean-eventvar",
-															"objectClass": "System",
-															"sid": 868593852551093,
-															"parameters": {
-																"variable": "SETTING_flashing"
-															}
-														}
-													],
-													"actions": [
-														{
-															"id": "set-text",
-															"objectClass": "MenuFont",
-															"sid": 335888623501522,
-															"parameters": {
-																"text": "\"pickup flash: on\""
-															}
-														}
-													],
-													"sid": 890793481822426
-												},
-												{
-													"eventType": "block",
-													"conditions": [
-														{
-															"id": "else",
-															"objectClass": "System",
-															"sid": 655594326054851
-														}
-													],
-													"actions": [
-														{
-															"id": "set-text",
-															"objectClass": "MenuFont",
-															"sid": 513299351870102,
-															"parameters": {
-																"text": "\"pickup flash: off\""
-															}
-														}
-													],
-													"sid": 541787843410058
-												}
-											]
-										},
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "compare-instance-variable",
-													"objectClass": "MenuFont",
-													"sid": 312890610973449,
-													"parameters": {
-														"instance-variable": "id",
-														"comparison": 0,
-														"value": "3"
-													}
-												}
-											],
-											"actions": [],
-											"sid": 627322714408625,
-											"children": [
-												{
-													"eventType": "block",
-													"conditions": [
-														{
-															"id": "compare-boolean-eventvar",
-															"objectClass": "System",
-															"sid": 662812524592159,
-															"parameters": {
-																"variable": "SETTING_fullscreen"
-															}
-														}
-													],
-													"actions": [
-														{
-															"id": "set-text",
-															"objectClass": "MenuFont",
-															"sid": 589044431962773,
-															"parameters": {
-																"text": "\"fullscreen: on\""
-															}
-														}
-													],
-													"sid": 136708928790467
-												},
-												{
-													"eventType": "block",
-													"conditions": [
-														{
-															"id": "else",
-															"objectClass": "System",
-															"sid": 835145538481150
-														}
-													],
-													"actions": [
-														{
-															"id": "set-text",
-															"objectClass": "MenuFont",
-															"sid": 902130810752186,
-															"parameters": {
-																"text": "\"fullscreen: off\""
-															}
-														}
-													],
-													"sid": 383069377605252
-												}
-											]
-										}
-									],
-									"isOrBlock": true
-								}
-							],
-							"isOrBlock": true
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "else",
-									"objectClass": "System",
-									"sid": 506597148262109
-								}
-							],
-							"actions": [
-								{
-									"id": "set-enabled",
-									"objectClass": "Slider",
-									"sid": 692700546125749,
-									"behaviorType": "DragDrop",
-									"parameters": {
-										"state": "disabled"
-									}
-								}
-							],
-							"sid": 426698822011074
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "compare-eventvar",
-									"objectClass": "System",
-									"sid": 213199610632922,
-									"parameters": {
-										"variable": "MENU_menu",
-										"comparison": 0,
-										"value": "\"OptionsAlt\""
-									}
-								}
-							],
-							"actions": [],
-							"sid": 773924341758797,
-							"children": [
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "is-on-layer",
-											"objectClass": "MenuFont",
-											"sid": 820734492963369,
-											"parameters": {
-												"layer": "\"OptionsAlt\""
-											}
-										}
-									],
-									"actions": [],
-									"sid": 249087034566404,
-									"children": [
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "compare-instance-variable",
-													"objectClass": "MenuFont",
-													"sid": 953354748159349,
-													"parameters": {
-														"instance-variable": "id",
-														"comparison": 0,
-														"value": "4"
-													}
-												}
-											],
-											"actions": [],
-											"sid": 849742571142557,
-											"children": [
-												{
-													"eventType": "block",
-													"conditions": [
-														{
-															"id": "compare-boolean-eventvar",
-															"objectClass": "System",
-															"sid": 882037348299372,
-															"parameters": {
-																"variable": "SETTING_doomMusic"
-															}
-														}
-													],
-													"actions": [
-														{
-															"id": "set-text",
-															"objectClass": "MenuFont",
-															"sid": 374383615837348,
-															"parameters": {
-																"text": "\"doom music: on\""
-															}
-														}
-													],
-													"sid": 616200333744850
-												},
-												{
-													"eventType": "block",
-													"conditions": [
-														{
-															"id": "else",
-															"objectClass": "System",
-															"sid": 548734520187647
-														}
-													],
-													"actions": [
-														{
-															"id": "set-text",
-															"objectClass": "MenuFont",
-															"sid": 495216370613647,
-															"parameters": {
-																"text": "\"doom music: off\""
-															}
-														}
-													],
-													"sid": 713310708385265
-												}
-											]
-										}
-									]
-								}
-							]
-						},
 						{
 							"eventType": "block",
 							"conditions": [
@@ -1633,7 +1375,7 @@
 									"objectClass": "System",
 									"sid": 804642573462522,
 									"parameters": {
-										"variable": "BLEED_ready"
+										"variable": "BLEED_standby"
 									}
 								},
 								{
@@ -1978,6 +1720,98 @@
 						}
 					],
 					"sid": 867556571905788
+				},
+				{
+					"eventType": "comment",
+					"text": "Kiosk cannot change options"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 962042714801348,
+							"parameters": {
+								"variable": "GAME_kiosk"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 960054337196979,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 151176071234232,
+									"parameters": {
+										"variable": "MENU_menu",
+										"comparison": 0,
+										"value": "\"Main\""
+									}
+								}
+							],
+							"actions": [],
+							"sid": 217298214608031,
+							"children": [
+								{
+									"eventType": "comment",
+									"text": "Mobile cannot fullscreen"
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "trigger-once-while-true",
+											"objectClass": "System",
+											"sid": 741999769422192
+										},
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "MenuFont",
+											"sid": 536747559381328,
+											"parameters": {
+												"instance-variable": "id",
+												"comparison": 0,
+												"value": "1"
+											}
+										},
+										{
+											"id": "is-on-layer",
+											"objectClass": "MenuFont",
+											"sid": 836863721883941,
+											"parameters": {
+												"layer": "MENU_menu"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-opacity",
+											"objectClass": "MenuFont",
+											"sid": 762694429667903,
+											"parameters": {
+												"opacity": "50"
+											}
+										},
+										{
+											"id": "change-tags",
+											"objectClass": "MenuFont",
+											"sid": 241083060037748,
+											"parameters": {
+												"action": "add",
+												"tags": "\"disabled\""
+											}
+										}
+									],
+									"sid": 591387914990858
+								}
+							]
+						}
+					]
 				},
 				{
 					"eventType": "comment",
@@ -2383,7 +2217,7 @@
 							"objectClass": "System",
 							"sid": 755777995615686,
 							"parameters": {
-								"variable": "BLEED_ready"
+								"variable": "BLEED_standby"
 							}
 						}
 					],
@@ -2810,7 +2644,7 @@
 							"objectClass": "System",
 							"sid": 561869916149882,
 							"parameters": {
-								"variable": "BLEED_ready"
+								"variable": "BLEED_standby"
 							}
 						},
 						{
@@ -3208,12 +3042,14 @@
 													}
 												},
 												{
-													"id": "pause-resume-all-timers",
+													"id": "start-timer",
 													"objectClass": "Doomguy",
-													"sid": 591958981996261,
+													"sid": 800778257859988,
 													"behaviorType": "Timer",
 													"parameters": {
-														"state": "resumed"
+														"duration": "GAME_inactivity",
+														"type": "once",
+														"tag": "\"inactivity\""
 													}
 												}
 											],
@@ -4877,16 +4713,54 @@
 											}
 										},
 										{
-											"id": "pause-resume-all-timers",
+											"id": "start-timer",
 											"objectClass": "Doomguy",
-											"sid": 313949054667450,
+											"sid": 303191955133393,
 											"behaviorType": "Timer",
 											"parameters": {
-												"state": "resumed"
+												"duration": "GAME_inactivity",
+												"type": "once",
+												"tag": "\"inactivity\""
 											}
 										}
 									],
-									"sid": 811927998093675
+									"sid": 811927998093675,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "has-tags",
+													"objectClass": "MenuFont",
+													"sid": 244097467814456,
+													"parameters": {
+														"tags": "\"title\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "stop-all-tweens",
+													"objectClass": "MenuFont",
+													"sid": 469234514358704,
+													"behaviorType": "Tween"
+												},
+												{
+													"id": "stop-all-tweens",
+													"objectClass": "MenuMask",
+													"sid": 485710631562192,
+													"behaviorType": "Tween"
+												},
+												{
+													"id": "stop-all-timers",
+													"objectClass": "ModalArt",
+													"sid": 640514881114069,
+													"behaviorType": "Timer"
+												}
+											],
+											"sid": 247998350043320
+										}
+									]
 								},
 								{
 									"eventType": "comment",
@@ -4999,6 +4873,17 @@
 												"variable": "STAT_moneySpent",
 												"value": "GAME_modalPrice"
 											}
+										},
+										{
+											"id": "start-timer",
+											"objectClass": "Doomguy",
+											"sid": 333400200337655,
+											"behaviorType": "Timer",
+											"parameters": {
+												"duration": "GAME_inactivity",
+												"type": "once",
+												"tag": "\"inactivity\""
+											}
 										}
 									],
 									"sid": 649002984297108,
@@ -5091,7 +4976,7 @@
 									"objectClass": "System",
 									"sid": 757724348366103,
 									"parameters": {
-										"variable": "BLEED_ready"
+										"variable": "BLEED_standby"
 									}
 								},
 								{
@@ -5315,7 +5200,7 @@
 									"objectClass": "System",
 									"sid": 681628610635547,
 									"parameters": {
-										"variable": "BLEED_ready"
+										"variable": "BLEED_standby"
 									}
 								},
 								{
@@ -5379,7 +5264,7 @@
 		{
 			"eventType": "group",
 			"disabled": false,
-			"title": "Volume Sliders",
+			"title": "Options Logic",
 			"description": "",
 			"isActiveOnStart": true,
 			"children": [
@@ -5387,97 +5272,73 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "key-is-down",
-							"objectClass": "Keyboard",
-							"sid": 983730808090244,
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 766227312991148,
 							"parameters": {
-								"key": 37
+								"variable": "MENU_menu",
+								"comparison": 0,
+								"value": "\"Options\""
 							}
 						},
 						{
-							"id": "key-is-down",
-							"objectClass": "Keyboard",
-							"sid": 372608023540924,
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 422758629559399,
 							"parameters": {
-								"key": 65
-							}
-						},
-						{
-							"id": "is-button-down",
-							"objectClass": "Gamepad",
-							"sid": 916762490186348,
-							"parameters": {
-								"gamepad": "0",
-								"button": "d-pad-left"
-							}
-						},
-						{
-							"id": "compare-axis",
-							"objectClass": "Gamepad",
-							"sid": 306394217139228,
-							"parameters": {
-								"gamepad": "0",
-								"axis": "left-analog-x-axis",
-								"comparison": 2,
-								"value": "-40"
+								"variable": "MENU_menu",
+								"comparison": 0,
+								"value": "\"OptionsAlt\""
 							}
 						}
 					],
 					"actions": [
 						{
-							"id": "set-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 857617436903797,
+							"id": "set-enabled",
+							"objectClass": "Slider",
+							"sid": 917287636067709,
+							"behaviorType": "DragDrop",
 							"parameters": {
-								"variable": "MENU_keyControl",
-								"value": "true"
+								"state": "enabled"
 							}
 						}
 					],
-					"sid": 310684209981363,
+					"sid": 712785794223543,
 					"children": [
 						{
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "compare-eventvar",
-									"objectClass": "System",
-									"sid": 388241359796693,
+									"id": "is-on-layer",
+									"objectClass": "MenuFont",
+									"sid": 532492006612991,
 									"parameters": {
-										"variable": "MENU_menu",
-										"comparison": 0,
-										"value": "\"Options\""
+										"layer": "\"Options\""
 									}
 								},
 								{
-									"id": "compare-eventvar",
-									"objectClass": "System",
-									"sid": 149125850881242,
+									"id": "is-on-layer",
+									"objectClass": "MenuFont",
+									"sid": 194686479003891,
 									"parameters": {
-										"variable": "MENU_menu",
-										"comparison": 0,
-										"value": "\"OptionsAlt\""
+										"layer": "\"OptionsAlt\""
 									}
 								}
 							],
 							"actions": [],
-							"sid": 385946854745111,
+							"sid": 478011734437842,
 							"children": [
+								{
+									"eventType": "comment",
+									"text": "Key and gamepad control for sliders"
+								},
 								{
 									"eventType": "block",
 									"conditions": [
 										{
-											"id": "every-x-seconds",
-											"objectClass": "System",
-											"sid": 144376835282491,
-											"parameters": {
-												"interval-seconds": "0.15"
-											}
-										},
-										{
 											"id": "compare-instance-variable",
-											"objectClass": "Slider",
-											"sid": 769707534015402,
+											"objectClass": "MenuFont",
+											"sid": 145898095254888,
 											"parameters": {
 												"instance-variable": "id",
 												"comparison": 0,
@@ -5485,37 +5346,241 @@
 											}
 										},
 										{
-											"id": "compare-x",
-											"objectClass": "Slider",
-											"sid": 761028718739213,
+											"id": "compare-instance-variable",
+											"objectClass": "MenuFont",
+											"sid": 802096288392905,
 											"parameters": {
-												"comparison": 1,
-												"x-co-ordinate": "SliderBar.X+4"
+												"instance-variable": "type",
+												"comparison": 0,
+												"value": "\"slider\""
 											}
 										}
 									],
 									"actions": [],
-									"sid": 313369592436364,
+									"sid": 811930829593302,
+									"children": [
+										{
+											"eventType": "comment",
+											"text": "Slide to the left"
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "key-is-down",
+													"objectClass": "Keyboard",
+													"sid": 877944071073644,
+													"parameters": {
+														"key": 37
+													}
+												},
+												{
+													"id": "key-is-down",
+													"objectClass": "Keyboard",
+													"sid": 774221857295359,
+													"parameters": {
+														"key": 65
+													}
+												},
+												{
+													"id": "is-button-down",
+													"objectClass": "Gamepad",
+													"sid": 939398352487653,
+													"parameters": {
+														"gamepad": "0",
+														"button": "d-pad-left"
+													}
+												},
+												{
+													"id": "compare-axis",
+													"objectClass": "Gamepad",
+													"sid": 804296991078967,
+													"parameters": {
+														"gamepad": "0",
+														"axis": "left-analog-x-axis",
+														"comparison": 2,
+														"value": "-40"
+													}
+												}
+											],
+											"actions": [],
+											"sid": 601851348819574,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "every-x-seconds",
+															"objectClass": "System",
+															"sid": 462040689087770,
+															"parameters": {
+																"interval-seconds": "0.15"
+															}
+														}
+													],
+													"actions": [
+														{
+															"callFunction": "menuSlider",
+															"sid": 531788562560071,
+															"parameters": [
+																"\"left\"",
+																"MENU_selected"
+															]
+														}
+													],
+													"sid": 955219981285314
+												}
+											],
+											"isOrBlock": true
+										},
+										{
+											"eventType": "comment",
+											"text": "Slide to the right"
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "else",
+													"objectClass": "System",
+													"sid": 736470696096604
+												}
+											],
+											"actions": [],
+											"sid": 405933212668150,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "key-is-down",
+															"objectClass": "Keyboard",
+															"sid": 146379494998491,
+															"parameters": {
+																"key": 39
+															}
+														},
+														{
+															"id": "key-is-down",
+															"objectClass": "Keyboard",
+															"sid": 105375151383460,
+															"parameters": {
+																"key": 68
+															}
+														},
+														{
+															"id": "is-button-down",
+															"objectClass": "Gamepad",
+															"sid": 561127545341857,
+															"parameters": {
+																"gamepad": "0",
+																"button": "d-pad-right"
+															}
+														},
+														{
+															"id": "compare-axis",
+															"objectClass": "Gamepad",
+															"sid": 661083268134695,
+															"parameters": {
+																"gamepad": "0",
+																"axis": "left-analog-x-axis",
+																"comparison": 4,
+																"value": "40"
+															}
+														}
+													],
+													"actions": [],
+													"sid": 479911212464729,
+													"children": [
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "every-x-seconds",
+																	"objectClass": "System",
+																	"sid": 821728320760419,
+																	"parameters": {
+																		"interval-seconds": "0.15"
+																	}
+																}
+															],
+															"actions": [
+																{
+																	"callFunction": "menuSlider",
+																	"sid": 625312249948251,
+																	"parameters": [
+																		"\"right\"",
+																		"MENU_selected"
+																	]
+																}
+															],
+															"sid": 374292935481003
+														}
+													],
+													"isOrBlock": true
+												}
+											]
+										}
+									]
+								},
+								{
+									"eventType": "comment",
+									"text": "Sliders reflect their values in real-time"
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "pick-by-comparison",
+											"objectClass": "System",
+											"sid": 607009857597184,
+											"parameters": {
+												"object": "Slider",
+												"expression": "Slider.LayerName",
+												"comparison": 0,
+												"value": "MENU_menu"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 628610852516979,
 									"children": [
 										{
 											"eventType": "block",
 											"conditions": [
 												{
-													"id": "compare-eventvar",
-													"objectClass": "System",
-													"sid": 938769410220027,
+													"id": "compare-instance-variable",
+													"objectClass": "Slider",
+													"sid": 401898156610035,
 													"parameters": {
-														"variable": "MENU_selected",
+														"instance-variable": "id",
 														"comparison": 0,
 														"value": "0"
 													}
-												},
+												}
+											],
+											"actions": [
 												{
-													"id": "compare-eventvar",
+													"id": "set-eventvar-value",
 													"objectClass": "System",
-													"sid": 612503004737465,
+													"sid": 337203994658059,
 													"parameters": {
-														"variable": "MENU_selected",
+														"variable": "SETTING_volumeSound",
+														"value": "(Slider.X-(SliderBar.X+4))/(SliderBar.Width-8)"
+													}
+												}
+											],
+											"sid": 823882966585669
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "Slider",
+													"sid": 633589090726787,
+													"parameters": {
+														"instance-variable": "id",
 														"comparison": 0,
 														"value": "1"
 													}
@@ -5523,28 +5588,237 @@
 											],
 											"actions": [
 												{
-													"id": "play",
-													"objectClass": "Audio",
-													"sid": 527573109272770,
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 303071758224347,
 													"parameters": {
-														"audio-file": "menuselect",
-														"loop": "not-looping",
-														"volume": "log10(SETTING_volumeSound)*20",
-														"stereo-pan": "0",
-														"tag-optional": "\"\""
+														"variable": "SETTING_volumeMusic",
+														"value": "(Slider.X-(SliderBar.X+4))/(SliderBar.Width-8)"
 													}
 												},
 												{
-													"id": "set-x",
-													"objectClass": "Slider",
-													"sid": 179863386043031,
+													"id": "set-volume",
+													"objectClass": "Audio",
+													"sid": 600604404675371,
 													"parameters": {
-														"x": "Self.X-5"
+														"tag": "\"music\"",
+														"db": "(log10(SETTING_volumeMusic)*20)"
 													}
 												}
 											],
-											"sid": 529967052629868,
-											"isOrBlock": true
+											"sid": 866459871847252
+										}
+									]
+								},
+								{
+									"eventType": "comment",
+									"text": "Pickup flash text"
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "MenuFont",
+											"sid": 451181553423580,
+											"parameters": {
+												"instance-variable": "id",
+												"comparison": 0,
+												"value": "2"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 590277531975538,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-boolean-eventvar",
+													"objectClass": "System",
+													"sid": 893033309772679,
+													"parameters": {
+														"variable": "SETTING_flashing"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-text",
+													"objectClass": "MenuFont",
+													"sid": 654962767827735,
+													"parameters": {
+														"text": "\"pickup flash: on\""
+													}
+												}
+											],
+											"sid": 550458221022869
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "else",
+													"objectClass": "System",
+													"sid": 617912506914321
+												}
+											],
+											"actions": [
+												{
+													"id": "set-text",
+													"objectClass": "MenuFont",
+													"sid": 944102536904153,
+													"parameters": {
+														"text": "\"pickup flash: off\""
+													}
+												}
+											],
+											"sid": 532208590755897
+										}
+									]
+								},
+								{
+									"eventType": "comment",
+									"text": "Fullscreen text"
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "MenuFont",
+											"sid": 137876891830901,
+											"parameters": {
+												"instance-variable": "id",
+												"comparison": 0,
+												"value": "3"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 620154469985650,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-boolean-eventvar",
+													"objectClass": "System",
+													"sid": 127283532209040,
+													"parameters": {
+														"variable": "SETTING_fullscreen"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-text",
+													"objectClass": "MenuFont",
+													"sid": 652887852145757,
+													"parameters": {
+														"text": "\"fullscreen: on\""
+													}
+												}
+											],
+											"sid": 937071034051253
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "else",
+													"objectClass": "System",
+													"sid": 229908085691497
+												}
+											],
+											"actions": [
+												{
+													"id": "set-text",
+													"objectClass": "MenuFont",
+													"sid": 924983259836862,
+													"parameters": {
+														"text": "\"fullscreen: off\""
+													}
+												}
+											],
+											"sid": 453536077618432
+										}
+									]
+								},
+								{
+									"eventType": "comment",
+									"text": "DOOM music text"
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "MenuFont",
+											"sid": 455362067201448,
+											"parameters": {
+												"instance-variable": "id",
+												"comparison": 0,
+												"value": "4"
+											}
+										},
+										{
+											"id": "is-on-layer",
+											"objectClass": "MenuFont",
+											"sid": 414085251439318,
+											"parameters": {
+												"layer": "\"OptionsAlt\""
+											}
+										}
+									],
+									"actions": [],
+									"sid": 498570294664471,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-boolean-eventvar",
+													"objectClass": "System",
+													"sid": 508748793611625,
+													"parameters": {
+														"variable": "SETTING_doomMusic"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-text",
+													"objectClass": "MenuFont",
+													"sid": 908845693199061,
+													"parameters": {
+														"text": "\"doom music: on\""
+													}
+												}
+											],
+											"sid": 130468689963111
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "else",
+													"objectClass": "System",
+													"sid": 539687268962428
+												}
+											],
+											"actions": [
+												{
+													"id": "set-text",
+													"objectClass": "MenuFont",
+													"sid": 349509202177215,
+													"parameters": {
+														"text": "\"doom music: off\""
+													}
+												}
+											],
+											"sid": 350666748633127
 										}
 									]
 								}
@@ -5558,39 +5832,57 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "key-is-down",
-							"objectClass": "Keyboard",
-							"sid": 391407056851430,
+							"id": "else",
+							"objectClass": "System",
+							"sid": 407447402733748
+						}
+					],
+					"actions": [
+						{
+							"id": "set-enabled",
+							"objectClass": "Slider",
+							"sid": 784945924350997,
+							"behaviorType": "DragDrop",
 							"parameters": {
-								"key": 39
+								"state": "disabled"
 							}
+						}
+					],
+					"sid": 201743614958138
+				},
+				{
+					"functionName": "menuSlider",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [
+						{
+							"name": "direction",
+							"type": "string",
+							"initialValue": "left",
+							"comment": "",
+							"sid": 494807430092337
 						},
 						{
-							"id": "key-is-down",
-							"objectClass": "Keyboard",
-							"sid": 976628786838962,
-							"parameters": {
-								"key": 68
-							}
-						},
+							"name": "id",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"sid": 943669234169856
+						}
+					],
+					"eventType": "function-block",
+					"conditions": [
 						{
-							"id": "is-button-down",
-							"objectClass": "Gamepad",
-							"sid": 259079726057584,
+							"id": "compare-instance-variable",
+							"objectClass": "Slider",
+							"sid": 947064811885342,
 							"parameters": {
-								"gamepad": "0",
-								"button": "d-pad-right"
-							}
-						},
-						{
-							"id": "compare-axis",
-							"objectClass": "Gamepad",
-							"sid": 817044818894096,
-							"parameters": {
-								"gamepad": "0",
-								"axis": "left-analog-x-axis",
-								"comparison": 4,
-								"value": "40"
+								"instance-variable": "id",
+								"comparison": 0,
+								"value": "id"
 							}
 						}
 					],
@@ -5598,154 +5890,16 @@
 						{
 							"id": "set-boolean-eventvar",
 							"objectClass": "System",
-							"sid": 486169639823562,
+							"sid": 447439548665567,
 							"parameters": {
 								"variable": "MENU_keyControl",
 								"value": "true"
 							}
-						}
-					],
-					"sid": 990123676946496,
-					"children": [
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "compare-eventvar",
-									"objectClass": "System",
-									"sid": 506002757617706,
-									"parameters": {
-										"variable": "MENU_menu",
-										"comparison": 0,
-										"value": "\"Options\""
-									}
-								},
-								{
-									"id": "compare-eventvar",
-									"objectClass": "System",
-									"sid": 985365889803152,
-									"parameters": {
-										"variable": "MENU_menu",
-										"comparison": 0,
-										"value": "\"OptionsAlt\""
-									}
-								}
-							],
-							"actions": [],
-							"sid": 316380926102388,
-							"children": [
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "every-x-seconds",
-											"objectClass": "System",
-											"sid": 698231283760549,
-											"parameters": {
-												"interval-seconds": "0.15"
-											}
-										},
-										{
-											"id": "compare-instance-variable",
-											"objectClass": "Slider",
-											"sid": 547436860405334,
-											"parameters": {
-												"instance-variable": "id",
-												"comparison": 0,
-												"value": "MENU_selected"
-											}
-										},
-										{
-											"id": "compare-x",
-											"objectClass": "Slider",
-											"sid": 330036826385835,
-											"parameters": {
-												"comparison": 1,
-												"x-co-ordinate": "SliderBar.X+SliderBar.Width-4"
-											}
-										}
-									],
-									"actions": [],
-									"sid": 490834049082569,
-									"children": [
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "compare-eventvar",
-													"objectClass": "System",
-													"sid": 573769962456903,
-													"parameters": {
-														"variable": "MENU_selected",
-														"comparison": 0,
-														"value": "0"
-													}
-												},
-												{
-													"id": "compare-eventvar",
-													"objectClass": "System",
-													"sid": 208748001718019,
-													"parameters": {
-														"variable": "MENU_selected",
-														"comparison": 0,
-														"value": "1"
-													}
-												}
-											],
-											"actions": [
-												{
-													"id": "play",
-													"objectClass": "Audio",
-													"sid": 360433287595109,
-													"parameters": {
-														"audio-file": "menuselect",
-														"loop": "not-looping",
-														"volume": "log10(SETTING_volumeSound)*20",
-														"stereo-pan": "0",
-														"tag-optional": "\"\""
-													}
-												},
-												{
-													"id": "set-x",
-													"objectClass": "Slider",
-													"sid": 645182735417568,
-													"parameters": {
-														"x": "Self.X+5"
-													}
-												}
-											],
-											"sid": 651238248061459,
-											"isOrBlock": true
-										}
-									]
-								}
-							],
-							"isOrBlock": true
-						}
-					],
-					"isOrBlock": true
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-drag-start",
-							"objectClass": "Slider",
-							"sid": 617107967207279,
-							"behaviorType": "DragDrop"
 						},
-						{
-							"id": "on-drop",
-							"objectClass": "Slider",
-							"sid": 754977197933655,
-							"behaviorType": "DragDrop"
-						}
-					],
-					"actions": [
 						{
 							"id": "play",
 							"objectClass": "Audio",
-							"sid": 621163533793121,
+							"sid": 177211159821981,
 							"parameters": {
 								"audio-file": "menuselect",
 								"loop": "not-looping",
@@ -5755,8 +5909,97 @@
 							}
 						}
 					],
-					"sid": 379929630127677,
+					"sid": 491159736250344,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 731013099500308,
+									"parameters": {
+										"variable": "direction",
+										"comparison": 0,
+										"value": "\"left\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-x",
+									"objectClass": "Slider",
+									"sid": 124113862858536,
+									"parameters": {
+										"x": "Self.X-5"
+									}
+								}
+							],
+							"sid": 973677857979695
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 611973281956002
+								}
+							],
+							"actions": [
+								{
+									"id": "set-x",
+									"objectClass": "Slider",
+									"sid": 178476981056040,
+									"parameters": {
+										"x": "Self.X+5"
+									}
+								}
+							],
+							"sid": 635274905222751
+						}
+					]
+				},
+				{
+					"eventType": "comment",
+					"text": "Handle drag and drop"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-drag-start",
+							"objectClass": "Slider",
+							"sid": 673651873928575,
+							"behaviorType": "DragDrop"
+						},
+						{
+							"id": "on-drop",
+							"objectClass": "Slider",
+							"sid": 978108278348880,
+							"behaviorType": "DragDrop"
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 485772223574540,
+							"parameters": {
+								"audio-file": "menuselect",
+								"loop": "not-looping",
+								"volume": "log10(SETTING_volumeSound)*20",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						}
+					],
+					"sid": 743081931163235,
 					"isOrBlock": true
+				},
+				{
+					"eventType": "comment",
+					"text": "Cap sliders"
 				},
 				{
 					"eventType": "block",
@@ -5826,18 +6069,97 @@
 							"sid": 726084404905592
 						}
 					]
+				}
+			],
+			"sid": 263035093106208
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 478760491541734
+				}
+			],
+			"actions": [],
+			"sid": 384389682658244,
+			"children": [
+				{
+					"eventType": "comment",
+					"text": "Initialize sliders"
 				},
 				{
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "on-start-of-layout",
+							"id": "compare-instance-variable",
+							"objectClass": "Slider",
+							"sid": 310301396553970,
+							"parameters": {
+								"instance-variable": "id",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-x",
+							"objectClass": "Slider",
+							"sid": 369850515274941,
+							"parameters": {
+								"x": "SETTING_volumeSound*(SliderBar.Width-8)+(SliderBar.X+4)"
+							}
+						}
+					],
+					"sid": 931877698262673
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Slider",
+							"sid": 951351466990961,
+							"parameters": {
+								"instance-variable": "id",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-x",
+							"objectClass": "Slider",
+							"sid": 116523517023482,
+							"parameters": {
+								"x": "SETTING_volumeMusic*(SliderBar.Width-8)+(SliderBar.X+4)"
+							}
+						}
+					],
+					"sid": 987433192890075
+				},
+				{
+					"eventType": "comment",
+					"text": "External links get a link icon appended"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
 							"objectClass": "System",
-							"sid": 790205846734090
+							"sid": 414598726113225,
+							"parameters": {
+								"variable": "GAME_kiosk"
+							},
+							"isInverted": true
 						}
 					],
 					"actions": [],
-					"sid": 916428224397129,
+					"sid": 266052465121690,
 					"children": [
 						{
 							"eventType": "block",
@@ -5845,75 +6167,23 @@
 								{
 									"id": "has-tags",
 									"objectClass": "MenuFontSmall",
-									"sid": 840117822660829,
+									"sid": 804122632271639,
 									"parameters": {
-										"tags": "\"version\""
+										"tags": "\"link\""
 									}
 								}
 							],
 							"actions": [
 								{
-									"id": "set-text",
+									"id": "append-text",
 									"objectClass": "MenuFontSmall",
-									"sid": 901922214985705,
+									"sid": 144188144786110,
 									"parameters": {
-										"text": "\"V\"&projectversion"
+										"text": "\" $\""
 									}
 								}
 							],
-							"sid": 975503740888225
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "compare-instance-variable",
-									"objectClass": "Slider",
-									"sid": 894829890055658,
-									"parameters": {
-										"instance-variable": "id",
-										"comparison": 0,
-										"value": "0"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-x",
-									"objectClass": "Slider",
-									"sid": 746591598857380,
-									"parameters": {
-										"x": "SETTING_volumeSound*(SliderBar.Width-8)+(SliderBar.X+4)"
-									}
-								}
-							],
-							"sid": 887065836934860
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "compare-instance-variable",
-									"objectClass": "Slider",
-									"sid": 190313726826830,
-									"parameters": {
-										"instance-variable": "id",
-										"comparison": 0,
-										"value": "1"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-x",
-									"objectClass": "Slider",
-									"sid": 912314360761247,
-									"parameters": {
-										"x": "SETTING_volumeMusic*(SliderBar.Width-8)+(SliderBar.X+4)"
-									}
-								}
-							],
-							"sid": 837320730435549
+							"sid": 878756455103346
 						}
 					]
 				},
@@ -5921,87 +6191,21 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "pick-by-comparison",
+							"id": "else",
 							"objectClass": "System",
-							"sid": 549005361795203,
-							"parameters": {
-								"object": "Slider",
-								"expression": "Slider.LayerName",
-								"comparison": 0,
-								"value": "MENU_menu"
-							}
+							"sid": 945168441779457
 						}
 					],
-					"actions": [],
-					"sid": 367359632575302,
-					"children": [
+					"actions": [
 						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "compare-instance-variable",
-									"objectClass": "Slider",
-									"sid": 193331409160682,
-									"parameters": {
-										"instance-variable": "id",
-										"comparison": 0,
-										"value": "0"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 450144819755921,
-									"parameters": {
-										"variable": "SETTING_volumeSound",
-										"value": "(Slider.X-(SliderBar.X+4))/(SliderBar.Width-8)"
-									}
-								}
-							],
-							"sid": 117641608662244
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "compare-instance-variable",
-									"objectClass": "Slider",
-									"sid": 231486132373204,
-									"parameters": {
-										"instance-variable": "id",
-										"comparison": 0,
-										"value": "1"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 443007888095454,
-									"parameters": {
-										"variable": "SETTING_volumeMusic",
-										"value": "(Slider.X-(SliderBar.X+4))/(SliderBar.Width-8)"
-									}
-								},
-								{
-									"id": "set-volume",
-									"objectClass": "Audio",
-									"sid": 436787314776105,
-									"parameters": {
-										"tag": "\"music\"",
-										"db": "(log10(SETTING_volumeMusic)*20)"
-									}
-								}
-							],
-							"sid": 955530495939143
+							"id": "destroy",
+							"objectClass": "Link",
+							"sid": 163752358693764
 						}
-					]
+					],
+					"sid": 153150564634946
 				}
-			],
-			"sid": 263035093106208
+			]
 		},
 		{
 			"eventType": "comment",
