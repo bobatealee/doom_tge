@@ -6,17 +6,22 @@
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
 	"behaviorTypes": [],
-	"effectTypes": [],
+	"effectTypes": [
+		{
+			"effectId": "hsladjust",
+			"name": "AdjustHSL"
+		}
+	],
 	"image": {
-		"width": 384,
-		"height": 10,
+		"width": 156,
+		"height": 40,
 		"originX": 0.5,
 		"originY": 0.5,
 		"originalSource": "",
 		"exportFormat": "lossless",
 		"exportQuality": 0.8,
 		"fileType": "image/png",
-		"imageSpriteId": 8268994,
+		"imageSpriteId": 1459464,
 		"useCollisionPoly": true,
 		"tag": ""
 	}

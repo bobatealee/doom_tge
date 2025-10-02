@@ -18,6 +18,13 @@
 			"desc": "",
 			"show": true,
 			"sid": 794606244232523
+		},
+		{
+			"name": "init",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 410772758868583
 		}
 	],
 	"behaviorTypes": [
@@ -30,14 +37,14 @@
 	"effectTypes": [],
 	"image": {
 		"width": 260,
-		"height": 115,
+		"height": 114,
 		"originX": 0.5,
 		"originY": 0.5,
 		"originalSource": "",
 		"exportFormat": "lossless",
 		"exportQuality": 0.8,
 		"fileType": "image/png",
-		"imageSpriteId": 8135846,
+		"imageSpriteId": 8612571,
 		"useCollisionPoly": true,
 		"tag": ""
 	}

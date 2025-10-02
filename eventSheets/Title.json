@@ -1,0 +1,599 @@
+{
+	"name": "Title",
+	"events": [
+		{
+			"eventType": "include",
+			"includeSheet": "Global"
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "Menu"
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Title - Core Logic",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "comment",
+					"text": "Initialization"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 730930238505347
+						}
+					],
+					"actions": [
+						{
+							"id": "look-parallel-to-layout",
+							"objectClass": "3DCamera",
+							"sid": 796843120166256,
+							"parameters": {
+								"cam-x": "160",
+								"cam-y": "160",
+								"cam-z": "16",
+								"look-angle": "0"
+							}
+						},
+						{
+							"type": "comment",
+							"text": "Reset drinks array"
+						},
+						{
+							"id": "load",
+							"objectClass": "Drinks",
+							"sid": 782629420460682,
+							"parameters": {
+								"json": "DrinksBase.AsJSON"
+							}
+						}
+					],
+					"sid": 907702623785707,
+					"children": [
+						{
+							"eventType": "comment",
+							"text": "Some menu buttons change on the title screen"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "has-tags",
+									"objectClass": "MenuFont",
+									"sid": 816256226234108,
+									"parameters": {
+										"tags": "\"resume\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "change-tags",
+									"objectClass": "MenuFont",
+									"sid": 531214069628913,
+									"parameters": {
+										"action": "remove",
+										"tags": "\"resume\""
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "MenuFont",
+									"sid": 580794958178260,
+									"parameters": {
+										"text": "\"New Game\""
+									}
+								}
+							],
+							"sid": 905226928785583
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "has-tags",
+									"objectClass": "MenuFont",
+									"sid": 239650006952904,
+									"parameters": {
+										"tags": "\"quit\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "change-tags",
+									"objectClass": "MenuFont",
+									"sid": 105933402496506,
+									"parameters": {
+										"action": "remove",
+										"tags": "\"quit\""
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "MenuFont",
+									"sid": 219526765836141,
+									"parameters": {
+										"text": "\"Credits\""
+									}
+								}
+							],
+							"sid": 854717744954592
+						},
+						{
+							"eventType": "comment",
+							"text": "Play music"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 300640732711252,
+									"parameters": {
+										"variable": "SETTING_doomMusic",
+										"comparison": 2,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 980078127646347,
+									"parameters": {
+										"audio-file": "menu",
+										"loop": "looping",
+										"volume": "(log10(SETTING_volumeMusic)*20)",
+										"stereo-pan": "0",
+										"tag-optional": "\"music\""
+									}
+								}
+							],
+							"sid": 591226370003552
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 131934200038853
+								}
+							],
+							"actions": [
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 659496621126021,
+									"parameters": {
+										"audio-file": "menuDoomIntro",
+										"loop": "not-looping",
+										"volume": "(log10(SETTING_volumeMusic)*20)",
+										"stereo-pan": "0",
+										"tag-optional": "\"music doom\""
+									}
+								}
+							],
+							"sid": 109882173879012
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-ended",
+							"objectClass": "Audio",
+							"sid": 915867703453424,
+							"parameters": {
+								"tag": "\"doom\""
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 601617986102934,
+							"parameters": {
+								"variable": "SETTING_doomMusic",
+								"comparison": 5,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 720976520544397,
+							"parameters": {
+								"audio-file": "menuDoom",
+								"loop": "looping",
+								"volume": "(log10(SETTING_volumeMusic)*20)",
+								"stereo-pan": "0",
+								"tag-optional": "\"music\""
+							}
+						}
+					],
+					"sid": 445158762519349
+				},
+				{
+					"eventType": "comment",
+					"text": "Tick logic; pauses during outgoing transitions"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 538311741501834,
+							"parameters": {
+								"variable": "TRANSITION_movedLayout"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "rotate-camera",
+							"objectClass": "3DCamera",
+							"sid": 277760726845874,
+							"parameters": {
+								"rotate-x": "dt*4",
+								"rotate-y": "dt*Logo.Sine.Value",
+								"min-polar-angle": "0",
+								"max-polar-angle": "180"
+							}
+						},
+						{
+							"id": "set-image-offset-x",
+							"objectClass": "Sky",
+							"sid": 254330047880542,
+							"parameters": {
+								"offset-x": "Self.ImageOffsetX + dt*3"
+							}
+						},
+						{
+							"id": "set-angle-toward-position",
+							"objectClass": "Billboard",
+							"sid": 722846069220776,
+							"parameters": {
+								"x": "160",
+								"y": "160"
+							}
+						}
+					],
+					"sid": 579788028849618,
+					"children": [
+						{
+							"eventType": "comment",
+							"text": "Easter egg"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "has-tags",
+									"objectClass": "Billboard",
+									"sid": 785419873485256,
+									"parameters": {
+										"tags": "\"galaktor\""
+									}
+								}
+							],
+							"actions": [],
+							"sid": 858583729782521,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 654020655488283,
+											"parameters": {
+												"first-value": "3DCamera.CameraXRotation",
+												"comparison": 4,
+												"second-value": "90"
+											}
+										},
+										{
+											"id": "trigger-once-while-true",
+											"objectClass": "System",
+											"sid": 302117382257843
+										}
+									],
+									"actions": [],
+									"sid": 385421953719866,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 919654486929695,
+													"parameters": {
+														"first-value": "round(random(0, 99))",
+														"comparison": 0,
+														"second-value": "0"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-visible",
+													"objectClass": "Billboard",
+													"sid": 133125832834504,
+													"parameters": {
+														"visibility": "visible"
+													}
+												}
+											],
+											"sid": 195844272523306
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 270588932957057,
+											"parameters": {
+												"first-value": "3DCamera.CameraXRotation",
+												"comparison": 4,
+												"second-value": "270"
+											}
+										},
+										{
+											"id": "trigger-once-while-true",
+											"objectClass": "System",
+											"sid": 349929892435929
+										}
+									],
+									"actions": [
+										{
+											"id": "set-visible",
+											"objectClass": "Billboard",
+											"sid": 593540855703759,
+											"parameters": {
+												"visibility": "invisible"
+											}
+										}
+									],
+									"sid": 333037977161307
+								}
+							]
+						}
+					]
+				}
+			],
+			"sid": 318709252371820
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Title - Erasing",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "variable",
+					"name": "TITLE_canErase",
+					"type": "boolean",
+					"initialValue": "true",
+					"comment": "",
+					"isStatic": true,
+					"isConstant": false,
+					"sid": 313450014819790
+				},
+				{
+					"eventType": "comment",
+					"text": "Save erasing is allowed on the title screen"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 306001645521585,
+							"parameters": {
+								"key": 46
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 624515371866664,
+							"parameters": {
+								"variable": "TRANSITION_running"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 911389381461365,
+							"parameters": {
+								"variable": "MENU_menu",
+								"comparison": 0,
+								"value": "\"Main\""
+							}
+						}
+					],
+					"actions": [],
+					"sid": 172006262062111,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 386401102949687,
+									"parameters": {
+										"variable": "TITLE_canErase"
+									}
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "MenuFontSmall",
+									"sid": 793133158520937,
+									"parameters": {
+										"instance-variable": "type",
+										"comparison": 0,
+										"value": "\"version\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "MenuFontSmall",
+									"sid": 444624603544039,
+									"parameters": {
+										"text": "\"@ \"&int((Logo.Timer.CurrentTime(\"erase\")*100)/Logo.Timer.Duration(\"erase\"))&\"%\""
+									}
+								}
+							],
+							"sid": 521602947264921,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-timer-running",
+											"objectClass": "Logo",
+											"sid": 226716901439772,
+											"behaviorType": "Timer",
+											"parameters": {
+												"tag": "\"erase\""
+											},
+											"isInverted": true
+										}
+									],
+									"actions": [
+										{
+											"id": "start-timer",
+											"objectClass": "Logo",
+											"sid": 150856226751084,
+											"behaviorType": "Timer",
+											"parameters": {
+												"duration": "3",
+												"type": "once",
+												"tag": "\"erase\""
+											}
+										}
+									],
+									"sid": 744553269211261
+								}
+							]
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 886048187538779
+						}
+					],
+					"actions": [
+						{
+							"id": "stop-timer",
+							"objectClass": "Logo",
+							"sid": 726633109604360,
+							"behaviorType": "Timer",
+							"parameters": {
+								"tag": "\"erase\""
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 418010486790429,
+							"parameters": {
+								"variable": "TITLE_canErase",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 484622764581254
+				},
+				{
+					"eventType": "comment",
+					"text": "Erase the save data"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-timer",
+							"objectClass": "Logo",
+							"sid": 106813864749910,
+							"behaviorType": "Timer",
+							"parameters": {
+								"tag": "\"erase\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 635546898312154,
+							"parameters": {
+								"audio-file": "defaultScream",
+								"loop": "not-looping",
+								"volume": "log10(SETTING_volumeSound)*20",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 451833305264279,
+							"parameters": {
+								"variable": "TITLE_canErase",
+								"value": "false"
+							}
+						},
+						{
+							"id": "delete",
+							"objectClass": "FileSystem",
+							"sid": 772157412678306,
+							"parameters": {
+								"picker-tag": "\"<local-app-data>\"",
+								"folder-path": "\"SCUMDOG/doom_tge\"",
+								"recursive": true,
+								"file-tag": "\"\""
+							}
+						},
+						{
+							"id": "clear-storage",
+							"objectClass": "LocalStorage",
+							"sid": 106521983001998
+						}
+					],
+					"sid": 203118601695116
+				}
+			],
+			"sid": 146097113730618
+		}
+	],
+	"sid": 815359530309005
+}

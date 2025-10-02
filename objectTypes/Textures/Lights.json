@@ -1,0 +1,23 @@
+{
+	"name": "Lights",
+	"plugin-id": "TiledBg",
+	"sid": 397008043634034,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"image": {
+		"width": 40,
+		"height": 8,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "lossless",
+		"exportQuality": 0.8,
+		"fileType": "image/png",
+		"imageSpriteId": 8770174,
+		"useCollisionPoly": true,
+		"tag": ""
+	}
+}

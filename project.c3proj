@@ -1,6 +1,6 @@
 {
 	"projectFormatVersion": 1,
-	"savedWithRelease": 44800,
+	"savedWithRelease": 44902,
 	"name": "DOOM The Gallery Experience",
 	"runtime": "c3",
 	"useWorker": "dom",
@@ -92,22 +92,6 @@
 		},
 		{
 			"type": "plugin",
-			"id": "Rex_NGIO_Authentication",
-			"name": "Authentication",
-			"author": "Rex.Rainbow/Port by Pixel Perfect Studio",
-			"bundled": true,
-			"version": "0.1.0.4"
-		},
-		{
-			"type": "plugin",
-			"id": "Rex_NGIO_Medal",
-			"name": "Medal",
-			"author": "Rex.Rainbow/Port by Pixel Perfect Studio",
-			"bundled": true,
-			"version": "0.1.0.1"
-		},
-		{
-			"type": "plugin",
 			"id": "Shape3D",
 			"name": "3D shape",
 			"author": "Scirra",
@@ -157,6 +141,15 @@
 		},
 		{
 			"type": "plugin",
+			"id": "ppstudio_newgroundsio_plugin",
+			"name": "NGIO",
+			"author": "Pixel Perfect Studio",
+			"bundled": true,
+			"version": "0.0.0.3",
+			"sdkVersion": 2
+		},
+		{
+			"type": "plugin",
 			"id": "qrcode",
 			"name": "QR code",
 			"author": "Scirra",
@@ -173,6 +166,13 @@
 			"type": "behavior",
 			"id": "EightDir",
 			"name": "8 Direction",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "LOS",
+			"name": "Line of sight",
 			"author": "Scirra",
 			"bundled": false
 		},
@@ -227,6 +227,20 @@
 		},
 		{
 			"type": "effect",
+			"id": "grayscale",
+			"name": "Grayscale",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "hsladjust",
+			"name": "Adjust HSL",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "effect",
 			"id": "posterize",
 			"name": "Posterize",
 			"author": "Scirra",
@@ -241,10 +255,11 @@
 		},
 		{
 			"type": "effect",
-			"id": "warpobject",
-			"name": "Warp object",
-			"author": "Scirra",
-			"bundled": false
+			"id": "skymen_BetterOutline",
+			"name": "Better Outline",
+			"author": "skymen",
+			"bundled": true,
+			"version": "2.1.0.1"
 		}
 	],
 	"uniqueId": "h63jh1yt028",
@@ -259,28 +274,39 @@
 					"Concrete",
 					"Grass",
 					"Water",
-					"Sky",
-					"Brick",
+					"Bricks",
 					"Paneling",
 					"Tile",
 					"Glass",
-					"Door",
-					"Slit",
-					"DoorSmall",
+					"DoorBeam",
 					"Space",
 					"WallpaperSecret",
-					"DoorExit",
+					"DoorThin",
 					"Exit",
-					"ElevatorFloor",
-					"ElevatorWall",
-					"ElevatorCeiling",
-					"EgyptCeiling",
+					"Scales",
+					"Metal",
+					"LightsRed",
+					"LightsYellow",
 					"Sign1",
 					"Sign2",
 					"Sign3",
 					"Sign4",
 					"Sign5",
-					"Switch"
+					"Switch",
+					"DoorWide",
+					"DoorGlass",
+					"Beam",
+					"Mountains",
+					"Rail",
+					"Sky",
+					"MetalDark",
+					"Map1",
+					"Map2",
+					"Map3",
+					"DoorStart",
+					"BricksLight",
+					"BeamStrong",
+					"Lights"
 				],
 				"subfolders": [],
 				"name": "Textures"
@@ -299,20 +325,19 @@
 			{
 				"items": [
 					"Player",
-					"PlayerCam",
 					"Barrel",
 					"Lightpost",
 					"Cash",
 					"Cheese",
 					"Wine",
-					"Can",
 					"Beer",
+					"BeerPack",
 					"GALAKTOR",
 					"BigCheese",
 					"BigCash",
 					"Trigger",
-					"Sight",
-					"SmallSight",
+					"PlayerSight",
+					"PlayerSightSmall",
 					"PlayerPickup"
 				],
 				"subfolders": [],
@@ -327,9 +352,10 @@
 					"HUDFont",
 					"Flash",
 					"PopupFont",
-					"Results",
 					"MobileArms",
-					"MobileButtons"
+					"MobileButtons",
+					"HUDArms",
+					"HUDBackground"
 				],
 				"subfolders": [],
 				"name": "HUD"
@@ -348,7 +374,8 @@
 					"Gamepad",
 					"LocalStorage",
 					"SaveFile",
-					"FileSystem"
+					"FileSystem",
+					"NGIO"
 				],
 				"subfolders": [],
 				"name": "Plugins"
@@ -364,8 +391,14 @@
 					"Slider",
 					"SliderBar",
 					"Medal",
-					"BleedLine",
-					"MenuMask"
+					"TransitionLine",
+					"MenuMask",
+					"Results",
+					"Controls",
+					"MenuArrow",
+					"Ping",
+					"Skin",
+					"ScumDog"
 				],
 				"subfolders": [],
 				"name": "Menu"
@@ -479,24 +512,24 @@
 			},
 			{
 				"items": [
-					"NGAuth",
-					"NGMedals",
-					"Medals"
-				],
-				"subfolders": [],
-				"name": "Newgrounds"
-			},
-			{
-				"items": [
 					"LoaderBar",
-					"LoaderBase",
-					"LoaderPlay",
-					"LoaderButton",
 					"LoaderText",
-					"Scumdog"
+					"LoaderBase"
 				],
 				"subfolders": [],
 				"name": "Loader"
+			},
+			{
+				"items": [
+					"Artworks",
+					"Drinks",
+					"DrinksBase",
+					"Medals",
+					"Pickups",
+					"Skins"
+				],
+				"subfolders": [],
+				"name": "Arrays"
 			}
 		]
 	},
@@ -510,19 +543,21 @@
 	"layouts": {
 		"items": [
 			"Loader",
-			"Menu",
+			"Title",
 			"Level",
-			"Results"
+			"Results",
+			"Menu"
 		],
 		"subfolders": []
 	},
 	"eventSheets": {
 		"items": [
-			"Menu",
+			"Title",
 			"Level",
 			"Global",
 			"Results",
-			"Loader"
+			"Loader",
+			"Menu"
 		],
 		"subfolders": []
 	},
@@ -546,15 +581,7 @@
 				{
 					"items": [
 						{
-							"name": "badtime.webm",
-							"type": "audio/webm; codecs=opus",
-							"sid": 792716153583695,
-							"file-info": {
-								"purpose": "none"
-							}
-						},
-						{
-							"name": "menuclose.webm",
+							"name": "menuClose.webm",
 							"type": "audio/webm; codecs=opus",
 							"sid": 317225835434484,
 							"file-info": {
@@ -562,7 +589,7 @@
 							}
 						},
 						{
-							"name": "menuopen.webm",
+							"name": "menuOpen.webm",
 							"type": "audio/webm; codecs=opus",
 							"sid": 788258526076956,
 							"file-info": {
@@ -570,7 +597,7 @@
 							}
 						},
 						{
-							"name": "menuselect.webm",
+							"name": "menuSelect.webm",
 							"type": "audio/webm; codecs=opus",
 							"sid": 371039216675165,
 							"file-info": {
@@ -578,7 +605,7 @@
 							}
 						},
 						{
-							"name": "cat2.webm",
+							"name": "meow2.webm",
 							"type": "audio/webm; codecs=opus",
 							"sid": 162206813864580,
 							"file-info": {
@@ -586,7 +613,7 @@
 							}
 						},
 						{
-							"name": "cat1.webm",
+							"name": "meow1.webm",
 							"type": "audio/webm; codecs=opus",
 							"sid": 975271719493235,
 							"file-info": {
@@ -595,20 +622,20 @@
 						}
 					],
 					"subfolders": [],
-					"name": "Menu"
+					"name": "menu"
 				},
 				{
 					"items": [
 						{
-							"name": "beer.webm",
+							"name": "defaultScream.webm",
 							"type": "audio/webm; codecs=opus",
-							"sid": 794024785931801,
+							"sid": 792716153583695,
 							"file-info": {
 								"purpose": "none"
 							}
 						},
 						{
-							"name": "death.webm",
+							"name": "defaultScreamBig.webm",
 							"type": "audio/webm; codecs=opus",
 							"sid": 349247501883914,
 							"file-info": {
@@ -616,47 +643,15 @@
 							}
 						},
 						{
-							"name": "door.webm",
+							"name": "defaultBeer.webm",
 							"type": "audio/webm; codecs=opus",
-							"sid": 544844035362112,
+							"sid": 794024785931801,
 							"file-info": {
 								"purpose": "none"
 							}
 						},
 						{
-							"name": "grunt.webm",
-							"type": "audio/webm; codecs=opus",
-							"sid": 533472205697221,
-							"file-info": {
-								"purpose": "none"
-							}
-						},
-						{
-							"name": "item.webm",
-							"type": "audio/webm; codecs=opus",
-							"sid": 173928847968162,
-							"file-info": {
-								"purpose": "none"
-							}
-						},
-						{
-							"name": "secret.webm",
-							"type": "audio/webm; codecs=opus",
-							"sid": 326865689950060,
-							"file-info": {
-								"purpose": "none"
-							}
-						},
-						{
-							"name": "weapon.webm",
-							"type": "audio/webm; codecs=opus",
-							"sid": 363019151138802,
-							"file-info": {
-								"purpose": "none"
-							}
-						},
-						{
-							"name": "wine.webm",
+							"name": "defaultWine.webm",
 							"type": "audio/webm; codecs=opus",
 							"sid": 603951439700712,
 							"file-info": {
@@ -664,15 +659,134 @@
 							}
 						},
 						{
-							"name": "buy.webm",
+							"name": "defaultGrunt.webm",
 							"type": "audio/webm; codecs=opus",
-							"sid": 861702515813164,
+							"sid": 533472205697221,
 							"file-info": {
 								"purpose": "none"
 							}
 						}
 					],
 					"subfolders": [],
+					"name": "default"
+				},
+				{
+					"items": [
+						{
+							"name": "francisGrunt.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 799385033804943,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "francisScreamBig.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 641762162181532,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "francisScream.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 305386827591944,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "francisBeer.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 589098821983511,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "francisWine.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 651368986529158,
+							"file-info": {
+								"purpose": "none"
+							}
+						}
+					],
+					"subfolders": [],
+					"name": "francis"
+				},
+				{
+					"items": [
+						{
+							"name": "buy.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 184131083415939,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "getItem.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 851827166978751,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "door.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 314804027094537,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "getWeapon.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 571722781995657,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "secret.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 275037508654224,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "ding.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 665996764607786,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "shuffle.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 630083179671396,
+							"file-info": {
+								"purpose": "none"
+							}
+						}
+					],
+					"subfolders": [
+						{
+							"items": [],
+							"subfolders": [],
+							"name": "Default"
+						},
+						{
+							"items": [],
+							"subfolders": [],
+							"name": "Francis"
+						}
+					],
 					"name": "Gameplay"
 				},
 				{
@@ -815,14 +929,6 @@
 		"general": {
 			"items": [
 				{
-					"name": "splashes.txt",
-					"type": "text/plain",
-					"sid": 152259492597153,
-					"file-info": {
-						"purpose": "none"
-					}
-				},
-				{
 					"name": "border.png",
 					"type": "image/png",
 					"sid": 357039827477666,
@@ -837,6 +943,46 @@
 					"file-info": {
 						"purpose": "stylesheet"
 					}
+				},
+				{
+					"name": "medals.json",
+					"type": "application/json",
+					"sid": 582096117564853,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "pickups.json",
+					"type": "application/json",
+					"sid": 379772082681765,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "drinks.json",
+					"type": "application/json",
+					"sid": 186273052445522,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "artworks.json",
+					"type": "application/json",
+					"sid": 161941448916540,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "skins.json",
+					"type": "application/json",
+					"sid": 716600434408932,
+					"file-info": {
+						"purpose": "none"
+					}
 				}
 			],
 			"subfolders": []
@@ -844,9 +990,9 @@
 	},
 	"timelines": {
 		"items": [
-			"Beer",
 			"Door",
 			"Drink",
+			"ForceSwap",
 			"Reach",
 			"Swap"
 		],
@@ -863,7 +1009,7 @@
 	},
 	"properties": {
 		"description": "DOOM: The Gallery Experience was created as an art piece designed to parody the wonderfully pretentious world of gallery openings.",
-		"version": "1.3.1",
+		"version": "1.4.0",
 		"autoIncrementVersion": false,
 		"author": "SCUM DOG GAMES",
 		"authorEmail": "contact@scum.dog",

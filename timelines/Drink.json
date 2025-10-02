@@ -6,7 +6,7 @@
 	"ease": "noease",
 	"pathMode": "line",
 	"resizeMode": "size",
-	"playheadTime": 0.5,
+	"playheadTime": 1,
 	"totalTime": 2,
 	"stepTime": 0.1,
 	"useStepTime": true,
@@ -36,7 +36,7 @@
 			"initialVisibility": true,
 			"id": "",
 			"virtualPosition": {
-				"offsetY": 0,
+				"offsetY": 116.73986814891835,
 				"useColor": true,
 				"colorSet": false,
 				"relativeFlags": 2047
@@ -52,6 +52,13 @@
 				{
 					"time": 0.5,
 					"tags": "",
+					"enabled": true,
+					"ease": "default",
+					"pathMode": "default"
+				},
+				{
+					"time": 1,
+					"tags": "drink",
 					"enabled": true,
 					"ease": "default",
 					"pathMode": "default"
@@ -107,6 +114,27 @@
 						},
 						{
 							"time": 0.5,
+							"enabled": true,
+							"resultMode": "default",
+							"ease": "default",
+							"pathMode": "default",
+							"value": 180,
+							"rValue": 180,
+							"aValue": 196,
+							"addons": [
+								{
+									"id": "cubic-bezier",
+									"data": {
+										"startAnchor": null,
+										"startEnable": false,
+										"endAnchor": null,
+										"endEnable": false
+									}
+								}
+							]
+						},
+						{
+							"time": 1,
 							"enabled": true,
 							"resultMode": "default",
 							"ease": "default",

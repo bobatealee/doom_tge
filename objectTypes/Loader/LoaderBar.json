@@ -4,8 +4,34 @@
 	"sid": 161598198113726,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
-	"instanceVariables": [],
-	"behaviorTypes": [],
+	"instanceVariables": [
+		{
+			"name": "minSize",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 264317965792516
+		},
+		{
+			"name": "maxSize",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 210134331630832
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Tween",
+			"name": "Tween",
+			"sid": 854797920750230
+		},
+		{
+			"behaviorId": "Timer",
+			"name": "Timer",
+			"sid": 380365937751232
+		}
+	],
 	"effectTypes": [],
 	"image": {
 		"width": 16,
@@ -16,7 +42,7 @@
 		"exportFormat": "lossless",
 		"exportQuality": 0.8,
 		"fileType": "image/png",
-		"imageSpriteId": 4407282,
+		"imageSpriteId": 3220169,
 		"useCollisionPoly": true,
 		"tag": ""
 	}

@@ -1,7 +1,7 @@
 {
 	"name": "Beer",
 	"plugin-id": "Sprite",
-	"sid": 648149631067186,
+	"sid": 643465231433530,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
@@ -20,7 +20,7 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 744051,
+						"imageSpriteId": 5025906,
 						"collisionPoly": {
 							"points": [
 								0.296875,
@@ -38,7 +38,7 @@
 						"tag": ""
 					}
 				],
-				"sid": 368718181037663,
+				"sid": 343818673691123,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

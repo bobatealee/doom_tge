@@ -1,7 +1,7 @@
 {
 	"name": "LoaderBase",
 	"plugin-id": "NinePatch",
-	"sid": 177713450812276,
+	"sid": 952396408410642,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
@@ -9,20 +9,20 @@
 		{
 			"behaviorId": "Tween",
 			"name": "Tween",
-			"sid": 406185552399031
+			"sid": 148191265136980
 		}
 	],
 	"effectTypes": [],
 	"image": {
-		"width": 24,
-		"height": 24,
+		"width": 18,
+		"height": 18,
 		"originX": 0.5,
 		"originY": 0.5,
 		"originalSource": "",
 		"exportFormat": "lossless",
 		"exportQuality": 0.8,
 		"fileType": "image/png",
-		"imageSpriteId": 8713869,
+		"imageSpriteId": 5013574,
 		"useCollisionPoly": true,
 		"tag": ""
 	}

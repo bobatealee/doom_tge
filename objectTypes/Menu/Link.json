@@ -11,6 +11,13 @@
 			"desc": "",
 			"show": true,
 			"sid": 634577530346369
+		},
+		{
+			"name": "init",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 745635080064901
 		}
 	],
 	"behaviorTypes": [],

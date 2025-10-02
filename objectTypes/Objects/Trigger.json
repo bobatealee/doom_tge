@@ -13,32 +13,25 @@
 			"sid": 648015302210823
 		},
 		{
+			"name": "type",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 965455860630110
+		},
+		{
+			"name": "skipSightCheck",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 882357997311989
+		},
+		{
 			"name": "observed",
 			"type": "boolean",
 			"desc": "",
 			"show": true,
 			"sid": 572733656412816
-		},
-		{
-			"name": "title",
-			"type": "string",
-			"desc": "",
-			"show": true,
-			"sid": 469141651243528
-		},
-		{
-			"name": "description",
-			"type": "string",
-			"desc": "",
-			"show": true,
-			"sid": 649998490075497
-		},
-		{
-			"name": "link",
-			"type": "string",
-			"desc": "",
-			"show": true,
-			"sid": 817970664523016
 		}
 	],
 	"behaviorTypes": [],

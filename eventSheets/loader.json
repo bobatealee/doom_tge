@@ -6,526 +6,351 @@
 			"includeSheet": "Global"
 		},
 		{
-			"eventType": "comment",
-			"text": "Loading"
+			"eventType": "variable",
+			"name": "LOADER_maxItems",
+			"type": "number",
+			"initialValue": "7",
+			"comment": "Total items to load",
+			"isStatic": true,
+			"isConstant": true,
+			"sid": 265284202331715
 		},
 		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-start-of-layout",
-					"objectClass": "System",
-					"sid": 888958205879775
-				}
-			],
-			"actions": [
-				{
-					"id": "stop-animation",
-					"objectClass": "LoaderPlay",
-					"sid": 359128639644149
-				},
-				{
-					"id": "set-opacity",
-					"objectClass": "LoaderPlay",
-					"sid": 412081193206935,
-					"parameters": {
-						"opacity": "0"
-					}
-				},
-				{
-					"id": "set-position",
-					"objectClass": "LoaderButton",
-					"sid": 823724433858641,
-					"parameters": {
-						"x": "LoaderBase.X",
-						"y": "LoaderBase.Y"
-					}
-				},
-				{
-					"id": "set-opacity",
-					"objectClass": "LoaderButton",
-					"sid": 795567626511797,
-					"parameters": {
-						"opacity": "0"
-					}
-				},
-				{
-					"id": "set-opacity",
-					"objectClass": "Scumdog",
-					"sid": 179014781806841,
-					"parameters": {
-						"opacity": "0"
-					}
-				},
-				{
-					"id": "request-project-file",
-					"objectClass": "AJAX",
-					"sid": 668992418317453,
-					"parameters": {
-						"tag": "\"splashes\"",
-						"file": "splashes.txt"
-					}
-				}
-			],
-			"sid": 604379326552263,
+			"eventType": "variable",
+			"name": "LOADER_progress",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "Progress, from 0-1",
+			"isStatic": true,
+			"isConstant": false,
+			"sid": 184137677798010
+		},
+		{
+			"eventType": "variable",
+			"name": "LOADER_clicked",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "Has the user already clicked?",
+			"isStatic": true,
+			"isConstant": false,
+			"sid": 564299675159952
+		},
+		{
+			"eventType": "variable",
+			"name": "LOADER_error",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "Was there an error?",
+			"isStatic": true,
+			"isConstant": false,
+			"sid": 804092099128504
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Loader - Initialization",
+			"description": "",
+			"isActiveOnStart": true,
 			"children": [
 				{
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "is-windows-webview2-export",
-							"objectClass": "PlatformInfo",
-							"sid": 962758741477651
-						},
-						{
-							"id": "is-linux-cef-export",
-							"objectClass": "PlatformInfo",
-							"sid": 205616012551624
-						},
-						{
-							"id": "compare-boolean-eventvar",
+							"id": "on-start-of-layout",
 							"objectClass": "System",
-							"sid": 696224021461838,
-							"parameters": {
-								"variable": "GAME_kiosk"
-							}
+							"sid": 660371501936615
 						}
 					],
 					"actions": [
 						{
-							"id": "set-layer-visible",
-							"objectClass": "System",
-							"sid": 342210766772016,
+							"id": "set-width",
+							"objectClass": "LoaderBar",
+							"sid": 127903072104253,
 							"parameters": {
-								"layer": "\"Loader\"",
-								"visibility": "invisible"
+								"width": "Self.minSize"
+							}
+						},
+						{
+							"id": "add-child",
+							"objectClass": "LoaderBar",
+							"sid": 318067884761648,
+							"parameters": {
+								"child": "LoaderBase",
+								"transform-x": true,
+								"transform-y": true,
+								"transform-w": false,
+								"transform-h": false,
+								"transform-a": false,
+								"transform-o": false,
+								"transform-z-elevation": false,
+								"transform-visibility": false,
+								"destroy-with-parent": false
+							}
+						},
+						{
+							"id": "add-child",
+							"objectClass": "LoaderBar",
+							"sid": 774086772873516,
+							"parameters": {
+								"child": "LoaderText",
+								"transform-x": true,
+								"transform-y": true,
+								"transform-w": false,
+								"transform-h": false,
+								"transform-a": false,
+								"transform-o": false,
+								"transform-z-elevation": false,
+								"transform-visibility": false,
+								"destroy-with-parent": false
 							}
 						}
 					],
-					"sid": 271458487129875,
-					"isOrBlock": true
-				}
-			]
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-completed",
-					"objectClass": "AJAX",
-					"sid": 258596696255038,
-					"parameters": {
-						"tag": "\"splashes\""
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-text",
-					"objectClass": "LoaderText",
-					"sid": 127941772150268,
-					"parameters": {
-						"text": "tokenat(AJAX.LastData, round(random(0, tokencount(AJAX.LastData, newline)-1)), newline)"
-					}
-				}
-			],
-			"sid": 872555966577666
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "has-tags",
-					"objectClass": "LoaderBar",
-					"sid": 242874771238469,
-					"parameters": {
-						"tags": "\"loading\""
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-width",
-					"objectClass": "LoaderBar",
-					"sid": 693683026562363,
-					"parameters": {
-						"width": "lerp(Self.Width, loadingprogress*(LoaderBase.Width-24)+14, 10*dt)"
-					}
-				}
-			],
-			"sid": 915847937035001
-		},
-		{
-			"eventType": "comment",
-			"text": "Loaded, play animation"
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-loader-layout-complete",
-					"objectClass": "System",
-					"sid": 901642310047575
-				}
-			],
-			"actions": [
-				{
-					"id": "change-tags",
-					"objectClass": "LoaderBar",
-					"sid": 763295535012333,
-					"parameters": {
-						"action": "remove",
-						"tags": "\"loading\""
-					}
-				},
-				{
-					"id": "tween-one-property",
-					"objectClass": "LoaderBase",
-					"sid": 366247487521824,
-					"behaviorType": "Tween",
-					"parameters": {
-						"tags": "\"shrink\"",
-						"property": "offsetWidth",
-						"end-value": "24",
-						"time": "0.25",
-						"ease": "easeinoutsine",
-						"destroy-on-complete": "no",
-						"loop": "no",
-						"ping-pong": "no",
-						"repeat-count": "1"
-					}
-				},
-				{
-					"id": "tween-one-property",
-					"objectClass": "LoaderButton",
-					"sid": 376919505772939,
-					"behaviorType": "Tween",
-					"parameters": {
-						"tags": "\"fade\"",
-						"property": "offsetOpacity",
-						"end-value": "100",
-						"time": "0.25",
-						"ease": "easeinoutsine",
-						"destroy-on-complete": "no",
-						"loop": "no",
-						"ping-pong": "no",
-						"repeat-count": "1"
-					}
-				}
-			],
-			"sid": 665717663952560
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-tweens-finished",
-					"objectClass": "LoaderBase",
-					"sid": 810224695050893,
-					"behaviorType": "Tween",
-					"parameters": {
-						"tags": "\"shrink\""
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "tween-one-property",
-					"objectClass": "LoaderBase",
-					"sid": 160106228474291,
-					"behaviorType": "Tween",
-					"parameters": {
-						"tags": "\"grow\"",
-						"property": "offsetWidth",
-						"end-value": "80",
-						"time": "0.25",
-						"ease": "easeinoutquint",
-						"destroy-on-complete": "no",
-						"loop": "no",
-						"ping-pong": "no",
-						"repeat-count": "1"
-					}
-				},
-				{
-					"id": "tween-one-property",
-					"objectClass": "LoaderBase",
-					"sid": 284556763195378,
-					"behaviorType": "Tween",
-					"parameters": {
-						"tags": "\"grow\"",
-						"property": "offsetHeight",
-						"end-value": "40",
-						"time": "0.25",
-						"ease": "easeinoutquint",
-						"destroy-on-complete": "no",
-						"loop": "no",
-						"ping-pong": "no",
-						"repeat-count": "1"
-					}
-				}
-			],
-			"sid": 693499155800593
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-tweens-finished",
-					"objectClass": "LoaderBase",
-					"sid": 918181253710806,
-					"behaviorType": "Tween",
-					"parameters": {
-						"tags": "\"grow\""
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "tween-one-property",
-					"objectClass": "LoaderPlay",
-					"sid": 163803365195700,
-					"behaviorType": "Tween",
-					"parameters": {
-						"tags": "\"fade\"",
-						"property": "offsetOpacity",
-						"end-value": "100",
-						"time": "0.25",
-						"ease": "easeinoutsine",
-						"destroy-on-complete": "no",
-						"loop": "no",
-						"ping-pong": "no",
-						"repeat-count": "1"
-					}
-				}
-			],
-			"sid": 550428662194076
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "is-playing",
-					"objectClass": "LoaderBase",
-					"sid": 963915188182187,
-					"behaviorType": "Tween",
-					"parameters": {
-						"tags": "\"shrink\""
-					}
-				},
-				{
-					"id": "is-playing",
-					"objectClass": "LoaderBase",
-					"sid": 238009545528730,
-					"behaviorType": "Tween",
-					"parameters": {
-						"tags": "\"grow\""
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-size",
-					"objectClass": "LoaderBar",
-					"sid": 186237929621089,
-					"parameters": {
-						"width": "LoaderBase.Width-10",
-						"height": "LoaderBase.Height-10"
-					}
-				},
-				{
-					"id": "set-position",
-					"objectClass": "LoaderBar",
-					"sid": 513727894591963,
-					"parameters": {
-						"x": "LoaderBase.X-Self.Width/2",
-						"y": "LoaderBase.Y-Self.Height-5"
-					}
-				},
-				{
-					"id": "set-size",
-					"objectClass": "LoaderButton",
-					"sid": 326753131810262,
-					"parameters": {
-						"width": "LoaderBase.Width",
-						"height": "LoaderBase.Height"
-					}
-				}
-			],
-			"sid": 774833440454377,
-			"isOrBlock": true
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-tweens-finished",
-					"objectClass": "LoaderPlay",
-					"sid": 749430001782046,
-					"behaviorType": "Tween",
-					"parameters": {
-						"tags": "\"fade\""
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "destroy",
-					"objectClass": "LoaderBase",
-					"sid": 870868212462516
-				},
-				{
-					"id": "destroy",
-					"objectClass": "LoaderBar",
-					"sid": 206101229349583
-				},
-				{
-					"id": "destroy",
-					"objectClass": "LoaderButton",
-					"sid": 865517312089935
-				}
-			],
-			"sid": 986518893008223
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "is-playing",
-					"objectClass": "Scumdog",
-					"sid": 443362862971078,
-					"behaviorType": "Tween",
-					"parameters": {
-						"tags": "\"fade\""
-					},
-					"isInverted": true
-				},
-				{
-					"id": "layer-is-visible",
-					"objectClass": "System",
-					"sid": 447369987621527,
-					"parameters": {
-						"layer": "\"Logo\""
-					}
-				},
-				{
-					"id": "compare-boolean-eventvar",
-					"objectClass": "System",
-					"sid": 398683463737565,
-					"parameters": {
-						"variable": "GAME_loaded"
-					}
-				},
-				{
-					"id": "trigger-once-while-true",
-					"objectClass": "System",
-					"sid": 527745602945067
-				}
-			],
-			"actions": [
-				{
-					"id": "wait",
-					"objectClass": "System",
-					"sid": 783777538526146,
-					"parameters": {
-						"seconds": "1.5",
-						"use-timescale": true
-					}
-				},
-				{
-					"id": "tween-one-property",
-					"objectClass": "Scumdog",
-					"sid": 787707835392298,
-					"behaviorType": "Tween",
-					"parameters": {
-						"tags": "\"final\"",
-						"property": "offsetOpacity",
-						"end-value": "0",
-						"time": "0.25",
-						"ease": "easeoutsine",
-						"destroy-on-complete": "yes",
-						"loop": "no",
-						"ping-pong": "no",
-						"repeat-count": "1"
-					}
-				}
-			],
-			"sid": 994371488821494
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-tweens-finished",
-					"objectClass": "Scumdog",
-					"sid": 127959489357858,
-					"behaviorType": "Tween",
-					"parameters": {
-						"tags": "\"final\""
-					}
-				}
-			],
-			"actions": [
-				{
-					"callFunction": "transition",
-					"sid": 672674490908948,
-					"parameters": [
-						"\"menu\""
+					"sid": 641839395616115,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 824001960824087,
+									"parameters": {
+										"variable": "GAME_standalone"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-layer-opacity",
+									"objectClass": "System",
+									"sid": 615320217848897,
+									"parameters": {
+										"layer": "\"Loader\"",
+										"opacity": "0"
+									}
+								},
+								{
+									"id": "set-layer-opacity",
+									"objectClass": "System",
+									"sid": 747740901850169,
+									"parameters": {
+										"layer": "\"Logo\"",
+										"opacity": "0"
+									}
+								},
+								{
+									"id": "tween-value",
+									"objectClass": "LoaderBar",
+									"sid": 433343112874262,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"fadeIn\"",
+										"start-value": "0",
+										"end-value": "100",
+										"time": "0.5",
+										"ease": "easeinoutsine",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no",
+										"repeat-count": "1"
+									}
+								},
+								{
+									"id": "set-y",
+									"objectClass": "LoaderBar",
+									"sid": 545672184686590,
+									"parameters": {
+										"y": "180"
+									}
+								}
+							],
+							"sid": 365064733728518
+						}
 					]
-				}
-			],
-			"sid": 627526675365601
-		},
-		{
-			"eventType": "comment",
-			"text": "Buttons"
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "compare-opacity",
-					"objectClass": "LoaderPlay",
-					"sid": 544197971965215,
-					"parameters": {
-						"comparison": 5,
-						"opacity": "100"
-					}
-				}
-			],
-			"actions": [],
-			"sid": 593922867692944,
-			"children": [
+				},
 				{
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "cursor-is-over-object",
-							"objectClass": "Mouse",
-							"sid": 327518216723506,
+							"id": "is-playing",
+							"objectClass": "LoaderBar",
+							"sid": 483327128234839,
+							"behaviorType": "Tween",
 							"parameters": {
-								"object": "LoaderPlay"
+								"tags": "\"fadeIn\""
 							}
 						}
 					],
 					"actions": [
 						{
-							"id": "set-animation-frame",
-							"objectClass": "LoaderPlay",
-							"sid": 343286419502410,
+							"id": "set-layer-opacity",
+							"objectClass": "System",
+							"sid": 341757770905633,
 							"parameters": {
-								"frame-number": "1"
-							}
-						},
-						{
-							"id": "set-cursor-style2",
-							"objectClass": "Mouse",
-							"sid": 333116927099100,
-							"parameters": {
-								"cursor-style": "pointer"
+								"layer": "\"Logo\"",
+								"opacity": "LoaderBar.Tween.Value(\"fadeIn\")"
 							}
 						}
 					],
-					"sid": 840087567688360
+					"sid": 896350314775694
+				}
+			],
+			"sid": 551080711206824
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Loader - Loading",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "variable",
+					"name": "LOADER_progressOld",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "Progress to compare to",
+					"isStatic": true,
+					"isConstant": false,
+					"sid": 734528761447037
+				},
+				{
+					"eventType": "comment",
+					"text": "Update progress"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 391206721530694
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 932912655460293,
+							"parameters": {
+								"variable": "LOADER_progressOld",
+								"value": "LOADER_progress"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 737273996165980,
+							"parameters": {
+								"variable": "LOADER_progress",
+								"value": "(loadingprogress+LOAD_artworks+LOAD_pickups+LOAD_drinks+LOAD_skins+LOAD_medals+LOAD_save)/LOADER_maxItems"
+							}
+						},
+						{
+							"id": "set-width",
+							"objectClass": "LoaderBar",
+							"sid": 488592826624191,
+							"parameters": {
+								"width": "lerp(Self.Width, Self.minSize+(Self.maxSize-Self.minSize)*LOADER_progress, dt*5)"
+							}
+						}
+					],
+					"sid": 202672512137861,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "LoaderText",
+									"sid": 422547146215623,
+									"parameters": {
+										"instance-variable": "type",
+										"comparison": 0,
+										"value": "\"loading\""
+									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "LoaderText",
+									"sid": 762764991183472,
+									"parameters": {
+										"instance-variable": "override"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "LoaderText",
+									"sid": 940556990015365,
+									"parameters": {
+										"text": "\"Loading... \"&floor(loadingprogress)+LOAD_artworks+LOAD_pickups+LOAD_drinks+LOAD_skins+LOAD_medals+LOAD_save&\"/\"&LOADER_maxItems"
+									}
+								}
+							],
+							"sid": 797499016556316
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "LoaderText",
+									"sid": 377935843337900,
+									"parameters": {
+										"instance-variable": "type",
+										"comparison": 0,
+										"value": "\"percent\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "LoaderText",
+									"sid": 551179551310749,
+									"parameters": {
+										"text": "round(LOADER_progress*100)&\"%\""
+									}
+								}
+							],
+							"sid": 684100803359257
+						}
+					]
+				},
+				{
+					"eventType": "comment",
+					"text": "If there's been no progress in 10 seconds, throw an error"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 978122991000062,
+							"parameters": {
+								"variable": "LOADER_progressOld",
+								"comparison": 0,
+								"value": "LOADER_progress"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "stop-timer",
+							"objectClass": "LoaderBar",
+							"sid": 134319304305817,
+							"behaviorType": "Timer",
+							"parameters": {
+								"tag": "\"timeout\""
+							}
+						}
+					],
+					"sid": 398722956363681
 				},
 				{
 					"eventType": "block",
@@ -533,251 +358,81 @@
 						{
 							"id": "else",
 							"objectClass": "System",
-							"sid": 813271805637255
+							"sid": 419814191049841
+						},
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 202715249914190
 						}
 					],
 					"actions": [
 						{
-							"id": "set-animation-frame",
-							"objectClass": "LoaderPlay",
-							"sid": 415509829513776,
+							"id": "start-timer",
+							"objectClass": "LoaderBar",
+							"sid": 375949159414122,
+							"behaviorType": "Timer",
 							"parameters": {
-								"frame-number": "0"
-							}
-						},
-						{
-							"id": "set-cursor-style2",
-							"objectClass": "Mouse",
-							"sid": 228808625416227,
-							"parameters": {
-								"cursor-style": "normal"
+								"duration": "10",
+								"type": "once",
+								"tag": "\"timeout\""
 							}
 						}
 					],
-					"sid": 648567371196179
+					"sid": 764176641703131
 				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "mouse-button-is-down",
-							"objectClass": "Mouse",
-							"sid": 135491732011165,
-							"parameters": {
-								"mouse-button": "left"
-							}
-						},
-						{
-							"id": "is-in-touch",
-							"objectClass": "Touch",
-							"sid": 544243923182945
-						}
-					],
-					"actions": [],
-					"sid": 509864687454465,
-					"children": [
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "cursor-is-over-object",
-									"objectClass": "Mouse",
-									"sid": 966948047471203,
-									"parameters": {
-										"object": "LoaderPlay"
-									}
-								},
-								{
-									"id": "is-touching-object",
-									"objectClass": "Touch",
-									"sid": 884577035102966,
-									"parameters": {
-										"object": "LoaderPlay"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-animation-frame",
-									"objectClass": "LoaderPlay",
-									"sid": 367779050804547,
-									"parameters": {
-										"frame-number": "2"
-									}
-								}
-							],
-							"sid": 143970946205519,
-							"isOrBlock": true
-						}
-					],
-					"isOrBlock": true
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-button-released",
-							"objectClass": "Mouse",
-							"sid": 677926805656591,
-							"parameters": {
-								"mouse-button": "left"
-							}
-						},
-						{
-							"id": "on-any-touch-end",
-							"objectClass": "Touch",
-							"sid": 909362410883178
-						}
-					],
-					"actions": [],
-					"sid": 720966654444962,
-					"children": [
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "cursor-is-over-object",
-									"objectClass": "Mouse",
-									"sid": 130472827658429,
-									"parameters": {
-										"object": "LoaderPlay"
-									}
-								},
-								{
-									"id": "is-touching-object",
-									"objectClass": "Touch",
-									"sid": 912417994610310,
-									"parameters": {
-										"object": "LoaderPlay"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "destroy",
-									"objectClass": "LoaderPlay",
-									"sid": 572481405492611
-								},
-								{
-									"id": "set-cursor-style2",
-									"objectClass": "Mouse",
-									"sid": 255201690873818,
-									"parameters": {
-										"cursor-style": "normal"
-									}
-								},
-								{
-									"id": "set-layer-visible",
-									"objectClass": "System",
-									"sid": 256607523804621,
-									"parameters": {
-										"layer": "\"Loader\"",
-										"visibility": "invisible"
-									}
-								},
-								{
-									"id": "set-layer-visible",
-									"objectClass": "System",
-									"sid": 840013668449848,
-									"parameters": {
-										"layer": "\"Logo\"",
-										"visibility": "visible"
-									}
-								},
-								{
-									"id": "tween-one-property",
-									"objectClass": "Scumdog",
-									"sid": 284274477146251,
-									"behaviorType": "Tween",
-									"parameters": {
-										"tags": "\"fade\"",
-										"property": "offsetOpacity",
-										"end-value": "100",
-										"time": "0.5",
-										"ease": "easeinsine",
-										"destroy-on-complete": "no",
-										"loop": "no",
-										"ping-pong": "no",
-										"repeat-count": "1"
-									}
-								}
-							],
-							"sid": 572351541222331,
-							"isOrBlock": true
-						}
-					],
-					"isOrBlock": true
-				}
-			]
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-loader-layout-complete",
-					"objectClass": "System",
-					"sid": 303849572235292
-				}
-			],
-			"actions": [],
-			"sid": 274938986926804,
-			"children": [
 				{
 					"eventType": "comment",
-					"text": "Standalone skips right to the logo"
+					"text": "Standalone - Show progress bar if timeout has ran 1/4 of the way"
 				},
 				{
 					"eventType": "block",
 					"conditions": [
-						{
-							"id": "is-windows-webview2-export",
-							"objectClass": "PlatformInfo",
-							"sid": 111149204659890
-						},
-						{
-							"id": "is-linux-cef-export",
-							"objectClass": "PlatformInfo",
-							"sid": 216438518798868
-						},
 						{
 							"id": "compare-boolean-eventvar",
 							"objectClass": "System",
-							"sid": 261291097296435,
+							"sid": 253554597389232,
 							"parameters": {
-								"variable": "GAME_kiosk"
+								"variable": "GAME_standalone"
 							}
+						},
+						{
+							"id": "is-timer-running",
+							"objectClass": "LoaderBar",
+							"sid": 868751041406152,
+							"behaviorType": "Timer",
+							"parameters": {
+								"tag": "\"timeout\""
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 901626680195894,
+							"parameters": {
+								"first-value": "LoaderBar.Timer.CurrentTime(\"timeout\")",
+								"comparison": 5,
+								"second-value": "LoaderBar.Timer.Duration(\"timeout\")/4"
+							}
+						},
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 718137234598569
 						}
 					],
 					"actions": [
 						{
-							"id": "set-layer-visible",
-							"objectClass": "System",
-							"sid": 317666153799019,
-							"parameters": {
-								"layer": "\"Loader\"",
-								"visibility": "invisible"
-							}
-						},
-						{
-							"id": "set-layer-visible",
-							"objectClass": "System",
-							"sid": 709220316976793,
-							"parameters": {
-								"layer": "\"Logo\"",
-								"visibility": "visible"
-							}
-						},
-						{
 							"id": "tween-one-property",
-							"objectClass": "Scumdog",
-							"sid": 271677212906384,
+							"objectClass": "LoaderBar",
+							"sid": 644856016148030,
 							"behaviorType": "Tween",
 							"parameters": {
-								"tags": "\"fade\"",
-								"property": "offsetOpacity",
-								"end-value": "100",
-								"time": "0.5",
-								"ease": "easeinsine",
+								"tags": "\"\"",
+								"property": "offsetY",
+								"end-value": "156",
+								"time": "0.25",
+								"ease": "easeinoutsine",
 								"destroy-on-complete": "no",
 								"loop": "no",
 								"ping-pong": "no",
@@ -785,10 +440,587 @@
 							}
 						}
 					],
-					"sid": 549819627923406,
+					"sid": 317947492256886
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-timer",
+							"objectClass": "LoaderBar",
+							"sid": 198244230451357,
+							"behaviorType": "Timer",
+							"parameters": {
+								"tag": "\"timeout\""
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 705990556625115,
+							"parameters": {
+								"variable": "LOADER_progress",
+								"comparison": 5,
+								"value": "1"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "loadComplete",
+							"sid": 131185866730574,
+							"parameters": [
+								"2"
+							]
+						}
+					],
+					"sid": 872930131951760
+				},
+				{
+					"eventType": "comment",
+					"text": "Progress is ready"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 685389269322448,
+							"parameters": {
+								"variable": "LOADER_progress",
+								"comparison": 5,
+								"value": "1"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 154421084455064,
+							"parameters": {
+								"variable": "LOADER_error"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 519453333482460
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "loadComplete",
+							"sid": 253702100415954,
+							"parameters": [
+								"0"
+							]
+						}
+					],
+					"sid": 990405788379165
+				},
+				{
+					"eventType": "comment",
+					"text": "Loading is complete"
+				},
+				{
+					"functionName": "loadComplete",
+					"functionDescription": "We've completed loading",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [
+						{
+							"name": "error",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"sid": 996848426402556
+						}
+					],
+					"eventType": "function-block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "LoaderText",
+							"sid": 769217499799366,
+							"parameters": {
+								"instance-variable": "type",
+								"comparison": 0,
+								"value": "\"loading\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "tween-one-property",
+							"objectClass": "LoaderBar",
+							"sid": 120639179391619,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"\"",
+								"property": "offsetY",
+								"end-value": "180",
+								"time": "0.25",
+								"ease": "easeinoutsine",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "no",
+								"repeat-count": "1"
+							}
+						},
+						{
+							"id": "set-opacity",
+							"objectClass": "LoaderText",
+							"sid": 255105131754831,
+							"parameters": {
+								"opacity": "100"
+							}
+						},
+						{
+							"id": "tween-one-property",
+							"objectClass": "LoaderText",
+							"sid": 385375662370146,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"\"",
+								"property": "offsetOpacity",
+								"end-value": "50",
+								"time": "0.75",
+								"ease": "easeinoutsine",
+								"destroy-on-complete": "no",
+								"loop": "yes",
+								"ping-pong": "yes",
+								"repeat-count": "1"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "LoaderText",
+							"sid": 370034256978685,
+							"parameters": {
+								"instance-variable": "override",
+								"value": "true"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "LoaderText",
+							"sid": 518869925092607,
+							"parameters": {
+								"text": "\"Click anywhere to begin\""
+							}
+						}
+					],
+					"sid": 797771697973758,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 720712057943418,
+									"parameters": {
+										"variable": "GAME_standalone"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-cursor-style2",
+									"objectClass": "Mouse",
+									"sid": 486938845446302,
+									"parameters": {
+										"cursor-style": "pointer"
+									}
+								}
+							],
+							"sid": 771062191865329
+						},
+						{
+							"eventType": "comment",
+							"text": "Errors:\n1 - AJAX error\n2 - Took too long"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 594533243740986,
+									"parameters": {
+										"variable": "error",
+										"comparison": 4,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-cursor-style2",
+									"objectClass": "Mouse",
+									"sid": 737414753655943,
+									"parameters": {
+										"cursor-style": "pointer"
+									}
+								},
+								{
+									"id": "move-to-layer",
+									"objectClass": "LoaderText",
+									"sid": 921827250712514,
+									"parameters": {
+										"layer": "\"Bar\""
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "LoaderText",
+									"sid": 575985099197987,
+									"parameters": {
+										"text": "\"ERROR (\"&error&\") - Click anywhere to reload\""
+									}
+								},
+								{
+									"id": "set-default-color",
+									"objectClass": "LoaderText",
+									"sid": 206868886788941,
+									"parameters": {
+										"color": "rgbEx255(255, 128, 128)"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 546038225944632,
+									"parameters": {
+										"variable": "LOADER_error",
+										"value": "true"
+									}
+								},
+								{
+									"id": "set-default-color",
+									"objectClass": "ScumDog",
+									"sid": 348896076671206,
+									"parameters": {
+										"color": "rgbEx255(255, 128, 128)"
+									}
+								}
+							],
+							"sid": 875149992410335
+						}
+					]
+				},
+				{
+					"eventType": "comment",
+					"text": "Click"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-signal",
+							"objectClass": "System",
+							"sid": 188501250059093,
+							"parameters": {
+								"tag": "\"inputMouse\""
+							}
+						},
+						{
+							"id": "on-signal",
+							"objectClass": "System",
+							"sid": 249500629887774,
+							"parameters": {
+								"tag": "\"inputTouch\""
+							}
+						}
+					],
+					"actions": [],
+					"sid": 699567889901692,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 931349050192488,
+									"parameters": {
+										"variable": "LOADER_clicked"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [],
+							"sid": 402276541538072,
+							"children": [
+								{
+									"eventType": "comment",
+									"text": "Reload the game if there's an error"
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 793047297185883,
+											"parameters": {
+												"variable": "LOADER_error"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 422313819678979,
+											"parameters": {
+												"variable": "LOADER_clicked",
+												"value": "true"
+											}
+										},
+										{
+											"id": "reload",
+											"objectClass": "Browser",
+											"sid": 337679734547475
+										}
+									],
+									"sid": 424369883722288
+								},
+								{
+									"eventType": "comment",
+									"text": "Proceed"
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 823299284307569
+										},
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 928542402605628,
+											"parameters": {
+												"variable": "LOADER_progress",
+												"comparison": 0,
+												"value": "1"
+											}
+										},
+										{
+											"id": "compare-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 250095880077509,
+											"parameters": {
+												"variable": "GAME_standalone"
+											},
+											"isInverted": true
+										}
+									],
+									"actions": [
+										{
+											"id": "set-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 904935637001193,
+											"parameters": {
+												"variable": "LOADER_clicked",
+												"value": "true"
+											}
+										},
+										{
+											"id": "set-cursor-style2",
+											"objectClass": "Mouse",
+											"sid": 372378504010700,
+											"parameters": {
+												"cursor-style": "normal"
+											}
+										},
+										{
+											"id": "tween-value",
+											"objectClass": "LoaderBar",
+											"sid": 423462074822715,
+											"behaviorType": "Tween",
+											"parameters": {
+												"tags": "\"fadeOut\"",
+												"start-value": "100",
+												"end-value": "0",
+												"time": "0.5",
+												"ease": "easeinoutsine",
+												"destroy-on-complete": "no",
+												"loop": "no",
+												"ping-pong": "no",
+												"repeat-count": "1"
+											}
+										}
+									],
+									"sid": 247882641239287
+								}
+							]
+						}
+					],
 					"isOrBlock": true
 				}
-			]
+			],
+			"sid": 147713310702919
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Loader - Transition",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "comment",
+					"text": "Non-standalone"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 560166446503857,
+							"parameters": {
+								"variable": "GAME_standalone"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [],
+					"sid": 841869814689026,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-playing",
+									"objectClass": "LoaderBar",
+									"sid": 797675253828875,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"fadeOut\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-layer-opacity",
+									"objectClass": "System",
+									"sid": 466455987147664,
+									"parameters": {
+										"layer": "\"Loader\"",
+										"opacity": "LoaderBar.Tween.Value(\"fadeOut\")"
+									}
+								}
+							],
+							"sid": 315235227261512
+						},
+						{
+							"eventType": "comment",
+							"text": "Show logo and then transition"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-tweens-finished",
+									"objectClass": "LoaderBar",
+									"sid": 704757557953521,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"fadeOut\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 956294549485914,
+									"parameters": {
+										"seconds": "1.5",
+										"use-timescale": true
+									}
+								},
+								{
+									"callFunction": "transition",
+									"sid": 791760581248021,
+									"parameters": [
+										"\"Title\""
+									]
+								}
+							],
+							"sid": 796395088253437
+						}
+					]
+				},
+				{
+					"eventType": "comment",
+					"text": "Standalone"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 640494849799788
+						},
+						{
+							"id": "is-playing",
+							"objectClass": "LoaderBar",
+							"sid": 353230858956751,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"fadeIn\""
+							},
+							"isInverted": true
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 507114093227819,
+							"parameters": {
+								"variable": "LOADER_progress",
+								"comparison": 5,
+								"value": "1"
+							}
+						},
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 460912248426147
+						}
+					],
+					"actions": [
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 490357467709492,
+							"parameters": {
+								"seconds": "1.5",
+								"use-timescale": true
+							}
+						},
+						{
+							"callFunction": "transition",
+							"sid": 754885770028080,
+							"parameters": [
+								"\"Title\""
+							]
+						}
+					],
+					"sid": 554807972624418
+				}
+			],
+			"sid": 116110362478807
 		}
 	],
 	"sid": 930092798194707

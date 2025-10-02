@@ -48,13 +48,6 @@
 			"sid": 475508607010041
 		},
 		{
-			"name": "playerAngle",
-			"type": "number",
-			"desc": "",
-			"show": true,
-			"sid": 650152574414173
-		},
-		{
 			"name": "playerSpeedHorizontal",
 			"type": "number",
 			"desc": "",
@@ -67,20 +60,6 @@
 			"desc": "",
 			"show": true,
 			"sid": 884150060503926
-		},
-		{
-			"name": "playerOldX",
-			"type": "number",
-			"desc": "",
-			"show": true,
-			"sid": 411269980070562
-		},
-		{
-			"name": "playerOldY",
-			"type": "number",
-			"desc": "",
-			"show": true,
-			"sid": 848458528338172
 		}
 	],
 	"behaviorTypes": [
@@ -88,6 +67,11 @@
 			"behaviorId": "EightDir",
 			"name": "8Direction",
 			"sid": 996840225831677
+		},
+		{
+			"behaviorId": "Tween",
+			"name": "Tween",
+			"sid": 677569814996364
 		}
 	],
 	"effectTypes": [],

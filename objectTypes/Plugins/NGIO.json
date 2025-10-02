@@ -1,0 +1,21 @@
+{
+	"name": "NGIO",
+	"plugin-id": "ppstudio_newgroundsio_plugin",
+	"sid": 661739935876903,
+	"singleglobal-inst": {
+		"type": "NGIO",
+		"properties": {
+			"game-version": "1.0.0",
+			"appID": "59419:haSIuWt4",
+			"aesKey": "fH74UHhmdDFwSOyMeL5XYA==",
+			"checkHostLicense": false,
+			"autoLogNewView": false,
+			"native-notifications": false,
+			"native-suspend": false,
+			"prevent-default": false
+		},
+		"uid": 452,
+		"sid": 235945245117822,
+		"tags": ""
+	}
+}

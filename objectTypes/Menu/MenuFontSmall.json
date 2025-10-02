@@ -4,8 +4,22 @@
 	"sid": 483328351099687,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
-	"instanceVariables": [],
-	"behaviorTypes": [],
+	"instanceVariables": [
+		{
+			"name": "type",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 391905028710213
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Tween",
+			"name": "Tween",
+			"sid": 524736367843310
+		}
+	],
 	"effectTypes": [],
 	"image": {
 		"width": 156,
@@ -16,7 +30,7 @@
 		"exportFormat": "lossless",
 		"exportQuality": 0.8,
 		"fileType": "image/png",
-		"imageSpriteId": 5767868,
+		"imageSpriteId": 7812157,
 		"useCollisionPoly": true,
 		"tag": ""
 	}

@@ -14,136 +14,556 @@
 	],
 	"effectTypes": [],
 	"animations": {
-		"items": [
+		"items": [],
+		"subfolders": [
 			{
-				"frames": [
+				"items": [
 					{
-						"width": 24,
-						"height": 29,
-						"originX": 0.5,
-						"originY": 0.5172413793103449,
-						"originalSource": "",
-						"exportFormat": "lossless",
-						"exportQuality": 0.8,
-						"fileType": "image/png",
-						"imageSpriteId": 2410112,
-						"useCollisionPoly": true,
-						"duration": 1,
-						"tag": ""
+						"frames": [
+							{
+								"width": 24,
+								"height": 29,
+								"originX": 0.5,
+								"originY": 0.5172413793103449,
+								"originalSource": "",
+								"exportFormat": "lossless",
+								"exportQuality": 0.8,
+								"fileType": "image/png",
+								"imageSpriteId": 2410112,
+								"useCollisionPoly": true,
+								"duration": 1,
+								"tag": ""
+							},
+							{
+								"width": 24,
+								"height": 29,
+								"originX": 0.5,
+								"originY": 0.5172413793103449,
+								"originalSource": "",
+								"exportFormat": "lossless",
+								"exportQuality": 0.8,
+								"fileType": "image/png",
+								"imageSpriteId": 1901386,
+								"useCollisionPoly": true,
+								"duration": 1,
+								"tag": ""
+							},
+							{
+								"width": 24,
+								"height": 29,
+								"originX": 0.5,
+								"originY": 0.5172413793103449,
+								"originalSource": "",
+								"exportFormat": "lossless",
+								"exportQuality": 0.8,
+								"fileType": "image/png",
+								"imageSpriteId": 5249632,
+								"useCollisionPoly": true,
+								"duration": 1,
+								"tag": ""
+							}
+						],
+						"sid": 325069477864414,
+						"name": "defaultNormal",
+						"isLooping": false,
+						"isPingPong": false,
+						"repeatCount": 1,
+						"repeatTo": 0,
+						"speed": 5
 					},
 					{
-						"width": 24,
-						"height": 29,
-						"originX": 0.5,
-						"originY": 0.5172413793103449,
-						"originalSource": "",
-						"exportFormat": "lossless",
-						"exportQuality": 0.8,
-						"fileType": "image/png",
-						"imageSpriteId": 1901386,
-						"useCollisionPoly": true,
-						"duration": 1,
-						"tag": ""
+						"frames": [
+							{
+								"width": 24,
+								"height": 30,
+								"originX": 0.5,
+								"originY": 0.5,
+								"originalSource": "",
+								"exportFormat": "lossless",
+								"exportQuality": 0.8,
+								"fileType": "image/png",
+								"imageSpriteId": 2064166,
+								"useCollisionPoly": true,
+								"duration": 1,
+								"tag": ""
+							}
+						],
+						"sid": 386558125496289,
+						"name": "defaultBeer",
+						"isLooping": false,
+						"isPingPong": false,
+						"repeatCount": 1,
+						"repeatTo": 0,
+						"speed": 5
 					},
 					{
-						"width": 24,
-						"height": 29,
-						"originX": 0.5,
-						"originY": 0.5172413793103449,
-						"originalSource": "",
-						"exportFormat": "lossless",
-						"exportQuality": 0.8,
-						"fileType": "image/png",
-						"imageSpriteId": 5249632,
-						"useCollisionPoly": true,
-						"duration": 1,
-						"tag": ""
+						"frames": [
+							{
+								"width": 24,
+								"height": 30,
+								"originX": 0.5,
+								"originY": 0.5,
+								"originalSource": "",
+								"exportFormat": "lossless",
+								"exportQuality": 0.8,
+								"fileType": "image/png",
+								"imageSpriteId": 6402688,
+								"useCollisionPoly": true,
+								"duration": 1,
+								"tag": ""
+							}
+						],
+						"sid": 187379840043569,
+						"name": "defaultSleep",
+						"isLooping": false,
+						"isPingPong": false,
+						"repeatCount": 1,
+						"repeatTo": 0,
+						"speed": 5
+					},
+					{
+						"frames": [
+							{
+								"width": 24,
+								"height": 31,
+								"originX": 0.5,
+								"originY": 0.4838709677419355,
+								"originalSource": "",
+								"exportFormat": "lossless",
+								"exportQuality": 0.8,
+								"fileType": "image/png",
+								"imageSpriteId": 6025060,
+								"useCollisionPoly": true,
+								"duration": 1,
+								"tag": ""
+							}
+						],
+						"sid": 573322737523003,
+						"name": "defaultScream",
+						"isLooping": false,
+						"isPingPong": false,
+						"repeatCount": 1,
+						"repeatTo": 0,
+						"speed": 5
 					}
 				],
-				"sid": 325069477864414,
-				"name": "default",
-				"isLooping": false,
-				"isPingPong": false,
-				"repeatCount": 1,
-				"repeatTo": 0,
-				"speed": 5
+				"subfolders": [],
+				"name": "default"
 			},
 			{
-				"frames": [
+				"items": [
 					{
-						"width": 24,
-						"height": 30,
-						"originX": 0.5,
-						"originY": 0.5,
-						"originalSource": "",
-						"exportFormat": "lossless",
-						"exportQuality": 0.8,
-						"fileType": "image/png",
-						"imageSpriteId": 2064166,
-						"useCollisionPoly": true,
-						"duration": 1,
-						"tag": ""
+						"frames": [
+							{
+								"width": 24,
+								"height": 29,
+								"originX": 0.5,
+								"originY": 0.5172413793103449,
+								"originalSource": "",
+								"exportFormat": "lossless",
+								"exportQuality": 0.8,
+								"fileType": "image/png",
+								"imageSpriteId": 720348,
+								"useCollisionPoly": true,
+								"duration": 1,
+								"tag": ""
+							},
+							{
+								"width": 24,
+								"height": 29,
+								"originX": 0.5,
+								"originY": 0.5172413793103449,
+								"originalSource": "",
+								"exportFormat": "lossless",
+								"exportQuality": 0.8,
+								"fileType": "image/png",
+								"imageSpriteId": 8117874,
+								"useCollisionPoly": true,
+								"duration": 1,
+								"tag": ""
+							},
+							{
+								"width": 24,
+								"height": 29,
+								"originX": 0.5,
+								"originY": 0.5172413793103449,
+								"originalSource": "",
+								"exportFormat": "lossless",
+								"exportQuality": 0.8,
+								"fileType": "image/png",
+								"imageSpriteId": 7711260,
+								"useCollisionPoly": true,
+								"duration": 1,
+								"tag": ""
+							}
+						],
+						"sid": 862076941779474,
+						"name": "classicNormal",
+						"isLooping": false,
+						"isPingPong": false,
+						"repeatCount": 1,
+						"repeatTo": 0,
+						"speed": 5
+					},
+					{
+						"frames": [
+							{
+								"width": 24,
+								"height": 30,
+								"originX": 0.5,
+								"originY": 0.5,
+								"originalSource": "",
+								"exportFormat": "lossless",
+								"exportQuality": 0.8,
+								"fileType": "image/png",
+								"imageSpriteId": 5155934,
+								"useCollisionPoly": true,
+								"duration": 1,
+								"tag": ""
+							}
+						],
+						"sid": 654446839321575,
+						"name": "classicBeer",
+						"isLooping": false,
+						"isPingPong": false,
+						"repeatCount": 1,
+						"repeatTo": 0,
+						"speed": 5
+					},
+					{
+						"frames": [
+							{
+								"width": 24,
+								"height": 30,
+								"originX": 0.5,
+								"originY": 0.5,
+								"originalSource": "",
+								"exportFormat": "lossless",
+								"exportQuality": 0.8,
+								"fileType": "image/png",
+								"imageSpriteId": 9877734,
+								"useCollisionPoly": true,
+								"duration": 1,
+								"tag": ""
+							}
+						],
+						"sid": 182181527271480,
+						"name": "classicSleep",
+						"isLooping": false,
+						"isPingPong": false,
+						"repeatCount": 1,
+						"repeatTo": 0,
+						"speed": 5
+					},
+					{
+						"frames": [
+							{
+								"width": 24,
+								"height": 31,
+								"originX": 0.5,
+								"originY": 0.4838709677419355,
+								"originalSource": "",
+								"exportFormat": "lossless",
+								"exportQuality": 0.8,
+								"fileType": "image/png",
+								"imageSpriteId": 8369295,
+								"useCollisionPoly": true,
+								"duration": 1,
+								"tag": ""
+							}
+						],
+						"sid": 667363388046829,
+						"name": "classicScream",
+						"isLooping": false,
+						"isPingPong": false,
+						"repeatCount": 1,
+						"repeatTo": 0,
+						"speed": 5
 					}
 				],
-				"sid": 386558125496289,
-				"name": "beer",
-				"isLooping": false,
-				"isPingPong": false,
-				"repeatCount": 1,
-				"repeatTo": 0,
-				"speed": 5
+				"subfolders": [],
+				"name": "classic"
 			},
 			{
-				"frames": [
+				"items": [
 					{
-						"width": 24,
-						"height": 31,
-						"originX": 0.5,
-						"originY": 0.4838709677419355,
-						"originalSource": "",
-						"exportFormat": "lossless",
-						"exportQuality": 0.8,
-						"fileType": "image/png",
-						"imageSpriteId": 6025060,
-						"useCollisionPoly": true,
-						"duration": 1,
-						"tag": ""
+						"frames": [
+							{
+								"width": 28,
+								"height": 19,
+								"originX": 0.5,
+								"originY": 0.47368421052631576,
+								"originalSource": "",
+								"exportFormat": "lossless",
+								"exportQuality": 0.8,
+								"fileType": "image/png",
+								"imageSpriteId": 3103779,
+								"useCollisionPoly": true,
+								"duration": 1,
+								"tag": ""
+							},
+							{
+								"width": 28,
+								"height": 19,
+								"originX": 0.5,
+								"originY": 0.47368421052631576,
+								"originalSource": "",
+								"exportFormat": "lossless",
+								"exportQuality": 0.8,
+								"fileType": "image/png",
+								"imageSpriteId": 4342761,
+								"useCollisionPoly": true,
+								"duration": 1,
+								"tag": ""
+							},
+							{
+								"width": 28,
+								"height": 19,
+								"originX": 0.5,
+								"originY": 0.47368421052631576,
+								"originalSource": "",
+								"exportFormat": "lossless",
+								"exportQuality": 0.8,
+								"fileType": "image/png",
+								"imageSpriteId": 6332679,
+								"useCollisionPoly": true,
+								"duration": 1,
+								"tag": ""
+							}
+						],
+						"sid": 350107414810333,
+						"name": "francisNormal",
+						"isLooping": false,
+						"isPingPong": false,
+						"repeatCount": 1,
+						"repeatTo": 0,
+						"speed": 5
+					},
+					{
+						"frames": [
+							{
+								"width": 28,
+								"height": 19,
+								"originX": 0.5,
+								"originY": 0.47368421052631576,
+								"originalSource": "",
+								"exportFormat": "lossless",
+								"exportQuality": 0.8,
+								"fileType": "image/png",
+								"imageSpriteId": 1186291,
+								"useCollisionPoly": true,
+								"duration": 1,
+								"tag": ""
+							}
+						],
+						"sid": 402404994809399,
+						"name": "francisBeer",
+						"isLooping": false,
+						"isPingPong": false,
+						"repeatCount": 1,
+						"repeatTo": 0,
+						"speed": 5
+					},
+					{
+						"frames": [
+							{
+								"width": 28,
+								"height": 23,
+								"originX": 0.5,
+								"originY": 0.5217391304347826,
+								"originalSource": "",
+								"exportFormat": "lossless",
+								"exportQuality": 0.8,
+								"fileType": "image/png",
+								"imageSpriteId": 2685424,
+								"useCollisionPoly": true,
+								"duration": 1,
+								"tag": ""
+							}
+						],
+						"sid": 620157898035830,
+						"name": "francisSleep",
+						"isLooping": false,
+						"isPingPong": false,
+						"repeatCount": 1,
+						"repeatTo": 0,
+						"speed": 5
+					},
+					{
+						"frames": [
+							{
+								"width": 28,
+								"height": 20,
+								"originX": 0.5,
+								"originY": 0.5,
+								"originalSource": "",
+								"exportFormat": "lossless",
+								"exportQuality": 0.8,
+								"fileType": "image/png",
+								"imageSpriteId": 9772489,
+								"useCollisionPoly": true,
+								"duration": 1,
+								"tag": ""
+							}
+						],
+						"sid": 623596265350476,
+						"name": "francisScream",
+						"isLooping": false,
+						"isPingPong": false,
+						"repeatCount": 1,
+						"repeatTo": 0,
+						"speed": 5
 					}
 				],
-				"sid": 573322737523003,
-				"name": "death",
-				"isLooping": false,
-				"isPingPong": false,
-				"repeatCount": 1,
-				"repeatTo": 0,
-				"speed": 5
+				"subfolders": [],
+				"name": "francis"
 			},
 			{
-				"frames": [
+				"items": [
 					{
-						"width": 24,
-						"height": 30,
-						"originX": 0.5,
-						"originY": 0.5,
-						"originalSource": "",
-						"exportFormat": "lossless",
-						"exportQuality": 0.8,
-						"fileType": "image/png",
-						"imageSpriteId": 9638350,
-						"useCollisionPoly": true,
-						"duration": 1,
-						"tag": ""
+						"frames": [
+							{
+								"width": 28,
+								"height": 24,
+								"originX": 0.5,
+								"originY": 0.5416666666666666,
+								"originalSource": "",
+								"exportFormat": "lossless",
+								"exportQuality": 0.8,
+								"fileType": "image/png",
+								"imageSpriteId": 6359000,
+								"useCollisionPoly": true,
+								"duration": 1,
+								"tag": ""
+							},
+							{
+								"width": 28,
+								"height": 24,
+								"originX": 0.5,
+								"originY": 0.5416666666666666,
+								"originalSource": "",
+								"exportFormat": "lossless",
+								"exportQuality": 0.8,
+								"fileType": "image/png",
+								"imageSpriteId": 4060196,
+								"useCollisionPoly": true,
+								"duration": 1,
+								"tag": ""
+							},
+							{
+								"width": 28,
+								"height": 24,
+								"originX": 0.5,
+								"originY": 0.5416666666666666,
+								"originalSource": "",
+								"exportFormat": "lossless",
+								"exportQuality": 0.8,
+								"fileType": "image/png",
+								"imageSpriteId": 9424295,
+								"collisionPoly": {
+									"points": [
+										0,
+										0.041666666666666664,
+										1,
+										0.041666666666666664,
+										1,
+										1,
+										0,
+										1
+									]
+								},
+								"useCollisionPoly": true,
+								"duration": 1,
+								"tag": ""
+							}
+						],
+						"sid": 819639231652169,
+						"name": "tankmanNormal",
+						"isLooping": false,
+						"isPingPong": false,
+						"repeatCount": 1,
+						"repeatTo": 0,
+						"speed": 5
+					},
+					{
+						"frames": [
+							{
+								"width": 28,
+								"height": 25,
+								"originX": 0.5,
+								"originY": 0.52,
+								"originalSource": "",
+								"exportFormat": "lossless",
+								"exportQuality": 0.8,
+								"fileType": "image/png",
+								"imageSpriteId": 2890833,
+								"useCollisionPoly": true,
+								"duration": 1,
+								"tag": ""
+							}
+						],
+						"sid": 475269599410424,
+						"name": "tankmanBeer",
+						"isLooping": false,
+						"isPingPong": false,
+						"repeatCount": 1,
+						"repeatTo": 0,
+						"speed": 5
+					},
+					{
+						"frames": [
+							{
+								"width": 28,
+								"height": 25,
+								"originX": 0.5,
+								"originY": 0.52,
+								"originalSource": "",
+								"exportFormat": "lossless",
+								"exportQuality": 0.8,
+								"fileType": "image/png",
+								"imageSpriteId": 3537560,
+								"useCollisionPoly": true,
+								"duration": 1,
+								"tag": ""
+							}
+						],
+						"sid": 754391286089818,
+						"name": "tankmanSleep",
+						"isLooping": false,
+						"isPingPong": false,
+						"repeatCount": 1,
+						"repeatTo": 0,
+						"speed": 5
+					},
+					{
+						"frames": [
+							{
+								"width": 28,
+								"height": 26,
+								"originX": 0.5,
+								"originY": 0.5,
+								"originalSource": "",
+								"exportFormat": "lossless",
+								"exportQuality": 0.8,
+								"fileType": "image/png",
+								"imageSpriteId": 8169573,
+								"useCollisionPoly": true,
+								"duration": 1,
+								"tag": ""
+							}
+						],
+						"sid": 223816353131152,
+						"name": "tankmanScream",
+						"isLooping": false,
+						"isPingPong": false,
+						"repeatCount": 1,
+						"repeatTo": 0,
+						"speed": 5
 					}
 				],
-				"sid": 187379840043569,
-				"name": "sleep",
-				"isLooping": false,
-				"isPingPong": false,
-				"repeatCount": 1,
-				"repeatTo": 0,
-				"speed": 5
+				"subfolders": [],
+				"name": "tankman"
 			}
-		],
-		"subfolders": []
+		]
 	}
 }

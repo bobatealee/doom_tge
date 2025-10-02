@@ -10,6 +10,11 @@
 			"behaviorId": "Sin",
 			"name": "Sine",
 			"sid": 935697331063923
+		},
+		{
+			"behaviorId": "Timer",
+			"name": "Timer",
+			"sid": 196555730089072
 		}
 	],
 	"effectTypes": [],
@@ -26,7 +31,7 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 789327,
+						"imageSpriteId": 3880145,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""

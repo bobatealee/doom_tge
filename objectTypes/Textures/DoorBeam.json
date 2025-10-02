@@ -1,0 +1,23 @@
+{
+	"name": "DoorBeam",
+	"plugin-id": "TiledBg",
+	"sid": 700618308986122,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"image": {
+		"width": 8,
+		"height": 128,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "lossless",
+		"exportQuality": 0.8,
+		"fileType": "image/png",
+		"imageSpriteId": 4235353,
+		"useCollisionPoly": true,
+		"tag": ""
+	}
+}

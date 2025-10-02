@@ -3,416 +3,278 @@
 	"events": [
 		{
 			"eventType": "comment",
-			"text": "Bleed"
-		},
-		{
-			"eventType": "variable",
-			"name": "BLEED_standby",
-			"type": "boolean",
-			"initialValue": "true",
-			"comment": "",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 216462287437900
-		},
-		{
-			"eventType": "variable",
-			"name": "BLEED_freeze",
-			"type": "boolean",
-			"initialValue": "false",
-			"comment": "",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 917111341908008
-		},
-		{
-			"eventType": "variable",
-			"name": "BLEED_lineAmount",
-			"type": "number",
-			"initialValue": "0",
-			"comment": "",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 132958272256390
-		},
-		{
-			"eventType": "variable",
-			"name": "BLEED_interval",
-			"type": "number",
-			"initialValue": "4",
-			"comment": "",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 854712411778849
-		},
-		{
-			"eventType": "variable",
-			"name": "BLEED_randomize",
-			"type": "number",
-			"initialValue": "3",
-			"comment": "",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 955311835774011
-		},
-		{
-			"eventType": "variable",
-			"name": "BLEED_snapshotReady",
-			"type": "boolean",
-			"initialValue": "false",
-			"comment": "",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 443465505790756
-		},
-		{
-			"eventType": "variable",
-			"name": "BLEED_linesCreated",
-			"type": "boolean",
-			"initialValue": "false",
-			"comment": "",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 208675840111058
-		},
-		{
-			"eventType": "variable",
-			"name": "BLEED_linesReady",
-			"type": "number",
-			"initialValue": "0",
-			"comment": "",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 442058422707001
-		},
-		{
-			"eventType": "variable",
-			"name": "BLEED_linesFinished",
-			"type": "number",
-			"initialValue": "0",
-			"comment": "",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 451279619088540
-		},
-		{
-			"eventType": "variable",
-			"name": "BLEED_layout",
-			"type": "string",
-			"initialValue": "level",
-			"comment": "",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 526455389080261
-		},
-		{
-			"eventType": "comment",
-			"text": "Init"
+			"text": "Initialization flags"
 		},
 		{
 			"eventType": "variable",
 			"name": "GAME_init",
 			"type": "boolean",
 			"initialValue": "false",
-			"comment": "",
+			"comment": "Is it the very start of the game?",
 			"isStatic": false,
 			"isConstant": false,
-			"sid": 919790189572561
+			"sid": 763911591909870
 		},
 		{
 			"eventType": "variable",
-			"name": "GAME_loaded",
+			"name": "GAME_load",
 			"type": "boolean",
 			"initialValue": "false",
-			"comment": "",
+			"comment": "Have we tried to load yet?",
 			"isStatic": false,
 			"isConstant": false,
-			"sid": 159210669455496
+			"sid": 175946403804039
 		},
 		{
 			"eventType": "variable",
-			"name": "NGIO_init",
+			"name": "NGIO_onNewgrounds",
 			"type": "boolean",
 			"initialValue": "false",
-			"comment": "",
+			"comment": "Are we playing on Newgrounds?",
 			"isStatic": false,
 			"isConstant": false,
-			"sid": 847025372879383
+			"sid": 547791333904289
+		},
+		{
+			"eventType": "variable",
+			"name": "NGIO_loggedIn",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "Are we logged in on Newgrounds?",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 945553832025578
 		},
 		{
 			"eventType": "variable",
 			"name": "NGIO_medals",
 			"type": "boolean",
 			"initialValue": "false",
-			"comment": "",
+			"comment": "Have we synced medals with Newgrounds?",
 			"isStatic": false,
 			"isConstant": false,
-			"sid": 815933123732572
+			"sid": 754514762454663
 		},
 		{
 			"eventType": "comment",
-			"text": "Kiosk Mode"
+			"text": "Game type flags"
+		},
+		{
+			"eventType": "variable",
+			"name": "GAME_mobile",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "Is the game being played with touch controls?",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 130405948700867
+		},
+		{
+			"eventType": "variable",
+			"name": "GAME_standalone",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "Is the game a standalone version?",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 938024959381582
 		},
 		{
 			"eventType": "variable",
 			"name": "GAME_kiosk",
 			"type": "boolean",
 			"initialValue": "false",
-			"comment": "",
+			"comment": "Is the game in kiosk mode?",
 			"isStatic": false,
 			"isConstant": false,
-			"sid": 631337107565236
+			"sid": 370741058067186
 		},
 		{
 			"eventType": "comment",
-			"text": "Inactivity"
+			"text": "Loading flags"
 		},
 		{
 			"eventType": "variable",
-			"name": "GAME_inactivity",
-			"type": "number",
-			"initialValue": "300",
-			"comment": "",
+			"name": "LOAD_save",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "Is the save file loaded?",
 			"isStatic": false,
 			"isConstant": false,
-			"sid": 300259281988218
+			"sid": 537414667820515
 		},
 		{
 			"eventType": "variable",
-			"name": "GAME_inactivityResults",
-			"type": "number",
-			"initialValue": "30",
-			"comment": "",
+			"name": "LOAD_artworks",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "Are artworks loaded?",
 			"isStatic": false,
 			"isConstant": false,
-			"sid": 638425383908199
+			"sid": 216041752508522
+		},
+		{
+			"eventType": "variable",
+			"name": "LOAD_pickups",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "Are pickups loaded?",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 695139506816835
+		},
+		{
+			"eventType": "variable",
+			"name": "LOAD_drinks",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "Are drinks loaded?",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 737740821141775
+		},
+		{
+			"eventType": "variable",
+			"name": "LOAD_skins",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "Are skins loaded?",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 435448440349274
+		},
+		{
+			"eventType": "variable",
+			"name": "LOAD_medals",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "Are medals loaded?",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 327128254533650
 		},
 		{
 			"eventType": "comment",
-			"text": "Set up kiosk mode"
+			"text": "Settings"
 		},
 		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "compare-boolean-eventvar",
-					"objectClass": "System",
-					"sid": 927074835216433,
-					"parameters": {
-						"variable": "GAME_kiosk"
-					}
-				}
-			],
-			"actions": [],
-			"sid": 744923478531370,
-			"children": [
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "trigger-once-while-true",
-							"objectClass": "System",
-							"sid": 468631600241744
-						}
-					],
-					"actions": [
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 852897492151535,
-							"parameters": {
-								"variable": "GAME_inactivity",
-								"value": "60"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 119874430807929,
-							"parameters": {
-								"variable": "GAME_inactivityResults",
-								"value": "10"
-							}
-						},
-						{
-							"id": "set-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 930448513274621,
-							"parameters": {
-								"variable": "GAME_loaded",
-								"value": "true"
-							}
-						}
-					],
-					"sid": 681683362442756
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-any-click",
-							"objectClass": "Mouse",
-							"sid": 974339581459323
-						}
-					],
-					"actions": [
-						{
-							"id": "request-fullscreen",
-							"objectClass": "Browser",
-							"sid": 283157753609108,
-							"parameters": {
-								"mode": "stretch-letterbox-scale",
-								"navigation-ui": "hide"
-							}
-						}
-					],
-					"sid": 726890112393344
-				}
-			]
+			"eventType": "variable",
+			"name": "SETTING_volumeSound",
+			"type": "number",
+			"initialValue": "0.5",
+			"comment": "Sound volume",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 192490156349528
+		},
+		{
+			"eventType": "variable",
+			"name": "SETTING_volumeMusic",
+			"type": "number",
+			"initialValue": "0.25",
+			"comment": "Music volume",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 678372899590218
+		},
+		{
+			"eventType": "variable",
+			"name": "SETTING_fullscreen",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "Fullscreen status; dynamically changed",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 486017458866043
+		},
+		{
+			"eventType": "variable",
+			"name": "SETTING_flashing",
+			"type": "number",
+			"initialValue": "1",
+			"comment": "Pickup flashing",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 577762061617983
+		},
+		{
+			"eventType": "variable",
+			"name": "SETTING_timer",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "Ingame timer",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 266300242948782
+		},
+		{
+			"eventType": "variable",
+			"name": "SETTING_playerSkin",
+			"type": "string",
+			"initialValue": "default",
+			"comment": "Player skin",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 595297534058577
+		},
+		{
+			"eventType": "variable",
+			"name": "SETTING_playerSound",
+			"type": "string",
+			"initialValue": "default/default",
+			"comment": "Player sound path, for ease; not normally set",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 450823312282484
+		},
+		{
+			"eventType": "variable",
+			"name": "UNLOCK_doomMusic",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "Is DOOM music unlocked?",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 736323639760953
+		},
+		{
+			"eventType": "variable",
+			"name": "SETTING_doomMusic",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "DOOM music",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 565183312243290
 		},
 		{
 			"eventType": "comment",
-			"text": "Global fullscreen logic"
+			"text": "Global transition flags"
 		},
 		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-key-pressed",
-					"objectClass": "Keyboard",
-					"sid": 552402157007001,
-					"parameters": {
-						"key": 70
-					}
-				},
-				{
-					"id": "compare-boolean-eventvar",
-					"objectClass": "System",
-					"sid": 544988376318090,
-					"parameters": {
-						"variable": "GAME_mobile"
-					},
-					"isInverted": true
-				},
-				{
-					"id": "compare-boolean-eventvar",
-					"objectClass": "System",
-					"sid": 640702808360169,
-					"parameters": {
-						"variable": "GAME_kiosk"
-					},
-					"isInverted": true
-				}
-			],
-			"actions": [],
-			"sid": 566136185651234,
-			"children": [
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "is-fullscreen",
-							"objectClass": "Browser",
-							"sid": 542877807519777,
-							"isInverted": true
-						}
-					],
-					"actions": [
-						{
-							"id": "request-fullscreen",
-							"objectClass": "Browser",
-							"sid": 677297639949002,
-							"parameters": {
-								"mode": "stretch-letterbox-scale",
-								"navigation-ui": "hide"
-							}
-						}
-					],
-					"sid": 484329070370350
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "has-pointer-lock",
-							"objectClass": "Mouse",
-							"sid": 271513872445371
-						}
-					],
-					"actions": [
-						{
-							"id": "request-pointer-lock",
-							"objectClass": "Mouse",
-							"sid": 844501239334581,
-							"parameters": {
-								"unadjusted-movement": false
-							}
-						}
-					],
-					"sid": 287032161289335
-				}
-			]
+			"eventType": "variable",
+			"name": "TRANSITION_running",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "Is a transition running?",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 683281083250065
 		},
 		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-key-pressed",
-					"objectClass": "Keyboard",
-					"sid": 417808994233034,
-					"parameters": {
-						"key": 27
-					}
-				}
-			],
-			"actions": [],
-			"sid": 860859009182312,
-			"children": [
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "is-fullscreen",
-							"objectClass": "Browser",
-							"sid": 242176144045950
-						}
-					],
-					"actions": [
-						{
-							"id": "cancel-fullscreen",
-							"objectClass": "Browser",
-							"sid": 388354279007723
-						}
-					],
-					"sid": 219893828013504
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "has-pointer-lock",
-							"objectClass": "Mouse",
-							"sid": 664058659479948
-						}
-					],
-					"actions": [
-						{
-							"id": "request-pointer-lock",
-							"objectClass": "Mouse",
-							"sid": 875076048768615,
-							"parameters": {
-								"unadjusted-movement": false
-							}
-						}
-					],
-					"sid": 629860397678705
-				}
-			]
+			"eventType": "variable",
+			"name": "TRANSITION_movedLayout",
+			"type": "boolean",
+			"initialValue": "true",
+			"comment": "Has the transition moved layouts?",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 518336929978468
 		},
 		{
 			"eventType": "group",
 			"disabled": false,
-			"title": "Bleed",
+			"title": "Global - Initialization",
 			"description": "",
 			"isActiveOnStart": true,
 			"children": [
@@ -422,619 +284,12 @@
 						{
 							"id": "on-start-of-layout",
 							"objectClass": "System",
-							"sid": 315057211267451
-						}
-					],
-					"actions": [
-						{
-							"id": "move-to-layer",
-							"objectClass": "BleedLine",
-							"sid": 362125604928508,
-							"parameters": {
-								"layer": "\"HUD\""
-							}
-						}
-					],
-					"sid": 987821919623116,
-					"children": [
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "has-tags",
-									"objectClass": "BleedLine",
-									"sid": 198469336129872,
-									"parameters": {
-										"tags": "\"kill\""
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "destroy",
-									"objectClass": "BleedLine",
-									"sid": 375512621690815
-								}
-							],
-							"sid": 312499564027978
-						}
-					]
-				},
-				{
-					"functionName": "transition",
-					"functionDescription": "",
-					"functionCategory": "",
-					"functionReturnType": "none",
-					"functionCopyPicked": false,
-					"functionIsAsync": false,
-					"functionParameters": [
-						{
-							"name": "layout",
-							"type": "string",
-							"initialValue": "level",
-							"comment": "",
-							"sid": 995136782061594
-						}
-					],
-					"eventType": "function-block",
-					"conditions": [
-						{
-							"id": "compare-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 206956670889719,
-							"parameters": {
-								"variable": "BLEED_standby"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 964568043335307,
-							"parameters": {
-								"variable": "BLEED_standby",
-								"value": "false"
-							}
-						},
-						{
-							"id": "set-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 722821289893707,
-							"parameters": {
-								"variable": "BLEED_freeze",
-								"value": "true"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 533428894602088,
-							"parameters": {
-								"variable": "BLEED_layout",
-								"value": "layout"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 887432743307609,
-							"parameters": {
-								"variable": "BLEED_linesReady",
-								"value": "0"
-							}
-						},
-						{
-							"id": "set-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 709079909121103,
-							"parameters": {
-								"variable": "BLEED_linesCreated",
-								"value": "false"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 217453361449864,
-							"parameters": {
-								"variable": "BLEED_randomize",
-								"value": "3"
-							}
-						},
-						{
-							"id": "set-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 109505032596818,
-							"parameters": {
-								"variable": "BLEED_snapshotReady",
-								"value": "false"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 424960069056704,
-							"parameters": {
-								"variable": "BLEED_lineAmount",
-								"value": "ceil(ViewportWidth(\"HUD\")/BLEED_interval)"
-							}
-						},
-						{
-							"id": "set-active",
-							"objectClass": "Arm",
-							"sid": 395988250223661,
-							"behaviorType": "Vertical",
-							"parameters": {
-								"state": "inactive"
-							}
-						},
-						{
-							"id": "set-active",
-							"objectClass": "Arm",
-							"sid": 790950065383205,
-							"behaviorType": "Horizontal",
-							"parameters": {
-								"state": "inactive"
-							}
-						},
-						{
-							"id": "set-active",
-							"objectClass": "Arm",
-							"sid": 725156516596888,
-							"behaviorType": "Bob",
-							"parameters": {
-								"state": "inactive"
-							}
-						},
-						{
-							"id": "pause-all-timelines",
-							"objectClass": "TimelineController",
-							"sid": 541939609137120
-						},
-						{
-							"id": "stop-animation",
-							"objectClass": "Selector",
-							"sid": 579220654872261
-						},
-						{
-							"id": "snapshot-canvas",
-							"objectClass": "System",
-							"sid": 149611646729829,
-							"parameters": {
-								"format": "png",
-								"jpeg-quality": "0",
-								"x": "0",
-								"y": "0",
-								"width": "0",
-								"height": "0"
-							}
-						}
-					],
-					"sid": 465184726959271,
-					"children": [
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "for",
-									"objectClass": "System",
-									"sid": 514634827619178,
-									"parameters": {
-										"name": "\"i\"",
-										"start-index": "0",
-										"end-index": "BLEED_lineAmount-1"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "create-object",
-									"objectClass": "System",
-									"sid": 192936895576732,
-									"parameters": {
-										"object-to-create": "BleedLine",
-										"layer": "\"HUD\"",
-										"x": "loopindex(\"i\")*BLEED_interval",
-										"y": "0",
-										"create-hierarchy": false,
-										"template-name": "\"\""
-									}
-								},
-								{
-									"id": "change-tags",
-									"objectClass": "BleedLine",
-									"sid": 373284093014134,
-									"parameters": {
-										"action": "remove",
-										"tags": "\"kill\""
-									}
-								},
-								{
-									"id": "set-image-scale-x",
-									"objectClass": "BleedLine",
-									"sid": 777733733587537,
-									"parameters": {
-										"scale-x": "100/(PlatformInfo.CanvasDeviceWidth/ViewportWidth(\"HUD\"))"
-									}
-								},
-								{
-									"id": "set-image-scale-y",
-									"objectClass": "BleedLine",
-									"sid": 282064481688092,
-									"parameters": {
-										"scale-y": "100/(PlatformInfo.CanvasDeviceHeight/ViewportHeight(\"HUD\"))"
-									}
-								},
-								{
-									"id": "set-image-offset-x",
-									"objectClass": "BleedLine",
-									"sid": 881975160483598,
-									"parameters": {
-										"offset-x": "-loopindex(\"i\")*(PlatformInfo.CanvasDeviceWidth/ViewportWidth(\"HUD\"))*BLEED_interval\n"
-									}
-								}
-							],
-							"sid": 470069284656499,
-							"children": [
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "compare-two-values",
-											"objectClass": "System",
-											"sid": 404605048432614,
-											"parameters": {
-												"first-value": "BleedLine.Count",
-												"comparison": 0,
-												"second-value": "BLEED_lineAmount"
-											}
-										}
-									],
-									"actions": [
-										{
-											"id": "set-boolean-eventvar",
-											"objectClass": "System",
-											"sid": 968347041371057,
-											"parameters": {
-												"variable": "BLEED_linesCreated",
-												"value": "true"
-											}
-										}
-									],
-									"sid": 200911602488076
-								}
-							]
-						}
-					]
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-canvas-snapshot",
-							"objectClass": "System",
-							"sid": 503034002435781
-						}
-					],
-					"actions": [
-						{
-							"id": "set-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 770608902762994,
-							"parameters": {
-								"variable": "BLEED_snapshotReady",
-								"value": "true"
-							}
-						}
-					],
-					"sid": 930587867909655
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 524561787600932,
-							"parameters": {
-								"variable": "BLEED_linesCreated"
-							}
+							"sid": 649976629931965
 						},
 						{
 							"id": "compare-boolean-eventvar",
 							"objectClass": "System",
-							"sid": 685705367857381,
-							"parameters": {
-								"variable": "BLEED_snapshotReady"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 342707102876029,
-							"parameters": {
-								"variable": "BLEED_snapshotReady",
-								"value": "false"
-							}
-						},
-						{
-							"id": "load-image-from-url",
-							"objectClass": "BleedLine",
-							"sid": 678717996462352,
-							"parameters": {
-								"uri": "CanvasSnapshot",
-								"cross-origin": "anonymous"
-							}
-						}
-					],
-					"sid": 669818301521962
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-image-url-loaded",
-							"objectClass": "BleedLine",
-							"sid": 712830149605871
-						}
-					],
-					"actions": [
-						{
-							"id": "add-to-eventvar",
-							"objectClass": "System",
-							"sid": 195695678684111,
-							"parameters": {
-								"variable": "BLEED_linesReady",
-								"value": "1"
-							}
-						}
-					],
-					"sid": 125392871477816
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 134856875125563,
-							"parameters": {
-								"variable": "BLEED_linesCreated"
-							}
-						},
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 828337625642387,
-							"parameters": {
-								"variable": "BLEED_linesReady",
-								"comparison": 0,
-								"value": "BleedLine.Count"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 177912319303954,
-							"parameters": {
-								"variable": "BLEED_linesCreated",
-								"value": "false"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 743180741314772,
-							"parameters": {
-								"variable": "BLEED_linesReady",
-								"value": "0"
-							}
-						},
-						{
-							"id": "set-layer-visible",
-							"objectClass": "System",
-							"sid": 683538621202122,
-							"parameters": {
-								"layer": "\"Fade\"",
-								"visibility": "invisible"
-							}
-						},
-						{
-							"id": "go-to-layout-by-name",
-							"objectClass": "System",
-							"sid": 781506831117568,
-							"parameters": {
-								"layout": "BLEED_layout"
-							}
-						},
-						{
-							"id": "set-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 280712793193412,
-							"parameters": {
-								"variable": "BLEED_freeze",
-								"value": "false"
-							}
-						}
-					],
-					"sid": 242595414169089,
-					"children": [
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "for-each",
-									"objectClass": "System",
-									"sid": 358318522177086,
-									"parameters": {
-										"object": "BleedLine"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 762417873240466,
-									"parameters": {
-										"variable": "BLEED_randomize",
-										"value": "clamp(BLEED_randomize+(random(-1, 1)), 0, 5)"
-									}
-								},
-								{
-									"id": "start-timer",
-									"objectClass": "BleedLine",
-									"sid": 146604785636673,
-									"behaviorType": "Timer",
-									"parameters": {
-										"duration": "BLEED_randomize/10",
-										"type": "once",
-										"tag": "\"bleed\""
-									}
-								}
-							],
-							"sid": 778368716851941
-						}
-					]
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-timer",
-							"objectClass": "BleedLine",
-							"sid": 671203404000478,
-							"behaviorType": "Timer",
-							"parameters": {
-								"tag": "\"bleed\""
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "move-to-position",
-							"objectClass": "BleedLine",
-							"sid": 783836307589609,
-							"behaviorType": "MoveTo",
-							"parameters": {
-								"x": "Self.X",
-								"y": "ViewportHeight(\"HUD\")",
-								"mode": "direct"
-							}
-						}
-					],
-					"sid": 226018291436897
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-arrived",
-							"objectClass": "BleedLine",
-							"sid": 913039248325622,
-							"behaviorType": "MoveTo"
-						}
-					],
-					"actions": [
-						{
-							"id": "add-to-eventvar",
-							"objectClass": "System",
-							"sid": 526922724212453,
-							"parameters": {
-								"variable": "BLEED_linesReady",
-								"value": "1"
-							}
-						}
-					],
-					"sid": 369556714699052,
-					"children": [
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "pick-all",
-									"objectClass": "System",
-									"sid": 288135007889621,
-									"parameters": {
-										"object": "BleedLine"
-									}
-								},
-								{
-									"id": "compare-eventvar",
-									"objectClass": "System",
-									"sid": 811366859458152,
-									"parameters": {
-										"variable": "BLEED_linesReady",
-										"comparison": 0,
-										"value": "BleedLine.Count"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "destroy",
-									"objectClass": "BleedLine",
-									"sid": 306359330047356
-								},
-								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 354185585875384,
-									"parameters": {
-										"variable": "BLEED_linesReady",
-										"value": "0"
-									}
-								},
-								{
-									"id": "set-boolean-eventvar",
-									"objectClass": "System",
-									"sid": 426822642552452,
-									"parameters": {
-										"variable": "BLEED_linesCreated",
-										"value": "false"
-									}
-								},
-								{
-									"id": "set-boolean-eventvar",
-									"objectClass": "System",
-									"sid": 191160128276881,
-									"parameters": {
-										"variable": "BLEED_standby",
-										"value": "true"
-									}
-								}
-							],
-							"sid": 550366576365382
-						}
-					]
-				}
-			],
-			"sid": 896926101837164
-		},
-		{
-			"eventType": "group",
-			"disabled": false,
-			"title": "Save/Load",
-			"description": "",
-			"isActiveOnStart": true,
-			"children": [
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-start-of-layout",
-							"objectClass": "System",
-							"sid": 253725503909407
-						},
-						{
-							"id": "compare-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 587755468346935,
+							"sid": 267612853955736,
 							"parameters": {
 								"variable": "GAME_init"
 							},
@@ -1045,18 +300,423 @@
 						{
 							"id": "set-boolean-eventvar",
 							"objectClass": "System",
-							"sid": 318294267619937,
+							"sid": 235413691706826,
 							"parameters": {
 								"variable": "GAME_init",
 								"value": "true"
 							}
+						},
+						{
+							"id": "request-project-file",
+							"objectClass": "AJAX",
+							"sid": 145297729359162,
+							"parameters": {
+								"tag": "\"artworks\"",
+								"file": "artworks.json"
+							}
+						},
+						{
+							"id": "request-project-file",
+							"objectClass": "AJAX",
+							"sid": 715128286983049,
+							"parameters": {
+								"tag": "\"pickups\"",
+								"file": "pickups.json"
+							}
+						},
+						{
+							"id": "request-project-file",
+							"objectClass": "AJAX",
+							"sid": 998573784313371,
+							"parameters": {
+								"tag": "\"drinks\"",
+								"file": "drinks.json"
+							}
+						},
+						{
+							"id": "request-project-file",
+							"objectClass": "AJAX",
+							"sid": 469346971207664,
+							"parameters": {
+								"tag": "\"skins\"",
+								"file": "skins.json"
+							}
+						},
+						{
+							"id": "request-project-file",
+							"objectClass": "AJAX",
+							"sid": 613813387974686,
+							"parameters": {
+								"tag": "\"medals\"",
+								"file": "medals.json"
+							}
 						}
 					],
-					"sid": 158180587423747,
+					"sid": 720021076985447,
 					"children": [
 						{
 							"eventType": "comment",
-							"text": "Kiosk Mode check"
+							"text": "We're standalone"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-windows-webview2-export",
+									"objectClass": "PlatformInfo",
+									"sid": 101136443197802
+								},
+								{
+									"id": "is-linux-cef-export",
+									"objectClass": "PlatformInfo",
+									"sid": 609773091369479
+								},
+								{
+									"id": "is-in-preview",
+									"objectClass": "System",
+									"sid": 513529023592615,
+									"disabled": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 689207074185577,
+									"parameters": {
+										"variable": "GAME_standalone",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 703655042805664,
+							"isOrBlock": true
+						},
+						{
+							"eventType": "comment",
+							"text": "We're on mobile"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-on-mobile",
+									"objectClass": "PlatformInfo",
+									"sid": 976175523268131
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 115349694822048,
+									"parameters": {
+										"variable": "GAME_mobile",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 354748915229003
+						},
+						{
+							"eventType": "comment",
+							"text": "We're on Newgrounds"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 949062742230840,
+									"parameters": {
+										"first-value": "RegexMatchCount(Browser.URL, \"^(https?:\\/\\/|\\/\\/)?([a-z0-9-]+\\.)?(newgrounds\\.com|ungrounded\\.net)($|[\\/?#])\", \"gi\")",
+										"comparison": 4,
+										"second-value": "0"
+									}
+								},
+								{
+									"id": "is-in-preview",
+									"objectClass": "System",
+									"sid": 210997652704186,
+									"disabled": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 986081408030608,
+									"parameters": {
+										"variable": "NGIO_onNewgrounds",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 489514929845594,
+							"isOrBlock": true
+						}
+					]
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Global - AJAX",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "comment",
+							"text": "Initialize artworks array"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-completed",
+									"objectClass": "AJAX",
+									"sid": 846258134334876,
+									"parameters": {
+										"tag": "\"artworks\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 819311574673358,
+									"parameters": {
+										"variable": "LOAD_artworks",
+										"value": "true"
+									}
+								},
+								{
+									"id": "load",
+									"objectClass": "Artworks",
+									"sid": 971454089013392,
+									"parameters": {
+										"json": "AJAX.LastData"
+									}
+								}
+							],
+							"sid": 556054675413489
+						},
+						{
+							"eventType": "comment",
+							"text": "Initialize pickups array"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-completed",
+									"objectClass": "AJAX",
+									"sid": 619844531769121,
+									"parameters": {
+										"tag": "\"pickups\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 201831718102379,
+									"parameters": {
+										"variable": "LOAD_pickups",
+										"value": "true"
+									}
+								},
+								{
+									"id": "load",
+									"objectClass": "Pickups",
+									"sid": 236481760898126,
+									"parameters": {
+										"json": "AJAX.LastData"
+									}
+								}
+							],
+							"sid": 468983531631669
+						},
+						{
+							"eventType": "comment",
+							"text": "Initialize drinks array"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-completed",
+									"objectClass": "AJAX",
+									"sid": 598594195480178,
+									"parameters": {
+										"tag": "\"drinks\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 464499110466000,
+									"parameters": {
+										"variable": "LOAD_drinks",
+										"value": "true"
+									}
+								},
+								{
+									"id": "load",
+									"objectClass": "DrinksBase",
+									"sid": 947029957367080,
+									"parameters": {
+										"json": "AJAX.LastData"
+									}
+								},
+								{
+									"id": "load",
+									"objectClass": "Drinks",
+									"sid": 646998277738895,
+									"parameters": {
+										"json": "AJAX.LastData"
+									}
+								}
+							],
+							"sid": 852308363025598
+						},
+						{
+							"eventType": "comment",
+							"text": "Initialize skins array"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-completed",
+									"objectClass": "AJAX",
+									"sid": 754850649328063,
+									"parameters": {
+										"tag": "\"skins\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 238605345985331,
+									"parameters": {
+										"variable": "LOAD_skins",
+										"value": "true"
+									}
+								},
+								{
+									"id": "load",
+									"objectClass": "Skins",
+									"sid": 923380987279933,
+									"parameters": {
+										"json": "AJAX.LastData"
+									}
+								}
+							],
+							"sid": 112825875917937,
+							"children": [
+								{
+									"eventType": "comment",
+									"text": "Tankman is Newgrounds exclusive"
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 979613080365991,
+											"parameters": {
+												"variable": "NGIO_onNewgrounds"
+											},
+											"isInverted": true
+										}
+									],
+									"actions": [
+										{
+											"id": "delete",
+											"objectClass": "Skins",
+											"sid": 570542522930324,
+											"parameters": {
+												"index": "3",
+												"axis": "x"
+											}
+										}
+									],
+									"sid": 980866759894831
+								}
+							]
+						},
+						{
+							"eventType": "comment",
+							"text": "Initialize medals array"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-completed",
+									"objectClass": "AJAX",
+									"sid": 884908347791540,
+									"parameters": {
+										"tag": "\"medals\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 427939324463499,
+									"parameters": {
+										"variable": "LOAD_medals",
+										"value": "true"
+									}
+								},
+								{
+									"id": "load",
+									"objectClass": "Medals",
+									"sid": 203798807953481,
+									"parameters": {
+										"json": "AJAX.LastData"
+									}
+								}
+							],
+							"sid": 953289545686699
+						},
+						{
+							"eventType": "comment",
+							"text": "Project can't load when these arrays aren't initialized"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-any-error",
+									"objectClass": "AJAX",
+									"sid": 888524663692820
+								}
+							],
+							"actions": [
+								{
+									"callFunction": "loadComplete",
+									"sid": 931508925682373,
+									"parameters": [
+										"1"
+									]
+								}
+							],
+							"sid": 713282101590660
+						},
+						{
+							"eventType": "comment",
+							"text": "Necessary arrays are ready, try to load the game"
 						},
 						{
 							"eventType": "block",
@@ -1064,69 +724,479 @@
 								{
 									"id": "compare-boolean-eventvar",
 									"objectClass": "System",
-									"sid": 279297156837834,
+									"sid": 144501692236794,
 									"parameters": {
-										"variable": "GAME_kiosk"
+										"variable": "GAME_load"
+									},
+									"isInverted": true
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 755706729255529,
+									"parameters": {
+										"variable": "LOAD_skins"
+									}
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 935462886181437,
+									"parameters": {
+										"variable": "LOAD_medals"
 									}
 								}
 							],
 							"actions": [
 								{
-									"id": "request-fullscreen",
-									"objectClass": "Browser",
-									"sid": 731471298252513,
-									"parameters": {
-										"mode": "stretch-letterbox-scale",
-										"navigation-ui": "hide"
-									}
-								},
-								{
 									"id": "set-boolean-eventvar",
 									"objectClass": "System",
-									"sid": 615861423858417,
+									"sid": 815282886263608,
 									"parameters": {
-										"variable": "SETTING_fullscreen",
+										"variable": "GAME_load",
 										"value": "true"
 									}
 								}
 							],
-							"sid": 406272192411305
+							"sid": 939914353687640,
+							"children": [
+								{
+									"eventType": "comment",
+									"text": "Initiate load from a file on standalone, if supported"
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 799027644776246,
+											"parameters": {
+												"variable": "GAME_standalone"
+											}
+										},
+										{
+											"id": "desktop-features-supported",
+											"objectClass": "FileSystem",
+											"sid": 670542015944134
+										},
+										{
+											"id": "is-supported",
+											"objectClass": "FileSystem",
+											"sid": 162243008360588
+										}
+									],
+									"actions": [
+										{
+											"id": "read-text-file",
+											"objectClass": "FileSystem",
+											"sid": 912065575421802,
+											"parameters": {
+												"picker-tag": "\"<local-app-data>\"",
+												"folder-path": "\"SCUMDOG/doom_tge/saveData1.txt\"",
+												"file-tag": "\"load\""
+											}
+										}
+									],
+									"sid": 307662642425370
+								},
+								{
+									"eventType": "comment",
+									"text": "Initiate load from local storage"
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 110300226681304
+										}
+									],
+									"actions": [
+										{
+											"id": "check-item-exists",
+											"objectClass": "LocalStorage",
+											"sid": 701503121122562,
+											"parameters": {
+												"key": "\"saveData1\""
+											}
+										}
+									],
+									"sid": 371252546615311
+								}
+							]
+						}
+					],
+					"sid": 560557958746214
+				}
+			],
+			"sid": 133650818049931
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Global - Core Logic",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "comment",
+					"text": "Input signals, for menus and such"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-any-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 709374981189185
+						}
+					],
+					"actions": [
+						{
+							"id": "signal",
+							"objectClass": "System",
+							"sid": 222762309962289,
+							"parameters": {
+								"tag": "\"inputKeyboard\""
+							}
+						}
+					],
+					"sid": 598812322384500
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-any-click",
+							"objectClass": "Mouse",
+							"sid": 520678736207414
+						}
+					],
+					"actions": [
+						{
+							"id": "signal",
+							"objectClass": "System",
+							"sid": 957269059618229,
+							"parameters": {
+								"tag": "\"inputMouse\""
+							}
+						}
+					],
+					"sid": 444179231273835,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-in-touch",
+							"objectClass": "Touch",
+							"sid": 577837800369741
+						}
+					],
+					"actions": [
+						{
+							"id": "signal",
+							"objectClass": "System",
+							"sid": 842262212894911,
+							"parameters": {
+								"tag": "\"inputTouch\""
+							}
+						}
+					],
+					"sid": 866366408963272,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-any-button-pressed",
+							"objectClass": "Gamepad",
+							"sid": 597587178815482,
+							"parameters": {
+								"gamepad": "0"
+							}
 						},
 						{
+							"id": "compare-axis",
+							"objectClass": "Gamepad",
+							"sid": 112514174627426,
+							"parameters": {
+								"gamepad": "0",
+								"axis": "left-analog-x-axis",
+								"comparison": 1,
+								"value": "0"
+							}
+						},
+						{
+							"id": "compare-axis",
+							"objectClass": "Gamepad",
+							"sid": 316404339926247,
+							"parameters": {
+								"gamepad": "0",
+								"axis": "left-analog-y-axis",
+								"comparison": 1,
+								"value": "0"
+							}
+						},
+						{
+							"id": "compare-axis",
+							"objectClass": "Gamepad",
+							"sid": 328838114172817,
+							"parameters": {
+								"gamepad": "0",
+								"axis": "right-analog-x-axis",
+								"comparison": 1,
+								"value": "0"
+							}
+						},
+						{
+							"id": "compare-axis",
+							"objectClass": "Gamepad",
+							"sid": 125707975110811,
+							"parameters": {
+								"gamepad": "0",
+								"axis": "right-analog-y-axis",
+								"comparison": 1,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "signal",
+							"objectClass": "System",
+							"sid": 733760038111335,
+							"parameters": {
+								"tag": "\"inputGamepad\""
+							}
+						}
+					],
+					"sid": 947355776638552,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-any-key-released",
+							"objectClass": "Keyboard",
+							"sid": 873611776332054
+						},
+						{
+							"id": "on-movement",
+							"objectClass": "Mouse",
+							"sid": 959185185573274
+						},
+						{
+							"id": "on-mouse-wheel",
+							"objectClass": "Mouse",
+							"sid": 391635641300592,
+							"parameters": {
+								"direction": "any"
+							}
+						},
+						{
+							"id": "on-any-button-released",
+							"objectClass": "Gamepad",
+							"sid": 214749272300750,
+							"parameters": {
+								"gamepad": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "signal",
+							"objectClass": "System",
+							"sid": 500089995662245,
+							"parameters": {
+								"tag": "\"inputMixed\""
+							}
+						}
+					],
+					"sid": 251891616820293,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Global - Fullscreen",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
 							"eventType": "comment",
-							"text": "Grab and load save data on desktop"
+							"text": "Global fullscreen logic"
 						},
 						{
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "desktop-features-supported",
-									"objectClass": "FileSystem",
-									"sid": 819715451601328
+									"id": "on-key-pressed",
+									"objectClass": "Keyboard",
+									"sid": 124790925547142,
+									"parameters": {
+										"key": 70
+									}
+								}
+							],
+							"actions": [],
+							"sid": 149929876909246,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-fullscreen",
+											"objectClass": "Browser",
+											"sid": 637935345407387,
+											"isInverted": true
+										}
+									],
+									"actions": [
+										{
+											"id": "request-fullscreen",
+											"objectClass": "Browser",
+											"sid": 740531012521927,
+											"parameters": {
+												"mode": "stretch-letterbox-scale",
+												"navigation-ui": "hide"
+											}
+										}
+									],
+									"sid": 199073642684732
 								},
 								{
-									"id": "is-supported",
-									"objectClass": "FileSystem",
-									"sid": 920799362752133
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "has-pointer-lock",
+											"objectClass": "Mouse",
+											"sid": 999441828933046
+										}
+									],
+									"actions": [
+										{
+											"id": "request-pointer-lock",
+											"objectClass": "Mouse",
+											"sid": 945797175630794,
+											"parameters": {
+												"unadjusted-movement": false
+											}
+										}
+									],
+									"sid": 344661541466842
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-key-pressed",
+									"objectClass": "Keyboard",
+									"sid": 972134997529465,
+									"parameters": {
+										"key": 27
+									}
+								}
+							],
+							"actions": [],
+							"sid": 898568823294234,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-fullscreen",
+											"objectClass": "Browser",
+											"sid": 212971001724869
+										}
+									],
+									"actions": [
+										{
+											"id": "cancel-fullscreen",
+											"objectClass": "Browser",
+											"sid": 880791921697594
+										}
+									],
+									"sid": 513951807877330
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "has-pointer-lock",
+											"objectClass": "Mouse",
+											"sid": 866974573139058
+										}
+									],
+									"actions": [
+										{
+											"id": "request-pointer-lock",
+											"objectClass": "Mouse",
+											"sid": 861210615676395,
+											"parameters": {
+												"unadjusted-movement": false
+											}
+										}
+									],
+									"sid": 918264473437143
+								}
+							]
+						},
+						{
+							"eventType": "comment",
+							"text": "Fullscreen status has changed"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-fullscreen",
+									"objectClass": "Browser",
+									"sid": 433976135394050
 								}
 							],
 							"actions": [
 								{
-									"id": "read-text-file",
-									"objectClass": "FileSystem",
-									"sid": 321285899792696,
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 967215125447188,
 									"parameters": {
-										"picker-tag": "\"<local-app-data>\"",
-										"folder-path": "\"SCUMDOG/doom_tge/saveData1.txt\"",
-										"file-tag": "\"load\""
+										"variable": "SETTING_fullscreen",
+										"value": "1"
 									}
 								}
 							],
-							"sid": 576606649833922
-						},
-						{
-							"eventType": "comment",
-							"text": "Grab and load save data on web"
+							"sid": 718537295195953,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "trigger-once-while-true",
+											"objectClass": "System",
+											"sid": 543748247531136
+										}
+									],
+									"actions": [
+										{
+											"id": "signal",
+											"objectClass": "System",
+											"sid": 532469089153976,
+											"parameters": {
+												"tag": "\"refreshToggles\""
+											}
+										}
+									],
+									"sid": 650743512912638
+								}
+							]
 						},
 						{
 							"eventType": "block",
@@ -1134,51 +1204,975 @@
 								{
 									"id": "else",
 									"objectClass": "System",
-									"sid": 897391865192216
+									"sid": 885539608957726
 								}
 							],
 							"actions": [
 								{
-									"id": "check-item-exists",
-									"objectClass": "LocalStorage",
-									"sid": 648921025536840,
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 292137277910680,
 									"parameters": {
-										"key": "\"saveData1\""
+										"variable": "SETTING_fullscreen",
+										"value": "0"
 									}
 								}
 							],
-							"sid": 875127844759495
-						},
+							"sid": 188878021353832,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "trigger-once-while-true",
+											"objectClass": "System",
+											"sid": 717901243993957
+										}
+									],
+									"actions": [
+										{
+											"id": "signal",
+											"objectClass": "System",
+											"sid": 476003811426220,
+											"parameters": {
+												"tag": "\"refreshToggles\""
+											}
+										}
+									],
+									"sid": 916044012525333
+								}
+							]
+						}
+					],
+					"sid": 678125711204472
+				}
+			],
+			"sid": 412323949823950
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Global - Transitions",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "variable",
+					"name": "TRANSITION_layout",
+					"type": "string",
+					"initialValue": "Level",
+					"comment": "Layout to move to during transition",
+					"isStatic": true,
+					"isConstant": false,
+					"sid": 384306471177208
+				},
+				{
+					"eventType": "variable",
+					"name": "TRANSITION_lineWidth",
+					"type": "number",
+					"initialValue": "4",
+					"comment": "Line width, defined here",
+					"isStatic": true,
+					"isConstant": true,
+					"sid": 623782170785237
+				},
+				{
+					"eventType": "variable",
+					"name": "TRANSITION_lineAmount",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "Amount of lines to create, determined at runtime",
+					"isStatic": true,
+					"isConstant": false,
+					"sid": 146244603442422
+				},
+				{
+					"eventType": "variable",
+					"name": "TRANSITION_linesReady",
+					"type": "boolean",
+					"initialValue": "false",
+					"comment": "Are all lines ready?",
+					"isStatic": true,
+					"isConstant": false,
+					"sid": 822012131822538
+				},
+				{
+					"eventType": "variable",
+					"name": "TRANSITION_snapshotReady",
+					"type": "boolean",
+					"initialValue": "false",
+					"comment": "Is the snapshot ready?",
+					"isStatic": true,
+					"isConstant": false,
+					"sid": 138535216851696
+				},
+				{
+					"eventType": "variable",
+					"name": "TRANSITION_linesLoaded",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "Amount of lines with snapshot image loaded",
+					"isStatic": true,
+					"isConstant": false,
+					"sid": 439479362979023
+				},
+				{
+					"eventType": "variable",
+					"name": "TRANSITION_startTime",
+					"type": "number",
+					"initialValue": "2.5",
+					"comment": "Time for lines to start moving (randomized between 0 and 5 seconds)",
+					"isStatic": true,
+					"isConstant": false,
+					"sid": 687112210462506
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Global - Transitions (Initialization)",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
 						{
 							"eventType": "comment",
-							"text": "Game is on Newgrounds, try to log in via NGIO"
+							"text": "Force lines onto the HUD layer"
 						},
 						{
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "compare-two-values",
+									"id": "on-start-of-layout",
 									"objectClass": "System",
-									"sid": 505027061846690,
+									"sid": 324272432601943
+								}
+							],
+							"actions": [
+								{
+									"id": "move-to-layer",
+									"objectClass": "TransitionLine",
+									"sid": 594657828483395,
 									"parameters": {
-										"first-value": "find(RegexMatchAt(Browser.URL, \"^.+?[^\\/:](?=[?\\/]|$)\", \"gi\", 0), \"newgrounds.com\")",
-										"comparison": 5,
-										"second-value": "0"
+										"layer": "\"HUD\""
+									}
+								}
+							],
+							"sid": 896882802689886
+						},
+						{
+							"functionName": "transition",
+							"functionDescription": "Bleed transition effect between two layouts",
+							"functionCategory": "",
+							"functionReturnType": "none",
+							"functionCopyPicked": false,
+							"functionIsAsync": false,
+							"functionParameters": [
+								{
+									"name": "layout",
+									"type": "string",
+									"initialValue": "Level",
+									"comment": "",
+									"sid": 995136782061594
+								}
+							],
+							"eventType": "function-block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 771103514323680,
+									"parameters": {
+										"variable": "TRANSITION_running",
+										"value": "true"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 556665942315481,
+									"parameters": {
+										"variable": "TRANSITION_movedLayout",
+										"value": "false"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 423828663513652,
+									"parameters": {
+										"variable": "TRANSITION_layout",
+										"value": "layout"
+									}
+								},
+								{
+									"id": "stop-animation",
+									"objectClass": "Selector",
+									"sid": 505836719095033
+								},
+								{
+									"type": "comment",
+									"text": "Initialization"
+								},
+								{
+									"id": "destroy",
+									"objectClass": "TransitionLine",
+									"sid": 258443725111121
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 891017992026273,
+									"parameters": {
+										"variable": "TRANSITION_lineAmount",
+										"value": "ceil(ViewportWidth(\"HUD\")/TRANSITION_lineWidth)"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 576517286525398,
+									"parameters": {
+										"variable": "TRANSITION_linesReady",
+										"value": "false"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 147492192494349,
+									"parameters": {
+										"variable": "TRANSITION_snapshotReady",
+										"value": "false"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 297988880270407,
+									"parameters": {
+										"variable": "TRANSITION_linesLoaded",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 136654689078475,
+									"parameters": {
+										"variable": "TRANSITION_startTime",
+										"value": "2.5"
+									}
+								},
+								{
+									"type": "comment",
+									"text": "Take snapshot of current frame"
+								},
+								{
+									"id": "snapshot-canvas",
+									"objectClass": "System",
+									"sid": 500024955857326,
+									"parameters": {
+										"format": "png",
+										"jpeg-quality": "0",
+										"x": "0",
+										"y": "0",
+										"width": "0",
+										"height": "0"
+									}
+								}
+							],
+							"sid": 628451027307941,
+							"children": [
+								{
+									"eventType": "comment",
+									"text": "Create the transition lines"
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "for",
+											"objectClass": "System",
+											"sid": 414160648378335,
+											"parameters": {
+												"name": "\"i\"",
+												"start-index": "0",
+												"end-index": "TRANSITION_lineAmount-1"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "create-object",
+											"objectClass": "System",
+											"sid": 436168966084793,
+											"parameters": {
+												"object-to-create": "TransitionLine",
+												"layer": "\"HUD\"",
+												"x": "loopindex(\"i\")*TRANSITION_lineWidth",
+												"y": "0",
+												"create-hierarchy": false,
+												"template-name": "\"\""
+											}
+										},
+										{
+											"type": "comment",
+											"text": "Terrible - Set up scales and offsets for snapshot"
+										},
+										{
+											"id": "set-image-scale-x",
+											"objectClass": "TransitionLine",
+											"sid": 324189495529492,
+											"parameters": {
+												"scale-x": "100/(PlatformInfo.CanvasDeviceWidth/ViewportWidth(\"HUD\"))"
+											}
+										},
+										{
+											"id": "set-image-scale-y",
+											"objectClass": "TransitionLine",
+											"sid": 434870742155504,
+											"parameters": {
+												"scale-y": "100/(PlatformInfo.CanvasDeviceHeight/ViewportHeight(\"HUD\"))"
+											}
+										},
+										{
+											"id": "set-image-offset-x",
+											"objectClass": "TransitionLine",
+											"sid": 520791389144040,
+											"parameters": {
+												"offset-x": "-loopindex(\"i\")*(PlatformInfo.CanvasDeviceWidth/ViewportWidth(\"HUD\"))*TRANSITION_lineWidth\n"
+											}
+										}
+									],
+									"sid": 242835432961158,
+									"children": [
+										{
+											"eventType": "comment",
+											"text": "All lines are created and ready"
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 743012483785603,
+													"parameters": {
+														"first-value": "TransitionLine.Count",
+														"comparison": 0,
+														"second-value": "TRANSITION_lineAmount"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-boolean-eventvar",
+													"objectClass": "System",
+													"sid": 962213185361629,
+													"parameters": {
+														"variable": "TRANSITION_linesReady",
+														"value": "true"
+													}
+												}
+											],
+											"sid": 380762464311594
+										}
+									]
+								}
+							]
+						}
+					],
+					"sid": 268441188997358
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Global - Transitions (Image Loading)",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "comment",
+							"text": "Snapshot is ready"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-canvas-snapshot",
+									"objectClass": "System",
+									"sid": 988530860737461
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 152577582205604,
+									"parameters": {
+										"variable": "TRANSITION_snapshotReady",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 429076687005438
+						},
+						{
+							"eventType": "comment",
+							"text": "Lines are ready and snapshot is taken, ready to move on"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 173313740001426,
+									"parameters": {
+										"variable": "TRANSITION_linesReady"
+									}
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 176461644044547,
+									"parameters": {
+										"variable": "TRANSITION_snapshotReady"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 623721590448864,
+									"parameters": {
+										"variable": "TRANSITION_linesReady",
+										"value": "false"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 984688329186154,
+									"parameters": {
+										"variable": "TRANSITION_snapshotReady",
+										"value": "false"
+									}
+								},
+								{
+									"type": "comment",
+									"text": "Apply snapshot image to lines"
+								},
+								{
+									"id": "load-image-from-url",
+									"objectClass": "TransitionLine",
+									"sid": 654365458064232,
+									"parameters": {
+										"uri": "CanvasSnapshot",
+										"cross-origin": "anonymous"
+									}
+								}
+							],
+							"sid": 226897439139161
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-image-url-loaded",
+									"objectClass": "TransitionLine",
+									"sid": 307185296616613
+								}
+							],
+							"actions": [
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 132138730279487,
+									"parameters": {
+										"variable": "TRANSITION_linesLoaded",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 533054974229612
+						},
+						{
+							"eventType": "comment",
+							"text": "All lines are ready to move, go to the new layout"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 533175898410290,
+									"parameters": {
+										"variable": "TRANSITION_linesLoaded",
+										"comparison": 4,
+										"value": "0"
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 123770097517523,
+									"parameters": {
+										"variable": "TRANSITION_linesLoaded",
+										"comparison": 0,
+										"value": "TransitionLine.Count"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 554777943573629,
+									"parameters": {
+										"variable": "TRANSITION_linesLoaded",
+										"value": "0"
+									}
+								},
+								{
+									"id": "go-to-layout-by-name",
+									"objectClass": "System",
+									"sid": 269715502843702,
+									"parameters": {
+										"layout": "TRANSITION_layout"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 423758645016735,
+									"parameters": {
+										"variable": "TRANSITION_movedLayout",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 659107205503542,
+							"children": [
+								{
+									"eventType": "comment",
+									"text": "Set the start time for each line"
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "for-each",
+											"objectClass": "System",
+											"sid": 215431655440242,
+											"parameters": {
+												"object": "TransitionLine"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 275117484622266,
+											"parameters": {
+												"variable": "TRANSITION_startTime",
+												"value": "clamp(TRANSITION_startTime+(random(-1, 1)), 0, 5)"
+											}
+										},
+										{
+											"id": "start-timer",
+											"objectClass": "TransitionLine",
+											"sid": 809871414818240,
+											"behaviorType": "Timer",
+											"parameters": {
+												"duration": "TRANSITION_startTime/10",
+												"type": "once",
+												"tag": "\"transitionWait\""
+											}
+										}
+									],
+									"sid": 482940128731853
+								}
+							]
+						}
+					],
+					"sid": 632019026184505
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Global - Transitions (Finalizing)",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "comment",
+							"text": "Start moving the lines"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-timer",
+									"objectClass": "TransitionLine",
+									"sid": 517977587809967,
+									"behaviorType": "Timer",
+									"parameters": {
+										"tag": "\"transitionWait\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "move-to-position",
+									"objectClass": "TransitionLine",
+									"sid": 783497756917570,
+									"behaviorType": "MoveTo",
+									"parameters": {
+										"x": "Self.X",
+										"y": "ViewportHeight(\"HUD\")",
+										"mode": "direct"
+									}
+								}
+							],
+							"sid": 903673336735991
+						},
+						{
+							"eventType": "comment",
+							"text": "Line has finished moving, remove it"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-arrived",
+									"objectClass": "TransitionLine",
+									"sid": 917173600677960,
+									"behaviorType": "MoveTo"
+								}
+							],
+							"actions": [
+								{
+									"id": "destroy",
+									"objectClass": "TransitionLine",
+									"sid": 289702467645456
+								}
+							],
+							"sid": 960038055531560
+						},
+						{
+							"eventType": "comment",
+							"text": "All lines are finished, unlock the game"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 826432550410617,
+									"parameters": {
+										"variable": "TRANSITION_running"
 									}
 								},
 								{
 									"id": "compare-two-values",
 									"objectClass": "System",
-									"sid": 698495794349227,
+									"sid": 353858758753208,
 									"parameters": {
-										"first-value": "find(RegexMatchAt(Browser.URL, \"^.+?[^\\/:](?=[?\\/]|$)\", \"gi\", 0), \"ungrounded.net\")",
-										"comparison": 5,
+										"first-value": "TransitionLine.Count",
+										"comparison": 0,
 										"second-value": "0"
 									}
 								}
 							],
-							"actions": [],
-							"sid": 508766179430234,
+							"actions": [
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 139302335259832,
+									"parameters": {
+										"variable": "TRANSITION_running",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 403155563657056
+						}
+					],
+					"sid": 249393620196146
+				}
+			],
+			"sid": 896926101837164
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Global - NGIO",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "comment",
+					"text": "Initialize NGIO and login as soon as possible"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-ready",
+							"objectClass": "NGIO",
+							"sid": 808100458089522
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 114223946461149,
+							"parameters": {
+								"variable": "NGIO_loggedIn"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [],
+					"sid": 170208809454972,
+					"children": [
+						{
+							"eventType": "comment",
+							"text": "Login if playing on Newgrounds"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 913143951198685,
+									"parameters": {
+										"variable": "NGIO_onNewgrounds"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "login",
+									"objectClass": "NGIO",
+									"sid": 627946366631771,
+									"parameters": {
+										"window-mode": "tab"
+									}
+								}
+							],
+							"sid": 390853823944169
+						}
+					]
+				},
+				{
+					"eventType": "comment",
+					"text": "We're logged in"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-login-success",
+							"objectClass": "NGIO",
+							"sid": 454126432391743
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 916814301399801,
+							"parameters": {
+								"variable": "NGIO_loggedIn",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 788345412942624,
+					"children": [
+						{
+							"eventType": "comment",
+							"text": "Tankman"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-supporter",
+									"objectClass": "NGIO",
+									"sid": 843232069212498
+								}
+							],
+							"actions": [
+								{
+									"callFunction": "unlockSkin",
+									"sid": 903902372930812,
+									"parameters": [
+										"3",
+										false
+									]
+								}
+							],
+							"sid": 815538646007421
+						}
+					]
+				},
+				{
+					"eventType": "comment",
+					"text": "Sync medals with Newgrounds ASAP"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-logged-in",
+							"objectClass": "NGIO",
+							"sid": 439633711378345
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 917271127419785,
+							"parameters": {
+								"variable": "LOAD_medals"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 113736828768891,
+							"parameters": {
+								"variable": "NGIO_medals"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 917525891211549,
+							"parameters": {
+								"variable": "NGIO_medals",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 647596343875123,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "for-each-medal",
+									"objectClass": "NGIO",
+									"sid": 754730585185541
+								},
+								{
+									"id": "is-unlocked",
+									"objectClass": "NGIO",
+									"sid": 273017759947544,
+									"parameters": {
+										"medal-id": "NGIO.MedalID"
+									}
+								}
+							],
+							"actions": [
+								{
+									"callFunction": "unlockMedal",
+									"sid": 389921757936413,
+									"parameters": [
+										"Medals.IndexOf(NGIO.MedalID)",
+										false
+									]
+								}
+							],
+							"sid": 644258674260106
+						}
+					]
+				}
+			],
+			"sid": 399470303356611
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Global - Unlocks",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"functionName": "unlockSkin",
+					"functionDescription": "Unlock a skin",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [
+						{
+							"name": "id",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"sid": 466002669428029
+						},
+						{
+							"name": "ping",
+							"type": "boolean",
+							"initialValue": "true",
+							"comment": "",
+							"sid": 956887280175924
+						}
+					],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [],
+					"sid": 548557089545633,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-empty",
+									"objectClass": "Skins",
+									"sid": 725222859277121,
+									"isInverted": true
+								},
+								{
+									"id": "compare-at-xy",
+									"objectClass": "Skins",
+									"sid": 456471074940095,
+									"parameters": {
+										"x": "id",
+										"y": "5",
+										"comparison": 1,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-at-xy",
+									"objectClass": "Skins",
+									"sid": 577316316940772,
+									"parameters": {
+										"x": "id",
+										"y": "5",
+										"value": "1"
+									}
+								},
+								{
+									"callFunction": "save",
+									"sid": 975365347581499
+								}
+							],
+							"sid": 829313579668574,
 							"children": [
 								{
 									"eventType": "block",
@@ -1186,69 +2180,337 @@
 										{
 											"id": "compare-boolean-eventvar",
 											"objectClass": "System",
-											"sid": 439761867747220,
+											"sid": 679555611873852,
 											"parameters": {
-												"variable": "NGIO_init"
-											},
-											"isInverted": true
+												"variable": "ping"
+											}
 										}
 									],
 									"actions": [
 										{
-											"id": "login",
-											"objectClass": "NGAuth",
-											"sid": 273373336786680
-										},
-										{
 											"id": "set-boolean-eventvar",
 											"objectClass": "System",
-											"sid": 793180963008312,
+											"sid": 874252193461971,
 											"parameters": {
-												"variable": "NGIO_init",
+												"variable": "MENU_unlockPing",
 												"value": "true"
 											}
 										}
 									],
-									"sid": 502847596028754
+									"sid": 341430453804109
 								}
-							],
-							"isOrBlock": true
+							]
 						}
 					]
 				},
 				{
-					"eventType": "comment",
-					"text": "Saving and loading"
-				},
+					"functionName": "unlockMedal",
+					"functionDescription": "Unlock a medal",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [
+						{
+							"name": "id",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"sid": 433672747278076
+						},
+						{
+							"name": "ping",
+							"type": "boolean",
+							"initialValue": "true",
+							"comment": "",
+							"sid": 559696532749178
+						}
+					],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [],
+					"sid": 723900450918915,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-empty",
+									"objectClass": "Medals",
+									"sid": 620173434606698,
+									"isInverted": true
+								},
+								{
+									"id": "compare-at-xy",
+									"objectClass": "Medals",
+									"sid": 754879596184365,
+									"parameters": {
+										"x": "id",
+										"y": "5",
+										"comparison": 1,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-at-xy",
+									"objectClass": "Medals",
+									"sid": 108024642733124,
+									"parameters": {
+										"x": "id",
+										"y": "5",
+										"value": "1"
+									}
+								},
+								{
+									"callFunction": "save",
+									"sid": 820773955232838
+								}
+							],
+							"sid": 561401068873939,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 291915067821698,
+											"parameters": {
+												"variable": "ping"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 846665476697601,
+											"parameters": {
+												"variable": "MENU_unlockPing",
+												"value": "true"
+											}
+										}
+									],
+									"sid": 135144545435392
+								}
+							]
+						},
+						{
+							"eventType": "comment",
+							"text": "Unlock the medal on Newgrounds"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 944468338115368,
+									"parameters": {
+										"variable": "NGIO_loggedIn"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "unlock-medal",
+									"objectClass": "NGIO",
+									"sid": 162088605651760,
+									"parameters": {
+										"medal-id": "Medals.At(id, 0)"
+									}
+								}
+							],
+							"sid": 679910239434661
+						},
+						{
+							"eventType": "comment",
+							"text": "Francis"
+						},
+						{
+							"eventType": "variable",
+							"name": "medalsUnlocked",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"isStatic": false,
+							"isConstant": false,
+							"sid": 251622808404421
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "for-each-element",
+									"objectClass": "Medals",
+									"sid": 186838735611279,
+									"parameters": {
+										"axes": "x"
+									}
+								},
+								{
+									"id": "compare-at-xy",
+									"objectClass": "Medals",
+									"sid": 253271423572344,
+									"parameters": {
+										"x": "Medals.CurX",
+										"y": "5",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 207426594485809,
+									"parameters": {
+										"variable": "medalsUnlocked",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 703889599066745
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 872871017734448,
+									"parameters": {
+										"variable": "medalsUnlocked",
+										"comparison": 0,
+										"value": "Medals.Width"
+									}
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 497579759587003,
+									"parameters": {
+										"variable": "LOAD_skins"
+									}
+								}
+							],
+							"actions": [
+								{
+									"callFunction": "unlockSkin",
+									"sid": 774615398902508,
+									"parameters": [
+										"2",
+										true
+									]
+								}
+							],
+							"sid": 684436173736412
+						}
+					]
+				}
+			],
+			"sid": 510971358042696
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Global - Saving",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
 				{
 					"functionName": "save",
-					"functionDescription": "",
+					"functionDescription": "Save the game.",
 					"functionCategory": "",
 					"functionReturnType": "none",
 					"functionCopyPicked": false,
 					"functionIsAsync": false,
 					"functionParameters": [],
 					"eventType": "function-block",
-					"conditions": [],
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "MenuFontSmall",
+							"sid": 857033387165610,
+							"parameters": {
+								"instance-variable": "type",
+								"comparison": 0,
+								"value": "\"saving\""
+							}
+						}
+					],
 					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "MenuFontSmall",
+							"sid": 354876664764039,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-opacity",
+							"objectClass": "MenuFontSmall",
+							"sid": 101381234143915,
+							"parameters": {
+								"opacity": "100"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 596702908823140,
+							"parameters": {
+								"seconds": "0.25",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "tween-one-property",
+							"objectClass": "MenuFontSmall",
+							"sid": 218364884538059,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"\"",
+								"property": "offsetOpacity",
+								"end-value": "0",
+								"time": "0.5",
+								"ease": "noease",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "no",
+								"repeat-count": "1"
+							}
+						},
+						{
+							"type": "comment",
+							"text": "Initialization"
+						},
 						{
 							"id": "clear",
 							"objectClass": "SaveFile",
-							"sid": 628080751931377
+							"sid": 277109967794638
 						},
 						{
 							"id": "add-key",
 							"objectClass": "SaveFile",
-							"sid": 904443497724588,
+							"sid": 882083966936745,
 							"parameters": {
 								"key": "\"version\"",
 								"value": "projectversion"
 							}
 						},
 						{
+							"type": "comment",
+							"text": "Settings"
+						},
+						{
 							"id": "add-key",
 							"objectClass": "SaveFile",
-							"sid": 421031475319762,
+							"sid": 310638923998129,
 							"parameters": {
 								"key": "\"sound\"",
 								"value": "SETTING_volumeSound"
@@ -1257,7 +2519,7 @@
 						{
 							"id": "add-key",
 							"objectClass": "SaveFile",
-							"sid": 958178058993260,
+							"sid": 889636682564443,
 							"parameters": {
 								"key": "\"music\"",
 								"value": "SETTING_volumeMusic"
@@ -1266,16 +2528,16 @@
 						{
 							"id": "add-key",
 							"objectClass": "SaveFile",
-							"sid": 884468236623592,
+							"sid": 966803404664247,
 							"parameters": {
-								"key": "\"flashing\"",
-								"value": "SETTING_flashing"
+								"key": "\"skin\"",
+								"value": "SETTING_playerSkin"
 							}
 						},
 						{
 							"id": "add-key",
 							"objectClass": "SaveFile",
-							"sid": 969471859577252,
+							"sid": 110947085949509,
 							"parameters": {
 								"key": "\"fullscreen\"",
 								"value": "SETTING_fullscreen"
@@ -1284,16 +2546,29 @@
 						{
 							"id": "add-key",
 							"objectClass": "SaveFile",
-							"sid": 843059540724494,
+							"sid": 657908781317492,
 							"parameters": {
-								"key": "\"doomMusic\"",
-								"value": "SETTING_doomMusic"
+								"key": "\"flashing\"",
+								"value": "SETTING_flashing"
 							}
 						},
 						{
 							"id": "add-key",
 							"objectClass": "SaveFile",
-							"sid": 402372710779965,
+							"sid": 549911673114437,
+							"parameters": {
+								"key": "\"timer\"",
+								"value": "SETTING_timer"
+							}
+						},
+						{
+							"type": "comment",
+							"text": "Unlocks"
+						},
+						{
+							"id": "add-key",
+							"objectClass": "SaveFile",
+							"sid": 889006418465356,
 							"parameters": {
 								"key": "\"doomUnlock\"",
 								"value": "UNLOCK_doomMusic"
@@ -1302,101 +2577,124 @@
 						{
 							"id": "add-key",
 							"objectClass": "SaveFile",
-							"sid": 290826082747390,
+							"sid": 197429542028992,
 							"parameters": {
-								"key": "\"medalObservations\"",
-								"value": "MEDAL_observations"
-							}
-						},
-						{
-							"id": "add-key",
-							"objectClass": "SaveFile",
-							"sid": 417283774063962,
-							"parameters": {
-								"key": "\"medalItems\"",
-								"value": "MEDAL_items"
-							}
-						},
-						{
-							"id": "add-key",
-							"objectClass": "SaveFile",
-							"sid": 925446687147578,
-							"parameters": {
-								"key": "\"medalSpending\"",
-								"value": "MEDAL_spending"
-							}
-						},
-						{
-							"id": "add-key",
-							"objectClass": "SaveFile",
-							"sid": 115385738226488,
-							"parameters": {
-								"key": "\"medalSecrets\"",
-								"value": "MEDAL_secrets"
-							}
-						},
-						{
-							"id": "add-key",
-							"objectClass": "SaveFile",
-							"sid": 406905954442411,
-							"parameters": {
-								"key": "\"medalTime\"",
-								"value": "MEDAL_time"
-							}
-						},
-						{
-							"id": "add-key",
-							"objectClass": "SaveFile",
-							"sid": 594658357056471,
-							"parameters": {
-								"key": "\"medalDrinks\"",
-								"value": "MEDAL_drinks"
-							}
-						},
-						{
-							"id": "add-key",
-							"objectClass": "SaveFile",
-							"sid": 922789991506873,
-							"parameters": {
-								"key": "\"medalThoughtful\"",
-								"value": "MEDAL_thoughtful"
-							}
-						},
-						{
-							"id": "add-key",
-							"objectClass": "SaveFile",
-							"sid": 928539875816199,
-							"parameters": {
-								"key": "\"medalDoom\"",
-								"value": "MEDAL_doom"
+								"key": "\"doomMusic\"",
+								"value": "SETTING_doomMusic"
 							}
 						}
 					],
-					"sid": 727129007829533,
+					"sid": 290017484363533,
 					"children": [
 						{
 							"eventType": "comment",
-							"text": "Save directly to the computer"
+							"text": "Loop through all medals"
 						},
 						{
 							"eventType": "block",
 							"conditions": [
 								{
+									"id": "for-each-element",
+									"objectClass": "Medals",
+									"sid": 887544632909143,
+									"parameters": {
+										"axes": "x"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "add-key",
+									"objectClass": "SaveFile",
+									"sid": 678932685715375,
+									"parameters": {
+										"key": "Medals.At(Medals.CurX, 1)",
+										"value": "Medals.At(Medals.CurX, 5)"
+									}
+								}
+							],
+							"sid": 385800812764558
+						},
+						{
+							"eventType": "comment",
+							"text": "Loop through all skins, excluding Default and Tankman"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "for-each-element",
+									"objectClass": "Skins",
+									"sid": 806545618615478,
+									"parameters": {
+										"axes": "x"
+									}
+								},
+								{
+									"id": "compare-current-value",
+									"objectClass": "Skins",
+									"sid": 626453204796146,
+									"parameters": {
+										"comparison": 0,
+										"value": "\"default\""
+									},
+									"isInverted": true
+								},
+								{
+									"id": "compare-current-value",
+									"objectClass": "Skins",
+									"sid": 702735563743243,
+									"parameters": {
+										"comparison": 0,
+										"value": "\"tankman\""
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "add-key",
+									"objectClass": "SaveFile",
+									"sid": 410674983352353,
+									"parameters": {
+										"key": "Skins.At(Skins.CurX, 1)",
+										"value": "Skins.At(Skins.CurX, 5)"
+									}
+								}
+							],
+							"sid": 440640108246948
+						},
+						{
+							"eventType": "comment",
+							"text": "Save to a file on standalone, if supported"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 244526312311926,
+									"parameters": {
+										"variable": "GAME_standalone"
+									}
+								},
+								{
 									"id": "desktop-features-supported",
 									"objectClass": "FileSystem",
-									"sid": 745391660782368
+									"sid": 194598253898471
 								},
 								{
 									"id": "is-supported",
 									"objectClass": "FileSystem",
-									"sid": 881078880393331
+									"sid": 120174585512449
 								}
 							],
 							"actions": [
 								{
 									"id": "write-text-file",
 									"objectClass": "FileSystem",
-									"sid": 576591997485494,
+									"sid": 910263507373733,
 									"parameters": {
 										"picker-tag": "\"<local-app-data>\"",
 										"folder-path": "\"SCUMDOG/doom_tge/saveData1.txt\"",
@@ -1406,7 +2704,7 @@
 									}
 								}
 							],
-							"sid": 708873468172197
+							"sid": 907164130683744
 						},
 						{
 							"eventType": "comment",
@@ -1418,27 +2716,37 @@
 								{
 									"id": "else",
 									"objectClass": "System",
-									"sid": 759104751151770
+									"sid": 809443290786343
 								}
 							],
 							"actions": [
 								{
 									"id": "set-item",
 									"objectClass": "LocalStorage",
-									"sid": 200334877341948,
+									"sid": 465403705209116,
 									"parameters": {
 										"key": "\"saveData1\"",
-										"value": "SaveFile.AsJSON"
+										"value": "Browser.ExecJS(\"btoa('\"&SaveFile.AsJSON&\"')\")"
 									}
 								}
 							],
-							"sid": 941165568429222
+							"sid": 194646400345829
 						}
 					]
-				},
+				}
+			],
+			"sid": 267621989731064
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Global - Loading",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
 				{
 					"eventType": "comment",
-					"text": "Desktop save data exists"
+					"text": "File read, good to go"
 				},
 				{
 					"eventType": "block",
@@ -1446,60 +2754,22 @@
 						{
 							"id": "on-file-operation-complete",
 							"objectClass": "FileSystem",
-							"sid": 864240603122425,
+							"sid": 645186909579939,
 							"parameters": {
 								"file-tag": "\"load\""
 							}
 						}
 					],
 					"actions": [
-						{
-							"id": "load",
-							"objectClass": "SaveFile",
-							"sid": 584476931445603,
-							"parameters": {
-								"json": "Browser.ExecJS(\"atob('\"&FileSystem.FileText&\"')\")"
-							}
-						},
 						{
 							"callFunction": "load",
-							"sid": 449013952442183
+							"sid": 401870950397593,
+							"parameters": [
+								"Browser.ExecJS(\"atob('\"&FileSystem.FileText&\"')\")"
+							]
 						}
 					],
-					"sid": 350589509741508
-				},
-				{
-					"eventType": "comment",
-					"text": "Desktop save data does not exist"
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-file-operation-error",
-							"objectClass": "FileSystem",
-							"sid": 295382391093610,
-							"parameters": {
-								"file-tag": "\"load\""
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 944638353402636,
-							"parameters": {
-								"variable": "GAME_loaded",
-								"value": "true"
-							}
-						}
-					],
-					"sid": 910224615908252
-				},
-				{
-					"eventType": "comment",
-					"text": "Web save data exists"
+					"sid": 409906381960859
 				},
 				{
 					"eventType": "block",
@@ -1507,7 +2777,7 @@
 						{
 							"id": "on-item-exists",
 							"objectClass": "LocalStorage",
-							"sid": 496881022474661,
+							"sid": 164183989235588,
 							"parameters": {
 								"key": "\"saveData1\""
 							}
@@ -1515,75 +2785,96 @@
 					],
 					"actions": [
 						{
-							"id": "load",
-							"objectClass": "SaveFile",
-							"sid": 960940152072467,
-							"parameters": {
-								"json": "LocalStorage.ItemValue"
-							}
-						},
-						{
 							"callFunction": "load",
-							"sid": 255430310358885
+							"sid": 773536543847820,
+							"parameters": [
+								"Browser.ExecJS(\"atob('\"&LocalStorage.ItemValue&\"')\")"
+							]
 						}
 					],
-					"sid": 558550667383501
+					"sid": 323317218052098
 				},
 				{
 					"eventType": "comment",
-					"text": "Web save data does not exist"
+					"text": "File not read, everything is terrible"
 				},
 				{
 					"eventType": "block",
 					"conditions": [
 						{
+							"id": "on-file-operation-error",
+							"objectClass": "FileSystem",
+							"sid": 115998335189123,
+							"parameters": {
+								"file-tag": "\"load\""
+							}
+						},
+						{
 							"id": "on-item-missing",
 							"objectClass": "LocalStorage",
-							"sid": 737818623220528,
+							"sid": 688596444234924,
 							"parameters": {
 								"key": "\"saveData1\""
 							}
+						},
+						{
+							"id": "on-error",
+							"objectClass": "LocalStorage",
+							"sid": 610142624800259
 						}
 					],
 					"actions": [
 						{
 							"id": "set-boolean-eventvar",
 							"objectClass": "System",
-							"sid": 200430769805887,
+							"sid": 772917438599698,
 							"parameters": {
-								"variable": "GAME_loaded",
+								"variable": "LOAD_save",
 								"value": "true"
 							}
 						}
 					],
-					"sid": 696855132148861
-				},
-				{
-					"eventType": "comment",
-					"text": "Load the data"
+					"sid": 239514742234620,
+					"isOrBlock": true
 				},
 				{
 					"functionName": "load",
-					"functionDescription": "",
+					"functionDescription": "Load the game.",
 					"functionCategory": "",
 					"functionReturnType": "none",
 					"functionCopyPicked": false,
 					"functionIsAsync": false,
-					"functionParameters": [],
+					"functionParameters": [
+						{
+							"name": "data",
+							"type": "string",
+							"initialValue": "",
+							"comment": "",
+							"sid": 697040041616731
+						}
+					],
 					"eventType": "function-block",
 					"conditions": [],
 					"actions": [
 						{
 							"id": "set-boolean-eventvar",
 							"objectClass": "System",
-							"sid": 136313928558680,
+							"sid": 882540775309854,
 							"parameters": {
-								"variable": "GAME_loaded",
+								"variable": "LOAD_save",
 								"value": "true"
+							}
+						},
+						{
+							"id": "load",
+							"objectClass": "SaveFile",
+							"sid": 503537490687619,
+							"parameters": {
+								"json": "data"
 							}
 						}
 					],
-					"sid": 636239903648137,
+					"sid": 447431086607524,
 					"children": [
 						{
 							"eventType": "block",
@@ -1591,15 +2882,19 @@
 								{
 									"id": "is-empty",
 									"objectClass": "SaveFile",
-									"sid": 235352143044544,
+									"sid": 844089688755040,
 									"isInverted": true
 								}
 							],
 							"actions": [
 								{
+									"type": "comment",
+									"text": "Settings"
+								},
+								{
 									"id": "set-eventvar-value",
 									"objectClass": "System",
-									"sid": 854898922912960,
+									"sid": 867981257455195,
 									"parameters": {
 										"variable": "SETTING_volumeSound",
 										"value": "SaveFile.Get(\"sound\")"
@@ -1608,216 +2903,58 @@
 								{
 									"id": "set-eventvar-value",
 									"objectClass": "System",
-									"sid": 723390258764380,
+									"sid": 356343451447424,
 									"parameters": {
 										"variable": "SETTING_volumeMusic",
 										"value": "SaveFile.Get(\"music\")"
 									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 680267163395177,
+									"parameters": {
+										"variable": "SETTING_flashing",
+										"value": "SaveFile.Get(\"flashing\")"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 585452133123341,
+									"parameters": {
+										"variable": "SETTING_timer",
+										"value": "SaveFile.Get(\"timer\")"
+									}
+								},
+								{
+									"type": "comment",
+									"text": "Unlocks"
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 634569462184400,
+									"parameters": {
+										"variable": "UNLOCK_doomMusic",
+										"value": "SaveFile.Get(\"doomUnlock\")"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 152308801403504,
+									"parameters": {
+										"variable": "SETTING_doomMusic",
+										"value": "SaveFile.Get(\"doomMusic\")"
+									}
 								}
 							],
-							"sid": 290014656295176,
+							"sid": 554025193388414,
 							"children": [
 								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "compare-instance-variable",
-											"objectClass": "Slider",
-											"sid": 555704181316267,
-											"parameters": {
-												"instance-variable": "id",
-												"comparison": 0,
-												"value": "0"
-											}
-										}
-									],
-									"actions": [
-										{
-											"id": "set-x",
-											"objectClass": "Slider",
-											"sid": 100002967447358,
-											"parameters": {
-												"x": "SETTING_volumeSound*(SliderBar.Width-8)+(SliderBar.X+4)"
-											}
-										}
-									],
-									"sid": 110276431975103
-								},
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "compare-instance-variable",
-											"objectClass": "Slider",
-											"sid": 477609080583606,
-											"parameters": {
-												"instance-variable": "id",
-												"comparison": 0,
-												"value": "1"
-											}
-										}
-									],
-									"actions": [
-										{
-											"id": "set-x",
-											"objectClass": "Slider",
-											"sid": 283878280336817,
-											"parameters": {
-												"x": "SETTING_volumeMusic*(SliderBar.Width-8)+(SliderBar.X+4)"
-											}
-										},
-										{
-											"id": "set-volume",
-											"objectClass": "Audio",
-											"sid": 272457309456236,
-											"parameters": {
-												"tag": "\"music\"",
-												"db": "(log10(SETTING_volumeMusic)*20)"
-											}
-										}
-									],
-									"sid": 103971041440672
-								},
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "compare-value",
-											"objectClass": "SaveFile",
-											"sid": 294833548449334,
-											"parameters": {
-												"key": "\"flashing\"",
-												"comparison": 0,
-												"value": "0"
-											}
-										}
-									],
-									"actions": [
-										{
-											"id": "set-boolean-eventvar",
-											"objectClass": "System",
-											"sid": 662340348450732,
-											"parameters": {
-												"variable": "SETTING_flashing",
-												"value": "false"
-											}
-										}
-									],
-									"sid": 793859521607473
-								},
-								{
 									"eventType": "comment",
-									"text": "Standalone exclusive"
-								},
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "is-windows-webview2-export",
-											"objectClass": "PlatformInfo",
-											"sid": 302023803790266
-										},
-										{
-											"id": "is-linux-cef-export",
-											"objectClass": "PlatformInfo",
-											"sid": 594593286314654
-										}
-									],
-									"actions": [],
-									"sid": 979701697902520,
-									"children": [
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "compare-value",
-													"objectClass": "SaveFile",
-													"sid": 236369349385038,
-													"parameters": {
-														"key": "\"fullscreen\"",
-														"comparison": 0,
-														"value": "1"
-													}
-												}
-											],
-											"actions": [
-												{
-													"id": "request-fullscreen",
-													"objectClass": "Browser",
-													"sid": 251363654817981,
-													"parameters": {
-														"mode": "stretch-letterbox-scale",
-														"navigation-ui": "hide"
-													}
-												},
-												{
-													"id": "set-boolean-eventvar",
-													"objectClass": "System",
-													"sid": 522135566657812,
-													"parameters": {
-														"variable": "SETTING_fullscreen",
-														"value": "true"
-													}
-												}
-											],
-											"sid": 862647670848126
-										}
-									],
-									"isOrBlock": true
-								},
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "compare-value",
-											"objectClass": "SaveFile",
-											"sid": 706953779621646,
-											"parameters": {
-												"key": "\"doomMusic\"",
-												"comparison": 0,
-												"value": "1"
-											}
-										}
-									],
-									"actions": [
-										{
-											"id": "set-boolean-eventvar",
-											"objectClass": "System",
-											"sid": 797548613507318,
-											"parameters": {
-												"variable": "SETTING_doomMusic",
-												"value": "true"
-											}
-										}
-									],
-									"sid": 914013293870871
-								},
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "compare-value",
-											"objectClass": "SaveFile",
-											"sid": 687959868546244,
-											"parameters": {
-												"key": "\"doomUnlock\"",
-												"comparison": 0,
-												"value": "1"
-											}
-										}
-									],
-									"actions": [
-										{
-											"id": "set-boolean-eventvar",
-											"objectClass": "System",
-											"sid": 178792243366612,
-											"parameters": {
-												"variable": "UNLOCK_doomMusic",
-												"value": "true"
-											}
-										}
-									],
-									"sid": 101160684079450
+									"text": "Standalone - remember fullscreen status"
 								},
 								{
 									"eventType": "block",
@@ -1825,15 +2962,73 @@
 										{
 											"id": "compare-boolean-eventvar",
 											"objectClass": "System",
-											"sid": 479737994197089,
+											"sid": 384512436791826,
 											"parameters": {
-												"variable": "NGIO_medals"
+												"variable": "GAME_standalone"
+											}
+										},
+										{
+											"id": "compare-value",
+											"objectClass": "SaveFile",
+											"sid": 205886801257864,
+											"parameters": {
+												"key": "\"fullscreen\"",
+												"comparison": 0,
+												"value": "1"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "request-fullscreen",
+											"objectClass": "Browser",
+											"sid": 159106995644302,
+											"parameters": {
+												"mode": "stretch-letterbox-scale",
+												"navigation-ui": "hide"
+											}
+										}
+									],
+									"sid": 470945352314132
+								},
+								{
+									"eventType": "comment",
+									"text": "Loop through all skins, excluding Default and Tankman"
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "for-each-element",
+											"objectClass": "Skins",
+											"sid": 411533911600724,
+											"parameters": {
+												"axes": "x"
+											}
+										},
+										{
+											"id": "compare-current-value",
+											"objectClass": "Skins",
+											"sid": 328357121351516,
+											"parameters": {
+												"comparison": 0,
+												"value": "\"default\""
+											},
+											"isInverted": true
+										},
+										{
+											"id": "compare-current-value",
+											"objectClass": "Skins",
+											"sid": 728403467107674,
+											"parameters": {
+												"comparison": 0,
+												"value": "\"tankman\""
 											},
 											"isInverted": true
 										}
 									],
 									"actions": [],
-									"sid": 445135968585370,
+									"sid": 172691685784927,
 									"children": [
 										{
 											"eventType": "block",
@@ -1841,9 +3036,9 @@
 												{
 													"id": "compare-value",
 													"objectClass": "SaveFile",
-													"sid": 109142381985470,
+													"sid": 222597606049309,
 													"parameters": {
-														"key": "\"medalObservations\"",
+														"key": "Skins.At(Skins.CurX, 1)",
 														"comparison": 0,
 														"value": "1"
 													}
@@ -1851,386 +3046,55 @@
 											],
 											"actions": [
 												{
-													"id": "set-boolean-eventvar",
-													"objectClass": "System",
-													"sid": 634180661891383,
-													"parameters": {
-														"variable": "MEDAL_observations",
-														"value": "true"
-													}
+													"callFunction": "unlockSkin",
+													"sid": 908810297933153,
+													"parameters": [
+														"Skins.CurX",
+														false
+													]
 												}
 											],
-											"sid": 977282426797730
-										},
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "compare-value",
-													"objectClass": "SaveFile",
-													"sid": 497606849310630,
-													"parameters": {
-														"key": "\"medalItems\"",
-														"comparison": 0,
-														"value": "1"
-													}
-												}
-											],
-											"actions": [
-												{
-													"id": "set-boolean-eventvar",
-													"objectClass": "System",
-													"sid": 371824058062725,
-													"parameters": {
-														"variable": "MEDAL_items",
-														"value": "true"
-													}
-												}
-											],
-											"sid": 214624348936541
-										},
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "compare-value",
-													"objectClass": "SaveFile",
-													"sid": 611314212428029,
-													"parameters": {
-														"key": "\"medalSpending\"",
-														"comparison": 0,
-														"value": "1"
-													}
-												}
-											],
-											"actions": [
-												{
-													"id": "set-boolean-eventvar",
-													"objectClass": "System",
-													"sid": 472343753554283,
-													"parameters": {
-														"variable": "MEDAL_spending",
-														"value": "true"
-													}
-												}
-											],
-											"sid": 676570526105899
-										},
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "compare-value",
-													"objectClass": "SaveFile",
-													"sid": 245444797647277,
-													"parameters": {
-														"key": "\"medalSecrets\"",
-														"comparison": 0,
-														"value": "1"
-													}
-												}
-											],
-											"actions": [
-												{
-													"id": "set-boolean-eventvar",
-													"objectClass": "System",
-													"sid": 748987974797059,
-													"parameters": {
-														"variable": "MEDAL_secrets",
-														"value": "true"
-													}
-												}
-											],
-											"sid": 761480154657873
-										},
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "compare-value",
-													"objectClass": "SaveFile",
-													"sid": 180589229366416,
-													"parameters": {
-														"key": "\"medalTime\"",
-														"comparison": 0,
-														"value": "1"
-													}
-												}
-											],
-											"actions": [
-												{
-													"id": "set-boolean-eventvar",
-													"objectClass": "System",
-													"sid": 505330484799053,
-													"parameters": {
-														"variable": "MEDAL_time",
-														"value": "true"
-													}
-												}
-											],
-											"sid": 537388635861170
-										},
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "compare-value",
-													"objectClass": "SaveFile",
-													"sid": 682703943526580,
-													"parameters": {
-														"key": "\"medalDrinks\"",
-														"comparison": 0,
-														"value": "1"
-													}
-												}
-											],
-											"actions": [
-												{
-													"id": "set-boolean-eventvar",
-													"objectClass": "System",
-													"sid": 834532468359901,
-													"parameters": {
-														"variable": "MEDAL_drinks",
-														"value": "true"
-													}
-												}
-											],
-											"sid": 504118738322034
-										},
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "compare-value",
-													"objectClass": "SaveFile",
-													"sid": 218067784125297,
-													"parameters": {
-														"key": "\"medalThoughtful\"",
-														"comparison": 0,
-														"value": "1"
-													}
-												}
-											],
-											"actions": [
-												{
-													"id": "set-boolean-eventvar",
-													"objectClass": "System",
-													"sid": 135175397513430,
-													"parameters": {
-														"variable": "MEDAL_thoughtful",
-														"value": "true"
-													}
-												}
-											],
-											"sid": 560746921203113
-										},
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "compare-value",
-													"objectClass": "SaveFile",
-													"sid": 542758554674637,
-													"parameters": {
-														"key": "\"medalThoughtful\"",
-														"comparison": 0,
-														"value": "1"
-													}
-												}
-											],
-											"actions": [
-												{
-													"id": "set-boolean-eventvar",
-													"objectClass": "System",
-													"sid": 571593045071837,
-													"parameters": {
-														"variable": "MEDAL_doom",
-														"value": "true"
-													}
-												}
-											],
-											"sid": 131099857404895
+											"sid": 669794148438504
 										}
 									]
-								}
-							]
-						}
-					]
-				},
-				{
-					"eventType": "comment",
-					"text": "NGIO login complete, grant medals (ignores local storage)"
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-login-success",
-							"objectClass": "NGAuth",
-							"sid": 595355692026402
-						}
-					],
-					"actions": [
-						{
-							"id": "get-list",
-							"objectClass": "NGMedals",
-							"sid": 493770540556419
-						}
-					],
-					"sid": 268429168105488
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-get-medals-list-success",
-							"objectClass": "NGMedals",
-							"sid": 866828442234408
-						}
-					],
-					"actions": [
-						{
-							"id": "set-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 670098928193306,
-							"parameters": {
-								"variable": "NGIO_medals",
-								"value": "true"
-							}
-						},
-						{
-							"id": "set-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 190679239700321,
-							"parameters": {
-								"variable": "MEDAL_observations",
-								"value": "false"
-							}
-						},
-						{
-							"id": "set-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 451615956955274,
-							"parameters": {
-								"variable": "MEDAL_items",
-								"value": "false"
-							}
-						},
-						{
-							"id": "set-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 419665099778771,
-							"parameters": {
-								"variable": "MEDAL_spending",
-								"value": "false"
-							}
-						},
-						{
-							"id": "set-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 654264205945559,
-							"parameters": {
-								"variable": "MEDAL_secrets",
-								"value": "false"
-							}
-						},
-						{
-							"id": "set-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 929237145892882,
-							"parameters": {
-								"variable": "MEDAL_time",
-								"value": "false"
-							}
-						},
-						{
-							"id": "set-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 333523009253132,
-							"parameters": {
-								"variable": "MEDAL_drinks",
-								"value": "false"
-							}
-						},
-						{
-							"id": "set-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 654242275480451,
-							"parameters": {
-								"variable": "MEDAL_thoughtful",
-								"value": "false"
-							}
-						},
-						{
-							"id": "set-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 699340436738330,
-							"parameters": {
-								"variable": "MEDAL_doom",
-								"value": "false"
-							}
-						}
-					],
-					"sid": 937246583531676,
-					"children": [
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "for-each-medal",
-									"objectClass": "NGMedals",
-									"sid": 995379424423702
-								}
-							],
-							"actions": [
-								{
-									"id": "set-at-xy",
-									"objectClass": "Medals",
-									"sid": 210235817340610,
-									"parameters": {
-										"x": "NGMedals.LoopIndex",
-										"y": "0",
-										"value": "NGMedals.CurMedalID"
-									}
 								},
 								{
-									"id": "set-at-xy",
-									"objectClass": "Medals",
-									"sid": 546763179410209,
-									"parameters": {
-										"x": "NGMedals.LoopIndex",
-										"y": "1",
-										"value": "NGMedals.CurMedalIsUnlocked"
-									}
-								}
-							],
-							"sid": 517004642611846,
-							"children": [
+									"eventType": "comment",
+									"text": "Loop through all medals, set them if no NGIO"
+								},
 								{
 									"eventType": "block",
 									"conditions": [
 										{
+											"id": "for-each-element",
+											"objectClass": "Medals",
+											"sid": 106071339254324,
+											"parameters": {
+												"axes": "x"
+											}
+										},
+										{
 											"id": "compare-boolean-eventvar",
 											"objectClass": "System",
-											"sid": 451400487083856,
+											"sid": 136219921989346,
 											"parameters": {
-												"variable": "NGIO_medals"
-											}
+												"variable": "NGIO_loggedIn"
+											},
+											"isInverted": true
 										}
 									],
 									"actions": [],
-									"sid": 116139267187783,
+									"sid": 140548053600050,
 									"children": [
 										{
 											"eventType": "block",
 											"conditions": [
 												{
-													"id": "compare-at-xy",
-													"objectClass": "Medals",
-													"sid": 854481100915366,
+													"id": "compare-value",
+													"objectClass": "SaveFile",
+													"sid": 798427846676327,
 													"parameters": {
-														"x": "Medals.IndexOf(82079)",
-														"y": "1",
+														"key": "Medals.At(Medals.CurX, 1)",
 														"comparison": 0,
 														"value": "1"
 													}
@@ -2238,221 +3102,55 @@
 											],
 											"actions": [
 												{
-													"id": "set-boolean-eventvar",
-													"objectClass": "System",
-													"sid": 349096134713052,
-													"parameters": {
-														"variable": "MEDAL_observations",
-														"value": "true"
-													}
+													"callFunction": "unlockMedal",
+													"sid": 785486557850069,
+													"parameters": [
+														"Medals.CurX",
+														false
+													]
 												}
 											],
-											"sid": 740727346539215
-										},
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "compare-at-xy",
-													"objectClass": "Medals",
-													"sid": 505356171783008,
-													"parameters": {
-														"x": "Medals.IndexOf(82080)",
-														"y": "1",
-														"comparison": 0,
-														"value": "1"
-													}
-												}
-											],
-											"actions": [
-												{
-													"id": "set-boolean-eventvar",
-													"objectClass": "System",
-													"sid": 960745786054436,
-													"parameters": {
-														"variable": "MEDAL_items",
-														"value": "true"
-													}
-												}
-											],
-											"sid": 470010913620960
-										},
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "compare-at-xy",
-													"objectClass": "Medals",
-													"sid": 911731611856779,
-													"parameters": {
-														"x": "Medals.IndexOf(82081)",
-														"y": "1",
-														"comparison": 0,
-														"value": "1"
-													}
-												}
-											],
-											"actions": [
-												{
-													"id": "set-boolean-eventvar",
-													"objectClass": "System",
-													"sid": 400560413296363,
-													"parameters": {
-														"variable": "MEDAL_spending",
-														"value": "true"
-													}
-												}
-											],
-											"sid": 787458437435654
-										},
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "compare-at-xy",
-													"objectClass": "Medals",
-													"sid": 711421938193290,
-													"parameters": {
-														"x": "Medals.IndexOf(82082)",
-														"y": "1",
-														"comparison": 0,
-														"value": "1"
-													}
-												}
-											],
-											"actions": [
-												{
-													"id": "set-boolean-eventvar",
-													"objectClass": "System",
-													"sid": 920496382850787,
-													"parameters": {
-														"variable": "MEDAL_secrets",
-														"value": "true"
-													}
-												}
-											],
-											"sid": 856018370283798
-										},
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "compare-at-xy",
-													"objectClass": "Medals",
-													"sid": 659191911044738,
-													"parameters": {
-														"x": "Medals.IndexOf(82083)",
-														"y": "1",
-														"comparison": 0,
-														"value": "1"
-													}
-												}
-											],
-											"actions": [
-												{
-													"id": "set-boolean-eventvar",
-													"objectClass": "System",
-													"sid": 814417603786513,
-													"parameters": {
-														"variable": "MEDAL_time",
-														"value": "true"
-													}
-												}
-											],
-											"sid": 119840434901547
-										},
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "compare-at-xy",
-													"objectClass": "Medals",
-													"sid": 290523045424951,
-													"parameters": {
-														"x": "Medals.IndexOf(82084)",
-														"y": "1",
-														"comparison": 0,
-														"value": "1"
-													}
-												}
-											],
-											"actions": [
-												{
-													"id": "set-boolean-eventvar",
-													"objectClass": "System",
-													"sid": 566826961524088,
-													"parameters": {
-														"variable": "MEDAL_drinks",
-														"value": "true"
-													}
-												}
-											],
-											"sid": 443363488324612
-										},
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "compare-at-xy",
-													"objectClass": "Medals",
-													"sid": 723292939462709,
-													"parameters": {
-														"x": "Medals.IndexOf(82085)",
-														"y": "1",
-														"comparison": 0,
-														"value": "1"
-													}
-												}
-											],
-											"actions": [
-												{
-													"id": "set-boolean-eventvar",
-													"objectClass": "System",
-													"sid": 604379953200767,
-													"parameters": {
-														"variable": "MEDAL_thoughtful",
-														"value": "true"
-													}
-												}
-											],
-											"sid": 381047767047857
-										},
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "compare-at-xy",
-													"objectClass": "Medals",
-													"sid": 424742891191305,
-													"parameters": {
-														"x": "Medals.IndexOf(82086)",
-														"y": "1",
-														"comparison": 0,
-														"value": "1"
-													}
-												}
-											],
-											"actions": [
-												{
-													"id": "set-boolean-eventvar",
-													"objectClass": "System",
-													"sid": 665842245867848,
-													"parameters": {
-														"variable": "MEDAL_doom",
-														"value": "true"
-													}
-												}
-											],
-											"sid": 633080115927441
+											"sid": 375656954230232
 										}
 									]
+								},
+								{
+									"eventType": "comment",
+									"text": "Validate and set skin"
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-value",
+											"objectClass": "SaveFile",
+											"sid": 994583941446353,
+											"parameters": {
+												"key": "\"skin\"",
+												"comparison": 1,
+												"value": "\"default\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 733117082992840,
+											"parameters": {
+												"variable": "SETTING_playerSkin",
+												"value": "Skins.At(Skins.IndexOf(SaveFile.Get(\"skin\")), 5) = 1 ? SaveFile.Get(\"skin\") : \"default\""
+											}
+										}
+									],
+									"sid": 646084336769543
 								}
 							]
 						}
 					]
 				}
 			],
-			"sid": 898813320297909
+			"sid": 773398537179599
 		}
 	],
 	"sid": 955279659848991

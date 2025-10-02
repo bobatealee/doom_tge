@@ -50,8 +50,8 @@
 						"enable-bbcode": true,
 						"character-width": 20,
 						"character-height": 19,
-						"character-set": "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.!:%/$()#-,@",
-						"spacing-data": "[[4, \".:\"],\n[5, \",\"],\n[6, \"Ii! \"],\n[7, \"-\"],\n[8, \"()\"],\n[10, \"1\"],\n[11, \"l\"],\n[12, \"ft$\"],\n[13, \"023456789%/#\"],\n[14, \"cejp\"],\n[15, \"BJZabdhrs\"],\n[16, \"DEFGHLMNPRSTUVWXgkmnuvwxyz\"],\n[17, \"CYoq\"],\n[18, \"AKOQ\"]]",
+						"character-set": "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.!:%/$()#-,@?",
+						"spacing-data": "[[4, \".:\"],\n[5, \",\"],\n[6, \"Ii! \"],\n[7, \"-\"],\n[8, \"()\"],\n[10, \"1\"],\n[11, \"l\"],\n[12, \"ft$\"],\n[13, \"023456789%/#?\"],\n[14, \"cejp\"],\n[15, \"BJZabdhrs\"],\n[16, \"DEFGHLMNPRSTUVWXgkmnuvwxyz\"],\n[17, \"CYoq\"],\n[18, \"AKOQ\"]]",
 						"scale": 1,
 						"character-spacing": -1,
 						"line-height": 0,
@@ -67,7 +67,8 @@
 					"tags": "",
 					"instanceVariables": {
 						"id": -1,
-						"type": "button"
+						"type": "button",
+						"init": false
 					},
 					"behaviors": {
 						"Tween": {
@@ -84,7 +85,7 @@
 					"locked": false,
 					"world": {
 						"x": 0,
-						"y": 24,
+						"y": 20,
 						"width": 320,
 						"height": 16,
 						"originX": 0,
@@ -106,8 +107,8 @@
 						"enable-bbcode": true,
 						"character-width": 20,
 						"character-height": 19,
-						"character-set": "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.!:%/$()#-,@",
-						"spacing-data": "[[4, \".:\"],\n[5, \",\"],\n[6, \"Ii! \"],\n[7, \"-\"],\n[8, \"()\"],\n[10, \"1\"],\n[11, \"l\"],\n[12, \"ft$\"],\n[13, \"023456789%/#\"],\n[14, \"cejp\"],\n[15, \"BJZabdhrs\"],\n[16, \"DEFGHLMNPRSTUVWXgkmnuvwxyz\"],\n[17, \"CYoq\"],\n[18, \"AKOQ\"]]",
+						"character-set": "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.!:%/$()#-,@?",
+						"spacing-data": "[[4, \".:\"],\n[5, \",\"],\n[6, \"Ii! \"],\n[7, \"-\"],\n[8, \"()\"],\n[10, \"1\"],\n[11, \"l\"],\n[12, \"ft$\"],\n[13, \"023456789%/#?\"],\n[14, \"cejp\"],\n[15, \"BJZabdhrs\"],\n[16, \"DEFGHLMNPRSTUVWXgkmnuvwxyz\"],\n[17, \"CYoq\"],\n[18, \"AKOQ\"]]",
 						"scale": 1,
 						"character-spacing": -1,
 						"line-height": 0,
@@ -123,7 +124,8 @@
 					"tags": "",
 					"instanceVariables": {
 						"id": -1,
-						"type": "button"
+						"type": "button",
+						"init": false
 					},
 					"behaviors": {
 						"Tween": {
@@ -140,7 +142,7 @@
 					"locked": false,
 					"world": {
 						"x": 0,
-						"y": 44,
+						"y": 40,
 						"width": 320,
 						"height": 16,
 						"originX": 0,
@@ -162,8 +164,8 @@
 						"enable-bbcode": true,
 						"character-width": 20,
 						"character-height": 19,
-						"character-set": "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.!:%/$()#-,@",
-						"spacing-data": "[[4, \".:\"],\n[5, \",\"],\n[6, \"Ii! \"],\n[7, \"-\"],\n[8, \"()\"],\n[10, \"1\"],\n[11, \"l\"],\n[12, \"ft$\"],\n[13, \"023456789%/#\"],\n[14, \"cejp\"],\n[15, \"BJZabdhrs\"],\n[16, \"DEFGHLMNPRSTUVWXgkmnuvwxyz\"],\n[17, \"CYoq\"],\n[18, \"AKOQ\"]]",
+						"character-set": "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.!:%/$()#-,@?",
+						"spacing-data": "[[4, \".:\"],\n[5, \",\"],\n[6, \"Ii! \"],\n[7, \"-\"],\n[8, \"()\"],\n[10, \"1\"],\n[11, \"l\"],\n[12, \"ft$\"],\n[13, \"023456789%/#?\"],\n[14, \"cejp\"],\n[15, \"BJZabdhrs\"],\n[16, \"DEFGHLMNPRSTUVWXgkmnuvwxyz\"],\n[17, \"CYoq\"],\n[18, \"AKOQ\"]]",
 						"scale": 1,
 						"character-spacing": -1,
 						"line-height": 0,
@@ -179,7 +181,8 @@
 					"tags": "",
 					"instanceVariables": {
 						"id": -1,
-						"type": "button"
+						"type": "button",
+						"init": false
 					},
 					"behaviors": {
 						"Tween": {
@@ -196,7 +199,7 @@
 					"locked": false,
 					"world": {
 						"x": 24,
-						"y": 76,
+						"y": 68,
 						"width": 136,
 						"height": 16,
 						"originX": 0,
@@ -218,8 +221,8 @@
 						"enable-bbcode": true,
 						"character-width": 20,
 						"character-height": 19,
-						"character-set": "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.!:%/$()#-,@",
-						"spacing-data": "[[4, \".:\"],\n[5, \",\"],\n[6, \"Ii! \"],\n[7, \"-\"],\n[8, \"()\"],\n[10, \"1\"],\n[11, \"l\"],\n[12, \"ft$\"],\n[13, \"023456789%/#\"],\n[14, \"cejp\"],\n[15, \"BJZabdhrs\"],\n[16, \"DEFGHLMNPRSTUVWXgkmnuvwxyz\"],\n[17, \"CYoq\"],\n[18, \"AKOQ\"]]",
+						"character-set": "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.!:%/$()#-,@?",
+						"spacing-data": "[[4, \".:\"],\n[5, \",\"],\n[6, \"Ii! \"],\n[7, \"-\"],\n[8, \"()\"],\n[10, \"1\"],\n[11, \"l\"],\n[12, \"ft$\"],\n[13, \"023456789%/#?\"],\n[14, \"cejp\"],\n[15, \"BJZabdhrs\"],\n[16, \"DEFGHLMNPRSTUVWXgkmnuvwxyz\"],\n[17, \"CYoq\"],\n[18, \"AKOQ\"]]",
 						"scale": 1,
 						"character-spacing": -1,
 						"line-height": 0,
@@ -235,7 +238,8 @@
 					"tags": "",
 					"instanceVariables": {
 						"id": -1,
-						"type": "button"
+						"type": "button",
+						"init": false
 					},
 					"behaviors": {
 						"Tween": {
@@ -252,7 +256,7 @@
 					"locked": false,
 					"world": {
 						"x": 24,
-						"y": 96,
+						"y": 88,
 						"width": 136,
 						"height": 16,
 						"originX": 0,
@@ -274,8 +278,8 @@
 						"enable-bbcode": true,
 						"character-width": 20,
 						"character-height": 19,
-						"character-set": "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.!:%/$()#-,@",
-						"spacing-data": "[[4, \".:\"],\n[5, \",\"],\n[6, \"Ii! \"],\n[7, \"-\"],\n[8, \"()\"],\n[10, \"1\"],\n[11, \"l\"],\n[12, \"ft$\"],\n[13, \"023456789%/#\"],\n[14, \"cejp\"],\n[15, \"BJZabdhrs\"],\n[16, \"DEFGHLMNPRSTUVWXgkmnuvwxyz\"],\n[17, \"CYoq\"],\n[18, \"AKOQ\"]]",
+						"character-set": "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.!:%/$()#-,@?",
+						"spacing-data": "[[4, \".:\"],\n[5, \",\"],\n[6, \"Ii! \"],\n[7, \"-\"],\n[8, \"()\"],\n[10, \"1\"],\n[11, \"l\"],\n[12, \"ft$\"],\n[13, \"023456789%/#?\"],\n[14, \"cejp\"],\n[15, \"BJZabdhrs\"],\n[16, \"DEFGHLMNPRSTUVWXgkmnuvwxyz\"],\n[17, \"CYoq\"],\n[18, \"AKOQ\"]]",
 						"scale": 1,
 						"character-spacing": -1,
 						"line-height": 0,
@@ -291,7 +295,8 @@
 					"tags": "",
 					"instanceVariables": {
 						"id": -1,
-						"type": "button"
+						"type": "button",
+						"init": false
 					},
 					"behaviors": {
 						"Tween": {
@@ -308,7 +313,7 @@
 					"locked": false,
 					"world": {
 						"x": 24,
-						"y": 116,
+						"y": 108,
 						"width": 136,
 						"height": 16,
 						"originX": 0,
@@ -330,8 +335,8 @@
 						"enable-bbcode": true,
 						"character-width": 20,
 						"character-height": 19,
-						"character-set": "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.!:%/$()#-,@",
-						"spacing-data": "[[4, \".:\"],\n[5, \",\"],\n[6, \"Ii! \"],\n[7, \"-\"],\n[8, \"()\"],\n[10, \"1\"],\n[11, \"l\"],\n[12, \"ft$\"],\n[13, \"023456789%/#\"],\n[14, \"cejp\"],\n[15, \"BJZabdhrs\"],\n[16, \"DEFGHLMNPRSTUVWXgkmnuvwxyz\"],\n[17, \"CYoq\"],\n[18, \"AKOQ\"]]",
+						"character-set": "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.!:%/$()#-,@?",
+						"spacing-data": "[[4, \".:\"],\n[5, \",\"],\n[6, \"Ii! \"],\n[7, \"-\"],\n[8, \"()\"],\n[10, \"1\"],\n[11, \"l\"],\n[12, \"ft$\"],\n[13, \"023456789%/#?\"],\n[14, \"cejp\"],\n[15, \"BJZabdhrs\"],\n[16, \"DEFGHLMNPRSTUVWXgkmnuvwxyz\"],\n[17, \"CYoq\"],\n[18, \"AKOQ\"]]",
 						"scale": 1,
 						"character-spacing": -1,
 						"line-height": 0,
@@ -347,7 +352,8 @@
 					"tags": "",
 					"instanceVariables": {
 						"id": -1,
-						"type": "button"
+						"type": "button",
+						"init": false
 					},
 					"behaviors": {
 						"Tween": {
@@ -364,7 +370,7 @@
 					"locked": false,
 					"world": {
 						"x": 24,
-						"y": 136,
+						"y": 128,
 						"width": 136,
 						"height": 16,
 						"originX": 0,
@@ -386,8 +392,8 @@
 						"enable-bbcode": true,
 						"character-width": 20,
 						"character-height": 19,
-						"character-set": "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.!:%/$()#-,@",
-						"spacing-data": "[[4, \".:\"],\n[5, \",\"],\n[6, \"Ii! \"],\n[7, \"-\"],\n[8, \"()\"],\n[10, \"1\"],\n[11, \"l\"],\n[12, \"ft$\"],\n[13, \"023456789%/#\"],\n[14, \"cejp\"],\n[15, \"BJZabdhrs\"],\n[16, \"DEFGHLMNPRSTUVWXgkmnuvwxyz\"],\n[17, \"CYoq\"],\n[18, \"AKOQ\"]]",
+						"character-set": "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.!:%/$()#-,@?",
+						"spacing-data": "[[4, \".:\"],\n[5, \",\"],\n[6, \"Ii! \"],\n[7, \"-\"],\n[8, \"()\"],\n[10, \"1\"],\n[11, \"l\"],\n[12, \"ft$\"],\n[13, \"023456789%/#?\"],\n[14, \"cejp\"],\n[15, \"BJZabdhrs\"],\n[16, \"DEFGHLMNPRSTUVWXgkmnuvwxyz\"],\n[17, \"CYoq\"],\n[18, \"AKOQ\"]]",
 						"scale": 1,
 						"character-spacing": -1,
 						"line-height": 0,
@@ -403,7 +409,8 @@
 					"tags": "",
 					"instanceVariables": {
 						"id": 0,
-						"type": "button"
+						"type": "button",
+						"init": false
 					},
 					"behaviors": {
 						"Tween": {
@@ -419,9 +426,9 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 220,
-						"y": 76,
-						"width": 76,
+						"x": 144,
+						"y": 68,
+						"width": 152,
 						"height": 16,
 						"originX": 0,
 						"originY": 0.5,
@@ -442,8 +449,8 @@
 						"enable-bbcode": true,
 						"character-width": 20,
 						"character-height": 19,
-						"character-set": "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.!:%/$()#-,@",
-						"spacing-data": "[[4, \".:\"],\n[5, \",\"],\n[6, \"Ii! \"],\n[7, \"-\"],\n[8, \"()\"],\n[10, \"1\"],\n[11, \"l\"],\n[12, \"ft$\"],\n[13, \"023456789%/#\"],\n[14, \"cejp\"],\n[15, \"BJZabdhrs\"],\n[16, \"DEFGHLMNPRSTUVWXgkmnuvwxyz\"],\n[17, \"CYoq\"],\n[18, \"AKOQ\"]]",
+						"character-set": "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.!:%/$()#-,@?",
+						"spacing-data": "[[4, \".:\"],\n[5, \",\"],\n[6, \"Ii! \"],\n[7, \"-\"],\n[8, \"()\"],\n[10, \"1\"],\n[11, \"l\"],\n[12, \"ft$\"],\n[13, \"023456789%/#?\"],\n[14, \"cejp\"],\n[15, \"BJZabdhrs\"],\n[16, \"DEFGHLMNPRSTUVWXgkmnuvwxyz\"],\n[17, \"CYoq\"],\n[18, \"AKOQ\"]]",
 						"scale": 1,
 						"character-spacing": -1,
 						"line-height": 0,
@@ -459,7 +466,8 @@
 					"tags": "",
 					"instanceVariables": {
 						"id": -1,
-						"type": "button"
+						"type": "button",
+						"init": false
 					},
 					"behaviors": {
 						"Tween": {
@@ -476,7 +484,7 @@
 					"locked": false,
 					"world": {
 						"x": 24,
-						"y": 156,
+						"y": 148,
 						"width": 136,
 						"height": 16,
 						"originX": 0,
@@ -498,8 +506,8 @@
 						"enable-bbcode": true,
 						"character-width": 20,
 						"character-height": 19,
-						"character-set": "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.!:%/$()#-,@",
-						"spacing-data": "[[4, \".:\"],\n[5, \",\"],\n[6, \"Ii! \"],\n[7, \"-\"],\n[8, \"()\"],\n[10, \"1\"],\n[11, \"l\"],\n[12, \"ft$\"],\n[13, \"023456789%/#\"],\n[14, \"cejp\"],\n[15, \"BJZabdhrs\"],\n[16, \"DEFGHLMNPRSTUVWXgkmnuvwxyz\"],\n[17, \"CYoq\"],\n[18, \"AKOQ\"]]",
+						"character-set": "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.!:%/$()#-,@?",
+						"spacing-data": "[[4, \".:\"],\n[5, \",\"],\n[6, \"Ii! \"],\n[7, \"-\"],\n[8, \"()\"],\n[10, \"1\"],\n[11, \"l\"],\n[12, \"ft$\"],\n[13, \"023456789%/#?\"],\n[14, \"cejp\"],\n[15, \"BJZabdhrs\"],\n[16, \"DEFGHLMNPRSTUVWXgkmnuvwxyz\"],\n[17, \"CYoq\"],\n[18, \"AKOQ\"]]",
 						"scale": 1,
 						"character-spacing": -1,
 						"line-height": 0,
@@ -515,7 +523,8 @@
 					"tags": "",
 					"instanceVariables": {
 						"id": 1,
-						"type": "button"
+						"type": "button",
+						"init": false
 					},
 					"behaviors": {
 						"Tween": {
@@ -531,9 +540,9 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 220,
-						"y": 96,
-						"width": 76,
+						"x": 144,
+						"y": 88,
+						"width": 152,
 						"height": 16,
 						"originX": 0,
 						"originY": 0.5,
@@ -554,8 +563,8 @@
 						"enable-bbcode": true,
 						"character-width": 20,
 						"character-height": 19,
-						"character-set": "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.!:%/$()#-,@",
-						"spacing-data": "[[4, \".:\"],\n[5, \",\"],\n[6, \"Ii! \"],\n[7, \"-\"],\n[8, \"()\"],\n[10, \"1\"],\n[11, \"l\"],\n[12, \"ft$\"],\n[13, \"023456789%/#\"],\n[14, \"cejp\"],\n[15, \"BJZabdhrs\"],\n[16, \"DEFGHLMNPRSTUVWXgkmnuvwxyz\"],\n[17, \"CYoq\"],\n[18, \"AKOQ\"]]",
+						"character-set": "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.!:%/$()#-,@?",
+						"spacing-data": "[[4, \".:\"],\n[5, \",\"],\n[6, \"Ii! \"],\n[7, \"-\"],\n[8, \"()\"],\n[10, \"1\"],\n[11, \"l\"],\n[12, \"ft$\"],\n[13, \"023456789%/#?\"],\n[14, \"cejp\"],\n[15, \"BJZabdhrs\"],\n[16, \"DEFGHLMNPRSTUVWXgkmnuvwxyz\"],\n[17, \"CYoq\"],\n[18, \"AKOQ\"]]",
 						"scale": 1,
 						"character-spacing": -1,
 						"line-height": 0,
@@ -571,7 +580,8 @@
 					"tags": "",
 					"instanceVariables": {
 						"id": 2,
-						"type": "button"
+						"type": "button",
+						"init": false
 					},
 					"behaviors": {
 						"Tween": {
@@ -587,9 +597,9 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 220,
-						"y": 116,
-						"width": 76,
+						"x": 144,
+						"y": 108,
+						"width": 152,
 						"height": 16,
 						"originX": 0,
 						"originY": 0.5,
@@ -610,8 +620,8 @@
 						"enable-bbcode": true,
 						"character-width": 20,
 						"character-height": 19,
-						"character-set": "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.!:%/$()#-,@",
-						"spacing-data": "[[4, \".:\"],\n[5, \",\"],\n[6, \"Ii! \"],\n[7, \"-\"],\n[8, \"()\"],\n[10, \"1\"],\n[11, \"l\"],\n[12, \"ft$\"],\n[13, \"023456789%/#\"],\n[14, \"cejp\"],\n[15, \"BJZabdhrs\"],\n[16, \"DEFGHLMNPRSTUVWXgkmnuvwxyz\"],\n[17, \"CYoq\"],\n[18, \"AKOQ\"]]",
+						"character-set": "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.!:%/$()#-,@?",
+						"spacing-data": "[[4, \".:\"],\n[5, \",\"],\n[6, \"Ii! \"],\n[7, \"-\"],\n[8, \"()\"],\n[10, \"1\"],\n[11, \"l\"],\n[12, \"ft$\"],\n[13, \"023456789%/#?\"],\n[14, \"cejp\"],\n[15, \"BJZabdhrs\"],\n[16, \"DEFGHLMNPRSTUVWXgkmnuvwxyz\"],\n[17, \"CYoq\"],\n[18, \"AKOQ\"]]",
 						"scale": 1,
 						"character-spacing": -1,
 						"line-height": 0,
@@ -627,7 +637,8 @@
 					"tags": "",
 					"instanceVariables": {
 						"id": 3,
-						"type": "button"
+						"type": "button",
+						"init": false
 					},
 					"behaviors": {
 						"Tween": {
@@ -643,9 +654,9 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 220,
-						"y": 136,
-						"width": 76,
+						"x": 144,
+						"y": 128,
+						"width": 152,
 						"height": 16,
 						"originX": 0,
 						"originY": 0.5,
@@ -666,8 +677,8 @@
 						"enable-bbcode": true,
 						"character-width": 20,
 						"character-height": 19,
-						"character-set": "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.!:%/$()#-,@",
-						"spacing-data": "[[4, \".:\"],\n[5, \",\"],\n[6, \"Ii! \"],\n[7, \"-\"],\n[8, \"()\"],\n[10, \"1\"],\n[11, \"l\"],\n[12, \"ft$\"],\n[13, \"023456789%/#\"],\n[14, \"cejp\"],\n[15, \"BJZabdhrs\"],\n[16, \"DEFGHLMNPRSTUVWXgkmnuvwxyz\"],\n[17, \"CYoq\"],\n[18, \"AKOQ\"]]",
+						"character-set": "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.!:%/$()#-,@?",
+						"spacing-data": "[[4, \".:\"],\n[5, \",\"],\n[6, \"Ii! \"],\n[7, \"-\"],\n[8, \"()\"],\n[10, \"1\"],\n[11, \"l\"],\n[12, \"ft$\"],\n[13, \"023456789%/#?\"],\n[14, \"cejp\"],\n[15, \"BJZabdhrs\"],\n[16, \"DEFGHLMNPRSTUVWXgkmnuvwxyz\"],\n[17, \"CYoq\"],\n[18, \"AKOQ\"]]",
 						"scale": 1,
 						"character-spacing": -1,
 						"line-height": 0,
@@ -683,7 +694,8 @@
 					"tags": "",
 					"instanceVariables": {
 						"id": 4,
-						"type": "button"
+						"type": "button",
+						"init": false
 					},
 					"behaviors": {
 						"Tween": {
@@ -699,12 +711,67 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 220,
-						"y": 156,
-						"width": 76,
+						"x": 144,
+						"y": 148,
+						"width": 152,
 						"height": 16,
 						"originX": 0,
 						"originY": 0.5,
+						"color": [
+							1,
+							0,
+							0,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "MenuFontSmall",
+					"properties": {
+						"text": "00:00:00.000",
+						"enable-bbcode": true,
+						"character-width": 12,
+						"character-height": 10,
+						"character-set": "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.,!':;()-%&#$@",
+						"spacing-data": "[[3, \" \"],\n[4, \"I.,!':;\"],\n[5, \"1()\"],\n[6, \"-\"],\n[7, \"SVZ45\"],\n[8, \"ABCDEFGHJKLNOPQRTUY0236789%&#$@\"],\n[9, \"MWX\"]]",
+						"scale": 1,
+						"character-spacing": 0,
+						"line-height": 0,
+						"horizontal-alignment": "right",
+						"vertical-alignment": "bottom",
+						"wrapping": "word",
+						"initially-visible": false,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 451,
+					"sid": 590623102325851,
+					"tags": "",
+					"instanceVariables": {
+						"type": ""
+					},
+					"behaviors": {
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 590623102325851,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 24,
+						"y": 156,
+						"width": 271,
+						"height": 12,
+						"originX": 0,
+						"originY": 0,
 						"color": [
 							1,
 							0,

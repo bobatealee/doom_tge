@@ -1,0 +1,555 @@
+{
+	"name": "Controls",
+	"plugin-id": "Sprite",
+	"sid": 126940557879312,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [],
+		"subfolders": [
+			{
+				"items": [
+					{
+						"frames": [
+							{
+								"width": 72,
+								"height": 48,
+								"originX": 0.5,
+								"originY": 0.5,
+								"originalSource": "",
+								"exportFormat": "lossless",
+								"exportQuality": 0.8,
+								"fileType": "image/png",
+								"imageSpriteId": 9841573,
+								"useCollisionPoly": true,
+								"duration": 1,
+								"tag": ""
+							}
+						],
+						"sid": 476255901947842,
+						"name": "keyboardMove",
+						"isLooping": false,
+						"isPingPong": false,
+						"repeatCount": 1,
+						"repeatTo": 0,
+						"speed": 5
+					},
+					{
+						"frames": [
+							{
+								"width": 72,
+								"height": 48,
+								"originX": 0.5,
+								"originY": 0.5,
+								"originalSource": "",
+								"exportFormat": "lossless",
+								"exportQuality": 0.8,
+								"fileType": "image/png",
+								"imageSpriteId": 4066975,
+								"useCollisionPoly": true,
+								"duration": 1,
+								"tag": ""
+							}
+						],
+						"sid": 340035476733544,
+						"name": "keyboardLook",
+						"isLooping": false,
+						"isPingPong": false,
+						"repeatCount": 1,
+						"repeatTo": 0,
+						"speed": 5
+					},
+					{
+						"frames": [
+							{
+								"width": 72,
+								"height": 48,
+								"originX": 0.5,
+								"originY": 0.5,
+								"originalSource": "",
+								"exportFormat": "lossless",
+								"exportQuality": 0.8,
+								"fileType": "image/png",
+								"imageSpriteId": 3044907,
+								"useCollisionPoly": true,
+								"duration": 1,
+								"tag": ""
+							}
+						],
+						"sid": 601110008520218,
+						"name": "keyboardInteract",
+						"isLooping": false,
+						"isPingPong": false,
+						"repeatCount": 1,
+						"repeatTo": 0,
+						"speed": 5
+					},
+					{
+						"frames": [
+							{
+								"width": 72,
+								"height": 48,
+								"originX": 0.5,
+								"originY": 0.5,
+								"originalSource": "",
+								"exportFormat": "lossless",
+								"exportQuality": 0.8,
+								"fileType": "image/png",
+								"imageSpriteId": 9123508,
+								"useCollisionPoly": true,
+								"duration": 1,
+								"tag": ""
+							}
+						],
+						"sid": 736551528029227,
+						"name": "keyboardPickDrink",
+						"isLooping": false,
+						"isPingPong": false,
+						"repeatCount": 1,
+						"repeatTo": 0,
+						"speed": 5
+					},
+					{
+						"frames": [
+							{
+								"width": 72,
+								"height": 48,
+								"originX": 0.5,
+								"originY": 0.5,
+								"originalSource": "",
+								"exportFormat": "lossless",
+								"exportQuality": 0.8,
+								"fileType": "image/png",
+								"imageSpriteId": 3096979,
+								"collisionPoly": {
+									"points": [
+										0,
+										0.125,
+										1,
+										0.125,
+										1,
+										0.9375,
+										0,
+										0.9375
+									]
+								},
+								"useCollisionPoly": true,
+								"duration": 1,
+								"tag": ""
+							}
+						],
+						"sid": 664231715812086,
+						"name": "keyboardDrink",
+						"isLooping": false,
+						"isPingPong": false,
+						"repeatCount": 1,
+						"repeatTo": 0,
+						"speed": 5
+					},
+					{
+						"frames": [
+							{
+								"width": 72,
+								"height": 48,
+								"originX": 0.5,
+								"originY": 0.5,
+								"originalSource": "",
+								"exportFormat": "lossless",
+								"exportQuality": 0.8,
+								"fileType": "image/png",
+								"imageSpriteId": 1586161,
+								"useCollisionPoly": true,
+								"duration": 1,
+								"tag": ""
+							}
+						],
+						"sid": 305107349563414,
+						"name": "keyboardPause",
+						"isLooping": false,
+						"isPingPong": false,
+						"repeatCount": 1,
+						"repeatTo": 0,
+						"speed": 5
+					}
+				],
+				"subfolders": [],
+				"name": "keyboard"
+			},
+			{
+				"items": [
+					{
+						"frames": [
+							{
+								"width": 72,
+								"height": 48,
+								"originX": 0.5,
+								"originY": 0.5,
+								"originalSource": "",
+								"exportFormat": "lossless",
+								"exportQuality": 0.8,
+								"fileType": "image/png",
+								"imageSpriteId": 1323068,
+								"collisionPoly": {
+									"points": [
+										0,
+										0.17857142857142858,
+										1,
+										0.17857142857142858,
+										1,
+										0.8214285714285714,
+										0,
+										0.8214285714285714
+									]
+								},
+								"useCollisionPoly": true,
+								"duration": 1,
+								"tag": ""
+							}
+						],
+						"sid": 327197739387678,
+						"name": "gamepadMove",
+						"isLooping": false,
+						"isPingPong": false,
+						"repeatCount": 1,
+						"repeatTo": 0,
+						"speed": 5
+					},
+					{
+						"frames": [
+							{
+								"width": 72,
+								"height": 48,
+								"originX": 0.5,
+								"originY": 0.5,
+								"originalSource": "",
+								"exportFormat": "lossless",
+								"exportQuality": 0.8,
+								"fileType": "image/png",
+								"imageSpriteId": 8480980,
+								"useCollisionPoly": true,
+								"duration": 1,
+								"tag": ""
+							}
+						],
+						"sid": 716106544940028,
+						"name": "gamepadLook",
+						"isLooping": false,
+						"isPingPong": false,
+						"repeatCount": 1,
+						"repeatTo": 0,
+						"speed": 5
+					},
+					{
+						"frames": [
+							{
+								"width": 72,
+								"height": 48,
+								"originX": 0.5,
+								"originY": 0.5,
+								"originalSource": "",
+								"exportFormat": "lossless",
+								"exportQuality": 0.8,
+								"fileType": "image/png",
+								"imageSpriteId": 5945440,
+								"useCollisionPoly": true,
+								"duration": 1,
+								"tag": ""
+							}
+						],
+						"sid": 676304683270576,
+						"name": "gamepadInteract",
+						"isLooping": false,
+						"isPingPong": false,
+						"repeatCount": 1,
+						"repeatTo": 0,
+						"speed": 5
+					},
+					{
+						"frames": [
+							{
+								"width": 72,
+								"height": 48,
+								"originX": 0.5,
+								"originY": 0.5,
+								"originalSource": "",
+								"exportFormat": "lossless",
+								"exportQuality": 0.8,
+								"fileType": "image/png",
+								"imageSpriteId": 9495896,
+								"useCollisionPoly": true,
+								"duration": 1,
+								"tag": ""
+							}
+						],
+						"sid": 485885205004143,
+						"name": "gamepadPickDrink",
+						"isLooping": false,
+						"isPingPong": false,
+						"repeatCount": 1,
+						"repeatTo": 0,
+						"speed": 5
+					},
+					{
+						"frames": [
+							{
+								"width": 72,
+								"height": 48,
+								"originX": 0.5,
+								"originY": 0.5,
+								"originalSource": "",
+								"exportFormat": "lossless",
+								"exportQuality": 0.8,
+								"fileType": "image/png",
+								"imageSpriteId": 9456856,
+								"collisionPoly": {
+									"points": [
+										0,
+										0.125,
+										1,
+										0.125,
+										1,
+										0.9375,
+										0,
+										0.9375
+									]
+								},
+								"useCollisionPoly": true,
+								"duration": 1,
+								"tag": ""
+							}
+						],
+						"sid": 395710111675854,
+						"name": "gamepadDrink",
+						"isLooping": false,
+						"isPingPong": false,
+						"repeatCount": 1,
+						"repeatTo": 0,
+						"speed": 5
+					},
+					{
+						"frames": [
+							{
+								"width": 72,
+								"height": 48,
+								"originX": 0.5,
+								"originY": 0.5,
+								"originalSource": "",
+								"exportFormat": "lossless",
+								"exportQuality": 0.8,
+								"fileType": "image/png",
+								"imageSpriteId": 6875704,
+								"useCollisionPoly": true,
+								"duration": 1,
+								"tag": ""
+							}
+						],
+						"sid": 826256082656394,
+						"name": "gamepadPause",
+						"isLooping": false,
+						"isPingPong": false,
+						"repeatCount": 1,
+						"repeatTo": 0,
+						"speed": 5
+					}
+				],
+				"subfolders": [],
+				"name": "gamepad"
+			},
+			{
+				"items": [
+					{
+						"frames": [
+							{
+								"width": 72,
+								"height": 48,
+								"originX": 0.5,
+								"originY": 0.5,
+								"originalSource": "",
+								"exportFormat": "lossless",
+								"exportQuality": 0.8,
+								"fileType": "image/png",
+								"imageSpriteId": 6357889,
+								"collisionPoly": {
+									"points": [
+										0,
+										0.13903061224489796,
+										1,
+										0.13903061224489796,
+										1,
+										0.8966836734693878,
+										0,
+										0.8966836734693878
+									]
+								},
+								"useCollisionPoly": true,
+								"duration": 1,
+								"tag": ""
+							}
+						],
+						"sid": 802301448498768,
+						"name": "mobileMove",
+						"isLooping": false,
+						"isPingPong": false,
+						"repeatCount": 1,
+						"repeatTo": 0,
+						"speed": 5
+					},
+					{
+						"frames": [
+							{
+								"width": 72,
+								"height": 48,
+								"originX": 0.5,
+								"originY": 0.5,
+								"originalSource": "",
+								"exportFormat": "lossless",
+								"exportQuality": 0.8,
+								"fileType": "image/png",
+								"imageSpriteId": 6445025,
+								"useCollisionPoly": true,
+								"duration": 1,
+								"tag": ""
+							}
+						],
+						"sid": 818521565583187,
+						"name": "mobileLook",
+						"isLooping": false,
+						"isPingPong": false,
+						"repeatCount": 1,
+						"repeatTo": 0,
+						"speed": 5
+					},
+					{
+						"frames": [
+							{
+								"width": 72,
+								"height": 48,
+								"originX": 0.5,
+								"originY": 0.5,
+								"originalSource": "",
+								"exportFormat": "lossless",
+								"exportQuality": 0.8,
+								"fileType": "image/png",
+								"imageSpriteId": 9445253,
+								"useCollisionPoly": true,
+								"duration": 1,
+								"tag": ""
+							}
+						],
+						"sid": 376257929956564,
+						"name": "mobileInteract",
+						"isLooping": false,
+						"isPingPong": false,
+						"repeatCount": 1,
+						"repeatTo": 0,
+						"speed": 5
+					},
+					{
+						"frames": [
+							{
+								"width": 72,
+								"height": 48,
+								"originX": 0.5,
+								"originY": 0.5,
+								"originalSource": "",
+								"exportFormat": "lossless",
+								"exportQuality": 0.8,
+								"fileType": "image/png",
+								"imageSpriteId": 334857,
+								"collisionPoly": {
+									"points": [
+										0,
+										0.125,
+										1,
+										0.125,
+										1,
+										0.9375,
+										0,
+										0.9375
+									]
+								},
+								"useCollisionPoly": true,
+								"duration": 1,
+								"tag": ""
+							}
+						],
+						"sid": 323726352587532,
+						"name": "mobilePickDrink",
+						"isLooping": false,
+						"isPingPong": false,
+						"repeatCount": 1,
+						"repeatTo": 0,
+						"speed": 5
+					},
+					{
+						"frames": [
+							{
+								"width": 72,
+								"height": 48,
+								"originX": 0.5,
+								"originY": 0.5,
+								"originalSource": "",
+								"exportFormat": "lossless",
+								"exportQuality": 0.8,
+								"fileType": "image/png",
+								"imageSpriteId": 4893640,
+								"collisionPoly": {
+									"points": [
+										0,
+										0.125,
+										1,
+										0.125,
+										1,
+										0.9375,
+										0,
+										0.9375
+									]
+								},
+								"useCollisionPoly": true,
+								"duration": 1,
+								"tag": ""
+							}
+						],
+						"sid": 892377880855707,
+						"name": "mobileDrink",
+						"isLooping": false,
+						"isPingPong": false,
+						"repeatCount": 1,
+						"repeatTo": 0,
+						"speed": 5
+					},
+					{
+						"frames": [
+							{
+								"width": 72,
+								"height": 48,
+								"originX": 0.5,
+								"originY": 0.5,
+								"originalSource": "",
+								"exportFormat": "lossless",
+								"exportQuality": 0.8,
+								"fileType": "image/png",
+								"imageSpriteId": 872209,
+								"useCollisionPoly": true,
+								"duration": 1,
+								"tag": ""
+							}
+						],
+						"sid": 243672801090963,
+						"name": "mobilePause",
+						"isLooping": false,
+						"isPingPong": false,
+						"repeatCount": 1,
+						"repeatTo": 0,
+						"speed": 5
+					}
+				],
+				"subfolders": [],
+				"name": "mobile"
+			}
+		]
+	}
+}

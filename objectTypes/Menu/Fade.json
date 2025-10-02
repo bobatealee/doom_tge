@@ -5,7 +5,13 @@
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
-	"behaviorTypes": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Tween",
+			"name": "Tween",
+			"sid": 140385729081537
+		}
+	],
 	"effectTypes": [],
 	"animations": {
 		"items": [
@@ -20,7 +26,7 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 7696351,
+						"imageSpriteId": 4055537,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""

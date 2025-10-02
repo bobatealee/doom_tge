@@ -4,12 +4,33 @@
 	"sid": 458831782928546,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
-	"instanceVariables": [],
-	"behaviorTypes": [],
+	"instanceVariables": [
+		{
+			"name": "type",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 357004469123421
+		},
+		{
+			"name": "override",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 450089157923062
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Tween",
+			"name": "Tween",
+			"sid": 685585028954877
+		}
+	],
 	"effectTypes": [
 		{
-			"effectId": "warpobject",
-			"name": "WarpObject"
+			"effectId": "skymen_BetterOutline",
+			"name": "BetterOutline"
 		}
 	],
 	"image": {
@@ -21,7 +42,7 @@
 		"exportFormat": "lossless",
 		"exportQuality": 0.8,
 		"fileType": "image/png",
-		"imageSpriteId": 3521449,
+		"imageSpriteId": 5828344,
 		"useCollisionPoly": true,
 		"tag": ""
 	}

@@ -1,0 +1,66 @@
+{
+    "c2array": true,
+    "size": [
+        7,
+        2,
+        1
+    ],
+    "data": [
+        [
+            [
+                "cash"
+            ],
+            [
+                "Picked up some cash."
+            ]
+        ],
+        [
+            [
+                "bigcash"
+            ],
+            [
+                "Picked up GALAKTOR's stash."
+            ]
+        ],
+        [
+            [
+                "wine"
+            ],
+            [
+                "Picked up a wine bottle."
+            ]
+        ],
+        [
+            [
+                "beerpack"
+            ],
+            [
+                "Picked up a six pack."
+            ]
+        ],
+        [
+            [
+                "cheese"
+            ],
+            [
+                "Picked up an hors d'oeuvre."
+            ]
+        ],
+        [
+            [
+                "bigcheese"
+            ],
+            [
+                "Picked up the cheese wheel."
+            ]
+        ],
+        [
+            [
+                "beer"
+            ],
+            [
+                "You got the beer!"
+            ]
+        ]
+    ]
+}

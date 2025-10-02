@@ -4,7 +4,15 @@
 	"sid": 624596182310032,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
-	"instanceVariables": [],
+	"instanceVariables": [
+		{
+			"name": "trigger",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 224217583829009
+		}
+	],
 	"behaviorTypes": [
 		{
 			"behaviorId": "Timer",

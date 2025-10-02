@@ -11,9 +11,22 @@
 			"desc": "",
 			"show": true,
 			"sid": 863728968816637
+		},
+		{
+			"name": "idOld",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 529081943930495
 		}
 	],
-	"behaviorTypes": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Timer",
+			"name": "Timer",
+			"sid": 564624863532843
+		}
+	],
 	"effectTypes": [],
 	"animations": {
 		"items": [
