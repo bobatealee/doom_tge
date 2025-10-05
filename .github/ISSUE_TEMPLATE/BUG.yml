@@ -1,0 +1,47 @@
+name: Bug Report
+description: File a bug report.
+title: "BUG: "
+labels: ["bug"]
+assignees:
+  - bobatealee
+body:
+  - type: input
+    id: game-version
+    attributes:
+      label: Version
+      description: What version of the game were you playing? The game version can be validated by checking the title screen.
+      placeholder: ex. v1.4.0
+    validations:
+      required: true
+  - type: dropdown
+    id: platform-type
+    attributes:
+      label: Platform
+      description: Which platform were you playing the game on?
+      multiple: true
+      options:
+        - Browser - Chrome
+        - Browser - Edge
+        - Browser - Firefox
+        - Browser - Safari
+        - Browser - Opera
+        - Standalone - Windows
+        - Other (Specify in Platform Version)
+    validations:
+      required: true
+  - type: input
+    id: platform-version
+    attributes:
+      label: Platform Version
+      description: What platform version?
+      placeholder: ex. Firefox 143.0.4, Windows 10 23H2
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Please describe the bug. Provide as much detail as you can.
+      placeholder: Describe the bug here...
+    validations:
+      required: true
