@@ -22,4 +22,4 @@ Created by [SCUM DOG](https://scum.dog/)
 DOOM is copyright © 1993 id Software
 
 ## Bugs
-Find a bug? Please report it with as much information as possible by [creating a new issue](https://github.com/bobatealee/doom_tge/issues/new/choose).
+Find a bug? Report it on our [issue tracker](https://github.com/bobatealee/doom_tge/issues/new/choose).
