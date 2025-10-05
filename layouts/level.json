@@ -9882,7 +9882,7 @@
 												"x": 1168,
 												"y": 1080,
 												"width": 48,
-												"height": 12,
+												"height": 16,
 												"originX": 0,
 												"originY": 0,
 												"color": [
@@ -12906,7 +12906,7 @@
 									"instanceVariables": {
 										"id": 7,
 										"type": "artwork",
-										"skipSightCheck": true,
+										"skipSightCheck": false,
 										"observed": false
 									},
 									"behaviors": {},
@@ -18729,7 +18729,7 @@
 									"instanceVariables": {
 										"id": 34,
 										"type": "artwork",
-										"skipSightCheck": true,
+										"skipSightCheck": false,
 										"observed": false
 									},
 									"behaviors": {},
@@ -18741,9 +18741,9 @@
 									"locked": false,
 									"world": {
 										"x": 1972,
-										"y": 220,
-										"width": 16,
-										"height": 16,
+										"y": 216,
+										"width": 24,
+										"height": 24,
 										"originX": 0,
 										"originY": 0,
 										"color": [
@@ -19527,7 +19527,7 @@
 									"instanceVariables": {
 										"id": 35,
 										"type": "artwork",
-										"skipSightCheck": true,
+										"skipSightCheck": false,
 										"observed": false
 									},
 									"behaviors": {},
@@ -19539,9 +19539,9 @@
 									"locked": false,
 									"world": {
 										"x": 1972,
-										"y": 292,
-										"width": 16,
-										"height": 16,
+										"y": 288,
+										"width": 24,
+										"height": 24,
 										"originX": 0,
 										"originY": 0,
 										"color": [
@@ -19904,7 +19904,7 @@
 									"instanceVariables": {
 										"id": 4,
 										"type": "artwork",
-										"skipSightCheck": true,
+										"skipSightCheck": false,
 										"observed": false
 									},
 									"behaviors": {},
@@ -21343,7 +21343,7 @@
 									"showing": true,
 									"locked": false,
 									"world": {
-										"x": 848,
+										"x": 832,
 										"y": 824,
 										"width": 16,
 										"height": 16,
@@ -21399,7 +21399,7 @@
 									"showing": true,
 									"locked": false,
 									"world": {
-										"x": 848,
+										"x": 832,
 										"y": 728,
 										"width": 16,
 										"height": 16,
@@ -22734,20 +22734,20 @@
 										"shape": "box",
 										"z-height": 192,
 										"initially-visible": true,
-										"face-back": true,
-										"face-front": true,
-										"face-left": true,
+										"face-back": false,
+										"face-front": false,
+										"face-left": false,
 										"face-right": true,
-										"face-top": true,
-										"face-bottom": true,
+										"face-top": false,
+										"face-bottom": false,
 										"back-face-culling": false,
 										"z-tiling-factor": 1.5,
 										"object-back": 785345095297028,
 										"object-front": 329296576949328,
-										"object-left": 566505342434806,
+										"object-left": -1,
 										"object-right": 566505342434806,
-										"object-top": 566505342434806,
-										"object-bottom": 566505342434806
+										"object-top": -1,
+										"object-bottom": -1
 									},
 									"uid": 137,
 									"sid": 728389486355618,
@@ -26062,11 +26062,11 @@
 										"shape": "box",
 										"z-height": 192,
 										"initially-visible": true,
-										"face-back": true,
-										"face-front": true,
-										"face-left": true,
-										"face-right": true,
-										"face-top": true,
+										"face-back": false,
+										"face-front": false,
+										"face-left": false,
+										"face-right": false,
+										"face-top": false,
 										"face-bottom": true,
 										"back-face-culling": false,
 										"z-tiling-factor": 1.5,

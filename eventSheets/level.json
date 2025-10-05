@@ -467,6 +467,21 @@
 							}
 						},
 						{
+							"id": "clear-obstacles",
+							"objectClass": "PlayerSight",
+							"sid": 778191490816077,
+							"behaviorType": "LineOfSight"
+						},
+						{
+							"id": "add-obstacle",
+							"objectClass": "PlayerSight",
+							"sid": 462682059764538,
+							"behaviorType": "LineOfSight",
+							"parameters": {
+								"obstacle": "Ground"
+							}
+						},
+						{
 							"id": "add-child",
 							"objectClass": "Player",
 							"sid": 811479635880357,

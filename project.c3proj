@@ -775,24 +775,8 @@
 							}
 						}
 					],
-					"subfolders": [
-						{
-							"items": [],
-							"subfolders": [],
-							"name": "Default"
-						},
-						{
-							"items": [],
-							"subfolders": [],
-							"name": "Francis"
-						}
-					],
-					"name": "Gameplay"
-				},
-				{
-					"items": [],
 					"subfolders": [],
-					"name": "Music"
+					"name": "gameplay"
 				}
 			]
 		},
@@ -1009,7 +993,7 @@
 	},
 	"properties": {
 		"description": "DOOM: The Gallery Experience was created as an art piece designed to parody the wonderfully pretentious world of gallery openings.",
-		"version": "1.4.0",
+		"version": "1.4.1",
 		"autoIncrementVersion": false,
 		"author": "SCUM DOG GAMES",
 		"authorEmail": "contact@scum.dog",
