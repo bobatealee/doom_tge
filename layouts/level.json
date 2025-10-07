@@ -15343,8 +15343,8 @@
 									"behaviors": {
 										"LineOfSight": {
 											"properties": {
-												"obstacles": "solids",
-												"range": 64,
+												"obstacles": "custom",
+												"range": 256,
 												"cone-of-view": 360,
 												"use-collision-cells": true
 											}
@@ -15430,7 +15430,9 @@
 										"playerHorizontal": 0,
 										"playerVertical": 0,
 										"playerSpeedHorizontal": 0,
-										"playerSpeedVertical": 0
+										"playerSpeedVertical": 0,
+										"playerBonusHorizontal": 0,
+										"playerBonusVertical": 0
 									},
 									"behaviors": {
 										"8Direction": {
@@ -36445,6 +36447,9 @@
 										"enabled": true,
 										"live-preview": false
 									}
+								},
+								"Timer": {
+									"properties": {}
 								}
 							},
 							"instanceFolderItem": {

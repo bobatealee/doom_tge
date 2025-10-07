@@ -43,6 +43,16 @@
 		},
 		{
 			"eventType": "variable",
+			"name": "RESULTS_finished",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "Are results finished?",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 510917149796187
+		},
+		{
+			"eventType": "variable",
 			"name": "GAME_inactivityResults",
 			"type": "number",
 			"initialValue": "10",
@@ -249,9 +259,10 @@
 						},
 						{
 							"callFunction": "unlockSkin",
-							"sid": 903969242444871,
+							"sid": 819074190352142,
 							"parameters": [
-								"1",
+								"Skins.IndexOf(\"classic\")",
+								true,
 								true
 							]
 						}
@@ -322,6 +333,7 @@
 									"sid": 805898480900876,
 									"parameters": [
 										"1",
+										true,
 										true
 									]
 								}
@@ -352,6 +364,7 @@
 									"sid": 254244477564096,
 									"parameters": [
 										"2",
+										true,
 										true
 									]
 								}
@@ -382,6 +395,7 @@
 									"sid": 772164887611576,
 									"parameters": [
 										"3",
+										true,
 										true
 									]
 								}
@@ -412,6 +426,7 @@
 									"sid": 309665358346268,
 									"parameters": [
 										"4",
+										true,
 										true
 									]
 								}
@@ -426,11 +441,12 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "compare-eventvar",
-									"objectClass": "System",
-									"sid": 313575689832715,
+									"id": "compare-at-xy",
+									"objectClass": "Drinks",
+									"sid": 713023563226087,
 									"parameters": {
-										"variable": "STAT_drinks",
+										"x": "Self.IndexOf(\"wine\")",
+										"y": "3",
 										"comparison": 5,
 										"value": "64"
 									}
@@ -442,11 +458,46 @@
 									"sid": 952706683039700,
 									"parameters": [
 										"5",
+										true,
 										true
 									]
 								}
 							],
-							"sid": 245154980836986
+							"sid": 245154980836986,
+							"children": [
+								{
+									"eventType": "comment",
+									"text": "Wasted"
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-at-xy",
+											"objectClass": "Drinks",
+											"sid": 159604675880557,
+											"parameters": {
+												"x": "Self.IndexOf(\"beer\")",
+												"y": "3",
+												"comparison": 5,
+												"value": "12"
+											}
+										}
+									],
+									"actions": [
+										{
+											"callFunction": "unlockSkin",
+											"sid": 276472678909216,
+											"parameters": [
+												"Skins.IndexOf(\"wasted\")",
+												true,
+												true
+											]
+										}
+									],
+									"sid": 863354888030365
+								}
+							]
 						},
 						{
 							"eventType": "comment",
@@ -472,6 +523,7 @@
 									"sid": 193874577974185,
 									"parameters": [
 										"7",
+										true,
 										true
 									]
 								}
@@ -502,6 +554,7 @@
 									"sid": 896902164515310,
 									"parameters": [
 										"8",
+										true,
 										true
 									]
 								}
@@ -532,6 +585,7 @@
 									"sid": 497817047289270,
 									"parameters": [
 										"9",
+										true,
 										true
 									]
 								}
@@ -570,11 +624,11 @@
 						{
 							"id": "compare-eventvar",
 							"objectClass": "System",
-							"sid": 824280174905318,
+							"sid": 435695844201541,
 							"parameters": {
 								"variable": "RESULTS_stage",
-								"comparison": 2,
-								"value": "5"
+								"comparison": 3,
+								"value": "4"
 							}
 						},
 						{
@@ -817,7 +871,7 @@
 					"children": [
 						{
 							"eventType": "comment",
-							"text": "Cap the counter"
+							"text": "Done tallying a stat"
 						},
 						{
 							"eventType": "block",
@@ -825,7 +879,7 @@
 								{
 									"id": "compare-eventvar",
 									"objectClass": "System",
-									"sid": 769208902404342,
+									"sid": 815653709730990,
 									"parameters": {
 										"variable": "RESULTS_counter",
 										"comparison": 5,
@@ -835,7 +889,7 @@
 								{
 									"id": "compare-boolean-eventvar",
 									"objectClass": "System",
-									"sid": 578588823357284,
+									"sid": 302487608843513,
 									"parameters": {
 										"variable": "RESULTS_skipped"
 									}
@@ -843,7 +897,7 @@
 								{
 									"id": "compare-two-values",
 									"objectClass": "System",
-									"sid": 300672926529184,
+									"sid": 274785789447504,
 									"parameters": {
 										"first-value": "RESULTS_stage = 4 & STAT_time >= STAT_suckTime",
 										"comparison": 0,
@@ -855,7 +909,7 @@
 								{
 									"id": "set-eventvar-value",
 									"objectClass": "System",
-									"sid": 204856676686251,
+									"sid": 934573576552961,
 									"parameters": {
 										"variable": "RESULTS_counter",
 										"value": "value"
@@ -864,14 +918,14 @@
 								{
 									"id": "set-boolean-eventvar",
 									"objectClass": "System",
-									"sid": 542425531262306,
+									"sid": 394393138616689,
 									"parameters": {
 										"variable": "RESULTS_locked",
 										"value": "true"
 									}
 								}
 							],
-							"sid": 198816926010014,
+							"sid": 865625341988860,
 							"isOrBlock": true
 						},
 						{
@@ -884,7 +938,7 @@
 								{
 									"id": "compare-eventvar",
 									"objectClass": "System",
-									"sid": 842529649922033,
+									"sid": 272577696238782,
 									"parameters": {
 										"variable": "type",
 										"comparison": 0,
@@ -896,13 +950,13 @@
 								{
 									"id": "set-text",
 									"objectClass": "MenuFont",
-									"sid": 123042055638396,
+									"sid": 903528678793881,
 									"parameters": {
 										"text": "round(RESULTS_counter)&\"%\""
 									}
 								}
 							],
-							"sid": 733070529240995
+							"sid": 137432509685616
 						},
 						{
 							"eventType": "block",
@@ -910,7 +964,7 @@
 								{
 									"id": "compare-eventvar",
 									"objectClass": "System",
-									"sid": 270519356199028,
+									"sid": 633914008709239,
 									"parameters": {
 										"variable": "type",
 										"comparison": 0,
@@ -922,13 +976,13 @@
 								{
 									"id": "set-text",
 									"objectClass": "MenuFont",
-									"sid": 525505926402916,
+									"sid": 287228188263884,
 									"parameters": {
 										"text": "\"$\"&round(RESULTS_counter)"
 									}
 								}
 							],
-							"sid": 778719962582546
+							"sid": 927874754814031
 						},
 						{
 							"eventType": "block",
@@ -936,7 +990,7 @@
 								{
 									"id": "compare-eventvar",
 									"objectClass": "System",
-									"sid": 679672493354099,
+									"sid": 225624360043762,
 									"parameters": {
 										"variable": "type",
 										"comparison": 0,
@@ -948,21 +1002,25 @@
 								{
 									"id": "set-text",
 									"objectClass": "MenuFont",
-									"sid": 604516109567877,
+									"sid": 512431811762407,
 									"parameters": {
 										"text": "floor(RESULTS_counter/60)&\":\"&floor((RESULTS_counter%60)/10)&floor(RESULTS_counter%10)\n"
 									}
 								}
 							],
-							"sid": 967683237707502,
+							"sid": 377070160951757,
 							"children": [
+								{
+									"eventType": "comment",
+									"text": "You suck!"
+								},
 								{
 									"eventType": "block",
 									"conditions": [
 										{
 											"id": "compare-eventvar",
 											"objectClass": "System",
-											"sid": 470157351257255,
+											"sid": 977011235082646,
 											"parameters": {
 												"variable": "STAT_time",
 												"comparison": 5,
@@ -974,13 +1032,13 @@
 										{
 											"id": "set-text",
 											"objectClass": "MenuFont",
-											"sid": 708860771991429,
+											"sid": 749109586347870,
 											"parameters": {
 												"text": "\"SUCKS\""
 											}
 										}
 									],
-									"sid": 539365232306566
+									"sid": 976216124537612
 								}
 							]
 						},
@@ -994,7 +1052,7 @@
 								{
 									"id": "compare-eventvar",
 									"objectClass": "System",
-									"sid": 323637541152117,
+									"sid": 416152960504550,
 									"parameters": {
 										"variable": "RESULTS_counter",
 										"comparison": 5,
@@ -1004,7 +1062,7 @@
 								{
 									"id": "compare-boolean-eventvar",
 									"objectClass": "System",
-									"sid": 706142639109970,
+									"sid": 655178354755925,
 									"parameters": {
 										"variable": "RESULTS_skipped"
 									}
@@ -1012,7 +1070,7 @@
 								{
 									"id": "compare-two-values",
 									"objectClass": "System",
-									"sid": 206322880641154,
+									"sid": 284718886295610,
 									"parameters": {
 										"first-value": "RESULTS_stage = 4 & STAT_time >= STAT_suckTime",
 										"comparison": 0,
@@ -1021,47 +1079,11 @@
 								}
 							],
 							"actions": [],
-							"sid": 845296070384955,
+							"sid": 504918779807946,
 							"children": [
 								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "compare-eventvar",
-											"objectClass": "System",
-											"sid": 113679087604503,
-											"parameters": {
-												"variable": "RESULTS_stage",
-												"comparison": 2,
-												"value": "4"
-											}
-										},
-										{
-											"id": "compare-eventvar",
-											"objectClass": "System",
-											"sid": 574314194946163,
-											"parameters": {
-												"variable": "rawValue",
-												"comparison": 5,
-												"value": "targetValue"
-											}
-										}
-									],
-									"actions": [
-										{
-											"id": "set-default-color",
-											"objectClass": "MenuFont",
-											"sid": 918438991249282,
-											"parameters": {
-												"color": "rgbEx255(255, 255, 255)"
-											}
-										}
-									],
-									"sid": 876644323444136
-								},
-								{
 									"eventType": "comment",
-									"text": "Time is handled differently"
+									"text": "Time goal is handled separately"
 								},
 								{
 									"eventType": "block",
@@ -1069,33 +1091,33 @@
 										{
 											"id": "compare-eventvar",
 											"objectClass": "System",
-											"sid": 948020545210930,
+											"sid": 760487983350330,
 											"parameters": {
-												"variable": "RESULTS_stage",
+												"variable": "type",
 												"comparison": 0,
-												"value": "4"
+												"value": "\"time\""
 											}
 										}
 									],
 									"actions": [
-										{
-											"id": "set-visible",
-											"objectClass": "MenuFontSmall",
-											"sid": 308802608991460,
-											"parameters": {
-												"visibility": "visible"
-											}
-										},
 										{
 											"id": "set-text",
 											"objectClass": "MenuFontSmall",
-											"sid": 423379328921930,
+											"sid": 918933293723069,
 											"parameters": {
 												"text": "zeropad(floor(STAT_time/3600), 2) & \":\" &\nzeropad(floor((STAT_time%3600)/60), 2) & \":\" &\nzeropad(floor(STAT_time%60), 2) & \".\" &\nzeropad(floor((STAT_time%1)*1000), 3)\n"
 											}
+										},
+										{
+											"id": "set-visible",
+											"objectClass": "MenuFontSmall",
+											"sid": 665947565627124,
+											"parameters": {
+												"visibility": "visible"
+											}
 										}
 									],
-									"sid": 698559302965960,
+									"sid": 702706082523780,
 									"children": [
 										{
 											"eventType": "block",
@@ -1103,7 +1125,7 @@
 												{
 													"id": "compare-eventvar",
 													"objectClass": "System",
-													"sid": 407318650776347,
+													"sid": 221302182920642,
 													"parameters": {
 														"variable": "rawValue",
 														"comparison": 2,
@@ -1115,7 +1137,7 @@
 												{
 													"id": "set-default-color",
 													"objectClass": "MenuFont",
-													"sid": 670070664809929,
+													"sid": 149040841174181,
 													"parameters": {
 														"color": "rgbEx255(255, 255, 255)"
 													}
@@ -1123,19 +1145,54 @@
 												{
 													"id": "set-default-color",
 													"objectClass": "MenuFontSmall",
-													"sid": 317105608328915,
+													"sid": 506365844732862,
 													"parameters": {
 														"color": "rgbEx255(255, 255, 255)"
 													}
 												}
 											],
-											"sid": 222154997809110
+											"sid": 434191918012546
 										}
 									]
 								},
 								{
 									"eventType": "comment",
-									"text": "Complete, go to the next one"
+									"text": "A goal was reached"
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 664773111556714
+										},
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 659163625814258,
+											"parameters": {
+												"variable": "rawValue",
+												"comparison": 5,
+												"value": "targetValue"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-default-color",
+											"objectClass": "MenuFont",
+											"sid": 451200768964629,
+											"parameters": {
+												"color": "rgbEx255(255, 255, 255)"
+											}
+										}
+									],
+									"sid": 668439566793340
+								},
+								{
+									"eventType": "comment",
+									"text": "Play the cap sound"
 								},
 								{
 									"eventType": "block",
@@ -1143,7 +1200,7 @@
 										{
 											"id": "compare-boolean-eventvar",
 											"objectClass": "System",
-											"sid": 432472603914834,
+											"sid": 828322185390769,
 											"parameters": {
 												"variable": "RESULTS_skipped"
 											},
@@ -1152,7 +1209,7 @@
 										{
 											"id": "compare-eventvar",
 											"objectClass": "System",
-											"sid": 852406236120730,
+											"sid": 399674560983487,
 											"parameters": {
 												"variable": "RESULTS_stage",
 												"comparison": 0,
@@ -1164,7 +1221,7 @@
 										{
 											"id": "play",
 											"objectClass": "Audio",
-											"sid": 415395796119291,
+											"sid": 746567295347513,
 											"parameters": {
 												"audio-file": "menuClose",
 												"loop": "not-looping",
@@ -1174,7 +1231,7 @@
 											}
 										}
 									],
-									"sid": 617196380918137,
+									"sid": 796926706826255,
 									"children": [
 										{
 											"eventType": "block",
@@ -1182,7 +1239,7 @@
 												{
 													"id": "compare-eventvar",
 													"objectClass": "System",
-													"sid": 341465563377010,
+													"sid": 443817264291393,
 													"parameters": {
 														"variable": "RESULTS_stage",
 														"comparison": 0,
@@ -1191,7 +1248,7 @@
 												}
 											],
 											"actions": [],
-											"sid": 833937380187274,
+											"sid": 530780340593690,
 											"children": [
 												{
 													"eventType": "block",
@@ -1199,7 +1256,7 @@
 														{
 															"id": "compare-eventvar",
 															"objectClass": "System",
-															"sid": 959453223364659,
+															"sid": 221000704148961,
 															"parameters": {
 																"variable": "STAT_time",
 																"comparison": 5,
@@ -1209,7 +1266,7 @@
 														{
 															"id": "compare-eventvar",
 															"objectClass": "System",
-															"sid": 497798716370428,
+															"sid": 916180865084721,
 															"parameters": {
 																"variable": "STAT_time",
 																"comparison": 2,
@@ -1221,10 +1278,10 @@
 														{
 															"id": "play-by-name",
 															"objectClass": "Audio",
-															"sid": 980993650221094,
+															"sid": 701964867587058,
 															"parameters": {
 																"folder": "sounds",
-																"audio-file-name": "SETTING_playerSound&\"Grunt\"",
+																"audio-file-name": "SETTING_playerSound&\"_grunt\"",
 																"loop": "not-looping",
 																"volume": "log10(SETTING_volumeSound)*20",
 																"stereo-pan": "0",
@@ -1232,7 +1289,7 @@
 															}
 														}
 													],
-													"sid": 795083384409562
+													"sid": 985867618289517
 												},
 												{
 													"eventType": "block",
@@ -1240,7 +1297,7 @@
 														{
 															"id": "compare-eventvar",
 															"objectClass": "System",
-															"sid": 203162489427570,
+															"sid": 730484669441973,
 															"parameters": {
 																"variable": "STAT_time",
 																"comparison": 5,
@@ -1252,10 +1309,10 @@
 														{
 															"id": "play-by-name",
 															"objectClass": "Audio",
-															"sid": 554879990340562,
+															"sid": 591701890754657,
 															"parameters": {
 																"folder": "sounds",
-																"audio-file-name": "SETTING_playerSound&\"Scream\"",
+																"audio-file-name": "SETTING_playerSound&\"_scream\"",
 																"loop": "not-looping",
 																"volume": "log10(SETTING_volumeSound)*20",
 																"stereo-pan": "0",
@@ -1263,7 +1320,7 @@
 															}
 														}
 													],
-													"sid": 482018257967834
+													"sid": 730538039803852
 												}
 											]
 										}
@@ -1272,7 +1329,7 @@
 								},
 								{
 									"eventType": "comment",
-									"text": "All results are complete"
+									"text": "Move on to the next"
 								},
 								{
 									"eventType": "block",
@@ -1280,82 +1337,7 @@
 										{
 											"id": "compare-eventvar",
 											"objectClass": "System",
-											"sid": 835735005052916,
-											"parameters": {
-												"variable": "RESULTS_stage",
-												"comparison": 0,
-												"value": "4"
-											}
-										}
-									],
-									"actions": [],
-									"sid": 270385404180841,
-									"children": [
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "compare-boolean-eventvar",
-													"objectClass": "System",
-													"sid": 615267114522260,
-													"parameters": {
-														"variable": "RESULTS_skipped"
-													}
-												}
-											],
-											"actions": [
-												{
-													"id": "wait",
-													"objectClass": "System",
-													"sid": 200479366536794,
-													"parameters": {
-														"seconds": "1.0",
-														"use-timescale": true
-													}
-												},
-												{
-													"id": "add-to-eventvar",
-													"objectClass": "System",
-													"sid": 430570889786200,
-													"parameters": {
-														"variable": "RESULTS_stage",
-														"value": "1"
-													}
-												}
-											],
-											"sid": 601334048804476
-										},
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "else",
-													"objectClass": "System",
-													"sid": 378743926668294
-												}
-											],
-											"actions": [
-												{
-													"id": "add-to-eventvar",
-													"objectClass": "System",
-													"sid": 725970755462687,
-													"parameters": {
-														"variable": "RESULTS_stage",
-														"value": "1"
-													}
-												}
-											],
-											"sid": 693093527550763
-										}
-									]
-								},
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "compare-eventvar",
-											"objectClass": "System",
-											"sid": 515298590656127,
+											"sid": 421778341691736,
 											"parameters": {
 												"variable": "RESULTS_stage",
 												"comparison": 2,
@@ -1364,7 +1346,7 @@
 										}
 									],
 									"actions": [],
-									"sid": 525016512874220,
+									"sid": 618129347571739,
 									"children": [
 										{
 											"eventType": "block",
@@ -1372,7 +1354,7 @@
 												{
 													"id": "compare-boolean-eventvar",
 													"objectClass": "System",
-													"sid": 326245633480427,
+													"sid": 436113813145793,
 													"parameters": {
 														"variable": "RESULTS_skipped"
 													},
@@ -1383,7 +1365,7 @@
 												{
 													"id": "wait",
 													"objectClass": "System",
-													"sid": 433828756107495,
+													"sid": 216349373436008,
 													"parameters": {
 														"seconds": "1.0",
 														"use-timescale": true
@@ -1392,7 +1374,7 @@
 												{
 													"id": "add-to-eventvar",
 													"objectClass": "System",
-													"sid": 528122459787755,
+													"sid": 449993528111952,
 													"parameters": {
 														"variable": "RESULTS_stage",
 														"value": "1"
@@ -1401,7 +1383,7 @@
 												{
 													"id": "set-eventvar-value",
 													"objectClass": "System",
-													"sid": 725649331715650,
+													"sid": 838228526946908,
 													"parameters": {
 														"variable": "RESULTS_counter",
 														"value": "0"
@@ -1410,14 +1392,14 @@
 												{
 													"id": "set-boolean-eventvar",
 													"objectClass": "System",
-													"sid": 865481840962320,
+													"sid": 320569531335905,
 													"parameters": {
 														"variable": "RESULTS_locked",
 														"value": "false"
 													}
 												}
 											],
-											"sid": 624677582852166
+											"sid": 322905416898656
 										},
 										{
 											"eventType": "block",
@@ -1425,14 +1407,14 @@
 												{
 													"id": "else",
 													"objectClass": "System",
-													"sid": 297846560858152
+													"sid": 813423046971595
 												}
 											],
 											"actions": [
 												{
 													"id": "add-to-eventvar",
 													"objectClass": "System",
-													"sid": 601598521737583,
+													"sid": 480752146317845,
 													"parameters": {
 														"variable": "RESULTS_stage",
 														"value": "1"
@@ -1441,7 +1423,7 @@
 												{
 													"id": "set-eventvar-value",
 													"objectClass": "System",
-													"sid": 633928950701490,
+													"sid": 220636201291184,
 													"parameters": {
 														"variable": "RESULTS_counter",
 														"value": "0"
@@ -1450,29 +1432,56 @@
 												{
 													"id": "set-boolean-eventvar",
 													"objectClass": "System",
-													"sid": 976370753297291,
+													"sid": 628189373039585,
 													"parameters": {
 														"variable": "RESULTS_locked",
 														"value": "false"
 													}
 												}
 											],
-											"sid": 953537024767340
+											"sid": 453258575011153
 										}
 									]
+								},
+								{
+									"eventType": "comment",
+									"text": "We're done"
 								},
 								{
 									"eventType": "block",
 									"conditions": [
 										{
-											"id": "trigger-once-while-true",
+											"id": "compare-eventvar",
 											"objectClass": "System",
-											"sid": 427861025473372,
-											"disabled": true
+											"sid": 851381076447840,
+											"parameters": {
+												"variable": "RESULTS_stage",
+												"comparison": 5,
+												"value": "4"
+											}
 										}
 									],
-									"actions": [],
-									"sid": 164646121767602
+									"actions": [
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 423740247364577,
+											"parameters": {
+												"seconds": "1.0",
+												"use-timescale": true
+											}
+										},
+										{
+											"id": "set-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 410772478178848,
+											"parameters": {
+												"variable": "RESULTS_finished",
+												"value": "true"
+											}
+										}
+									],
+									"sid": 109800354650356
 								}
 							],
 							"isOrBlock": true
@@ -1559,10 +1568,10 @@
 								{
 									"id": "compare-eventvar",
 									"objectClass": "System",
-									"sid": 372657572094240,
+									"sid": 784931305202013,
 									"parameters": {
 										"variable": "RESULTS_stage",
-										"comparison": 3,
+										"comparison": 2,
 										"value": "4"
 									}
 								},
@@ -1606,40 +1615,18 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "compare-eventvar",
+									"id": "compare-boolean-eventvar",
 									"objectClass": "System",
-									"sid": 230253167735641,
+									"sid": 161942140087058,
 									"parameters": {
-										"variable": "RESULTS_stage",
-										"comparison": 4,
-										"value": "4"
+										"variable": "RESULTS_finished"
 									}
 								}
 							],
 							"actions": [
 								{
-									"id": "set-boolean-eventvar",
-									"objectClass": "System",
-									"sid": 369860813093026,
-									"parameters": {
-										"variable": "RESULTS_locked",
-										"value": "false"
-									}
-								},
-								{
-									"id": "stop",
-									"objectClass": "Audio",
-									"sid": 854907204996518,
-									"parameters": {
-										"tag": "\"music\""
-									}
-								},
-								{
-									"callFunction": "transition",
-									"sid": 770486975993407,
-									"parameters": [
-										"\"Title\""
-									]
+									"callFunction": "finishResults",
+									"sid": 760419780936181
 								}
 							],
 							"sid": 357981118821898
@@ -1665,13 +1652,11 @@
 					}
 				},
 				{
-					"id": "compare-eventvar",
+					"id": "compare-boolean-eventvar",
 					"objectClass": "System",
-					"sid": 331771735965335,
+					"sid": 543658661022877,
 					"parameters": {
-						"variable": "RESULTS_stage",
-						"comparison": 4,
-						"value": "4"
+						"variable": "RESULTS_finished"
 					}
 				},
 				{
@@ -1700,22 +1685,58 @@
 					}
 				},
 				{
+					"callFunction": "finishResults",
+					"sid": 732964745269445
+				}
+			],
+			"sid": 599910839265973
+		},
+		{
+			"functionName": "finishResults",
+			"functionDescription": "Finish the results, transition out",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 219836828606850,
+					"parameters": {
+						"variable": "RESULTS_finished",
+						"value": "false"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 672611539547258,
+					"parameters": {
+						"variable": "RESULTS_counter",
+						"value": "-1"
+					}
+				},
+				{
 					"id": "stop",
 					"objectClass": "Audio",
-					"sid": 419149865224337,
+					"sid": 165329994966459,
 					"parameters": {
 						"tag": "\"music\""
 					}
 				},
 				{
 					"callFunction": "transition",
-					"sid": 660578995808160,
+					"sid": 781131829738830,
 					"parameters": [
 						"\"Title\""
 					]
 				}
 			],
-			"sid": 599910839265973
+			"sid": 820756144009954
 		}
 	],
 	"sid": 119723198996374

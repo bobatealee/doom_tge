@@ -1231,6 +1231,15 @@
 													}
 												},
 												{
+													"id": "set-effect-enabled",
+													"objectClass": "Skin",
+													"sid": 472965930506416,
+													"parameters": {
+														"mode": "disable",
+														"effect": "\"Brightness\""
+													}
+												},
+												{
 													"id": "set-opacity",
 													"objectClass": "Skin",
 													"sid": 573273562255337,
@@ -1271,11 +1280,20 @@
 															}
 														},
 														{
+															"id": "set-effect-enabled",
+															"objectClass": "Skin",
+															"sid": 165095406459005,
+															"parameters": {
+																"mode": "enable",
+																"effect": "\"Brightness\""
+															}
+														},
+														{
 															"id": "set-opacity",
 															"objectClass": "Skin",
-															"sid": 548186757299341,
+															"sid": 153497770258542,
 															"parameters": {
-																"opacity": "65"
+																"opacity": "50"
 															}
 														}
 													],
@@ -1361,6 +1379,15 @@
 															"id": "stop-animation",
 															"objectClass": "Doomguy",
 															"sid": 659794584684647
+														},
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 113683745437454,
+															"parameters": {
+																"variable": "SETTING_playerSoundPitch",
+																"value": "Skins.At(Skin.id, 9)"
+															}
 														}
 													],
 													"sid": 329959365137181,
@@ -1680,6 +1707,15 @@
 													}
 												},
 												{
+													"id": "set-effect-enabled",
+													"objectClass": "Medal",
+													"sid": 722658686499537,
+													"parameters": {
+														"mode": "disable",
+														"effect": "\"Brightness\""
+													}
+												},
+												{
 													"id": "set-opacity",
 													"objectClass": "Medal",
 													"sid": 269214017885209,
@@ -1720,11 +1756,20 @@
 															}
 														},
 														{
+															"id": "set-effect-enabled",
+															"objectClass": "Medal",
+															"sid": 396162894814983,
+															"parameters": {
+																"mode": "enable",
+																"effect": "\"Brightness\""
+															}
+														},
+														{
 															"id": "set-opacity",
 															"objectClass": "Medal",
-															"sid": 275743586778885,
+															"sid": 114793004685862,
 															"parameters": {
-																"opacity": "65"
+																"opacity": "50"
 															}
 														}
 													],
@@ -5655,11 +5700,11 @@
 													"actions": [
 														{
 															"callFunction": "menuSwitch",
-															"sid": 176696221981395,
+															"sid": 845213600184540,
 															"parameters": [
 																"\"Unlocks\"",
 																"\"open\"",
-																"2"
+																"3"
 															]
 														},
 														{
@@ -6344,7 +6389,7 @@
 														{
 															"id": "compare-eventvar",
 															"objectClass": "System",
-															"sid": 613927426381560,
+															"sid": 106490060716305,
 															"parameters": {
 																"variable": "id",
 																"comparison": 0,
@@ -6392,7 +6437,7 @@
 														{
 															"id": "compare-eventvar",
 															"objectClass": "System",
-															"sid": 236941711136964,
+															"sid": 135060809552310,
 															"parameters": {
 																"variable": "id",
 																"comparison": 0,
@@ -6431,7 +6476,7 @@
 														{
 															"id": "compare-eventvar",
 															"objectClass": "System",
-															"sid": 436818396508770,
+															"sid": 551956011731506,
 															"parameters": {
 																"variable": "id",
 																"comparison": 0,
@@ -6510,7 +6555,7 @@
 													"actions": [
 														{
 															"callFunction": "menuSwitch",
-															"sid": 366979353529158,
+															"sid": 441173029685408,
 															"parameters": [
 																"\"Unlocks\"",
 																"\"close\"",
@@ -6712,7 +6757,7 @@
 													"actions": [
 														{
 															"callFunction": "menuSwitch",
-															"sid": 976830240752950,
+															"sid": 183444281684580,
 															"parameters": [
 																"\"Unlocks\"",
 																"\"close\"",

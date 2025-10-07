@@ -171,7 +171,7 @@
 			"eventType": "variable",
 			"name": "STAT_observationsMax",
 			"type": "number",
-			"initialValue": "0",
+			"initialValue": "1",
 			"comment": "Max observations, calculated at runtime",
 			"isStatic": false,
 			"isConstant": false,
@@ -181,7 +181,7 @@
 			"eventType": "variable",
 			"name": "STAT_itemsMax",
 			"type": "number",
-			"initialValue": "0",
+			"initialValue": "1",
 			"comment": "Max items, calculated at runtime",
 			"isStatic": false,
 			"isConstant": false,
@@ -256,16 +256,6 @@
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 233567711124690
-		},
-		{
-			"eventType": "variable",
-			"name": "STAT_drinks",
-			"type": "number",
-			"initialValue": "0",
-			"comment": "Amount of wine drank",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 446744930404200
 		},
 		{
 			"eventType": "comment",
@@ -619,15 +609,6 @@
 							}
 						},
 						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 435793116668943,
-							"parameters": {
-								"variable": "STAT_drinks",
-								"value": "0"
-							}
-						},
-						{
 							"type": "comment",
 							"text": "Grand Opening"
 						},
@@ -636,6 +617,7 @@
 							"sid": 795869699836697,
 							"parameters": [
 								"0",
+								true,
 								true
 							]
 						}
@@ -1636,10 +1618,10 @@
 										{
 											"id": "play-by-name",
 											"objectClass": "Audio",
-											"sid": 242398497040862,
+											"sid": 107119458966073,
 											"parameters": {
 												"folder": "sounds",
-												"audio-file-name": "SETTING_playerSound&\"Grunt\"",
+												"audio-file-name": "SETTING_playerSound&\"_grunt\"",
 												"loop": "not-looping",
 												"volume": "log10(SETTING_volumeSound)*20",
 												"stereo-pan": "0",
@@ -2238,30 +2220,143 @@
 										"tags": "\"drink\"",
 										"match": "any-tags"
 									}
+								}
+							],
+							"actions": [],
+							"sid": 130608740902534,
+							"children": [
+								{
+									"eventType": "comment",
+									"text": "Sociable"
 								},
 								{
-									"id": "compare-at-xy",
-									"objectClass": "Drinks",
-									"sid": 964757854755982,
-									"parameters": {
-										"x": "PLAYER_drink",
-										"y": "1",
-										"comparison": 0,
-										"value": "0"
-									}
-								}
-							],
-							"actions": [
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-at-xy",
+											"objectClass": "Medals",
+											"sid": 447961464640629,
+											"parameters": {
+												"x": "6",
+												"y": "5",
+												"comparison": 1,
+												"value": "1"
+											}
+										},
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 549237361230365,
+											"parameters": {
+												"variable": "PLAYER_drink",
+												"comparison": 0,
+												"value": "Drinks.IndexOf(\"beer\")"
+											}
+										},
+										{
+											"id": "is-overlapping-another-object",
+											"objectClass": "PlayerSight",
+											"sid": 357500803089606,
+											"parameters": {
+												"object": "Trigger"
+											}
+										},
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Trigger",
+											"sid": 990084378741746,
+											"parameters": {
+												"instance-variable": "id",
+												"comparison": 0,
+												"value": "-98"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "destroy",
+											"objectClass": "Trigger",
+											"sid": 647782900734361
+										},
+										{
+											"callFunction": "unlockMedal",
+											"sid": 880629605302406,
+											"parameters": [
+												"6",
+												true,
+												true
+											]
+										},
+										{
+											"id": "play",
+											"objectClass": "Audio",
+											"sid": 657765073362946,
+											"parameters": {
+												"audio-file": "ding",
+												"loop": "not-looping",
+												"volume": "log10(SETTING_volumeSound)*20",
+												"stereo-pan": "0",
+												"tag-optional": "\"\""
+											}
+										},
+										{
+											"id": "set-animation",
+											"objectClass": "GALAKTOR",
+											"sid": 343389879061931,
+											"parameters": {
+												"animation": "\"wink\"",
+												"from": "beginning"
+											}
+										},
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 295086566407427,
+											"parameters": {
+												"seconds": "0.5",
+												"use-timescale": true
+											}
+										},
+										{
+											"id": "set-animation",
+											"objectClass": "GALAKTOR",
+											"sid": 816795932713188,
+											"parameters": {
+												"animation": "\"default\"",
+												"from": "beginning"
+											}
+										}
+									],
+									"sid": 235256531344656
+								},
 								{
-									"callFunction": "selectDrink",
-									"sid": 841507538393787,
-									"parameters": [
-										"\"left\"",
-										"\"none\""
-									]
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-at-xy",
+											"objectClass": "Drinks",
+											"sid": 565861148105375,
+											"parameters": {
+												"x": "PLAYER_drink",
+												"y": "1",
+												"comparison": 0,
+												"value": "0"
+											}
+										}
+									],
+									"actions": [
+										{
+											"callFunction": "selectDrink",
+											"sid": 957673029970529,
+											"parameters": [
+												"\"left\"",
+												"\"none\""
+											]
+										}
+									],
+									"sid": 873391493529049
 								}
-							],
-							"sid": 130608740902534
+							]
 						}
 					],
 					"sid": 469163705892176
@@ -2387,6 +2482,25 @@
 							"eventType": "function-block",
 							"conditions": [
 								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 531834447090091,
+									"parameters": {
+										"variable": "TRANSITION_running"
+									},
+									"isInverted": true
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 698784765718020,
+									"parameters": {
+										"variable": "MENU_menu",
+										"comparison": 0,
+										"value": "\"None\""
+									}
+								},
+								{
 									"id": "is-playing-by-tags",
 									"objectClass": "TimelineController",
 									"sid": 993450888173817,
@@ -2442,11 +2556,17 @@
 									"eventType": "block",
 									"conditions": [
 										{
-											"id": "is-tag-playing",
-											"objectClass": "Audio",
-											"sid": 563055585121146,
+											"id": "else",
+											"objectClass": "System",
+											"sid": 463788692812148
+										},
+										{
+											"id": "is-timer-running",
+											"objectClass": "Arm",
+											"sid": 364206577522512,
+											"behaviorType": "Timer",
 											"parameters": {
-												"tag": "\"sip\""
+												"tag": "\"cooldown\""
 											},
 											"isInverted": true
 										}
@@ -2455,155 +2575,91 @@
 									"sid": 539245295760732,
 									"children": [
 										{
-											"eventType": "comment",
-											"text": "Wine"
-										},
-										{
 											"eventType": "block",
 											"conditions": [
 												{
-													"id": "compare-animation-frame",
-													"objectClass": "Arm",
-													"sid": 222779174263679,
+													"id": "compare-at-xy",
+													"objectClass": "Drinks",
+													"sid": 816698238886642,
 													"parameters": {
-														"comparison": 0,
-														"number": "1"
+														"x": "PLAYER_drink",
+														"y": "1",
+														"comparison": 4,
+														"value": "0"
 													}
 												}
 											],
-											"actions": [],
-											"sid": 256130163860889,
-											"children": [
+											"actions": [
 												{
-													"eventType": "block",
-													"conditions": [
-														{
-															"id": "compare-at-xy",
-															"objectClass": "Drinks",
-															"sid": 865447223112696,
-															"parameters": {
-																"x": "Self.IndexOf(\"wine\")",
-																"y": "1",
-																"comparison": 4,
-																"value": "0"
-															}
-														}
-													],
-													"actions": [
-														{
-															"id": "play-timeline",
-															"objectClass": "TimelineController",
-															"sid": 795301058919849,
-															"parameters": {
-																"timeline": "Drink",
-																"tags": "\"drink\""
-															}
-														},
-														{
-															"id": "play-by-name",
-															"objectClass": "Audio",
-															"sid": 563107467281042,
-															"parameters": {
-																"folder": "sounds",
-																"audio-file-name": "SETTING_playerSound&\"Wine\"",
-																"loop": "not-looping",
-																"volume": "log10(SETTING_volumeSound)*20",
-																"stereo-pan": "0",
-																"tag-optional": "\"sip\""
-															}
-														},
-														{
-															"callFunction": "addDrinks",
-															"sid": 497843510844586,
-															"parameters": [
-																"\"wine\"",
-																"-1"
-															]
-														},
-														{
-															"id": "add-to-eventvar",
-															"objectClass": "System",
-															"sid": 324101987863589,
-															"parameters": {
-																"variable": "STAT_drinks",
-																"value": "1"
-															}
-														}
-													],
-													"sid": 670020978769039
-												}
-											]
-										},
-										{
-											"eventType": "comment",
-											"text": "Beer"
-										},
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "compare-animation-frame",
-													"objectClass": "Arm",
-													"sid": 981905825035328,
+													"id": "stop",
+													"objectClass": "Audio",
+													"sid": 608460834678175,
 													"parameters": {
-														"comparison": 0,
-														"number": "2"
+														"tag": "\"sip\""
+													}
+												},
+												{
+													"id": "start-timer",
+													"objectClass": "Arm",
+													"sid": 919362052018545,
+													"behaviorType": "Timer",
+													"parameters": {
+														"duration": "3",
+														"type": "once",
+														"tag": "\"cooldown\""
+													}
+												},
+												{
+													"id": "play-timeline",
+													"objectClass": "TimelineController",
+													"sid": 347254488281912,
+													"parameters": {
+														"timeline": "Drink",
+														"tags": "\"drink\""
+													}
+												},
+												{
+													"id": "play-by-name",
+													"objectClass": "Audio",
+													"sid": 828150442530806,
+													"parameters": {
+														"folder": "sounds",
+														"audio-file-name": "SETTING_playerSound&\"_\"&Drinks.At(PLAYER_drink, 0)",
+														"loop": "not-looping",
+														"volume": "log10(SETTING_volumeSound)*20",
+														"stereo-pan": "0",
+														"tag-optional": "\"sip\""
+													}
+												},
+												{
+													"id": "set-playback-rate",
+													"objectClass": "Audio",
+													"sid": 665414102175615,
+													"parameters": {
+														"tag": "\"sip\"",
+														"playback-rate": "SETTING_playerSoundPitch"
+													}
+												},
+												{
+													"callFunction": "addDrinks",
+													"sid": 652234287871565,
+													"parameters": [
+														"Drinks.At(PLAYER_drink, 0)",
+														"-1"
+													]
+												},
+												{
+													"id": "set-at-xy",
+													"objectClass": "Drinks",
+													"sid": 139031046856053,
+													"parameters": {
+														"x": "PLAYER_drink",
+														"y": "3",
+														"value": "Self.At(PLAYER_drink, 3)+1"
 													}
 												}
 											],
-											"actions": [],
-											"sid": 221881130066726,
-											"children": [
-												{
-													"eventType": "block",
-													"conditions": [
-														{
-															"id": "compare-at-xy",
-															"objectClass": "Drinks",
-															"sid": 970906279845419,
-															"parameters": {
-																"x": "Self.IndexOf(\"beer\")",
-																"y": "1",
-																"comparison": 4,
-																"value": "0"
-															}
-														}
-													],
-													"actions": [
-														{
-															"id": "play-timeline",
-															"objectClass": "TimelineController",
-															"sid": 168639160573126,
-															"parameters": {
-																"timeline": "Drink",
-																"tags": "\"drink\""
-															}
-														},
-														{
-															"callFunction": "addDrinks",
-															"sid": 609668416484701,
-															"parameters": [
-																"\"beer\"",
-																"-1"
-															]
-														},
-														{
-															"id": "play-by-name",
-															"objectClass": "Audio",
-															"sid": 483132433896127,
-															"parameters": {
-																"folder": "sounds",
-																"audio-file-name": "SETTING_playerSound&\"Beer\"",
-																"loop": "not-looping",
-																"volume": "log10(SETTING_volumeSound)*20",
-																"stereo-pan": "0",
-																"tag-optional": "\"sip\""
-															}
-														}
-													],
-													"sid": 512796848189870
-												}
-											]
+											"sid": 178609925310622
 										}
 									]
 								}
@@ -2633,108 +2689,6 @@
 								}
 							],
 							"sid": 962450747535299
-						},
-						{
-							"eventType": "comment",
-							"text": "Sociable"
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "on-keyframe-reached",
-									"objectClass": "TimelineController",
-									"sid": 299573291890107,
-									"parameters": {
-										"tags": "\"drink\"",
-										"match": "any-tags"
-									}
-								},
-								{
-									"id": "compare-at-xy",
-									"objectClass": "Medals",
-									"sid": 476212195840999,
-									"parameters": {
-										"x": "6",
-										"y": "5",
-										"comparison": 1,
-										"value": "1"
-									}
-								},
-								{
-									"id": "is-overlapping-another-object",
-									"objectClass": "PlayerSight",
-									"sid": 722916173568280,
-									"parameters": {
-										"object": "Trigger"
-									}
-								},
-								{
-									"id": "compare-instance-variable",
-									"objectClass": "Trigger",
-									"sid": 620556713304632,
-									"parameters": {
-										"instance-variable": "id",
-										"comparison": 0,
-										"value": "-98"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "destroy",
-									"objectClass": "Trigger",
-									"sid": 891080809457049
-								},
-								{
-									"callFunction": "unlockMedal",
-									"sid": 263261376332863,
-									"parameters": [
-										"6",
-										true
-									]
-								},
-								{
-									"id": "play",
-									"objectClass": "Audio",
-									"sid": 662522784479694,
-									"parameters": {
-										"audio-file": "ding",
-										"loop": "not-looping",
-										"volume": "log10(SETTING_volumeSound)*20",
-										"stereo-pan": "0",
-										"tag-optional": "\"\""
-									}
-								},
-								{
-									"id": "set-animation",
-									"objectClass": "GALAKTOR",
-									"sid": 132685998998401,
-									"parameters": {
-										"animation": "\"wink\"",
-										"from": "beginning"
-									}
-								},
-								{
-									"id": "wait",
-									"objectClass": "System",
-									"sid": 461632586716795,
-									"parameters": {
-										"seconds": "0.5",
-										"use-timescale": true
-									}
-								},
-								{
-									"id": "set-animation",
-									"objectClass": "GALAKTOR",
-									"sid": 367066611411284,
-									"parameters": {
-										"animation": "\"default\"",
-										"from": "beginning"
-									}
-								}
-							],
-							"sid": 630979578000133
 						}
 					],
 					"sid": 225343094789614
@@ -3142,16 +3096,16 @@
 											}
 										},
 										{
-											"id": "release-pointer-lock",
-											"objectClass": "Mouse",
-											"sid": 554756761957731
-										},
-										{
 											"callFunction": "transition",
 											"sid": 835107228814608,
 											"parameters": [
 												"\"Results\""
 											]
+										},
+										{
+											"id": "release-pointer-lock",
+											"objectClass": "Mouse",
+											"sid": 115696261124508
 										}
 									],
 									"sid": 767065793703173
@@ -3197,16 +3151,35 @@
 											}
 										}
 									],
-									"actions": [
+									"actions": [],
+									"sid": 910852418844473,
+									"children": [
 										{
-											"callFunction": "trigger",
-											"sid": 639858277090934,
-											"parameters": [
-												"Trigger.UID"
-											]
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "pick-nearestfurthest",
+													"objectClass": "Trigger",
+													"sid": 506823437778379,
+													"parameters": {
+														"which": "nearest",
+														"x": "Player.X",
+														"y": "Player.Y"
+													}
+												}
+											],
+											"actions": [
+												{
+													"callFunction": "trigger",
+													"sid": 763701294535309,
+													"parameters": [
+														"Trigger.UID"
+													]
+												}
+											],
+											"sid": 855963720066510
 										}
-									],
-									"sid": 910852418844473
+									]
 								},
 								{
 									"eventType": "comment",
@@ -3256,7 +3229,34 @@
 											]
 										}
 									],
-									"sid": 909486921632317
+									"sid": 909486921632317,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "pick-nearestfurthest",
+													"objectClass": "Trigger",
+													"sid": 504385452985043,
+													"parameters": {
+														"which": "nearest",
+														"x": "Player.X",
+														"y": "Player.Y"
+													}
+												}
+											],
+											"actions": [
+												{
+													"callFunction": "trigger",
+													"sid": 274006244109312,
+													"parameters": [
+														"Trigger.UID"
+													]
+												}
+											],
+											"sid": 708808647347769
+										}
+									]
 								},
 								{
 									"eventType": "comment",
@@ -3319,10 +3319,10 @@
 										{
 											"id": "play-by-name",
 											"objectClass": "Audio",
-											"sid": 719561030099684,
+											"sid": 692027482839836,
 											"parameters": {
 												"folder": "sounds",
-												"audio-file-name": "SETTING_playerSound&\"Grunt\"",
+												"audio-file-name": "SETTING_playerSound&\"_grunt\"",
 												"loop": "not-looping",
 												"volume": "log10(SETTING_volumeSound)*20",
 												"stereo-pan": "0",
@@ -3332,10 +3332,10 @@
 										{
 											"id": "set-playback-rate",
 											"objectClass": "Audio",
-											"sid": 776475393901961,
+											"sid": 626336728185942,
 											"parameters": {
 												"tag": "\"grunt\"",
-												"playback-rate": "random(0.95, 1.05)"
+												"playback-rate": "random(SETTING_playerSoundPitch-0.05, SETTING_playerSoundPitch+0.05)"
 											}
 										}
 									],
@@ -3491,7 +3491,7 @@
 													"objectClass": "Audio",
 													"sid": 681972534144198,
 													"parameters": {
-														"audio-file": "francisScream",
+														"audio-file": "francis_scream",
 														"loop": "not-looping",
 														"volume": "log10(SETTING_volumeSound)*20",
 														"stereo-pan": "0",
@@ -3916,11 +3916,31 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "on-collision-with-another-object",
+							"id": "is-overlapping-another-object",
 							"objectClass": "PlayerPickup",
-							"sid": 369767340101374,
+							"sid": 607459481353407,
 							"parameters": {
 								"object": "Billboard"
+							}
+						},
+						{
+							"id": "compare-z-elevation",
+							"objectClass": "Billboard",
+							"sid": 462893649386039,
+							"parameters": {
+								"which": "z-elevation",
+								"comparison": 5,
+								"z-elevation": "Player.ZElevation"
+							}
+						},
+						{
+							"id": "compare-z-elevation",
+							"objectClass": "Billboard",
+							"sid": 858082419536403,
+							"parameters": {
+								"which": "z-elevation",
+								"comparison": 3,
+								"z-elevation": "Player.ZElevation+PLAYER_cameraHeight"
 							}
 						}
 					],
@@ -4491,10 +4511,10 @@
 								{
 									"id": "play-by-name",
 									"objectClass": "Audio",
-									"sid": 239147154418616,
+									"sid": 600029334033700,
 									"parameters": {
 										"folder": "sounds",
-										"audio-file-name": "SETTING_playerSound&\"Grunt\"",
+										"audio-file-name": "SETTING_playerSound&\"_grunt\"",
 										"loop": "not-looping",
 										"volume": "log10(SETTING_volumeSound)*20",
 										"stereo-pan": "0",
@@ -5306,6 +5326,26 @@
 					"text": "Move the player"
 				},
 				{
+					"eventType": "variable",
+					"name": "bonusX",
+					"type": "number",
+					"initialValue": "1",
+					"comment": "",
+					"isStatic": true,
+					"isConstant": false,
+					"sid": 719422419134081
+				},
+				{
+					"eventType": "variable",
+					"name": "bonusY",
+					"type": "number",
+					"initialValue": "1",
+					"comment": "",
+					"isStatic": true,
+					"isConstant": false,
+					"sid": 562021655818116
+				},
+				{
 					"eventType": "block",
 					"conditions": [
 						{
@@ -5318,23 +5358,167 @@
 						{
 							"id": "set-vector-x",
 							"objectClass": "Player",
-							"sid": 369341143765862,
+							"sid": 500190482074330,
 							"behaviorType": "8Direction",
 							"parameters": {
-								"vector-x": "(cos(3DCamera.CameraXRotation) * Self.playerSpeedVertical) + (cos(3DCamera.CameraXRotation + 90) * Self.playerSpeedHorizontal)"
+								"vector-x": "(cos(3DCamera.CameraXRotation) * Self.playerSpeedVertical) + (cos(3DCamera.CameraXRotation + 90) * Self.playerSpeedHorizontal)+Self.playerBonusHorizontal"
 							}
 						},
 						{
 							"id": "set-vector-y",
 							"objectClass": "Player",
-							"sid": 943015070499154,
+							"sid": 741622382539790,
 							"behaviorType": "8Direction",
 							"parameters": {
-								"vector-y": "(sin(3DCamera.CameraXRotation) * Self.playerSpeedVertical) + (sin(3DCamera.CameraXRotation + 90) * Self.playerSpeedHorizontal)"
+								"vector-y": "(sin(3DCamera.CameraXRotation) * Self.playerSpeedVertical) + (sin(3DCamera.CameraXRotation + 90) * Self.playerSpeedHorizontal)+Self.playerBonusVertical"
 							}
 						}
 					],
-					"sid": 502934772174805
+					"sid": 502934772174805,
+					"children": [
+						{
+							"eventType": "comment",
+							"text": "Wasted skin gets to wobble around a bit"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 982247262896475,
+									"parameters": {
+										"variable": "SETTING_playerSkin",
+										"comparison": 0,
+										"value": "\"wasted\""
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 826031405509500,
+									"parameters": {
+										"variable": "MENU_menu",
+										"comparison": 0,
+										"value": "\"None\""
+									}
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 537611268145011,
+									"parameters": {
+										"variable": "TRANSITION_running"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Player",
+									"sid": 357559220749706,
+									"parameters": {
+										"instance-variable": "playerBonusHorizontal",
+										"value": "lerp(Self.playerBonusHorizontal, bonusX, dt*5)"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Player",
+									"sid": 973282294290299,
+									"parameters": {
+										"instance-variable": "playerBonusVertical",
+										"value": "lerp(Self.playerBonusVertical, bonusY, dt*5)"
+									}
+								}
+							],
+							"sid": 925750632150381,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "every-x-seconds",
+											"objectClass": "System",
+											"sid": 638728114813068,
+											"parameters": {
+												"interval-seconds": "random(0.25, 1)"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 539098823494201,
+											"parameters": {
+												"variable": "bonusX",
+												"value": "random(-50, 50)"
+											}
+										}
+									],
+									"sid": 203108413129397
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "every-x-seconds",
+											"objectClass": "System",
+											"sid": 794831056864055,
+											"parameters": {
+												"interval-seconds": "random(0.35, 0.8)"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 948324222565412,
+											"parameters": {
+												"variable": "bonusY",
+												"value": "random(-50, 50)"
+											}
+										}
+									],
+									"sid": 314121767233322
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 594273859281661
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Player",
+									"sid": 379055793794166,
+									"parameters": {
+										"instance-variable": "playerBonusHorizontal",
+										"value": "max(abs(Self.playerBonusHorizontal)-PLAYER_deceleration*dt, 0)\n"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Player",
+									"sid": 210836024842886,
+									"parameters": {
+										"instance-variable": "playerBonusVertical",
+										"value": "max(abs(Self.playerBonusVertical)-PLAYER_deceleration*dt, 0)"
+									}
+								}
+							],
+							"sid": 336365861784807
+						}
+					]
 				}
 			],
 			"sid": 658958264674554
@@ -5811,10 +5995,10 @@
 						{
 							"id": "play-by-name",
 							"objectClass": "Audio",
-							"sid": 795138949254310,
+							"sid": 743780274875998,
 							"parameters": {
 								"folder": "sounds",
-								"audio-file-name": "SETTING_playerSound&\"ScreamBig\"",
+								"audio-file-name": "SETTING_playerSound&\"_screamBig\"",
 								"loop": "not-looping",
 								"volume": "log10(SETTING_volumeSound)*20",
 								"stereo-pan": "0",
@@ -5875,6 +6059,14 @@
 							"objectClass": "Mouse",
 							"sid": 935735645275191,
 							"isInverted": true
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 160544366602400,
+							"parameters": {
+								"variable": "TRANSITION_movedLayout"
+							}
 						},
 						{
 							"id": "compare-eventvar",

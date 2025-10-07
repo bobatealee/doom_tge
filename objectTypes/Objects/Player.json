@@ -60,6 +60,20 @@
 			"desc": "",
 			"show": true,
 			"sid": 884150060503926
+		},
+		{
+			"name": "playerBonusHorizontal",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 991878609825058
+		},
+		{
+			"name": "playerBonusVertical",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 462029414911572
 		}
 	],
 	"behaviorTypes": [

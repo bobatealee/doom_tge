@@ -229,6 +229,16 @@
 		},
 		{
 			"eventType": "variable",
+			"name": "SETTING_playerSoundPitch",
+			"type": "number",
+			"initialValue": "1",
+			"comment": "Player sound pitch",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 668199120790852
+		},
+		{
+			"eventType": "variable",
 			"name": "UNLOCK_doomMusic",
 			"type": "number",
 			"initialValue": "0",
@@ -307,6 +317,10 @@
 							}
 						},
 						{
+							"type": "comment",
+							"text": "Load arrays"
+						},
+						{
 							"id": "request-project-file",
 							"objectClass": "AJAX",
 							"sid": 145297729359162,
@@ -365,6 +379,11 @@
 									"id": "is-windows-webview2-export",
 									"objectClass": "PlatformInfo",
 									"sid": 101136443197802
+								},
+								{
+									"id": "is-macos-wkwebview-export",
+									"objectClass": "PlatformInfo",
+									"sid": 899091432418996
 								},
 								{
 									"id": "is-linux-cef-export",
@@ -642,9 +661,9 @@
 										{
 											"id": "delete",
 											"objectClass": "Skins",
-											"sid": 570542522930324,
+											"sid": 121109818328741,
 											"parameters": {
-												"index": "3",
+												"index": "Self.IndexOf(\"tankman\")",
 												"axis": "x"
 											}
 										}
@@ -716,7 +735,7 @@
 						},
 						{
 							"eventType": "comment",
-							"text": "Necessary arrays are ready, try to load the game"
+							"text": "Arrays necessary for loading are ready, try to load save"
 						},
 						{
 							"eventType": "block",
@@ -1994,7 +2013,22 @@
 							}
 						}
 					],
-					"sid": 788345412942624,
+					"sid": 788345412942624
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 840402105540829,
+							"parameters": {
+								"variable": "NGIO_loggedIn"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 897137357043175,
 					"children": [
 						{
 							"eventType": "comment",
@@ -2004,96 +2038,143 @@
 							"eventType": "block",
 							"conditions": [
 								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 268335401405480,
+									"parameters": {
+										"variable": "LOAD_skins"
+									}
+								},
+								{
 									"id": "is-supporter",
 									"objectClass": "NGIO",
-									"sid": 843232069212498
+									"sid": 640908451937874
+								},
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 703509280551564
 								}
 							],
 							"actions": [
 								{
 									"callFunction": "unlockSkin",
-									"sid": 903902372930812,
+									"sid": 650275057449460,
 									"parameters": [
-										"3",
+										"Skins.IndexOf(\"tankman\")",
+										false,
 										false
 									]
 								}
 							],
-							"sid": 815538646007421
-						}
-					]
-				},
-				{
-					"eventType": "comment",
-					"text": "Sync medals with Newgrounds ASAP"
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "is-logged-in",
-							"objectClass": "NGIO",
-							"sid": 439633711378345
+							"sid": 459412313824230,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 841609643694394,
+											"parameters": {
+												"variable": "GAME_load"
+											}
+										},
+										{
+											"id": "compare-value",
+											"objectClass": "SaveFile",
+											"sid": 926736306073214,
+											"parameters": {
+												"key": "\"skin\"",
+												"comparison": 0,
+												"value": "\"tankman\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 619515054165113,
+											"parameters": {
+												"variable": "SETTING_playerSkin",
+												"value": "\"tankman\""
+											}
+										}
+									],
+									"sid": 779573866788361
+								}
+							]
 						},
 						{
-							"id": "compare-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 917271127419785,
-							"parameters": {
-								"variable": "LOAD_medals"
-							}
+							"eventType": "comment",
+							"text": "Sync medals with Newgrounds ASAP"
 						},
-						{
-							"id": "compare-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 113736828768891,
-							"parameters": {
-								"variable": "NGIO_medals"
-							},
-							"isInverted": true
-						}
-					],
-					"actions": [
-						{
-							"id": "set-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 917525891211549,
-							"parameters": {
-								"variable": "NGIO_medals",
-								"value": "true"
-							}
-						}
-					],
-					"sid": 647596343875123,
-					"children": [
 						{
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "for-each-medal",
-									"objectClass": "NGIO",
-									"sid": 754730585185541
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 908880226728981,
+									"parameters": {
+										"variable": "LOAD_medals"
+									}
 								},
 								{
-									"id": "is-unlocked",
-									"objectClass": "NGIO",
-									"sid": 273017759947544,
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 177688777651597,
 									"parameters": {
-										"medal-id": "NGIO.MedalID"
-									}
+										"variable": "NGIO_medals"
+									},
+									"isInverted": true
 								}
 							],
 							"actions": [
 								{
-									"callFunction": "unlockMedal",
-									"sid": 389921757936413,
-									"parameters": [
-										"Medals.IndexOf(NGIO.MedalID)",
-										false
-									]
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 189546465392535,
+									"parameters": {
+										"variable": "NGIO_medals",
+										"value": "true"
+									}
 								}
 							],
-							"sid": 644258674260106
+							"sid": 962730136640032,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "for-each-medal",
+											"objectClass": "NGIO",
+											"sid": 521441023112128
+										},
+										{
+											"id": "is-unlocked",
+											"objectClass": "NGIO",
+											"sid": 921066111886917,
+											"parameters": {
+												"medal-id": "NGIO.MedalID"
+											}
+										}
+									],
+									"actions": [
+										{
+											"callFunction": "unlockMedal",
+											"sid": 931207939116006,
+											"parameters": [
+												"Medals.IndexOf(NGIO.MedalID)",
+												false,
+												false
+											]
+										}
+									],
+									"sid": 134477371896159
+								}
+							]
 						}
 					]
 				}
@@ -2121,6 +2202,13 @@
 							"initialValue": "0",
 							"comment": "",
 							"sid": 466002669428029
+						},
+						{
+							"name": "save",
+							"type": "boolean",
+							"initialValue": "true",
+							"comment": "",
+							"sid": 138893898408575
 						},
 						{
 							"name": "ping",
@@ -2160,20 +2248,36 @@
 								{
 									"id": "set-at-xy",
 									"objectClass": "Skins",
-									"sid": 577316316940772,
+									"sid": 486456393598399,
 									"parameters": {
 										"x": "id",
 										"y": "5",
 										"value": "1"
 									}
-								},
-								{
-									"callFunction": "save",
-									"sid": 975365347581499
 								}
 							],
 							"sid": 829313579668574,
 							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 476559398165392,
+											"parameters": {
+												"variable": "save"
+											}
+										}
+									],
+									"actions": [
+										{
+											"callFunction": "save",
+											"sid": 221099190495836
+										}
+									],
+									"sid": 493002259401312
+								},
 								{
 									"eventType": "block",
 									"conditions": [
@@ -2219,6 +2323,13 @@
 							"sid": 433672747278076
 						},
 						{
+							"name": "save",
+							"type": "boolean",
+							"initialValue": "true",
+							"comment": "",
+							"sid": 765434535482599
+						},
+						{
 							"name": "ping",
 							"type": "boolean",
 							"initialValue": "true",
@@ -2262,14 +2373,30 @@
 										"y": "5",
 										"value": "1"
 									}
-								},
-								{
-									"callFunction": "save",
-									"sid": 820773955232838
 								}
 							],
 							"sid": 561401068873939,
 							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 560700697838984,
+											"parameters": {
+												"variable": "save"
+											}
+										}
+									],
+									"actions": [
+										{
+											"callFunction": "save",
+											"sid": 900006781211232
+										}
+									],
+									"sid": 807201915295989
+								},
 								{
 									"eventType": "block",
 									"conditions": [
@@ -2400,9 +2527,10 @@
 							"actions": [
 								{
 									"callFunction": "unlockSkin",
-									"sid": 774615398902508,
+									"sid": 529709048130885,
 									"parameters": [
-										"2",
+										"Skins.IndexOf(\"francis\")",
+										true,
 										true
 									]
 								}
@@ -2430,61 +2558,8 @@
 					"functionIsAsync": false,
 					"functionParameters": [],
 					"eventType": "function-block",
-					"conditions": [
-						{
-							"id": "compare-instance-variable",
-							"objectClass": "MenuFontSmall",
-							"sid": 857033387165610,
-							"parameters": {
-								"instance-variable": "type",
-								"comparison": 0,
-								"value": "\"saving\""
-							}
-						}
-					],
+					"conditions": [],
 					"actions": [
-						{
-							"id": "set-visible",
-							"objectClass": "MenuFontSmall",
-							"sid": 354876664764039,
-							"parameters": {
-								"visibility": "visible"
-							}
-						},
-						{
-							"id": "set-opacity",
-							"objectClass": "MenuFontSmall",
-							"sid": 101381234143915,
-							"parameters": {
-								"opacity": "100"
-							}
-						},
-						{
-							"id": "wait",
-							"objectClass": "System",
-							"sid": 596702908823140,
-							"parameters": {
-								"seconds": "0.25",
-								"use-timescale": true
-							}
-						},
-						{
-							"id": "tween-one-property",
-							"objectClass": "MenuFontSmall",
-							"sid": 218364884538059,
-							"behaviorType": "Tween",
-							"parameters": {
-								"tags": "\"\"",
-								"property": "offsetOpacity",
-								"end-value": "0",
-								"time": "0.5",
-								"ease": "noease",
-								"destroy-on-complete": "no",
-								"loop": "no",
-								"ping-pong": "no",
-								"repeat-count": "1"
-							}
-						},
 						{
 							"type": "comment",
 							"text": "Initialization"
@@ -2586,6 +2661,70 @@
 					],
 					"sid": 290017484363533,
 					"children": [
+						{
+							"eventType": "comment",
+							"text": "Save indicator"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "MenuFontSmall",
+									"sid": 921808763726117,
+									"parameters": {
+										"instance-variable": "type",
+										"comparison": 0,
+										"value": "\"saving\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "MenuFontSmall",
+									"sid": 436965535081715,
+									"parameters": {
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-opacity",
+									"objectClass": "MenuFontSmall",
+									"sid": 802704398027438,
+									"parameters": {
+										"opacity": "100"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 573580305259421,
+									"parameters": {
+										"seconds": "0.25",
+										"use-timescale": true
+									}
+								},
+								{
+									"id": "tween-one-property",
+									"objectClass": "MenuFontSmall",
+									"sid": 626779160407226,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"\"",
+										"property": "offsetOpacity",
+										"end-value": "0",
+										"time": "0.5",
+										"ease": "noease",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no",
+										"repeat-count": "1"
+									}
+								}
+							],
+							"sid": 273103587189126
+						},
 						{
 							"eventType": "comment",
 							"text": "Loop through all medals"
@@ -3047,9 +3186,10 @@
 											"actions": [
 												{
 													"callFunction": "unlockSkin",
-													"sid": 908810297933153,
+													"sid": 797054741825130,
 													"parameters": [
 														"Skins.CurX",
+														false,
 														false
 													]
 												}
@@ -3103,9 +3243,10 @@
 											"actions": [
 												{
 													"callFunction": "unlockMedal",
-													"sid": 785486557850069,
+													"sid": 785023178432675,
 													"parameters": [
 														"Medals.CurX",
+														false,
 														false
 													]
 												}

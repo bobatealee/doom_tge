@@ -25,6 +25,10 @@
 		{
 			"effectId": "grayscale",
 			"name": "Grayscale"
+		},
+		{
+			"effectId": "brightness",
+			"name": "Brightness"
 		}
 	],
 	"animations": {
@@ -73,6 +77,31 @@
 				],
 				"sid": 857019812314187,
 				"name": "classic",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 24,
+						"height": 31,
+						"originX": 0.5,
+						"originY": 0.4838709677419355,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 2414084,
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 242578422963453,
+				"name": "wasted",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,

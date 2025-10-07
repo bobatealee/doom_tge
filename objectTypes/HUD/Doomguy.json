@@ -82,7 +82,7 @@
 								"exportFormat": "lossless",
 								"exportQuality": 0.8,
 								"fileType": "image/png",
-								"imageSpriteId": 2064166,
+								"imageSpriteId": 1181555,
 								"useCollisionPoly": true,
 								"duration": 1,
 								"tag": ""
@@ -107,7 +107,7 @@
 								"exportFormat": "lossless",
 								"exportQuality": 0.8,
 								"fileType": "image/png",
-								"imageSpriteId": 6402688,
+								"imageSpriteId": 923159,
 								"useCollisionPoly": true,
 								"duration": 1,
 								"tag": ""
@@ -283,6 +283,140 @@
 				],
 				"subfolders": [],
 				"name": "classic"
+			},
+			{
+				"items": [
+					{
+						"frames": [
+							{
+								"width": 24,
+								"height": 31,
+								"originX": 0.5,
+								"originY": 0.4838709677419355,
+								"originalSource": "",
+								"exportFormat": "lossless",
+								"exportQuality": 0.8,
+								"fileType": "image/png",
+								"imageSpriteId": 9585523,
+								"useCollisionPoly": true,
+								"duration": 1,
+								"tag": ""
+							},
+							{
+								"width": 24,
+								"height": 31,
+								"originX": 0.5,
+								"originY": 0.4838709677419355,
+								"originalSource": "",
+								"exportFormat": "lossless",
+								"exportQuality": 0.8,
+								"fileType": "image/png",
+								"imageSpriteId": 1867096,
+								"useCollisionPoly": true,
+								"duration": 1,
+								"tag": ""
+							},
+							{
+								"width": 24,
+								"height": 31,
+								"originX": 0.5,
+								"originY": 0.4838709677419355,
+								"originalSource": "",
+								"exportFormat": "lossless",
+								"exportQuality": 0.8,
+								"fileType": "image/png",
+								"imageSpriteId": 5468542,
+								"useCollisionPoly": true,
+								"duration": 1,
+								"tag": ""
+							}
+						],
+						"sid": 174021213375749,
+						"name": "wastedNormal",
+						"isLooping": false,
+						"isPingPong": false,
+						"repeatCount": 1,
+						"repeatTo": 0,
+						"speed": 5
+					},
+					{
+						"frames": [
+							{
+								"width": 24,
+								"height": 30,
+								"originX": 0.5,
+								"originY": 0.5,
+								"originalSource": "",
+								"exportFormat": "lossless",
+								"exportQuality": 0.8,
+								"fileType": "image/png",
+								"imageSpriteId": 2572511,
+								"useCollisionPoly": true,
+								"duration": 1,
+								"tag": ""
+							}
+						],
+						"sid": 611311899146299,
+						"name": "wastedBeer",
+						"isLooping": false,
+						"isPingPong": false,
+						"repeatCount": 1,
+						"repeatTo": 0,
+						"speed": 5
+					},
+					{
+						"frames": [
+							{
+								"width": 24,
+								"height": 31,
+								"originX": 0.5,
+								"originY": 0.4838709677419355,
+								"originalSource": "",
+								"exportFormat": "lossless",
+								"exportQuality": 0.8,
+								"fileType": "image/png",
+								"imageSpriteId": 9874268,
+								"useCollisionPoly": true,
+								"duration": 1,
+								"tag": ""
+							}
+						],
+						"sid": 400356248110096,
+						"name": "wastedSleep",
+						"isLooping": false,
+						"isPingPong": false,
+						"repeatCount": 1,
+						"repeatTo": 0,
+						"speed": 5
+					},
+					{
+						"frames": [
+							{
+								"width": 24,
+								"height": 31,
+								"originX": 0.5,
+								"originY": 0.4838709677419355,
+								"originalSource": "",
+								"exportFormat": "lossless",
+								"exportQuality": 0.8,
+								"fileType": "image/png",
+								"imageSpriteId": 2358123,
+								"useCollisionPoly": true,
+								"duration": 1,
+								"tag": ""
+							}
+						],
+						"sid": 162354439054410,
+						"name": "wastedScream",
+						"isLooping": false,
+						"isPingPong": false,
+						"repeatCount": 1,
+						"repeatTo": 0,
+						"speed": 5
+					}
+				],
+				"subfolders": [],
+				"name": "wasted"
 			},
 			{
 				"items": [

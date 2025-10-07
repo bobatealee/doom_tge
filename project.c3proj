@@ -627,7 +627,7 @@
 				{
 					"items": [
 						{
-							"name": "defaultScream.webm",
+							"name": "default_scream.webm",
 							"type": "audio/webm; codecs=opus",
 							"sid": 792716153583695,
 							"file-info": {
@@ -635,7 +635,7 @@
 							}
 						},
 						{
-							"name": "defaultScreamBig.webm",
+							"name": "default_screamBig.webm",
 							"type": "audio/webm; codecs=opus",
 							"sid": 349247501883914,
 							"file-info": {
@@ -643,7 +643,7 @@
 							}
 						},
 						{
-							"name": "defaultBeer.webm",
+							"name": "default_beer.webm",
 							"type": "audio/webm; codecs=opus",
 							"sid": 794024785931801,
 							"file-info": {
@@ -651,7 +651,7 @@
 							}
 						},
 						{
-							"name": "defaultWine.webm",
+							"name": "default_wine.webm",
 							"type": "audio/webm; codecs=opus",
 							"sid": 603951439700712,
 							"file-info": {
@@ -659,7 +659,7 @@
 							}
 						},
 						{
-							"name": "defaultGrunt.webm",
+							"name": "default_grunt.webm",
 							"type": "audio/webm; codecs=opus",
 							"sid": 533472205697221,
 							"file-info": {
@@ -673,7 +673,7 @@
 				{
 					"items": [
 						{
-							"name": "francisGrunt.webm",
+							"name": "francis_grunt.webm",
 							"type": "audio/webm; codecs=opus",
 							"sid": 799385033804943,
 							"file-info": {
@@ -681,7 +681,7 @@
 							}
 						},
 						{
-							"name": "francisScreamBig.webm",
+							"name": "francis_screamBig.webm",
 							"type": "audio/webm; codecs=opus",
 							"sid": 641762162181532,
 							"file-info": {
@@ -689,7 +689,7 @@
 							}
 						},
 						{
-							"name": "francisScream.webm",
+							"name": "francis_scream.webm",
 							"type": "audio/webm; codecs=opus",
 							"sid": 305386827591944,
 							"file-info": {
@@ -697,7 +697,7 @@
 							}
 						},
 						{
-							"name": "francisBeer.webm",
+							"name": "francis_beer.webm",
 							"type": "audio/webm; codecs=opus",
 							"sid": 589098821983511,
 							"file-info": {
@@ -705,7 +705,7 @@
 							}
 						},
 						{
-							"name": "francisWine.webm",
+							"name": "francis_wine.webm",
 							"type": "audio/webm; codecs=opus",
 							"sid": 651368986529158,
 							"file-info": {
@@ -993,7 +993,7 @@
 	},
 	"properties": {
 		"description": "DOOM: The Gallery Experience was created as an art piece designed to parody the wonderfully pretentious world of gallery openings.",
-		"version": "1.4.1",
+		"version": "1.4.2",
 		"autoIncrementVersion": false,
 		"author": "SCUM DOG GAMES",
 		"authorEmail": "contact@scum.dog",

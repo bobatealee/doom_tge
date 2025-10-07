@@ -556,7 +556,7 @@
 							"objectClass": "Audio",
 							"sid": 635546898312154,
 							"parameters": {
-								"audio-file": "defaultScream",
+								"audio-file": "default_scream",
 								"loop": "not-looping",
 								"volume": "log10(SETTING_volumeSound)*20",
 								"stereo-pan": "0",

@@ -1544,6 +1544,12 @@
 											"parameters": {
 												"intensity": 1
 											}
+										},
+										"Brightness": {
+											"isEnabled": false,
+											"parameters": {
+												"brightness": 0.9
+											}
 										}
 									},
 									"instanceFolderItem": {
@@ -1678,6 +1684,12 @@
 											"parameters": {
 												"intensity": 1
 											}
+										},
+										"Brightness": {
+											"isEnabled": false,
+											"parameters": {
+												"brightness": 0.9
+											}
 										}
 									},
 									"instanceFolderItem": {
@@ -1725,6 +1737,12 @@
 											"isEnabled": false,
 											"parameters": {
 												"intensity": 1
+											}
+										},
+										"Brightness": {
+											"isEnabled": false,
+											"parameters": {
+												"brightness": 0.9
 											}
 										}
 									},
@@ -2121,6 +2139,12 @@
 											"parameters": {
 												"intensity": 1
 											}
+										},
+										"Brightness": {
+											"isEnabled": false,
+											"parameters": {
+												"brightness": 0.9
+											}
 										}
 									},
 									"instanceFolderItem": {
@@ -2169,6 +2193,12 @@
 											"parameters": {
 												"intensity": 1
 											}
+										},
+										"Brightness": {
+											"isEnabled": false,
+											"parameters": {
+												"brightness": 0.9
+											}
 										}
 									},
 									"instanceFolderItem": {
@@ -2216,6 +2246,12 @@
 											"isEnabled": false,
 											"parameters": {
 												"intensity": 1
+											}
+										},
+										"Brightness": {
+											"isEnabled": false,
+											"parameters": {
+												"brightness": 0.9
 											}
 										}
 									},
@@ -2433,7 +2469,7 @@
 									"locked": false,
 									"world": {
 										"x": 59,
-										"y": 76,
+										"y": 80,
 										"width": 200,
 										"height": 16,
 										"originX": 0,

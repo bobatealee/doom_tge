@@ -20,6 +20,11 @@
 			"behaviorId": "Sin",
 			"name": "Bob",
 			"sid": 868688882661121
+		},
+		{
+			"behaviorId": "Timer",
+			"name": "Timer",
+			"sid": 764454398869556
 		}
 	],
 	"effectTypes": [],

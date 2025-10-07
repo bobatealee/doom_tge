@@ -25,6 +25,10 @@
 		{
 			"effectId": "grayscale",
 			"name": "Grayscale"
+		},
+		{
+			"effectId": "brightness",
+			"name": "Brightness"
 		}
 	],
 	"animations": {
