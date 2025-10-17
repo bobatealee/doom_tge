@@ -1,4 +1,4 @@
-<h1 align="center"><img width="540"src="https://github.com/user-attachments/assets/2d573225-8380-44bf-bee6-b7fb98e6f058" /></h1>
+<h1 align="center"><img width="540" src="https://github.com/user-attachments/assets/2d573225-8380-44bf-bee6-b7fb98e6f058" /></h1>
 
 **DOOM: The Gallery Experience** is an art piece parodying the wonderfully pretentious world of gallery openings.
 
