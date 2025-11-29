@@ -15,11 +15,13 @@ Created by [SCUM DOG](https://scum.dog/)
 
 - Filippo Meozzi - Director
 - Liam Stone - Programming, Art
+
+DOOM is copyright © 1993 id Software
+
+## Resources Used
 - [The Met Open Access Collection](https://www.metmuseum.org/art/collection/search?showOnly=openAccess)
 - [The Spriter's Resource](https://www.spriters-resource.com/ms_dos/doomdoomii/)
 - [PM Music](https://pmmusic.pro/downloads/)
-
-DOOM is copyright © 1993 id Software
 
 ## Bugs
 Find a bug? Report it on our [issue tracker](https://github.com/bobatealee/doom_tge/issues/new/choose).
